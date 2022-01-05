@@ -1,0 +1,95 @@
+// ABOUT US START
+
+.about-section {
+    min-height: calc(100vh - 4.25rem);
+    @include flex-center;
+    overflow: hidden;
+    padding: length(48) length(0);
+    background: $productBg;
+
+    .aboutinfo {
+        background: $white;
+        @include radius(10);
+
+        @include breakpoint(phone575) {
+            background: transparent;
+        }
+    }
+
+    // ABOUT VIDEOBOX START
+    .aboutvideobox {
+        @include flex-center;
+        padding: length(24);
+        overflow: hidden;
+        height: 100%;
+        background: $white;
+        @include radius(10);
+
+        @include breakpoint(phone768) {
+            margin-bottom: legth(24);
+        }
+
+        video {
+            @include wh100;
+            object-fit: contain;
+        }
+    }
+
+    // ABOUT CONTENT START
+    .aboutcontent {
+        background: $white;
+        @include radius(10);
+        @include flex-center-vert;
+        height: 100%;
+        padding: length(24);
+
+        @include breakpoint(laptop1200) {}
+
+        .aboutinfo {
+            @include flex-column;
+            gap: length(20);
+
+            @include breakpoint(phone768) {
+                text-align: center;
+            }
+
+            .about-title {
+                color: $textPrimary;
+                font-weight: 500;
+
+                @include breakpoint(phone768) {
+                    @include heading-2;
+                    font-weight: 500;
+                }
+
+                @include breakpoint(phone359) {
+                    @include heading-3;
+                    font-weight: 500;
+                }
+            }
+
+            .contents {
+                margin-bottom: length(12);
+
+                .about-text {
+                    @include font-24-16-normal;
+                    color: $textPrimary;
+                    line-height: 2;
+                    text-align: justify;
+
+                    @include breakpoint(phone768) {
+                        @include font-24-14-normal;
+                        line-height: 2;
+                    }
+
+                    @include breakpoint(phone359) {
+                        @include font-12-12-normal;
+                        line-height: 2;
+                    }
+                }
+            }
+        }
+    }
+}
+
+//  ABOUT US END

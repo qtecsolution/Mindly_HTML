@@ -1,0 +1,67 @@
+.btn-create {
+    @include setBgColor($primary, $buttonHover);
+    padding: length(10) length(36);
+    @include font-24-16-medium;
+    text-align: center;
+    @include radius(48);
+    @include transitions;
+    cursor: pointer;
+
+    @include breakpoint(phone768) {
+        @include font-24-14-medium;
+    }
+
+    @include breakpoint(phone359) {
+        @include font-12-12-medium;
+    }
+
+    @include hover {
+        @include setBgColor($buttonHover, $primary);
+        @include transform(scale(0.95));
+    }
+}
+
+.btn-submit {
+    padding: length(10) length(48);
+    @include radius(48);
+    @include font-24-16-medium;
+    @include setBgColor($buttonHover, $primary);
+    @include transitions;
+    text-align: center;
+    cursor: pointer;
+
+    @include hover {
+        @include setBgColor($primary, $buttonHover);
+        @include transform(scale(0.95));
+    }
+
+    @include breakpoint(phone768) {
+        @include font-24-14-medium;
+    }
+
+    @include breakpoint(phone359) {
+        @include font-12-12-medium;
+    }
+}
+
+.btn-add {
+    padding: length(10) length(48);
+    @include radius(48);
+    @include font-24-14-medium;
+    @include setBgColor($buttonHover, $primary);
+    @include transitions;
+    text-align: center;
+    cursor: pointer;
+
+    @include hover {
+        @include setBgColor($primary, $buttonHover);
+    }
+
+    @include breakpoint(phone768) {
+        @include font-24-14-medium;
+    }
+
+    @include breakpoint(phone359) {
+        @include font-12-12-medium;
+    }
+}

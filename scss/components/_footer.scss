@@ -1,0 +1,124 @@
+// SITE FOOTER START
+
+.footer {
+    background: $footerBg;
+    padding: length(24) length(0);
+
+    &-content {
+        @include flex-center-column;
+        gap: length(24);
+
+        @include breakpoint(phone575) {
+            padding-left: length(24);
+            padding-right: length(24);
+        }
+
+        .footerinfo {
+            @include flex-center-column;
+            gap: length(4);
+            padding: length(4) length(12);
+
+            .footerlogo {
+                @include flex-center-column;
+                gap: length(8);
+                overflow: hidden;
+
+                &-icon {
+                    @include square(length(48));
+                    @include flex-center;
+                    overflow: hidden;
+
+                    img {
+                        @include wh100;
+                        object-fit: cover;
+                    }
+                }
+
+                &-text {
+                    color: $textPrimary;
+                    font-weight: 500;
+                }
+            }
+
+            .footlink {
+                @include font-24-15-medium-futuraPT;
+                color: $textSecondary;
+                text-align: center;
+                @include transitions;
+
+                @include hover {
+                    color: $primary;
+                }
+            }
+        }
+
+        .socialsinfo {
+            @include flex-center-column;
+            gap: length(8);
+
+            &-title {
+                font-weight: 500;
+                color: $textPrimary;
+            }
+
+            .sociallist {
+                @include list-horizontal;
+                gap: length(12);
+
+                &-link {
+                    @include square(length(32));
+                    @include flex-center;
+                    overflow: hidden;
+
+                    svg {
+                        @include wh100;
+                    }
+                }
+            }
+        }
+
+        .footerguideline {
+            .guidelist {
+                @include list-horizontal;
+                gap: length(12);
+
+                &-link {
+                    @include font-14-14-medium;
+                    color: $textPrimary;
+                    // text-decoration: underline;
+                    @include transitions;
+
+                    @include breakpoint(phone359) {
+                        @include font-12-12-medium;
+                    }
+
+                    @include hover {
+                        color: $primary;
+                    }
+                }
+            }
+        }
+    }
+
+    .divider {
+        margin: length(24) length(0);
+        background: $dividerBg;
+        @include w100;
+        height: length(1);
+    }
+
+    .footer-copyright {
+        @include breakpoint(phone575) {
+            padding-left: 0;
+            padding-right: 0;
+        }
+
+        .textcopyright {
+            @include font-12-12-medium;
+            color: $textSecondary;
+            text-align: center;
+        }
+    }
+}
+
+// SITE FOOTER END

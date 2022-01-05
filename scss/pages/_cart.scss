@@ -1,0 +1,1621 @@
+// EMPTY CART START
+.emptycart {
+    min-height: calc(100vh - 4.25rem);
+    padding: length(48) length(0);
+    @include flex-center-column;
+    position: relative;
+
+    &-header {
+        position: absolute;
+        top: length(48);
+        left: auto;
+        right: auto;
+
+        @include breakpoint(phone768) {
+            @include w100;
+            text-align: center;
+        }
+
+        .emptytitle {
+            font-weight: 500;
+            color: $primaryDark;
+
+            @include breakpoint(phone768) {
+                @include heading-3;
+                font-weight: 500;
+                text-align: center;
+            }
+
+            @include breakpoint(phone359) {
+                @include heading-4;
+                font-weight: 500;
+                text-align: center;
+            }
+        }
+    }
+
+    &-content {
+        @include flex-center;
+        @include wh100;
+
+        .emptybox {
+            max-width: length(480);
+            @include flex-center-column;
+
+            .emptytext {
+                @include font-24-16-normal;
+                line-height: 2;
+                margin-bottom: length(8);
+
+                span {
+                    color: $primary;
+                    font-weight: 600;
+                }
+            }
+        }
+    }
+}
+
+//  EMPTY CART END
+
+
+// CART START
+.cart {
+    background: $productBg;
+    overflow: hidden;
+    padding: length(48) length(0) length(60);
+
+    @include breakpoint(phone768) {
+        padding: length(0) length(0) length(32);
+    }
+
+    &-content {
+        @include flex-column;
+        gap: length(24);
+        padding: length(20) length(0);
+        margin-bottom: length(60);
+
+        @include breakpoint(tablet991) {
+            margin-bottom: length(32);
+        }
+
+        .cart-title {
+            font-weight: 500;
+            color: $textPrimary;
+
+            @include breakpoint(phone768) {
+                @include heading-2;
+                font-weight: 500;
+                text-align: center;
+            }
+
+            @include breakpoint(phone359) {
+                @include heading-3;
+                font-weight: 500;
+                text-align: center;
+            }
+        }
+    }
+
+    &-table {
+        background: $white;
+        @include radius(10);
+        overflow: hidden;
+
+        @include breakpoint(phone575) {
+            padding: length(20) length(0);
+        }
+
+        .tablehead {
+            @include flex-center-between;
+            padding: length(20);
+            @include border-single(bottom, solid, 1, $header-border);
+
+            .tablecol {
+                width: 25%;
+
+                .tabletitle {
+                    @include heading-4;
+                    font-weight: 500;
+                    color: $textPrimary;
+                    text-align: center;
+
+                    @include breakpoint(phone768) {
+                        margin-left: length(12);
+                    }
+                }
+            }
+
+            .productcol {
+                width: 50%;
+
+                .tabletitle {
+                    text-align: left;
+                }
+
+                @include breakpoint(phone768) {
+                    width: 40%;
+                }
+            }
+
+            .pricecol {
+                @include breakpoint(phone768) {
+                    .tabletitle {
+                        text-align: right;
+                    }
+                }
+            }
+        }
+
+        .tablebody {
+            background: $white;
+
+            .tablerow {
+                @include flex-center-between;
+                padding: length(20);
+                @include border-single(bottom, solid, 1, $header-border);
+                position: relative;
+
+                @include breakpoint(phone768) {
+                    padding: length(14) length(8);
+                }
+
+                .btn-delete {
+                    position: absolute;
+                    top: 50%;
+                    @include transform(translateY(-50%));
+                    right: length(20);
+                    @include transparent-button;
+                    @include square(length(20));
+                    @include flex-center;
+                    overflow: hidden;
+
+                    @include breakpoint(phone768) {
+                        left: length(10);
+                        right: auto;
+                    }
+
+                    svg {
+                        path {
+                            @include transitions;
+                        }
+                    }
+
+                    @include hover {
+                        svg {
+                            path {
+                                stroke: $primary;
+                            }
+                        }
+                    }
+                }
+
+                .tablecol {
+                    width: 25%;
+
+                    .productinfo {
+                        @include flex-center-vert;
+                        gap: length(20);
+
+                        @include breakpoint(phone768) {
+                            flex-direction: column;
+                            gap: length(12);
+                        }
+
+                        .medallion-thumbnail {
+                            position: relative;
+                            @include square(length(80));
+                            overflow: hidden;
+                            @include flex-center;
+
+                            .frame {
+                                @include wh100;
+                                position: relative;
+                            }
+
+                            .medallion {
+                                width: length(68);
+                                height: length(61);
+                                @include circle;
+                                @include flex-center;
+                                position: absolute;
+                                left: length(6);
+                                top: length(5);
+                                transform: skew(-7deg);
+                                overflow: hidden;
+                                z-index: 100;
+
+                                img {
+                                    @include wh100;
+                                    @include circle;
+                                    object-fit: cover;
+                                }
+                            }
+                        }
+
+                        .product-thumb {
+                            position: relative;
+                            @include square(length(80));
+                            overflow: hidden;
+                            @include flex-center;
+
+                            .frame {
+                                @include wh100;
+                                position: relative;
+                                object-fit: cover;
+                            }
+
+                            .productimage {
+                                width: length(16);
+                                height: length(16);
+                                @include circle;
+                                @include flex-center;
+                                position: absolute;
+                                left: 50%;
+                                top: length(8);
+                                transform: translateX(-50%);
+                                overflow: hidden;
+                                z-index: 100;
+                                z-index: 100;
+
+                                img {
+                                    @include wh100;
+                                    @include circle;
+                                    object-fit: cover;
+                                }
+                            }
+                        }
+
+                        .product-thumbnail {
+                            position: relative;
+                            @include square(length(80));
+                            overflow: hidden;
+                            @include flex-center;
+
+                            .frame {
+                                @include wh100;
+                                position: relative;
+                                object-fit: cover;
+                            }
+
+                            .productimage {
+                                width: length(25);
+                                height: length(25);
+                                @include circle;
+                                @include flex-center;
+                                position: absolute;
+                                left: 50.5%;
+                                top: length(5);
+                                transform: translateX(-50.5%);
+                                overflow: hidden;
+                                z-index: 100;
+
+                                img {
+                                    @include wh100;
+                                    @include circle;
+                                    object-fit: cover;
+                                }
+                            }
+                        }
+
+                        .productname {
+                            width: calc(100% - 6.25rem);
+
+                            @include breakpoint(phone768) {
+                                @include w100;
+                                text-align: center;
+                            }
+
+                            .name {
+                                @include font-24-16-semibold;
+                                color: $black;
+                                cursor: pointer;
+
+                                @include breakpoint(phone768) {
+                                    @include font-12-12-semibold;
+                                    text-align: center;
+                                    @include text-overflow;
+                                }
+                            }
+                        }
+                    }
+
+                    .quantitybox {
+                        @include flex-center;
+
+                        @include breakpoint(phone768) {
+                            margin-left: length(-12);
+                        }
+
+                        .btn-decrement,
+                        .btn-increment {
+                            @include transparent-button;
+                            @include square(length(32));
+                            @include flex-center;
+                            @include circle;
+
+                            svg {
+                                circle {
+                                    @include transitions;
+                                }
+
+                                path {
+                                    @include transitions;
+                                }
+                            }
+                        }
+
+                        .btn-decrement {
+                            @include hover {
+                                svg {
+                                    circle {
+                                        fill: $primary;
+                                    }
+
+                                    path {
+                                        stroke: $buttonHover;
+                                    }
+                                }
+                            }
+                        }
+
+                        .btn-increment {
+                            @include hover {
+                                svg {
+                                    circle {
+                                        fill: $textFeature;
+                                    }
+
+                                    path {
+                                        stroke: $white;
+                                    }
+                                }
+                            }
+                        }
+
+                        .counterfield {
+                            width: length(40);
+                            padding: length(8) length(2);
+                            text-align: center;
+                            @include font-24-14-medium;
+                            @include setBgColor(transparent, $black);
+
+                            @include breakpoint(phone768) {
+                                width: length(24);
+                            }
+
+                            &::placeholder {
+                                color: $textSecondary;
+                            }
+                        }
+                    }
+
+                    .priceinfo {
+                        text-align: center;
+
+                        @include breakpoint(phone768) {
+                            text-align: right;
+                        }
+
+                        .price {
+                            display: inline-block;
+                            @include font-24-16-medium;
+
+                            @include breakpoint(phone768) {
+                                @include font-24-14-medium;
+                            }
+                        }
+                    }
+                }
+
+                .productcol {
+                    width: 50%;
+                }
+            }
+        }
+
+        .tablefooter {
+            @include flex-end;
+            padding: length(20);
+
+            @include breakpoint(phone768) {
+                padding: length(20) length(0);
+            }
+
+            .couponbox {
+                @include flex-column;
+                gap: length(12);
+
+                @include breakpoint(phone575) {
+                    width: 90%;
+                    margin: 0 auto;
+                }
+
+                @include breakpoint(mobile768) {
+                    flex-direction: row;
+                    align-items: center;
+                }
+
+                &-title {
+                    color: $textPrimary;
+                    font-weight: 500;
+                }
+
+                .applycoupon {
+                    width: length(280);
+                    @include flex-column;
+                    gap: length(8);
+
+                    @include breakpoint(phone575) {
+                        @include w100;
+                    }
+
+                    .coupon {
+                        @include flex-center-vert;
+                        @include w100;
+                        overflow: hidden;
+
+                        &-field {
+                            width: calc(100% - 6.0625rem);
+                            @include border(solid, 1, $grayBg);
+                            border-right: 0;
+                            @include double-radius(top, left, 4, bottom, left, 4);
+                            padding: length(12) length(16);
+                            @include font-24-14-normal;
+
+                            @include breakpoint(phone768) {
+                                @include font-12-12-normal;
+                            }
+
+                            &::placeholder {
+                                color: $textSecondary;
+                            }
+                        }
+
+                        .btn-apply {
+                            @include flex-center;
+                            gap: length(8);
+                            padding: length(13) length(16);
+                            background: $buttonHover;
+                            @include double-radius(top, right, 4, bottom, right, 4);
+
+                            .text {
+                                @include font-24-14-medium;
+                                color: $primary;
+                                @include transitions;
+
+                                @include breakpoint(phone768) {
+                                    @include font-12-12-medium;
+                                }
+                            }
+
+                            .icon {
+                                @include square(length(16));
+                                @include flex-center;
+                                overflow: hidden;
+                                margin-top: length(2);
+
+                                svg {
+                                    path {
+                                        stroke: $primary;
+                                        @include transitions;
+                                    }
+                                }
+                            }
+
+                            @include hover {
+                                background: $primary;
+
+                                .text {
+                                    color: $buttonHover;
+                                }
+
+                                .icon {
+                                    svg {
+                                        path {
+                                            stroke: $buttonHover;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                    .error-message {
+                        gap: length(8);
+                        @include radius(8);
+                        background: $dangerBg;
+                        padding: length(4) length(8);
+                        width: length(180);
+                        display: none;
+
+                        .icon {
+                            @include square(length(14));
+                            @include flex-center;
+                            overflow: hidden;
+                            margin-top: length(-1);
+                        }
+
+                        .message {
+                            @include font-12-12-medium;
+                            color: $textDanger;
+                        }
+                    }
+
+                    &.error {
+                        .error-message {
+                            @include flex-center;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    // BILLING-SHIPPING START
+    .billing-shipping {
+        @include radius(10);
+        display: flex;
+        gap: length(24);
+        margin-bottom: length(60);
+
+        @include breakpoint(tablet991) {
+            flex-direction: column;
+            gap: length(32);
+            margin-bottom: length(32);
+        }
+
+        .billing,
+        .shipping {
+            width: 50%;
+            @include flex-column;
+            gap: length(24);
+
+            @include breakpoint(phone768) {
+                gap: length(16);
+            }
+
+            @include breakpoint(tablet991) {
+                @include w100;
+            }
+        }
+
+        .billing {
+            &-title {
+                font-weight: 500;
+                color: $textPrimary;
+
+                @include breakpoint(phone768) {
+                    @include heading-3;
+                    font-weight: 500;
+                }
+
+                @include breakpoint(phone359) {
+                    @include heading-4;
+                    font-weight: 500;
+                }
+            }
+
+            &-form {
+                @include flex-column;
+                gap: length(16);
+                background: $white;
+                padding: length(16);
+                @include radius(10);
+
+                @include breakpoint(phone575) {
+                    padding: length(20) length(16) length(32);
+                }
+
+                .inputbox {
+                    @include flex-column;
+                    gap: length(8);
+
+                    .forminfo {
+                        @include flex-column;
+
+                        .form-label {
+                            @include font-24-14-medium;
+                            color: $secondaryDark;
+                        }
+
+                        .form-control {
+                            padding: length(14) length(16);
+                            @include transitions;
+                            @include font-14-14-normal;
+                            color: $textPrimary;
+
+                            &:focus {
+                                outline: none;
+                                box-shadow: none;
+                                border-color: $textDesignation;
+                            }
+
+                            &::placeholder {
+                                color: $textActiveLink;
+                            }
+                        }
+
+                        .form-select {
+                            padding: length(14) length(16);
+                            @include transitions;
+                            @include font-14-14-normal;
+                            color: $textPrimary;
+
+                            &:focus {
+                                outline: none;
+                                box-shadow: none;
+                                border-color: $textDesignation;
+                            }
+                        }
+                    }
+
+                    .error-message {
+                        @include font-12-12-medium;
+                        color: $primary;
+                        display: none;
+                    }
+
+                    &.error {
+                        .forminfo {
+                            .form-control {
+                                border-color: $primary;
+                            }
+
+                            .form-select {
+                                border-color: $primary;
+                            }
+                        }
+
+                        .error-message {
+                            display: block;
+                        }
+                    }
+                }
+            }
+        }
+
+        .shipping {
+            &-title {
+                @include flex-center-vert;
+
+                .checkinput {
+                    &:checked~.checklabel {
+                        &::after {
+                            border-color: $textPrimary;
+                            opacity: 1;
+                            visibility: visible;
+                        }
+                    }
+                }
+
+                .checklabel {
+                    @include heading-1;
+                    font-weight: 500;
+                    color: $textPrimary;
+                    cursor: pointer;
+                    position: relative;
+                    padding-left: length(36);
+
+                    &::before {
+                        content: '';
+                        position: absolute;
+                        top: 50%;
+                        left: 0;
+                        @include square(length(24));
+                        @include border(solid, 2, $textPrimary);
+                        @include transform(translateY(-50%));
+                        background: transparent;
+                        padding: length(4);
+                    }
+
+                    &::after {
+                        content: '';
+                        position: absolute;
+                        top: 45%;
+                        left: length(8);
+                        width: length(8);
+                        height: length(16);
+                        @include border(solid, 2, $white);
+                        border-top: 0;
+                        border-left: 0;
+                        @include transform(translateY(-45%) rotate(45deg));
+                        opacity: 0;
+                        visibility: hidden;
+                        @include transitions;
+                    }
+
+                    @include breakpoint(phone768) {
+                        @include heading-3;
+                        font-weight: 500;
+                    }
+
+                    @include breakpoint(phone359) {
+                        @include heading-4;
+                        font-weight: 500;
+                    }
+
+                    &::selection {
+                        background: transparent;
+                        color: $textPrimary;
+                    }
+                }
+            }
+
+            &-form {
+                @include flex-column;
+                gap: length(16);
+                background: $white;
+                padding: length(16);
+                @include radius(10);
+
+                @include breakpoint(phone575) {
+                    padding: length(20) length(16) length(32);
+                }
+
+                .inputbox {
+                    @include flex-column;
+                    gap: length(8);
+
+                    .forminfo {
+                        @include flex-column;
+
+                        .form-label {
+                            @include font-24-14-medium;
+                            color: $secondaryDark;
+                        }
+
+                        .form-control {
+                            padding: length(14) length(16);
+                            @include transitions;
+                            @include font-14-14-normal;
+                            color: $textPrimary;
+
+                            &:focus {
+                                outline: none;
+                                box-shadow: none;
+                                border-color: $textDesignation;
+                            }
+
+                            &::placeholder {
+                                color: $textActiveLink;
+                            }
+                        }
+
+                        .form-select {
+                            padding: length(14) length(16);
+                            @include transitions;
+                            @include font-14-14-normal;
+                            color: $textPrimary;
+
+                            &:focus {
+                                outline: none;
+                                box-shadow: none;
+                                border-color: $textDesignation;
+                            }
+                        }
+                    }
+
+                    .error-message {
+                        @include font-12-12-medium;
+                        color: $primary;
+                        display: none;
+                    }
+
+                    &.error {
+                        .forminfo {
+                            .form-control {
+                                border-color: $primary;
+                            }
+
+                            .form-select {
+                                border-color: $primary;
+                            }
+                        }
+
+                        .error-message {
+                            display: block;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    // BILLING-SHIPPING END
+
+    // SHIPPING INFO START
+    .shippingdescript {
+        background: $white;
+        padding: length(20);
+        margin-bottom: length(60);
+        @include radius(10);
+
+        @include breakpoint(tablet991) {
+            margin-bottom: length(32);
+        }
+
+        &-header {
+            @include flex-column;
+            gap: length(8);
+
+            .shipping-title {
+                font-weight: 500;
+                color: $textPrimary;
+
+                @include breakpoint(phone768) {
+                    @include heading-3;
+                    font-weight: 500;
+                }
+
+                @include breakpoint(phone359) {
+                    @include heading-4;
+                    font-weight: 500;
+                }
+            }
+
+            .shipping-text {
+                @include font-24-16-normal;
+                color: $textPrimary;
+
+                @include breakpoint(phone768) {
+                    @include font-24-14-normal;
+                }
+
+                @include breakpoint(phone359) {
+                    @include font-12-12-normal;
+                }
+            }
+        }
+    }
+
+    // SHIPPING INFO END
+
+    // ORDER LIST START
+    .orderlist {
+        @include flex-column;
+        gap: length(24);
+        margin-bottom: length(60);
+
+        @include breakpoint(tablet991) {
+            margin-bottom: length(32);
+        }
+
+        &-header {
+            .orderlist-title {
+                font-weight: 500;
+                color: $textPrimary;
+
+                @include breakpoint(phone768) {
+                    @include heading-3;
+                    font-weight: 500;
+                }
+
+                @include breakpoint(phone359) {
+                    @include heading-4;
+                    font-weight: 500;
+                }
+            }
+        }
+
+        &-body {
+            background: $white;
+            @include radius(10);
+
+            .order-table {
+                @include border(solid, 1, $header-border);
+                @include radius(10);
+
+                &-header {
+                    @include flex-center-between;
+                    @include border-single(bottom, solid, 1, $header-border);
+                    position: relative;
+
+                    .productcol {
+                        flex-grow: 100;
+                        width: 60%;
+                        padding: length(20);
+                        @include border-single(right, solid, 1, $header-border);
+
+                        @include breakpoint(phone500) {
+                            padding: length(10);
+                        }
+
+                        .title {
+                            @include heading-4;
+                            font-weight: 500;
+                            color: $textPrimary;
+                            text-align: center;
+
+                            @include breakpoint(phone500) {
+                                @include heading-6;
+                                font-weight: 500;
+                            }
+                        }
+                    }
+
+                    .prices {
+                        width: 40%;
+                        display: flex;
+
+                        .price {
+                            @include border-single(right, solid, 1, $header-border);
+                            padding: length(20);
+                            width: 50%;
+
+                            @include breakpoint(phone768) {
+                                padding: length(10);
+                            }
+
+                            .title {
+                                @include heading-4;
+                                font-weight: 500;
+                                color: $textPrimary;
+                                text-align: center;
+
+                                @include breakpoint(phone500) {
+                                    @include heading-6;
+                                    font-weight: 500;
+                                }
+                            }
+
+                            @include breakpoint(phone500) {
+                                padding: length(10);
+                            }
+                        }
+
+                        .total {
+                            padding: length(20);
+                            width: 50%;
+
+                            @include breakpoint(phone768) {
+                                padding: length(10);
+                            }
+
+                            .title {
+                                @include heading-4;
+                                font-weight: 500;
+                                color: $textPrimary;
+                                text-align: center;
+
+                                @include breakpoint(phone500) {
+                                    @include heading-6;
+                                    font-weight: 500;
+                                }
+                            }
+
+                            @include breakpoint(phone500) {
+                                padding: length(10);
+                            }
+                        }
+                    }
+                }
+
+                &-body {
+                    @include flex-column;
+
+                    .tablerow {
+                        display: flex;
+                        @include border-single(bottom, solid, 1, $header-border);
+                        position: relative;
+
+                        .productcol {
+                            flex-grow: 100;
+                            width: 60%;
+                            @include border-single(right, solid, 1, $header-border);
+                            padding: length(20);
+
+                            @include breakpoint(phone768) {
+                                padding: length(10);
+                            }
+
+                            .orderproductinfo {
+                                @include flex-column;
+                                gap: length(14);
+
+                                .productinfo {
+                                    @include flex-center-vert;
+
+                                    .medallion-thumbnail {
+                                        position: relative;
+                                        @include square(length(80));
+                                        overflow: hidden;
+                                        @include flex-center;
+
+                                        .frame {
+                                            @include wh100;
+                                            position: relative;
+                                        }
+
+                                        .medallion {
+                                            width: length(68);
+                                            height: length(61);
+                                            @include circle;
+                                            @include flex-center;
+                                            position: absolute;
+                                            left: length(6);
+                                            top: length(5);
+                                            transform: skew(-7deg);
+                                            overflow: hidden;
+                                            z-index: 100;
+
+                                            img {
+                                                @include wh100;
+                                                @include circle;
+                                                object-fit: cover;
+                                            }
+                                        }
+                                    }
+
+                                    .product-thumb {
+                                        position: relative;
+                                        @include square(length(80));
+                                        overflow: hidden;
+                                        @include flex-center;
+
+                                        .frame {
+                                            @include wh100;
+                                            position: relative;
+                                            object-fit: cover;
+                                        }
+
+                                        .productimage {
+                                            width: length(16);
+                                            height: length(16);
+                                            @include circle;
+                                            @include flex-center;
+                                            position: absolute;
+                                            left: 50%;
+                                            top: length(8);
+                                            transform: translateX(-50%);
+                                            overflow: hidden;
+                                            z-index: 100;
+                                            z-index: 100;
+
+                                            img {
+                                                @include wh100;
+                                                @include circle;
+                                                object-fit: cover;
+                                            }
+                                        }
+                                    }
+
+                                    .product-thumbnail {
+                                        position: relative;
+                                        @include square(length(80));
+                                        overflow: hidden;
+                                        @include flex-center;
+
+                                        .frame {
+                                            @include wh100;
+                                            position: relative;
+                                            object-fit: cover;
+                                        }
+
+                                        .productimage {
+                                            width: length(25);
+                                            height: length(25);
+                                            @include circle;
+                                            @include flex-center;
+                                            position: absolute;
+                                            left: 50.5%;
+                                            top: length(5);
+                                            transform: translateX(-50.5%);
+                                            overflow: hidden;
+                                            z-index: 100;
+
+                                            img {
+                                                @include wh100;
+                                                @include circle;
+                                                object-fit: cover;
+                                            }
+                                        }
+                                    }
+                                }
+
+                                .productdetails {
+                                    @include flex-column;
+                                    gap: length(12);
+
+                                    .detailsinfo {
+                                        @include flex-center-vert;
+                                        gap: length(6);
+
+                                        .title {
+                                            @include font-12-12-medium;
+                                            line-height: 1.5;
+
+                                            @include breakpoint(phone500) {
+                                                @include font-10-10-medium;
+                                                line-height: 1.5;
+                                            }
+                                        }
+
+                                        .text {
+                                            @include font-12-12-normal;
+                                            line-height: 1.5;
+                                            @include text-overflow;
+
+                                            @include breakpoint(phone500) {
+                                                @include font-10-10-normal;
+                                                line-height: 1.5;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+
+                        .prices {
+                            width: 40%;
+                            display: flex;
+
+                            .price {
+                                width: 50%;
+                                @include border-single(right, solid, 1, $header-border);
+                                padding: length(20);
+                                @include flex-center;
+                                overflow: hidden;
+
+                                @include breakpoint(phone768) {
+                                    padding: length(10);
+                                }
+
+                                .singleprice {
+                                    @include font-24-16-medium;
+                                    line-height: 1.5;
+                                    text-align: center;
+
+                                    @include breakpoint(phone768) {
+                                        @include font-24-14-medium;
+                                        line-height: 1.5;
+                                    }
+
+                                    @include breakpoint(phone500) {
+                                        @include font-12-12-medium;
+                                        line-height: 1.5;
+                                    }
+
+                                    @include breakpoint(mobile400) {
+                                        @include font-10-10-medium;
+                                        line-height: 1.5;
+                                    }
+                                }
+                            }
+
+                            .total {
+                                width: 50%;
+                                padding: length(20);
+                                @include flex-center;
+                                overflow: hidden;
+
+                                @include breakpoint(phone768) {
+                                    padding: length(10);
+                                }
+
+                                .totalprice {
+                                    @include font-24-16-medium;
+                                    line-height: 1.5;
+                                    text-align: center;
+
+                                    @include breakpoint(phone768) {
+                                        @include font-24-14-medium;
+                                        line-height: 1.5;
+                                    }
+
+                                    @include breakpoint(phone500) {
+                                        @include font-12-12-medium;
+                                        line-height: 1.5;
+                                    }
+
+                                    @include breakpoint(mobile400) {
+                                        @include font-10-10-medium;
+                                        line-height: 1.5;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+
+                &-footer {
+                    @include flex-column;
+
+                    .infobox {
+                        @include border-single(bottom, solid, 1, $header-border);
+
+                        &:last-child {
+                            border-bottom: 0;
+                        }
+                    }
+
+                    .footeinfo {
+                        width: 40%;
+                        margin-left: auto;
+
+                        @include breakpoint(tablet991) {
+                            margin-left: auto;
+                            width: 80%;
+                        }
+
+                        .info {
+                            @include flex-center-between;
+
+                            .titlebox {
+                                width: 50%;
+                                padding: length(20);
+                                @include border-single(right, solid, 1, $header-border);
+                                overflow: hidden;
+
+                                @include breakpoint(phone500) {
+                                    padding: length(10);
+                                }
+
+                                .title {
+                                    @include font-24-16-medium;
+                                    color: $textPrimary;
+                                    text-align: right;
+
+                                    @include breakpoint(phone500) {
+                                        @include font-24-14-medium;
+                                    }
+                                }
+                            }
+
+                            .pricebox {
+                                width: 50%;
+                                padding: length(20);
+                                overflow: hidden;
+
+                                @include breakpoint(phone500) {
+                                    padding: length(10);
+                                }
+
+                                .price {
+                                    @include font-24-16-medium;
+                                    color: $textPrimary;
+                                    text-align: center;
+
+                                    @include breakpoint(phone500) {
+                                        @include font-24-14-medium;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    // ORDER LIST END
+
+    // SUGGESTED PRODUCTS START
+    .suggested-products {
+        @include flex-column;
+        gap: length(24);
+        margin-bottom: length(60);
+
+        @include breakpoint(tablet991) {
+            margin-bottom: length(32);
+        }
+
+        &-header {
+            @include breakpoint(phone480) {
+                text-align: center;
+            }
+
+            .suggested-title {
+                font-weight: 500;
+                color: $textPrimary;
+
+                @include breakpoint(phone768) {
+                    @include heading-3;
+                    font-weight: 500;
+                }
+
+                @include breakpoint(phone359) {
+                    @include heading-4;
+                    font-weight: 500;
+                }
+            }
+        }
+
+        &-body {
+            @include flex-center-vert;
+            gap: length(16);
+
+            @include breakpoint(phone480) {
+                flex-direction: column;
+            }
+        }
+    }
+
+    // SUGGESTED PRODUCTS END
+
+    // SHIPPING ADDRESS START
+    .shipping-method {
+        max-width: 50%;
+        @include flex-column;
+        gap: length(24);
+
+        @include breakpoint(phone768) {
+            max-width: 100%;
+        }
+
+        &-body {
+            @include flex-column;
+            gap: length(24);
+
+            .paymentcard {
+                @include w100;
+                background: $primary;
+                padding: length(40);
+                @include radius(20);
+                @include flex-column;
+                gap: length(14);
+
+                @include breakpoint(phone768) {
+                    padding: length(24);
+                }
+
+                &-header {
+                    .paytitle {
+                        @include font-28-20-semibold;
+                        color: $white;
+                    }
+                }
+
+                &-body {
+                    @include flex-column;
+                    gap: length(20);
+
+                    .paymethod {
+                        @include flex-center-vert;
+                        gap: length(16);
+
+                        .cardtext {
+                            @include font-24-16-medium;
+                            color: $buttonHover;
+                            cursor: pointer;
+                            text-transform: uppercase;
+                            width: length(114);
+
+                            @include breakpoint(phone768) {
+                                @include font-24-14-medium;
+                            }
+
+                            @include breakpoint(phone359) {
+                                @include font-12-12-medium;
+                            }
+                        }
+
+                        .paymentimage {
+                            width: calc(100% - 8.125rem);
+                            height: length(32);
+                            @include flex-center-vert;
+                            overflow: hidden;
+
+                            img {
+                                filter: invert(100%);
+
+                                @include breakpoint(phone768) {
+                                    @include wh100;
+                                    object-fit: contain;
+                                }
+                            }
+                        }
+                    }
+
+                    .paycard {
+                        @include flex-center-vert;
+                        background: $buttonHover;
+                        @include radius(4);
+
+                        .cardnumber {
+                            @include flex-center-vert;
+                            width: 50%;
+
+                            .icon {
+                                @include square(length(36));
+                                @include flex-center;
+                                overflow: hidden;
+                            }
+
+                            .inputfield {
+                                width: calc(100% - 2.25rem);
+                                background: transparent;
+                                padding: length(8);
+                                @include font-24-14-normal;
+                                color: $black;
+
+                                @include breakpoint(phone768) {
+                                    @include font-12-12-normal;
+                                }
+
+                                &::placeholder {
+                                    color: $secondaryDark;
+
+                                    @include breakpoint(phone768) {
+                                        @include font-12-12-normal;
+                                    }
+                                }
+                            }
+                        }
+
+                        .duration-cvv {
+                            @include flex-center-vert;
+                            width: 50%;
+                            overflow: hidden;
+
+                            .duration {
+                                width: 50%;
+
+                                .inputfield {
+                                    background: transparent;
+                                    @include w100;
+                                    text-align: center;
+                                    padding: length(8);
+                                    @include font-24-14-normal;
+                                    color: $black;
+
+                                    @include breakpoint(phone768) {
+                                        @include font-12-12-normal;
+                                    }
+
+                                    &::placeholder {
+                                        color: $secondaryDark;
+
+                                        @include breakpoint(phone768) {
+                                            @include font-12-12-normal;
+                                        }
+                                    }
+                                }
+                            }
+
+                            .cvv {
+                                width: 50%;
+
+                                .inputfield {
+                                    @include w100;
+                                    background: transparent;
+                                    text-align: center;
+                                    padding: length(8);
+                                    @include font-24-14-normal;
+                                    color: $black;
+
+                                    @include breakpoint(phone768) {
+                                        @include font-12-12-normal;
+                                    }
+
+                                    &::placeholder {
+                                        color: $secondaryDark;
+
+                                        @include breakpoint(phone768) {
+                                            @include font-12-12-normal;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            .paymentinfo {
+                @include flex-column;
+                gap: length(16);
+
+                .text {
+                    @include font-24-14-normal;
+                    color: $textSecondary;
+
+                    .link {
+                        @include font-24-14-semibold;
+                        color: $textPrimary;
+                        @include transitions;
+
+                        @include breakpoint(phone480) {
+                            @include font-12-12-semibold;
+                            line-height: 1.5;
+                        }
+
+                        @include hover {
+                            color: $primary;
+                            text-decoration: none;
+                        }
+                    }
+
+                    @include breakpoint(phone480) {
+                        @include font-12-12-normal;
+                        line-height: 1.5;
+                    }
+                }
+
+                .agreement {
+                    margin-bottom: length(16);
+
+                    .inputbox {
+                        @include flex-center-vert;
+
+                        .checkinput {
+                            &:checked~.checklabel {
+                                color: $black;
+
+                                &::after {
+                                    border-color: $textPrimary;
+                                    opacity: 1;
+                                    visibility: visible;
+                                }
+                            }
+                        }
+
+                        .checklabel {
+                            @include font-24-14-medium;
+                            color: $textPrimary;
+                            cursor: pointer;
+                            position: relative;
+                            padding-left: length(36);
+
+                            .link {
+                                color: $primaryDark;
+                                font-weight: bold;
+                                @include transitions;
+
+                                @include hover {
+                                    color: $primary;
+                                }
+                            }
+
+                            @include breakpoint(phone480) {
+                                @include font-12-12-medium;
+                                line-height: 1.5;
+                            }
+
+                            @include breakpoint(mobile400) {
+                                @include font-10-10-medium;
+                                line-height: 1.5;
+                            }
+
+                            &::before {
+                                content: '';
+                                position: absolute;
+                                top: 50%;
+                                left: 0;
+                                @include square(length(24));
+                                @include border(solid, 2, $textPrimary);
+                                @include transform(translateY(-50%));
+                                background: transparent;
+                            }
+
+                            &::after {
+                                content: '';
+                                position: absolute;
+                                top: 32%;
+                                left: length(9);
+                                width: length(7);
+                                height: length(14);
+                                @include border(solid, 2, $white);
+                                border-top: 0;
+                                border-left: 0;
+                                @include transform(translateY(-32%) rotate(45deg));
+                                opacity: 0;
+                                visibility: hidden;
+                                @include transitions;
+                            }
+
+                            &::selection {
+                                background: transparent;
+                                color: $textPrimary;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    // SHIPPING ADDRESS END
+}
+
+// CART END

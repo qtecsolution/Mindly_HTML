@@ -1,0 +1,683 @@
+// CARD SUGGESTED START
+.card-suggested {
+    @include flex-center-column;
+    background: $white;
+    @include radius(10);
+    padding: length(20);
+    box-shadow: $box-shadow-7;
+    max-width: length(260);
+    gap: length(16);
+
+    @include breakpoint(phone768) {
+        padding: length(16);
+        max-width: length(220);
+    }
+
+    &-header {
+        @include flex-center;
+        overflow: hidden;
+        padding-bottom: length(0);
+
+        .card-thumbnail {
+            @include square(length(160));
+            @include flex-center;
+            overflow: hidden;
+
+            @include breakpoint(phone768) {
+                @include square(length(130));
+            }
+
+            img {
+                max-width: 100%;
+                object-fit: cover;
+            }
+        }
+    }
+
+    &-body {
+        @include flex-center-column;
+        gap: length(14);
+
+        .cardtitle {
+            @include font-24-14-medium-futuraPT;
+            color: $black;
+            text-align: center;
+            text-transform: uppercase;
+            @include line-clamp;
+            height: length(48);
+
+            @include breakpoint(phone768) {
+                @include font-24-12-medium-futuraPT;
+            }
+        }
+
+        .cardprice {
+            @include font-24-16-semibold;
+            color: $textPrimary;
+            text-align: center;
+
+            @include breakpoint(phone768) {
+                @include font-24-14-semibold;
+            }
+        }
+    }
+}
+
+// CARD SUGGESTED END
+
+// CARD CREATE START
+.create-card {
+    background: $white;
+    @include radius(10);
+    padding: length(24);
+    @include flex-center-vert;
+    gap: length(24);
+
+    @include breakpoint(tablet991) {
+        flex-direction: column;
+        padding: length(16);
+    }
+
+    // CREATE CARD HEADER START
+    &-header {
+        width: 55%;
+        @include flex-column;
+        gap: length(20);
+
+        @include breakpoint(tablet991) {
+            @include w100;
+        }
+
+        // FRONT-THUMBNAIL START
+        .front-thumbnail {
+            position: relative;
+            @include square(length(400));
+            overflow: hidden;
+            @include flex-center;
+            margin-inline: auto;
+
+            @include breakpoint(phone768) {
+                @include square(length(280));
+            }
+
+            .frame {
+                @include wh100;
+                position: relative;
+            }
+
+            .medallion {
+                @include circle;
+                @include flex-center;
+                position: absolute;
+                left: length(30);
+                top: length(30);
+                transform: skew(-5deg);
+                overflow: hidden;
+                z-index: 100;
+                width: length(336);
+                height: length(300);
+
+                @include breakpoint(phone768) {
+                    left: length(21);
+                    top: length(20);
+                    width: length(235);
+                    height: length(212);
+                }
+
+                img {
+                    @include wh100;
+                    @include circle;
+                    object-fit: cover;
+                }
+            }
+        }
+
+        // FRONT-THUMBNAIL END
+
+        // FRONT THUMBNAIL INFO START
+        .description {
+            .limitedtext {
+                @include font-24-14-medium;
+                color: $textPrimary;
+                text-align: center;
+                margin-bottom: length(8);
+            }
+
+            .buttonbox {
+                @include flex-center;
+                margin-bottom: length(24);
+            }
+
+            .commentbox {
+                max-width: length(400);
+                margin-inline: auto;
+
+                .form-label {
+                    @include font-24-14-medium;
+                    color: $primaryDark;
+                }
+
+                .form-control {
+                    @include font-24-14-normal;
+                    color: $textPrimary;
+
+                    &:focus {
+                        box-shadow: none;
+                        outline: none;
+                        border-color: $textActiveLink;
+                    }
+                }
+            }
+        }
+
+        // FRONT THUMBNAIL INFO END
+
+        // BACK-THUMBNAIL START
+        .back-thumbnail {
+            position: relative;
+            @include square(length(400));
+            overflow: hidden;
+            @include flex-center;
+            margin-inline: auto;
+
+            @include breakpoint(phone768) {
+                @include square(length(280));
+            }
+
+            .frame {
+                @include wh100;
+                position: relative;
+            }
+
+            .backinfo {
+                position: absolute;
+                top: 45%;
+                @include transform(translateY(-45%));
+                left: auto;
+                right: auto;
+                width: 90%;
+                @include flex-center-column;
+                gap: length(12);
+
+                .namebox {
+                    @include flex-center;
+                    width: 90%;
+                    margin-inline: auto;
+
+                    .name {
+                        @include text-overflow;
+                        color: $textPrimary;
+                        text-align: center;
+                        text-shadow: length(1) 0 0 $textShadow;
+                    }
+                }
+
+                .birthinfo {
+                    .birthdate {
+                        color: $textPrimary;
+                        text-shadow: length(1) 0 0 $textShadow;
+                        text-align: center;
+                    }
+                }
+
+                .backpattern {
+                    width: length(200);
+                    overflow: hidden;
+                    @include flex-center;
+
+                    img {
+                        max-width: 100%;
+                        object-fit: contain;
+                    }
+                }
+
+                .deathinfo {
+                    .deathdate {
+                        color: $textPrimary;
+                        text-shadow: length(1) 0 0 $textShadow;
+                        text-align: center;
+                    }
+                }
+            }
+        }
+
+        // BACK-THUMBNAIL END
+
+        // CIRCUMFERENCE-THUMBNAIL START
+        .circumference-thumbnail {
+            position: relative;
+            width: length(400);
+            height: length(98);
+            overflow: hidden;
+            @include flex-center;
+            margin-inline: auto;
+            background-color: green;
+
+            @include breakpoint(phone768) {
+                width: length(280);
+                height: length(98);
+            }
+
+            .frame {
+                position: relative;
+                @include wh100;
+            }
+
+            .circumferenceinfo {
+                position: absolute;
+                top: 50%;
+                @include transform(translateY(-50%));
+                left: auto;
+                right: auto;
+                width: 90%;
+                @include flex-center;
+
+                .circumferencetext {
+                    color: $textPrimary;
+                    text-align: center;
+                    text-shadow: length(1) 0 0 $textShadow;
+                }
+            }
+        }
+
+        // CIRCUMFERENCE-THUMBNAIL END
+    }
+
+    // CREATE CARD HEADER END
+
+    // CREATE CARD BODY START
+    &-body {
+        width: calc(45% - 1.25rem);
+        @include flex-column;
+        gap: length(24);
+
+        @include breakpoint(tablet991) {
+            @include w100;
+        }
+
+        .create-title {
+            font-weight: 500;
+            color: $textPrimary;
+
+            @include breakpoint(phone768) {
+                @include heading-3;
+                font-weight: 500;
+            }
+
+            @include breakpoint(phone359) {
+                @include heading-4;
+                font-weight: 500;
+            }
+        }
+
+        // CREATE INFO BOX START
+        .createinfobox {
+            .createform {
+                @include flex-column;
+                gap: length(16);
+
+                // QUANTITY BOX START
+                .inputbox {
+                    .quantityinfo {
+                        @include flex-column;
+                        gap: length(4);
+
+                        .formlabel {
+                            @include font-24-14-medium;
+                            color: $textSecondary;
+                        }
+
+                        .quantitybox {
+                            @include flex-center-between;
+                            @include border(solid, 1, $textActiveLink);
+                            @include radius(4);
+                            padding: length(8) length(16);
+
+                            .quantitytitle {
+                                @include font-24-14-medium;
+                                color: $textPrimary;
+                                width: 20%;
+                            }
+
+                            .quantitycount {
+                                width: 80%;
+                                @include flex-end;
+
+                                .counterbox {
+                                    @include flex-center-vert;
+                                    width: length(90);
+
+                                    .btn-decrement,
+                                    .btn-increment {
+                                        @include transparent-button;
+                                        @include square(length(32));
+                                        @include flex-center;
+                                        @include circle;
+
+                                        svg {
+                                            circle {
+                                                @include transitions;
+                                            }
+
+                                            path {
+                                                @include transitions;
+                                            }
+                                        }
+                                    }
+
+                                    .btn-decrement {
+                                        @include hover {
+                                            svg {
+                                                circle {
+                                                    fill: $primary;
+                                                }
+
+                                                path {
+                                                    stroke: $buttonHover;
+                                                }
+                                            }
+                                        }
+                                    }
+
+                                    .inputfield {
+                                        width: calc(100% - 4rem);
+                                        text-align: center;
+                                        background: transparent;
+                                        @include font-24-14-medium;
+                                        color: $textPrimary;
+                                        @include h100;
+                                    }
+
+                                    .btn-increment {
+                                        @include hover {
+                                            svg {
+                                                circle {
+                                                    fill: $textFeature;
+                                                }
+
+                                                path {
+                                                    stroke: $white;
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+
+                // QUANTITY BOX END
+
+                // INPUT BOX START
+                .inputbox {
+                    @include flex-column;
+                    gap: length(4);
+
+                    .inputinfo {
+                        @include flex-column;
+                        gap: length(4);
+
+                        .formlabel {
+                            @include font-24-14-medium;
+                            color: $textSecondary;
+                        }
+
+                        .form-select {
+                            padding: length(8) length(16);
+                            @include border(solid, 1, $textActiveLink);
+                            @include radius(4);
+                            @include transitions;
+                            @include font-24-14-medium;
+                            color: $textPrimary;
+
+                            &:focus {
+                                border-color: $textSecondary;
+                                outline: none;
+                                box-shadow: none;
+                            }
+                        }
+
+                        .info {
+                            @include flex-column;
+                            gap: length(4);
+
+                            .inputfield {
+                                padding: length(8) length(16);
+                                @include border(solid, 1, $textActiveLink);
+                                @include radius(4);
+                                @include transitions;
+                                @include font-24-14-medium;
+                                color: $textPrimary;
+                            }
+
+                            .text {
+                                @include font-24-14-medium;
+                                color: $rateText;
+                            }
+                        }
+
+                        .checkinfo {
+                            @include flex-center-vert;
+                            gap: length(16);
+
+                            .form-check {
+                                margin: length(0);
+                                padding: length(0);
+
+                                &-input {
+                                    &:checked~.form-check-label {
+                                        &::before {
+                                            border-color: $primary;
+                                        }
+
+                                        &:after {
+                                            opacity: 1;
+                                            visibility: visible;
+                                        }
+                                    }
+                                }
+
+                                &-label {
+                                    margin: length(0);
+                                    padding: length(0);
+                                    padding-left: length(26);
+                                    position: relative;
+                                    cursor: pointer;
+                                    @include font-24-14-medium;
+                                    color: $textPrimary;
+
+                                    &::before {
+                                        content: '';
+                                        position: absolute;
+                                        top: 50%;
+                                        @include transform(translateY(-50%));
+                                        left: length(0);
+                                        @include square(length(18));
+                                        background: $white;
+                                        @include border(solid, 1.5, $submitBg);
+                                        @include circle;
+                                        @include transitions;
+                                    }
+
+                                    &::after {
+                                        content: '';
+                                        position: absolute;
+                                        top: 50%;
+                                        @include transform(translateY(-50%));
+                                        left: length(4);
+                                        @include square(length(10));
+                                        @include circle;
+                                        background: $primary;
+                                        opacity: 0;
+                                        visibility: hidden;
+                                        @include transitions;
+                                    }
+
+                                    &::selection {
+                                        @include setBgColor(transparent, $textPrimary);
+                                    }
+                                }
+                            }
+                        }
+
+                        .uploadinfo {
+                            @include flex-center-vert;
+                            gap: length(16);
+                            margin-bottom: length(16);
+
+                            @include breakpoint(phone575) {
+                                flex-direction: column;
+                                align-items: flex-start;
+                                gap: length(8);
+                            }
+
+                            .btn-submit {
+                                @include breakpoint(desktop1199) {
+                                    padding-left: length(14);
+                                    padding-right: length(14);
+                                }
+
+                                @include breakpoint(tablet991) {
+                                    padding-left: length(20);
+                                    padding-right: length(20);
+                                }
+                            }
+
+                            .upload-descript {
+                                .size {
+                                    @include font-24-12-medium;
+                                    color: $rateText;
+                                }
+
+                                .type {
+                                    @include font-24-12-medium;
+                                    color: $rateText;
+                                }
+                            }
+                        }
+                    }
+
+                    .error-message {
+                        @include font-24-12-semibold;
+                        color: $primary;
+                        display: none;
+                    }
+
+                    &.error {
+                        .inputinfo {
+                            .form-select {
+                                border-color: $primary;
+                            }
+
+                            .info {
+                                .inputfield {
+                                    border-color: $primary;
+                                }
+                            }
+                        }
+
+                        .error-message {
+                            display: block;
+                        }
+                    }
+                }
+
+                // INPUT BOX END
+            }
+
+            .createinfo {
+                .infotext {
+                    @include font-24-12-medium;
+                    color: $rateText;
+                }
+            }
+        }
+
+        // CREATE INFO BOX END
+
+        // USER INFO START
+        .userinfo {
+            @include flex-column;
+            gap: length(16);
+
+            .inputbox {
+                @include flex-column;
+                gap: length(4);
+
+                .inputinfo {
+                    @include flex-column;
+                    gap: length(4);
+
+                    .formlabel {
+                        @include font-24-14-medium;
+                        color: $textSecondary;
+                    }
+
+                    .info {
+                        @include flex-column;
+                        gap: length(4);
+
+                        .inputfield {
+                            padding: length(8) length(16);
+                            @include border(solid, 1, $textActiveLink);
+                            @include radius(4);
+                            @include transitions;
+                            @include font-24-14-medium;
+                            color: $textPrimary;
+                        }
+
+                        .text {
+                            @include font-24-14-medium;
+                            color: $rateText;
+                        }
+                    }
+
+                    .uploadinfo {
+                        @include flex-center-vert;
+                        gap: length(16);
+                        margin-bottom: length(16);
+
+                        .upload-descript {
+                            .size {
+                                @include font-24-12-medium;
+                                color: $rateText;
+                            }
+
+                            .type {
+                                @include font-24-12-medium;
+                                color: $rateText;
+                            }
+                        }
+                    }
+                }
+
+                .error-message {
+                    @include font-24-12-semibold;
+                    color: $primary;
+                    display: none;
+                }
+
+                &.error {
+                    .inputinfo {
+                        .info {
+                            .inputfield {
+                                border-color: $primary;
+                            }
+                        }
+                    }
+
+                    .error-message {
+                        display: block;
+                    }
+                }
+            }
+        }
+
+        // USER INFO END
+    }
+
+    // CREATE CARD BODY END
+}
+
+// CARD CREATE END

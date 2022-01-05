@@ -1,0 +1,205 @@
+// SITE HEADER START
+
+.header {
+    background: $white;
+    box-shadow: $box-shadow-10;
+    padding: length(10) length(0);
+    @include border-single(bottom, solid, 1, $header-border);
+
+    &-content {
+        @include flex-center-between;
+
+        .hamburgermenu {
+            display: none;
+
+            @include breakpoint(phone768) {
+                display: block;
+            }
+
+            .btn-hamburgermenu {
+                @include flex-center;
+                @include transparent-button;
+                @include square(length(30));
+                padding: length(4);
+                overflow: hidden;
+            }
+        }
+
+        .logo {
+            @include breakpoint(phone768) {
+                @include flex-center;
+                width: calc(100% - 3.875rem);
+            }
+
+            .brandlink {
+                @include flex-center-vert;
+                gap: length(10);
+
+                &-icon {
+                    @include square(length(48));
+                    @include flex-center;
+                    overflow: hidden;
+
+                    @include breakpoint(phone768) {
+                        @include square(length(36));
+                    }
+
+                    img {
+                        @include wh100;
+                    }
+                }
+
+                &-text {
+                    @include font-24-16-medium-futuraPT;
+                    color: $black;
+                    text-transform: uppercase;
+                }
+            }
+        }
+
+        .headermenu {
+            @include flex-end;
+            gap: length(20);
+            flex-grow: 100;
+
+            @include breakpoint(tablet991) {
+                gap: length(16);
+            }
+
+            .headerlist {
+                @include list-horizontal;
+
+                @include breakpoint(phone768) {
+                    display: none;
+                }
+
+                &-link {
+                    @include w100;
+                    padding: length(16) length(20);
+                    color: $textDark;
+                    @include font-14-14-medium;
+                    text-transform: uppercase;
+                    @include transitions;
+
+                    @include breakpoint(tablet991) {
+                        padding: length(16);
+                    }
+
+                    &:hover:not(.active) {
+                        color: $textActiveLink;
+                    }
+
+                    &.active {
+                        color: $textActiveLink;
+                    }
+                }
+            }
+
+            .iconlist {
+                @include flex-center;
+                @include list-horizontal;
+
+                @include breakpoint(phone768) {
+                    padding-right: length(10);
+                }
+
+                .cartlink {
+                    @include square(length(32));
+                    @include flex-center;
+                    position: relative;
+
+                    @include breakpoint(phone768) {
+                        @include square(length(28));
+                    }
+
+                    .icon {
+                        @include square(length(32));
+                        @include flex-center;
+                        overflow: hidden;
+
+                        @include breakpoint(phone768) {
+                            @include square(length(28));
+                        }
+
+                        svg {
+                            path {
+                                @include transitions;
+                            }
+                        }
+                    }
+
+                    .cartcount {
+                        position: absolute;
+                        top: length(-6);
+                        right: length(-10);
+                        @include square(length(18));
+                        @include flex-center;
+                        padding: length(4);
+                        text-align: center;
+                        @include circle;
+                        @include setBgColor($textDark, $buttonHover);
+                        @include font-10-10-medium;
+                        @include transitions;
+
+                        @include breakpoint(phone768) {
+                            top: length(-8);
+                        }
+                    }
+
+                    &:hover:not(.active) {
+                        svg {
+                            path {
+                                stroke: $textActiveLink;
+                            }
+                        }
+
+                        .cartcount {
+                            background: $textActiveLink;
+                        }
+                    }
+
+                    &.active {
+                        svg {
+                            path {
+                                stroke: $textActiveLink;
+                            }
+                        }
+
+                        .cartcount {
+                            background: $textActiveLink;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .mobilemenu {
+        // width: length(320);
+
+        .mobilelist {
+            @include list-vertical;
+            gap: length(8);
+            @include w100;
+
+            &-link {
+                @include w100;
+                padding: length(16) length(20);
+                @include setBgColor($white, $textDark);
+                @include font-14-14-medium;
+                text-transform: uppercase;
+                @include transitions;
+
+                &:hover:not(.active) {
+                    @include setBgColor($sidebarlinkHover, $textDark);
+                }
+
+                &.active {
+                    @include setBgColor($sidebarlinkHover, $textDark);
+                }
+            }
+        }
+    }
+}
+
+// SITE HEADER END

@@ -1,0 +1,92 @@
+.ranger {
+    position: relative;
+    height: length(30);
+    @include flex-center-vert;
+
+    .bar {
+        position: absolute;
+        top: length(13);
+        left: 0;
+        width: 100%;
+        height: length(4);
+        background: $Gray-1;
+        @include radius(8);
+        z-index: 1;
+        overflow: hidden;
+
+        .fill {
+            display: block;
+            width: 0;
+            height: 100%;
+            background: $Gray-2;
+        }
+    }
+}
+
+.custom-range {
+    -webkit-appearance: none;
+    width: 100%;
+    height: length(8);
+    outline: none;
+    @include radius(10);
+    position: relative;
+    z-index: 2;
+    background: transparent;
+}
+
+.custom-range::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    @include square(length(16));
+    @include circle;
+    background: $Gray-1;
+    cursor: pointer;
+    outline: none;
+    box-shadow: 0 0 0 0 rgba($Gray-1, 0.1);
+    @include transition(box-shadow $time ease-in-out);
+}
+
+.custom-range::-webkit-slider-thumb:hover {
+    box-shadow: 0 0 0 length(10) rgba($Gray-4, 0.1);
+}
+
+.custom-range:active::-webkit-slider-thumb:hover {
+    box-shadow: 0 0 0 length(10) rgba($Gray-4, 0.2);
+}
+
+.custom-range::-moz-range-thumb {
+    -webkit-appearance: none;
+    @include square(length(16));
+    @include circle;
+    background: $Gray-1;
+    cursor: pointer;
+    outline: none;
+    box-shadow: 0 0 0 0 rgba($Gray-1, 0.1);
+    @include transition(box-shadow $time ease-in-out);
+}
+
+.custom-range::-moz-range-thumb:hover {
+    box-shadow: 0 0 0 length(10) rgba($Gray-4, 0.1);
+}
+
+.custom-range:active::-moz-range-thumb:hover {
+    box-shadow: 0 0 0 length(10) rgba($Gray-4, 0.2);
+}
+
+.custom-range::-ms-thumb {
+    -webkit-appearance: none;
+    @include square(length(16));
+    @include circle;
+    background: $Gray-1;
+    cursor: pointer;
+    outline: none;
+    box-shadow: 0 0 0 0 rgba($Gray-1, 0.1);
+    @include transition(box-shadow $time ease-in-out);
+}
+
+.custom-range::-ms-thumb:hover {
+    box-shadow: 0 0 0 length(10) rgba($Gray-4, 0.1);
+}
+
+.custom-range:active::-ms-thumb:hover {
+    box-shadow: 0 0 0 length(10) rgba($Gray-4, 0.2);
+}

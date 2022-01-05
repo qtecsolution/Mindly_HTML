@@ -1,0 +1,52 @@
+.slick-arrow {
+    @include square(length(32));
+    @include circle;
+    background: transparent;
+    z-index: 100;
+
+    &::before {
+        font-size: length(0);
+        width: 0;
+        height: 0;
+        content: '';
+        display: none;
+    }
+
+    svg {
+        @include wh100;
+
+        path {
+            fill: $primary;
+        }
+    }
+}
+
+.slick-prev {
+    left: length(0);
+
+    @include breakpoint(tablet991) {
+        left: length(-10);
+    }
+}
+
+.slick-next {
+    right: length(0);
+
+    @include breakpoint(tablet991) {
+        right: length(-10);
+    }
+}
+
+.slick-list {
+    padding: length(0) !important;
+    // height: auto !important;
+}
+
+.slick-slide {
+    border: 0 !important;
+    // width: auto !important;
+}
+
+.slick-track {
+    height: auto !important;
+}

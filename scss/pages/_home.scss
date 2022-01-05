@@ -1,0 +1,94 @@
+// HOME SECTION START
+
+.home-section {
+    min-height: calc(100vh - 4.25rem);
+    @include flex-center;
+    overflow: hidden;
+    padding: length(48) length(0);
+
+    &-content {
+        @include flex-column;
+        gap: length(48);
+
+        // HOME BANNER START
+        .homebanner {
+            @include flex-center-around;
+
+            @include breakpoint(tablet991) {
+                justify-content: center;
+            }
+
+            .homeimage {
+                min-width: length(300);
+                height: length(320);
+                @include flex-center;
+                overflow: hidden;
+
+                @include breakpoint(tablet991) {
+                    display: none;
+                }
+
+                img {
+                    @include wh100;
+                }
+            }
+
+            .homethumbnail {
+                min-width: length(300);
+                height: length(320);
+                @include flex-center;
+                overflow: hidden;
+
+                img {
+                    @include wh100;
+                }
+            }
+        }
+
+        // HOME DETAILS START
+        .homedetails {
+            @include flex-center-column;
+            gap: length(14);
+            text-align: center;
+
+            @include breakpoint(phone768) {
+                gap: length(20);
+            }
+
+            .hometitle {
+                @include display-1;
+                color: $black;
+                font-weight: 500;
+
+                @include breakpoint(phone768) {
+                    @include heading-1;
+                    font-weight: 500;
+                }
+
+                @include breakpoint(phone359) {
+                    @include heading-3;
+                    font-weight: 500;
+                }
+            }
+
+            .hometext {
+                @include font-24-16-medium;
+                line-height: 2;
+                color: $black;
+                margin-bottom: length(14);
+
+                @include breakpoint(phone768) {
+                    @include font-24-14-medium;
+                    line-height: 2;
+                }
+
+                @include breakpoint(phone359) {
+                    @include font-12-12-medium;
+                    line-height: 2;
+                }
+            }
+        }
+    }
+}
+
+// HOME SECTION END

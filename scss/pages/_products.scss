@@ -1,0 +1,228 @@
+// PRODUCTS STYLES START
+
+.products {
+    overflow: hidden;
+    padding: length(48) length(0) length(60);
+    background: $productBg;
+
+    @include breakpoint(phone768) {
+        // padding: length(24);
+    }
+
+    &-content {
+        @include flex-column;
+        gap: length(60);
+
+        @include breakpoint(tablet991) {
+            gap: length(40);
+        }
+
+        .productdetails {
+            @include flex-center-column;
+            gap: length(12);
+
+            .product-slider {
+                @include flex-center-vert;
+                gap: length(40);
+                padding: length(40) length(24);
+                @include radius(10);
+                background: $white;
+
+                @include breakpoint(tablet991) {
+                    flex-direction: column;
+                }
+
+                @include breakpoint(phone768) {
+                    padding: length(20);
+                }
+
+                @include breakpoint(phone575) {
+                    padding: length(10);
+                    gap: length(20);
+                }
+
+                .slider-thumbnail {
+                    max-width: length(360);
+
+                    @include breakpoint(tablet991) {
+                        max-width: length(320);
+                    }
+
+                    .slider {
+                        @include flex-center;
+
+                        &-thumb {
+                            @include square(length(260));
+
+                            video {
+                                @include wh100;
+                                object-fit: contain;
+                            }
+                        }
+                    }
+                }
+
+                .slider-descriptions {
+                    width: calc(100% - 25rem);
+
+                    @include breakpoint(tablet991) {
+                        width: 100%;
+                        @include flex-center-column;
+                    }
+
+                    .slider-navigation {
+                        @include flex-column;
+                        gap: length(8);
+
+                        .nametinfo {
+                            .product-title {
+                                font-weight: 500;
+                                color: $black;
+
+                                @include breakpoint(phone768) {
+                                    @include heading-2;
+                                    font-weight: 500;
+                                }
+
+                                @include breakpoint(phone575) {
+                                    @include heading-3;
+                                    font-weight: 500;
+                                }
+                            }
+                        }
+
+                        .slider {
+                            @include flex-column;
+                            gap: length(8);
+
+                            &-indicator {
+                                display: flex !important;
+                                cursor: pointer;
+                                margin-bottom: length(4);
+                                width: auto !important;
+
+                                @include breakpoint(mobile500) {
+                                    gap: length(6);
+                                }
+
+                                .slidertitle {
+                                    @include font-24-16-medium;
+                                    color: $primaryDark;
+
+                                    @include breakpoint(phone768) {
+                                        @include font-24-14-medium;
+                                    }
+
+                                    @include breakpoint(phone575) {
+                                        @include font-24-12-medium;
+                                    }
+
+                                    @include breakpoint(phone500) {
+                                        font-size: length(11);
+                                    }
+                                }
+
+                                .sliderprice {
+                                    @include font-24-16-medium;
+                                    color: $primaryDark;
+
+                                    @include breakpoint(phone768) {
+                                        @include font-24-14-medium;
+                                    }
+
+                                    @include breakpoint(phone575) {
+                                        @include font-24-12-medium;
+                                    }
+
+                                    @include breakpoint(phone500) {
+                                        font-size: length(11);
+                                    }
+                                }
+                            }
+
+                            .slick-current {
+                                .slider-indicator {
+                                    .slidertitle {
+                                        color: $primary;
+                                    }
+
+                                    .sliderprice {
+                                        color: $primary;
+                                    }
+                                }
+                            }
+                        }
+
+                        .details {
+                            @include flex-column;
+                            gap: length(20);
+
+                            .productinfo {
+                                @include flex-column;
+                                gap: length(8);
+
+                                .text {
+                                    @include font-24-14-normal;
+                                    color: $textPrimary;
+
+                                    @include breakpoint(phone768) {
+                                        @include font-24-12-normal;
+                                    }
+                                }
+
+                                .weight {
+                                    @include font-24-14-normal;
+                                    color: $textPrimary;
+
+                                    @include breakpoint(phone768) {
+                                        @include font-24-12-normal;
+                                    }
+                                }
+
+                                .info {
+                                    @include font-24-14-normal;
+                                    color: $textPrimary;
+
+                                    @include breakpoint(phone768) {
+                                        @include font-24-12-normal;
+                                    }
+                                }
+
+                                .size {
+                                    @include font-24-14-normal;
+                                    color: $textPrimary;
+
+                                    @include breakpoint(phone768) {
+                                        @include font-24-12-normal;
+                                    }
+                                }
+                            }
+
+                            .createinfo {
+                                @include breakpoint(phone768) {
+                                    padding-bottom: length(16);
+                                }
+                            }
+                        }
+
+                        @include breakpoint(tablet991) {
+                            height: auto !important;
+                        }
+                    }
+                }
+            }
+
+            .slidetext {
+                @include font-24-14-normal;
+                color: $textSecondary;
+                text-align: center;
+
+                @include breakpoint(phone768) {
+                    @include font-24-12-normal;
+                }
+            }
+        }
+    }
+}
+
+// PRODUCTS STYLES END

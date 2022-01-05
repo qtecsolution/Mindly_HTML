@@ -1,0 +1,30 @@
+.btn-hamburger {
+    background: transparent;
+    @include flex-column;
+    gap: length(5);
+
+    .line {
+        width: length(24);
+        height: length(2);
+        @include radius(4);
+        background: $textPrimary;
+        display: block;
+        @include transitions;
+    }
+
+    &.is-active {
+        .line {
+            &:nth-child(1) {
+                @include transform(translateY(length(10.5)) rotate(45deg));
+            }
+
+            &:nth-child(2) {
+                opacity: 0;
+            }
+
+            &:nth-child(3) {
+                @include transform(translateY(length(-8)) rotate(-45deg));
+            }
+        }
+    }
+}
