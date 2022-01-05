@@ -1,0 +1,39 @@
+.flex {
+    @include flex;
+}
+
+.flex-col {
+    @include flex-column;
+}
+
+.flex-row {
+    @include flex-row;
+}
+
+.flex-center-vert {
+    @include flex-center-vert;
+}
+
+.flex-center {
+    @include flex-center;
+}
+
+.flex-center-col {
+    @include flex-center-column;
+}
+
+.flex-between {
+    @include flex-between;
+}
+
+.flex-center-between {
+    @include flex-between;
+}
+
+.flex-baseline {
+    @include flex-baseline;
+}
+
+.flex-center-baseline {
+    @include flex-center-baseline;
+}

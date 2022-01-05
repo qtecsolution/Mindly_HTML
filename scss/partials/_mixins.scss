@@ -6,34 +6,64 @@
 
 // FLEXBOX MIXINS
 
-// FLEX COLUMN
+// DISPLAY FLEX
 @mixin flex {
     display: flex;
 }
 
+// FLEX ROW
+@mixin flex-row {
+    @include flex;
+    flex-direction: row;
+}
+
 // FLEX COLUMN
 @mixin flex-column {
-    display: flex;
+    @include flex;
     flex-direction: column;
+}
+
+// FLEX CENTER VERTICLE
+@mixin flex-center-vert {
+    @include flex;
+    align-items: center;
+}
+
+// FLEX BASELINE
+@mixin flex-baseline {
+    @include flex;
+    align-items: baseline;
+}
+
+// FLEX CENTER BASELINE
+@mixin flex-center-baseline {
+    @include flex;
+    align-items: baseline;
+    justify-content: center;
 }
 
 // FLEX CENTER ROW
 @mixin flex-center {
-    display: flex;
-    align-items: center;
+    @include flex-center-vert;
     justify-content: center;
+}
+
+// FLEX BETWEEN
+@mixin flex-between {
+    @include flex;
+    justify-content: space-between;
+}
+
+// FLEX CENTER
+@mixin flex-between {
+    @include flex-center-vert;
+    justify-content: space-between;
 }
 
 // FLEX CENTER COLUMN
 @mixin flex-center-column {
     @include flex-center;
     flex-direction: column;
-}
-
-// FLEX CENTER VERTICLE
-@mixin flex-center-vert {
-    display: flex;
-    align-items: center;
 }
 
 // FLEX CENTER VERTICLE
@@ -46,11 +76,6 @@
 @mixin flex-center-horiz {
     display: flex;
     justify-content: center;
-}
-
-@mixin flex-between {
-    display: flex;
-    justify-content: space-between;
 }
 
 @mixin flex-end {
