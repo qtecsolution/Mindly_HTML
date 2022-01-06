@@ -124,3 +124,36 @@
 }
 
 // DESKTOP APPONTMENT SECTION END
+
+
+// ROUNDED WHEEL SECTION START
+.roundedwheel {
+    padding: length(80) length(0);
+    background: $white;
+
+    &-content {
+        @include flex-center-column;
+        gap: length(80);
+        max-width: length(877);
+        margin-inline: auto;
+    }
+
+    &-header {
+        @include flex-center-column;
+        gap: length(24);
+        text-align: center;
+
+        .wheeltitle {
+            color: $gray-600;
+        }
+
+        .wheeltext {
+            @include font-30-18-normal;
+            color: $gray-700;
+        }
+    }
+
+    &-body {}
+}
+
+// ROUNDED WHEEL SECTION END
