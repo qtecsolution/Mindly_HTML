@@ -45,6 +45,41 @@
         color: $white;
     }
 
+    .icon {
+        @include square(length(44));
+        padding: length(10);
+        @include flex-center;
+        @include radius(5);
+        background: rgba($white, 0.2);
+    }
+}
+
+.btn-test {
+    padding: length(16) length(20);
+    @include flex-center-between;
+    background: $primary;
+    @include radius(5);
+
+    .text {
+        @include font-16-16-semibold;
+        color: $white;
+    }
+
+    .icon {
+        @include square(length(44));
+        padding: length(10);
+        @include flex-center;
+        @include radius(5);
+        background: rgba($white, 0.2);
+    }
+}
+
+.btn-desktopappointment {
+    padding: length(46) length(20) length(46) length(40);
+    @include flex-center-between;
+    background: $secondary;
+    @include radius(5);
+
     .appointmentinfo {
         @include flex-column;
         gap: length(16);
@@ -69,16 +104,11 @@
     }
 }
 
-.btn-test {
-    padding: length(16) length(20);
+.btn-desktoptest {
+    padding: length(46) length(20) length(46) length(40);
     @include flex-center-between;
     background: $primary;
     @include radius(5);
-
-    .text {
-        @include font-16-16-semibold;
-        color: $white;
-    }
 
     .appointmentinfo {
         @include flex-column;

@@ -55,7 +55,12 @@
 
 // DESKTOP BANNER START
 .desktopbanner {
-    height: length(660);
+    height: length(680);
+    display: none;
+
+    @include breakpoint(tab991) {
+        display: block;
+    }
 
     .desktop-thumnail {
         padding: length(54) length(0) length(38);
@@ -66,6 +71,10 @@
                 max-width: 60%;
                 @include flex-column;
                 gap: length(32);
+
+                @include breakpoint(desktop1400) {
+                    max-width: 70%;
+                }
 
                 .thumbnail-title {
                     @include display-1;
@@ -87,10 +96,15 @@
 // DESKTOP APPONTMENT SECTION START
 .getappointment {
     overflow: hidden;
-    margin-top: length(-152);
+    margin-top: length(-228);
     position: relative;
     z-index: 100;
     padding-bottom: length(160);
+    display: none;
+
+    @include breakpoint(tab991) {
+        display: block;
+    }
 
     &-content {
         .appointment {
@@ -100,6 +114,10 @@
             padding: length(60) length(100);
             @include flex-column;
             gap: length(24);
+
+            @include breakpoint(desktop1400) {
+                max-width: 70%;
+            }
         }
     }
 }
