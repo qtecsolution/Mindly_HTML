@@ -5,13 +5,294 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mindly</title>
+    <!-- FAVICON -->
+    <link rel="shortcut icon" href="favicon.svg" type="image/svg">
+    <!-- BOOTSTRAP CSS -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
     <!-- MINDLY STYLESHEET -->
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
-    <!-- UTILITIES -->
-    <div class="flex-center-baseline">
-
+    <!-- PRELOADER START -->
+    <div class="preloader" id="preloader">
+        <div class="preloader-spinner">
+            <div class="dot dot1"></div>
+            <div class="dot dot2"></div>
+            <div class="dot dot3"></div>
+        </div>
     </div>
+    <!-- PRELOADER END -->
+
+    <!-- HEADER SECTION START -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <!-- HAMBURGER MENU START -->
+                <button class="btn-hamburger" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileSidebar" aria-controls="mobileSidebar">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M3 12H21" stroke="#4A5568" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M3 6H21" stroke="#4A5568" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M3 18H21" stroke="#4A5568" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </button>
+                <!-- HAMBURGER MENU END -->
+
+                <!-- MOBILE MENU START -->
+                <div class="offcanvas offcanvas-start" tabindex="-1" id="mobileSidebar" aria-labelledby="mobileSidebar">
+                    <div class="offcanvas-header">
+                        <a href="index.html" class="brandlink">
+                            <img src="assets/images/logo/logo.svg" alt="logo">
+                        </a>
+
+                        <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close">
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M10 20C4.477 20 0 15.523 0 10C0 4.477 4.477 0 10 0C15.523 0 20 4.477 20 10C20 15.523 15.523 20 10 20ZM10 18C12.1217 18 14.1566 17.1571 15.6569 15.6569C17.1571 14.1566 18 12.1217 18 10C18 7.87827 17.1571 5.84344 15.6569 4.34315C14.1566 2.84285 12.1217 2 10 2C7.87827 2 5.84344 2.84285 4.34315 4.34315C2.84285 5.84344 2 7.87827 2 10C2 12.1217 2.84285 14.1566 4.34315 15.6569C5.84344 17.1571 7.87827 18 10 18ZM10 8.586L12.828 5.757L14.243 7.172L11.414 10L14.243 12.828L12.828 14.243L10 11.414L7.172 14.243L5.757 12.828L8.586 10L5.757 7.172L7.172 5.757L10 8.586Z" fill="#718096"/>
+                            </svg>
+                        </button>
+                    </div>
+
+                    <div class="offcanvas-body">
+                        <ul class="mobilemenu">
+                            <div class="accordion" id="servicesDropdown">
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="heading-1">
+                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-1" aria-expanded="false" aria-controls="collapse-1">
+                                            Services
+                                        </button>
+                                    </h2>
+
+                                    <div id="collapse-1" class="accordion-collapse collapse" aria-labelledby="heading-1" data-bs-parent="#servicesDropdown">
+                                        <div class="accordion-body">
+                                            <a href="individual.html" class="sublink">Individual</a>
+                                            <a href="enterprise.html" class="sublink">Enterprise</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <li class="mobilemenu-item">
+                                <a href="services.html" class="mobilemenu-link">For Providers</a>
+                            </li>
+
+                            <li class="mobilemenu-item">
+                                <a href="comunity-development.html" class="mobilemenu-link">Comunity Development Programs</a>
+                            </li>
+
+                            <li class="mobilemenu-item">
+                                <a href="resources.html" class="mobilemenu-link">Resources</a>
+                            </li>
+
+                            <li class="mobilemenu-item">
+                                <a href="buy-now.html" class="mobilemenu-link">Buy Now</a>
+                            </li>
+
+                            <li class="mobilemenu-item">
+                                <a href="about.html" class="mobilemenu-link">About</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- MOBILE MENU END -->
+
+                <!-- SITE LOGO START -->
+                <div class="sitelogo">
+                    <a href="index.html" class="logolink">
+                        <img src="assets/images/logo/logo.svg" alt="site-logo">
+                    </a>
+                </div>
+                <!-- SITE LOGO END -->
+
+                <!-- HEADER MENU START -->
+                <ul class="headermenu">
+                    <li class="headermenu-item mindlydropdown">
+                        <a href="services.html" class="headermenu-link active">Services</a>
+                        
+                        <!-- SERVICES SUBMENU START -->
+                        <ul class="mindlysubmenu">
+                            <li class="mindlysubmenu-item">
+                                <a href="individual.html" class="mindlysubmenu-link">Individual</a>
+                            </li>
+
+                            <li class="mindlysubmenu-item">
+                                <a href="enterprise.html" class="mindlysubmenu-link">Enterprise</a>
+                            </li>
+                        </ul>
+                        <!-- SERVICES SUBMENU END -->
+                    </li>
+
+                    <!-- PROVIDERS DROPDOWN START -->
+                    <li class="headermenu-item">
+                        <a href="services.html" class="headermenu-link"><span>For</span> Providers</a>
+                    </li>
+                    <!-- PROVIDERS DROPDOWN END -->
+
+                    <li class="headermenu-item">
+                        <a href="comunity-development.html" class="headermenu-link">Comunity <span>Development Programs</span></a>
+                    </li>
+
+                    <li class="headermenu-item">
+                        <a href="resources.html" class="headermenu-link">Resources</a>
+                    </li>
+
+                    <li class="headermenu-item">
+                        <a href="buy-now.html" class="headermenu-link">Buy <span>Now</span></a>
+                    </li>
+
+                    <li class="headermenu-item">
+                        <a href="about.html" class="headermenu-link">About</a>
+                    </li>
+                </ul>
+                <!-- HEADER MENU END -->
+
+                <!-- AUTHENTICATION MENU START -->
+                <div class="authentication-menu">
+                    <div class="authenticationbox">
+                        <!-- AUTHENTICATION LIST START -->
+                        <div class="authenticationlist">
+                            <a href="signup.html" class="btn-signup">Sign Up</a>
+
+                            <a href="signin.html" class="btn-signin">Sign In</a>
+                        </div>
+                        <!-- AUTHENTICATION LIST END -->
+                    </div>
+
+                    <!-- USER PROFILE START -->
+                    <div class="userprofile d-none">
+                        <a href="#" class="profilelink">
+                            <svg width="44" height="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="22" cy="22" r="22" fill="white"/>
+                                <path d="M14 32C14 29.8783 14.8429 27.8434 16.3431 26.3431C17.8434 24.8429 19.8783 24 22 24C24.1217 24 26.1566 24.8429 27.6569 26.3431C29.1571 27.8434 30 29.8783 30 32H28C28 30.4087 27.3679 28.8826 26.2426 27.7574C25.1174 26.6321 23.5913 26 22 26C20.4087 26 18.8826 26.6321 17.7574 27.7574C16.6321 28.8826 16 30.4087 16 32H14ZM22 23C18.685 23 16 20.315 16 17C16 13.685 18.685 11 22 11C25.315 11 28 13.685 28 17C28 20.315 25.315 23 22 23ZM22 21C24.21 21 26 19.21 26 17C26 14.79 24.21 13 22 13C19.79 13 18 14.79 18 17C18 19.21 19.79 21 22 21Z" fill="#718096"/>
+                            </svg>
+                        </a>
+                    </div>
+                    <!-- USER PROFILE END -->
+                </div>
+                <!-- AUTHENTICATION MENU END -->
+            </div>
+        </div>
+    </header>
+    <!-- HEADER SECTION END -->
+
+    <!-- MOBILE BANNER SECTION START -->
+    <section class="mobilebanner">
+        <div class="mobilebanner-content">
+            <div class="banner-thumbnail" style="background: url(assets/images/home/home-mobile-banner.png) no-repeat center center/cover">
+                <div class="container">
+                    <div class="banner-thumbnail-content">
+                        <h1 class="thumbnail-title">
+                            Wellness. <br>
+                            Redefined.
+                        </h1>
+                        <div class="authentication-info">
+                            <a href="signup.html" class="btn-signup">Sign Up</a>
+                            <a href="signin.html" class="btn-signin">Sign In</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="banner-details">
+                <div class="bannercontent">
+                    <p class="bannertext">
+                        Mindly is an online mental healthcare hub for individuals, teams, and providers. We drive progress personally and professionally. From mental healthcare to wellness activities and enhanced performance, accelerate change with assessable positive outcomes.
+                    </p>
+                </div>
+
+                <div class="appointmentcontent">
+                    <a href="#" class="btn-appointment">
+                        <span class="text">Get Appointment</span>
+
+                        <span class="icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M5 12H19" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M12 5L19 12L12 19" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </span>
+                    </a>
+
+                    <a href="#" class="btn-test">
+                        <span class="text">Self-assessment Test</span>
+
+                        <span class="icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M5 12H19" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M12 5L19 12L12 19" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- MOBILE BANNER SECTION END -->
+
+    <!-- DESKTOP BANNER SECTION START -->
+    <section class="desktopbanner">
+        <!-- DEAKTOP THUMBNAIL START -->
+        <div class="desktop-thumnail" style="background: url(assets/images/home/home-banner.png) no-repeat center center/cover;">
+            <div class="container">
+                <div class="desktop-thumnail-content">
+                    <div class="bannerinfo">
+                        <h1 class="thumbnail-title">
+                            Wellness. <br>
+                            Redefined.
+                        </h1>
+
+                        <p class="thumbnail-text">
+                            Mindly is an online mental healthcare hub for individuals, teams, and providers. We drive progress personally and professionally. From mental healthcare to wellness activities and enhanced performance, accelerate change with assessable positive outcomes.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- DEAKTOP THUMBNAIL END -->
+    </section>
+    <!-- DESKTOP BANNER SECTION END -->
+
+    <!-- SECTION APPOINTMENT START -->
+    <section class="getappointment">
+        <div class="container">
+            <div class="getappointment-content">
+                <div class="appointment">
+                    <a href="#" class="btn-appointment">
+                        <span class="appointmentinfo">
+                            <span class="text">Get Appointment</span>
+                            <span class="infotext">The Mindly Wellness Wheel is a holistic tool</span>
+                        </span>
+
+                        <span class="icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M5 12H19" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M12 5L19 12L12 19" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </span>
+                    </a>
+
+                    <a href="#" class="btn-test">
+                        <span class="appointmentinfo">
+                            <span class="text">Self-assessment Test</span>
+                            <span class="infotext">The Mindly Wellness Wheel is a holistic tool</span>
+                        </span>
+
+                        <span class="icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M5 12H19" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M12 5L19 12L12 19" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- SECTION APPOINTMENT END -->
+
+
+    <!-- BOOTSTRAP JS -->
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <!-- PRELOADER JS -->
+    <script src="assets/js/pageloader.js"></script>
 </body>
 </html>

@@ -1,94 +1,107 @@
-// HOME SECTION START
+// MOBILE BANNER START
+.mobilebanner {
+    @include flex-center-column;
+    @include w100;
 
-.home-section {
-    min-height: calc(100vh - 4.25rem);
-    @include flex-center;
-    overflow: hidden;
-    padding: length(48) length(0);
+    @include breakpoint(tab991) {
+        display: none;
+    }
 
     &-content {
+        @include w100;
+    }
+
+    .banner-thumbnail {
+        @include flex-center-column;
+        height: length(240);
+        padding: length(48) length(4);
+        @include flex-center-vert;
+
+        &-content {
+            @include flex-column;
+            gap: length(28);
+
+            .thumbnail-title {
+                @include display-2;
+                color: $white;
+            }
+        }
+    }
+
+    .banner-details {
         @include flex-column;
-        gap: length(48);
+        gap: length(18);
+        background: $appontmentBg;
 
-        // HOME BANNER START
-        .homebanner {
-            @include flex-center-around;
+        .bannercontent {
+            padding: length(45) length(4) length(6);
 
-            @include breakpoint(tablet991) {
-                justify-content: center;
-            }
-
-            .homeimage {
-                min-width: length(300);
-                height: length(320);
-                @include flex-center;
-                overflow: hidden;
-
-                @include breakpoint(tablet991) {
-                    display: none;
-                }
-
-                img {
-                    @include wh100;
-                }
-            }
-
-            .homethumbnail {
-                min-width: length(300);
-                height: length(320);
-                @include flex-center;
-                overflow: hidden;
-
-                img {
-                    @include wh100;
-                }
+            .bannertext {
+                @include font-30-18-normal;
+                color: $gray-700;
+                text-align: center;
             }
         }
 
-        // HOME DETAILS START
-        .homedetails {
-            @include flex-center-column;
-            gap: length(14);
-            text-align: center;
+        .appointmentcontent {
+            @include flex-column;
+            gap: length(12);
+        }
+    }
+}
 
-            @include breakpoint(phone768) {
-                gap: length(20);
-            }
+// MOBILE BANNER END
 
-            .hometitle {
-                @include display-1;
-                color: $black;
-                font-weight: 500;
 
-                @include breakpoint(phone768) {
-                    @include heading-1;
-                    font-weight: 500;
+// DESKTOP BANNER START
+.desktopbanner {
+    height: length(660);
+
+    .desktop-thumnail {
+        padding: length(54) length(0) length(38);
+        @include h100;
+
+        &-content {
+            .bannerinfo {
+                max-width: 60%;
+                @include flex-column;
+                gap: length(32);
+
+                .thumbnail-title {
+                    @include display-1;
+                    color: $gray-700;
                 }
 
-                @include breakpoint(phone359) {
-                    @include heading-3;
-                    font-weight: 500;
-                }
-            }
-
-            .hometext {
-                @include font-24-16-medium;
-                line-height: 2;
-                color: $black;
-                margin-bottom: length(14);
-
-                @include breakpoint(phone768) {
-                    @include font-24-14-medium;
-                    line-height: 2;
-                }
-
-                @include breakpoint(phone359) {
-                    @include font-12-12-medium;
-                    line-height: 2;
+                .thumbnail-text {
+                    @include font-38-24-normal;
+                    color: $gray-700;
                 }
             }
         }
     }
 }
 
-// HOME SECTION END
+// DESKTOP BANNER END
+
+
+// DESKTOP APPONTMENT SECTION START
+.getappointment {
+    overflow: hidden;
+    margin-top: length(-152);
+    position: relative;
+    z-index: 100;
+    padding-bottom: length(160);
+
+    &-content {
+        .appointment {
+            background: $white;
+            background: $box-shadow-1;
+            max-width: 60%;
+            padding: length(60) length(100);
+            @include flex-column;
+            gap: length(24);
+        }
+    }
+}
+
+// DESKTOP APPONTMENT SECTION END

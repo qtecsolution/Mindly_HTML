@@ -27,74 +27,10 @@
                 outline: none;
                 box-shadow: none;
             }
-
-            svg {
-                @include wh100;
-
-                path {
-                    @include transitions;
-                }
-            }
-
-            @include hover {
-                svg {
-                    path {
-                        fill: $primary;
-                    }
-                }
-            }
         }
     }
 
-    &-body {
-        padding: length(32) length(32) length(64);
-        @include flex-center-column;
-        gap: length(20);
-
-        @include breakpoint(phone575) {
-            padding: length(16) length(16) length(48);
-        }
-
-        .uploadbox {
-            @include square(length(260));
-            @include flex-center;
-            @include border(solid, 1, $textActiveLink);
-
-            .default-text {
-                @include font-24-14-medium;
-                text-align: center;
-                color: $textActiveLink;
-            }
-        }
-
-        .upload {
-            @include flex-center-column;
-            gap: length(14);
-
-            &-text {
-                @include font-24-14-semibold;
-                color: $primaryDark;
-                text-align: center;
-            }
-
-            &-description {
-                @include flex-center-vert;
-                gap: length(16);
-
-                @include breakpoint(phone575) {
-                    gap: length(12);
-                }
-
-                .btn-create,
-                .btn-add {
-                    @include breakpoint(phone575) {
-                        padding: length(8) length(16);
-                        font-size: length(12);
-                    }
-                }
-            }
-        }
-    }
+    &-body {}
 }
 
 // UPLOAD MEDALLION MODAL END

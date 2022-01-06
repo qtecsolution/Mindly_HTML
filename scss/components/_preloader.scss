@@ -8,214 +8,54 @@
     height: 100vh;
     overflow: hidden;
     z-index: 9999;
-}
 
-.preloader-orbit-loading {
-    position: relative;
-    @include square(length(62));
-    @include circle;
-    perspective: length(780);
+    &-spinner {
+        width: length(200);
+        height: length(100);
+        @include flex-center;
+        perspective: length(20);
+        position: relative;
 
-    .cssload-inner {
-        position: absolute;
-        @include wh100;
-        @include circle;
-
-        &.cssload-one {
-            left: 0%;
-            top: 0%;
-            animation: cssload-rotate-one 1.15s linear infinite;
-            -o-animation: cssload-rotate-one 1.15s linear infinite;
-            -ms-animation: cssload-rotate-one 1.15s linear infinite;
-            -webkit-animation: cssload-rotate-one 1.15s linear infinite;
-            -moz-animation: cssload-rotate-one 1.15s linear infinite;
-            @include border-single(bottom, solid, 3, $primary);
+        .dot {
+            position: absolute;
+            top: length(0);
+            left: length(0);
+            @include square(length(10));
+            @include circle;
         }
 
-        &.cssload-two {
-            right: 0%;
-            top: 0%;
-            animation: cssload-rotate-two 1.15s linear infinite;
-            -o-animation: cssload-rotate-two 1.15s linear infinite;
-            -ms-animation: cssload-rotate-two 1.15s linear infinite;
-            -webkit-animation: cssload-rotate-two 1.15s linear infinite;
-            -moz-animation: cssload-rotate-two 1.15s linear infinite;
-            @include border-single(right, solid, 3, $primary);
+        .dot1 {
+            background: $primary;
+            animation: moveDot 2s ease infinite;
         }
 
-        &.cssload-three {
-            right: 0%;
-            bottom: 0%;
-            animation: cssload-rotate-three 1.15s linear infinite;
-            -o-animation: cssload-rotate-three 1.15s linear infinite;
-            -ms-animation: cssload-rotate-three 1.15s linear infinite;
-            -webkit-animation: cssload-rotate-three 1.15s linear infinite;
-            -moz-animation: cssload-rotate-three 1.15s linear infinite;
-            @include border-single(top, solid, 3, $primary);
+        .dot2 {
+            background: $secondary;
+            animation: moveDot 2s 200ms ease infinite;
+        }
+
+        .dot3 {
+            background: $tertiary;
+            animation: moveDot 2s 400ms ease infinite;
         }
     }
-}
 
-@keyframes cssload-rotate-one {
-    0% {
-        @include transform(rotateX(35deg) rotateY(-45deg) rotateZ(0deg));
-    }
+    @keyframes moveDot {
 
-    100% {
-        @include transform(rotateX(35deg) rotateY(-45deg) rotateZ(360deg));
-    }
-}
+        0%,
+        100% {
+            left: length(0);
+            top: length(0);
+        }
 
+        30% {
+            top: 100%;
+            left: calc(50% - 0.625rem);
+        }
 
-@-o-keyframes cssload-rotate-one {
-    0% {
-        -o-transform: rotateX(35deg) rotateY(-45deg) rotateZ(0deg);
-    }
-
-    100% {
-        -o-transform: rotateX(35deg) rotateY(-45deg) rotateZ(360deg);
-    }
-}
-
-
-@-ms-keyframes cssload-rotate-one {
-    0% {
-        -ms-transform: rotateX(35deg) rotateY(-45deg) rotateZ(0deg);
-    }
-
-    100% {
-        -ms-transform: rotateX(35deg) rotateY(-45deg) rotateZ(360deg);
-    }
-}
-
-
-@-webkit-keyframes cssload-rotate-one {
-    0% {
-        -webkit-transform: rotateX(35deg) rotateY(-45deg) rotateZ(0deg);
-    }
-
-    100% {
-        -webkit-transform: rotateX(35deg) rotateY(-45deg) rotateZ(360deg);
-    }
-}
-
-
-@-moz-keyframes cssload-rotate-one {
-    0% {
-        -moz-transform: rotateX(35deg) rotateY(-45deg) rotateZ(0deg);
-    }
-
-    100% {
-        -moz-transform: rotateX(35deg) rotateY(-45deg) rotateZ(360deg);
-    }
-}
-
-
-@keyframes cssload-rotate-two {
-    0% {
-        @include transform(rotateX(50deg) rotateY(10deg) rotateZ(0deg));
-    }
-
-    100% {
-        @include transform(rotateX(50deg) rotateY(10deg) rotateZ(360deg));
-    }
-}
-
-
-@-o-keyframes cssload-rotate-two {
-    0% {
-        -o-transform: rotateX(50deg) rotateY(10deg) rotateZ(0deg);
-    }
-
-    100% {
-        -o-transform: rotateX(50deg) rotateY(10deg) rotateZ(360deg);
-    }
-}
-
-
-@-ms-keyframes cssload-rotate-two {
-    0% {
-        -ms-transform: rotateX(50deg) rotateY(10deg) rotateZ(0deg);
-    }
-
-    100% {
-        -ms-transform: rotateX(50deg) rotateY(10deg) rotateZ(360deg);
-    }
-}
-
-
-@-webkit-keyframes cssload-rotate-two {
-    0% {
-        -webkit-transform: rotateX(50deg) rotateY(10deg) rotateZ(0deg);
-    }
-
-    100% {
-        -webkit-transform: rotateX(50deg) rotateY(10deg) rotateZ(360deg);
-    }
-}
-
-
-@-moz-keyframes cssload-rotate-two {
-    0% {
-        -moz-transform: rotateX(50deg) rotateY(10deg) rotateZ(0deg);
-    }
-
-    100% {
-        -moz-transform: rotateX(50deg) rotateY(10deg) rotateZ(360deg);
-    }
-}
-
-
-@keyframes cssload-rotate-three {
-    0% {
-        @include transform(rotateX(35deg) rotateY(55deg) rotateZ(0deg));
-    }
-
-    100% {
-        @include transform(rotateX(35deg) rotateY(55deg) rotateZ(360deg));
-    }
-}
-
-
-@-o-keyframes cssload-rotate-three {
-    0% {
-        -o-transform: rotateX(35deg) rotateY(55deg) rotateZ(0deg);
-    }
-
-    100% {
-        -o-transform: rotateX(35deg) rotateY(55deg) rotateZ(360deg);
-    }
-}
-
-
-@-ms-keyframes cssload-rotate-three {
-    0% {
-        -ms-transform: rotateX(35deg) rotateY(55deg) rotateZ(0deg);
-    }
-
-    100% {
-        -ms-transform: rotateX(35deg) rotateY(55deg) rotateZ(360deg);
-    }
-}
-
-
-@-webkit-keyframes cssload-rotate-three {
-    0% {
-        -webkit-transform: rotateX(35deg) rotateY(55deg) rotateZ(0deg);
-    }
-
-    100% {
-        -webkit-transform: rotateX(35deg) rotateY(55deg) rotateZ(360deg);
-    }
-}
-
-
-@-moz-keyframes cssload-rotate-three {
-    0% {
-        -moz-transform: rotateX(35deg) rotateY(55deg) rotateZ(0deg);
-    }
-
-    100% {
-        -moz-transform: rotateX(35deg) rotateY(55deg) rotateZ(360deg);
+        60% {
+            top: length(0);
+            left: calc(100% - 0.625rem);
+        }
     }
 }

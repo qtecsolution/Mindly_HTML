@@ -7,33 +7,10 @@
 }
 
 .offcanvas {
-    background: $sidebarBg;
     width: length(320);
 
     &-header {
-        @include border-single(bottom, solid, 1, rgba($menu-border, 0.2));
         padding: length(16) length(24);
-
-        .brandlink {
-            @include flex-center-vert;
-            gap: length(10);
-
-            &-icon {
-                @include square(length(40));
-                @include flex-center;
-                overflow: hidden;
-
-                img {
-                    @include wh100;
-                }
-            }
-
-            &-text {
-                @include font-24-16-medium-futuraPT;
-                color: $black;
-                text-transform: uppercase;
-            }
-        }
 
         .btn-close {
             @include square(length(24));
@@ -50,16 +27,6 @@
             &:focus {
                 box-shadow: none;
                 outline: none;
-            }
-
-            @include hover {
-                svg {
-                    @include transform(rotate(90deg));
-
-                    path {
-                        fill: $primary;
-                    }
-                }
             }
         }
     }

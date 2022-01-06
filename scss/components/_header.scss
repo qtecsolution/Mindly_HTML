@@ -1,204 +1,171 @@
 // SITE HEADER START
 
 .header {
-    background: $white;
-    box-shadow: $box-shadow-10;
-    padding: length(10) length(0);
-    @include border-single(bottom, solid, 1, $header-border);
+    background: $headerMobileBg;
+    padding: length(8) length(0);
+    @include flex-center;
 
-    &-content {
-        @include flex-center-between;
-
-        .hamburgermenu {
-            display: none;
-
-            @include breakpoint(phone768) {
-                display: block;
-            }
-
-            .btn-hamburgermenu {
-                @include flex-center;
-                @include transparent-button;
-                @include square(length(30));
-                padding: length(4);
-                overflow: hidden;
-            }
-        }
-
-        .logo {
-            @include breakpoint(phone768) {
-                @include flex-center;
-                width: calc(100% - 3.875rem);
-            }
-
-            .brandlink {
-                @include flex-center-vert;
-                gap: length(10);
-
-                &-icon {
-                    @include square(length(48));
-                    @include flex-center;
-                    overflow: hidden;
-
-                    @include breakpoint(phone768) {
-                        @include square(length(36));
-                    }
-
-                    img {
-                        @include wh100;
-                    }
-                }
-
-                &-text {
-                    @include font-24-16-medium-futuraPT;
-                    color: $black;
-                    text-transform: uppercase;
-                }
-            }
-        }
-
-        .headermenu {
-            @include flex-end;
-            gap: length(20);
-            flex-grow: 100;
-
-            @include breakpoint(tablet991) {
-                gap: length(16);
-            }
-
-            .headerlist {
-                @include list-horizontal;
-
-                @include breakpoint(phone768) {
-                    display: none;
-                }
-
-                &-link {
-                    @include w100;
-                    padding: length(16) length(20);
-                    color: $textDark;
-                    @include font-14-14-medium;
-                    text-transform: uppercase;
-                    @include transitions;
-
-                    @include breakpoint(tablet991) {
-                        padding: length(16);
-                    }
-
-                    &:hover:not(.active) {
-                        color: $textActiveLink;
-                    }
-
-                    &.active {
-                        color: $textActiveLink;
-                    }
-                }
-            }
-
-            .iconlist {
-                @include flex-center;
-                @include list-horizontal;
-
-                @include breakpoint(phone768) {
-                    padding-right: length(10);
-                }
-
-                .cartlink {
-                    @include square(length(32));
-                    @include flex-center;
-                    position: relative;
-
-                    @include breakpoint(phone768) {
-                        @include square(length(28));
-                    }
-
-                    .icon {
-                        @include square(length(32));
-                        @include flex-center;
-                        overflow: hidden;
-
-                        @include breakpoint(phone768) {
-                            @include square(length(28));
-                        }
-
-                        svg {
-                            path {
-                                @include transitions;
-                            }
-                        }
-                    }
-
-                    .cartcount {
-                        position: absolute;
-                        top: length(-6);
-                        right: length(-10);
-                        @include square(length(18));
-                        @include flex-center;
-                        padding: length(4);
-                        text-align: center;
-                        @include circle;
-                        @include setBgColor($textDark, $buttonHover);
-                        @include font-10-10-medium;
-                        @include transitions;
-
-                        @include breakpoint(phone768) {
-                            top: length(-8);
-                        }
-                    }
-
-                    &:hover:not(.active) {
-                        svg {
-                            path {
-                                stroke: $textActiveLink;
-                            }
-                        }
-
-                        .cartcount {
-                            background: $textActiveLink;
-                        }
-                    }
-
-                    &.active {
-                        svg {
-                            path {
-                                stroke: $textActiveLink;
-                            }
-                        }
-
-                        .cartcount {
-                            background: $textActiveLink;
-                        }
-                    }
-                }
-            }
-        }
+    @include breakpoint(tab991) {
+        background: $white;
+        height: length(100);
     }
 
-    .mobilemenu {
-        // width: length(320);
+    &-content {
+        @include flex-center-vert;
 
-        .mobilelist {
-            @include list-vertical;
-            gap: length(8);
-            @include w100;
+        @include breakpoint(tab991) {
+            justify-content: space-between;
+        }
+
+        // HAMBURGER MENU START
+        .btn-hamburger {
+            @include square(length(24));
+            @include flex-center;
+            @include transparent-button;
+            overflow: hidden;
+
+            @include breakpoint(tab991) {
+                display: none;
+            }
+        }
+
+        // HAMBURGER MENU END
+
+        // HEADER MENU START
+        .headermenu {
+            display: none;
+
+            @include breakpoint(tab991) {
+                @include list-horizontal;
+                flex-grow: 1;
+                gap: length(40);
+                justify-content: center;
+            }
 
             &-link {
-                @include w100;
-                padding: length(16) length(20);
-                @include setBgColor($white, $textDark);
-                @include font-14-14-medium;
-                text-transform: uppercase;
+                @include font-14-14-semibold;
+                color: $gray-800;
                 @include transitions;
+                @include flex-center-vert;
+                gap: length(4);
+
+                span {
+                    display: block;
+
+                    @include breakpoint(desktop1400) {
+                        display: none;
+                    }
+                }
 
                 &:hover:not(.active) {
-                    @include setBgColor($sidebarlinkHover, $textDark);
+                    color: $tertiary;
                 }
 
                 &.active {
-                    @include setBgColor($sidebarlinkHover, $textDark);
+                    color: $tertiary;
+                }
+            }
+
+            .mindlydropdown {
+                position: relative;
+
+                .mindlysubmenu {
+                    position: absolute;
+                    top: 100%;
+                    background: rgba($white, 0.75);
+                    min-width: length(140);
+                    box-shadow: $box-shadow-1;
+                    @extend %animation;
+                    @extend %slideUpIn;
+                    display: none;
+
+                    &-link {
+                        padding: length(12) length(16);
+                        @include w100;
+                        @include font-14-14-semibold;
+                        @include setBgColor($white, $gray-800);
+                        @include transitions;
+
+                        @include hover {
+                            @include setBgColor($hoverBg, $gray-800);
+                        }
+                    }
+                }
+
+                @include hover {
+                    .mindlysubmenu {
+                        @include list-vertical;
+                    }
                 }
             }
         }
+
+        // HEADER MENU END
+
+        // SITE LOGO START
+        .sitelogo {
+            flex-grow: 1;
+            @include flex-center;
+            overflow: hidden;
+
+            @include breakpoint(tab991) {
+                flex-grow: 0;
+                width: length(140);
+            }
+
+            .logolink {
+                @include flex-center;
+                overflow: hidden;
+                width: length(158);
+                height: length(34);
+
+                img {
+                    @include wh100;
+                }
+            }
+        }
+
+        // SITE LOGO END
+
+        // AUTHENTICATION MENU START
+        .authentication-menu {
+            .authenticationbox {
+                display: none;
+
+                @include breakpoint(tab991) {
+                    display: block;
+                }
+            }
+
+            // AUTHENTICATION LIST START
+            .authenticationlist {
+                @include list-horizontal;
+                gap: length(24);
+            }
+
+            // AUTHENTICATION LIST END
+
+            // USER PROFILE START
+            .userprofile {
+                .profilelink {
+                    @include square(length(44));
+                    @include flex-center;
+                    overflow: hidden;
+
+                    @include breakpoint(tab991) {
+                        svg {
+                            circle {
+                                fill: $headerMobileBg;
+                            }
+                        }
+                    }
+                }
+            }
+
+            // USER PROFILE END
+        }
+
+        // AUTHENTICATION MENU END
     }
 }
 

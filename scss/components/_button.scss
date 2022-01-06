@@ -1,67 +1,105 @@
-.btn-create {
-    @include setBgColor($primary, $buttonHover);
-    padding: length(10) length(36);
-    @include font-24-16-medium;
+.btn-signup {
+    padding: length(12) length(24);
     text-align: center;
-    @include radius(48);
+    @include setBgColor($tertiary, $white);
+    @include border(solid, 1, $tertiary);
+    @include radius(6);
+    @include font-16-16-semibold;
     @include transitions;
-    cursor: pointer;
 
-    @include breakpoint(phone768) {
-        @include font-24-14-medium;
-    }
-
-    @include breakpoint(phone359) {
-        @include font-12-12-medium;
+    @include breakpoint(laptop1200) {
+        padding: length(12) length(48);
     }
 
     @include hover {
-        @include setBgColor($buttonHover, $primary);
-        @include transform(scale(0.95));
+        @include setBgColor($white, $tertiary);
     }
 }
 
-.btn-submit {
-    padding: length(10) length(48);
-    @include radius(48);
-    @include font-24-16-medium;
-    @include setBgColor($buttonHover, $primary);
-    @include transitions;
+.btn-signin {
+    padding: length(12) length(24);
     text-align: center;
-    cursor: pointer;
+    @include setBgColor($white, $tertiary);
+    @include border(solid, 1, $tertiary);
+    @include radius(6);
+    @include font-16-16-semibold;
+    @include transitions;
+
+    @include breakpoint(laptop1200) {
+        padding: length(12) length(48);
+    }
 
     @include hover {
-        @include setBgColor($primary, $buttonHover);
-        @include transform(scale(0.95));
-    }
-
-    @include breakpoint(phone768) {
-        @include font-24-14-medium;
-    }
-
-    @include breakpoint(phone359) {
-        @include font-12-12-medium;
+        @include setBgColor($tertiary, $white);
     }
 }
 
-.btn-add {
-    padding: length(10) length(48);
-    @include radius(48);
-    @include font-24-14-medium;
-    @include setBgColor($buttonHover, $primary);
-    @include transitions;
-    text-align: center;
-    cursor: pointer;
+.btn-appointment {
+    padding: length(16) length(20);
+    @include flex-center-between;
+    background: $secondary;
+    @include radius(5);
 
-    @include hover {
-        @include setBgColor($primary, $buttonHover);
+    .text {
+        @include font-16-16-semibold;
+        color: $white;
     }
 
-    @include breakpoint(phone768) {
-        @include font-24-14-medium;
+    .appointmentinfo {
+        @include flex-column;
+        gap: length(16);
+
+        .text {
+            @include font-16-16-semibold;
+            color: $white;
+        }
+
+        .infotext {
+            @include font-16-16-normal;
+            color: $gray-200;
+        }
     }
 
-    @include breakpoint(phone359) {
-        @include font-12-12-medium;
+    .icon {
+        @include square(length(44));
+        padding: length(10);
+        @include flex-center;
+        @include radius(5);
+        background: rgba($white, 0.2);
+    }
+}
+
+.btn-test {
+    padding: length(16) length(20);
+    @include flex-center-between;
+    background: $primary;
+    @include radius(5);
+
+    .text {
+        @include font-16-16-semibold;
+        color: $white;
+    }
+
+    .appointmentinfo {
+        @include flex-column;
+        gap: length(16);
+
+        .text {
+            @include font-16-16-semibold;
+            color: $white;
+        }
+
+        .infotext {
+            @include font-16-16-normal;
+            color: $gray-200;
+        }
+    }
+
+    .icon {
+        @include square(length(44));
+        padding: length(10);
+        @include flex-center;
+        @include radius(5);
+        background: rgba($white, 0.2);
     }
 }
