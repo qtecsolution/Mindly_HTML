@@ -235,7 +235,7 @@ $font-weights: ('light': 300, 'normal': normal, 'medium': 500, 'semibold': 600, 
 		style('normal'),
 		size('s24'),
 		weight('normal'),
-		line-height(30, size('s24')));
+		line-height(38.5, size('s24')));
 }
 
 @mixin font-38-24-medium {
@@ -243,7 +243,7 @@ $font-weights: ('light': 300, 'normal': normal, 'medium': 500, 'semibold': 600, 
 		style('normal'),
 		size('s24'),
 		weight('medium'),
-		line-height(30, size('s24')));
+		line-height(38.5, size('s24')));
 }
 
 @mixin font-38-24-semibold {
@@ -251,7 +251,7 @@ $font-weights: ('light': 300, 'normal': normal, 'medium': 500, 'semibold': 600, 
 		style('normal'),
 		size('s24'),
 		weight('semibold'),
-		line-height(30, size('s24')));
+		line-height(38.5, size('s24')));
 }
 
 @mixin font-38-24-bold {
@@ -259,5 +259,5 @@ $font-weights: ('light': 300, 'normal': normal, 'medium': 500, 'semibold': 600, 
 		style('normal'),
 		size('s24'),
 		weight('bold'),
-		line-height(30, size('s24')));
+		line-height(38.5, size('s24')));
 }
