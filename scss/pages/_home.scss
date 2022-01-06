@@ -2,6 +2,7 @@
 .mobilebanner {
     @include flex-center-column;
     @include w100;
+    padding-bottom: lenth(70);
 
     @include breakpoint(tab991) {
         display: none;
@@ -34,7 +35,7 @@
         background: $appontmentBg;
 
         .bannercontent {
-            padding: length(45) length(4) length(76);
+            padding: length(45) length(4) length(6);
 
             .bannertext {
                 @include font-30-18-normal;
