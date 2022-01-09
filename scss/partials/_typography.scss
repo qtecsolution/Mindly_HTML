@@ -123,6 +123,41 @@ $font-weights: ('light': 300, 'normal': normal, 'medium': 500, 'semibold': 600, 
 }
 
 /*------------------------------------*\
+		12/12 FONT SIZES
+\*------------------------------------*/
+@mixin font-12-12-normal {
+	@include font(family($gilroy),
+		style('normal'),
+		size('s12'),
+		weight('normal'),
+		line-height(12, size('s12')));
+}
+
+@mixin font-12-12-medium {
+	@include font(family($gilroy),
+		style('normal'),
+		size('s12'),
+		weight('medium'),
+		line-height(12, size('s12')));
+}
+
+@mixin font-12-12-semibold {
+	@include font(family($gilroy),
+		style('normal'),
+		size('s12'),
+		weight('semibold'),
+		line-height(12, size('s12')));
+}
+
+@mixin font-12-12-bold {
+	@include font(family($gilroy),
+		style('normal'),
+		size('s12'),
+		weight('bold'),
+		line-height(12, size('s12')));
+}
+
+/*------------------------------------*\
 		14/14 FONT SIZES
 \*------------------------------------*/
 @mixin font-14-14-normal {
@@ -155,6 +190,41 @@ $font-weights: ('light': 300, 'normal': normal, 'medium': 500, 'semibold': 600, 
 		size('s14'),
 		weight('bold'),
 		line-height(14, size('s14')));
+}
+
+/*------------------------------------*\
+		24/14 FONT SIZES
+\*------------------------------------*/
+@mixin font-24-14-normal {
+	@include font(family($gilroy),
+		style('normal'),
+		size('s14'),
+		weight('normal'),
+		line-height(24, size('s14')));
+}
+
+@mixin font-24-14-medium {
+	@include font(family($gilroy),
+		style('normal'),
+		size('s14'),
+		weight('medium'),
+		line-height(24, size('s14')));
+}
+
+@mixin font-24-14-semibold {
+	@include font(family($gilroy),
+		style('normal'),
+		size('s14'),
+		weight('semibold'),
+		line-height(24, size('s14')));
+}
+
+@mixin font-24-14-bold {
+	@include font(family($gilroy),
+		style('normal'),
+		size('s14'),
+		weight('bold'),
+		line-height(24, size('s14')));
 }
 
 /*------------------------------------*\

@@ -353,3 +353,46 @@
 }
 
 // MINDLY CHARACTERSTICS END
+
+// MINDLY PACKAGES START
+.mindlypackages {
+    padding: length(80) length(0);
+
+    @include breakpoint(tablet991) {
+        padding: length(40) length(0);
+    }
+
+    &-content {
+        @include flex-center-column;
+        gap: length(80);
+
+        @include breakpoint(tablet991) {
+            gap: length(40);
+
+            .owl-nav {
+                display: none;
+            }
+        }
+    }
+
+    &-header {
+        @include flex-center-column;
+        gap: length(24);
+        text-align: center;
+
+        .mindlypackagetitle {
+            color: $gray-800;
+
+            @include breakpoint(tablet991) {
+                @include heading-2;
+            }
+        }
+
+        .mindlypackagetext {
+            @include font-30-18-normal;
+            color: $gray-600;
+        }
+    }
+}
+
+// MINDLY PACKAGES END

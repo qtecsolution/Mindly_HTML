@@ -1,0 +1,25 @@
+.owl-nav {
+    margin: length(0) !important;
+}
+
+.owl-prev,
+.owl-next {
+    margin: length(0) !important;
+    top: 50%;
+    position: absolute;
+    @include square(length(48));
+    // @include flex-center;
+    overflow: hidden;
+
+    &:hover {
+        background: transparent !important;
+    }
+}
+
+.owl-prev {
+    left: length(-48);
+}
+
+.owl-next {
+    right: length(-48);
+}

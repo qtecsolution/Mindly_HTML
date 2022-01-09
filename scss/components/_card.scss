@@ -1,3 +1,4 @@
+// CHARACTERISTIC CARD START
 .cardcharacteristic {
     @include flex-column;
     gap: length(16);
@@ -34,3 +35,123 @@
         color: $gray-600;
     }
 }
+
+// CHARACTERISTIC CARD END
+
+// PACKAGE CARD START
+.cardpackage {
+    padding: length(56);
+    background: $white;
+    @include border(solid, 1, $gray-700);
+    @include radius(15);
+    @include flex-center-column;
+    gap: length(12);
+
+    @include breakpoint(desktop1199) {
+        padding: length(24);
+    }
+
+    @include breakpoint(tablet991) {
+        padding: length(16);
+    }
+
+    &-header {
+        display: flex;
+        gap: length(28);
+
+        .headerinfos {
+            @include flex-column;
+            gap: length(4);
+
+            .packagetitle {
+                @include font-21-18-bold;
+                color: $secondary;
+                letter-spacing: length(-0.08);
+            }
+
+            .packageprice {
+                color: $gray-700;
+            }
+
+            .packagedurations {
+                @include font-24-14-semibold;
+                color: $gray-700;
+            }
+        }
+
+        .icon {
+            width: length(68);
+            height: length(74);
+            @include flex-center;
+            overflow: hidden;
+        }
+    }
+
+    &-body {
+        margin-bottom: length(8);
+
+        .packagelist {
+            @include flex-column;
+            gap: length(16);
+
+            &-item {
+                @include flex-center-vert;
+                gap: length(8);
+
+                .icon {
+                    @include square(length(16));
+                    @include flex-center;
+                    overflow: hidden;
+                }
+
+                .packageinfo {
+                    width: calc(100% - 1.5rem);
+
+                    .packagetext {
+                        @include font-24-16-normal;
+                        color: $gray-700;
+                    }
+                }
+            }
+        }
+    }
+
+    &-footer {
+        @include flex-center-column;
+        gap: length(10);
+
+        .btn-membership {
+            @include flex-center;
+            gap: length(10);
+            padding: length(16) length(24);
+            @include radius(8);
+            @include setBgColor($tertiary, $white);
+            @include transitions;
+
+            .text {
+                @include font-14-14-semibold;
+                color: $white;
+                text-transform: uppercase;
+            }
+
+            .icon {
+                @include square(length(14));
+                @include flex-center;
+                overflow: hidden;
+            }
+
+            @include hover {
+                background: darken($tertiary, 10%);
+            }
+        }
+
+        .link {
+            @include font-12-12-semibold;
+            color: $gray-500;
+            text-align: center;
+            letter-spacing: length(-0.08);
+        }
+    }
+}
+
+// PACKAGE CARD END
