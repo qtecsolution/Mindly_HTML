@@ -158,6 +158,41 @@ $font-weights: ('light': 300, 'normal': normal, 'medium': 500, 'semibold': 600, 
 }
 
 /*------------------------------------*\
+		24/16 FONT SIZES
+\*------------------------------------*/
+@mixin font-24-16-normal {
+	@include font(family($gilroy),
+		style('normal'),
+		size('base'),
+		weight('normal'),
+		line-height(24, size('base')));
+}
+
+@mixin font-24-16-medium {
+	@include font(family($gilroy),
+		style('normal'),
+		size('base'),
+		weight('medium'),
+		line-height(24, size('base')));
+}
+
+@mixin font-24-16-semibold {
+	@include font(family($gilroy),
+		style('normal'),
+		size('base'),
+		weight('semibold'),
+		line-height(24, size('base')));
+}
+
+@mixin font-24-16-bold {
+	@include font(family($gilroy),
+		style('normal'),
+		size('base'),
+		weight('bold'),
+		line-height(24, size('base')));
+}
+
+/*------------------------------------*\
 		16/16 FONT SIZES
 \*------------------------------------*/
 @mixin font-16-16-normal {
@@ -190,6 +225,41 @@ $font-weights: ('light': 300, 'normal': normal, 'medium': 500, 'semibold': 600, 
 		size('base'),
 		weight('bold'),
 		line-height(16, size('base')));
+}
+
+/*------------------------------------*\
+		21/18 FONT SIZES
+\*------------------------------------*/
+@mixin font-21-18-normal {
+	@include font(family($gilroy),
+		style('normal'),
+		size('s18'),
+		weight('normal'),
+		line-height(21, size('s18')));
+}
+
+@mixin font-21-18-medium {
+	@include font(family($gilroy),
+		style('normal'),
+		size('s18'),
+		weight('medium'),
+		line-height(21, size('s18')));
+}
+
+@mixin font-21-18-semibold {
+	@include font(family($gilroy),
+		style('normal'),
+		size('s18'),
+		weight('semibold'),
+		line-height(21, size('s18')));
+}
+
+@mixin font-21-18-bold {
+	@include font(family($gilroy),
+		style('normal'),
+		size('s18'),
+		weight('bold'),
+		line-height(21, size('s18')));
 }
 
 /*------------------------------------*\

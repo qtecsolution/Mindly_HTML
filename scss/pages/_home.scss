@@ -153,7 +153,203 @@
         }
     }
 
-    &-body {}
+    &-body {
+
+        .circle {
+            position: relative;
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            // animation: rotate 2.5s linear infinite;
+        }
+
+        @keyframes rotate {
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+        .circle6 {
+            position: absolute;
+            border-radius: 50%;
+        }
+
+        .circle4 {
+            position: absolute;
+            border-radius: 50%;
+        }
+
+        .c61 {
+            border-left: 15px solid #3a86ff;
+            background: #000;
+            border-right: 15px solid #000;
+            border-top: 15px solid #000;
+            border-bottom: 15px solid #000;
+        }
+
+        .c62 {
+            border-right: 15px solid #ff006e;
+            border-top: 15px solid transparent;
+            border-bottom: 15px solid transparent;
+            border-left: 15px solid transparent;
+        }
+
+        .c63 {
+            border-right: 15px solid transparent;
+            border-top: 15px solid #fb5607;
+            border-bottom: 15px solid transparent;
+            border-left: 15px solid transparent;
+        }
+
+        .c64 {
+            border-right: 15px solid transparent;
+            border-left: 15px solid transparent;
+            border-top: 15px solid transparent;
+            border-bottom: 15px solid #80ffdb;
+        }
+
+        .c65 {
+            position: absolute;
+            // animation: colorUp 2s ease infinite;
+        }
+
+        @keyframes colorUp {
+            0% {
+                width: 0px;
+                height: 0px;
+                background: #fff;
+            }
+
+            15% {
+                width: 50px;
+                height: 50px;
+                background: #ff006e;
+            }
+
+            25% {
+                width: 0px;
+                height: 0px;
+                background: #fff;
+            }
+
+            40% {
+                width: 50px;
+                height: 50px;
+                background: #fb5607;
+            }
+
+            50% {
+                width: 0px;
+                height: 0px;
+                background: #fff;
+            }
+
+            65% {
+                width: 50px;
+                height: 50px;
+                background: #80ffdb;
+            }
+
+            75% {
+                width: 0px;
+                height: 0px;
+                background: #fff;
+            }
+
+            90% {
+                width: 50px;
+                height: 50px;
+                background: #3a86ff;
+            }
+        }
+
+        .roundedwheel {
+            @include square(length(300));
+            @include circle;
+            background: rebeccapurple;
+            @include flex-center;
+            overflow: hidden;
+
+            &-item {
+                width: 25%;
+                height: length(80);
+
+                &:nth-child(1) {
+                    background: royalblue
+                }
+
+                &:nth-child(2) {
+                    background: saddlebrown;
+                }
+
+                &:nth-child(3) {
+                    background: seagreen;
+                }
+
+                &:nth-child(4) {
+                    background: tomato;
+                }
+            }
+        }
+    }
 }
 
 // ROUNDED WHEEL SECTION END
+
+// MINDLY CHARACTERSTICS START
+
+.mindlycharacteristics {
+    padding: length(80) length(0);
+    background: $footerBg;
+
+    @include breakpoint(tablet991) {
+        padding: length(40) length(0);
+    }
+
+    @include breakpoint(phone768) {
+        background: $characteristicsMobileBg;
+    }
+
+    &-content {
+        @include flex-center-column;
+        gap: length(80);
+
+        @include breakpoint(tablet991) {
+            gap: length(40);
+        }
+
+        .characteristics-titles {
+            @include flex-center-column;
+            gap: length(4);
+            text-align: center;
+
+            .subtitle {
+                @include font-24-16-normal;
+                color: $black;
+            }
+
+            .title {
+                color: $gray-800;
+
+                @include breakpoint(tablet991) {
+                    @include heading-2;
+                }
+            }
+        }
+
+        .mobile-characteristics {
+            display: none;
+
+            @include breakpoint(phone768) {
+                background: $characteristicsMobileBg;
+                display: block;
+            }
+
+            .slideritem {
+                overflow: hidden;
+            }
+        }
+    }
+}
+
+// MINDLY CHARACTERSTICS END
