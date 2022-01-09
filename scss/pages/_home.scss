@@ -296,6 +296,7 @@
 
 // ROUNDED WHEEL SECTION END
 
+
 // MINDLY CHARACTERSTICS START
 
 .mindlycharacteristics {
@@ -316,6 +317,10 @@
 
         @include breakpoint(tablet991) {
             gap: length(40);
+
+            .owl-nav {
+                display: none;
+            }
         }
 
         .characteristics-titles {
@@ -353,6 +358,7 @@
 }
 
 // MINDLY CHARACTERSTICS END
+
 
 // MINDLY PACKAGES START
 .mindlypackages {
@@ -396,3 +402,186 @@
 }
 
 // MINDLY PACKAGES END
+
+
+// MINDLY DOCTORS START
+.mindlydoctors {
+    padding: length(80) length(0);
+
+    @include breakpoint(tablet991) {
+        padding: length(40) length(0);
+    }
+
+    &-content {
+        @include flex-center-column;
+        gap: length(60);
+
+        @include breakpoint(tablet991) {
+            gap: length(32);
+        }
+
+        .seeallinfo {
+            @include w100;
+            @include flex-center;
+
+            @include breakpoint(phone768) {
+                display: none;
+            }
+
+            .btn-seeall {
+                padding: length(16) length(32);
+                @include border(solid, 1.45, $secondary);
+                @include radius(8);
+                @include setBgColor(transparent, $secondary);
+                @include font-14-14-semibold;
+                text-align: center;
+                @include transitions;
+
+                @include hover {
+                    @include setBgColor($secondary, $white);
+                }
+            }
+        }
+
+        .mobiledoclist {
+            display: none;
+
+            @include breakpoint(phone768) {
+                display: block;
+            }
+        }
+    }
+
+    &-header {
+        @include flex-center-column;
+        gap: length(24);
+        text-align: center;
+        padding-bottom: length(16);
+
+        .mindlydoctorstitle {
+            color: $gray-800;
+
+            @include breakpoint(tablet991) {
+                @include heading-2;
+            }
+        }
+
+        .mindlydoctorstext {
+            @include font-30-18-normal;
+            color: $gray-600;
+        }
+    }
+}
+
+// MINDLY DOCTORS END
+
+// ACHIEVEPOTENTIAL START
+.achievepotential {
+    padding: length(80) length(0);
+
+    @include breakpoint(tablet991) {
+        padding: length(40) length(0);
+    }
+
+    &-content {
+        @include flex-center-column;
+        gap: length(80);
+
+        @include breakpoint(tablet991) {
+            gap: length(40);
+        }
+    }
+
+    .achieve-head {
+        @include w100;
+
+        .achievetitle {
+            color: $gray-800;
+            text-align: center;
+
+            @include breakpoint(tablet991) {
+                @include heading-2;
+            }
+        }
+    }
+
+    &-details {
+        position: relative;
+        display: flex;
+
+        .unlock {
+            @include square(length(48));
+            @include flex-center;
+            overflow: hidden;
+            background-color: $white;
+            @include circle;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            @include transform(translate(-50%, -50%));
+            z-index: 100;
+
+            .icon {
+                @include wh100;
+                @include flex-center;
+                overflow: hidden;
+                padding: length(12);
+
+                svg {
+                    @include wh100;
+                }
+            }
+        }
+
+        .achieve {
+            overflow: hidden;
+            width: 50%;
+            position: relative;
+
+            &-thumbnail {
+                @include w100;
+                @include radius(15);
+                overflow: hidden;
+                position: relative;
+
+                img {
+                    @include wh100;
+                    object-fit: cover;
+                }
+            }
+
+            &-info {
+                position: absolute;
+                bottom: length(72);
+                left: 50%;
+                @include transform(translateX(-50%));
+                z-index: 100;
+                width: length(370);
+                @include flex-center-column;
+                gap: length(10);
+                text-align: center;
+                background-color: greenyellow;
+
+                .achievetitle {
+                    color: $white;
+                }
+
+                .achievetext {
+                    @include font-30-18-normal;
+                    color: $white;
+                }
+            }
+
+            @include hover {
+                .achieve-info {
+                    background: $achieveHoverBg;
+                    bottom: auto;
+                    top: 50%;
+                    @include transform(translate(-50%, -50%));
+                }
+            }
+        }
+    }
+}
+
+// ACHIEVEPOTENTIAL END
