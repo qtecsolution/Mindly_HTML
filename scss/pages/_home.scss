@@ -510,8 +510,8 @@
         display: flex;
 
         .unlock {
-            @include square(length(48));
-            @include flex-center;
+            @include square(length(218));
+            @include flex-center-column;
             overflow: hidden;
             background-color: $white;
             @include circle;
@@ -520,16 +520,24 @@
             left: 50%;
             @include transform(translate(-50%, -50%));
             z-index: 100;
+            padding: length(54) length(73);
 
             .icon {
-                @include wh100;
+                @include square(length(64));
                 @include flex-center;
                 overflow: hidden;
-                padding: length(12);
+                padding: length(8);
 
                 svg {
                     @include wh100;
                 }
+            }
+
+            .text {
+                @include heading-4;
+                font-weight: bold;
+                color: $textDark;
+                text-align: center;
             }
         }
 
@@ -560,7 +568,6 @@
                 @include flex-center-column;
                 gap: length(10);
                 text-align: center;
-                background-color: greenyellow;
 
                 .achievetitle {
                     color: $white;

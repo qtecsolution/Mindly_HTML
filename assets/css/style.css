@@ -3027,8 +3027,8 @@ h6 {
 }
 
 .achievepotential-details .unlock {
-  height: 3rem;
-  width: 3rem;
+  height: 13.625rem;
+  width: 13.625rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -3038,6 +3038,10 @@ h6 {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   overflow: hidden;
   background-color: #ffffff;
   border-radius: 100%;
@@ -3047,11 +3051,12 @@ h6 {
   -webkit-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
   z-index: 100;
+  padding: 3.375rem 4.5625rem;
 }
 
 .achievepotential-details .unlock .icon {
-  width: 100%;
-  height: 100%;
+  height: 4rem;
+  width: 4rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -3062,12 +3067,23 @@ h6 {
       -ms-flex-pack: center;
           justify-content: center;
   overflow: hidden;
-  padding: 0.75rem;
+  padding: 0.5rem;
 }
 
 .achievepotential-details .unlock .icon svg {
   width: 100%;
   height: 100%;
+}
+
+.achievepotential-details .unlock .text {
+  font-family: "Gilroy";
+  font-style: normal;
+  font-size: 1.25rem;
+  font-weight: 600;
+  line-height: 1.36;
+  font-weight: bold;
+  color: #323232;
+  text-align: center;
 }
 
 .achievepotential-details .achieve {
@@ -3114,7 +3130,6 @@ h6 {
           flex-direction: column;
   gap: 0.625rem;
   text-align: center;
-  background-color: greenyellow;
 }
 
 .achievepotential-details .achieve-info .achievetitle {
