@@ -290,3 +290,232 @@
 }
 
 // CARD DOCTOR END
+
+// CARD REVIEW START
+.cardreview {
+    @include flex-center-column;
+    gap: length(10);
+    text-align: center;
+    background: $white;
+    padding: length(16);
+
+    .reviewlist {
+        @include list-horizontal;
+        gap: length(2);
+
+        &-item {
+            @include flex-center;
+            @include square(14);
+            overflow: hidden;
+        }
+    }
+
+    .reviewtext {
+        @include font-24-16-normal;
+        color: $gray-600;
+        margin-bottom: length(14);
+    }
+
+    .reviewauthor {
+        @include font-24-14-normal;
+        color: $black;
+    }
+}
+// CARD REVIEW END
+
+// CARD COUNTER START
+.cardcounter {
+    @include flex-center-column;
+    gap: length(15);
+    text-align: center;
+    @include radius(8);
+    padding: length(14);
+    width: calc(25% - 1.5rem);
+
+    @include breakpoint(phone768) {
+        width: calc(50% - 1.5rem);
+    }
+
+    @include breakpoint(phone575) {
+        @include w100;
+    }
+
+    .counternumber {
+        color: $gray-800;
+
+        @include breakpoint(desktop1400) {
+            @include heading-3;
+        }
+
+    }
+
+    .countertitle {
+        color: $primary;
+
+        @include breakpoint(desktop1400) {
+            @include heading-5;
+        }
+    }
+}
+// CARD COUNTER END
+
+// CARD CLIENT START
+.cardclient {
+    @include flex-center;
+    overflow: hidden;
+    background: $clientBg;
+    padding: length(16);
+    @include radius(10);
+}
+// CARD CLIENT END
+
+// CARD BLOG START
+.cardblog {
+    background: $white;
+    @include flex-column;
+    @include radius(12);
+
+    &-header {
+        padding: length(8);
+        @include flex-center;
+
+        .blog-thumbnail {
+            @include w100;
+            height: length(185);
+            @include radius(12);
+            overflow: hidden;
+
+            img {
+                @include wh100;
+                object-fit: cover;
+                @include transitiontransform;
+
+                @include hover {
+                    @include transform(scale(1.05));
+                }
+            }
+        }
+    }
+
+    &-body {
+        padding: length(12);
+        @include flex-column;
+        gap: length(12);
+
+        .title-releasedate {
+            @include flex-column;
+            gap: length(4);
+
+            .blogtitle {
+                color: $gray-800;
+            }
+
+            .releasedate {
+                @include font-24-14-normal;
+                color: $gray-600;
+            }
+        }
+
+        .bloginfo {
+            .blogtext {
+                @include font-24-14-normal;
+                color: $gray-600;
+            }
+        }
+
+        .bloglink {
+            .link {
+                @include font-24-14-semibold;
+                color: $gray-800;
+                @include flex-center-vert;
+                @include transitions;
+
+                @include hover {
+                    color: $tertiary;
+                }
+            }
+        }
+    }
+}
+// CARD BLOG END
+
+// CARD BLOG START
+.cardpress {
+    background: $white;
+    @include flex-column;
+    @include radius(12);
+
+    &-header {
+        padding: length(8);
+        @include flex-center;
+
+        .press-thumbnail {
+            @include w100;
+            height: length(185);
+            @include radius(12);
+            overflow: hidden;
+
+            img {
+                @include wh100;
+                object-fit: cover;
+                @include transitiontransform;
+
+                @include hover {
+                    @include transform(scale(1.05));
+                }
+            }
+        }
+    }
+
+    &-body {
+        padding: length(12);
+        @include flex-column;
+        gap: length(12);
+
+        .pressheading-releasedate {
+            @include flex-column;
+            gap: length(4);
+
+            .pressheading {
+                .presstitle {
+                    color: $gray-800;
+                }
+            }
+
+            .releasedate {
+                @include font-24-14-normal;
+                color: $gray-600;
+            }
+        }
+
+        .presslink {
+            .link {
+                @include font-24-14-semibold;
+                color: $gray-800;
+                @include flex-center-vert;
+                @include transitions;
+
+                @include hover {
+                    color: $tertiary;
+                }
+            }
+        }
+    }
+}
+// CARD BLOG END
+
+.counter-1 {
+    background: $footerBg;
+}
+
+.counter-2 {
+    background: darken($bg-1, 2%);
+}
+
+.counter-3 {
+    background: $bg-2;
+}
+
+.counter-4 {
+    background: $bg-3;
+}

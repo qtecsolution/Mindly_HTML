@@ -509,6 +509,10 @@
         position: relative;
         display: flex;
 
+        @include breakpoint(tablet991) {
+            display: none;
+        }
+
         .unlock {
             @include square(length(218));
             @include flex-center-column;
@@ -521,6 +525,16 @@
             @include transform(translate(-50%, -50%));
             z-index: 100;
             padding: length(54) length(73);
+
+            @include breakpoint(desktop1400) {
+                @include square(length(168));
+                padding: length(48);
+            }
+
+            @include breakpoint(desktop1199) {
+                @include square(length(140));
+                padding: length(36);
+            }
 
             .icon {
                 @include square(length(64));
@@ -555,6 +569,11 @@
                 img {
                     @include wh100;
                     object-fit: cover;
+                    @include transitiontransform;
+
+                    @include hover {
+                        @include transform(scale(1.05));
+                    }
                 }
             }
 
@@ -589,6 +608,479 @@
             }
         }
     }
+
+    .mobile-potential {
+        display: none;
+
+        @include breakpoint(tablet991) {
+            @include flex-center-column;
+        }
+
+        padding: length(0) length(4);
+        gap: length(40);
+
+        .achievemobile {
+            @include flex-center-column;
+            gap: length(24);
+
+            &-thumbnail {
+                @include w100;
+                height: length(476);
+                overflow: hidden;
+                @include radius(15);
+
+                img {
+                    @include wh100;
+                    object-fit: contain;
+                    @include transitiontransform;
+
+                    @include hover {
+                        @include transform(scale(1.05));
+                    }
+                }
+            }
+
+            &-info {
+                @include flex-center-column;
+                gap: length(10);
+                text-align: center;
+
+                .achievetitle {
+                    color: $gray-800;
+                }
+
+                .achievetext {
+                    @include font-24-16-normal;
+                    color: $gray-600;
+                }
+            }
+        }
+    }
 }
 
 // ACHIEVEPOTENTIAL END
+
+// TURN-TEAM START
+.turnteam {
+    background: $white;
+    padding: length(150) length(0);
+
+    @include breakpoint(tablet991) {
+        padding: length(60) length(0);
+    }
+
+    &-content {
+        @include flex-center-column;
+        gap: length(40);
+
+        @include breakpoint(phone768) {
+            gap: length(32);
+        }
+    }
+
+    &-details {
+        min-height: length(743);
+        position: relative;
+        @include flex-align-end-justifycenter;
+        padding-bottom: length(70);
+        @include radius(15);
+        overflow: hidden;
+
+        @include breakpoint(tablet991) {
+            min-height: length(443);
+            padding: length(20) length(16) length(40);
+        }
+
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            @include wh100;
+            background: $overlayBg;
+
+            @include breakpoint(phone768) {
+                background: rgba($black, 0.5);
+            }
+        }
+
+        .detail {
+            position: relative;
+            z-index: 10;
+            @include flex-center-column;
+            gap: length(4);
+            text-align: center;
+
+            .titles {
+                @include flex-center-column;
+                text-align: center;
+                gap: length(4);
+
+                .subtitle {
+                    @include font-24-16-normal;
+                    color: $white;
+
+                    @include breakpoint(phone768) {
+                        @include font-24-16-normal;
+                    }
+                }
+
+                .title {
+                    color: $white;
+
+                    @include breakpoint(tablet991) {
+                        @include heading-2;
+                    }
+
+                    @include breakpoint(phone768) {
+                        @include heading-3;
+                    }
+                }
+            }
+
+            .text {
+                @include font-30-18-normal;
+                color: $white;
+
+                @include breakpoint(phone768) {
+                    @include font-24-16-normal;
+                }
+            }
+        }
+    }
+
+    &-info {
+        .turnteam-thumbnail {
+            img {
+                @include wh100;
+                object-fit: cover;
+            }
+        }
+    }
+}
+// TURN-TEAM END
+
+// YOUTH-EMPOWERMENT START
+.youthempowerment {
+    background: $white;
+
+    &-content {
+        background: $footerBg;
+        @include transform(skew(0deg, -8deg));
+    }
+
+    .youth-details {
+        @include transform(skew(0deg, 8deg));
+        padding: length(48) length(0) length(400);
+        @include flex-center-column;
+        gap: length(16);
+        text-align: center;
+
+        @include breakpoint(tablet991) {
+            padding: length(48) length(0) length(240);
+        }
+
+        @include breakpoint(phone768) {
+            padding: length(48) length(0) length(140);
+        }
+
+        .youthempowertitle {
+            color: $secondary;
+            margin-bottom: length(8);
+        }
+
+        .youthempowertext {
+            @include font-30-18-normal;
+            color: $gray-600;
+        }
+
+        .youthinfo {
+            @include flex-center;
+            gap: length(12);
+
+            .btn-learnmore {
+                background: transparent;
+                padding: length(16) length(32);
+                text-align: center;
+                @include setBgColor(transparent, $tertiary);
+                @include border(solid, 1, $tertiary);
+                @include radius(6);
+                @include font-14-14-semibold;
+                @include transitions;
+
+                @include breakpoint(phone768) {
+                    padding: length(14) length(18);
+                }
+            
+                @include hover {
+                    @include setBgColor($tertiary, $white);
+                }
+            }
+
+            .btn-regvol {
+                padding: length(16) length(20);
+                text-align: center;
+                @include setBgColor($tertiary, $white);
+                @include border(solid, 1, $tertiary);
+                @include radius(6);
+                @include font-14-14-semibold;
+                @include transitions;
+
+                @include breakpoint(phone768) {
+                    padding: length(14) length(18);
+                }
+            
+                @include hover {
+                    @include setBgColor($white, $tertiary);
+                    border-color: $white;
+                }
+            }
+        }
+    }
+}
+// YOUTH-EMPOWERMENT END
+
+// EMPOWER SECTION START
+.empower {
+    position: relative;
+    z-index: 20;
+    margin-top: length(-360);
+
+    @include breakpoint(tablet991) {
+        margin-top: length(-200);
+    }
+
+    @include breakpoint(phone768) {
+        margin-top: length(-105);
+    }
+
+    &-thumbnail {
+        @include w100;
+        @include radius(8);
+        overflow: hidden;
+
+        img {
+            @include wh100;
+            object-fit: cover;
+            @include transitiontransform;
+
+            @include hover {
+                @include transform(scale(1.05));
+            }
+        }
+    }
+}
+
+// EMPOWER SECTION END
+
+// MEMBER REVIEW START
+.memberreview {
+    position: relative;
+    padding: length(80) length(0);
+
+    @include breakpoint(tablet991) {
+        padding: length(40) length(0);
+    }
+
+    &-content {
+        @include flex-column;
+        gap: length(40);
+
+        .reviewdetails {
+            @include flex-center-column;
+            gap: length(4);
+            text-align: center;
+
+            @include breakpoint(tablet991) {
+                padding: length(0) length(8);
+            }
+
+            .reviewsubtitle {
+                @include font-24-16-normal;
+                color: $black;
+            }
+            
+            .reviewtitle {
+                color: $gray-800;
+
+                @include breakpoint(tablet991) {
+                    @include heading-3;
+                }
+            }
+        }
+    }
+}
+// MEMBER REVIEW END
+
+// INCREMENTCOUNTER START
+.incrementcounter {
+    padding: length(80) length(0);
+
+    @include breakpoint(tablet991) {
+        padding: length(40) length(0);
+    }
+
+    &-content {
+        @include flex-center;
+        gap: length(24);
+
+        @include breakpoint(phone768) {
+            flex-wrap: wrap;
+            gap: length(16);
+        }
+    }
+}
+// INCREMENTCOUNTER END
+
+// OURCLIENTS START
+.ourclients {
+    background: $primary;
+    padding: length(80) length(0);
+
+    @include breakpoint(tablet991) {
+        padding: length(40) length(0);
+    }
+
+    &-content {
+        @include flex-center-column;
+        gap: length(80);
+
+        @include breakpoint(tablet991) {
+            gap: length(40);
+        }
+    }
+
+    &-header {
+        .clientstitle {
+            color: $white;
+
+            @include breakpoint(tablet991) {
+                @include heading-2;
+            }
+        }
+    }
+}
+// OURCLIENTS END
+
+// BLOG SECTION START
+.blogs {
+    padding: length(80) length(0);
+
+    @include breakpoint(tablet991) {
+        padding: length(40) length(0);
+    }
+
+    &-content {
+        @include flex-column;
+        gap: length(40);
+
+        .blogs-header {
+            .blogtitle {
+                color: $gray-800;
+                text-align: center;
+
+                @include breakpoint(tablet991) {
+                    @include heading-2;
+                }
+            }
+        }
+
+        .blogs-body {
+            .desktopblogs {
+                @include flex-center-column;
+                gap: length(80);
+
+                @include breakpoint(tablet991) {
+                    display: none;
+                }
+
+                .readmore {
+                    @include flex-center;
+
+                    .btn-readmore {
+                        padding: length(16) length(32);
+                        @include border(solid, 1.45, $secondary);
+                        @include radius(8);
+                        @include setBgColor(transparent, $secondary);
+                        @include font-14-14-semibold;
+                        text-align: center;
+                        @include transitions;
+
+                        @include hover {
+                            @include setBgColor($secondary, $white);
+                        }
+                    }
+                }
+            }
+
+            .mobileblogs {
+                display: none;
+                
+                @include breakpoint(tablet991) {
+                    display: block;
+                }
+            }
+        }
+    }
+}
+// BLOG SECTION END
+
+// PRESS SECTION START
+.press {
+    padding: length(0) length(0) length(80);
+
+    @include breakpoint(tablet991) {
+        padding: length(0) length(0) length(40);
+    }
+
+    &-content {
+        @include flex-column;
+        gap: length(40);
+
+        .press-header {
+            .presstitle {
+                color: $gray-800;
+                text-align: center;
+
+                @include breakpoint(tablet991) {
+                    @include heading-2;
+                }
+            }
+        }
+
+        .pressdesktop {
+            @include flex-column;
+            gap: length(80);
+
+            @include breakpoint(tablet991) {
+                display: none;
+            }
+
+            .pressinfo {
+                @include flex-center;
+
+                .btn-readmore {
+                    padding: length(16) length(32);
+                    @include border(solid, 1.45, $secondary);
+                    @include radius(8);
+                    @include setBgColor(transparent, $secondary);
+                    @include font-14-14-semibold;
+                    text-align: center;
+                    @include transitions;
+
+                    @include hover {
+                        @include setBgColor($secondary, $white);
+                    }
+                }
+            }
+        }
+
+        .pressmobile {
+            display: none;
+            
+            @include breakpoint(tablet991) {
+                display: block;
+            }
+        }
+    }
+}
+// PRESS SECTION END

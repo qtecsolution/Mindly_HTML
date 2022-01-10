@@ -1,5 +1,5 @@
 .btn-signup {
-    padding: length(12) length(24);
+    padding: length(16) length(32);
     text-align: center;
     @include setBgColor($tertiary, $white);
     @include border(solid, 1, $tertiary);
@@ -7,27 +7,19 @@
     @include font-16-16-semibold;
     @include transitions;
 
-    @include breakpoint(laptop1200) {
-        padding: length(12) length(48);
-    }
-
     @include hover {
         @include setBgColor($white, $tertiary);
     }
 }
 
 .btn-signin {
-    padding: length(12) length(24);
+    padding: length(16) length(32);
     text-align: center;
     @include setBgColor($white, $tertiary);
     @include border(solid, 1, $tertiary);
     @include radius(6);
     @include font-16-16-semibold;
     @include transitions;
-
-    @include breakpoint(laptop1200) {
-        padding: length(12) length(48);
-    }
 
     @include hover {
         @include setBgColor($tertiary, $white);

@@ -2,6 +2,314 @@
 
 .footer {
     background: $footerBg;
+    padding: length(60) length(0) length(24);
+
+    @include breakpoint(tablet991) {
+        padding: length(32) length(0) length(24);
+    }
+
+    &-content {
+        @include flex-column;
+        gap: length(60);
+
+        @include breakpoint(tablet991) {
+            align-items: center;
+            gap: length(24);
+        }
+
+        .footerinfo {
+            @include flex-column;
+            gap: length(24);
+
+            @include breakpoint(tablet991) {
+                align-items: center;
+            }
+
+            .footerlogo {
+                width: length(200);
+                height: length(44);
+                @include flex-center;
+                overflow: hidden;
+
+                @include breakpoint(tablet991) {
+                    margin-inline: auto;
+                }
+
+                img {
+                    @include wh100;
+                }
+            }
+
+            .authinfo {
+                @include flex-column;
+                gap: length(24);
+
+                @include breakpoint(tablet991) {
+                    align-items: center;
+                }
+
+                .infobox {
+                    @include flex-column;
+                    gap: length(8);
+
+                    @include breakpoint(tablet991) {
+                        align-items: center;
+                    }
+
+                    .footinfotitle {
+                        @include font-24-16-normal;
+                        color: $gray-800;
+                    }
+
+                    .btn-regvol {
+                        padding: length(16) length(20);
+                        text-align: center;
+                        @include setBgColor($tertiary, $white);
+                        @include border(solid, 1, $tertiary);
+                        @include radius(6);
+                        @include font-14-14-semibold;
+                        @include transitions;
+        
+                        @include breakpoint(phone768) {
+                            padding: length(14) length(18);
+                        }
+                    
+                        @include hover {
+                            @include setBgColor($white, $tertiary);
+                            border-color: $white;
+                        }
+                    }
+
+                    .btn-learnmore {
+                        background: transparent;
+                        padding: length(16) length(32);
+                        text-align: center;
+                        @include setBgColor(transparent, $tertiary);
+                        @include border(solid, 1, $tertiary);
+                        @include radius(6);
+                        @include font-14-14-semibold;
+                        @include transitions;
+        
+                        @include breakpoint(phone768) {
+                            padding: length(14) length(18);
+                        }
+                    
+                        @include hover {
+                            @include setBgColor($tertiary, $white);
+                        }
+                    }
+                }
+            }
+        }
+
+        .footinfo {
+            @include flex-column;
+            gap: length(24);
+
+            @include breakpoint(tablet991) {
+                gap: length(16);
+            }
+
+            &-header {
+                .footertitle {
+                    @include font-24-16-semibold;
+                    color: $gray-800;
+
+                    @include breakpoint(tablet991) {
+                        text-align: center;
+                    }
+                }
+            }
+
+            &-body {
+                @include flex-column;
+                gap: length(24);
+
+                @include breakpoint(tablet991) {
+                    align-items: center;
+                }
+
+                .footerlist {
+                    @include list-vertical;
+                    gap: length(24);
+
+                    @include breakpoint(tablet991) {
+                        align-items: center;
+                        gap: length(12);
+                    }
+
+                    &-link {
+                        @include font-24-16-normal;
+                        color: $gray-800;
+                        @include transitions;
+
+                        @include breakpoint(tablet991) {
+                            text-align: center;
+                        }
+
+                        @include hover {
+                            color: $tertiary;
+                        }
+                    }
+                }
+
+                .contactinfo {
+                    @include flex-column;
+                    gap: length(12);
+
+                    @include breakpoint(tablet991) {
+                        align-items: center;
+                    }
+
+                    .contactlist {
+                        @include list-vertical;
+                        gap: length(12);
+
+                        @include breakpoint(tablet991) {
+                            align-items: center;
+                        }
+
+                        &-link {
+                            @include font-24-16-normal;
+                            color: $gray-800;
+                            @include transitions;
+
+                            @include hover {
+                                color: $tertiary;
+                            }
+                        }
+                    }
+
+                    .address {
+                        @include font-24-16-normal;
+                        color: $gray-800;
+
+                        @include breakpoint(tablet991) {
+                            text-align: center;
+                        }
+                    }
+                }
+
+                .socialinfo {
+                    @include flex-column;
+                    gap: length(12);
+
+                    @include breakpoint(tablet991) {
+                        align-items: center;
+                    }
+    
+                    &-title {
+                        @include font-24-14-medium;
+                        color: $gray-800;
+                    }
+                    
+                    .social-list {
+                        @include list-horizontal;
+                        gap: length(40);
+
+                        @include breakpoint(tablet991) {
+                            align-items: center;
+                            gap: length(24);
+                        }
+
+                        &-link {
+                            @include square(length(36));
+                            @include circle;
+                            @include flex-center;
+                            overflow: hidden;
+                        }
+                    }
+                }
+            }
+        }
+
+        .footer-details {
+            @include flex-column;
+            gap: length(24);
+
+            @include breakpoint(tablet991) {
+                gap: length(40);
+            }
+
+            .paymentinfo {
+                @include flex-column;
+                gap: length(12);
+
+                @include breakpoint(tablet991) {
+                    align-items: center;
+                }
+
+                &-title {
+                    @include font-24-14-medium;
+                    color: $gray-800;
+                }
+    
+                .paymentlist {
+                    @include list-horizontal;
+                    gap: length(40);
+
+                    @include breakpoint(tablet991) {
+                        align-items: center;
+                        gap: length(24);
+                    }
+
+                    &-item {
+                        width: length(36);
+                        height: length(24);
+                        @include radius(4);
+                        @include flex-center;
+                        overflow: hidden;
+                    }
+                }
+            }
+        }
+    }
+
+    .copyright {
+        order: 0;
+
+        @include breakpoint(tablet991) {
+            order: 1;
+        }
+
+        .textcopyright {
+            @include font-24-14-normal;
+            color: $primary;
+
+            @include breakpoint(tablet991) {
+                text-align: center;
+            }
+        }
+    }
+
+    .termsinfo {
+        @include flex-end;
+        order: 1;
+
+        @include breakpoint(tablet991) {
+            order: 0;
+        }
+
+        .policylist {
+            @include list-horizontal;
+            gap: length(36);
+
+            @include breakpoint(tablet991) {
+                gap: length(24);
+                justify-content: center;
+            }
+
+            &-link {
+                @include font-24-14-normal;
+                color: $primary;
+                @include transitions;
+
+                @include hover {
+                    color: $tertiary;
+                }
+            }
+        }
+    }
 }
 
 // SITE FOOTER END

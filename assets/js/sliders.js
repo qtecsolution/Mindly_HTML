@@ -69,7 +69,6 @@ $(document).ready(function(){
     }
     // PACKAGES SLIDER END
 
-
     // DOCTOR LIST SLIDER START
     const doctors = $('.mobiledoctors');
     
@@ -87,7 +86,13 @@ $(document).ready(function(){
                     nav: false
                 },
 
-                // breakpoint from 768 up
+                // breakpoint from 360 up
+                360 : {
+                    items: 1,
+                    nav: false
+                },
+
+                // breakpoint from 400 up
                 400 : {
                     items: 2,
                     nav: false
@@ -96,5 +101,203 @@ $(document).ready(function(){
         });
     }
     // DOCTOR LIST SLIDER END
+
+    // REVIEW SLIDER START
+    const reviews = $('.reviewslider');
+    
+    if(reviews.length > 0) {
+        reviews.owlCarousel({
+            margin: 12,
+            loop: true,
+            autoplay: true,
+            autoplayTimeout: 5000,
+            dots: false,
+            responsive : {
+                // breakpoint from 0 up
+                0 : {
+                    items: 1,
+                    nav: false
+                },
+
+                // breakpoint from 360 up
+                360 : {
+                    items: 1,
+                    nav: false
+                },
+
+                // breakpoint from 768 up
+                768 : {
+                    items: 2,
+                    nav: false
+                },
+
+                // breakpoint from 992 up
+                992 : {
+                    items: 3,
+                    nav: false
+                }
+            }
+        });
+    }
+    // REVIEW SLIDER END
+
+    // CLIENTS SLIDER START
+    const clients = $('.clients-slider');
+    
+    if(clients.length > 0) {
+        clients.owlCarousel({
+            margin: 12,
+            loop: true,
+            autoplay: true,
+            autoplayTimeout: 4000,
+            dots: false,
+            responsive : {
+                // breakpoint from 0 up
+                0 : {
+                    items: 1,
+                    nav: false
+                },
+
+                // breakpoint from 360 up
+                360 : {
+                    items: 1,
+                    nav: false
+                },
+
+                // breakpoint from 480 up
+                480 : {
+                    items: 2,
+                    nav: false
+                },
+
+                // breakpoint from 768 up
+                768 : {
+                    items: 3,
+                    nav: false
+                },
+
+                // breakpoint from 992 up
+                992 : {
+                    items: 4,
+                    nav: false
+                },
+
+                // breakpoint from 1024 up
+                1024 : {
+                    items: 5,
+                    nav: false
+                },
+
+                // breakpoint from 1100 up
+                1100 : {
+                    items: 6,
+                    nav: false
+                }
+            }
+        });
+    }
+    // CLIENTS SLIDER END
+
+    // BLOGS SLIDER START
+    const blogs = $('.blogs-slider');
+    
+    if(blogs.length > 0) {
+        blogs.owlCarousel({
+            margin: 12,
+            loop: true,
+            autoplay: true,
+            autoplayTimeout: 5000,
+            dots: false,
+            responsive : {
+                // breakpoint from 0 up
+                0 : {
+                    items: 1,
+                    nav: false
+                },
+
+                // breakpoint from 360 up
+                360 : {
+                    items: 1,
+                    nav: false
+                },
+
+                // breakpoint from 480 up
+                480 : {
+                    items: 1,
+                    nav: false
+                },
+
+                // breakpoint from 768 up
+                768 : {
+                    items: 2,
+                    nav: false
+                },
+
+                // breakpoint from 992 up
+                992 : {
+                    items: 3,
+                    nav: false
+                },
+
+                // breakpoint from 1024 up
+                1024 : {
+                    items: 4,
+                    nav: false
+                }
+            }
+        });
+    }
+    // BLOGS SLIDER END
+
+    // PRESS SLIDER START
+    const press = $('.press-slider');
+    
+    if(press.length > 0) {
+        press.owlCarousel({
+            margin: 12,
+            loop: true,
+            autoplay: true,
+            autoplayTimeout: 4000,
+            dots: false,
+            responsive : {
+                // breakpoint from 0 up
+                0 : {
+                    items: 1,
+                    nav: false
+                },
+
+                // breakpoint from 360 up
+                360 : {
+                    items: 1,
+                    nav: false
+                },
+
+                // breakpoint from 480 up
+                480 : {
+                    items: 1,
+                    nav: false
+                },
+
+                // breakpoint from 768 up
+                768 : {
+                    items: 2,
+                    nav: false
+                },
+
+                // breakpoint from 992 up
+                992 : {
+                    items: 3,
+                    nav: false
+                },
+
+                // breakpoint from 1024 up
+                1024 : {
+                    items: 4,
+                    nav: false
+                }
+            }
+        });
+    }
+    // PRESS SLIDER END
     
 });

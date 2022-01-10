@@ -35,6 +35,18 @@
     align-items: baseline;
 }
 
+// FLEX ALIGNEND
+@mixin flex-align-end {
+    @include flex;
+    align-items: flex-end;
+}
+
+// FLEX ALIGNEND
+@mixin flex-align-end-justifycenter {
+    @include flex-align-end;
+    justify-content: center;
+}
+
 // FLEX CENTER BASELINE
 @mixin flex-center-baseline {
     @include flex;

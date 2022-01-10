@@ -10,7 +10,7 @@ $gray-200: #EDF2F7;
 $gray-300: #E2E8F0;
 $gray-400: #CBD5E0;
 $gray-500: #A0AEC0;
-$gray-600: #95a4b9;
+$gray-600: #718096;
 $gray-700: #4A5568;
 $gray-800: #2D3748;
 $gray-900: #1A202C;
@@ -30,5 +30,7 @@ $hoverBg: rgba(64, 87, 109, .07);
 $appontmentBg: #F7FAFC;
 $characteristicsMobileBg: #FFEBE7;
 $activeBg: #18BD78;
+$clientBg: #F1F1F1;
 
 $achieveHoverBg: radial-gradient(39.74% 39.74% at 50% 50%, $black 48.92%, rgba($black, 0) 100%);
+$overlayBg: linear-gradient(180deg, rgba($black, 0) 43.06%, $black 95.65%);
