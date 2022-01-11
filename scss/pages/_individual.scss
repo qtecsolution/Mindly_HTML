@@ -286,6 +286,7 @@
 
 // INDIVIDUAL FAQ START
 .individualfaq {
+    background: $white;
     padding: length(80) length(0);
 
     @include breakpoint(tablet991) {
