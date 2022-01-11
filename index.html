@@ -75,7 +75,7 @@
                             </div>
 
                             <li class="mobilemenu-item">
-                                <a href="services.html" class="mobilemenu-link">For Providers</a>
+                                <a href="providers.html" class="mobilemenu-link">For Providers</a>
                             </li>
 
                             <li class="mobilemenu-item">
@@ -108,8 +108,9 @@
 
                 <!-- HEADER MENU START -->
                 <ul class="headermenu">
+                    <!-- SERVICES DROPDOWN START -->
                     <li class="headermenu-item mindlydropdown">
-                        <a href="services.html" class="headermenu-link">Services</a>
+                        <a href="#" class="headermenu-link">Services</a>
                         
                         <!-- SERVICES SUBMENU START -->
                         <ul class="mindlysubmenu">
@@ -123,12 +124,11 @@
                         </ul>
                         <!-- SERVICES SUBMENU END -->
                     </li>
+                    <!-- SERVICES DROPDOWN END -->
 
-                    <!-- PROVIDERS DROPDOWN START -->
                     <li class="headermenu-item">
-                        <a href="services.html" class="headermenu-link"><span>For</span> Providers</a>
+                        <a href="providers.html" class="headermenu-link"><span>For</span> Providers</a>
                     </li>
-                    <!-- PROVIDERS DROPDOWN END -->
 
                     <li class="headermenu-item">
                         <a href="comunity-development.html" class="headermenu-link">Comunity <span>Development Programs</span></a>
@@ -235,7 +235,7 @@
     <!-- DESKTOP BANNER SECTION START -->
     <section class="desktopbanner">
         <!-- DEAKTOP THUMBNAIL START -->
-        <div class="desktop-thumnail" style="background: url(assets/images/home/home-banner.png) no-repeat center center/cover;">
+        <div id="parallax" class="desktop-thumnail" style="background: url(assets/images/home/home-banner.png) no-repeat center center/cover; background-attachment: fixed;">
             <div class="container">
                 <div class="desktop-thumnail-content">
                     <div class="bannerinfo">
@@ -350,7 +350,7 @@
                 </hgroup>
 
                 <!-- DESKTOP CHARACTERISTICS START -->
-                <div class="d-none d-md-block">
+                <div class="d-none d-md-block desktopitems">
                     <div class="row g-4">
                         <div class="col-lg-4 col-md-6 col-12">
                             <div class="cardcharacteristic">
@@ -365,6 +365,7 @@
                                 </p>
                             </div>
                         </div>
+
                         <div class="col-lg-4 col-md-6 col-12">
                             <div class="cardcharacteristic">
                                 <div class="card-cap">
@@ -378,6 +379,7 @@
                                 </p>
                             </div>
                         </div>
+
                         <div class="col-lg-4 col-md-6 col-12">
                             <div class="cardcharacteristic">
                                 <div class="card-cap">
@@ -391,6 +393,7 @@
                                 </p>
                             </div>
                         </div>
+
                         <div class="col-lg-4 col-md-6 col-12">
                             <div class="cardcharacteristic">
                                 <div class="card-cap">
@@ -404,6 +407,7 @@
                                 </p>
                             </div>
                         </div>
+
                         <div class="col-lg-4 col-md-6 col-12">
                             <div class="cardcharacteristic">
                                 <div class="card-cap">
@@ -417,6 +421,7 @@
                                 </p>
                             </div>
                         </div>
+
                         <div class="col-lg-4 col-md-6 col-12">
                             <div class="cardcharacteristic">
                                 <div class="card-cap">
@@ -3077,5 +3082,11 @@
     <script src="assets/js/sliders.js"></script>
     <!-- COUNTER JS -->
     <script src="assets/js/counter.js"></script>
+    <!-- GSAP JS -->
+    <script src="assets/js/gsap.min.js"></script>
+    <!-- ANIMATIONS JS -->
+    <script src="assets/js/animations/home-animation.js"></script>
+    <!-- PARALLAX JS -->
+    <script src="assets/js/parallax.js"></script>
 </body>
 </html>

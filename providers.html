@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mindly | Enterprise</title>
+    <title>Mindly | Providers</title>
     <!-- FAVICON -->
     <link rel="shortcut icon" href="favicon.svg" type="image/svg">
     <!-- OWL-CAROUSEL CSS -->
@@ -57,9 +57,22 @@
 
                     <div class="offcanvas-body">
                         <ul class="mobilemenu">
-                            <li class="mobilemenu-item">
-                                <a href="enterprise.html" class="mobilemenu-link active">Enterprise</a>
-                            </li>
+                            <div class="accordion" id="servicesDropdown">
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="heading-1">
+                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-1" aria-expanded="false" aria-controls="collapse-1">
+                                            Services
+                                        </button>
+                                    </h2>
+
+                                    <div id="collapse-1" class="accordion-collapse collapse" aria-labelledby="heading-1" data-bs-parent="#servicesDropdown">
+                                        <div class="accordion-body">
+                                            <a href="individual.html" class="sublink">Individual</a>
+                                            <a href="enterprise.html" class="sublink">Enterprise</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
 
                             <li class="mobilemenu-item">
                                 <a href="providers.html" class="mobilemenu-link">For Providers</a>
@@ -95,12 +108,26 @@
 
                 <!-- HEADER MENU START -->
                 <ul class="headermenu">
-                    <li class="headermenu-item">
-                        <a href="enterprise.html" class="headermenu-link active">Enterprise</a>
+                    <!-- SERVICES DROPDOWN START -->
+                    <li class="headermenu-item mindlydropdown">
+                        <a href="#" class="headermenu-link">Services</a>
+                        
+                        <!-- SERVICES SUBMENU START -->
+                        <ul class="mindlysubmenu">
+                            <li class="mindlysubmenu-item">
+                                <a href="individual.html" class="mindlysubmenu-link">Individual</a>
+                            </li>
+
+                            <li class="mindlysubmenu-item">
+                                <a href="enterprise.html" class="mindlysubmenu-link">Enterprise</a>
+                            </li>
+                        </ul>
+                        <!-- SERVICES SUBMENU END -->
                     </li>
+                    <!-- SERVICES DROPDOWN END -->
 
                     <li class="headermenu-item">
-                        <a href="providers.html" class="headermenu-link"><span>For</span> Providers</a>
+                        <a href="providers.html" class="headermenu-link active"><span>For</span> Providers</a>
                     </li>
 
                     <li class="headermenu-item">
@@ -444,7 +471,5 @@
     <script src="assets/js/gsap.min.js"></script>
     <!-- ANIMATIONS JS -->
     <script src="assets/js/animations/home-animation.js"></script>
-    <!-- PARALLAX JS -->
-    <script src="assets/js/parallax.js"></script>
 </body>
 </html>
