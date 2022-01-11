@@ -125,3 +125,23 @@
         background: rgba($white, 0.2);
     }
 }
+
+.btn-appointmant {
+    @include setBgColor($tertiary, $white);
+    @include font-14-14-semibold;
+    padding: length(16);
+    text-align: center;
+    @include flex-center;
+    @include w100;
+    @include radius(8);
+    text-align: center;
+    @include transitions;
+
+    @include breakpoint(phone575) {
+        @include font-12-12-semibold;
+    }
+
+    @include hover {
+        @include setBgColor(darken($tertiary, 15%), $white);
+    }
+}

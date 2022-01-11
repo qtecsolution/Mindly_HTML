@@ -17,6 +17,22 @@ $(document).ready(function(){
     }
     // CHARACTERISTICS SLIDER END
 
+    // CHARACTERISTICS SLIDER START
+    const mobileServices = $('.mobile-services');
+    
+    if(mobileServices.length > 0) {
+        mobileServices.owlCarousel({
+            margin: 12,
+            loop: true,
+            autoplay: true,
+            autoplayTimeout: 3000,
+            items: 2,
+            nav: false,
+            dots: false
+        });
+    }
+    // CHARACTERISTICS SLIDER END
+
     // PACKAGES SLIDER START
     const packages = $('.packages');
     

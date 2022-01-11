@@ -1,0 +1,370 @@
+// MOBILE BANNER START
+.mobilebanner {
+    @include flex-center-column;
+    @include w100;
+    padding-bottom: lenth(70);
+    min-height: length(400);
+    @include breakpoint(tab991) {
+        display: none;
+    }
+
+    &-content {
+        @include w100;
+    }
+
+    .banner-thumbnail {
+        @include flex-center-column;
+        height: length(360);
+        padding: length(48) length(4);
+        @include flex-center-vert;
+
+        @include breakpoint(phone768) {
+            height: length(240);
+        }
+
+        &-content {
+            @include flex-center-column;
+            gap: length(28);
+            text-align: center;
+
+            .thumbnail-title {
+                @include display-2;
+                color: $white;
+
+                @include breakpoint(phone768) {
+                    @include heading-2;
+                }
+
+                @include breakpoint(phone575) {
+                    @include heading-3;
+                }
+            }
+
+            .banner-info {
+                @include breakpoint(phone768) {
+                    display: none;
+                }
+
+                .textinfo {
+                    @include font-24-16-normal;
+                    color: $white;
+                }
+            }
+        }
+    }
+
+    .banner-details {
+        @include flex-column;
+        gap: length(18);
+        background: $appontmentBg;
+
+            .banner-info {
+                display: none;
+                margin-top: length(44);
+
+                @include breakpoint(phone768) {
+                    display: block;
+                }
+                
+                .textinfo {
+                    @include font-30-18-normal;
+                    color: $gray-700;
+                    text-align: center;
+                }
+            }
+
+        .bannercontent {
+            padding: length(45) length(4) length(6);
+
+            .bannertext {
+                @include font-30-18-normal;
+                color: $gray-700;
+                text-align: center;
+            }
+        }
+
+        .appointmentcontent {
+            @include flex-column;
+            gap: length(12);
+        }
+    }
+}
+
+// MOBILE BANNER END
+
+
+// DESKTOP BANNER START
+.desktopbanner {
+    height: length(680);
+    display: none;
+
+    @include breakpoint(tab991) {
+        display: block;
+    }
+
+    .desktop-thumnail {
+        padding: length(54) length(0) length(38);
+        @include h100;
+        
+
+        &-content {
+            .bannerinfo {
+                max-width: 80%;
+                @include flex-column;
+                gap: length(32);
+
+                @include breakpoint(desktop1400) {
+                    max-width: 70%;
+                }
+
+                .thumbnail-title {
+                    @include display-1;
+                    color: $white;
+
+                    @include breakpoint(desktop1199) {
+                        @include display-2;
+                    }
+                }
+
+                .thumbnail-text {
+                    @include font-38-24-normal;
+                    color: $white;
+
+                    @include breakpoint(desktop1199) {
+                        @include font-30-18-normal;
+                    }
+                }
+            }
+        }
+    }
+}
+
+// DESKTOP BANNER END
+
+
+// OUR SERVICES START
+.mindlyservices {
+    padding: length(80) length(0);
+
+    @include breakpoint(tablet991) {
+        padding: length(40) length(0);
+    }
+
+    &-content {
+        @include flex-center-column;
+        gap: length(80);
+
+        @include breakpoint(tablet991) {
+            gap: length(40);
+
+            .owl-nav {
+                display: none;
+            }
+        }
+
+        .mindlyservices-header {
+            @include flex-center-column;
+            gap: length(12);
+            text-align: center;
+
+            .title {
+                color: $gray-800;
+
+                @include breakpoint(tablet991) {
+                    @include heading-2;
+                }
+            }
+
+            .text {
+                @include font-30-18-normal;
+                color: $gray-600;
+            }
+        }
+
+        .mobile-services {
+            display: none;
+
+            @include breakpoint(phone768) {
+                display: block;
+            }
+
+            .slideritem {
+                overflow: hidden;
+            }
+        }
+    }
+}
+
+// OUR SERVICES END
+
+// CONVERSATIONS SECTION START
+.conversations {
+    background: $conversationBg;
+    padding: length(80) length(0);
+
+    @include breakpoint(tablet991) {
+        padding: length(40) length(0);
+    }
+
+    .conversationinfo {
+        order: 0;
+
+        @include breakpoint(tablet991) {
+            order: 1;
+        }
+    }
+    .conversationthumb {
+        order: 1;
+        
+        @include breakpoint(tablet991) {
+            order: 0;
+            margin-bottom: length(24);
+        }
+    }
+
+    .conversation-details {
+        @include flex-column;
+        gap: length(24);
+
+        @include breakpoint(tablet991) {
+            align-items: center;
+            text-align: center;
+        }
+
+        .conversationtitle {
+            color: $gray-800;
+
+            @include breakpoint(tablet991) {
+                @include heading-2;
+            }
+        }
+        
+        .conversationtext {
+            @include font-30-18-normal;
+            color: $gray-600;
+            margin-bottom: length(24);
+
+            @include breakpoint(tablet991) {
+                margin-bottom: length(16);
+            }
+        }
+
+        .signinfo {
+            width: length(200);
+        }
+    }
+
+    .conversation-thumbnail {
+        @include w100;
+        height: length(775);
+        overflow: hidden;
+
+        @include breakpoint(tablet991) {
+            height: length(475);
+        }
+
+        @include breakpoint(phone768) {
+            height: length(360);
+        }
+
+        @include breakpoint(phone575) {
+            height: length(280);
+        }
+
+        img {
+            @include wh100;
+            object-fit: cover;
+            @include transitiontransform;
+
+            @include hover {
+                @include transform(scale(1.05));
+            }
+        }
+    }
+}
+// CONVERSATIONS SECTION END
+
+// INDIVIDUAL FAQ START
+.individualfaq {
+    padding: length(80) length(0);
+
+    @include breakpoint(tablet991) {
+        padding: length(40) length(0);
+    }
+
+    &-content {
+        @include flex-column;
+        gap: length(80);
+
+        @include breakpoint(tablet991) {
+            gap: length(40);
+        }
+    }
+
+    &-header {
+        .faqtitle {
+            color: $gray-800;
+            text-align: center;
+
+            @include breakpoint(tablet991) {
+                @include heading-2;
+            }
+        }
+    }
+
+    &-body {
+        .accordion {
+            &-item {
+                background: transparent;
+                border: length(0);
+                @include border-single(bottom, solid, 0.5, $faqBorder);
+            }
+
+            &-header {
+                border: length(0);
+            }
+
+            &-button {
+                @include font-28-20-semibold;
+                @include setBgColor(transparent, $gray-700);
+                border: length(0);
+                padding: length(14) length(0);
+
+                @include breakpoint(phone768) {
+                    @include font-30-18-semibold;
+                }
+
+                &:focus {
+                    outline: none;
+                    box-shadow: none;
+                }
+
+                &.collapsed {
+                    box-shadow: none;
+                }
+
+                &:not(.collapsed) {
+                    box-shadow: none;
+
+                    &::after {
+                        background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23212529'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
+                    }
+                }
+            }
+
+            &-body {
+                padding: length(0) length(0) length(16);
+
+                .faqtext {
+                    @include font-24-16-normal;
+                    color: $textFaq;
+
+                    @include breakpoint(phone768) {
+                        @include font-24-14-normal;
+                    }
+                }
+            }
+        }
+    }
+}
+// INDIVIDUAL FAQ END

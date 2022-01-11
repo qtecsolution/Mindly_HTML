@@ -38,6 +38,45 @@
 
 // CHARACTERISTIC CARD END
 
+// SERVICE CARD START
+.cardservice {
+    @include flex-column;
+    gap: length(16);
+    padding: length(24);
+    background: $white;
+    @include radius(15);
+    @include w100;
+
+    @include breakpoint(tablet991) {
+        padding: length(16);
+    }
+
+    .card-cap {
+        @include square(length(80));
+        @include circle;
+        padding: length(16);
+        @include flex-center;
+        overflow: hidden;
+        background: $serviceCardBg;
+
+        @include breakpoint(phone768) {
+            @include square(length(56));
+        }
+    }
+
+    .cardtitle {
+        @include font-24-16-bold;
+        color: $gray-800;
+        letter-spacing: length(0.08);
+
+        @include breakpoint(phone480) {
+            @include font-24-14-bold;
+        }
+    }
+}
+
+// SERVICE CARD END
+
 // PACKAGE CARD START
 .cardpackage {
     padding: length(56);
@@ -265,26 +304,6 @@
 
         .appointmentinfo {
             @include w100;
-
-            .btn-appointmant {
-                @include setBgColor($tertiary, $white);
-                @include font-14-14-semibold;
-                padding: length(16);
-                text-align: center;
-                @include flex-center;
-                @include w100;
-                @include radius(8);
-                text-align: center;
-                @include transitions;
-
-                @include breakpoint(phone575) {
-                    @include font-12-12-semibold;
-                }
-
-                @include hover {
-                    background: darken($tertiary, 15%);
-                }
-            }
         }
     }
 }

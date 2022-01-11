@@ -18,6 +18,7 @@ $black: #000000;
 $white: #ffffff;
 $yellow: #F2B807;
 $textDark: #323232;
+$textFaq: #646464;
 
 // BACKGROUND COLORS
 $bodyBg: #f7f8f6;
@@ -31,6 +32,11 @@ $appontmentBg: #F7FAFC;
 $characteristicsMobileBg: #FFEBE7;
 $activeBg: #18BD78;
 $clientBg: #F1F1F1;
+$serviceCardBg: #E6E6E6;
+$conversationBg: rgba(249, 78, 38, 0.1);
+
+// BORDER COLORS
+$faqBorder: #969696;
 
 $achieveHoverBg: radial-gradient(39.74% 39.74% at 50% 50%, $black 48.92%, rgba($black, 0) 100%);
 $overlayBg: linear-gradient(180deg, rgba($black, 0) 43.06%, $black 95.65%);

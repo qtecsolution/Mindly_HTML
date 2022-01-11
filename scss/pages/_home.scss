@@ -1,5 +1,5 @@
 // MOBILE BANNER START
-.mobilebanner {
+.homemobilebanner {
     @include flex-center-column;
     @include w100;
     padding-bottom: lenth(70);
@@ -55,7 +55,7 @@
 
 
 // DESKTOP BANNER START
-.desktopbanner {
+.homedesktopbanner {
     height: length(680);
     display: none;
 
@@ -347,7 +347,6 @@
             display: none;
 
             @include breakpoint(phone768) {
-                background: $characteristicsMobileBg;
                 display: block;
             }
 

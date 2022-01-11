@@ -414,6 +414,9 @@
 		30/18 FONT SIZES
 \*------------------------------------*/
 /*------------------------------------*\
+		28/20 FONT SIZES
+\*------------------------------------*/
+/*------------------------------------*\
 		38/24 FONT SIZES
 \*------------------------------------*/
 * {
@@ -2065,6 +2068,48 @@ h6 {
   background: rgba(255, 255, 255, 0.2);
 }
 
+.btn-appointmant {
+  background: #F94E26;
+  color: #ffffff;
+  font-family: "Gilroy";
+  font-style: normal;
+  font-size: 0.875rem;
+  font-weight: 600;
+  line-height: 1;
+  padding: 1rem;
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+  border-radius: 0.5rem;
+  border-radius: 0.5rem;
+  text-align: center;
+  -webkit-transition: all 250ms ease-in-out;
+  transition: all 250ms ease-in-out;
+}
+
+@media screen and (max-width: 35.9375rem) {
+  .btn-appointmant {
+    font-family: "Gilroy";
+    font-style: normal;
+    font-size: 0.75rem;
+    font-weight: 600;
+    line-height: 1;
+  }
+}
+
+.btn-appointmant:not([disabled]):hover {
+  background: #cd2b06;
+  color: #ffffff;
+}
+
 .cardcharacteristic {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -2129,6 +2174,73 @@ h6 {
   font-weight: normal;
   line-height: 1.5;
   color: #718096;
+}
+
+.cardservice {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 1rem;
+  padding: 1.5rem;
+  background: #ffffff;
+  border-radius: 0.9375rem;
+  border-radius: 0.9375rem;
+  width: 100%;
+}
+
+@media screen and (max-width: 62rem) {
+  .cardservice {
+    padding: 1rem;
+  }
+}
+
+.cardservice .card-cap {
+  height: 5rem;
+  width: 5rem;
+  border-radius: 100%;
+  padding: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  overflow: hidden;
+  background: #E6E6E6;
+}
+
+@media screen and (max-width: 48rem) {
+  .cardservice .card-cap {
+    height: 3.5rem;
+    width: 3.5rem;
+  }
+}
+
+.cardservice .cardtitle {
+  font-family: "Gilroy";
+  font-style: normal;
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 1.5;
+  color: #2D3748;
+  letter-spacing: 0.005rem;
+}
+
+@media screen and (max-width: 30rem) {
+  .cardservice .cardtitle {
+    font-family: "Gilroy";
+    font-style: normal;
+    font-size: 0.875rem;
+    font-weight: 700;
+    line-height: 1.71429;
+  }
 }
 
 .cardpackage {
@@ -2527,47 +2639,6 @@ h6 {
 
 .card-doctor-body .appointmentinfo {
   width: 100%;
-}
-
-.card-doctor-body .appointmentinfo .btn-appointmant {
-  background: #F94E26;
-  color: #ffffff;
-  font-family: "Gilroy";
-  font-style: normal;
-  font-size: 0.875rem;
-  font-weight: 600;
-  line-height: 1;
-  padding: 1rem;
-  text-align: center;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  width: 100%;
-  border-radius: 0.5rem;
-  border-radius: 0.5rem;
-  text-align: center;
-  -webkit-transition: all 250ms ease-in-out;
-  transition: all 250ms ease-in-out;
-}
-
-@media screen and (max-width: 35.9375rem) {
-  .card-doctor-body .appointmentinfo .btn-appointmant {
-    font-family: "Gilroy";
-    font-style: normal;
-    font-size: 0.75rem;
-    font-weight: 600;
-    line-height: 1;
-  }
-}
-
-.card-doctor-body .appointmentinfo .btn-appointmant:not([disabled]):hover {
-  background: #cd2b06;
 }
 
 .cardreview {
@@ -3183,7 +3254,7 @@ h6 {
   }
 }
 
-.mobilebanner {
+.homemobilebanner {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -3202,16 +3273,16 @@ h6 {
 }
 
 @media screen and (min-width: 62rem) {
-  .mobilebanner {
+  .homemobilebanner {
     display: none;
   }
 }
 
-.mobilebanner-content {
+.homemobilebanner-content {
   width: 100%;
 }
 
-.mobilebanner .banner-thumbnail {
+.homemobilebanner .banner-thumbnail {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -3231,7 +3302,7 @@ h6 {
   align-items: center;
 }
 
-.mobilebanner .banner-thumbnail-content {
+.homemobilebanner .banner-thumbnail-content {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -3242,7 +3313,7 @@ h6 {
   gap: 1.75rem;
 }
 
-.mobilebanner .banner-thumbnail-content .thumbnail-title {
+.homemobilebanner .banner-thumbnail-content .thumbnail-title {
   font-family: "Gilroy";
   font-style: normal;
   font-size: 2.5rem;
@@ -3251,7 +3322,7 @@ h6 {
   color: #ffffff;
 }
 
-.mobilebanner .banner-details {
+.homemobilebanner .banner-details {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -3263,11 +3334,11 @@ h6 {
   background: #F7FAFC;
 }
 
-.mobilebanner .banner-details .bannercontent {
+.homemobilebanner .banner-details .bannercontent {
   padding: 2.8125rem 0.25rem 0.375rem;
 }
 
-.mobilebanner .banner-details .bannercontent .bannertext {
+.homemobilebanner .banner-details .bannercontent .bannertext {
   font-family: "Gilroy";
   font-style: normal;
   font-size: 1.125rem;
@@ -3277,7 +3348,7 @@ h6 {
   text-align: center;
 }
 
-.mobilebanner .banner-details .appointmentcontent {
+.homemobilebanner .banner-details .appointmentcontent {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -3288,23 +3359,23 @@ h6 {
   gap: 0.75rem;
 }
 
-.desktopbanner {
+.homedesktopbanner {
   height: 42.5rem;
   display: none;
 }
 
 @media screen and (min-width: 62rem) {
-  .desktopbanner {
+  .homedesktopbanner {
     display: block;
   }
 }
 
-.desktopbanner .desktop-thumnail {
+.homedesktopbanner .desktop-thumnail {
   padding: 3.375rem 0rem 2.375rem;
   height: 100%;
 }
 
-.desktopbanner .desktop-thumnail-content .bannerinfo {
+.homedesktopbanner .desktop-thumnail-content .bannerinfo {
   max-width: 60%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -3317,12 +3388,12 @@ h6 {
 }
 
 @media screen and (max-width: 87.4375rem) {
-  .desktopbanner .desktop-thumnail-content .bannerinfo {
+  .homedesktopbanner .desktop-thumnail-content .bannerinfo {
     max-width: 70%;
   }
 }
 
-.desktopbanner .desktop-thumnail-content .bannerinfo .thumbnail-title {
+.homedesktopbanner .desktop-thumnail-content .bannerinfo .thumbnail-title {
   font-family: "Gilroy";
   font-style: normal;
   font-size: 4rem;
@@ -3331,7 +3402,7 @@ h6 {
   color: #4A5568;
 }
 
-.desktopbanner .desktop-thumnail-content .bannerinfo .thumbnail-text {
+.homedesktopbanner .desktop-thumnail-content .bannerinfo .thumbnail-text {
   font-family: "Gilroy";
   font-style: normal;
   font-size: 1.5rem;
@@ -3709,7 +3780,6 @@ h6 {
 
 @media screen and (max-width: 48rem) {
   .mindlycharacteristics-content .mobile-characteristics {
-    background: #FFEBE7;
     display: block;
   }
 }
@@ -4933,5 +5003,595 @@ h6 {
 @media screen and (max-width: 62rem) {
   .press-content .pressmobile {
     display: block;
+  }
+}
+
+.mobilebanner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 100%;
+  padding-bottom: lenth(70);
+  min-height: 25rem;
+}
+
+@media screen and (min-width: 62rem) {
+  .mobilebanner {
+    display: none;
+  }
+}
+
+.mobilebanner-content {
+  width: 100%;
+}
+
+.mobilebanner .banner-thumbnail {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 22.5rem;
+  padding: 3rem 0.25rem;
+  display: flex;
+  align-items: center;
+}
+
+@media screen and (max-width: 48rem) {
+  .mobilebanner .banner-thumbnail {
+    height: 15rem;
+  }
+}
+
+.mobilebanner .banner-thumbnail-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 1.75rem;
+  text-align: center;
+}
+
+.mobilebanner .banner-thumbnail-content .thumbnail-title {
+  font-family: "Gilroy";
+  font-style: normal;
+  font-size: 2.5rem;
+  font-weight: 700;
+  line-height: 1.2;
+  color: #ffffff;
+}
+
+@media screen and (max-width: 48rem) {
+  .mobilebanner .banner-thumbnail-content .thumbnail-title {
+    font-family: "Gilroy";
+    font-style: normal;
+    font-size: 1.75rem;
+    font-weight: 600;
+    line-height: 1.36;
+  }
+}
+
+@media screen and (max-width: 35.9375rem) {
+  .mobilebanner .banner-thumbnail-content .thumbnail-title {
+    font-family: "Gilroy";
+    font-style: normal;
+    font-size: 1.5rem;
+    font-weight: 600;
+    line-height: 1.36;
+  }
+}
+
+@media screen and (max-width: 48rem) {
+  .mobilebanner .banner-thumbnail-content .banner-info {
+    display: none;
+  }
+}
+
+.mobilebanner .banner-thumbnail-content .banner-info .textinfo {
+  font-family: "Gilroy";
+  font-style: normal;
+  font-size: 1rem;
+  font-weight: normal;
+  line-height: 1.5;
+  color: #ffffff;
+}
+
+.mobilebanner .banner-details {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 1.125rem;
+  background: #F7FAFC;
+}
+
+.mobilebanner .banner-details .banner-info {
+  display: none;
+  margin-top: 2.75rem;
+}
+
+@media screen and (max-width: 48rem) {
+  .mobilebanner .banner-details .banner-info {
+    display: block;
+  }
+}
+
+.mobilebanner .banner-details .banner-info .textinfo {
+  font-family: "Gilroy";
+  font-style: normal;
+  font-size: 1.125rem;
+  font-weight: normal;
+  line-height: 1.66667;
+  color: #4A5568;
+  text-align: center;
+}
+
+.mobilebanner .banner-details .bannercontent {
+  padding: 2.8125rem 0.25rem 0.375rem;
+}
+
+.mobilebanner .banner-details .bannercontent .bannertext {
+  font-family: "Gilroy";
+  font-style: normal;
+  font-size: 1.125rem;
+  font-weight: normal;
+  line-height: 1.66667;
+  color: #4A5568;
+  text-align: center;
+}
+
+.mobilebanner .banner-details .appointmentcontent {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 0.75rem;
+}
+
+.desktopbanner {
+  height: 42.5rem;
+  display: none;
+}
+
+@media screen and (min-width: 62rem) {
+  .desktopbanner {
+    display: block;
+  }
+}
+
+.desktopbanner .desktop-thumnail {
+  padding: 3.375rem 0rem 2.375rem;
+  height: 100%;
+}
+
+.desktopbanner .desktop-thumnail-content .bannerinfo {
+  max-width: 80%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 2rem;
+}
+
+@media screen and (max-width: 87.4375rem) {
+  .desktopbanner .desktop-thumnail-content .bannerinfo {
+    max-width: 70%;
+  }
+}
+
+.desktopbanner .desktop-thumnail-content .bannerinfo .thumbnail-title {
+  font-family: "Gilroy";
+  font-style: normal;
+  font-size: 4rem;
+  font-weight: 700;
+  line-height: 1.20312;
+  color: #ffffff;
+}
+
+@media screen and (max-width: 74.9375rem) {
+  .desktopbanner .desktop-thumnail-content .bannerinfo .thumbnail-title {
+    font-family: "Gilroy";
+    font-style: normal;
+    font-size: 2.5rem;
+    font-weight: 700;
+    line-height: 1.2;
+  }
+}
+
+.desktopbanner .desktop-thumnail-content .bannerinfo .thumbnail-text {
+  font-family: "Gilroy";
+  font-style: normal;
+  font-size: 1.5rem;
+  font-weight: normal;
+  line-height: 1.60417;
+  color: #ffffff;
+}
+
+@media screen and (max-width: 74.9375rem) {
+  .desktopbanner .desktop-thumnail-content .bannerinfo .thumbnail-text {
+    font-family: "Gilroy";
+    font-style: normal;
+    font-size: 1.125rem;
+    font-weight: normal;
+    line-height: 1.66667;
+  }
+}
+
+.mindlyservices {
+  padding: 5rem 0rem;
+}
+
+@media screen and (max-width: 62rem) {
+  .mindlyservices {
+    padding: 2.5rem 0rem;
+  }
+}
+
+.mindlyservices-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 5rem;
+}
+
+@media screen and (max-width: 62rem) {
+  .mindlyservices-content {
+    gap: 2.5rem;
+  }
+  .mindlyservices-content .owl-nav {
+    display: none;
+  }
+}
+
+.mindlyservices-content .mindlyservices-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 0.75rem;
+  text-align: center;
+}
+
+.mindlyservices-content .mindlyservices-header .title {
+  color: #2D3748;
+}
+
+@media screen and (max-width: 62rem) {
+  .mindlyservices-content .mindlyservices-header .title {
+    font-family: "Gilroy";
+    font-style: normal;
+    font-size: 1.75rem;
+    font-weight: 600;
+    line-height: 1.36;
+  }
+}
+
+.mindlyservices-content .mindlyservices-header .text {
+  font-family: "Gilroy";
+  font-style: normal;
+  font-size: 1.125rem;
+  font-weight: normal;
+  line-height: 1.66667;
+  color: #718096;
+}
+
+.mindlyservices-content .mobile-services {
+  display: none;
+}
+
+@media screen and (max-width: 48rem) {
+  .mindlyservices-content .mobile-services {
+    display: block;
+  }
+}
+
+.mindlyservices-content .mobile-services .slideritem {
+  overflow: hidden;
+}
+
+.conversations {
+  background: rgba(249, 78, 38, 0.1);
+  padding: 5rem 0rem;
+}
+
+@media screen and (max-width: 62rem) {
+  .conversations {
+    padding: 2.5rem 0rem;
+  }
+}
+
+.conversations .conversationinfo {
+  -webkit-box-ordinal-group: 1;
+      -ms-flex-order: 0;
+          order: 0;
+}
+
+@media screen and (max-width: 62rem) {
+  .conversations .conversationinfo {
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+  }
+}
+
+.conversations .conversationthumb {
+  -webkit-box-ordinal-group: 2;
+      -ms-flex-order: 1;
+          order: 1;
+}
+
+@media screen and (max-width: 62rem) {
+  .conversations .conversationthumb {
+    -webkit-box-ordinal-group: 1;
+        -ms-flex-order: 0;
+            order: 0;
+    margin-bottom: 1.5rem;
+  }
+}
+
+.conversations .conversation-details {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 1.5rem;
+}
+
+@media screen and (max-width: 62rem) {
+  .conversations .conversation-details {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    text-align: center;
+  }
+}
+
+.conversations .conversation-details .conversationtitle {
+  color: #2D3748;
+}
+
+@media screen and (max-width: 62rem) {
+  .conversations .conversation-details .conversationtitle {
+    font-family: "Gilroy";
+    font-style: normal;
+    font-size: 1.75rem;
+    font-weight: 600;
+    line-height: 1.36;
+  }
+}
+
+.conversations .conversation-details .conversationtext {
+  font-family: "Gilroy";
+  font-style: normal;
+  font-size: 1.125rem;
+  font-weight: normal;
+  line-height: 1.66667;
+  color: #718096;
+  margin-bottom: 1.5rem;
+}
+
+@media screen and (max-width: 62rem) {
+  .conversations .conversation-details .conversationtext {
+    margin-bottom: 1rem;
+  }
+}
+
+.conversations .conversation-details .signinfo {
+  width: 12.5rem;
+}
+
+.conversations .conversation-thumbnail {
+  width: 100%;
+  height: 48.4375rem;
+  overflow: hidden;
+}
+
+@media screen and (max-width: 62rem) {
+  .conversations .conversation-thumbnail {
+    height: 29.6875rem;
+  }
+}
+
+@media screen and (max-width: 48rem) {
+  .conversations .conversation-thumbnail {
+    height: 22.5rem;
+  }
+}
+
+@media screen and (max-width: 35.9375rem) {
+  .conversations .conversation-thumbnail {
+    height: 17.5rem;
+  }
+}
+
+.conversations .conversation-thumbnail img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -webkit-transition: transform 250ms ease-in-out;
+  -webkit-transition: -webkit-transform 250ms ease-in-out;
+  transition: -webkit-transform 250ms ease-in-out;
+  transition: transform 250ms ease-in-out;
+  transition: transform 250ms ease-in-out, -webkit-transform 250ms ease-in-out;
+}
+
+.conversations .conversation-thumbnail img:not([disabled]):hover {
+  -webkit-transform: scale(1.05);
+  transform: scale(1.05);
+}
+
+.individualfaq {
+  padding: 5rem 0rem;
+}
+
+@media screen and (max-width: 62rem) {
+  .individualfaq {
+    padding: 2.5rem 0rem;
+  }
+}
+
+.individualfaq-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 5rem;
+}
+
+@media screen and (max-width: 62rem) {
+  .individualfaq-content {
+    gap: 2.5rem;
+  }
+}
+
+.individualfaq-header .faqtitle {
+  color: #2D3748;
+  text-align: center;
+}
+
+@media screen and (max-width: 62rem) {
+  .individualfaq-header .faqtitle {
+    font-family: "Gilroy";
+    font-style: normal;
+    font-size: 1.75rem;
+    font-weight: 600;
+    line-height: 1.36;
+  }
+}
+
+.individualfaq-body .accordion-item {
+  background: transparent;
+  border: 0rem;
+  border-bottom: solid 0.03125rem #969696;
+}
+
+.individualfaq-body .accordion-header {
+  border: 0rem;
+}
+
+.individualfaq-body .accordion-button {
+  font-family: "Gilroy";
+  font-style: normal;
+  font-size: 1.25rem;
+  font-weight: 600;
+  line-height: 1.4;
+  background: transparent;
+  color: #4A5568;
+  border: 0rem;
+  padding: 0.875rem 0rem;
+}
+
+@media screen and (max-width: 48rem) {
+  .individualfaq-body .accordion-button {
+    font-family: "Gilroy";
+    font-style: normal;
+    font-size: 1.125rem;
+    font-weight: 600;
+    line-height: 1.66667;
+  }
+}
+
+.individualfaq-body .accordion-button:focus {
+  outline: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+.individualfaq-body .accordion-button.collapsed {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+.individualfaq-body .accordion-button:not(.collapsed) {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+.individualfaq-body .accordion-button:not(.collapsed)::after {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23212529'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
+}
+
+.individualfaq-body .accordion-body {
+  padding: 0rem 0rem 1rem;
+}
+
+.individualfaq-body .accordion-body .faqtext {
+  font-family: "Gilroy";
+  font-style: normal;
+  font-size: 1rem;
+  font-weight: normal;
+  line-height: 1.5;
+  color: #646464;
+}
+
+@media screen and (max-width: 48rem) {
+  .individualfaq-body .accordion-body .faqtext {
+    font-family: "Gilroy";
+    font-style: normal;
+    font-size: 0.875rem;
+    font-weight: normal;
+    line-height: 1.71429;
   }
 }
