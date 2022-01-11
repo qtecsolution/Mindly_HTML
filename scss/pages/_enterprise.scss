@@ -1,0 +1,324 @@
+// ENTERPRISE SECTION START
+.enterprise {
+    background: $white;
+    padding: length(80) length(0);
+
+    @include breakpoint(tablet991) {
+        padding: length(40) length(0);
+    }
+
+    &-thumbnail {
+        @include w100;
+        @include flex-center;
+        overflow: hidden;
+        padding: length(40);
+
+        img {
+            @include wh100;
+            object-fit: cover;
+            @include transitiontransform;
+
+            @include hover {
+                @include transform(scale(1.05));
+            }
+        }
+    }
+}
+// ENTERPRISE SECTION END
+
+// COMPREHENSIVE START
+.comprehensive {
+    background: $white;
+    padding: length(80) length(0);
+
+    @include breakpoint(tablet991) {
+        padding: length(40) length(0);
+    }
+
+    &-content {
+        @include flex-center-column;
+        gap: length(80);
+
+        @include breakpoint(tablet991) {
+            gap: length(40);
+        }
+    }
+
+    &-details {
+        @include flex-center-column;
+        gap: length(16);
+        text-align: center;
+
+        .comprehensivetitle {
+            color: $gray-800;
+
+            @include breakpoint(tablet991) {
+                @include heading-2;
+            }
+
+            @include breakpoint(phone768) {
+                @include heading-3;
+            }
+        }
+
+        .comprehensivetext {
+            @include font-30-18-normal;
+            color: $gray-600;
+        }
+    }
+}
+// COMPREHENSIVE END
+
+// WELLNESS-APROACH START
+.wellnessaproach {
+    background: $conversationBg;
+    padding: length(80) length(0);
+
+    @include breakpoint(tablet991) {
+        padding: length(40) length(0);
+    }
+
+    &-content {
+        @include flex-column;
+        gap: length(40);
+    }
+
+    &-header {
+        @include flex-center-column;
+        gap: length(8);
+        text-align: center;
+
+        .wellnessaproachtitle {
+            color: $gray-800;
+
+            @include breakpoint(tablet991) {
+                @include heading-2;
+            }
+
+            @include breakpoint(phone768) {
+                @include heading-3;
+            }
+        }
+
+        .wellnessaproachtext {
+            @include font-30-18-normal;
+            color: $gray-600;
+        }
+    }
+
+    &-thumbnail {
+        @include w100;
+        height: length(812);
+        @include radius(5);
+        overflow: hidden;
+
+        @include breakpoint(tablet991) {
+            height: length(475);
+            margin-bottom: length(40);
+        }
+
+        @include breakpoint(phone768) {
+            height: length(360);
+        }
+
+        @include breakpoint(phone575) {
+            height: length(280);
+        }
+
+        img {
+            @include wh100;
+            @include transitiontransform;
+            object-fit: cover;
+
+            @include breakpoint(tablet991) {
+                object-fit: contain;
+            }
+
+            @include hover {
+                @include transform(scale(1.05));
+            }
+        }
+    }
+
+    &-details {
+        @include flex-column;
+        gap: length(24);
+        overflow-x: hidden;
+        overflow-y: scroll;
+        padding-right: length(10);
+        max-height: length(800);
+
+        @include breakpoint(tablet991) {
+            overflow: hidden;
+            max-height: 100%;
+        }
+
+        &::-webkit-scrollbar {
+            background: $scrollBarBg;
+            width: length(10);
+        }
+
+        &::-webkit-scrollbar-thumb {
+            background: $footerBg;
+        }
+    }
+}
+// WELLNESS-APROACH END
+
+// OURBRANDS START
+.ourbrands {
+    background: $white;
+    padding: length(80) length(0);
+
+    @include breakpoint(tablet991) {
+        padding: length(40) length(0);
+    }
+
+    &-content {
+        @include flex-center-column;
+        gap: length(80);
+
+        @include breakpoint(tablet991) {
+            gap: length(40);
+        }
+    }
+
+    &-header {
+        .brandstitle {
+            color: $gray-800;
+
+            @include breakpoint(tablet991) {
+                @include heading-2;
+            }
+        }
+    }
+}
+// OURBRANDS END
+
+// MEETING SECTION START
+.meeting {
+    background: $primary;
+    padding: length(80) length(0);
+
+    @include breakpoint(tablet991) {
+        padding: length(40) length(0);
+    }
+
+    &-content {
+        @include flex-center-column;
+        gap: length(80);
+
+        @include breakpoint(tablet991) {
+            gap: length(40);
+        }
+    }
+
+    &-header {
+        @include w100;
+        @include flex-center-column;
+        gap: length(16);
+        text-align: center;
+
+        .meetingtitle {
+            color: $white;
+
+            @include breakpoint(tablet991) {
+                @include heading-2;
+            }
+
+            @include breakpoint(phone768) {
+                @include heading-3;
+            }
+        }
+
+        .meetingtext {
+            @include font-30-18-normal;
+            color: $white;
+        }
+    }
+
+    &-form {
+        @include w100;
+        @include flex-column;
+        gap: length(24);
+
+        .inputrow {
+            @include flex-center-vert;
+            gap: length(24);
+
+            @include breakpoint(phone768) {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: length(16);
+            }
+
+            .inputbox {
+                width: 50%;
+                @include flex-column;
+                gap: length(8);
+
+                @include breakpoint(phone768) {
+                    @include w100;
+                }
+
+                .infobox {
+                    @include flex-column;
+                    gap: length(8);
+
+                    .infolabel {
+                        @include font-24-14-medium;
+                        color: $white;
+                    }
+
+                    .inputfield {
+                        @include font-24-16-normal;
+                        color: $gray-800;
+                        padding: length(16);
+                        box-shadow: $box-shadow-2;
+                        @include radius(6);
+
+                        &::placeholder {
+                            color: $textPlaceholder;
+                        }
+                    }
+                }
+
+                .error-message {
+                    display: none;
+                    @include font-14-14-semibold;
+                    color: $secondary;
+                }
+
+                &.error {
+                    .error-message {
+                        display: block;
+                    }
+                }
+            }
+        }
+
+        .submitrow {
+            @include flex-end;
+
+            .btn-submit {
+                width: 48.25%;
+                @include font-24-16-semibold;
+                line-height: 1;
+                text-align: center;
+                padding: length(16);
+                @include radius(8);
+                @include setBgColor($secondary, $white);
+                @include transitions;
+
+                @include breakpoint(phone768) {
+                    @include w100;
+                }
+
+                @include hover {
+                    @include setBgColor(darken($secondary, 15%), $white);
+                }
+            }
+        }
+    }
+}
+// MEETING SECTION END

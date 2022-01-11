@@ -214,6 +214,63 @@ $(document).ready(function(){
     }
     // CLIENTS SLIDER END
 
+    // BRANDS SLIDER START
+    const brands = $('.brands-slider');
+    
+    if(brands.length > 0) {
+        brands.owlCarousel({
+            margin: 12,
+            loop: true,
+            autoplay: true,
+            autoplayTimeout: 4000,
+            dots: false,
+            responsive : {
+                // breakpoint from 0 up
+                0 : {
+                    items: 1,
+                    nav: false
+                },
+
+                // breakpoint from 360 up
+                360 : {
+                    items: 1,
+                    nav: false
+                },
+
+                // breakpoint from 480 up
+                480 : {
+                    items: 2,
+                    nav: false
+                },
+
+                // breakpoint from 768 up
+                768 : {
+                    items: 3,
+                    nav: false
+                },
+
+                // breakpoint from 992 up
+                992 : {
+                    items: 4,
+                    nav: false
+                },
+
+                // breakpoint from 1024 up
+                1024 : {
+                    items: 5,
+                    nav: false
+                },
+
+                // breakpoint from 1100 up
+                1100 : {
+                    items: 6,
+                    nav: false
+                }
+            }
+        });
+    }
+    // BRANDS SLIDER END
+
     // BLOGS SLIDER START
     const blogs = $('.blogs-slider');
     

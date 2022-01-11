@@ -28,7 +28,14 @@ TweenMax.from(".mobilebanner", 4, {
     ease: Expo.easeInOut
 });
 
-TweenMax.from(".mindlyservices", 5, {
+TweenMax.from(".banner-thumbnail-content", 5, {
+    opacity: 0,
+    delay: 1.75,
+    x: -20,
+    ease: Expo.easeInOut
+});
+
+TweenMax.from(".mindlyservices", 6, {
     opacity: 0,
     delay: 2,
     y: 20,

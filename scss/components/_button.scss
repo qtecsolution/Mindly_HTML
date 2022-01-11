@@ -145,3 +145,23 @@
         @include setBgColor(darken($tertiary, 15%), $white);
     }
 }
+
+.btn-request {
+    @include setBgColor($tertiary, $white);
+    @include font-14-14-semibold;
+    padding: length(16) length(30);
+    text-align: center;
+    @include flex-center;
+    @include w100;
+    @include radius(8);
+    text-align: center;
+    @include transitions;
+
+    @include breakpoint(phone575) {
+        @include font-12-12-semibold;
+    }
+
+    @include hover {
+        @include setBgColor(darken($tertiary, 15%), $white);
+    }
+}
