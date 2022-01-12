@@ -1833,7 +1833,7 @@ h6 {
 .btn-signin {
   padding: 1rem 2rem;
   text-align: center;
-  background: #ffffff;
+  background: transparent;
   color: #F94E26;
   border: solid 0.0625rem #F94E26;
   border-radius: 0.375rem;
@@ -3246,6 +3246,84 @@ h6 {
   }
 }
 
+.cardteam {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 1rem;
+  padding: 1.5rem;
+  background: #ffffff;
+  border-radius: 0.9375rem;
+  border-radius: 0.9375rem;
+  height: 17.875rem;
+}
+
+.cardteam-header .cardcap {
+  background: #E6E6E6;
+  height: 5rem;
+  width: 5rem;
+  border-radius: 100%;
+}
+
+.cardteam-body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 1rem;
+}
+
+.cardteam-body .cardtitle {
+  color: #2D3748;
+}
+
+.cardteam-body .cardtext {
+  font-family: "Gilroy";
+  font-style: normal;
+  font-size: 1rem;
+  font-weight: normal;
+  line-height: 1.5;
+  color: #718096;
+}
+
+.cardchoose {
+  position: relative;
+}
+
+.cardchoose-action {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  z-index: 700;
+}
+
+.cardchoose-action .btn-playpause {
+  background: transparent;
+  border: none;
+  height: 4.5rem;
+  width: 4.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border-radius: 100%;
+  overflow: hidden;
+}
+
 .counter-1 {
   background: #FFF7E6;
 }
@@ -3512,6 +3590,246 @@ h6 {
   60% {
     top: 0rem;
     left: calc(100% - 0.625rem);
+  }
+}
+
+.individualfaq {
+  background: #ffffff;
+  padding: 5rem 0rem;
+}
+
+@media screen and (max-width: 62rem) {
+  .individualfaq {
+    padding: 2.5rem 0rem;
+  }
+}
+
+.individualfaq-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 5rem;
+}
+
+@media screen and (max-width: 62rem) {
+  .individualfaq-content {
+    gap: 2.5rem;
+  }
+}
+
+.individualfaq-header .faqtitle {
+  color: #2D3748;
+  text-align: center;
+}
+
+@media screen and (max-width: 62rem) {
+  .individualfaq-header .faqtitle {
+    font-family: "Gilroy";
+    font-style: normal;
+    font-size: 1.75rem;
+    font-weight: 600;
+    line-height: 1.36;
+  }
+}
+
+.individualfaq-body .accordion-item {
+  background: transparent;
+  border: 0rem;
+  border-bottom: solid 0.03125rem #969696;
+  border-radius: 0rem;
+  border-radius: 0rem;
+}
+
+.individualfaq-body .accordion-header {
+  border: 0rem;
+}
+
+.individualfaq-body .accordion-button {
+  font-family: "Gilroy";
+  font-style: normal;
+  font-size: 1.25rem;
+  font-weight: 600;
+  line-height: 1.4;
+  background: transparent;
+  color: #4A5568;
+  border: 0rem;
+  padding: 0.875rem 0rem;
+}
+
+@media screen and (max-width: 48rem) {
+  .individualfaq-body .accordion-button {
+    font-family: "Gilroy";
+    font-style: normal;
+    font-size: 1.125rem;
+    font-weight: 600;
+    line-height: 1.66667;
+  }
+}
+
+.individualfaq-body .accordion-button:focus {
+  outline: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+.individualfaq-body .accordion-button.collapsed {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+.individualfaq-body .accordion-button:not(.collapsed) {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+.individualfaq-body .accordion-button:not(.collapsed)::after {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23212529'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
+}
+
+.individualfaq-body .accordion-body {
+  padding: 0rem 0rem 1rem;
+}
+
+.individualfaq-body .accordion-body .faqtext {
+  font-family: "Gilroy";
+  font-style: normal;
+  font-size: 1rem;
+  font-weight: normal;
+  line-height: 1.5;
+  color: #646464;
+}
+
+@media screen and (max-width: 48rem) {
+  .individualfaq-body .accordion-body .faqtext {
+    font-family: "Gilroy";
+    font-style: normal;
+    font-size: 0.875rem;
+    font-weight: normal;
+    line-height: 1.71429;
+  }
+}
+
+.providersfaq {
+  background: #F7FAFC;
+  padding: 5rem 0rem;
+}
+
+@media screen and (max-width: 62rem) {
+  .providersfaq {
+    padding: 2.5rem 0rem;
+  }
+}
+
+.providersfaq-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 5rem;
+}
+
+@media screen and (max-width: 62rem) {
+  .providersfaq-content {
+    gap: 2.5rem;
+  }
+}
+
+.providersfaq-header .faqtitle {
+  color: #2D3748;
+  text-align: center;
+}
+
+@media screen and (max-width: 62rem) {
+  .providersfaq-header .faqtitle {
+    font-family: "Gilroy";
+    font-style: normal;
+    font-size: 1.75rem;
+    font-weight: 600;
+    line-height: 1.36;
+  }
+}
+
+.providersfaq-body .accordion-item {
+  background: transparent;
+  border: 0rem;
+  border-bottom: solid 0.03125rem #969696;
+  border-radius: 0rem;
+  border-radius: 0rem;
+}
+
+.providersfaq-body .accordion-header {
+  border: 0rem;
+}
+
+.providersfaq-body .accordion-button {
+  font-family: "Gilroy";
+  font-style: normal;
+  font-size: 1.25rem;
+  font-weight: 600;
+  line-height: 1.4;
+  background: transparent;
+  color: #4A5568;
+  border: 0rem;
+  padding: 0.875rem 0rem;
+}
+
+@media screen and (max-width: 48rem) {
+  .providersfaq-body .accordion-button {
+    font-family: "Gilroy";
+    font-style: normal;
+    font-size: 1.125rem;
+    font-weight: 600;
+    line-height: 1.66667;
+  }
+}
+
+.providersfaq-body .accordion-button:focus {
+  outline: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+.providersfaq-body .accordion-button.collapsed {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+.providersfaq-body .accordion-button:not(.collapsed) {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+.providersfaq-body .accordion-button:not(.collapsed)::after {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23212529'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
+}
+
+.providersfaq-body .accordion-body {
+  padding: 0rem 0rem 1rem;
+}
+
+.providersfaq-body .accordion-body .faqtext {
+  font-family: "Gilroy";
+  font-style: normal;
+  font-size: 1rem;
+  font-weight: normal;
+  line-height: 1.5;
+  color: #646464;
+}
+
+@media screen and (max-width: 48rem) {
+  .providersfaq-body .accordion-body .faqtext {
+    font-family: "Gilroy";
+    font-style: normal;
+    font-size: 0.875rem;
+    font-weight: normal;
+    line-height: 1.71429;
   }
 }
 
@@ -4049,6 +4367,10 @@ h6 {
   overflow: hidden;
 }
 
+.mindlycharacteristics-content .mobile-characteristics .owl-item {
+  min-width: 14.375rem;
+}
+
 .mindlypackages {
   padding: 5rem 0rem;
 }
@@ -4517,6 +4839,23 @@ h6 {
   overflow: hidden;
   border-radius: 0.9375rem;
   border-radius: 0.9375rem;
+}
+
+@media screen and (max-width: 62rem) {
+  .achievepotential .mobile-potential .achievemobile-thumbnail {
+    width: 18.75rem;
+    height: 23.4375rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin-inline: auto;
+  }
 }
 
 .achievepotential .mobile-potential .achievemobile-thumbnail img {
@@ -6055,6 +6394,18 @@ h6 {
 @media screen and (max-width: 62rem) {
   .providerinfo-content .providerinfo-body .providerinfo-slider .providerdetails .providerthumbnail {
     margin-bottom: 2.5rem;
+    width: 18.75rem;
+    height: 23.4375rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin-inline: auto;
   }
 }
 
@@ -6075,12 +6426,15 @@ h6 {
       -ms-flex-direction: column;
           flex-direction: column;
   gap: 1.5rem;
+  max-width: 74%;
 }
 
 @media screen and (max-width: 62rem) {
   .providerinfo-content .providerinfo-body .providerinfo-slider .providerdetails .providerdetail {
     margin-left: 0rem;
     padding-bottom: 3.75rem;
+    max-width: 100%;
+    text-align: center;
   }
 }
 
@@ -6105,6 +6459,286 @@ h6 {
   font-weight: normal;
   line-height: 1.5;
   color: #718096;
+}
+
+.coreteam {
+  background: #FFF7E6;
+  padding: 5rem 0rem;
+}
+
+@media screen and (max-width: 62rem) {
+  .coreteam {
+    padding: 2.5rem 0rem;
+  }
+}
+
+.coreteam-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 5rem;
+}
+
+@media screen and (max-width: 62rem) {
+  .coreteam-content {
+    gap: 2.5rem;
+  }
+}
+
+.coreteam-header {
+  width: 100%;
+}
+
+.coreteam-header .coreteam-details {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 1rem;
+  text-align: center;
+}
+
+.coreteam-header .coreteam-details .teamtitle {
+  color: #2D3748;
+}
+
+@media screen and (max-width: 62rem) {
+  .coreteam-header .coreteam-details .teamtitle {
+    font-family: "Gilroy";
+    font-style: normal;
+    font-size: 1.75rem;
+    font-weight: 600;
+    line-height: 1.36;
+  }
+}
+
+.coreteam-header .coreteam-details .teamtext {
+  font-family: "Gilroy";
+  font-style: normal;
+  font-size: 1.125rem;
+  font-weight: normal;
+  line-height: 1.66667;
+  color: #718096;
+}
+
+.coreteam-body {
+  width: 100%;
+}
+
+@media screen and (max-width: 62rem) {
+  .coreteam-body .desktopteam {
+    display: none;
+  }
+}
+
+.coreteam-body .mobileteam {
+  display: none;
+}
+
+@media screen and (max-width: 62rem) {
+  .coreteam-body .mobileteam {
+    display: block;
+  }
+}
+
+.providernetwork {
+  background: #FCAF15;
+  padding: 2.5rem 0rem;
+}
+
+.providernetwork-details .providertitle {
+  font-family: "Gilroy";
+  font-style: normal;
+  font-size: 3rem;
+  font-weight: 700;
+  line-height: 1.20833;
+  color: #ffffff;
+}
+
+@media screen and (max-width: 87.4375rem) {
+  .providernetwork-details .providertitle {
+    font-family: "Gilroy";
+    font-style: normal;
+    font-size: 2.5rem;
+    font-weight: 700;
+    line-height: 1.2;
+  }
+}
+
+@media screen and (max-width: 74.9375rem) {
+  .providernetwork-details .providertitle {
+    font-family: "Gilroy";
+    font-style: normal;
+    font-size: 2.25rem;
+    font-weight: 600;
+    line-height: 1.36;
+  }
+}
+
+@media screen and (max-width: 62rem) {
+  .providernetwork-details .providertitle {
+    font-family: "Gilroy";
+    font-style: normal;
+    font-size: 1.75rem;
+    font-weight: 600;
+    line-height: 1.36;
+  }
+}
+
+@media screen and (max-width: 31.25rem) {
+  .providernetwork-details .providertitle {
+    font-family: "Gilroy";
+    font-style: normal;
+    font-size: 1.5rem;
+    font-weight: 600;
+    line-height: 1.36;
+  }
+}
+
+@media screen and (max-width: 48rem) {
+  .providernetwork-details .providertitle {
+    text-align: center;
+  }
+}
+
+.providernetwork-info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+@media screen and (max-width: 48rem) {
+  .providernetwork-info {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
+.providernetwork-info .providernet {
+  width: 12.5rem;
+}
+
+.chosseprovider {
+  padding: 5rem 0rem;
+}
+
+@media screen and (max-width: 62rem) {
+  .chosseprovider {
+    padding: 2.5rem 0rem;
+  }
+}
+
+.chosseprovider-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 5rem;
+}
+
+@media screen and (max-width: 62rem) {
+  .chosseprovider-content {
+    gap: 2.5rem;
+  }
+}
+
+.chosseprovider-header {
+  width: 100%;
+}
+
+.chosseprovider-header .chosseprovider-details {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 1rem;
+  text-align: center;
+}
+
+.chosseprovider-header .chosseprovider-details .choosetitle {
+  color: #2D3748;
+}
+
+@media screen and (max-width: 62rem) {
+  .chosseprovider-header .chosseprovider-details .choosetitle {
+    font-family: "Gilroy";
+    font-style: normal;
+    font-size: 1.75rem;
+    font-weight: 600;
+    line-height: 1.36;
+  }
+}
+
+.chosseprovider-header .chosseprovider-details .choosetext {
+  font-family: "Gilroy";
+  font-style: normal;
+  font-size: 1.125rem;
+  font-weight: normal;
+  line-height: 1.66667;
+  color: #718096;
+}
+
+.chosseprovider-body {
+  width: 100%;
+}
+
+@media screen and (max-width: 62rem) {
+  .chosseprovider-body .desktopchoose {
+    display: none;
+  }
+}
+
+.chosseprovider-body .mobilechoose {
+  display: none;
+}
+
+@media screen and (max-width: 62rem) {
+  .chosseprovider-body .mobilechoose {
+    display: block;
+  }
 }
 
 .mobilebanner {
@@ -6594,122 +7228,4 @@ h6 {
 .conversations .conversation-thumbnail img:not([disabled]):hover {
   -webkit-transform: scale(1.05);
   transform: scale(1.05);
-}
-
-.individualfaq {
-  background: #ffffff;
-  padding: 5rem 0rem;
-}
-
-@media screen and (max-width: 62rem) {
-  .individualfaq {
-    padding: 2.5rem 0rem;
-  }
-}
-
-.individualfaq-content {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  gap: 5rem;
-}
-
-@media screen and (max-width: 62rem) {
-  .individualfaq-content {
-    gap: 2.5rem;
-  }
-}
-
-.individualfaq-header .faqtitle {
-  color: #2D3748;
-  text-align: center;
-}
-
-@media screen and (max-width: 62rem) {
-  .individualfaq-header .faqtitle {
-    font-family: "Gilroy";
-    font-style: normal;
-    font-size: 1.75rem;
-    font-weight: 600;
-    line-height: 1.36;
-  }
-}
-
-.individualfaq-body .accordion-item {
-  background: transparent;
-  border: 0rem;
-  border-bottom: solid 0.03125rem #969696;
-}
-
-.individualfaq-body .accordion-header {
-  border: 0rem;
-}
-
-.individualfaq-body .accordion-button {
-  font-family: "Gilroy";
-  font-style: normal;
-  font-size: 1.25rem;
-  font-weight: 600;
-  line-height: 1.4;
-  background: transparent;
-  color: #4A5568;
-  border: 0rem;
-  padding: 0.875rem 0rem;
-}
-
-@media screen and (max-width: 48rem) {
-  .individualfaq-body .accordion-button {
-    font-family: "Gilroy";
-    font-style: normal;
-    font-size: 1.125rem;
-    font-weight: 600;
-    line-height: 1.66667;
-  }
-}
-
-.individualfaq-body .accordion-button:focus {
-  outline: none;
-  -webkit-box-shadow: none;
-          box-shadow: none;
-}
-
-.individualfaq-body .accordion-button.collapsed {
-  -webkit-box-shadow: none;
-          box-shadow: none;
-}
-
-.individualfaq-body .accordion-button:not(.collapsed) {
-  -webkit-box-shadow: none;
-          box-shadow: none;
-}
-
-.individualfaq-body .accordion-button:not(.collapsed)::after {
-  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23212529'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
-}
-
-.individualfaq-body .accordion-body {
-  padding: 0rem 0rem 1rem;
-}
-
-.individualfaq-body .accordion-body .faqtext {
-  font-family: "Gilroy";
-  font-style: normal;
-  font-size: 1rem;
-  font-weight: normal;
-  line-height: 1.5;
-  color: #646464;
-}
-
-@media screen and (max-width: 48rem) {
-  .individualfaq-body .accordion-body .faqtext {
-    font-family: "Gilroy";
-    font-style: normal;
-    font-size: 0.875rem;
-    font-weight: normal;
-    line-height: 1.71429;
-  }
 }

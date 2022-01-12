@@ -66,7 +66,7 @@
     .desktop-thumnail {
         padding: length(54) length(0) length(38);
         @include h100;
-        
+
 
         &-content {
             .bannerinfo {
@@ -353,6 +353,11 @@
             .slideritem {
                 overflow: hidden;
             }
+
+            .owl-item {
+                min-width: length(230);
+                // height: length(320) !important;
+            }
         }
     }
 }
@@ -629,6 +634,13 @@
                 overflow: hidden;
                 @include radius(15);
 
+                @include breakpoint(tablet991) {
+                    width: length(300);
+                    height: length(375);
+                    @include flex-center;
+                    margin-inline: auto;
+                }
+
                 img {
                     @include wh100;
                     object-fit: contain;
@@ -757,6 +769,7 @@
         }
     }
 }
+
 // TURN-TEAM END
 
 // YOUTH-EMPOWERMENT START
@@ -810,7 +823,7 @@
                 @include breakpoint(phone768) {
                     padding: length(14) length(18);
                 }
-            
+
                 @include hover {
                     @include setBgColor($tertiary, $white);
                 }
@@ -828,7 +841,7 @@
                 @include breakpoint(phone768) {
                     padding: length(14) length(18);
                 }
-            
+
                 @include hover {
                     @include setBgColor($white, $tertiary);
                     border-color: $white;
@@ -837,6 +850,7 @@
         }
     }
 }
+
 // YOUTH-EMPOWERMENT END
 
 // EMPOWER SECTION START
@@ -898,7 +912,7 @@
                 @include font-24-16-normal;
                 color: $black;
             }
-            
+
             .reviewtitle {
                 color: $gray-800;
 
@@ -909,6 +923,7 @@
         }
     }
 }
+
 // MEMBER REVIEW END
 
 // INCREMENTCOUNTER START
@@ -929,6 +944,7 @@
         }
     }
 }
+
 // INCREMENTCOUNTER END
 
 // OURCLIENTS START
@@ -959,6 +975,7 @@
         }
     }
 }
+
 // OURCLIENTS END
 
 // BLOG SECTION START
@@ -1014,7 +1031,7 @@
 
             .mobileblogs {
                 display: none;
-                
+
                 @include breakpoint(tablet991) {
                     display: block;
                 }
@@ -1022,6 +1039,7 @@
         }
     }
 }
+
 // BLOG SECTION END
 
 // PRESS SECTION START
@@ -1076,11 +1094,12 @@
 
         .pressmobile {
             display: none;
-            
+
             @include breakpoint(tablet991) {
                 display: block;
             }
         }
     }
 }
+
 // PRESS SECTION END

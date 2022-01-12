@@ -15,7 +15,7 @@
 .btn-signin {
     padding: length(16) length(32);
     text-align: center;
-    @include setBgColor($white, $tertiary);
+    @include setBgColor(transparent, $tertiary);
     @include border(solid, 1, $tertiary);
     @include radius(6);
     @include font-16-16-semibold;

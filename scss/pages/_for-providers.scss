@@ -139,6 +139,10 @@
 
                         @include breakpoint(tablet991) {
                             margin-bottom: length(40);
+                            width: length(300);
+                            height: length(375);
+                            @include flex-center;
+                            margin-inline: auto;
                         }
 
                         img {
@@ -151,10 +155,13 @@
                         margin-left: length(24);
                         @include flex-column;
                         gap: length(24);
+                        max-width: 74%;
 
                         @include breakpoint(tablet991) {
                             margin-left: length(0);
                             padding-bottom: length(60);
+                            max-width: 100%;
+                            text-align: center;
                         }
 
                         .providername {
@@ -177,3 +184,175 @@
 }
 
 // PROVIDER SLIDER SECTION END
+
+// CORE TEAM SECTION START
+.coreteam {
+    background: $footerBg;
+    padding: length(80) length(0);
+
+    @include breakpoint(tablet991) {
+        padding: length(40) length(0);
+    }
+
+    &-content {
+        @include flex-center-column;
+        gap: length(80);
+
+        @include breakpoint(tablet991) {
+            gap: length(40);
+        }
+    }
+
+    &-header {
+        @include w100;
+
+        .coreteam-details {
+            @include w100;
+            @include flex-center-column;
+            gap: length(16);
+            text-align: center;
+
+            .teamtitle {
+                color: $gray-800;
+
+                @include breakpoint(tablet991) {
+                    @include heading-2;
+                }
+            }
+
+            .teamtext {
+                @include font-30-18-normal;
+                color: $gray-600;
+            }
+        }
+    }
+
+    &-body {
+        @include w100;
+
+        .desktopteam {
+            @include breakpoint(tablet991) {
+                display: none;
+            }
+        }
+
+        .mobileteam {
+            display: none;
+
+            @include breakpoint(tablet991) {
+                display: block;
+            }
+        }
+    }
+}
+
+// CORE TEAM SECTION END
+
+// PROVIDER NETWORK SECTION START
+.providernetwork {
+    background: $secondary;
+    padding: length(40) length(0);
+
+    &-details {
+        .providertitle {
+            @include display-3;
+            color: $white;
+
+            @include breakpoint(desktop1400) {
+                @include display-2;
+            }
+
+            @include breakpoint(desktop1199) {
+                @include heading-1;
+            }
+
+            @include breakpoint(tablet991) {
+                @include heading-2;
+            }
+
+            @include breakpoint(phone500) {
+                @include heading-3;
+            }
+
+            @include breakpoint(phone768) {
+                text-align: center;
+            }
+        }
+    }
+
+    &-info {
+        @include flex-end;
+
+        @include breakpoint(phone768) {
+            justify-content: center;
+        }
+
+        .providernet {
+            width: length(200);
+        }
+    }
+}
+
+// PROVIDER NETWORK SECTION END
+
+// CHOOSE PROVIDER SECTION START
+.chosseprovider {
+    padding: length(80) length(0);
+
+    @include breakpoint(tablet991) {
+        padding: length(40) length(0);
+    }
+
+    &-content {
+        @include flex-center-column;
+        gap: length(80);
+
+        @include breakpoint(tablet991) {
+            gap: length(40);
+        }
+    }
+
+    &-header {
+        @include w100;
+
+        .chosseprovider-details {
+            @include w100;
+            @include flex-center-column;
+            gap: length(16);
+            text-align: center;
+
+            .choosetitle {
+                color: $gray-800;
+
+                @include breakpoint(tablet991) {
+                    @include heading-2;
+                }
+            }
+
+            .choosetext {
+                @include font-30-18-normal;
+                color: $gray-600;
+            }
+        }
+    }
+
+    &-body {
+        @include w100;
+
+        .desktopchoose {
+            @include breakpoint(tablet991) {
+                display: none;
+            }
+        }
+
+        .mobilechoose {
+            display: none;
+
+            @include breakpoint(tablet991) {
+                display: block;
+            }
+        }
+    }
+}
+
+// CHOOSE PROVIDER SECTION END

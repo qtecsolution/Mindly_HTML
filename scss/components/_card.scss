@@ -340,6 +340,7 @@
         color: $black;
     }
 }
+
 // CARD REVIEW END
 
 // CARD COUNTER START
@@ -376,6 +377,7 @@
         }
     }
 }
+
 // CARD COUNTER END
 
 // CARD CLIENT START
@@ -394,6 +396,7 @@
         object-fit: contain;
     }
 }
+
 // CARD CLIENT END
 
 // CARD BRAND START
@@ -412,6 +415,7 @@
         object-fit: contain;
     }
 }
+
 // CARD BRAND END
 
 // CARD BLOG START
@@ -482,6 +486,7 @@
         }
     }
 }
+
 // CARD BLOG END
 
 // CARD BLOG START
@@ -547,6 +552,7 @@
         }
     }
 }
+
 // CARD BLOG END
 
 // CARD WELLNESSAPROACH START
@@ -600,6 +606,7 @@
         }
     }
 }
+
 // CARD WELLNESSAPROACH END
 
 // CARD COMPREHENSIVE START
@@ -630,18 +637,77 @@
                 @include heading-4;
             }
         }
-    
+
         .cardtext {
             @include font-24-16-normal;
             color: $gray-600;
-            
+
             @include breakpoint(phone500) {
                 @include font-24-14-normal;
             }
         }
     }
 }
+
 // CARD COMPREHENSIVE END
+
+// CARD TEAM START
+.cardteam {
+    @include flex-column;
+    gap: length(16);
+    padding: length(24);
+    background: $white;
+    @include radius(15);
+    height: length(286);
+
+    &-header {
+        .cardcap {
+            background: $serviceCardBg;
+            @include square(length(80));
+            @include circle;
+        }
+    }
+
+    &-body {
+        @include flex-column;
+        gap: length(16);
+
+        .cardtitle {
+            color: $gray-800;
+        }
+
+        .cardtext {
+            @include font-24-16-normal;
+            color: $gray-600;
+        }
+    }
+}
+
+// CARD TEAM END
+
+
+// CARD CHOOSE START
+.cardchoose {
+    position: relative;
+
+    &-action {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        @include transform(translate(-50%, -50%));
+        z-index: 700;
+
+        .btn-playpause {
+            @include transparent-button;
+            @include square(length(72));
+            @include flex-center;
+            @include circle;
+            overflow: hidden;
+        }
+    }
+}
+
+// CARD CHOOSE END
 
 .counter-1 {
     background: $footerBg;

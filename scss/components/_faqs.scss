@@ -1,0 +1,176 @@
+// INDIVIDUAL FAQ START
+.individualfaq {
+    background: $white;
+    padding: length(80) length(0);
+
+    @include breakpoint(tablet991) {
+        padding: length(40) length(0);
+    }
+
+    &-content {
+        @include flex-column;
+        gap: length(80);
+
+        @include breakpoint(tablet991) {
+            gap: length(40);
+        }
+    }
+
+    &-header {
+        .faqtitle {
+            color: $gray-800;
+            text-align: center;
+
+            @include breakpoint(tablet991) {
+                @include heading-2;
+            }
+        }
+    }
+
+    &-body {
+        .accordion {
+            &-item {
+                background: transparent;
+                border: length(0);
+                @include border-single(bottom, solid, 0.5, $faqBorder);
+                @include radius(0);
+            }
+
+            &-header {
+                border: length(0);
+            }
+
+            &-button {
+                @include font-28-20-semibold;
+                @include setBgColor(transparent, $gray-700);
+                border: length(0);
+                padding: length(14) length(0);
+
+                @include breakpoint(phone768) {
+                    @include font-30-18-semibold;
+                }
+
+                &:focus {
+                    outline: none;
+                    box-shadow: none;
+                }
+
+                &.collapsed {
+                    box-shadow: none;
+                }
+
+                &:not(.collapsed) {
+                    box-shadow: none;
+
+                    &::after {
+                        background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23212529'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
+                    }
+                }
+            }
+
+            &-body {
+                padding: length(0) length(0) length(16);
+
+                .faqtext {
+                    @include font-24-16-normal;
+                    color: $textFaq;
+
+                    @include breakpoint(phone768) {
+                        @include font-24-14-normal;
+                    }
+                }
+            }
+        }
+    }
+}
+
+// INDIVIDUAL FAQ END
+
+
+// PROVIDERS FAQ START
+.providersfaq {
+    background: $gray-100;
+    padding: length(80) length(0);
+
+    @include breakpoint(tablet991) {
+        padding: length(40) length(0);
+    }
+
+    &-content {
+        @include flex-column;
+        gap: length(80);
+
+        @include breakpoint(tablet991) {
+            gap: length(40);
+        }
+    }
+
+    &-header {
+        .faqtitle {
+            color: $gray-800;
+            text-align: center;
+
+            @include breakpoint(tablet991) {
+                @include heading-2;
+            }
+        }
+    }
+
+    &-body {
+        .accordion {
+            &-item {
+                background: transparent;
+                border: length(0);
+                @include border-single(bottom, solid, 0.5, $faqBorder);
+                @include radius(0);
+            }
+
+            &-header {
+                border: length(0);
+            }
+
+            &-button {
+                @include font-28-20-semibold;
+                @include setBgColor(transparent, $gray-700);
+                border: length(0);
+                padding: length(14) length(0);
+
+                @include breakpoint(phone768) {
+                    @include font-30-18-semibold;
+                }
+
+                &:focus {
+                    outline: none;
+                    box-shadow: none;
+                }
+
+                &.collapsed {
+                    box-shadow: none;
+                }
+
+                &:not(.collapsed) {
+                    box-shadow: none;
+
+                    &::after {
+                        background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23212529'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
+                    }
+                }
+            }
+
+            &-body {
+                padding: length(0) length(0) length(16);
+
+                .faqtext {
+                    @include font-24-16-normal;
+                    color: $textFaq;
+
+                    @include breakpoint(phone768) {
+                        @include font-24-14-normal;
+                    }
+                }
+            }
+        }
+    }
+}
+
+// PROVIDERS FAQ END
