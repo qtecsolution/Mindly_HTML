@@ -4,6 +4,7 @@
     @include w100;
     padding-bottom: lenth(70);
     min-height: length(400);
+
     @include breakpoint(tab991) {
         display: none;
     }
@@ -57,21 +58,22 @@
         @include flex-column;
         gap: length(18);
         background: $appontmentBg;
+        padding-bottom: length(44);
 
-            .banner-info {
-                display: none;
-                margin-top: length(44);
+        .banner-info {
+            display: none;
+            margin-top: length(44);
 
-                @include breakpoint(phone768) {
-                    display: block;
-                }
-                
-                .textinfo {
-                    @include font-30-18-normal;
-                    color: $gray-700;
-                    text-align: center;
-                }
+            @include breakpoint(phone768) {
+                display: block;
             }
+
+            .textinfo {
+                @include font-30-18-normal;
+                color: $gray-700;
+                text-align: center;
+            }
+        }
 
         .bannercontent {
             padding: length(45) length(4) length(6);
@@ -219,10 +221,10 @@
             order: 1;
         }
     }
-    
+
     .conversationthumb {
         order: 1;
-        
+
         @include breakpoint(tablet991) {
             order: 0;
             margin-bottom: length(24);
@@ -245,7 +247,7 @@
                 @include heading-2;
             }
         }
-        
+
         .conversationtext {
             @include font-30-18-normal;
             color: $gray-600;
@@ -289,6 +291,7 @@
         }
     }
 }
+
 // CONVERSATIONS SECTION END
 
 // INDIVIDUAL FAQ START
@@ -375,4 +378,5 @@
         }
     }
 }
+
 // INDIVIDUAL FAQ END

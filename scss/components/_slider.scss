@@ -1,14 +1,18 @@
 .owl-nav {
     margin: length(0) !important;
+    @include w100;
+    height: length(48);
+    position: absolute;
+    top: 50%;
+    @include transform(translateY(-50%));
+    @include flex-center-between;
 }
 
 .owl-prev,
 .owl-next {
     margin: length(0) !important;
-    top: 50%;
-    position: absolute;
     @include square(length(48));
-    // @include flex-center;
+    @include flex-center;
     overflow: hidden;
 
     &:hover {
@@ -17,9 +21,9 @@
 }
 
 .owl-prev {
-    left: length(-48);
+    margin-left: length(-48) !important;
 }
 
 .owl-next {
-    right: length(-48);
+    margin-right: length(-48) !important;
 }
