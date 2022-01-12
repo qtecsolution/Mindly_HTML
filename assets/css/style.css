@@ -5940,18 +5940,18 @@ h6 {
           justify-content: space-between;
   align-items: center;
   left: auto;
-  right: 32%;
+  right: 41%;
 }
 
 @media screen and (max-width: 87.4375rem) {
   .providerinfo-content .providerinfo-body .providerinfo-slider .owl-nav {
-    right: 29%;
+    right: 38%;
   }
 }
 
 @media screen and (max-width: 75rem) {
   .providerinfo-content .providerinfo-body .providerinfo-slider .owl-nav {
-    right: 25%;
+    right: 35%;
   }
 }
 
@@ -5989,19 +5989,19 @@ h6 {
           justify-content: center;
   gap: 0.75rem;
   left: auto;
-  right: 35.05%;
+  right: 44.05%;
 }
 
 @media screen and (max-width: 87.4375rem) {
   .providerinfo-content .providerinfo-body .providerinfo-slider .owl-dots {
     width: 6.875rem;
-    right: 33%;
+    right: 42%;
   }
 }
 
 @media screen and (max-width: 75rem) {
   .providerinfo-content .providerinfo-body .providerinfo-slider .owl-dots {
-    right: 29.75%;
+    right: 40%;
   }
 }
 

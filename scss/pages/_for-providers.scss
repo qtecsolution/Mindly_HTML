@@ -51,14 +51,14 @@
                     @include transform(translateY(-75%));
                     @include flex-center-between;
                     left: auto;
-                    right: 32%;
+                    right: 41%;
 
                     @include breakpoint(desktop1400) {
-                        right: 29%;
+                        right: 38%;
                     }
 
                     @include breakpoint(desktop1200) {
-                        right: 25%;
+                        right: 35%;
                     }
 
                     @include breakpoint(tablet991) {
@@ -84,15 +84,15 @@
                     @include flex-center;
                     gap: length(12);
                     left: auto;
-                    right: 35.05%;
+                    right: 44.05%;
 
                     @include breakpoint(desktop1400) {
                         width: length(110);
-                        right: 33%;
+                        right: 42%;
                     }
 
                     @include breakpoint(desktop1200) {
-                        right: 29.75%;
+                        right: 40%;
                     }
 
                     @include breakpoint(tablet991) {
