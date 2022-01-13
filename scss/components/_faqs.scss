@@ -72,7 +72,7 @@
                 padding: length(0) length(0) length(16);
 
                 .faqtext {
-                    @include font-24-16-normal;
+                    @include font-26-16-normal;
                     color: $textFaq;
 
                     @include breakpoint(phone768) {
@@ -161,7 +161,7 @@
                 padding: length(0) length(0) length(16);
 
                 .faqtext {
-                    @include font-24-16-normal;
+                    @include font-26-16-normal;
                     color: $textFaq;
 
                     @include breakpoint(phone768) {

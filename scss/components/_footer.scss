@@ -57,7 +57,7 @@
                     }
 
                     .footinfotitle {
-                        @include font-24-16-normal;
+                        @include font-26-16-normal;
                         color: $gray-800;
                     }
 
@@ -69,11 +69,11 @@
                         @include radius(6);
                         @include font-14-14-semibold;
                         @include transitions;
-        
+
                         @include breakpoint(phone768) {
                             padding: length(14) length(18);
                         }
-                    
+
                         @include hover {
                             @include setBgColor($white, $tertiary);
                             border-color: $white;
@@ -89,11 +89,11 @@
                         @include radius(6);
                         @include font-14-14-semibold;
                         @include transitions;
-        
+
                         @include breakpoint(phone768) {
                             padding: length(14) length(18);
                         }
-                    
+
                         @include hover {
                             @include setBgColor($tertiary, $white);
                         }
@@ -112,7 +112,7 @@
 
             &-header {
                 .footertitle {
-                    @include font-24-16-semibold;
+                    @include font-26-16-semibold;
                     color: $gray-800;
 
                     @include breakpoint(tablet991) {
@@ -139,7 +139,7 @@
                     }
 
                     &-link {
-                        @include font-24-16-normal;
+                        @include font-26-16-normal;
                         color: $gray-800;
                         @include transitions;
 
@@ -170,7 +170,7 @@
                         }
 
                         &-link {
-                            @include font-24-16-normal;
+                            @include font-26-16-normal;
                             color: $gray-800;
                             @include transitions;
 
@@ -181,7 +181,7 @@
                     }
 
                     .address {
-                        @include font-24-16-normal;
+                        @include font-26-16-normal;
                         color: $gray-800;
 
                         @include breakpoint(tablet991) {
@@ -197,12 +197,12 @@
                     @include breakpoint(tablet991) {
                         align-items: center;
                     }
-    
+
                     &-title {
                         @include font-24-14-medium;
                         color: $gray-800;
                     }
-                    
+
                     .social-list {
                         @include list-horizontal;
                         gap: length(40);
@@ -243,7 +243,7 @@
                     @include font-24-14-medium;
                     color: $gray-800;
                 }
-    
+
                 .paymentlist {
                     @include list-horizontal;
                     gap: length(40);

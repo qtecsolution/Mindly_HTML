@@ -24,6 +24,7 @@
         }
     }
 }
+
 // ENTERPRISE SECTION END
 
 // COMPREHENSIVE START
@@ -67,6 +68,7 @@
         }
     }
 }
+
 // COMPREHENSIVE END
 
 // WELLNESS-APROACH START
@@ -163,6 +165,7 @@
         }
     }
 }
+
 // WELLNESS-APROACH END
 
 // OURBRANDS START
@@ -193,6 +196,7 @@
         }
     }
 }
+
 // OURBRANDS END
 
 // MEETING SECTION START
@@ -271,7 +275,7 @@
                     }
 
                     .inputfield {
-                        @include font-24-16-normal;
+                        @include font-26-16-normal;
                         color: $gray-800;
                         padding: length(16);
                         box-shadow: $box-shadow-2;
@@ -302,7 +306,7 @@
 
             .btn-submit {
                 width: 48.25%;
-                @include font-24-16-semibold;
+                @include font-26-16-semibold;
                 line-height: 1;
                 text-align: center;
                 padding: length(16);
@@ -321,4 +325,5 @@
         }
     }
 }
+
 // MEETING SECTION END

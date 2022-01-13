@@ -330,7 +330,7 @@
             text-align: center;
 
             .subtitle {
-                @include font-24-16-normal;
+                @include font-26-16-normal;
                 color: $black;
             }
 
@@ -662,7 +662,7 @@
                 }
 
                 .achievetext {
-                    @include font-24-16-normal;
+                    @include font-26-16-normal;
                     color: $gray-600;
                 }
             }
@@ -728,11 +728,11 @@
                 gap: length(4);
 
                 .subtitle {
-                    @include font-24-16-normal;
+                    @include font-26-16-normal;
                     color: $white;
 
                     @include breakpoint(phone768) {
-                        @include font-24-16-normal;
+                        @include font-26-16-normal;
                     }
                 }
 
@@ -754,7 +754,7 @@
                 color: $white;
 
                 @include breakpoint(phone768) {
-                    @include font-24-16-normal;
+                    @include font-26-16-normal;
                 }
             }
         }
@@ -909,7 +909,7 @@
             }
 
             .reviewsubtitle {
-                @include font-24-16-normal;
+                @include font-26-16-normal;
                 color: $black;
             }
 
