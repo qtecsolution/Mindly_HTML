@@ -178,6 +178,16 @@
                         }
                     }
                 }
+
+                .owl-carousel {
+                    .owl-item {
+                        img {
+                            @include breakpoint(phone575) {
+                                @include w100;
+                            }
+                        }
+                    }
+                }
             }
         }
     }
@@ -350,6 +360,16 @@
 
             @include breakpoint(tablet991) {
                 display: block;
+            }
+        }
+
+        .owl-carousel {
+            .owl-item {
+                img {
+                    @include breakpoint(phone575) {
+                        @include w100;
+                    }
+                }
             }
         }
     }

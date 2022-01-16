@@ -18,6 +18,8 @@
         height: length(360);
         padding: length(48) length(4);
         @include flex-center-vert;
+        position: relative;
+        z-index: 120;
 
         @include breakpoint(phone768) {
             height: length(240);
@@ -27,6 +29,8 @@
             @include flex-center-column;
             gap: length(28);
             text-align: center;
+            position: relative;
+            z-index: 120;
 
             .thumbnail-title {
                 @include display-2;
@@ -52,6 +56,14 @@
                 }
             }
         }
+
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            @include wh100;
+            background: rgba(black, 0.5);
+        }
     }
 
     .banner-details {
@@ -59,6 +71,8 @@
         gap: length(18);
         background: $appontmentBg;
         padding-bottom: length(44);
+        position: relative;
+        z-index: 120;
 
         .banner-info {
             display: none;
@@ -107,10 +121,15 @@
     .desktop-thumnail {
         padding: length(54) length(0) length(38);
         @include h100;
+        position: relative;
+        z-index: 120;
+        position: relative;
 
         &-content {
             @include flex-column;
             gap: length(40);
+            position: relative;
+            z-index: 120;
 
             .bannerinfo {
                 max-width: 80%;
@@ -143,6 +162,14 @@
             .meetinginfo {
                 width: length(200);
             }
+        }
+
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            @include wh100;
+            background: rgba(black, 0.5);
         }
     }
 }

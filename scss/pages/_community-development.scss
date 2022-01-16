@@ -1,0 +1,275 @@
+// FUTURE-SKILLS SECTION START
+
+.futureskills {
+    padding: length(80) length(0);
+
+    @include breakpoint(tablet991) {
+        padding: length(40) length(0);
+    }
+
+    &-content {
+        @include flex-center-column;
+        gap: length(80);
+
+        @include breakpoint(tablet991) {
+            gap: length(40);
+        }
+    }
+
+    &-header {
+        .futureskills-info {
+            @include flex-center-column;
+            gap: length(16);
+            text-align: center;
+
+            .futureskillstitle {
+                color: $gray-800;
+
+                @include breakpoint(tablet991) {
+                    @include heading-2;
+                }
+            }
+
+            .futureskillstext {
+                @include font-30-18-normal;
+                color: $gray-600;
+            }
+        }
+    }
+
+    &-body {
+        background: $futureThumbBg;
+        @include flex-center;
+        @include w100;
+        padding: length(65) length(0);
+
+        @include breakpoint(tablet991) {
+            padding: length(32) length(0);
+        }
+
+        .futureskills-thumbnail {
+            width: length(636);
+            height: length(501);
+            @include flex-center;
+            overflow: hidden;
+
+            @include breakpoint(tablet991) {
+                @include w100;
+                height: length(400);
+            }
+
+            @include breakpoint(phone768) {
+                height: length(340);
+            }
+
+            @include breakpoint(phone575) {
+                height: length(300);
+            }
+
+            img {
+                @include wh100;
+                object-fit: cover;
+            }
+        }
+    }
+}
+
+// FUTURE-SKILLS SECTION END
+
+
+// FUTURE-APPROACH SECTION START
+
+.futureapproach {
+    background: $bg-1;
+    padding: length(80) length(0) length(140);
+
+    @include breakpoint(tablet991) {
+        padding: length(40) length(0) length(70);
+    }
+
+    &-content {
+        @include flex-center-column;
+        gap: length(80);
+
+        @include breakpoint(tablet991) {
+            gap: length(40);
+        }
+    }
+
+    &-header {
+        .futureapproach-info {
+            @include flex-center-column;
+            gap: length(16);
+            text-align: center;
+
+            .futureapproachtitle {
+                color: $gray-800;
+
+                @include breakpoint(tablet991) {
+                    @include heading-2;
+                }
+
+                @include breakpoint(phone768) {
+                    @include heading-3;
+                }
+            }
+
+            .futureapproachtext {
+                @include font-30-18-normal;
+                color: $gray-600;
+
+                @include breakpoint(phone768) {
+                    @include font-26-16-normal;
+                }
+            }
+        }
+    }
+
+    &-body {
+        @include w100;
+
+        .desktopapproach {
+            @include flex-center-vert;
+            @include w100;
+
+            @include breakpoint(tablet991) {
+                display: none;
+            }
+        }
+
+        .mobileapproach {
+            display: none;
+            @include w100;
+
+            @include breakpoint(tablet991) {
+                @include flex-center-column;
+            }
+        }
+    }
+}
+
+// FUTURE-APPROACH SECTION END
+
+
+// AUTOMATED-PAYROLL SECTION START
+.automatedpayroll {
+    background: $white;
+    padding: length(80) length(0);
+
+    @include breakpoint(tablet991) {
+        padding: length(40) length(0);
+    }
+
+    &-content {
+        @include flex-center-column;
+        gap: length(80);
+
+        @include breakpoint(tablet991) {
+            gap: length(40);
+        }
+    }
+
+    &-header {
+        .automatedpayroll-info {
+            @include flex-center-column;
+            gap: length(16);
+            text-align: center;
+            @include w100;
+
+            .automatedpayrolltitle {
+                color: $gray-800;
+
+                @include breakpoint(tablet991) {
+                    @include heading-2;
+                }
+
+                @include breakpoint(phone768) {
+                    @include heading-3;
+                }
+            }
+
+            .automatedpayrolltext {
+                @include font-30-18-normal;
+                color: $gray-600;
+
+                @include breakpoint(phone768) {
+                    @include font-26-16-normal;
+                }
+            }
+        }
+    }
+
+    &-body {
+        .videobox {
+            position: relative;
+            @include radius(8);
+            overflow: hidden;
+
+            .btn-playpause {
+                @include square(length(144));
+                @include flex-center;
+                @include circle;
+                overflow: hidden;
+                @include transparent-button;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                @include transform(translate(-50%, -50%));
+
+                @include breakpoint(tablet991) {
+                    @include square(length(80));
+                }
+            }
+        }
+    }
+}
+
+// AUTOMATED-PAYROLL SECTION END
+
+// FEATURED PROJECT SECTION START
+.featured {
+    padding: length(80) length(0);
+
+    @include breakpoint(tablet991) {
+        padding: length(40) length(0);
+    }
+
+    &-content {
+        @include flex-column;
+        gap: length(40);
+
+        .featured-header {
+            .featuretitle {
+                color: $gray-800;
+                text-align: center;
+
+                @include breakpoint(tablet991) {
+                    @include heading-2;
+                }
+            }
+        }
+
+        .featureddesktop {
+            @include flex-column;
+            gap: length(80);
+
+            @include breakpoint(tablet991) {
+                display: none;
+            }
+        }
+
+        .featuredmobile {
+            display: none;
+
+            @include breakpoint(tablet991) {
+                display: block;
+            }
+        }
+    }
+
+    .owl-nav {
+        display: none;
+    }
+}
+
+// FEATURED PROJECT SECTION END

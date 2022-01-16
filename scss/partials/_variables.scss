@@ -6,5 +6,7 @@ $shadow-4: rgba(50, 50, 71, 0.2);
 
 $box-shadow-1: length(0) length(0) length(1) $shadow-1,
 length(0) length(10) length(16) $shadow-2;
-
-$box-shadow-2: length(0) length(1) length(2) $shadow-3, length(0) length(0) length(1) $shadow-4;
+$box-shadow-2: length(0) length(1) length(2) $shadow-3,
+length(0) length(0) length(1) $shadow-4;
+$box-shadow-3: length(0) length(0) length(1) $shadow-1,
+length(0) length(20) length(24) $shadow-2;

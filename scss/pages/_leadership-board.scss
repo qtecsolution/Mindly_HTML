@@ -1,0 +1,75 @@
+// LEADERSHIP-BOARD SECTION START
+
+.leadership {
+    padding: length(80) length(0);
+
+    @include breakpoint(tablet991) {
+        padding: length(40) length(0);
+    }
+
+    .desktopleadership {
+        display: block;
+
+        @include breakpoint(tablet991) {
+            display: none;
+        }
+    }
+
+    .mobileleadership {
+        display: none;
+
+        @include breakpoint(tablet991) {
+            display: block;
+        }
+    }
+
+    .owl-carousel {
+        .owl-item {
+            img {
+                @include breakpoint(phone480) {
+                    margin-inline: auto;
+                }
+            }
+        }
+    }
+}
+
+// LEADERSHIP-BOARD SECTION END
+
+// LEADSHIP-BOARD SECTION START
+
+.leadship {
+    padding: length(80) length(0) length(160);
+
+    @include breakpoint(tablet991) {
+        padding: length(40) length(0) length(80);
+    }
+
+    .desktopleadship {
+        display: block;
+
+        @include breakpoint(tablet991) {
+            display: none;
+        }
+    }
+
+    .mobileleadship {
+        display: none;
+
+        @include breakpoint(tablet991) {
+            display: block;
+        }
+    }
+
+    .owl-carousel {
+        .owl-item {
+            img {
+                @include breakpoint(phone480) {
+                    margin-inline: auto;
+                }
+            }
+        }
+    }
+}
+
+// LEADSHIP-BOARD SECTION END

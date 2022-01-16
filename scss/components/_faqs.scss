@@ -44,10 +44,19 @@
                 @include font-28-20-semibold;
                 @include setBgColor(transparent, $gray-700);
                 border: length(0);
+                @include radius(0);
                 padding: length(14) length(0);
+
+                &:first-of-type {
+                    @include radius(0);
+                }
 
                 @include breakpoint(phone768) {
                     @include font-30-18-semibold;
+                }
+
+                @include breakpoint(phone575) {
+                    @include font-26-16-semibold;
                 }
 
                 &:focus {
@@ -133,10 +142,16 @@
                 @include font-28-20-semibold;
                 @include setBgColor(transparent, $gray-700);
                 border: length(0);
+                @include radius(0);
                 padding: length(14) length(0);
 
                 @include breakpoint(phone768) {
                     @include font-30-18-semibold;
+                }
+
+                @include breakpoint(phone768) {
+                    @include font-26-16-semibold;
+                    @include text-overflow;
                 }
 
                 &:focus {

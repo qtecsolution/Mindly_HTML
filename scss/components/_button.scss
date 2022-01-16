@@ -149,7 +149,7 @@
 .btn-request {
     @include setBgColor($tertiary, $white);
     @include font-14-14-semibold;
-    padding: length(16) length(30);
+    padding: length(16);
     text-align: center;
     @include flex-center;
     @include w100;

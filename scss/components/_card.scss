@@ -555,6 +555,72 @@
 
 // CARD BLOG END
 
+// CARD FEATURE START
+.cardfeatured {
+    background: $white;
+    @include flex-column;
+    @include radius(12);
+
+    &-header {
+        padding: length(8);
+        @include flex-center;
+
+        .featured-thumbnail {
+            @include w100;
+            height: length(185);
+            @include radius(12);
+            overflow: hidden;
+
+            img {
+                @include wh100;
+                object-fit: cover;
+                @include transitiontransform;
+
+                @include hover {
+                    @include transform(scale(1.05));
+                }
+            }
+        }
+    }
+
+    &-body {
+        padding: length(12);
+        @include flex-column;
+        gap: length(12);
+
+        .featuredheading-releasedate {
+            @include flex-column;
+            gap: length(4);
+
+            .featuredheading {
+                .featuredtitle {
+                    color: $gray-800;
+                }
+            }
+
+            .releasedate {
+                @include font-24-14-normal;
+                color: $gray-600;
+            }
+        }
+
+        .featuredlink {
+            .link {
+                @include font-24-14-semibold;
+                color: $gray-800;
+                @include flex-center-vert;
+                @include transitions;
+
+                @include hover {
+                    color: $tertiary;
+                }
+            }
+        }
+    }
+}
+
+// CARD FEATURE END
+
 // CARD WELLNESSAPROACH START
 .cardwellnessaproach {
     @include w100;
@@ -709,6 +775,7 @@
 
 // CARD CHOOSE END
 
+// CARD PROVIDE-WORK START
 .cardproviderwork {
     display: flex;
     gap: length(18);
@@ -727,6 +794,438 @@
         }
     }
 }
+
+// CARD PROVIDE-WORK END
+
+// CARD APPROACH START
+.cardapproach {
+    background: $white;
+    width: calc(100% / 3);
+    @include border-single(left, solid, 16, transparent);
+    position: relative;
+    height: length(132);
+
+    &-details {
+        @include h100;
+        @include flex-center-vert;
+
+        .approachcounter {
+            @include flex-center;
+            overflow: hidden;
+
+            .icon {
+                height: length(104);
+                position: relative;
+                overflow: hidden;
+
+                @include breakpoint(desktop1400) {
+                    height: length(80);
+                }
+
+                @include breakpoint(desktop1200) {
+                    height: length(64);
+                }
+
+                svg {
+                    @include wh100;
+                }
+
+                .counter {
+                    position: absolute;
+                    top: 45%;
+                    left: 40%;
+                    @include transform(translate(-45%, -45%));
+                    @include heading-1;
+                    color: $white;
+
+                    @include breakpoint(desktop1200) {
+                        @include heading-2;
+                    }
+                }
+            }
+        }
+
+        .cardinfo {
+            width: calc(100% - 9.375rem);
+            height: 100%;
+            position: relative;
+            @include flex-center-column;
+            gap: length(14);
+            text-align: center;
+
+            .icon {
+                @include square(length(56));
+                @include circle;
+                overflow: hidden;
+                @include flex-center;
+                background: $providerCardBg;
+            }
+
+            .cardtitle {
+                color: $black;
+
+                @include breakpoint(desktop1200) {
+                    @include heading-3;
+                }
+            }
+        }
+    }
+
+    // CARD HOVER INFO START
+    .hoverinfo {
+        display: none;
+        background: $white;
+        box-shadow: $box-shadow-3;
+        @include border-single(left, solid, 16, transparent);
+        @include border-single(right, solid, 16, transparent);
+        position: absolute;
+        top: 0;
+        left: length(-16);
+        right: length(-16);
+        width: calc(100% + 2rem);
+        height: length(252);
+        gap: length(18);
+        padding: length(24) length(48);
+        @extend %animation;
+        @extend %slideDownIn;
+
+        @include breakpoint(desktop1200) {
+            padding: length(24);
+        }
+
+        &-header {
+            @include flex-center-column;
+            gap: length(14);
+            text-align: center;
+
+            .icon {
+                @include square(length(56));
+                @include circle;
+                overflow: hidden;
+                @include flex-center;
+                background: $providerCardBg;
+            }
+
+            .cardtitle {
+                color: $black;
+
+                @include breakpoint(desktop1200) {
+                    @include heading-3;
+                }
+            }
+        }
+
+        &-body {
+            .infotext {
+                @include font-26-16-normal;
+                color: $black;
+                text-align: center;
+                @include line-clamp-3;
+                height: length(78);
+            }
+        }
+    }
+
+    // CARD HOVER INFO END
+
+    &:nth-child(1) {
+        border-color: $tertiary;
+
+        .hoverinfo {
+            border-left-color: $tertiary;
+            border-right-color: $secondary;
+        }
+    }
+
+    &:nth-child(2) {
+        border-color: $secondary;
+
+        .hoverinfo {
+            border-left-color: $secondary;
+            border-right-color: $primary;
+        }
+    }
+
+    &:nth-child(3) {
+        border-color: $primary;
+
+        .hoverinfo {
+            border-left-color: $primary;
+        }
+    }
+
+    @include hover {
+        .hoverinfo {
+            @include flex-center-column;
+        }
+    }
+}
+
+// CARD APPROACH END
+
+// CARD PHONE-APPROACH START
+.cardphoneapproach {
+    background: $white;
+    @include border-single(top, solid, 16, transparent);
+    position: relative;
+    @include w100;
+    height: length(344);
+
+    &-details {
+        @include h100;
+        @include flex-center-column;
+        margin-top: length(-2);
+
+        .approachcounter {
+            @include flex-center;
+
+            .icon {
+                width: length(150);
+                height: length(104);
+                position: relative;
+                overflow: hidden;
+
+                svg {
+                    @include wh100;
+                }
+
+                .counter {
+                    position: absolute;
+                    top: 40%;
+                    left: 50%;
+                    @include transform(translate(-40%, -50%));
+                    @include heading-1;
+                    color: $white;
+
+                    @include breakpoint(desktop1200) {
+                        @include heading-2;
+                    }
+                }
+            }
+        }
+
+        .cardinfo {
+            width: calc(100% - 9.375rem);
+            height: 100%;
+            position: relative;
+            @include flex-center-column;
+            gap: length(14);
+            text-align: center;
+
+            .icon {
+                @include square(length(56));
+                @include circle;
+                overflow: hidden;
+                @include flex-center;
+                background: $providerCardBg;
+            }
+
+            .cardtitle {
+                color: $black;
+
+                @include breakpoint(desktop1200) {
+                    @include heading-3;
+                }
+            }
+        }
+    }
+
+    // CARD HOVER INFO START
+    .hoverinfo {
+        display: none;
+        background: $white;
+        box-shadow: $box-shadow-3;
+        @include border-single(top, solid, 16, transparent);
+        @include border-single(bottom, solid, 16, transparent);
+        position: absolute;
+        top: length(-16);
+        bottom: length(-16);
+        left: length(0);
+        right: length(0);
+        height: calc(100% + 2rem);
+        @include w100;
+        gap: length(18);
+        padding: length(24) length(48);
+        @extend %animation;
+        @extend %slideDownIn;
+
+        @include breakpoint(desktop1200) {
+            padding: length(24);
+        }
+
+        &-header {
+            @include flex-center-column;
+            gap: length(14);
+            text-align: center;
+
+            .icon {
+                @include square(length(56));
+                @include circle;
+                overflow: hidden;
+                @include flex-center;
+                background: $providerCardBg;
+            }
+
+            .cardtitle {
+                color: $black;
+
+                @include breakpoint(desktop1200) {
+                    @include heading-3;
+                }
+            }
+        }
+
+        &-body {
+            .infotext {
+                @include font-26-16-normal;
+                color: $black;
+                text-align: center;
+                @include line-clamp-3;
+                height: length(78);
+            }
+        }
+    }
+
+    // CARD HOVER INFO END
+
+    &:nth-child(1) {
+        border-color: $tertiary;
+
+        .hoverinfo {
+            border-top-color: $tertiary;
+            border-bottom-color: $secondary;
+        }
+    }
+
+    &:nth-child(2) {
+        border-color: $secondary;
+
+        .hoverinfo {
+            border-top-color: $secondary;
+            border-bottom-color: $primary;
+        }
+    }
+
+    &:nth-child(3) {
+        border-color: $primary;
+
+        .hoverinfo {
+            border-top-color: $primary;
+        }
+    }
+
+    @include hover {
+        .hoverinfo {
+            @include flex-center-column;
+        }
+    }
+}
+
+// CARD PHONE-APPROACH END
+
+// CARD LEADERSHIP START
+.card-leadership {
+    @include flex-column;
+    gap: length(16);
+    overflow: hidden;
+
+    &-header {
+        @include flex-center;
+        height: length(505);
+        overflow: hidden;
+
+        @include breakpoint(tablet991) {
+            height: length(360);
+        }
+
+        @include breakpoint(phone768) {
+            height: length(300);
+        }
+
+        img {
+            @include wh100;
+            @include transitiontransform;
+
+            @include hover {
+                @include transform(scale(1.05));
+            }
+        }
+    }
+
+    &-body {
+        .leadername {
+            @include heading-4;
+            color: $gray-700;
+
+            @include breakpoint(phone480) {
+                text-align: center;
+            }
+        }
+
+        .leaderposition {
+            @include font-26-16-semibold;
+            color: $gray-600;
+
+            @include breakpoint(phone480) {
+                text-align: center;
+            }
+        }
+    }
+}
+
+// CARD LEADERSHIP END
+
+// CARD LEADSHIP START
+.card-leadship {
+    @include flex-column;
+    gap: length(16);
+    overflow: hidden;
+
+    &-header {
+        @include flex-center;
+        height: length(371);
+        overflow: hidden;
+
+        @include breakpoint(tablet991) {
+            height: length(360);
+        }
+
+        @include breakpoint(phone768) {
+            height: length(300);
+        }
+
+        img {
+            @include wh100;
+            @include transitiontransform;
+
+            @include hover {
+                @include transform(scale(1.05));
+            }
+        }
+    }
+
+    &-body {
+        .leadername {
+            @include heading-4;
+            color: $gray-700;
+
+            @include breakpoint(phone480) {
+                text-align: center;
+            }
+        }
+
+        .leaderposition {
+            @include font-26-16-semibold;
+            color: $gray-600;
+
+            @include breakpoint(phone480) {
+                text-align: center;
+            }
+        }
+    }
+}
+
+// CARD LEADSHIP END
 
 .counter-1 {
     background: $footerBg;
