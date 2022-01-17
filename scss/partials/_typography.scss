@@ -131,6 +131,41 @@ $font-weights: ('light': 300, 'normal': normal, 'medium': 500, 'semibold': 600, 
 }
 
 /*------------------------------------*\
+		20/12 FONT SIZES
+\*------------------------------------*/
+@mixin font-20-12-normal {
+	@include font(family($gilroy),
+		style('normal'),
+		size('s12'),
+		weight('normal'),
+		line-height(20, size('s12')));
+}
+
+@mixin font-20-12-medium {
+	@include font(family($gilroy),
+		style('normal'),
+		size('s12'),
+		weight('medium'),
+		line-height(20, size('s12')));
+}
+
+@mixin font-20-12-semibold {
+	@include font(family($gilroy),
+		style('normal'),
+		size('s12'),
+		weight('semibold'),
+		line-height(20, size('s12')));
+}
+
+@mixin font-20-12-bold {
+	@include font(family($gilroy),
+		style('normal'),
+		size('s12'),
+		weight('bold'),
+		line-height(20, size('s12')));
+}
+
+/*------------------------------------*\
 		12/12 FONT SIZES
 \*------------------------------------*/
 @mixin font-12-12-normal {

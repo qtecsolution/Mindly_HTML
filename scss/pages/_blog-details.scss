@@ -1,0 +1,271 @@
+// BLOG-DETAILS SECTION START
+.blogdetails {
+    padding: length(40) length(0) length(80);
+
+    @include breakpoint(tablet991) {
+        padding: length(40) length(0) length(40);
+    }
+
+    &-content {
+        @include flex-center-column;
+        gap: length(40);
+    }
+
+    &-thumbnail {
+        @include w100;
+        @include radius(16);
+        @include flex-center;
+        overflow: hidden;
+        height: length(724);
+
+        @include breakpoint(desktop1400) {
+            height: length(624);
+        }
+
+        @include breakpoint(desktop1200) {
+            height: length(524);
+        }
+
+        @include breakpoint(tablet991) {
+            height: length(424);
+        }
+
+        @include breakpoint(phone768) {
+            height: length(340);
+        }
+
+        img {
+            @include wh100;
+            object-fit: cover;
+            @include transitiontransform;
+
+            @include hover {
+                @include transform(scale(1.05));
+            }
+        }
+    }
+
+    .bloginfo {
+        @include w100;
+
+        .blogdescriptions {
+            @include flex-column;
+            gap: length(40);
+
+            &-header {
+                @include flex-column;
+                gap: length(24);
+
+                .titlebox {
+                    .title {
+                        color: $gray-800;
+
+                        @include breakpoint(desktop1400) {
+                            @include heading-2;
+                        }
+
+                        @include breakpoint(desktop1200) {
+                            @include heading-3;
+                        }
+
+                        @include breakpoint(phone768) {
+                            @include heading-4;
+                        }
+
+                        @include breakpoint(phone480) {
+                            @include heading-5;
+                        }
+
+                        @include breakpoint(phone414) {
+                            @include heading-6;
+                        }
+                    }
+                }
+
+                .authorinfo-shareinfo {
+                    @include flex-between;
+                    align-items: flex-start;
+
+                    @include breakpoint(phone768) {
+                        flex-direction: column;
+                        gap: length(24);
+                    }
+
+                    .authorinfo {
+                        @include flex-column;
+                        gap: length(8);
+
+                        .authorname {
+                            @include font-26-16-semibold;
+                            color: $gray-600;
+
+                            @include breakpoint(desktop1199) {
+                                @include font-24-14-semibold;
+                            }
+                        }
+
+                        .date {
+                            @include font-24-14-normal;
+                            color: $gray-600;
+                        }
+                    }
+
+                    .shareinfo {
+                        @include flex-column;
+                        gap: length(12);
+
+                        .sharetitle {
+                            @include font-20-12-semibold;
+                            color: $gray-600;
+                        }
+
+                        .sociallist {
+                            @include list-horizontal;
+                            gap: length(8);
+
+                            &-link {
+                                @include flex-center-column;
+                                gap: length(4);
+
+                                .icon {
+                                    @include square(length(44));
+                                    padding: length(14);
+                                    @include circle;
+                                    @include flex-center;
+                                    overflow: hidden;
+                                    background: $socialIconBg;
+                                    @include transitions;
+
+                                    svg {
+                                        path {
+                                            @include transitions;
+                                        }
+                                    }
+                                }
+
+                                .text {
+                                    @include font-20-12-normal;
+                                    color: $gray-600;
+                                    text-align: center;
+                                    @include transitions;
+                                }
+
+                                @include hover {
+                                    .icon {
+                                        background: $footerBg;
+
+                                        svg {
+                                            path {
+                                                fill: $secondary;
+                                            }
+                                        }
+                                    }
+
+                                    .text {
+                                        color: $secondary;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            .divider {
+                @include w100;
+                height: length(1);
+                background: $gray-500;
+            }
+
+            &-body {
+                @include flex-column;
+                gap: length(32);
+
+                .detail {
+                    @include flex-column;
+                    gap: length(8);
+
+                    .detailtitle {
+                        color: $gray-800;
+
+                        @include breakpoint(phone768) {
+                            @include heading-3;
+                        }
+                    }
+
+                    .description {
+                        @include flex-column;
+                        gap: length(4);
+
+                        .descriptiontext {
+                            @include font-30-18-normal;
+                            color: $gray-600;
+
+                            @include breakpoint(phone768) {
+                                @include font-26-16-normal;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+// BLOG-DETAILS SECTION END
+
+
+// READ NEXT SECTION START
+
+.readnext {
+    padding: length(80) length(0);
+
+    @include breakpoint(tablet991) {
+        padding: length(40) length(0);
+    }
+
+    &-content {
+        @include flex-center-column;
+        gap: length(40);
+    }
+
+    &-header {
+        @include w100;
+
+        .readnext-title {
+            color: $gray-800;
+            text-align: center;
+
+            @include breakpoint(tablet991) {
+                @include heading-2;
+            }
+        }
+    }
+
+    &-body {
+        @include w100;
+
+        .cardblog {
+            &-body {
+                .bloglink {
+                    .link {
+                        @include hover {
+                            color: $secondary;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    &-footer {
+        @include flex-center;
+        @include w100;
+
+        .backinfo {
+            width: length(200);
+        }
+    }
+}
+
+// READ NEXT SECTION END

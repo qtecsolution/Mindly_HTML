@@ -398,6 +398,9 @@
 		HEADINGS FONT SIZES
 \*------------------------------------*/
 /*------------------------------------*\
+		20/12 FONT SIZES
+\*------------------------------------*/
+/*------------------------------------*\
 		12/12 FONT SIZES
 \*------------------------------------*/
 /*------------------------------------*\
@@ -2157,6 +2160,91 @@ h6 {
 
 .btn-request:not([disabled]):hover {
   background: #cd2b06;
+  color: #ffffff;
+}
+
+.btn-read {
+  background: #FCAF15;
+  color: #ffffff;
+  font-family: "Gilroy";
+  font-style: normal;
+  font-size: 0.875rem;
+  font-weight: 600;
+  line-height: 1;
+  padding: 1rem;
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+  border-radius: 0.5rem;
+  border-radius: 0.5rem;
+  text-align: center;
+  -webkit-transition: all 250ms ease-in-out;
+  transition: all 250ms ease-in-out;
+}
+
+@media screen and (max-width: 35.9375rem) {
+  .btn-read {
+    font-family: "Gilroy";
+    font-style: normal;
+    font-size: 0.75rem;
+    font-weight: 600;
+    line-height: 1;
+  }
+}
+
+.btn-read:not([disabled]):hover {
+  background: #c28202;
+  color: #ffffff;
+}
+
+.btn-seeall {
+  background: transparent;
+  color: #FCAF15;
+  border: solid 0.0625rem #FCAF15;
+  font-family: "Gilroy";
+  font-style: normal;
+  font-size: 0.875rem;
+  font-weight: 600;
+  line-height: 1;
+  padding: 1rem;
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+  border-radius: 0.5rem;
+  border-radius: 0.5rem;
+  text-align: center;
+  -webkit-transition: all 250ms ease-in-out;
+  transition: all 250ms ease-in-out;
+}
+
+@media screen and (max-width: 35.9375rem) {
+  .btn-seeall {
+    font-family: "Gilroy";
+    font-style: normal;
+    font-size: 0.75rem;
+    font-weight: 600;
+    line-height: 1;
+  }
+}
+
+.btn-seeall:not([disabled]):hover {
+  background: #FCAF15;
   color: #ffffff;
 }
 
@@ -4022,11 +4110,20 @@ h6 {
 .card-leadership-header img {
   width: 100%;
   height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
   -webkit-transition: transform 250ms ease-in-out;
   -webkit-transition: -webkit-transform 250ms ease-in-out;
   transition: -webkit-transform 250ms ease-in-out;
   transition: transform 250ms ease-in-out;
   transition: transform 250ms ease-in-out, -webkit-transform 250ms ease-in-out;
+}
+
+@media screen and (max-width: 35.9375rem) {
+  .card-leadership-header img {
+    -o-object-fit: contain;
+       object-fit: contain;
+  }
 }
 
 .card-leadership-header img:not([disabled]):hover {
@@ -4043,7 +4140,7 @@ h6 {
   color: #4A5568;
 }
 
-@media screen and (max-width: 30rem) {
+@media screen and (max-width: 35.9375rem) {
   .card-leadership-body .leadername {
     text-align: center;
   }
@@ -4058,7 +4155,7 @@ h6 {
   color: #718096;
 }
 
-@media screen and (max-width: 30rem) {
+@media screen and (max-width: 35.9375rem) {
   .card-leadership-body .leaderposition {
     text-align: center;
   }
@@ -4110,6 +4207,15 @@ h6 {
   transition: -webkit-transform 250ms ease-in-out;
   transition: transform 250ms ease-in-out;
   transition: transform 250ms ease-in-out, -webkit-transform 250ms ease-in-out;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+@media screen and (max-width: 35.9375rem) {
+  .card-leadship-header img {
+    -o-object-fit: contain;
+       object-fit: contain;
+  }
 }
 
 .card-leadship-header img:not([disabled]):hover {
@@ -4126,7 +4232,7 @@ h6 {
   color: #4A5568;
 }
 
-@media screen and (max-width: 30rem) {
+@media screen and (max-width: 35.9375rem) {
   .card-leadship-body .leadername {
     text-align: center;
   }
@@ -4141,7 +4247,7 @@ h6 {
   color: #718096;
 }
 
-@media screen and (max-width: 30rem) {
+@media screen and (max-width: 35.9375rem) {
   .card-leadship-body .leaderposition {
     text-align: center;
   }
@@ -8752,6 +8858,926 @@ h6 {
   transform: scale(1.05);
 }
 
+.blog {
+  padding: 5rem 0rem;
+}
+
+@media screen and (max-width: 61.9375rem) {
+  .blog {
+    padding: 2.5rem 0rem;
+  }
+}
+
+.blog .cardblog-body .bloglink .link:not([disabled]):hover {
+  color: #FCAF15;
+}
+
+.blogdescript {
+  background: rgba(249, 78, 38, 0.1);
+  padding: 5rem 0rem;
+}
+
+@media screen and (max-width: 61.9375rem) {
+  .blogdescript {
+    padding: 2.5rem 0rem;
+  }
+}
+
+.blogdescript .card-blogscript {
+  background: #ffffff;
+  border-radius: 1rem;
+  border-radius: 1rem;
+  overflow: hidden;
+}
+
+.blogdescript .card-blogscript-thumbnail {
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+}
+
+@media screen and (max-width: 61.9375rem) {
+  .blogdescript .card-blogscript-thumbnail {
+    border-radius: 1rem;
+    border-radius: 1rem;
+  }
+}
+
+.blogdescript .card-blogscript-thumbnail img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.blogdescript .card-blogscript-details {
+  padding: 2.75rem 2.75rem 2.75rem 0rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 2.75rem;
+}
+
+@media screen and (max-width: 87.4375rem) {
+  .blogdescript .card-blogscript-details {
+    padding: 2.5rem 2.625rem 2.5rem 0rem;
+  }
+}
+
+@media screen and (max-width: 75rem) {
+  .blogdescript .card-blogscript-details {
+    gap: 2rem;
+    padding: 1.875rem 1.875rem 1.875rem 0rem;
+  }
+}
+
+@media screen and (max-width: 61.9375rem) {
+  .blogdescript .card-blogscript-details {
+    padding: 2rem;
+  }
+}
+
+@media screen and (max-width: 48rem) {
+  .blogdescript .card-blogscript-details {
+    padding: 1.5rem;
+  }
+}
+
+@media screen and (max-width: 35.9375rem) {
+  .blogdescript .card-blogscript-details {
+    padding: 1rem 1rem 2rem;
+  }
+}
+
+.blogdescript .card-blogscript-details .info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 1.75rem;
+}
+
+@media screen and (max-width: 75rem) {
+  .blogdescript .card-blogscript-details .info {
+    gap: 1rem;
+  }
+}
+
+.blogdescript .card-blogscript-details .info-head {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 0.5rem;
+}
+
+.blogdescript .card-blogscript-details .info-head .blogscriptitle {
+  color: #2D3748;
+}
+
+@media screen and (max-width: 87.4375rem) {
+  .blogdescript .card-blogscript-details .info-head .blogscriptitle {
+    font-family: "Gilroy";
+    font-style: normal;
+    font-size: 1.75rem;
+    font-weight: 600;
+    line-height: 1.36;
+  }
+}
+
+@media screen and (max-width: 75rem) {
+  .blogdescript .card-blogscript-details .info-head .blogscriptitle {
+    font-family: "Gilroy";
+    font-style: normal;
+    font-size: 1.5rem;
+    font-weight: 600;
+    line-height: 1.36;
+  }
+}
+
+@media screen and (max-width: 48rem) {
+  .blogdescript .card-blogscript-details .info-head .blogscriptitle {
+    font-family: "Gilroy";
+    font-style: normal;
+    font-size: 1.25rem;
+    font-weight: 600;
+    line-height: 1.36;
+  }
+}
+
+.blogdescript .card-blogscript-details .info-head .date {
+  font-family: "Gilroy";
+  font-style: normal;
+  font-size: 1.25rem;
+  font-weight: normal;
+  line-height: 1.4;
+  color: #425466;
+}
+
+@media screen and (max-width: 48rem) {
+  .blogdescript .card-blogscript-details .info-head .date {
+    font-family: "Gilroy";
+    font-style: normal;
+    font-size: 1rem;
+    font-weight: normal;
+    line-height: 1.625;
+  }
+}
+
+.blogdescript .card-blogscript-details .info-body .blogtext {
+  font-family: "Gilroy";
+  font-style: normal;
+  font-size: 1.125rem;
+  font-weight: normal;
+  line-height: 1.66667;
+  color: #718096;
+}
+
+@media screen and (max-width: 48rem) {
+  .blogdescript .card-blogscript-details .info-body .blogtext {
+    font-family: "Gilroy";
+    font-style: normal;
+    font-size: 0.875rem;
+    font-weight: normal;
+    line-height: 1.71429;
+  }
+}
+
+.blogdescript .card-blogscript-details .readinfo {
+  width: 12.5rem;
+}
+
+.allblogs {
+  padding: 5rem 0rem;
+}
+
+@media screen and (max-width: 61.9375rem) {
+  .allblogs {
+    padding: 2.5rem 0rem;
+  }
+}
+
+.allblogs-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 1.5rem;
+}
+
+.allblogs-content .seeall {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.allblogs-content .seeall .seemore {
+  width: 12.5rem;
+}
+
+.allblogs-content .cardblog-body .bloglink .link:not([disabled]):hover {
+  color: #FCAF15;
+}
+
+.subscriptions {
+  background: #01796F;
+  padding: 5rem 0rem;
+}
+
+@media screen and (max-width: 61.9375rem) {
+  .subscriptions {
+    padding: 2.5rem 0rem;
+  }
+}
+
+.subscriptions-details {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 2.5rem;
+  text-align: center;
+}
+
+.subscriptions-details .subscriptionstitle {
+  color: #ffffff;
+}
+
+@media screen and (max-width: 87.4375rem) {
+  .subscriptions-details .subscriptionstitle {
+    font-family: "Gilroy";
+    font-style: normal;
+    font-size: 1.75rem;
+    font-weight: 600;
+    line-height: 1.36;
+  }
+}
+
+@media screen and (max-width: 75rem) {
+  .subscriptions-details .subscriptionstitle {
+    font-family: "Gilroy";
+    font-style: normal;
+    font-size: 1.5rem;
+    font-weight: 600;
+    line-height: 1.36;
+  }
+}
+
+@media screen and (max-width: 48rem) {
+  .subscriptions-details .subscriptionstitle {
+    font-family: "Gilroy";
+    font-style: normal;
+    font-size: 1.25rem;
+    font-weight: 600;
+    line-height: 1.36;
+  }
+}
+
+@media screen and (max-width: 30rem) {
+  .subscriptions-details .subscriptionstitle {
+    font-family: "Gilroy";
+    font-style: normal;
+    font-size: 1.125rem;
+    font-weight: 600;
+    line-height: 1.36;
+  }
+}
+
+@media screen and (max-width: 25.875rem) {
+  .subscriptions-details .subscriptionstitle {
+    font-family: "Gilroy";
+    font-style: normal;
+    font-size: 1rem;
+    font-weight: 600;
+    line-height: 1.36;
+  }
+}
+
+.subscriptions-details .subscriptionform {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.subscriptions-details .subscriptionform .inputbox {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 0.5rem;
+}
+
+.subscriptions-details .subscriptionform .inputbox .inputdetails {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0.3125rem 0.25rem;
+  background: #EDF2F7;
+  -webkit-backdrop-filter: blur(0.625rem);
+          backdrop-filter: blur(0.625rem);
+  border-radius: 0.625rem;
+  border-radius: 0.625rem;
+  overflow: hidden;
+  height: 2.875rem;
+  width: 26.5rem;
+}
+
+@media screen and (max-width: 35.9375rem) {
+  .subscriptions-details .subscriptionform .inputbox .inputdetails {
+    width: 100%;
+  }
+}
+
+.subscriptions-details .subscriptionform .inputbox .inputdetails .forminfo {
+  width: calc(100% - 6.1875rem);
+}
+
+.subscriptions-details .subscriptionform .inputbox .inputdetails .forminfo .input-field {
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  color: #323232;
+  padding: 0.75rem;
+  font-family: "Gilroy";
+  font-style: normal;
+  font-size: 0.875rem;
+  font-weight: 500;
+  line-height: 1;
+}
+
+.subscriptions-details .subscriptionform .inputbox .inputdetails .forminfo .input-field::-webkit-input-placeholder {
+  color: #7A828A;
+}
+
+.subscriptions-details .subscriptionform .inputbox .inputdetails .forminfo .input-field:-ms-input-placeholder {
+  color: #7A828A;
+}
+
+.subscriptions-details .subscriptionform .inputbox .inputdetails .forminfo .input-field::-ms-input-placeholder {
+  color: #7A828A;
+}
+
+.subscriptions-details .subscriptionform .inputbox .inputdetails .forminfo .input-field::placeholder {
+  color: #7A828A;
+}
+
+.subscriptions-details .subscriptionform .inputbox .inputdetails .btn-submit {
+  width: 6.1875rem;
+  height: 2.25rem;
+  padding: 0.75rem 1.25rem;
+  border-radius: 0.625rem;
+  border-radius: 0.625rem;
+  text-align: center;
+  font-family: "Gilroy";
+  font-style: normal;
+  font-size: 0.75rem;
+  font-weight: 600;
+  line-height: 1;
+  background: #F94E26;
+  color: #ffffff;
+  -webkit-transition: all 250ms ease-in-out;
+  transition: all 250ms ease-in-out;
+}
+
+.subscriptions-details .subscriptionform .inputbox .inputdetails .btn-submit:not([disabled]):hover {
+  background: #b42605;
+  color: #ffffff;
+}
+
+.subscriptions-details .subscriptionform .inputbox .error-message {
+  font-family: "Gilroy";
+  font-style: normal;
+  font-size: 0.875rem;
+  font-weight: 500;
+  line-height: 1.71429;
+  color: #FCAF15;
+  text-align: left;
+  display: none;
+}
+
+.subscriptions-details .subscriptionform .inputbox.error .error-message {
+  display: block;
+}
+
+.blogdetails {
+  padding: 2.5rem 0rem 5rem;
+}
+
+@media screen and (max-width: 61.9375rem) {
+  .blogdetails {
+    padding: 2.5rem 0rem 2.5rem;
+  }
+}
+
+.blogdetails-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 2.5rem;
+}
+
+.blogdetails-thumbnail {
+  width: 100%;
+  border-radius: 1rem;
+  border-radius: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  overflow: hidden;
+  height: 45.25rem;
+}
+
+@media screen and (max-width: 87.4375rem) {
+  .blogdetails-thumbnail {
+    height: 39rem;
+  }
+}
+
+@media screen and (max-width: 75rem) {
+  .blogdetails-thumbnail {
+    height: 32.75rem;
+  }
+}
+
+@media screen and (max-width: 61.9375rem) {
+  .blogdetails-thumbnail {
+    height: 26.5rem;
+  }
+}
+
+@media screen and (max-width: 48rem) {
+  .blogdetails-thumbnail {
+    height: 21.25rem;
+  }
+}
+
+.blogdetails-thumbnail img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -webkit-transition: transform 250ms ease-in-out;
+  -webkit-transition: -webkit-transform 250ms ease-in-out;
+  transition: -webkit-transform 250ms ease-in-out;
+  transition: transform 250ms ease-in-out;
+  transition: transform 250ms ease-in-out, -webkit-transform 250ms ease-in-out;
+}
+
+.blogdetails-thumbnail img:not([disabled]):hover {
+  -webkit-transform: scale(1.05);
+  transform: scale(1.05);
+}
+
+.blogdetails .bloginfo {
+  width: 100%;
+}
+
+.blogdetails .bloginfo .blogdescriptions {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 2.5rem;
+}
+
+.blogdetails .bloginfo .blogdescriptions-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 1.5rem;
+}
+
+.blogdetails .bloginfo .blogdescriptions-header .titlebox .title {
+  color: #2D3748;
+}
+
+@media screen and (max-width: 87.4375rem) {
+  .blogdetails .bloginfo .blogdescriptions-header .titlebox .title {
+    font-family: "Gilroy";
+    font-style: normal;
+    font-size: 1.75rem;
+    font-weight: 600;
+    line-height: 1.36;
+  }
+}
+
+@media screen and (max-width: 75rem) {
+  .blogdetails .bloginfo .blogdescriptions-header .titlebox .title {
+    font-family: "Gilroy";
+    font-style: normal;
+    font-size: 1.5rem;
+    font-weight: 600;
+    line-height: 1.36;
+  }
+}
+
+@media screen and (max-width: 48rem) {
+  .blogdetails .bloginfo .blogdescriptions-header .titlebox .title {
+    font-family: "Gilroy";
+    font-style: normal;
+    font-size: 1.25rem;
+    font-weight: 600;
+    line-height: 1.36;
+  }
+}
+
+@media screen and (max-width: 30rem) {
+  .blogdetails .bloginfo .blogdescriptions-header .titlebox .title {
+    font-family: "Gilroy";
+    font-style: normal;
+    font-size: 1.125rem;
+    font-weight: 600;
+    line-height: 1.36;
+  }
+}
+
+@media screen and (max-width: 25.875rem) {
+  .blogdetails .bloginfo .blogdescriptions-header .titlebox .title {
+    font-family: "Gilroy";
+    font-style: normal;
+    font-size: 1rem;
+    font-weight: 600;
+    line-height: 1.36;
+  }
+}
+
+.blogdetails .bloginfo .blogdescriptions-header .authorinfo-shareinfo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+@media screen and (max-width: 48rem) {
+  .blogdetails .bloginfo .blogdescriptions-header .authorinfo-shareinfo {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    gap: 1.5rem;
+  }
+}
+
+.blogdetails .bloginfo .blogdescriptions-header .authorinfo-shareinfo .authorinfo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 0.5rem;
+}
+
+.blogdetails .bloginfo .blogdescriptions-header .authorinfo-shareinfo .authorinfo .authorname {
+  font-family: "Gilroy";
+  font-style: normal;
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.625;
+  color: #718096;
+}
+
+@media screen and (max-width: 74.9375rem) {
+  .blogdetails .bloginfo .blogdescriptions-header .authorinfo-shareinfo .authorinfo .authorname {
+    font-family: "Gilroy";
+    font-style: normal;
+    font-size: 0.875rem;
+    font-weight: 600;
+    line-height: 1.71429;
+  }
+}
+
+.blogdetails .bloginfo .blogdescriptions-header .authorinfo-shareinfo .authorinfo .date {
+  font-family: "Gilroy";
+  font-style: normal;
+  font-size: 0.875rem;
+  font-weight: normal;
+  line-height: 1.71429;
+  color: #718096;
+}
+
+.blogdetails .bloginfo .blogdescriptions-header .authorinfo-shareinfo .shareinfo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 0.75rem;
+}
+
+.blogdetails .bloginfo .blogdescriptions-header .authorinfo-shareinfo .shareinfo .sharetitle {
+  font-family: "Gilroy";
+  font-style: normal;
+  font-size: 0.75rem;
+  font-weight: 600;
+  line-height: 1.66667;
+  color: #718096;
+}
+
+.blogdetails .bloginfo .blogdescriptions-header .authorinfo-shareinfo .shareinfo .sociallist {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 0.5rem;
+}
+
+.blogdetails .bloginfo .blogdescriptions-header .authorinfo-shareinfo .shareinfo .sociallist-link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 0.25rem;
+}
+
+.blogdetails .bloginfo .blogdescriptions-header .authorinfo-shareinfo .shareinfo .sociallist-link .icon {
+  height: 2.75rem;
+  width: 2.75rem;
+  padding: 0.875rem;
+  border-radius: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  overflow: hidden;
+  background: rgba(157, 157, 157, 0.04);
+  -webkit-transition: all 250ms ease-in-out;
+  transition: all 250ms ease-in-out;
+}
+
+.blogdetails .bloginfo .blogdescriptions-header .authorinfo-shareinfo .shareinfo .sociallist-link .icon svg path {
+  -webkit-transition: all 250ms ease-in-out;
+  transition: all 250ms ease-in-out;
+}
+
+.blogdetails .bloginfo .blogdescriptions-header .authorinfo-shareinfo .shareinfo .sociallist-link .text {
+  font-family: "Gilroy";
+  font-style: normal;
+  font-size: 0.75rem;
+  font-weight: normal;
+  line-height: 1.66667;
+  color: #718096;
+  text-align: center;
+  -webkit-transition: all 250ms ease-in-out;
+  transition: all 250ms ease-in-out;
+}
+
+.blogdetails .bloginfo .blogdescriptions-header .authorinfo-shareinfo .shareinfo .sociallist-link:not([disabled]):hover .icon {
+  background: #FFF7E6;
+}
+
+.blogdetails .bloginfo .blogdescriptions-header .authorinfo-shareinfo .shareinfo .sociallist-link:not([disabled]):hover .icon svg path {
+  fill: #FCAF15;
+}
+
+.blogdetails .bloginfo .blogdescriptions-header .authorinfo-shareinfo .shareinfo .sociallist-link:not([disabled]):hover .text {
+  color: #FCAF15;
+}
+
+.blogdetails .bloginfo .blogdescriptions .divider {
+  width: 100%;
+  height: 0.0625rem;
+  background: #A0AEC0;
+}
+
+.blogdetails .bloginfo .blogdescriptions-body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 2rem;
+}
+
+.blogdetails .bloginfo .blogdescriptions-body .detail {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 0.5rem;
+}
+
+.blogdetails .bloginfo .blogdescriptions-body .detail .detailtitle {
+  color: #2D3748;
+}
+
+@media screen and (max-width: 48rem) {
+  .blogdetails .bloginfo .blogdescriptions-body .detail .detailtitle {
+    font-family: "Gilroy";
+    font-style: normal;
+    font-size: 1.5rem;
+    font-weight: 600;
+    line-height: 1.36;
+  }
+}
+
+.blogdetails .bloginfo .blogdescriptions-body .detail .description {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 0.25rem;
+}
+
+.blogdetails .bloginfo .blogdescriptions-body .detail .description .descriptiontext {
+  font-family: "Gilroy";
+  font-style: normal;
+  font-size: 1.125rem;
+  font-weight: normal;
+  line-height: 1.66667;
+  color: #718096;
+}
+
+@media screen and (max-width: 48rem) {
+  .blogdetails .bloginfo .blogdescriptions-body .detail .description .descriptiontext {
+    font-family: "Gilroy";
+    font-style: normal;
+    font-size: 1rem;
+    font-weight: normal;
+    line-height: 1.625;
+  }
+}
+
+.readnext {
+  padding: 5rem 0rem;
+}
+
+@media screen and (max-width: 61.9375rem) {
+  .readnext {
+    padding: 2.5rem 0rem;
+  }
+}
+
+.readnext-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 2.5rem;
+}
+
+.readnext-header {
+  width: 100%;
+}
+
+.readnext-header .readnext-title {
+  color: #2D3748;
+  text-align: center;
+}
+
+@media screen and (max-width: 61.9375rem) {
+  .readnext-header .readnext-title {
+    font-family: "Gilroy";
+    font-style: normal;
+    font-size: 1.75rem;
+    font-weight: 600;
+    line-height: 1.36;
+  }
+}
+
+.readnext-body {
+  width: 100%;
+}
+
+.readnext-body .cardblog-body .bloglink .link:not([disabled]):hover {
+  color: #FCAF15;
+}
+
+.readnext-footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+}
+
+.readnext-footer .backinfo {
+  width: 12.5rem;
+}
+
 .leadership {
   padding: 5rem 0rem;
 }
@@ -8762,32 +9788,6 @@ h6 {
   }
 }
 
-.leadership .desktopleadership {
-  display: block;
-}
-
-@media screen and (max-width: 61.9375rem) {
-  .leadership .desktopleadership {
-    display: none;
-  }
-}
-
-.leadership .mobileleadership {
-  display: none;
-}
-
-@media screen and (max-width: 61.9375rem) {
-  .leadership .mobileleadership {
-    display: block;
-  }
-}
-
-@media screen and (max-width: 30rem) {
-  .leadership .owl-carousel .owl-item img {
-    margin-inline: auto;
-  }
-}
-
 .leadship {
   padding: 5rem 0rem 10rem;
 }
@@ -8795,31 +9795,5 @@ h6 {
 @media screen and (max-width: 61.9375rem) {
   .leadship {
     padding: 2.5rem 0rem 5rem;
-  }
-}
-
-.leadship .desktopleadship {
-  display: block;
-}
-
-@media screen and (max-width: 61.9375rem) {
-  .leadship .desktopleadship {
-    display: none;
-  }
-}
-
-.leadship .mobileleadship {
-  display: none;
-}
-
-@media screen and (max-width: 61.9375rem) {
-  .leadship .mobileleadship {
-    display: block;
-  }
-}
-
-@media screen and (max-width: 30rem) {
-  .leadship .owl-carousel .owl-item img {
-    margin-inline: auto;
   }
 }

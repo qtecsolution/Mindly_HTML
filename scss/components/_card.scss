@@ -1144,7 +1144,12 @@
 
         img {
             @include wh100;
+            object-fit: cover;
             @include transitiontransform;
+
+            @include breakpoint(phone575) {
+                object-fit: contain;
+            }
 
             @include hover {
                 @include transform(scale(1.05));
@@ -1157,7 +1162,7 @@
             @include heading-4;
             color: $gray-700;
 
-            @include breakpoint(phone480) {
+            @include breakpoint(phone575) {
                 text-align: center;
             }
         }
@@ -1166,7 +1171,7 @@
             @include font-26-16-semibold;
             color: $gray-600;
 
-            @include breakpoint(phone480) {
+            @include breakpoint(phone575) {
                 text-align: center;
             }
         }
@@ -1197,6 +1202,11 @@
         img {
             @include wh100;
             @include transitiontransform;
+            object-fit: cover;
+
+            @include breakpoint(phone575) {
+                object-fit: contain;
+            }
 
             @include hover {
                 @include transform(scale(1.05));
@@ -1209,7 +1219,7 @@
             @include heading-4;
             color: $gray-700;
 
-            @include breakpoint(phone480) {
+            @include breakpoint(phone575) {
                 text-align: center;
             }
         }
@@ -1218,7 +1228,7 @@
             @include font-26-16-semibold;
             color: $gray-600;
 
-            @include breakpoint(phone480) {
+            @include breakpoint(phone575) {
                 text-align: center;
             }
         }

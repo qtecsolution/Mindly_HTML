@@ -1,0 +1,284 @@
+// BLOG SECTION START
+
+.blog {
+    padding: length(80) length(0);
+
+    @include breakpoint(tablet991) {
+        padding: length(40) length(0);
+    }
+
+    .cardblog {
+        &-body {
+            .bloglink {
+                .link {
+                    @include hover {
+                        color: $secondary;
+                    }
+                }
+            }
+        }
+    }
+}
+
+// BLOG SECTION END
+
+// BLOG-DESCRIPT SECTION START
+
+.blogdescript {
+    background: $conversationBg;
+    padding: length(80) length(0);
+
+    @include breakpoint(tablet991) {
+        padding: length(40) length(0);
+    }
+
+    .card-blogscript {
+        background: $white;
+        @include radius(16);
+        overflow: hidden;
+
+        &-thumbnail {
+            overflow: hidden;
+            @include wh100;
+
+            @include breakpoint(tablet991) {
+                @include radius(16);
+            }
+
+            img {
+                @include wh100;
+                object-fit: cover;
+            }
+        }
+
+        &-details {
+            padding: length(44) length(44) length(44) length(0);
+            @include flex-column;
+            gap: length(44);
+
+            @include breakpoint(desktop1400) {
+                padding: length(40) length(42) length(40) length(0);
+            }
+
+            @include breakpoint(desktop1200) {
+                gap: length(32);
+                padding: length(30) length(30) length(30) length(0);
+            }
+
+            @include breakpoint(tablet991) {
+                padding: length(32);
+            }
+
+            @include breakpoint(phone768) {
+                padding: length(24);
+            }
+
+            @include breakpoint(phone575) {
+                padding: length(16) length(16) length(32);
+            }
+
+            .info {
+                @include flex-column;
+                gap: length(28);
+
+                @include breakpoint(desktop1200) {
+                    gap: length(16);
+                }
+
+                &-head {
+                    @include flex-column;
+                    gap: length(8);
+
+                    .blogscriptitle {
+                        color: $gray-800;
+
+                        @include breakpoint(desktop1400) {
+                            @include heading-2;
+                        }
+
+                        @include breakpoint(desktop1200) {
+                            @include heading-3;
+                        }
+
+                        @include breakpoint(phone768) {
+                            @include heading-4;
+                        }
+                    }
+
+                    .date {
+                        @include font-28-20-normal;
+                        color: $dateColor;
+
+                        @include breakpoint(phone768) {
+                            @include font-26-16-normal;
+                        }
+                    }
+                }
+
+                &-body {
+                    .blogtext {
+                        @include font-30-18-normal;
+                        color: $gray-600;
+
+                        @include breakpoint(phone768) {
+                            @include font-24-14-normal;
+                        }
+                    }
+                }
+            }
+
+            .readinfo {
+                width: length(200);
+            }
+        }
+    }
+}
+
+// BLOG-DESCRIPT SECTION END
+
+// ALL-BLOGS SECTION START
+.allblogs {
+    padding: length(80) length(0);
+
+    @include breakpoint(tablet991) {
+        padding: length(40) length(0);
+    }
+
+    &-content {
+        @include flex-center-column;
+        gap: length(24);
+
+        .seeall {
+            @include w100;
+            @include flex-center;
+
+            .seemore {
+                width: length(200);
+            }
+        }
+
+        .cardblog {
+            &-body {
+                .bloglink {
+                    .link {
+                        @include hover {
+                            color: $secondary;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+// ALL-BLOGS SECTION END
+
+// SUBSCRIPTIONS SECTION START
+.subscriptions {
+    background: $primary;
+    padding: length(80) length(0);
+
+    @include breakpoint(tablet991) {
+        padding: length(40) length(0);
+    }
+
+    &-details {
+        @include flex-center-column;
+        gap: length(40);
+        text-align: center;
+
+        .subscriptionstitle {
+            color: $white;
+
+            @include breakpoint(desktop1400) {
+                @include heading-2;
+            }
+
+            @include breakpoint(desktop1200) {
+                @include heading-3;
+            }
+
+            @include breakpoint(phone768) {
+                @include heading-4;
+            }
+
+            @include breakpoint(phone480) {
+                @include heading-5;
+            }
+
+            @include breakpoint(phone414) {
+                @include heading-6;
+            }
+        }
+
+        .subscriptionform {
+            @include w100;
+            @include flex-center;
+
+            .inputbox {
+                @include flex-column;
+                gap: length(8);
+
+                .inputdetails {
+                    @include flex-center-vert;
+                    padding: length(5) length(4);
+                    background: $gray-200;
+                    backdrop-filter: blur(length(10));
+                    @include radius(10);
+                    overflow: hidden;
+                    height: length(46);
+                    width: length(424);
+
+                    @include breakpoint(phone575) {
+                        @include w100;
+                    }
+
+                    .forminfo {
+                        width: calc(100% - 6.1875rem);
+
+                        .input-field {
+                            @include wh100;
+                            @include setBgColor(transparent, $textDark);
+                            padding: length(12);
+                            @include font-14-14-medium;
+
+                            &::placeholder {
+                                color: $textSubscriptions;
+                            }
+                        }
+                    }
+
+                    .btn-submit {
+                        width: length(99);
+                        height: length(36);
+                        padding: length(12) length(20);
+                        @include radius(10);
+                        text-align: center;
+                        @include font-12-12-semibold;
+                        @include setBgColor($tertiary, $white);
+                        @include transitions;
+
+                        @include hover {
+                            @include setBgColor(darken($tertiary, 20%), $white);
+                        }
+                    }
+                }
+
+                .error-message {
+                    @include font-24-14-medium;
+                    color: $secondary;
+                    text-align: left;
+                    display: none;
+                }
+
+                &.error {
+                    .error-message {
+                        display: block;
+                    }
+                }
+            }
+        }
+    }
+}
+
+// SUBSCRIPTIONS SECTION END

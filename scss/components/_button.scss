@@ -165,3 +165,44 @@
         @include setBgColor(darken($tertiary, 15%), $white);
     }
 }
+
+.btn-read {
+    @include setBgColor($secondary, $white);
+    @include font-14-14-semibold;
+    padding: length(16);
+    text-align: center;
+    @include flex-center;
+    @include w100;
+    @include radius(8);
+    text-align: center;
+    @include transitions;
+
+    @include breakpoint(phone575) {
+        @include font-12-12-semibold;
+    }
+
+    @include hover {
+        @include setBgColor(darken($secondary, 15%), $white);
+    }
+}
+
+.btn-seeall {
+    @include setBgColor(transparent, $secondary);
+    @include border(solid, 1, $secondary);
+    @include font-14-14-semibold;
+    padding: length(16);
+    text-align: center;
+    @include flex-center;
+    @include w100;
+    @include radius(8);
+    text-align: center;
+    @include transitions;
+
+    @include breakpoint(phone575) {
+        @include font-12-12-semibold;
+    }
+
+    @include hover {
+        @include setBgColor($secondary, $white);
+    }
+}
