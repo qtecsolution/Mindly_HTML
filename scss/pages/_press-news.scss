@@ -1,0 +1,260 @@
+// PRESS INFO SECTION START
+
+.pressinfo {
+    padding: length(80) length(0);
+
+    @include breakpoint(tablet991) {
+        padding: length(40) length(0);
+    }
+
+    .cardpress {
+        &-body {
+            .presslink {
+                .link {
+                    @include hover {
+                        color: $secondary;
+                    }
+                }
+            }
+        }
+    }
+}
+
+// PRESS INFO SECTION END
+
+// NEWS ARCHIVE SECTION START
+
+.newsarchive {
+    background: $white;
+    padding: length(80) length(0);
+
+    @include breakpoint(tablet991) {
+        padding: length(40) length(0);
+    }
+
+    &-content {
+        @include flex-column;
+        gap: length(80);
+
+        @include breakpoint(tablet991) {
+            gap: length(40);
+        }
+    }
+
+    &-header {
+        .newstitle {
+            color: $gray-800;
+            text-align: center;
+
+            @include breakpoint(tablet991) {
+                @include heading-2;
+            }
+        }
+    }
+
+    &-body {
+        .newsarchivelist {
+            @include flex-column;
+            gap: length(8);
+
+            &-item {
+                @include flex-column;
+                padding: length(12);
+                @include radius(8);
+                background: $white;
+                cursor: pointer;
+                @include transitions;
+
+                .archivetitle {
+                    @include font-26-16-semibold;
+                    color: $gray-800;
+                }
+
+                .archivedate {
+                    @include font-24-14-normal;
+                    color: $gray-600;
+                }
+
+                @include hover {
+                    background: $archiveHoverBg;
+                }
+            }
+        }
+    }
+}
+
+// NEWS ARCHIVE SECTION END
+
+// NEWS-VIDEOS SECTION START
+.newsvideos {
+    background: $white;
+    padding: length(80) length(0);
+
+    @include breakpoint(tablet991) {
+        padding: length(40) length(0);
+    }
+
+    &-content {
+        @include flex-column;
+        gap: length(40);
+    }
+
+    .newsprimaryvideo {
+        .videobox {
+            position: relative;
+            @include radius(8);
+            overflow: hidden;
+            height: length(743);
+
+            @include breakpoint(desktop1400) {
+                height: length(643);
+            }
+
+            @include breakpoint(desktop1200) {
+                height: length(543);
+            }
+
+            @include breakpoint(tablet991) {
+                height: length(443);
+            }
+
+            @include breakpoint(phone768) {
+                height: length(340);
+            }
+
+            img {
+                @include wh100;
+                object-fit: cover;
+            }
+
+            .btn-playpause {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                @include transform(translate(-50%, -50%));
+                z-index: 100;
+                @include square(length(144));
+                @include circle;
+                @include transparent-button;
+                overflow: hidden;
+
+                svg {
+                    @include wh100;
+                }
+
+                @include breakpoint(desktop1200) {
+                    @include square(length(100));
+                }
+
+                @include breakpoint(phone768) {
+                    @include square(length(80));
+                }
+
+                @include breakpoint(phone575) {
+                    @include square(length(60));
+                }
+            }
+
+            .thumbinfo {
+                padding: length(42) length(40) length(28);
+                background: $primary;
+                position: absolute;
+                left: length(0);
+                bottom: length(0);
+                z-index: 100;
+                @include single-radius(top, right, 15);
+                max-width: 50%;
+
+                @include breakpoint(tablet991) {
+                    max-width: 60%;
+                }
+
+                @include breakpoint(phone768) {
+                    padding: length(24);
+                }
+
+                @include breakpoint(phone575) {
+                    max-width: 60%;
+                }
+
+                @include breakpoint(phone414) {
+                    max-width: 75%;
+                }
+
+                .infotext {
+                    color: $white;
+
+                    @include breakpoint(desktop1400) {
+                        @include heading-2;
+                    }
+
+                    @include breakpoint(desktop1200) {
+                        @include heading-3;
+                    }
+
+                    @include breakpoint(phone768) {
+                        @include heading-5;
+                    }
+
+                    @include breakpoint(phone575) {
+                        @include heading-6;
+                    }
+                }
+            }
+        }
+    }
+
+    .newsindividualvideo {
+        .singlevideo {
+            position: relative;
+            height: length(463);
+
+            img {
+                @include wh100;
+                object-fit: cover;
+            }
+
+            .btn-playpause {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                @include transform(translate(-50%, -50%));
+                z-index: 100;
+                @include square(length(74));
+                @include circle;
+                @include transparent-button;
+                overflow: hidden;
+
+                svg {
+                    @include wh100;
+                }
+
+                @include breakpoint(desktop1200) {
+                    @include square(length(60));
+                }
+
+                @include breakpoint(phone768) {
+                    @include square(length(48));
+                }
+            }
+
+            .thumbinfo {
+                width: 75%;
+                background: $primary;
+                padding: length(9) length(15) length(6);
+                background: $primary;
+                position: absolute;
+                left: length(0);
+                bottom: length(0);
+                z-index: 100;
+                @include single-radius(top, right, 15);
+
+                .infotext {
+                    color: $white;
+                }
+            }
+        }
+    }
+}
+
+// NEWS-VIDEOS SECTION END
