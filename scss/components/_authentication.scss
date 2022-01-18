@@ -1,0 +1,153 @@
+// AUTHENTICATION SECTION START
+
+.authentication {
+
+    &-details {
+        @include flex-column;
+        justify-content: center;
+        gap: length(60);
+        padding: length(20);
+        min-height: 100vh;
+
+        @include breakpoint(tablet991) {
+            @include w100;
+            align-items: center;
+        }
+
+        .logo {
+            @include w100;
+
+            @include breakpoint(tablet991) {
+                @include flex-center;
+            }
+
+            .logolink {
+                width: length(367);
+                height: length(80);
+                overflow: hidden;
+
+                @include breakpoint(phone575) {
+                    width: 80%;
+                    margin-inline: auto;
+                }
+
+                img {
+                    @include wh100;
+                    object-fit: cover;
+
+                    @include breakpoint(phone575) {
+                        object-fit: contain;
+                    }
+                }
+            }
+        }
+
+        form {
+            width: length(424);
+            @include flex-column;
+            gap: length(24);
+
+            @include breakpoint(tablet991) {
+                @include w100;
+            }
+
+            .inputbox {
+                .forminfo {
+                    @include flex-column;
+                    gap: length(8);
+
+                    .inputlabel {
+                        @include font-24-14-medium;
+                        color: $dateColor;
+                    }
+
+                    .inputinfo {
+                        background: $white;
+                        @include flex-center-vert;
+                        gap: length(8);
+                        padding: length(12) length(16);
+                        @include radius(6);
+                        box-shadow: $box-shadow-2;
+
+                        .flagicon-phonecode {
+                            width: length(94);
+                            @include flex-center-vert;
+                            gap: length(10);
+
+                            .flagicon {
+                                @include square(length(22));
+                                @include circle;
+                                @include flex-center;
+                                overflow: hidden;
+
+                                svg {
+                                    @include wh100;
+                                }
+                            }
+
+                            .phonecode {
+                                width: calc(100% - 2rem);
+
+                                .form-select {
+                                    border: none;
+                                    width: 100%;
+                                    @include font-12-12-semibold;
+                                    color: $selectColor;
+                                    padding: length(0);
+
+                                    &:focus {
+                                        outline: none;
+                                        box-shadow: none;
+                                        border: none;
+                                    }
+                                }
+                            }
+                        }
+
+                        .inputfield {
+                            width: calc(100% - 5.875rem);
+                            background: transparent;
+                            @include font-24-14-medium;
+                            color: $selectColor;
+
+                            &::placeholder {
+                                color: $authPlaceholder;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .submitbox {
+                .btn-submit {
+                    @include w100;
+                    height: length(48);
+                    padding: length(16);
+                    @include setBgColor($tertiary, $white);
+                    @include radius(8);
+                    @include font-24-16-semibold;
+                    line-height: 1;
+                    text-align: center;
+                    @include transitions;
+
+                    @include hover {
+                        background: darken($tertiary, 20%);
+                    }
+                }
+            }
+        }
+    }
+
+    &-thumbnail {
+        @include w100;
+        height: 100vh;
+        overflow: hidden;
+
+        img {
+            @include wh100;
+            object-fit: cover;
+        }
+    }
+}
+
+// AUTHENTICATION SECTION END

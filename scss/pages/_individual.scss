@@ -55,6 +55,10 @@
                     color: $white;
                 }
             }
+
+            .meetinginfo {
+                width: length(200);
+            }
         }
 
         .overlay {
@@ -173,7 +177,8 @@
             top: 0;
             left: 0;
             @include wh100;
-            background: rgba(black, 0.5);
+            background: rgba(black, 0.4);
+            z-index: 100;
         }
     }
 }
