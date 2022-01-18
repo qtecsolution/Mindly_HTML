@@ -298,3 +298,66 @@
 }
 
 // ABOUT PRESS SECTION END
+
+// JOIN OUR TEAM SECTION START
+.jointeam {
+    padding: length(80) length(0);
+
+    @include breakpoint(tablet991) {
+        padding: length(40) length(0);
+    }
+
+    &-details {
+        @include flex-column;
+        gap: length(16);
+
+        @include breakpoint(tablet991) {
+            align-items: center;
+            text-align: center;
+        }
+
+        .jointeamtitle {
+            color: $gray-800;
+
+            @include breakpoint(tablet991) {
+                @include heading-2;
+            }
+        }
+
+        .joininfo {
+            margin-bottom: length(24);
+
+            .jointext {
+                @include font-26-16-normal;
+                color: $gray-600;
+            }
+        }
+
+        .seepositions {
+            width: length(242);
+        }
+    }
+
+    &-thumbnail {
+        @include w100;
+        height: length(424);
+        overflow: hidden;
+        @include radius(8);
+
+        @include breakpoint(phone768) {
+            height: length(340);
+        }
+
+        img {
+            @include wh100;
+            object-fit: cover;
+            @include transitiontransform;
+
+            @include hover {
+                @include transform(scale(1.05));
+            }
+        }
+    }
+}
+
+// JOIN OUR TEAM SECTION END

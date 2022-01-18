@@ -938,7 +938,7 @@
         @include flex-center;
         gap: length(24);
 
-        @include breakpoint(phone768) {
+        @include breakpoint(tablet991) {
             flex-wrap: wrap;
             gap: length(16);
         }

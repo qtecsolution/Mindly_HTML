@@ -149,6 +149,10 @@
                     }
                 }
 
+                .thumbshortext {
+                    max-width: length(761);
+                }
+
                 .thumbnail-text {
                     @include font-38-24-normal;
                     color: $white;

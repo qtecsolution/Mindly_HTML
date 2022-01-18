@@ -391,8 +391,9 @@
     @include radius(8);
     padding: length(14);
     width: calc(25% - 1.5rem);
+    height: length(180);
 
-    @include breakpoint(phone768) {
+    @include breakpoint(tablet991) {
         width: calc(50% - 1.5rem);
     }
 
