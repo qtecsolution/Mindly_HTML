@@ -1293,7 +1293,7 @@
             @include square(length(250));
             @include circle;
             background: $white;
-            padding: length(5);
+            padding: length(16);
             overflow: hidden;
             @include border(solid, 5, $primary);
 
