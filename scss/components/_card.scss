@@ -38,6 +38,46 @@
 
 // CHARACTERISTIC CARD END
 
+// CHARACTERISTIC CARD START
+.cardcharacter {
+    @include flex-column;
+    gap: length(16);
+    padding: length(24);
+    background: $white;
+    @include radius(15);
+    @include w100;
+
+    @include breakpoint(tablet991) {
+        padding: length(16);
+    }
+
+    .card-cap {
+        @include square(length(80));
+        @include circle;
+        padding: length(16);
+        @include flex-center;
+        overflow: hidden;
+        background: $serviceCardBg;
+
+        @include breakpoint(phone768) {
+            @include square(length(56));
+        }
+    }
+
+    .cardtitle {
+        @include font-21-18-bold;
+        color: $gray-800;
+        letter-spacing: length(0.08);
+    }
+
+    .cardtext {
+        @include font-26-16-normal;
+        color: $gray-600;
+    }
+}
+
+// CHARACTERISTIC CARD END
+
 // SERVICE CARD START
 .cardservice {
     @include flex-column;
@@ -1236,6 +1276,62 @@
 }
 
 // CARD LEADSHIP END
+
+// CARD ADVISOR START
+.cardadvisor {
+    @include flex-center-column;
+    gap: length(22);
+    padding: length(80) length(53);
+    background: $white;
+    @include radius(15);
+    overflow: hidden;
+
+    &-header {
+        @include flex-center;
+
+        .cardadvisor-thumbnail {
+            @include square(length(250));
+            @include circle;
+            background: $white;
+            padding: length(5);
+            overflow: hidden;
+            @include border(solid, 5, $primary);
+
+            img {
+                @include wh100;
+                object-fit: cover;
+            }
+        }
+    }
+
+    &-body {
+        @include flex-center-column;
+        gap: length(6);
+        text-align: center;
+
+        .name-post {
+            @include flex-center-column;
+            gap: length(6);
+
+            .name {
+                @include font-28-20-semibold;
+                color: $gray-800;
+            }
+
+            .post {
+                @include font-28-20-semibold;
+                color: $gray-600;
+            }
+        }
+
+        .organization {
+            @include font-24-16-normal;
+            color: $gray-600;
+        }
+    }
+}
+
+// CARD ADVISOR END
 
 .counter-1 {
     background: $footerBg;

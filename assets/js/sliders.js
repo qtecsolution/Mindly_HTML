@@ -13,10 +13,55 @@ $(document).ready(function(){
             items: 2,
             responsiveClass:true,
             nav: false,
-            dots: false
+            dots: false,
+            responsive : {
+                // breakpoint from 0 up
+                0 : {
+                    margin: 0,
+                    items: 1,
+                    nav: false
+                },
+
+                // breakpoint from 575 up
+                575 : {
+                    items: 2,
+                    nav: false
+                }
+            }
         });
     }
     // CHARACTERISTICS SLIDER END
+
+    // ABOUT CHARACTER SLIDER START
+    const mobileCharacter = $('.mobile-character');
+    
+    if(mobileCharacter.length > 0) {
+        mobileCharacter.owlCarousel({
+            margin: 12,
+            loop: true,
+            autoplay: true,
+            autoplayTimeout: 3000,
+            items: 2,
+            responsiveClass:true,
+            nav: false,
+            dots: false,
+            responsive : {
+                // breakpoint from 0 up
+                0 : {
+                    margin: 0,
+                    items: 1,
+                    nav: false
+                },
+
+                // breakpoint from 575 up
+                575 : {
+                    items: 2,
+                    nav: false
+                }
+            }
+        });
+    }
+    // ABOUT CHARACTER SLIDER END
 
     // CHARACTERISTICS SLIDER START
     const mobileServices = $('.mobile-services');
@@ -415,20 +460,8 @@ $(document).ready(function(){
             items: 1,
             nav: true,
             responsiveClass:true,
-            dots: false,
-            responsive : {
-                // breakpoint from 0 up
-                0 : {
-                    items: 1
-                },
-
-                // breakpoint from 480 up
-                480 : {
-                    items: 2
-                }
-            }
+            dots: true
         });
-
         
         // SHOW SLIDER INDICATORS
         $('.owl-carousel').on('changed.owl.carousel', function(event) {

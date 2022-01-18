@@ -2314,6 +2314,72 @@ h6 {
   color: #718096;
 }
 
+.cardcharacter {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 1rem;
+  padding: 1.5rem;
+  background: #ffffff;
+  border-radius: 0.9375rem;
+  border-radius: 0.9375rem;
+  width: 100%;
+}
+
+@media screen and (max-width: 61.9375rem) {
+  .cardcharacter {
+    padding: 1rem;
+  }
+}
+
+.cardcharacter .card-cap {
+  height: 5rem;
+  width: 5rem;
+  border-radius: 100%;
+  padding: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  overflow: hidden;
+  background: #E6E6E6;
+}
+
+@media screen and (max-width: 48rem) {
+  .cardcharacter .card-cap {
+    height: 3.5rem;
+    width: 3.5rem;
+  }
+}
+
+.cardcharacter .cardtitle {
+  font-family: "Gilroy";
+  font-style: normal;
+  font-size: 1.125rem;
+  font-weight: 700;
+  line-height: 1.16667;
+  color: #2D3748;
+  letter-spacing: 0.005rem;
+}
+
+.cardcharacter .cardtext {
+  font-family: "Gilroy";
+  font-style: normal;
+  font-size: 1rem;
+  font-weight: normal;
+  line-height: 1.625;
+  color: #718096;
+}
+
 .cardservice {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -4251,6 +4317,119 @@ h6 {
   .card-leadship-body .leaderposition {
     text-align: center;
   }
+}
+
+.cardadvisor {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 1.375rem;
+  padding: 5rem 3.3125rem;
+  background: #ffffff;
+  border-radius: 0.9375rem;
+  border-radius: 0.9375rem;
+  overflow: hidden;
+}
+
+.cardadvisor-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.cardadvisor-header .cardadvisor-thumbnail {
+  height: 15.625rem;
+  width: 15.625rem;
+  border-radius: 100%;
+  background: #ffffff;
+  padding: 0.3125rem;
+  overflow: hidden;
+  border: solid 0.3125rem #01796F;
+}
+
+.cardadvisor-header .cardadvisor-thumbnail img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.cardadvisor-body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 0.375rem;
+  text-align: center;
+}
+
+.cardadvisor-body .name-post {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 0.375rem;
+}
+
+.cardadvisor-body .name-post .name {
+  font-family: "Gilroy";
+  font-style: normal;
+  font-size: 1.25rem;
+  font-weight: 600;
+  line-height: 1.4;
+  color: #2D3748;
+}
+
+.cardadvisor-body .name-post .post {
+  font-family: "Gilroy";
+  font-style: normal;
+  font-size: 1.25rem;
+  font-weight: 600;
+  line-height: 1.4;
+  color: #718096;
+}
+
+.cardadvisor-body .organization {
+  font-family: "Gilroy";
+  font-style: normal;
+  font-size: 1rem;
+  font-weight: normal;
+  line-height: 1.5;
+  color: #718096;
 }
 
 .counter-1 {
@@ -6565,6 +6744,486 @@ h6 {
 @media screen and (max-width: 61.9375rem) {
   .press-content .pressmobile {
     display: block;
+  }
+}
+
+.ourmission {
+  background: #ffffff;
+  padding: 5rem 0rem;
+}
+
+@media screen and (max-width: 61.9375rem) {
+  .ourmission {
+    padding: 2.5rem 0rem;
+  }
+}
+
+.ourmission-details {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 1rem;
+}
+
+.ourmission-details .ourmission-title {
+  color: #2D3748;
+}
+
+@media screen and (max-width: 87.4375rem) {
+  .ourmission-details .ourmission-title {
+    font-family: "Gilroy";
+    font-style: normal;
+    font-size: 1.75rem;
+    font-weight: 600;
+    line-height: 1.36;
+  }
+}
+
+@media screen and (max-width: 75rem) {
+  .ourmission-details .ourmission-title {
+    font-family: "Gilroy";
+    font-style: normal;
+    font-size: 1.5rem;
+    font-weight: 600;
+    line-height: 1.36;
+  }
+}
+
+@media screen and (max-width: 61.9375rem) {
+  .ourmission-details .ourmission-title {
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 48rem) {
+  .ourmission-details .ourmission-title {
+    font-family: "Gilroy";
+    font-style: normal;
+    font-size: 1.25rem;
+    font-weight: 600;
+    line-height: 1.36;
+  }
+}
+
+@media screen and (max-width: 30rem) {
+  .ourmission-details .ourmission-title {
+    font-family: "Gilroy";
+    font-style: normal;
+    font-size: 1.125rem;
+    font-weight: 600;
+    line-height: 1.36;
+  }
+}
+
+@media screen and (max-width: 25.875rem) {
+  .ourmission-details .ourmission-title {
+    font-family: "Gilroy";
+    font-style: normal;
+    font-size: 1rem;
+    font-weight: 600;
+    line-height: 1.36;
+  }
+}
+
+.ourmission-details .ourmission-text {
+  font-family: "Gilroy";
+  font-style: normal;
+  font-size: 1.125rem;
+  font-weight: normal;
+  line-height: 1.66667;
+  color: #718096;
+}
+
+@media screen and (max-width: 61.9375rem) {
+  .ourmission-details .ourmission-text {
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 48rem) {
+  .ourmission-details .ourmission-text {
+    font-family: "Gilroy";
+    font-style: normal;
+    font-size: 1rem;
+    font-weight: normal;
+    line-height: 1.625;
+  }
+}
+
+.ourmission-thumbnail {
+  width: 100%;
+  height: 48.4375rem;
+  overflow: hidden;
+}
+
+@media screen and (max-width: 87.4375rem) {
+  .ourmission-thumbnail {
+    height: 42.1875rem;
+  }
+}
+
+@media screen and (max-width: 75rem) {
+  .ourmission-thumbnail {
+    height: 35.9375rem;
+  }
+}
+
+@media screen and (max-width: 48rem) {
+  .ourmission-thumbnail {
+    height: 23.4375rem;
+  }
+}
+
+.ourmission-thumbnail img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -webkit-transition: transform 250ms ease-in-out;
+  -webkit-transition: -webkit-transform 250ms ease-in-out;
+  transition: -webkit-transform 250ms ease-in-out;
+  transition: transform 250ms ease-in-out;
+  transition: transform 250ms ease-in-out, -webkit-transform 250ms ease-in-out;
+}
+
+@media screen and (max-width: 61.9375rem) {
+  .ourmission-thumbnail img {
+    -o-object-fit: contain;
+       object-fit: contain;
+    max-width: 100%;
+  }
+}
+
+.ourmission-thumbnail img:not([disabled]):hover {
+  -webkit-transform: scale(1.05);
+  transform: scale(1.05);
+}
+
+.mindlycharacter {
+  padding: 5rem 0rem;
+  background: #FFF7E6;
+}
+
+@media screen and (max-width: 61.9375rem) {
+  .mindlycharacter {
+    padding: 2.5rem 0rem;
+  }
+}
+
+@media screen and (max-width: 48rem) {
+  .mindlycharacter {
+    background: #FFEBE7;
+  }
+}
+
+.mindlycharacter-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 5rem;
+}
+
+@media screen and (max-width: 61.9375rem) {
+  .mindlycharacter-content {
+    gap: 2.5rem;
+  }
+  .mindlycharacter-content .owl-nav {
+    display: none;
+  }
+}
+
+.mindlycharacter-content .character-titles {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 0.25rem;
+  text-align: center;
+}
+
+.mindlycharacter-content .character-titles .subtitle {
+  font-family: "Gilroy";
+  font-style: normal;
+  font-size: 1rem;
+  font-weight: normal;
+  line-height: 1.625;
+  color: #000000;
+}
+
+.mindlycharacter-content .character-titles .title {
+  color: #2D3748;
+}
+
+@media screen and (max-width: 61.9375rem) {
+  .mindlycharacter-content .character-titles .title {
+    font-family: "Gilroy";
+    font-style: normal;
+    font-size: 1.75rem;
+    font-weight: 600;
+    line-height: 1.36;
+  }
+}
+
+.mindlycharacter-content .mobile-character {
+  display: none;
+}
+
+@media screen and (max-width: 48rem) {
+  .mindlycharacter-content .mobile-character {
+    display: block;
+  }
+}
+
+.mindlycharacter-content .mobile-character .slideritem {
+  overflow: hidden;
+}
+
+.mindlycharacter-content .mobile-character .owl-item {
+  min-width: 14.375rem;
+}
+
+.advisoryboard {
+  padding: 5rem 0rem;
+}
+
+@media screen and (max-width: 61.9375rem) {
+  .advisoryboard {
+    padding: 2.5rem 0rem;
+  }
+}
+
+.advisoryboard-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 5rem;
+}
+
+@media screen and (max-width: 61.9375rem) {
+  .advisoryboard-content {
+    gap: 2.5rem;
+  }
+}
+
+.advisoryboard-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 1rem;
+  text-align: center;
+  width: 100%;
+}
+
+.advisoryboard-header .advisoryboard-title {
+  color: #2D3748;
+}
+
+@media screen and (max-width: 61.9375rem) {
+  .advisoryboard-header .advisoryboard-title {
+    font-family: "Gilroy";
+    font-style: normal;
+    font-size: 1.75rem;
+    font-weight: 600;
+    line-height: 1.36;
+  }
+}
+
+.advisoryboard-header .advisoryboard-text {
+  font-family: "Gilroy";
+  font-style: normal;
+  font-size: 1.125rem;
+  font-weight: normal;
+  line-height: 1.66667;
+  color: #718096;
+}
+
+.leadershipteam {
+  background: #ffffff;
+  padding: 5rem 0rem;
+}
+
+@media screen and (max-width: 61.9375rem) {
+  .leadershipteam {
+    padding: 2.5rem 0rem;
+  }
+}
+
+.leadershipteam-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 5rem;
+}
+
+@media screen and (max-width: 61.9375rem) {
+  .leadershipteam-content {
+    gap: 2.5rem;
+  }
+}
+
+.leadershipteam-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 1rem;
+  text-align: center;
+  width: 100%;
+}
+
+.leadershipteam-header .leadershiptitle {
+  color: #2D3748;
+}
+
+@media screen and (max-width: 61.9375rem) {
+  .leadershipteam-header .leadershiptitle {
+    font-family: "Gilroy";
+    font-style: normal;
+    font-size: 1.75rem;
+    font-weight: 600;
+    line-height: 1.36;
+  }
+}
+
+.leadershipteam-header .leadershiptext {
+  font-family: "Gilroy";
+  font-style: normal;
+  font-size: 1.125rem;
+  font-weight: normal;
+  line-height: 1.66667;
+  color: #718096;
+}
+
+.leadershipteam-header .leadershipinfo {
+  width: 15.125rem;
+}
+
+.leadershipteam-body .leadershipvideo {
+  position: relative;
+  border-radius: 0.5rem;
+  border-radius: 0.5rem;
+  width: 100%;
+  overflow: hidden;
+  height: 46.4375rem;
+}
+
+@media screen and (max-width: 87.4375rem) {
+  .leadershipteam-body .leadershipvideo {
+    height: 40.1875rem;
+  }
+}
+
+@media screen and (max-width: 75rem) {
+  .leadershipteam-body .leadershipvideo {
+    height: 33.9375rem;
+  }
+}
+
+@media screen and (max-width: 48rem) {
+  .leadershipteam-body .leadershipvideo {
+    height: 21.25rem;
+  }
+}
+
+.leadershipteam-body .leadershipvideo .btn-playpause {
+  height: 9rem;
+  width: 9rem;
+  border-radius: 100%;
+  overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  background: transparent;
+  border: none;
+}
+
+@media screen and (max-width: 75rem) {
+  .leadershipteam-body .leadershipvideo .btn-playpause {
+    height: 6.25rem;
+    width: 6.25rem;
+  }
+}
+
+@media screen and (max-width: 48rem) {
+  .leadershipteam-body .leadershipvideo .btn-playpause {
+    height: 5rem;
+    width: 5rem;
+  }
+}
+
+.leadershipteam-body .leadershipvideo .btn-playpause svg {
+  width: 100%;
+  height: 100%;
+}
+
+.aboutpress {
+  padding: 5rem 0rem;
+}
+
+@media screen and (max-width: 61.9375rem) {
+  .aboutpress {
+    padding: 2.5rem 0rem;
   }
 }
 
