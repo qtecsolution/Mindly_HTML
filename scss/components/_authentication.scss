@@ -3,135 +3,194 @@
 .authentication {
 
     &-details {
-        @include flex-column;
-        justify-content: center;
-        gap: length(60);
-        padding: length(20);
-        min-height: 100vh;
+        @include w100;
+        @include flex-center;
 
         @include breakpoint(tablet991) {
-            @include w100;
-            align-items: center;
+            height: 100vh;
         }
 
-        .logo {
-            @include w100;
+        .authinfo {
+            background: $white;
+            @include radius(16);
+            box-shadow: $box-shadow-1;
+            width: length(584);
+            @include flex-center-column;
+            gap: length(80);
+            padding: length(80);
 
             @include breakpoint(tablet991) {
-                @include flex-center;
+                align-items: center;
+                padding: length(40);
+                gap: length(40);
             }
 
-            .logolink {
-                width: length(367);
-                height: length(80);
-                overflow: hidden;
+            @include breakpoint(phone575) {
+                padding: length(40) length(20);
+                width: 95%;
+                margin-inline: auto;
+            }
 
-                @include breakpoint(phone575) {
-                    width: 80%;
-                    margin-inline: auto;
-                }
+            .logo {
+                @include flex-center;
 
-                img {
-                    @include wh100;
-                    object-fit: cover;
+                .logolink {
+                    width: length(367);
+                    height: length(80);
+                    overflow: hidden;
 
                     @include breakpoint(phone575) {
-                        object-fit: contain;
+                        width: 80%;
+                        margin-inline: auto;
+                    }
+
+                    img {
+                        @include wh100;
+                        object-fit: cover;
+
+                        @include breakpoint(phone575) {
+                            object-fit: contain;
+                        }
                     }
                 }
             }
-        }
 
-        form {
-            width: length(424);
-            @include flex-column;
-            gap: length(24);
+            form {
+                width: length(424);
+                margin-inline: auto;
+                @include flex-column;
+                gap: length(24);
 
-            @include breakpoint(tablet991) {
-                @include w100;
-            }
+                @include breakpoint(tablet991) {
+                    @include w100;
+                }
 
-            .inputbox {
-                .forminfo {
-                    @include flex-column;
-                    gap: length(8);
-
-                    .inputlabel {
-                        @include font-24-14-medium;
-                        color: $dateColor;
-                    }
-
-                    .inputinfo {
-                        background: $white;
-                        @include flex-center-vert;
+                .inputbox {
+                    .forminfo {
+                        @include flex-column;
                         gap: length(8);
-                        padding: length(12) length(16);
-                        @include radius(6);
-                        box-shadow: $box-shadow-2;
 
-                        .flagicon-phonecode {
-                            width: length(94);
+                        .inputlabel {
+                            @include font-24-14-medium;
+                            color: $dateColor;
+                        }
+
+                        .inputinfo {
+                            background: $white;
                             @include flex-center-vert;
-                            gap: length(10);
+                            gap: length(8);
+                            padding: length(12) length(16);
+                            @include radius(6);
+                            box-shadow: $box-shadow-2;
 
-                            .flagicon {
-                                @include square(length(22));
-                                @include circle;
-                                @include flex-center;
-                                overflow: hidden;
+                            .flagicon-phonecode {
+                                width: length(94);
+                                @include flex-center-vert;
+                                gap: length(10);
 
-                                svg {
-                                    @include wh100;
+                                .flagicon {
+                                    @include square(length(22));
+                                    @include circle;
+                                    @include flex-center;
+                                    overflow: hidden;
+
+                                    svg {
+                                        @include wh100;
+                                    }
                                 }
-                            }
 
-                            .phonecode {
-                                width: calc(100% - 2rem);
+                                .phonecode {
+                                    width: calc(100% - 2rem);
 
-                                .form-select {
-                                    border: none;
-                                    width: 100%;
-                                    @include font-12-12-semibold;
-                                    color: $selectColor;
-                                    padding: length(0);
-
-                                    &:focus {
-                                        outline: none;
-                                        box-shadow: none;
+                                    .form-select {
                                         border: none;
+                                        width: 100%;
+                                        @include font-12-12-semibold;
+                                        color: $selectColor;
+                                        padding: length(0);
+
+                                        &:focus {
+                                            outline: none;
+                                            box-shadow: none;
+                                            border: none;
+                                        }
                                     }
                                 }
                             }
-                        }
 
-                        .inputfield {
-                            width: calc(100% - 5.875rem);
-                            background: transparent;
-                            @include font-24-14-medium;
-                            color: $selectColor;
+                            .inputfield {
+                                width: calc(100% - 5.875rem);
+                                background: transparent;
+                                @include font-24-14-medium;
+                                color: $selectColor;
 
-                            &::placeholder {
-                                color: $authPlaceholder;
+                                &::placeholder {
+                                    color: $authPlaceholder;
+                                }
                             }
                         }
                     }
                 }
-            }
 
-            .submitbox {
-                .btn-submit {
-                    @include w100;
-                    height: length(48);
-                    padding: length(16);
-                    @include setBgColor($tertiary, $white);
-                    @include radius(8);
-                    @include font-24-16-semibold;
-                    line-height: 1;
-                    text-align: center;
-                    @include transitions;
+                // VERIFICATION INFO START
+                .verificationinfo {
+                    @include flex-center-column;
+                    gap: length(24);
 
-                    @include hover {
-                        background: darken($tertiary, 20%);
+                    &-header {
+                        @include flex-center-column;
+                        gap: length(12);
+                        text-align: center;
+
+                        .verificationtitle {
+                            color: $verificationTitle;
+                        }
+
+                        .verificationtext {
+                            @include font-26-16-normal;
+                            color: $textVerification;
+                        }
+                    }
+
+                    &-body {
+                        @include flex-center;
+                        gap: length(24);
+
+                        .verificationinput {
+                            @include square(length(60));
+                            @include circle;
+                            @include font-28-20-semibold;
+                            line-height: 1;
+                            @include border(solid, 1, transparent);
+                            @include setBgColor($gray-100, $verifyInput);
+                            @include transitions;
+                            text-align: center;
+
+                            &:focus {
+                                border-color: $tertiary;
+                                background: $white;
+                            }
+                        }
+                    }
+                }
+
+                // VERIFICATION INFO END
+
+                .submitbox {
+                    .btn-submit {
+                        @include w100;
+                        height: length(48);
+                        padding: length(16);
+                        @include setBgColor($tertiary, $white);
+                        @include radius(8);
+                        @include font-24-16-semibold;
+                        line-height: 1;
+                        text-align: center;
+                        @include transitions;
+
+                        @include hover {
+                            background: darken($tertiary, 20%);
+                        }
                     }
                 }
             }

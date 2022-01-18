@@ -17,63 +17,68 @@
 <body class="overflow-hidden">
     <!-- AUTHENTICATION SECTION START -->
     <section class="authentication">
-        <div class="row align-items-center">
+        <div class="row g-0 align-items-center">
             <!-- AUTHENTICATION INFO START -->
             <div class="col-lg-6 col-12">
                 <div class="authentication-details">
-                    <!-- AUTHENTICATION LOGO START -->
-                    <div class="logo">
-                        <a href="index.html" class="logolink">
-                            <img src="assets/images/logo/logo.svg" alt="site-logo">
-                        </a>
-                    </div>
-                    <!-- AUTHENTICATION LOGO END -->
+                    <!-- AUTH INFO START -->
+                    <div class="authinfo">
+                        <!-- AUTHENTICATION LOGO START -->
+                        <div class="logo">
+                            <a href="index.html" class="logolink">
+                                <img src="assets/images/logo/logo.svg" alt="site-logo">
+                            </a>
+                        </div>
+                        <!-- AUTHENTICATION LOGO END -->
 
-                    <!-- AUTHENTICATION FORM START -->
-                    <form class="authentication-form">
-                        <!-- PHONE INPUT START -->
-                        <div class="inputbox">
-                            <div class="forminfo">
-                                <label for="phone" class="inputlabel">Phone Number</label>
+                        <!-- AUTHENTICATION FORM START -->
+                        <form class="authentication-form">
+                            <!-- PHONE INPUT START -->
+                            <div class="inputbox">
+                                <div class="forminfo">
+                                    <label for="phone" class="inputlabel">Phone Number</label>
 
-                                <div class="inputinfo">
-                                    <div class="flagicon-phonecode">
-                                        <div class="flagicon">
-                                            <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                <path d="M11 22C17.0751 22 22 17.0751 22 11C22 4.92487 17.0751 0 11 0C4.92487 0 0 4.92487 0 11C0 17.0751 4.92487 22 11 22Z" fill="#056034"/>
-                                                <path d="M11 16C13.7614 16 16 13.7614 16 11C16 8.23858 13.7614 6 11 6C8.23858 6 6 8.23858 6 11C6 13.7614 8.23858 16 11 16Z" fill="#EE2114"/>
+                                    <div class="inputinfo">
+                                        <div class="flagicon-phonecode">
+                                            <div class="flagicon">
+                                                <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M11 22C17.0751 22 22 17.0751 22 11C22 4.92487 17.0751 0 11 0C4.92487 0 0 4.92487 0 11C0 17.0751 4.92487 22 11 22Z" fill="#056034"/>
+                                                    <path d="M11 16C13.7614 16 16 13.7614 16 11C16 8.23858 13.7614 6 11 6C8.23858 6 6 8.23858 6 11C6 13.7614 8.23858 16 11 16Z" fill="#EE2114"/>
+                                                </svg>
+                                            </div>
+
+                                            <div class="phonecode">
+                                                <select class="form-select">
+                                                    <option selected>+880</option>
+                                                    <option>+990</option>
+                                                    <option>+770</option>
+                                                    <option>+660</option>
+                                                </select>
+                                            </div>
+                                        </div>
+
+                                        <div class="divider">
+                                            <svg width="2" height="24" viewBox="0 0 2 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M0.721977 0.828125L0.721977 22.8281" stroke="#EEEEEE" stroke-linecap="square"/>
                                             </svg>
                                         </div>
 
-                                        <div class="phonecode">
-                                            <select class="form-select">
-                                                <option selected>+880</option>
-                                                <option>+990</option>
-                                                <option>+770</option>
-                                                <option>+660</option>
-                                            </select>
-                                        </div>
+                                        <input type="tel" placeholder="01710123456" id="phone" class="inputfield">
                                     </div>
-
-                                    <div class="divider">
-                                        <svg width="2" height="24" viewBox="0 0 2 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M0.721977 0.828125L0.721977 22.8281" stroke="#EEEEEE" stroke-linecap="square"/>
-                                        </svg>
-                                    </div>
-
-                                    <input type="tel" placeholder="01710123456" id="phone" class="inputfield">
                                 </div>
                             </div>
-                        </div>
-                        <!-- PHONE INPUT END -->
+                            <!-- PHONE INPUT END -->
 
-                        <!-- SUBMIT START -->
-                        <div class="submitbox">
-                            <button class="btn-submit" type="button">Send OTP</button>
-                        </div>
-                        <!-- SUBMIT END -->
-                    </form>
-                    <!-- AUTHENTICATION FORM END -->
+                            <!-- SUBMIT START -->
+                            <div class="submitbox">
+                                <button class="btn-submit d-none" type="button">Send OTP</button>
+                                <a href="verify.html" class="btn-submit" role="button">Send OTP</a>
+                            </div>
+                            <!-- SUBMIT END -->
+                        </form>
+                        <!-- AUTHENTICATION FORM END -->
+                    </div>
+                    <!-- AUTH INFO END -->
                 </div>
             </div>
             <!-- AUTHENTICATION INFO END -->

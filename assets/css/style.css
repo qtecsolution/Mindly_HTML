@@ -4976,62 +4976,92 @@ h6 {
 }
 
 .authentication-details {
+  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  gap: 3.75rem;
-  padding: 1.25rem;
-  min-height: 100vh;
 }
 
 @media screen and (max-width: 61.9375rem) {
   .authentication-details {
-    width: 100%;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    height: 100vh;
   }
 }
 
-.authentication-details .logo {
-  width: 100%;
+.authentication-details .authinfo {
+  background: #ffffff;
+  border-radius: 1rem;
+  border-radius: 1rem;
+  -webkit-box-shadow: 0rem 0rem 0.0625rem rgba(12, 26, 75, 0.1), 0rem 0.625rem 1rem rgba(20, 37, 63, 0.06);
+          box-shadow: 0rem 0rem 0.0625rem rgba(12, 26, 75, 0.1), 0rem 0.625rem 1rem rgba(20, 37, 63, 0.06);
+  width: 36.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 5rem;
+  padding: 5rem;
 }
 
 @media screen and (max-width: 61.9375rem) {
-  .authentication-details .logo {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
+  .authentication-details .authinfo {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    padding: 2.5rem;
+    gap: 2.5rem;
   }
 }
 
-.authentication-details .logo .logolink {
+@media screen and (max-width: 35.9375rem) {
+  .authentication-details .authinfo {
+    padding: 2.5rem 1.25rem;
+    width: 95%;
+    margin-inline: auto;
+  }
+}
+
+.authentication-details .authinfo .logo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.authentication-details .authinfo .logo .logolink {
   width: 22.9375rem;
   height: 5rem;
   overflow: hidden;
 }
 
 @media screen and (max-width: 35.9375rem) {
-  .authentication-details .logo .logolink {
+  .authentication-details .authinfo .logo .logolink {
     width: 80%;
     margin-inline: auto;
   }
 }
 
-.authentication-details .logo .logolink img {
+.authentication-details .authinfo .logo .logolink img {
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
@@ -5039,14 +5069,15 @@ h6 {
 }
 
 @media screen and (max-width: 35.9375rem) {
-  .authentication-details .logo .logolink img {
+  .authentication-details .authinfo .logo .logolink img {
     -o-object-fit: contain;
        object-fit: contain;
   }
 }
 
-.authentication-details form {
+.authentication-details .authinfo form {
   width: 26.5rem;
+  margin-inline: auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -5058,12 +5089,12 @@ h6 {
 }
 
 @media screen and (max-width: 61.9375rem) {
-  .authentication-details form {
+  .authentication-details .authinfo form {
     width: 100%;
   }
 }
 
-.authentication-details form .inputbox .forminfo {
+.authentication-details .authinfo form .inputbox .forminfo {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -5074,7 +5105,7 @@ h6 {
   gap: 0.5rem;
 }
 
-.authentication-details form .inputbox .forminfo .inputlabel {
+.authentication-details .authinfo form .inputbox .forminfo .inputlabel {
   font-family: "Gilroy";
   font-style: normal;
   font-size: 0.875rem;
@@ -5083,7 +5114,7 @@ h6 {
   color: #425466;
 }
 
-.authentication-details form .inputbox .forminfo .inputinfo {
+.authentication-details .authinfo form .inputbox .forminfo .inputinfo {
   background: #ffffff;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -5099,7 +5130,7 @@ h6 {
           box-shadow: 0rem 0.0625rem 0.125rem rgba(50, 50, 71, 0.08), 0rem 0rem 0.0625rem rgba(50, 50, 71, 0.2);
 }
 
-.authentication-details form .inputbox .forminfo .inputinfo .flagicon-phonecode {
+.authentication-details .authinfo form .inputbox .forminfo .inputinfo .flagicon-phonecode {
   width: 5.875rem;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -5110,7 +5141,7 @@ h6 {
   gap: 0.625rem;
 }
 
-.authentication-details form .inputbox .forminfo .inputinfo .flagicon-phonecode .flagicon {
+.authentication-details .authinfo form .inputbox .forminfo .inputinfo .flagicon-phonecode .flagicon {
   height: 1.375rem;
   width: 1.375rem;
   border-radius: 100%;
@@ -5126,16 +5157,16 @@ h6 {
   overflow: hidden;
 }
 
-.authentication-details form .inputbox .forminfo .inputinfo .flagicon-phonecode .flagicon svg {
+.authentication-details .authinfo form .inputbox .forminfo .inputinfo .flagicon-phonecode .flagicon svg {
   width: 100%;
   height: 100%;
 }
 
-.authentication-details form .inputbox .forminfo .inputinfo .flagicon-phonecode .phonecode {
+.authentication-details .authinfo form .inputbox .forminfo .inputinfo .flagicon-phonecode .phonecode {
   width: calc(100% - 2rem);
 }
 
-.authentication-details form .inputbox .forminfo .inputinfo .flagicon-phonecode .phonecode .form-select {
+.authentication-details .authinfo form .inputbox .forminfo .inputinfo .flagicon-phonecode .phonecode .form-select {
   border: none;
   width: 100%;
   font-family: "Gilroy";
@@ -5147,14 +5178,14 @@ h6 {
   padding: 0rem;
 }
 
-.authentication-details form .inputbox .forminfo .inputinfo .flagicon-phonecode .phonecode .form-select:focus {
+.authentication-details .authinfo form .inputbox .forminfo .inputinfo .flagicon-phonecode .phonecode .form-select:focus {
   outline: none;
   -webkit-box-shadow: none;
           box-shadow: none;
   border: none;
 }
 
-.authentication-details form .inputbox .forminfo .inputinfo .inputfield {
+.authentication-details .authinfo form .inputbox .forminfo .inputinfo .inputfield {
   width: calc(100% - 5.875rem);
   background: transparent;
   font-family: "Gilroy";
@@ -5165,23 +5196,107 @@ h6 {
   color: #394157;
 }
 
-.authentication-details form .inputbox .forminfo .inputinfo .inputfield::-webkit-input-placeholder {
+.authentication-details .authinfo form .inputbox .forminfo .inputinfo .inputfield::-webkit-input-placeholder {
   color: #D7D7D7;
 }
 
-.authentication-details form .inputbox .forminfo .inputinfo .inputfield:-ms-input-placeholder {
+.authentication-details .authinfo form .inputbox .forminfo .inputinfo .inputfield:-ms-input-placeholder {
   color: #D7D7D7;
 }
 
-.authentication-details form .inputbox .forminfo .inputinfo .inputfield::-ms-input-placeholder {
+.authentication-details .authinfo form .inputbox .forminfo .inputinfo .inputfield::-ms-input-placeholder {
   color: #D7D7D7;
 }
 
-.authentication-details form .inputbox .forminfo .inputinfo .inputfield::placeholder {
+.authentication-details .authinfo form .inputbox .forminfo .inputinfo .inputfield::placeholder {
   color: #D7D7D7;
 }
 
-.authentication-details form .submitbox .btn-submit {
+.authentication-details .authinfo form .verificationinfo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 1.5rem;
+}
+
+.authentication-details .authinfo form .verificationinfo-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 0.75rem;
+  text-align: center;
+}
+
+.authentication-details .authinfo form .verificationinfo-header .verificationtitle {
+  color: #242424;
+}
+
+.authentication-details .authinfo form .verificationinfo-header .verificationtext {
+  font-family: "Gilroy";
+  font-style: normal;
+  font-size: 1rem;
+  font-weight: normal;
+  line-height: 1.625;
+  color: #616161;
+}
+
+.authentication-details .authinfo form .verificationinfo-body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 1.5rem;
+}
+
+.authentication-details .authinfo form .verificationinfo-body .verificationinput {
+  height: 3.75rem;
+  width: 3.75rem;
+  border-radius: 100%;
+  font-family: "Gilroy";
+  font-style: normal;
+  font-size: 1.25rem;
+  font-weight: 600;
+  line-height: 1.4;
+  line-height: 1;
+  border: solid 0.0625rem transparent;
+  background: #F7FAFC;
+  color: #191B20;
+  -webkit-transition: all 250ms ease-in-out;
+  transition: all 250ms ease-in-out;
+  text-align: center;
+}
+
+.authentication-details .authinfo form .verificationinfo-body .verificationinput:focus {
+  border-color: #F94E26;
+  background: #ffffff;
+}
+
+.authentication-details .authinfo form .submitbox .btn-submit {
   width: 100%;
   height: 3rem;
   padding: 1rem;
@@ -5200,7 +5315,7 @@ h6 {
   transition: all 250ms ease-in-out;
 }
 
-.authentication-details form .submitbox .btn-submit:not([disabled]):hover {
+.authentication-details .authinfo form .submitbox .btn-submit:not([disabled]):hover {
   background: #b42605;
 }
 
