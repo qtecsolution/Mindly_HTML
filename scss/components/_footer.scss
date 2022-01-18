@@ -149,6 +149,7 @@
 
                         @include hover {
                             color: $tertiary;
+                            text-decoration: underline;
                         }
                     }
                 }
@@ -176,6 +177,7 @@
 
                             @include hover {
                                 color: $tertiary;
+                                text-decoration: underline;
                             }
                         }
                     }

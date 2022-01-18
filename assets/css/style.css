@@ -1109,7 +1109,7 @@ h6 {
   position: absolute;
   top: 100%;
   background: rgba(255, 255, 255, 0.75);
-  min-width: 8.75rem;
+  min-width: 10rem;
   -webkit-box-shadow: 0rem 0rem 0.0625rem rgba(12, 26, 75, 0.1), 0rem 0.625rem 1rem rgba(20, 37, 63, 0.06);
           box-shadow: 0rem 0rem 0.0625rem rgba(12, 26, 75, 0.1), 0rem 0.625rem 1rem rgba(20, 37, 63, 0.06);
   display: none;
@@ -1510,6 +1510,7 @@ h6 {
 
 .footer-content .footinfo-body .footerlist-link:not([disabled]):hover {
   color: #F94E26;
+  text-decoration: underline;
 }
 
 .footer-content .footinfo-body .contactinfo {
@@ -1566,6 +1567,7 @@ h6 {
 
 .footer-content .footinfo-body .contactinfo .contactlist-link:not([disabled]):hover {
   color: #F94E26;
+  text-decoration: underline;
 }
 
 .footer-content .footinfo-body .contactinfo .address {
@@ -2667,6 +2669,11 @@ h6 {
   letter-spacing: -0.005rem;
 }
 
+.cardpackage-footer .link:not([disabled]):hover {
+  text-decoration: underline;
+  color: #FCAF15;
+}
+
 .card-doctor {
   background: #ffffff;
   border-radius: 0.9375rem;
@@ -2990,8 +2997,8 @@ h6 {
   padding: 0.625rem;
   border-radius: 0.625rem;
   border-radius: 0.625rem;
+  height: 12.5rem;
   width: 12.5rem;
-  height: 5rem;
 }
 
 .cardclient img {
@@ -3016,8 +3023,8 @@ h6 {
   padding: 0.625rem;
   border-radius: 0.625rem;
   border-radius: 0.625rem;
+  height: 12.5rem;
   width: 12.5rem;
-  height: 5rem;
 }
 
 .cardbrand img {
@@ -3144,6 +3151,10 @@ h6 {
   color: #F94E26;
 }
 
+.bloglink:hover .cardblog-body .bloglink .link {
+  color: #F94E26;
+}
+
 .cardpress {
   background: #ffffff;
   display: -webkit-box;
@@ -3252,6 +3263,10 @@ h6 {
   color: #F94E26;
 }
 
+.presslink:not([disabled]):hover .cardpress-body .presslink .link {
+  color: #F94E26;
+}
+
 .cardfeatured {
   background: #ffffff;
   display: -webkit-box;
@@ -3357,6 +3372,10 @@ h6 {
 }
 
 .cardfeatured-body .featuredlink .link:not([disabled]):hover {
+  color: #F94E26;
+}
+
+.featuredlink:not([disabled]):hover .cardfeatured-body .featuredlink .link {
   color: #F94E26;
 }
 
@@ -5283,8 +5302,8 @@ h6 {
   font-weight: 600;
   line-height: 1.4;
   line-height: 1;
-  border: solid 0.0625rem transparent;
-  background: #F7FAFC;
+  border: solid 0.0625rem #E2E8F0;
+  background: #ffffff;
   color: #191B20;
   -webkit-transition: all 250ms ease-in-out;
   transition: all 250ms ease-in-out;
@@ -5293,7 +5312,6 @@ h6 {
 
 .authentication-details .authinfo form .verificationinfo-body .verificationinput:focus {
   border-color: #F94E26;
-  background: #ffffff;
 }
 
 .authentication-details .authinfo form .submitbox .btn-submit {
@@ -7061,7 +7079,7 @@ h6 {
   }
 }
 
-.press-content .pressdesktop .pressinfo {
+.press-content .pressdesktop .pressdesktopinfo {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -7073,7 +7091,7 @@ h6 {
           justify-content: center;
 }
 
-.press-content .pressdesktop .pressinfo .btn-readmore {
+.press-content .pressdesktop .pressdesktopinfo .btn-readmore {
   padding: 1rem 2rem;
   border: solid 0.09062rem #FCAF15;
   border-radius: 0.5rem;
@@ -7090,7 +7108,7 @@ h6 {
   transition: all 250ms ease-in-out;
 }
 
-.press-content .pressdesktop .pressinfo .btn-readmore:not([disabled]):hover {
+.press-content .pressdesktop .pressdesktopinfo .btn-readmore:not([disabled]):hover {
   background: #FCAF15;
   color: #ffffff;
 }
@@ -9986,7 +10004,7 @@ h6 {
   }
 }
 
-.blog .cardblog-body .bloglink .link:not([disabled]):hover {
+.blog .bloglink:hover .cardblog-body .bloglink .link {
   color: #FCAF15;
 }
 
@@ -10219,7 +10237,7 @@ h6 {
   width: 12.5rem;
 }
 
-.allblogs-content .cardblog-body .bloglink .link:not([disabled]):hover {
+.allblogs-content .bloglink:hover .cardblog-body .bloglink .link {
   color: #FCAF15;
 }
 
@@ -10875,7 +10893,7 @@ h6 {
   width: 100%;
 }
 
-.readnext-body .cardblog-body .bloglink .link:not([disabled]):hover {
+.readnext-body .bloglink:hover .cardblog-body .bloglink .link {
   color: #FCAF15;
 }
 

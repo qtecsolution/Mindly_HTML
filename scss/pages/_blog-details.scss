@@ -245,12 +245,14 @@
     &-body {
         @include w100;
 
-        .cardblog {
-            &-body {
-                .bloglink {
-                    .link {
-                        @include hover {
-                            color: $secondary;
+        .bloglink {
+            &:hover {
+                .cardblog {
+                    &-body {
+                        .bloglink {
+                            .link {
+                                color: $secondary;
+                            }
                         }
                     }
                 }

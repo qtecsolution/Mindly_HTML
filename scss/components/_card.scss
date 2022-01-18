@@ -229,6 +229,11 @@
             color: $gray-500;
             text-align: center;
             letter-spacing: length(-0.08);
+
+            @include hover {
+                text-decoration: underline;
+                color: $secondary;
+            }
         }
     }
 }
@@ -428,8 +433,7 @@
     background: $clientBg;
     padding: length(10);
     @include radius(10);
-    width: length(200);
-    height: length(80);
+    @include square(length(200));
 
     img {
         max-width: 100%;
@@ -447,8 +451,7 @@
     background: $clientBg;
     padding: length(10);
     @include radius(10);
-    width: length(200);
-    height: length(80);
+    @include square(length(200));
 
     img {
         max-width: 100%;
@@ -528,6 +531,20 @@
     }
 }
 
+.bloglink {
+    &:hover {
+        .cardblog {
+            &-body {
+                .bloglink {
+                    .link {
+                        color: $tertiary;
+                    }
+                }
+            }
+        }
+    }
+}
+
 // CARD BLOG END
 
 // CARD BLOG START
@@ -594,6 +611,20 @@
     }
 }
 
+.presslink {
+    @include hover {
+        .cardpress {
+            &-body {
+                .presslink {
+                    .link {
+                        color: $tertiary;
+                    }
+                }
+            }
+        }
+    }
+}
+
 // CARD BLOG END
 
 // CARD FEATURE START
@@ -654,6 +685,20 @@
 
                 @include hover {
                     color: $tertiary;
+                }
+            }
+        }
+    }
+}
+
+.featuredlink {
+    @include hover {
+        .cardfeatured {
+            &-body {
+                .featuredlink {
+                    .link {
+                        color: $tertiary;
+                    }
                 }
             }
         }

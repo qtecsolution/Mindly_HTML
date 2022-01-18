@@ -161,14 +161,13 @@
                             @include circle;
                             @include font-28-20-semibold;
                             line-height: 1;
-                            @include border(solid, 1, transparent);
-                            @include setBgColor($gray-100, $verifyInput);
+                            @include border(solid, 1, $gray-300);
+                            @include setBgColor($white, $verifyInput);
                             @include transitions;
                             text-align: center;
 
                             &:focus {
                                 border-color: $tertiary;
-                                background: $white;
                             }
                         }
                     }

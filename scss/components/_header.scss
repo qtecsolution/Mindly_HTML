@@ -73,7 +73,7 @@
                     position: absolute;
                     top: 100%;
                     background: rgba($white, 0.75);
-                    min-width: length(140);
+                    min-width: length(160);
                     box-shadow: $box-shadow-1;
                     @extend %animation;
                     @extend %slideUpIn;
