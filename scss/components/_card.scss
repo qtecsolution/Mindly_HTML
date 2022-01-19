@@ -478,6 +478,10 @@
             @include radius(12);
             overflow: hidden;
 
+            @include breakpoint(phone575) {
+                height: length(144);
+            }
+
             img {
                 @include wh100;
                 object-fit: cover;
@@ -498,15 +502,15 @@
         .title-releasedate {
             @include flex-column;
             gap: length(4);
+        }
 
-            .blogtitle {
-                color: $gray-800;
-            }
+        .blogtitle {
+            color: $gray-800;
+        }
 
-            .releasedate {
-                @include font-24-14-normal;
-                color: $gray-600;
-            }
+        .releasedate {
+            @include font-24-14-normal;
+            color: $gray-600;
         }
 
         .bloginfo {
@@ -1398,7 +1402,8 @@
 .owl-carousel {
     .owl-item {
         img {
-            width: auto;
+            @include w100;
+            max-width: 100%;
         }
     }
 }

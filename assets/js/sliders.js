@@ -207,7 +207,13 @@ $(document).ready(function(){
                 },
 
                 // breakpoint from 360 up
-                360 : {
+                375 : {
+                    items: 1,
+                    nav: false
+                },
+
+                // breakpoint from 360 up
+                480 : {
                     items: 1,
                     nav: false
                 },
@@ -215,12 +221,6 @@ $(document).ready(function(){
                 // breakpoint from 768 up
                 768 : {
                     items: 2,
-                    nav: false
-                },
-
-                // breakpoint from 992 up
-                992 : {
-                    items: 3,
                     nav: false
                 }
             }
@@ -378,18 +378,6 @@ $(document).ready(function(){
                 768 : {
                     items: 2,
                     nav: false
-                },
-
-                // breakpoint from 992 up
-                992 : {
-                    items: 3,
-                    nav: false
-                },
-
-                // breakpoint from 1024 up
-                1024 : {
-                    items: 4,
-                    nav: false
                 }
             }
         });
@@ -429,18 +417,6 @@ $(document).ready(function(){
                 // breakpoint from 768 up
                 768 : {
                     items: 2,
-                    nav: false
-                },
-
-                // breakpoint from 992 up
-                992 : {
-                    items: 3,
-                    nav: false
-                },
-
-                // breakpoint from 1024 up
-                1024 : {
-                    items: 4,
                     nav: false
                 }
             }
