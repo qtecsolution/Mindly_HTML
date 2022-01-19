@@ -1,0 +1,198 @@
+// JOIN CAREER SECTION START
+
+.careerjoin {
+    background: $white;
+    padding: length(80) length(0);
+
+    @include breakpoint(tablet991) {
+        padding: length(40) length(0);
+    }
+
+    &-details {
+        @include flex-column;
+        gap: length(16);
+
+        @include breakpoint(tablet991) {
+            align-items: center;
+            text-align: center;
+        }
+
+        .careerjointitle {
+            color: $gray-800;
+
+            @include breakpoint(tablet991) {
+                @include heading-2;
+            }
+        }
+
+        .careerjointext {
+            @include font-26-16-normal;
+            color: $gray-600;
+        }
+    }
+
+    &-thumbnail {
+        height: length(775);
+        overflow: hidden;
+
+        @include breakpoint(desktop1400) {
+            height: length(675);
+        }
+
+        @include breakpoint(desktop1199) {
+            height: length(575);
+        }
+
+        @include breakpoint(tablet991) {
+            height: length(500);
+        }
+
+        @include breakpoint(phone575) {
+            height: length(375);
+        }
+
+        img {
+            @include wh100;
+            object-fit: cover;
+            @include transitiontransform;
+
+            @include breakpoint(tablet991) {
+                object-fit: contain;
+            }
+
+            @include hover {
+                @include transform(scale(1.05));
+            }
+        }
+    }
+}
+
+// JOIN CAREER SECTION END
+
+// GUIDING PRINCIPALES SECTION START
+.guidingprinciples {
+    padding: length(80) length(0);
+    background: $footerBg;
+
+    @include breakpoint(tablet991) {
+        padding: length(40) length(0);
+    }
+
+    &-content {
+        @include flex-center-column;
+        gap: length(80);
+
+        @include breakpoint(tablet991) {
+            gap: length(40);
+        }
+    }
+
+    &-header {
+        @include flex-center-column;
+        gap: length(24);
+        text-align: center;
+
+        .guidingtitle {
+            color: $gray-800;
+
+            @include breakpoint(tablet991) {
+                @include heading-2;
+            }
+        }
+
+        .guidingtext {
+            @include font-30-18-normal;
+            color: $gray-600;
+        }
+    }
+
+    &-body {}
+}
+
+// GUIDING PRINCIPALES SECTION END
+
+// CAREER JOINTEAM SECTION START
+.careerjointeam {
+    background: $white;
+    padding: length(80) length(0);
+
+    @include breakpoint(tablet991) {
+        padding: length(40) length(0);
+    }
+
+    &-details {
+        @include flex-column;
+        gap: length(16);
+
+        @include breakpoint(tablet991) {
+            align-items: center;
+            text-align: center;
+            margin-bottom: length(24);
+        }
+
+        .jointeamtitle {
+            color: $gray-800;
+
+            @include breakpoint(tablet991) {
+                @include heading-2;
+            }
+        }
+
+        .joininfo {
+            margin-bottom: length(24);
+
+            .jointext {
+                @include font-26-16-normal;
+                color: $gray-600;
+            }
+        }
+
+        .seepositions {
+            width: length(242);
+        }
+    }
+
+    &-videobox {
+        @include w100;
+        height: length(424);
+        overflow: hidden;
+        @include radius(8);
+        position: relative;
+
+        @include breakpoint(phone768) {
+            height: length(340);
+        }
+
+        img {
+            @include wh100;
+            object-fit: cover;
+            @include transitiontransform;
+        }
+
+        .btn-playpause {
+            @include square(length(144));
+            @include circle;
+            overflow: hidden;
+            @include flex-center;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            @include transform(translate(-50%, -50%));
+            @include transparent-button;
+
+            @include breakpoint(desktop1200) {
+                @include square(length(100));
+            }
+
+            @include breakpoint(phone768) {
+                @include square(length(80));
+            }
+
+            svg {
+                @include wh100;
+            }
+        }
+    }
+}
+
+// CAREER JOINTEAM SECTION END

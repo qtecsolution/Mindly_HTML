@@ -1,0 +1,100 @@
+.wheel {
+    @include square(length(648));
+    position: relative;
+    transform: rotate(90deg) scale(.8) translateZ(0px);
+    opacity: 1;
+}
+
+.semi {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 47.5%;
+    height: 47.5%;
+    overflow: hidden;
+    transform: scale(1) translatez(0px);
+
+    &.active {
+        .semicircle {
+            background: $primary;
+        }
+    }
+}
+
+.semi .semicircle {
+    height: 100%;
+    background-size: cover;
+    transition: opacity .5s;
+    border-radius: inherit;
+    opacity: 1;
+    transform: translatez(0px);
+}
+
+.semi:nth-child(1) {
+    border-radius: 40vmin 0 0 0;
+    transform-origin: 110% 110%;
+    transition: transform .4s .15s;
+}
+
+.semi:nth-child(1) .semicircle {
+    background: white;
+    @include border(solid, 3, $primary);
+}
+
+.semi:nth-child(2) {
+    border-radius: 0 40vmin 0 0;
+    left: 52.5%;
+    transform-origin: -10% 110%;
+    transition: transform .4s .2s;
+}
+
+.semi:nth-child(2) .semicircle {
+    @include border(solid, 3, $secondary);
+}
+
+.semi:nth-child(3) {
+    border-radius: 0 0 0 40vmin;
+    top: 52.5%;
+    transform-origin: 110% -10%;
+    transition: transform .4s .25s;
+    border: solid 1px rgb(9, 255, 0);
+}
+
+.semi:nth-child(3) .semicircle {
+    border: solid 1px rgb(0, 204, 255);
+}
+
+.semi:nth-child(4) {
+    border-radius: 0 0 40vmin 0;
+    top: 52.5%;
+    left: 52.5%;
+    transform-origin: -10% -10%;
+    transition: transform .4s .3s;
+}
+
+.semi:nth-child(4) .semicircle {
+    border: solid 1px rgb(255, 238, 0);
+}
+
+.semi:nth-child(5) {
+    width: 55%;
+    height: 55%;
+    left: 22.5%;
+    top: 22.5%;
+    border-radius: 50vmin;
+    transform: scale(1);
+    @include border(solid, 3, $tertiary);
+}
+
+.semi:nth-child(5) .fullcircle {
+    background-image: url('https://farm4.staticflickr.com/3766/12953056854_b8cdf14f21.jpg');
+    transform: rotate(-90deg);
+    @include wh100;
+}
+
+.icontext {
+    position: absolute;
+    top: 55%;
+    left: 55%;
+    @include transform(translate(-50%, -50%) rotate(272deg));
+}

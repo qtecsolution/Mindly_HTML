@@ -2,18 +2,30 @@
     border-left: 0;
 }
 
-.offcanvas-start {
-    border-right: 0;
+.offcanvas-top {
+    height: 100vh;
 }
 
 .offcanvas {
-    width: length(320);
+    width: 100%;
 
     &-header {
-        padding: length(16) length(24);
+        padding: length(42) length(32);
+
+        .brandlink {
+            width: length(158);
+            height: length(34);
+            overflow: hidden;
+            @include flex-center;
+
+            img {
+                @include wh100;
+                object-fit: cover;
+            }
+        }
 
         .btn-close {
-            @include square(length(24));
+            @include square(length(36));
             background: transparent;
             margin: 0;
             padding: 0;
@@ -21,18 +33,32 @@
             opacity: 1;
 
             svg {
-                @include transitions;
+                @include transitiontransform;
+
+                path {
+                    @include transitions;
+                }
             }
 
             &:focus {
                 box-shadow: none;
                 outline: none;
             }
+
+            @include hover {
+                svg {
+                    @include transform(rotate(90deg));
+
+                    path {
+                        fill: $tertiary;
+                    }
+                }
+            }
         }
     }
 
     &-body {
-        padding: length(24);
+        padding: length(0) length(32) length(64);
 
         &::-webkit-scrollbar {
             background: transparent;
@@ -42,6 +68,136 @@
         &::-webkit-scrollbar-thumb {
             background: $primary;
             @include radius(8);
+        }
+
+        .mobilemenu {
+            @include list-vertical;
+
+            .accordion {
+                &-item {
+                    @include radius(0);
+                    border: none;
+                }
+
+                &-button {
+                    @include font-14-14-semibold;
+                    color: $gray-700;
+                    padding: length(16);
+                    @include w100;
+                    border: none;
+
+                    &:not(.collapsed) {
+                        background: $footerBg;
+                        box-shadow: none;
+
+                        &::after {
+                            background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23F94E26'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
+                        }
+                    }
+
+                    &:focus {
+                        border: none;
+                        outline: 0;
+                        box-shadow: none;
+                        background: $footerBg;
+                    }
+
+                    @include hover {
+                        @include setBgColor($footerBg, $tertiary);
+
+                        &::after {
+                            background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23F94E26'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
+                        }
+                    }
+                }
+
+                &-body {
+                    background: $mobileDropdownBg;
+                    padding: length(0);
+
+                    .sublink {
+                        @include font-14-14-semibold;
+                        color: $gray-700;
+                        padding: length(16);
+                        @include w100;
+
+                        @include hover {
+                            @include setBgColor($footerBg, $tertiary);
+                        }
+                    }
+                }
+            }
+
+            &-link {
+                @include font-14-14-semibold;
+                color: $gray-700;
+                padding: length(16);
+                @include w100;
+
+                @include hover {
+                    @include setBgColor($footerBg, $tertiary);
+                }
+            }
+
+            &-auth {
+                padding: length(0) length(16);
+                margin-top: length(32);
+
+                .withoutlogin {
+                    @include flex-center;
+                    gap: length(16);
+
+                    .signup {
+                        width: length(150);
+                        height: length(46);
+                        @include border(solid, 1, $tertiary);
+                        @include radius(8);
+                        @include setBgColor($tertiary, $white);
+                        @include flex-center;
+                        @include font-14-14-semibold;
+                        @include transitions;
+                        text-align: center;
+
+                        @include hover {
+                            @include setBgColor(darken($tertiary, 20%), $white);
+                        }
+                    }
+
+                    .signin {
+                        width: length(150);
+                        height: length(46);
+                        @include setBgColor($white, $tertiary);
+                        @include border(solid, 1, $tertiary);
+                        @include radius(8);
+                        @include font-14-14-semibold;
+                        @include flex-center;
+                        @include transitions;
+                        text-align: center;
+
+                        @include hover {
+                            @include setBgColor($tertiary, $white);
+                        }
+                    }
+                }
+
+                .withlogin {
+                    .logout {
+                        width: length(150);
+                        height: length(46);
+                        @include setBgColor($white, $tertiary);
+                        @include border(solid, 1, $tertiary);
+                        @include radius(8);
+                        @include font-14-14-semibold;
+                        @include flex-center;
+                        @include transitions;
+                        text-align: center;
+
+                        @include hover {
+                            @include setBgColor($tertiary, $white);
+                        }
+                    }
+                }
+            }
         }
     }
 }

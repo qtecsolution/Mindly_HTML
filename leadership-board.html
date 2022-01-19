@@ -43,21 +43,25 @@
                 <!-- HAMBURGER MENU END -->
 
                 <!-- MOBILE MENU START -->
-                <div class="offcanvas offcanvas-start" tabindex="-1" id="mobileSidebar" aria-labelledby="mobileSidebar">
+                <div class="offcanvas offcanvas-top" tabindex="-1" id="mobileSidebar" aria-labelledby="mobileSidebar">
+                    <!-- OFFCANVAS HEADER START -->
                     <div class="offcanvas-header">
                         <a href="index.html" class="brandlink">
                             <img src="assets/images/logo/logo.svg" alt="logo">
                         </a>
 
                         <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close">
-                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M10 20C4.477 20 0 15.523 0 10C0 4.477 4.477 0 10 0C15.523 0 20 4.477 20 10C20 15.523 15.523 20 10 20ZM10 18C12.1217 18 14.1566 17.1571 15.6569 15.6569C17.1571 14.1566 18 12.1217 18 10C18 7.87827 17.1571 5.84344 15.6569 4.34315C14.1566 2.84285 12.1217 2 10 2C7.87827 2 5.84344 2.84285 4.34315 4.34315C2.84285 5.84344 2 7.87827 2 10C2 12.1217 2.84285 14.1566 4.34315 15.6569C5.84344 17.1571 7.87827 18 10 18ZM10 8.586L12.828 5.757L14.243 7.172L11.414 10L14.243 12.828L12.828 14.243L10 11.414L7.172 14.243L5.757 12.828L8.586 10L5.757 7.172L7.172 5.757L10 8.586Z" fill="#718096"/>
+                            <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M18.0001 15.8781L25.4251 8.45312L27.5461 10.5741L20.1211 17.9991L27.5461 25.4241L25.4251 27.5451L18.0001 20.1201L10.5751 27.5451L8.4541 25.4241L15.8791 17.9991L8.4541 10.5741L10.5751 8.45312L18.0001 15.8781Z" fill="#A0AEC0"/>
                             </svg>
                         </button>
                     </div>
+                    <!-- OFFCANVAS HEADER END -->
 
+                    <!-- OFFCANVAS BODY START -->
                     <div class="offcanvas-body">
                         <ul class="mobilemenu">
+                            <!-- MOBILE DROPDOWN START -->
                             <div class="accordion" id="servicesDropdown">
                                 <div class="accordion-item">
                                     <h2 class="accordion-header" id="heading-1">
@@ -74,6 +78,7 @@
                                     </div>
                                 </div>
                             </div>
+                            <!-- MOBILE DROPDOWN END -->
 
                             <li class="mobilemenu-item">
                                 <a href="providers.html" class="mobilemenu-link">For Providers</a>
@@ -94,8 +99,26 @@
                             <li class="mobilemenu-item">
                                 <a href="about.html" class="mobilemenu-link">About</a>
                             </li>
+
+                            <!-- MOBILE AUTHENTICATION START -->
+                            <div class="mobilemenu-auth">
+                                <!-- WITHOUT LOGIN START -->
+                                <div class="withoutlogin">
+                                    <a href="signup.html" class="signup">Sign Up</a>
+                                    <a href="signin.html" class="signin">Sign In</a>
+                                </div>
+                                <!-- WITHOUT LOGIN START -->
+                                
+                                <!-- WITH LOGIN START -->
+                                <div class="withlogin d-none">
+                                    <a href="signin.html" class="logout">Log Out</a>
+                                </div>
+                                <!-- WITH LOGIN END -->
+                            </div>
+                            <!-- MOBILE AUTHENTICATION END -->
                         </ul>
                     </div>
+                    <!-- OFFCANVAS BODY END -->
                 </div>
                 <!-- MOBILE MENU END -->
 
