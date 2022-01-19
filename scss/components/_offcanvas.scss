@@ -8,7 +8,7 @@
 }
 
 .offcanvas {
-    width: 100%;
+    @include w100;
 
     &-header {
         padding: length(42) length(32);
