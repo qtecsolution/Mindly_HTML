@@ -4698,6 +4698,7 @@ h6 {
 
 .offcanvas-body .mobilemenu .accordion-button:not(.collapsed) {
   background: #FFF7E6;
+  color: #F94E26;
   -webkit-box-shadow: none;
           box-shadow: none;
 }
@@ -4772,10 +4773,8 @@ h6 {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
   gap: 1rem;
+  width: 100%;
 }
 
 .offcanvas-body .mobilemenu-auth .withoutlogin .signup {

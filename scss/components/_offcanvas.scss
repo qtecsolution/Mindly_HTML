@@ -89,6 +89,7 @@
 
                     &:not(.collapsed) {
                         background: $footerBg;
+                        color: $tertiary;
                         box-shadow: none;
 
                         &::after {
@@ -145,8 +146,9 @@
                 margin-top: length(32);
 
                 .withoutlogin {
-                    @include flex-center;
+                    @include flex-center-vert;
                     gap: length(16);
+                    @include w100;
 
                     .signup {
                         width: length(150);
