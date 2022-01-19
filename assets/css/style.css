@@ -4571,6 +4571,7 @@ h6 {
 
 .offcanvas-top {
   height: 100vh;
+  border-bottom: none;
 }
 
 .offcanvas {
