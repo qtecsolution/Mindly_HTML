@@ -2258,6 +2258,7 @@ h6 {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  cursor: pointer;
   gap: 1rem;
   padding: 1.5rem;
   background: #ffffff;
@@ -2469,17 +2470,31 @@ h6 {
       -ms-flex-direction: column;
           flex-direction: column;
   gap: 0.75rem;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 87.4375rem) {
+  .cardpackage {
+    padding: 3rem;
+  }
 }
 
 @media screen and (max-width: 74.9375rem) {
   .cardpackage {
-    padding: 1.5rem;
+    padding: 1.5rem 1.5rem 3rem;
   }
 }
 
 @media screen and (max-width: 61.9375rem) {
   .cardpackage {
-    padding: 1rem;
+    padding: 1rem 1rem 2rem;
+  }
+}
+
+@media screen and (max-width: 31.1875rem) {
+  .cardpackage {
+    max-width: 21.25rem;
+    margin-inline: auto;
   }
 }
 
@@ -2511,8 +2526,32 @@ h6 {
   letter-spacing: -0.005rem;
 }
 
+@media screen and (max-width: 48rem) {
+  .cardpackage-header .headerinfos .packagetitle {
+    font-size: 0.9375rem;
+  }
+}
+
+@media screen and (max-width: 30rem) {
+  .cardpackage-header .headerinfos .packagetitle {
+    font-size: 1.125rem;
+  }
+}
+
 .cardpackage-header .headerinfos .packageprice {
   color: #4A5568;
+}
+
+@media screen and (max-width: 48rem) {
+  .cardpackage-header .headerinfos .packageprice {
+    font-size: 1rem;
+  }
+}
+
+@media screen and (max-width: 30rem) {
+  .cardpackage-header .headerinfos .packageprice {
+    font-size: 1.5rem;
+  }
 }
 
 .cardpackage-header .headerinfos .packagedurations {
@@ -2537,6 +2576,13 @@ h6 {
       -ms-flex-pack: center;
           justify-content: center;
   overflow: hidden;
+}
+
+@media screen and (max-width: 35.9375rem) {
+  .cardpackage-header .icon {
+    width: 2.5rem;
+    height: 3rem;
+  }
 }
 
 .cardpackage-body {
@@ -2592,6 +2638,28 @@ h6 {
   color: #4A5568;
 }
 
+@media screen and (max-width: 48rem) {
+  .cardpackage-body .packagelist-item .packageinfo .packagetext {
+    font-size: 0.75rem;
+  }
+}
+
+@media screen and (max-width: 35.9375rem) {
+  .cardpackage-body .packagelist-item .packageinfo .packagetext {
+    font-size: 0.6875rem;
+  }
+}
+
+@media screen and (max-width: 30rem) {
+  .cardpackage-body .packagelist-item .packageinfo .packagetext {
+    font-family: "Gilroy";
+    font-style: normal;
+    font-size: 0.875rem;
+    font-weight: normal;
+    line-height: 1.71429;
+  }
+}
+
 .cardpackage-footer {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -2629,6 +2697,18 @@ h6 {
   transition: all 250ms ease-in-out;
 }
 
+@media screen and (max-width: 35.9375rem) {
+  .cardpackage-footer .btn-membership {
+    padding: 0.75rem 1rem;
+  }
+}
+
+@media screen and (max-width: 30rem) {
+  .cardpackage-footer .btn-membership {
+    padding: 1rem 1.5rem;
+  }
+}
+
 .cardpackage-footer .btn-membership .text {
   font-family: "Gilroy";
   font-style: normal;
@@ -2637,6 +2717,16 @@ h6 {
   line-height: 1;
   color: #ffffff;
   text-transform: uppercase;
+}
+
+@media screen and (max-width: 35.9375rem) {
+  .cardpackage-footer .btn-membership .text {
+    font-family: "Gilroy";
+    font-style: normal;
+    font-size: 0.75rem;
+    font-weight: 600;
+    line-height: 1;
+  }
 }
 
 .cardpackage-footer .btn-membership .icon {
@@ -2676,6 +2766,7 @@ h6 {
 
 .card-doctor {
   background: #ffffff;
+  cursor: pointer;
   border-radius: 0.9375rem;
   border-radius: 0.9375rem;
   padding: 1.75rem 1.625rem 1.875rem;
@@ -2870,6 +2961,7 @@ h6 {
   text-align: center;
   background: #ffffff;
   padding: 1rem;
+  cursor: pointer;
 }
 
 .cardreview .reviewlist {
@@ -2998,7 +3090,13 @@ h6 {
   border-radius: 0.625rem;
   border-radius: 0.625rem;
   height: 12.5rem;
-  width: 12.5rem;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 31.1875rem) {
+  .cardclient {
+    width: 100%;
+  }
 }
 
 .cardclient img {
@@ -4522,54 +4620,32 @@ h6 {
           box-shadow: none;
 }
 
-.owl-nav {
-  margin: 0rem !important;
-  width: 100%;
-  height: 3rem;
-  position: absolute;
-  top: 50%;
-  -webkit-transform: translateY(-50%);
-  transform: translateY(-50%);
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  align-items: center;
+.swiper-button-prev::after {
+  content: url("data:image/svg+xml,%3Csvg width='36' height='36' viewBox='0 0 36 36' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M4.125 11.4989L4.125 24.5024C4.125 29.0324 7.3335 31.8749 11.874 31.8749L24.126 31.8749C28.6665 31.8749 31.875 29.0474 31.875 24.5024L31.875 11.4989C31.875 6.95388 28.6665 4.12488 24.126 4.12488L11.874 4.12488C7.3335 4.12488 4.125 6.95388 4.125 11.4989Z' stroke='%23B7DBD1' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M11.8709 17.9999L24.1289 17.9999' stroke='%23B7DBD1' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M17.5156 23.6219L11.8696 17.9999L17.5156 12.3779' stroke='%23B7DBD1' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
 }
 
-.owl-prev,
-.owl-next {
-  margin: 0rem !important;
-  height: 3rem;
-  width: 3rem;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  overflow: hidden;
+.swiper-button-prev:not([disabled]):hover::after {
+  content: url("data:image/svg+xml,%3Csvg width='36' height='36' viewBox='0 0 36 36' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M4.125 11.4989L4.125 24.5024C4.125 29.0324 7.3335 31.8749 11.874 31.8749L24.126 31.8749C28.6665 31.8749 31.875 29.0474 31.875 24.5024L31.875 11.4989C31.875 6.95388 28.6665 4.12488 24.126 4.12488L11.874 4.12488C7.3335 4.12488 4.125 6.95388 4.125 11.4989Z' stroke='%23409E85' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M11.8709 17.9999L24.1289 17.9999' stroke='%23409E85' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M17.5156 23.6219L11.8696 17.9999L17.5156 12.3779' stroke='%23409E85' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
 }
 
-.owl-prev:hover,
-.owl-next:hover {
-  background: transparent !important;
+@media screen and (max-width: 61.9375rem) {
+  .swiper-button-prev {
+    display: none;
+  }
 }
 
-.owl-prev {
-  margin-left: -3rem !important;
+.swiper-button-next::after {
+  content: url("data:image/svg+xml,%3Csvg width='36' height='36' viewBox='0 0 36 36' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M31.875 24.5011L31.875 11.4976C31.875 6.96762 28.6665 4.12512 24.126 4.12512L11.874 4.12512C7.3335 4.12512 4.125 6.95262 4.125 11.4976L4.125 24.5011C4.125 29.0461 7.3335 31.8751 11.874 31.8751L24.126 31.8751C28.6665 31.8751 31.875 29.0461 31.875 24.5011Z' stroke='%23B7DBD1' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M24.1291 18.0001L11.8711 18.0001' stroke='%23B7DBD1' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M18.4844 12.3781L24.1304 18.0001L18.4844 23.6221' stroke='%23B7DBD1' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
 }
 
-.owl-next {
-  margin-right: -3rem !important;
+.swiper-button-next:not([disabled]):hover::after {
+  content: url("data:image/svg+xml,%3Csvg width='36' height='36' viewBox='0 0 36 36' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M31.875 24.5011L31.875 11.4976C31.875 6.96762 28.6665 4.12512 24.126 4.12512L11.874 4.12512C7.3335 4.12512 4.125 6.95262 4.125 11.4976L4.125 24.5011C4.125 29.0461 7.3335 31.8751 11.874 31.8751L24.126 31.8751C28.6665 31.8751 31.875 29.0461 31.875 24.5011Z' stroke='%23409E85' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M24.1291 18.0001L11.8711 18.0001' stroke='%23409E85' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M18.4844 12.3781L24.1304 18.0001L18.4844 23.6221' stroke='%23409E85' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+}
+
+@media screen and (max-width: 61.9375rem) {
+  .swiper-button-next {
+    display: none;
+  }
 }
 
 .offcanvas-end {
@@ -6249,22 +6325,14 @@ h6 {
   }
 }
 
-.mindlycharacteristics-content .mobile-characteristics {
+.mindlycharacteristics-content .mobilecharacteristic {
   display: none;
 }
 
-@media screen and (max-width: 48rem) {
-  .mindlycharacteristics-content .mobile-characteristics {
+@media screen and (max-width: 61.9375rem) {
+  .mindlycharacteristics-content .mobilecharacteristic {
     display: block;
   }
-}
-
-.mindlycharacteristics-content .mobile-characteristics .slideritem {
-  overflow: hidden;
-}
-
-.mindlycharacteristics-content .mobile-characteristics .owl-item {
-  min-width: 14.375rem;
 }
 
 .mindlypackages {
@@ -6378,7 +6446,7 @@ h6 {
 }
 
 .mindlydoctors-content .seeallinfo {
-  width: 100%;
+  width: 12.5rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -6390,7 +6458,7 @@ h6 {
           justify-content: center;
 }
 
-@media screen and (max-width: 48rem) {
+@media screen and (max-width: 61.9375rem) {
   .mindlydoctors-content .seeallinfo {
     display: none;
   }
@@ -6422,7 +6490,7 @@ h6 {
   display: none;
 }
 
-@media screen and (max-width: 48rem) {
+@media screen and (max-width: 61.9375rem) {
   .mindlydoctors-content .mobiledoclist {
     display: block;
   }
@@ -7290,6 +7358,7 @@ h6 {
 
 .ourclients-header .clientstitle {
   color: #ffffff;
+  text-align: center;
 }
 
 @media screen and (max-width: 61.9375rem) {

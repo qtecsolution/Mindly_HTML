@@ -9,6 +9,7 @@ $breakpoints: (break-320: 320,
     break-414: 414,
     break-480: 480,
     break-500: 500,
+    break-499: 499,
     break-575: 575,
     break-600: 600,
     break-700: 700,
@@ -98,6 +99,12 @@ $breakpoints: (break-320: 320,
 
     @else if $breakpoints==phone575 {
         @media screen and (max-width: break(break-575)) {
+            @content;
+        }
+    }
+
+    @else if $breakpoints==phone499 {
+        @media screen and (max-width: break(break-499)) {
             @content;
         }
     }
@@ -328,6 +335,7 @@ $breakpoints: (break-320: 320,
 // @include breakpoint(phone768) {}
 // @include breakpoint(phone575) {}
 // @include breakpoint(phone500) {}
+// @include breakpoint(phone499) {}
 // @include breakpoint(phone480) {}
 // @include breakpoint(phone414) {}
 // @include breakpoint(mobile400) {}

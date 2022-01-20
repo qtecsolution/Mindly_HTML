@@ -343,20 +343,11 @@
             }
         }
 
-        .mobile-characteristics {
+        .mobilecharacteristic {
             display: none;
 
-            @include breakpoint(phone768) {
+            @include breakpoint(tablet991) {
                 display: block;
-            }
-
-            .slideritem {
-                overflow: hidden;
-            }
-
-            .owl-item {
-                min-width: length(230);
-                // height: length(320) !important;
             }
         }
     }
@@ -426,10 +417,10 @@
         }
 
         .seeallinfo {
-            @include w100;
+            width: length(200);
             @include flex-center;
 
-            @include breakpoint(phone768) {
+            @include breakpoint(tablet991) {
                 display: none;
             }
 
@@ -451,7 +442,7 @@
         .mobiledoclist {
             display: none;
 
-            @include breakpoint(phone768) {
+            @include breakpoint(tablet991) {
                 display: block;
             }
         }
@@ -968,6 +959,7 @@
     &-header {
         .clientstitle {
             color: $white;
+            text-align: center;
 
             @include breakpoint(tablet991) {
                 @include heading-2;

@@ -1,6 +1,7 @@
 // CHARACTERISTIC CARD START
 .cardcharacteristic {
     @include flex-column;
+    cursor: pointer;
     gap: length(16);
     padding: length(24);
     background: $white;
@@ -125,13 +126,23 @@
     @include radius(15);
     @include flex-center-column;
     gap: length(12);
+    cursor: pointer;
+
+    @include breakpoint(desktop1400) {
+        padding: length(48);
+    }
 
     @include breakpoint(desktop1199) {
-        padding: length(24);
+        padding: length(24) length(24) length(48);
     }
 
     @include breakpoint(tablet991) {
-        padding: length(16);
+        padding: length(16) length(16) length(32);
+    }
+
+    @include breakpoint(phone499) {
+        max-width: length(340);
+        margin-inline: auto;
     }
 
     &-header {
@@ -146,10 +157,26 @@
                 @include font-21-18-bold;
                 color: $secondary;
                 letter-spacing: length(-0.08);
+
+                @include breakpoint(phone768) {
+                    font-size: length(15);
+                }
+
+                @include breakpoint(phone480) {
+                    font-size: length(18);
+                }
             }
 
             .packageprice {
                 color: $gray-700;
+
+                @include breakpoint(phone768) {
+                    font-size: length(16);
+                }
+
+                @include breakpoint(phone480) {
+                    font-size: length(24);
+                }
             }
 
             .packagedurations {
@@ -163,6 +190,11 @@
             height: length(74);
             @include flex-center;
             overflow: hidden;
+
+            @include breakpoint(phone575) {
+                width: length(40);
+                height: length(48);
+            }
         }
     }
 
@@ -189,6 +221,18 @@
                     .packagetext {
                         @include font-26-16-normal;
                         color: $gray-700;
+
+                        @include breakpoint(phone768) {
+                            font-size: length(12)
+                        }
+
+                        @include breakpoint(phone575) {
+                            font-size: length(11)
+                        }
+
+                        @include breakpoint(phone480) {
+                            @include font-24-14-normal;
+                        }
                     }
                 }
             }
@@ -207,10 +251,22 @@
             @include setBgColor($tertiary, $white);
             @include transitions;
 
+            @include breakpoint(phone575) {
+                padding: length(12) length(16);
+            }
+
+            @include breakpoint(phone480) {
+                padding: length(16) length(24);
+            }
+
             .text {
                 @include font-14-14-semibold;
                 color: $white;
                 text-transform: uppercase;
+
+                @include breakpoint(phone575) {
+                    @include font-12-12-semibold;
+                }
             }
 
             .icon {
@@ -243,6 +299,7 @@
 // CARD DOCTOR START
 .card-doctor {
     background: $white;
+    cursor: pointer;
     @include radius(15);
     padding: length(28) length(26) length(30);
     overflow: hidden;
@@ -362,6 +419,7 @@
     text-align: center;
     background: $white;
     padding: length(16);
+    cursor: pointer;
 
     .reviewlist {
         @include list-horizontal;
@@ -433,7 +491,12 @@
     background: $clientBg;
     padding: length(10);
     @include radius(10);
-    @include square(length(200));
+    height: length(200);
+    cursor: pointer;
+
+    @include breakpoint(phone499) {
+        @include w100;
+    }
 
     img {
         max-width: 100%;
