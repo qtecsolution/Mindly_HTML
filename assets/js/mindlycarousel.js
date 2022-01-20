@@ -157,4 +157,47 @@ var mobiledoctors = new Swiper(".swiper-mobiledoctors", {
         }
     }
 });
+
+/**======================================== **/
+//              MOBILE-SERVICES              //
+/**======================================== **/
+var mobileservices = new Swiper(".swiper-mobileservices", {
+    loop: true,
+    autoplay: {
+        delay: 3000,
+    },
+    breakpoints: {  
+        '499': {
+            slidesPerView: 1,
+        },
+        '575': {
+            slidesPerView: 2,
+            spaceBetween: 16
+        }
+    }
+});
+    
+
+/**======================================== **/
+//              REVIEW SLIDER              //
+/**======================================== **/
+var userreview = new Swiper(".swiper-userreview", {
+    loop: true,
+    autoplay: {
+        delay: 4000,
+    },
+    breakpoints: {  
+        '499': {
+            slidesPerView: 1,
+        },
+        '768': {
+            slidesPerView: 2,
+            spaceBetween: 16
+        },
+        '991': {
+            slidesPerView: 3,
+            spaceBetween: 16
+        }
+    }
+});
     

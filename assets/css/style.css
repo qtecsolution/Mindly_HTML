@@ -2394,6 +2394,7 @@ h6 {
   gap: 1rem;
   padding: 1.5rem;
   background: #ffffff;
+  cursor: pointer;
   border-radius: 0.9375rem;
   border-radius: 0.9375rem;
   width: 100%;
@@ -5966,7 +5967,7 @@ h6 {
   overflow: hidden;
   margin-top: -14.25rem;
   position: relative;
-  z-index: 100;
+  z-index: 200;
   padding-bottom: 10rem;
   display: none;
 }
@@ -8936,6 +8937,7 @@ h6 {
 
 .ourbrands-header .brandstitle {
   color: #2D3748;
+  text-align: center;
 }
 
 @media screen and (max-width: 61.9375rem) {
@@ -10293,17 +10295,17 @@ h6 {
   color: #718096;
 }
 
-.mindlyservices-content .mobile-services {
+.mindlyservices-content .mobileservices {
   display: none;
 }
 
-@media screen and (max-width: 48rem) {
-  .mindlyservices-content .mobile-services {
+@media screen and (max-width: 61.9375rem) {
+  .mindlyservices-content .mobileservices {
     display: block;
   }
 }
 
-.mindlyservices-content .mobile-services .slideritem {
+.mindlyservices-content .mobileservices .slideritem {
   overflow: hidden;
 }
 
@@ -10440,6 +10442,10 @@ h6 {
 .conversations .conversation-thumbnail img:not([disabled]):hover {
   -webkit-transform: scale(1.05);
   transform: scale(1.05);
+}
+
+.appointment {
+  padding-bottom: 0rem;
 }
 
 .blog {

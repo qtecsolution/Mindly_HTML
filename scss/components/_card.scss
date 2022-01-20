@@ -85,6 +85,7 @@
     gap: length(16);
     padding: length(24);
     background: $white;
+    cursor: pointer;
     @include radius(15);
     @include w100;
 

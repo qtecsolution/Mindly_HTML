@@ -189,6 +189,7 @@
     &-header {
         .brandstitle {
             color: $gray-800;
+            text-align: center;
 
             @include breakpoint(tablet991) {
                 @include heading-2;

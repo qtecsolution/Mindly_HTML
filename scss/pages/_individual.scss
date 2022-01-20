@@ -225,10 +225,10 @@
             }
         }
 
-        .mobile-services {
+        .mobileservices {
             display: none;
 
-            @include breakpoint(phone768) {
+            @include breakpoint(tablet991) {
                 display: block;
             }
 
@@ -329,3 +329,7 @@
 }
 
 // CONVERSATIONS SECTION END
+
+.appointment {
+    padding-bottom: length(0);
+}
