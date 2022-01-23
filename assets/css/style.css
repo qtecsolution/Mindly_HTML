@@ -3480,6 +3480,15 @@ h6 {
   color: #F94E26;
 }
 
+@media screen and (max-width: 31.1875rem) {
+  .cardfeatured-body .featuredlink .link {
+    text-align: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
 .featuredlink:not([disabled]):hover .cardfeatured-body .featuredlink .link {
   color: #F94E26;
 }
@@ -3679,6 +3688,26 @@ h6 {
   color: #2D3748;
 }
 
+@media screen and (max-width: 87.4375rem) {
+  .cardteam-body .cardtitle {
+    font-family: "Gilroy";
+    font-style: normal;
+    font-size: 1rem;
+    font-weight: 600;
+    line-height: 1.36;
+  }
+}
+
+@media screen and (max-width: 61.9375rem) {
+  .cardteam-body .cardtitle {
+    font-family: "Gilroy";
+    font-style: normal;
+    font-size: 1.25rem;
+    font-weight: 600;
+    line-height: 1.36;
+  }
+}
+
 .cardteam-body .cardtext {
   font-family: "Gilroy";
   font-style: normal;
@@ -3686,10 +3715,50 @@ h6 {
   font-weight: normal;
   line-height: 1.625;
   color: #718096;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: 3;
+}
+
+@media screen and (max-width: 87.4375rem) {
+  .cardteam-body .cardtext {
+    font-family: "Gilroy";
+    font-style: normal;
+    font-size: 0.875rem;
+    font-weight: normal;
+    line-height: 1.71429;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -webkit-line-clamp: 4;
+  }
+}
+
+@media screen and (max-width: 61.9375rem) {
+  .cardteam-body .cardtext {
+    font-family: "Gilroy";
+    font-style: normal;
+    font-size: 1rem;
+    font-weight: normal;
+    line-height: 1.625;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -webkit-line-clamp: 3;
+  }
 }
 
 .cardchoose {
   position: relative;
+}
+
+.cardchoose img {
+  width: 100%;
+  height: 100%;
 }
 
 .cardchoose-action {
@@ -3717,6 +3786,12 @@ h6 {
           justify-content: center;
   border-radius: 100%;
   overflow: hidden;
+}
+
+@media screen and (max-width: 31.1875rem) {
+  .cardchoose {
+    text-align: center;
+  }
 }
 
 .cardproviderwork {
@@ -4646,6 +4721,12 @@ h6 {
 @media screen and (max-width: 61.9375rem) {
   .swiper-button-next {
     display: none;
+  }
+}
+
+@media screen and (max-width: 31.1875rem) {
+  .featuredmobile .swiper-slide {
+    text-align: center;
   }
 }
 
@@ -9293,6 +9374,7 @@ h6 {
   align-items: center;
   left: auto;
   right: 41%;
+  margin-top: 0rem;
 }
 
 @media screen and (max-width: 87.4375rem) {
@@ -9321,6 +9403,23 @@ h6 {
 .providerinfo-content .providerinfo-body .providerinfo-slider .owl-nav .owl-prev,
 .providerinfo-content .providerinfo-body .providerinfo-slider .owl-nav .owl-next {
   margin: 0rem !important;
+}
+
+.providerinfo-content .providerinfo-body .providerinfo-slider .owl-nav .owl-prev svg path,
+.providerinfo-content .providerinfo-body .providerinfo-slider .owl-nav .owl-next svg path {
+  stroke: #B7DBD1;
+  -webkit-transition: all 250ms ease-in-out;
+  transition: all 250ms ease-in-out;
+}
+
+.providerinfo-content .providerinfo-body .providerinfo-slider .owl-nav .owl-prev:not([disabled]):hover,
+.providerinfo-content .providerinfo-body .providerinfo-slider .owl-nav .owl-next:not([disabled]):hover {
+  background: transparent;
+}
+
+.providerinfo-content .providerinfo-body .providerinfo-slider .owl-nav .owl-prev:not([disabled]):hover svg path,
+.providerinfo-content .providerinfo-body .providerinfo-slider .owl-nav .owl-next:not([disabled]):hover svg path {
+  stroke: #409E85;
 }
 
 .providerinfo-content .providerinfo-body .providerinfo-slider .owl-dots {
@@ -9477,6 +9576,384 @@ h6 {
 @media screen and (max-width: 35.9375rem) {
   .providerinfo-content .providerinfo-body .providerinfo-slider .owl-carousel .owl-item img {
     width: 100%;
+  }
+}
+
+.providersync {
+  background: #ffffff;
+  padding: 5rem 0rem;
+}
+
+@media screen and (max-width: 61.9375rem) {
+  .providersync {
+    padding: 2.5rem 0rem;
+  }
+}
+
+.providersync-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 2.5rem;
+}
+
+.providersync-header {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 1rem;
+  text-align: center;
+}
+
+.providersync-header .providersynctitle {
+  color: #2D3748;
+}
+
+@media screen and (max-width: 61.9375rem) {
+  .providersync-header .providersynctitle {
+    font-family: "Gilroy";
+    font-style: normal;
+    font-size: 1.75rem;
+    font-weight: 600;
+    line-height: 1.36;
+  }
+}
+
+.providersync-header .providersynctext {
+  font-family: "Gilroy";
+  font-style: normal;
+  font-size: 1.125rem;
+  font-weight: normal;
+  line-height: 1.66667;
+  color: #718096;
+}
+
+.providersync .sliderthumb {
+  width: 25.9375rem;
+  position: relative;
+  padding-bottom: 2.625rem;
+}
+
+.providersync .sliderthumb .overlay {
+  position: absolute;
+  width: 100%;
+  height: 60%;
+  background: #FFF7E6;
+  top: auto;
+  bottom: 0rem;
+  left: 0rem;
+  z-index: 1;
+  border-radius: 0.875rem;
+  border-radius: 0.875rem;
+}
+
+.providersync .slider-for {
+  position: relative;
+  z-index: 10;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background: url(../images/providers/sync-slider/outer-frame.png) no-repeat center center/contain;
+  margin-inline: auto;
+  padding: 1rem 0rem 0.75rem;
+  border-radius: 2.125rem;
+  border-radius: 2.125rem;
+}
+
+.providersync .slider-for .slide-thumb {
+  width: 15.3125rem;
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+  margin: 0 auto;
+}
+
+@media screen and (max-width: 61.9375rem) {
+  .providersync .slider-for .slide-thumb {
+    border-radius: 2.125rem;
+    border-radius: 2.125rem;
+  }
+}
+
+.providersync .slider-for .slide-thumb img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 2.125rem;
+  border-radius: 2.125rem;
+}
+
+.providersync .slider-for .slick-list {
+  border-radius: 2.125rem;
+  border-radius: 2.125rem;
+  width: 18rem;
+  overflow: hidden;
+}
+
+.providersync .slider-for .slick-list .slick-track .slick-slide {
+  border-radius: 2.125rem;
+  border-radius: 2.125rem;
+  overflow: hidden;
+}
+
+.providersync .slick-arrow {
+  height: 2.25rem;
+  width: 2.25rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  overflow: hidden;
+}
+
+.providersync .slick-arrow::before {
+  content: '';
+  font-size: 0rem;
+  display: none;
+}
+
+.providersync .slick-arrow svg path {
+  stroke: #B7DBD1;
+  -webkit-transition: all 250ms ease-in-out;
+  transition: all 250ms ease-in-out;
+}
+
+.providersync .slick-arrow:not([disabled]):hover svg path {
+  stroke: #409E85;
+}
+
+.providersync .slick-prev {
+  left: -2.25rem;
+}
+
+.providersync .slick-next {
+  right: -2.25rem;
+}
+
+@media screen and (max-width: 61.9375rem) {
+  .providersync .slider-nav {
+    margin-top: -1.875rem;
+    position: relative;
+    z-index: 120;
+  }
+}
+
+.providersync .slider-nav .slick-list {
+  padding: 0rem !important;
+  height: 100% !important;
+}
+
+.providersync .slider-nav .slick-slide {
+  width: 100%;
+}
+
+.providersync .slider-nav .slick-track {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 2.5rem;
+  height: 100% !important;
+}
+
+@media screen and (max-width: 61.9375rem) {
+  .providersync .slider-nav .slick-track {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    gap: 0rem;
+    width: 100%;
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 61.9375rem) {
+  .providersync .slider-nav .slick-track .slick-current .slide-item {
+    max-width: 100%;
+  }
+}
+
+.providersync .slider-nav .slick-track .slick-current .slide-item .indicatorinfo .itemcounter {
+  background: #FCAF15;
+}
+
+.providersync .slider-nav .slick-track .slick-current .slide-item .indicatorinfo .itemcounter .counter {
+  background: #01796F;
+}
+
+.providersync .slider-nav .slide-item {
+  cursor: pointer;
+  max-width: 26.9375rem;
+  overflow: hidden;
+}
+
+@media screen and (max-width: 61.9375rem) {
+  .providersync .slider-nav .slide-item {
+    max-width: 100%;
+  }
+}
+
+.providersync .slider-nav .slide-item .indicatorinfo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 1.5rem;
+}
+
+@media screen and (max-width: 61.9375rem) {
+  .providersync .slider-nav .slide-item .indicatorinfo {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    gap: 0.875rem;
+  }
+}
+
+.providersync .slider-nav .slide-item .indicatorinfo .itemcounter {
+  height: 5rem;
+  width: 5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border-radius: 100%;
+  background: #CBD5E0;
+}
+
+@media screen and (max-width: 61.9375rem) {
+  .providersync .slider-nav .slide-item .indicatorinfo .itemcounter {
+    height: 3.75rem;
+    width: 3.75rem;
+  }
+}
+
+.providersync .slider-nav .slide-item .indicatorinfo .itemcounter .counter {
+  background: #A0AEC0;
+  color: #ffffff;
+  height: 3.75rem;
+  width: 3.75rem;
+  font-family: "Gilroy";
+  font-style: normal;
+  font-size: 1.125rem;
+  font-weight: 700;
+  line-height: 1.66667;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
+  border-radius: 100%;
+}
+
+@media screen and (max-width: 61.9375rem) {
+  .providersync .slider-nav .slide-item .indicatorinfo .itemcounter .counter {
+    height: 2.5rem;
+    width: 2.5rem;
+  }
+}
+
+.providersync .slider-nav .slide-item .indicatorinfo .iteminfo {
+  width: calc(100% - 6.5rem);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 1rem;
+}
+
+@media screen and (max-width: 61.9375rem) {
+  .providersync .slider-nav .slide-item .indicatorinfo .iteminfo {
+    width: 100%;
+    gap: 0.5rem;
+    padding: 0rem 1.25rem;
+  }
+}
+
+.providersync .slider-nav .slide-item .indicatorinfo .iteminfo .itemtitle {
+  color: #2D3748;
+  letter-spacing: -0.005em;
+}
+
+@media screen and (max-width: 31.25rem) {
+  .providersync .slider-nav .slide-item .indicatorinfo .iteminfo .itemtitle {
+    font-family: "Gilroy";
+    font-style: normal;
+    font-size: 1rem;
+    font-weight: 600;
+    line-height: 1.625;
+  }
+}
+
+.providersync .slider-nav .slide-item .indicatorinfo .iteminfo .itemtext {
+  font-family: "Gilroy";
+  font-style: normal;
+  font-size: 1rem;
+  font-weight: normal;
+  line-height: 1.625;
+  color: #718096;
+}
+
+@media screen and (max-width: 31.25rem) {
+  .providersync .slider-nav .slide-item .indicatorinfo .iteminfo .itemtext {
+    font-family: "Gilroy";
+    font-style: normal;
+    font-size: 0.875rem;
+    font-weight: normal;
+    line-height: 1.71429;
   }
 }
 

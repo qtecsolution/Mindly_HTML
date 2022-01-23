@@ -9,7 +9,7 @@ var mobilecharacteristic = new Swiper(".swiper-mobilecharacteristic", {
     },
     breakpoints: {  
         '499': {
-            slidesPerView: 1,
+            slidesPerView: 1
         },
         '500': {
             slidesPerView: 2,
@@ -111,7 +111,7 @@ var mobileblogs = new Swiper(".swiper-mobileblogs", {
     },
     breakpoints: {  
         '499': {
-            slidesPerView: 1,
+            slidesPerView: 1
         },
         '500': {
             slidesPerView: 2,
@@ -130,7 +130,7 @@ var mobilepress = new Swiper(".swiper-mobilepress", {
     },
     breakpoints: {  
         '499': {
-            slidesPerView: 1,
+            slidesPerView: 1
         },
         '500': {
             slidesPerView: 2,
@@ -149,9 +149,66 @@ var mobiledoctors = new Swiper(".swiper-mobiledoctors", {
     },
     breakpoints: {  
         '499': {
-            slidesPerView: 1,
+            slidesPerView: 1
         },
         '500': {
+            slidesPerView: 2,
+            spaceBetween: 16
+        }
+    }
+});
+
+/**======================================== **/
+//             MOBILE-FEATURES               //
+/**======================================== **/
+var mobilefeature = new Swiper(".swiper-mobilefeatproject", {
+    loop: true,
+    autoplay: {
+        delay: 5000,
+    },
+    breakpoints: {  
+        '499': {
+            slidesPerView: 1
+        },
+        '500': {
+            slidesPerView: 2,
+            spaceBetween: 16
+        }
+    }
+});
+
+/**======================================== **/
+//             MOBILE-FEATURES               //
+/**======================================== **/
+var mobilefeature = new Swiper(".swiper-mobileteam", {
+    loop: true,
+    autoplay: {
+        delay: 5000,
+    },
+    breakpoints: {  
+        '499': {
+            slidesPerView: 1
+        },
+        '500': {
+            slidesPerView: 2,
+            spaceBetween: 16
+        }
+    }
+});
+
+/**======================================== **/
+//             MOBILE-CHOOSE               //
+/**======================================== **/
+var mobilefeature = new Swiper(".swiper-mobilechoose", {
+    loop: true,
+    autoplay: {
+        delay: 5000,
+    },
+    breakpoints: {  
+        '767': {
+            slidesPerView: 1
+        },
+        '768': {
             slidesPerView: 2,
             spaceBetween: 16
         }
@@ -168,7 +225,7 @@ var mobileservices = new Swiper(".swiper-mobileservices", {
     },
     breakpoints: {  
         '499': {
-            slidesPerView: 1,
+            slidesPerView: 1
         },
         '575': {
             slidesPerView: 2,
@@ -188,7 +245,7 @@ var userreview = new Swiper(".swiper-userreview", {
     },
     breakpoints: {  
         '499': {
-            slidesPerView: 1,
+            slidesPerView: 1
         },
         '768': {
             slidesPerView: 2,

@@ -52,6 +52,7 @@
                     @include flex-center-between;
                     left: auto;
                     right: 41%;
+                    margin-top: length(0);
 
                     @include breakpoint(desktop1400) {
                         right: 38%;
@@ -72,6 +73,23 @@
                     .owl-prev,
                     .owl-next {
                         margin: length(0) !important;
+
+                        svg {
+                            path {
+                                stroke: $arrowColor;
+                                @include transitions;
+                            }
+                        }
+
+                        @include hover {
+                            background: transparent;
+
+                            svg {
+                                path {
+                                    stroke: $arrowHoverColor;
+                                }
+                            }
+                        }
                     }
                 }
 
@@ -194,6 +212,260 @@
 }
 
 // PROVIDER SLIDER SECTION END
+
+// PROVIDER-SYNC SECTION START
+.providersync {
+    background: $white;
+    padding: length(80) length(0);
+
+    @include breakpoint(tablet991) {
+        padding: length(40) length(0);
+    }
+
+    &-content {
+        @include flex-center-column;
+        gap: length(40);
+    }
+
+    &-header {
+        @include w100;
+        @include flex-center-column;
+        gap: length(16);
+        text-align: center;
+
+        .providersynctitle {
+            color: $gray-800;
+
+            @include breakpoint(tablet991) {
+                @include heading-2;
+            }
+        }
+
+        .providersynctext {
+            @include font-30-18-normal;
+            color: $gray-600;
+        }
+    }
+
+    .sliderthumb {
+        width: length(415);
+        position: relative;
+        padding-bottom: length(42);
+
+        .overlay {
+            position: absolute;
+            width: 100%;
+            height: 60%;
+            background: $footerBg;
+            top: auto;
+            bottom: length(0);
+            left: length(0);
+            z-index: 1;
+            @include radius(14);
+        }
+    }
+
+    .slider-for {
+        position: relative;
+        z-index: 10;
+        @include flex-center;
+        background: url(../images/providers/sync-slider/outer-frame.png) no-repeat center center/contain;
+        margin-inline: auto;
+        padding: length(16) length(0) length(12);
+        @include radius(34);
+
+        .slide-thumb {
+            width: length(245);
+            @include h100;
+            overflow: hidden;
+            position: relative;
+            margin: 0 auto;
+
+            @include breakpoint(tablet991) {
+                @include radius(34);
+            }
+
+            img {
+                @include wh100;
+                object-fit: cover;
+                @include radius(34);
+            }
+        }
+
+        .slick-list {
+            @include radius(34);
+            width: length(288);
+            overflow: hidden;
+
+            .slick-track {
+                .slick-slide {
+                    @include radius(34);
+                    overflow: hidden;
+                }
+            }
+        }
+    }
+
+    .slick-arrow {
+        @include square(length(36));
+        @include flex-center;
+        overflow: hidden;
+
+        &::before {
+            content: '';
+            font-size: length(0);
+            display: none;
+        }
+
+        svg {
+            path {
+                stroke: $arrowColor;
+                @include transitions;
+            }
+        }
+
+        @include hover {
+            svg {
+                path {
+                    stroke: $arrowHoverColor;
+                }
+            }
+        }
+    }
+
+    .slick-prev {
+        left: length(-36);
+    }
+
+    .slick-next {
+        right: length(-36);
+    }
+
+    .slider-nav {
+        @include breakpoint(tablet991) {
+            margin-top: length(-30);
+            position: relative;
+            z-index: 120;
+        }
+
+        .slick-list {
+            padding: length(0) !important;
+            height: 100% !important;
+        }
+
+        .slick-slide {
+            @include w100;
+        }
+
+        .slick-track {
+            @include flex-column;
+            gap: length(40);
+            height: 100% !important;
+
+            @include breakpoint(tablet991) {
+                flex-direction: row;
+                gap: length(0);
+                width: 100%;
+                text-align: center;
+            }
+
+            .slick-current {
+                .slide-item {
+
+                    @include breakpoint(tablet991) {
+                        max-width: 100%;
+                    }
+
+                    .indicatorinfo {
+                        .itemcounter {
+                            background: $secondary;
+
+                            .counter {
+                                background: $primary;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .slide-item {
+            cursor: pointer;
+            max-width: length(431);
+            overflow: hidden;
+
+            @include breakpoint(tablet991) {
+                max-width: 100%;
+            }
+
+            .indicatorinfo {
+                @include flex-center-vert;
+                gap: length(24);
+
+                @include breakpoint(tablet991) {
+                    flex-direction: column;
+                    gap: length(14);
+                }
+
+                .itemcounter {
+                    @include square(length(80));
+                    @include flex-center;
+                    @include circle;
+                    background: $gray-400;
+
+                    @include breakpoint(tablet991) {
+                        @include square(length(60));
+                    }
+
+                    .counter {
+                        @include setBgColor($gray-500, $white);
+                        @include square(length(60));
+                        @include font-30-18-bold;
+                        @include flex-center;
+                        text-align: center;
+                        @include circle;
+
+                        @include breakpoint(tablet991) {
+                            @include square(length(40));
+                        }
+                    }
+                }
+
+                .iteminfo {
+                    width: calc(100% - 6.5rem);
+                    @include flex-column;
+                    gap: length(16);
+
+                    @include breakpoint(tablet991) {
+                        @include w100;
+                        gap: length(8);
+                        padding: length(0) length(20);
+                    }
+
+                    .itemtitle {
+                        color: $gray-800;
+                        letter-spacing: -0.005em;
+
+                        @include breakpoint(phone500) {
+                            @include font-26-16-semibold;
+                        }
+                    }
+
+                    .itemtext {
+                        @include font-26-16-normal;
+                        color: $gray-600;
+
+                        @include breakpoint(phone500) {
+                            @include font-24-14-normal;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+// PROVIDER-SYNC SECTION END
 
 // CORE TEAM SECTION START
 .coreteam {

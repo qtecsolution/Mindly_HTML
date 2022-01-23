@@ -29,3 +29,13 @@
         display: none;
     }
 }
+
+
+
+.featuredmobile {
+    .swiper-slide {
+        @include breakpoint(phone499) {
+            text-align: center;
+        }
+    }
+}

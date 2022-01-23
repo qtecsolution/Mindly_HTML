@@ -754,10 +754,16 @@
                 @include hover {
                     color: $tertiary;
                 }
+
+                @include breakpoint(phone499) {
+                    text-align: center;
+                    justify-content: center;
+                }
             }
         }
     }
 }
+
 
 .featuredlink {
     @include hover {
@@ -894,11 +900,30 @@
 
         .cardtitle {
             color: $gray-800;
+
+            @include breakpoint(desktop1400) {
+                @include heading-6;
+            }
+
+            @include breakpoint(tablet991) {
+                @include heading-4;
+            }
         }
 
         .cardtext {
             @include font-26-16-normal;
             color: $gray-600;
+            @include line-clamp-3;
+
+            @include breakpoint(desktop1400) {
+                @include font-24-14-normal;
+                @include line-clamp-4;
+            }
+
+            @include breakpoint(tablet991) {
+                @include font-26-16-normal;
+                @include line-clamp-3;
+            }
         }
     }
 }
@@ -909,6 +934,10 @@
 // CARD CHOOSE START
 .cardchoose {
     position: relative;
+
+    img {
+        @include wh100;
+    }
 
     &-action {
         position: absolute;
@@ -924,6 +953,10 @@
             @include circle;
             overflow: hidden;
         }
+    }
+
+    @include breakpoint(phone499) {
+        text-align: center;
     }
 }
 
