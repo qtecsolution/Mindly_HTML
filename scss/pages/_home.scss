@@ -155,6 +155,7 @@
     }
 
     &-body {
+        @include w100;
 
         .circle {
             position: relative;

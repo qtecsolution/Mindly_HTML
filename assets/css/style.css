@@ -6135,6 +6135,10 @@ h6 {
   color: #4A5568;
 }
 
+.roundedwheel-body {
+  width: 100%;
+}
+
 .roundedwheel-body .circle {
   position: relative;
   width: 100px;
@@ -9270,6 +9274,66 @@ h6 {
 .meeting-form .submitrow .btn-submit:not([disabled]):hover {
   background: #c28202;
   color: #ffffff;
+}
+
+.wrapper {
+  width: 100%;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+#slide01, #slide03, #slide05 {
+  width: 100%;
+  height: 100vh;
+}
+
+#slide02, #slide04 {
+  width: 100%;
+  height: 100vh;
+}
+
+.slide {
+  position: relative;
+  overflow: hidden;
+  height: 100vh;
+}
+
+.imgbox {
+  width: 12.5rem;
+}
+
+.imgbox img {
+  max-width: 100%;
+}
+
+.slide .pin-wrapper {
+  width: 100%;
+  height: 100%;
+}
+
+.slide .wrapper {
+  position: absolute;
+}
+
+#slide02 .pin-wrapper,
+#slide03 .pin-wrapper,
+#slide04 .pin-wrapper {
+  -webkit-transform: translateY(-100%);
+          transform: translateY(-100%);
+  background: white;
+}
+
+.scrollmagic-pin-spacer {
+  position: absolute !important;
+  clip: rect(auto, auto, auto, auto);
 }
 
 .providerinfo {
