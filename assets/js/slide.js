@@ -39,4 +39,18 @@ $(document).ready(function() {
         ]
     });
     /** SLIDER NAV END */
+
+    const verticalSlide = $('.verticalslider');
+
+    if (verticalSlide.length > 0) {
+        verticalSlide.slick({
+            slidesToScroll: 1,
+            arrows: true,
+            dots: false,
+            vertical: true,
+            verticalSwiping: true,
+            prevArrow: solidBackButton,
+            nextArrow: solidNextButton
+        });
+    }
 });
