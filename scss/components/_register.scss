@@ -1,0 +1,238 @@
+// REGISTER BANNER SECTION START
+
+.registerbanner {
+    padding: length(76) length(0) length(68);
+
+    &-content {
+        @include flex-center-column;
+        gap: length(24);
+        text-align: center;
+
+        .banner-title {
+            @include heading-1;
+            color: $gray-800;
+
+            @include breakpoint(phone768) {
+                @include heading-2;
+            }
+        }
+
+        .banner-text {
+            @include font-30-18-normal;
+            color: $gray-600;
+
+            @include breakpoint(phone768) {
+                @include font-26-16-normal;
+            }
+        }
+    }
+}
+// REGISTER BANNER SECTION END
+
+// REGISTER BOX START
+.registerbox {
+    &-content {
+        padding: length(80) length(24) length(300);
+        background: $white;
+        @include flex-column;
+        gap: length(100);
+
+        @include breakpoint(tablet991) {
+            gap: length(48);
+            padding: length(80) length(24);
+        }
+    }
+
+    &-header {
+        .registerprogress {
+            @include flex-center-vert;
+            
+            .progressinfo {
+                width: 33.33%;
+                @include flex-center-column;
+                gap: length(24);
+                text-align: center;
+
+                &:first-of-type {
+                    .progresscount {
+                        &::before {
+                            width: 0;
+                            left: 0;
+                        }
+                    }
+                }
+
+                .progresscount {
+                    background: $gray-600;
+                    @include square(length(80));
+                    @include flex-center;
+                    @include circle;
+                    position: relative;
+
+                    @include breakpoint(phone768) {
+                        @include square(length(60));
+                    }
+
+                    &::before {
+                        content: '';
+                        position: absolute;
+                        top: length(40);
+                        left: -330%;
+                        width: 330%;
+                        z-index: 1;
+                        height: length(5);
+                        background: $gray-500;
+
+                        @include breakpoint(desktop1400) {
+                            width: 270%;
+                            left: -270%;
+                        }
+
+                        @include breakpoint(desktop1199) {
+                            width: 205%;
+                            left: -205%;
+                        }
+
+                        @include breakpoint(tablet991) {
+                            width: 180%;
+                            left: -180%;
+                        }
+
+                        @include breakpoint(phone768) {
+                            top: length(30);
+                            width: 160%;
+                            left: -160%;
+                        }
+
+                        @include breakpoint(phone575) {
+                            width: 0;
+                            left: 0;
+                        }
+                    }
+
+                    .progresscounter {
+                        @include square(length(60));
+                        @include flex-center;
+                        @include circle;
+                        @include setBgColor($gray-800, $white);
+                        @include font-30-18-bold;
+                        text-align: center;
+
+                        @include breakpoint(phone768) {
+                            @include square(length(40));
+                        }
+                    }
+                }
+
+                &.active {
+                    .progresscount {
+                        background: $secondary;
+                        filter: $activeshadow;
+
+                        &::before {
+                            background: $secondary;
+                        }
+                    }
+
+                    .progresscounter {
+                        @include setBgColor($primary, $white);
+                    }
+
+                    .progressdetail {
+                        .progresstitle {
+                            color: $secondary;
+                        }
+                    }
+                }
+
+                &.completed {
+                    .progresscount {
+                        filter: none;
+                    }
+
+                    .progressdetail {
+                        .progresstitle {
+                            color: $gray-800;
+                        }
+                    }
+                }
+
+                .progressdetail {
+                    .progresstitle {
+                        color: $gray-600;
+                    }
+                }
+            }
+        }
+    }
+
+    &-body {
+        .step1-info {
+            .steponeform {
+                @include flex-column;
+                gap: length(44);
+
+                .mobilecol {
+                    margin-bottom: length(44);
+                }
+
+                .inputbox {
+                    @include w100;
+                    @include flex-column;
+                    gap: length(8);
+
+                    .inputlabel {
+                        @include font-14-14-medium;
+                        color: $dateColor;
+                    }
+                    
+                    .inputfield {
+                        background: $white;
+                        padding: length(16);
+                        @include radius(6);
+                        box-shadow: $inputshadow;
+                        @include font-14-14-normal;
+                        color: $gray-800;
+                    }
+
+                    .selectfield {
+                        background: $white url("data:image/svg+xml,%3Csvg width='11' height='11' viewBox='0 0 11 11' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cmask id='mask0_5998_44256' style='mask-type:alpha' maskUnits='userSpaceOnUse' x='0' y='0' width='11' height='11'%3E%3Cpath d='M4.98252 7.65869L1.68511 3.89022C1.29615 3.4457 1.61184 2.75 2.20251 2.75H8.79733C9.388 2.75 9.70369 3.4457 9.31473 3.89022L6.01732 7.65869C5.74341 7.97173 5.25643 7.97173 4.98252 7.65869Z' fill='black'/%3E%3C/mask%3E%3Cg mask='url(%23mask0_5998_44256)'%3E%3Crect width='11' height='11' fill='%23B5B5BD'/%3E%3C/g%3E%3C/svg%3E%0A") no-repeat center right 3%;
+                        appearance: none;
+                        box-shadow: $inputshadow;
+                        padding: length(16);
+                        @include radius(6);
+                        @include font-14-14-normal;
+                        color: $gray-800;
+                    }
+                }
+
+                .submitbox {
+                    @include flex-end;
+
+                    .btn-submit {
+                        @include flex-center;
+                        gap: length(10);
+                        width: length(200);
+                        height: length(48);
+                        @include radius(8);
+                        background: $tertiary;
+
+                        .text {
+                            @include font-16-16-semibold;
+                            color: $white;
+                        }
+
+                        .icon {
+                            overflow: hidden;
+                        }
+
+                        @include hover {
+                            background: darken($tertiary, 10%);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+// REGISTER BOX END

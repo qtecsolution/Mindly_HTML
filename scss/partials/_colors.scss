@@ -60,3 +60,13 @@ $faqBorder: #969696;
 
 $achieveHoverBg: radial-gradient(39.74% 39.74% at 50% 50%, $black 48.92%, rgba($black, 0) 100%);
 $overlayBg: linear-gradient(180deg, rgba($black, 0) 43.06%, $black 95.65%);
+
+$shadow-1: rgba(12, 26, 75, 0.1);
+$shadow-2: rgba(20, 37, 63, 0.06);
+
+$shadow-3: rgba(50, 50, 71, 0.08);
+$shadow-4: rgba(50, 50, 71, 0.2);
+
+$activeshadow: drop-shadow(0rem 0rem .0625rem $shadow-1) drop-shadow(0rem .625rem 1rem $shadow-2);
+$inputshadow: 0rem .0625rem .125rem $shadow-3,
+0rem 0rem .0625rem $shadow-4;

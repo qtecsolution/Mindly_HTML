@@ -170,3 +170,40 @@
 }
 
 // SITE HEADER END
+
+
+// REGISTER HEADER START
+
+.registerheader {
+    background: $white;
+    height: length(100);
+    padding: length(8);
+    @include flex-center;
+
+    &-content {
+        @include flex-center-between;
+
+        // SITE LOGO START
+        .sitelogo {
+            @include flex-center;
+            overflow: hidden;
+
+            @include breakpoint(tab991) {
+                width: length(158);
+            }
+
+            .logolink {
+                @include flex-center;
+                overflow: hidden;
+                width: length(158);
+                height: length(34);
+
+                img {
+                    @include wh100;
+                }
+            }
+        }
+    }
+}
+
+// REGISTER HEADER END
