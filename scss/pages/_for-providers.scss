@@ -251,6 +251,7 @@
         width: length(415);
         position: relative;
         padding-bottom: length(42);
+        @include flex-center;
 
         .overlay {
             position: absolute;
@@ -263,44 +264,51 @@
             z-index: 1;
             @include radius(14);
         }
-    }
 
-    .slider-for {
-        position: relative;
-        z-index: 10;
-        @include flex-center;
-        background: url(../images/providers/sync-slider/outer-frame.png) no-repeat center center/contain;
-        margin-inline: auto;
-        padding: length(16) length(0) length(12);
-        @include radius(34);
-
-        .slide-thumb {
-            width: length(245);
-            @include h100;
-            overflow: hidden;
-            position: relative;
-            margin: 0 auto;
-
-            @include breakpoint(tablet991) {
-                @include radius(34);
-            }
-
-            img {
-                @include wh100;
-                object-fit: cover;
-                @include radius(34);
-            }
-        }
-
-        .slick-list {
-            @include radius(34);
+        .sliderthumb-bg {
             width: length(288);
-            overflow: hidden;
+            height: length(586);
+            position: relative;
+            z-index: 20;
+            background: url(../images/providers/sync-slider/outer-frame.png) center center/cover;
 
-            .slick-track {
-                .slick-slide {
-                    @include radius(34);
+            .slider-for {
+                position: relative;
+                z-index: 10;
+                @include flex-center;
+                margin-inline: auto;
+                padding: length(16) length(0);
+                @include radius(34);
+
+                .slide-thumb {
+                    width: length(245);
+                    height: length(550);
                     overflow: hidden;
+                    position: relative;
+                    margin: 0 auto;
+
+                    @include breakpoint(tablet991) {
+                        @include radius(34);
+                    }
+
+                    img {
+                        @include wh100;
+                        object-fit: cover;
+                    }
+                }
+
+                .slick-list {
+                    @include radius(34);
+                    // width: length(288);
+                    width: 90%;
+                    overflow: hidden;
+
+                    .slick-track {
+                        .slick-slide {
+                            @include radius(34);
+                            overflow: hidden;
+                        }
+                    }
                 }
             }
         }

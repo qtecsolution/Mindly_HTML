@@ -9959,6 +9959,15 @@ h6 {
   width: 25.9375rem;
   position: relative;
   padding-bottom: 2.625rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .providersync .sliderthumb .overlay {
@@ -9974,7 +9983,15 @@ h6 {
   border-radius: 0.875rem;
 }
 
-.providersync .slider-for {
+.providersync .sliderthumb .sliderthumb-bg {
+  width: 18rem;
+  height: 36.625rem;
+  position: relative;
+  z-index: 20;
+  background: url(../images/providers/sync-slider/outer-frame.png) center center/cover;
+}
+
+.providersync .sliderthumb .sliderthumb-bg .slider-for {
   position: relative;
   z-index: 10;
   display: -webkit-box;
@@ -9986,45 +10003,42 @@ h6 {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  background: url(../images/providers/sync-slider/outer-frame.png) no-repeat center center/contain;
   margin-inline: auto;
-  padding: 1rem 0rem 0.75rem;
+  padding: 1rem 0rem;
   border-radius: 2.125rem;
   border-radius: 2.125rem;
 }
 
-.providersync .slider-for .slide-thumb {
+.providersync .sliderthumb .sliderthumb-bg .slider-for .slide-thumb {
   width: 15.3125rem;
-  height: 100%;
+  height: 34.375rem;
   overflow: hidden;
   position: relative;
   margin: 0 auto;
 }
 
 @media screen and (max-width: 61.9375rem) {
-  .providersync .slider-for .slide-thumb {
+  .providersync .sliderthumb .sliderthumb-bg .slider-for .slide-thumb {
     border-radius: 2.125rem;
     border-radius: 2.125rem;
   }
 }
 
-.providersync .slider-for .slide-thumb img {
+.providersync .sliderthumb .sliderthumb-bg .slider-for .slide-thumb img {
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
-  border-radius: 2.125rem;
-  border-radius: 2.125rem;
 }
 
-.providersync .slider-for .slick-list {
+.providersync .sliderthumb .sliderthumb-bg .slider-for .slick-list {
   border-radius: 2.125rem;
   border-radius: 2.125rem;
-  width: 18rem;
+  width: 90%;
   overflow: hidden;
 }
 
-.providersync .slider-for .slick-list .slick-track .slick-slide {
+.providersync .sliderthumb .sliderthumb-bg .slider-for .slick-list .slick-track .slick-slide {
   border-radius: 2.125rem;
   border-radius: 2.125rem;
   overflow: hidden;

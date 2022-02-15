@@ -40,6 +40,15 @@ $(document).ready(function() {
     });
     /** SLIDER NAV END */
 
+    sliderNav.on('mouseover', '.slick-slide', function (e) {
+        let $currTarget = $(e.currentTarget), 
+        index = $currTarget.data('slick-index'),
+        slickObj = sliderFor.slick('getSlick');
+
+        slickObj.slickGoTo(index);
+
+    });
+
     const verticalSlide = $('.verticalslider');
 
     if (verticalSlide.length > 0) {
