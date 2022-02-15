@@ -130,13 +130,12 @@
 // ROUNDED WHEEL SECTION START
 .roundedwheel {
     padding: length(80) length(0);
-    background: $white;
+    background: $bodyBg;
 
     &-content {
         @include flex-center-column;
         gap: length(80);
-        max-width: length(877);
-        margin-inline: auto;
+
     }
 
     &-header {
@@ -145,29 +144,255 @@
         text-align: center;
 
         .wheeltitle {
-            color: $gray-600;
+            color: $gray-800;
         }
 
         .wheeltext {
             @include font-30-18-normal;
-            color: $gray-700;
+            color: $gray-600;
         }
     }
 
     &-body {
         @include w100;
 
-        .main-container {
-            @include w100;
+        .wheel-nav {
+            .slick-list {
+                height: auto !important;
+                margin: auto;
+                padding: length(0);
 
-            .slide {
-                
+                .slick-track {
+                    height: auto !important;
+
+                    .slick-current {
+                        .wheelitem {
+                            &-info {
+                                @include flex-column;
+                                cursor: pointer;
+
+                                &-header {
+                                    @include flex-center-between;
+                                    padding: length(17) length(10) length(17) length(24);
+                                    background: $primary;
+
+                                    .wheelitemtitle {
+                                        color: $white;
+                                    }
+
+                                    .icon {
+                                        @include transform(rotate(180deg));
+
+                                        svg {
+
+                                            path {
+                                                fill: $white;
+                                            }
+                                        }
+                                    }
+                                }
+
+                                &-body {
+                                    display: block;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            .wheelitem {
+                &-info {
+                    @include flex-column;
+                    cursor: pointer;
+
+                    &-header {
+                        @include flex-center-between;
+                        padding: length(17) length(10) length(17) length(24);
+                        background: $wheelItemBg;
+
+                        .wheelitemtitle {
+                            color: $gray-700;
+                            width: calc(100% - 2.25rem);
+                        }
+
+                        .icon {
+                            @include square(length(36));
+                        }
+                    }
+
+                    &-body {
+                        padding: length(0) length(40) length(22) length(24);
+                        background: $primary;
+                        display: none;
+
+                        .wheelitemtext {
+                            @include font-30-18-normal;
+                            color: $gray-300;
+                        }
+                    }
+
+                    @include hover {
+                        .wheelitem-info-header {
+                            background: $primary;
+
+                            .wheelitemtitle {
+                                color: $white;
+                            }
+
+                            .icon {
+                                @include transform(rotate(180deg));
+
+                                svg {
+
+                                    path {
+                                        fill: $white;
+                                    }
+                                }
+                            }
+                        }
+
+                        .wheelitem-info-body {
+                            display: block;
+                        }
+                    }
+                }
             }
         }
     }
 }
 
 // ROUNDED WHEEL SECTION END
+
+// HOW IT WORKS SECTION START
+
+.howitworks {
+    padding: length(80) length(0);
+    background: $white;
+
+    &-header {
+        @include flex-center-column;
+        gap: length(24);
+        text-align: center;
+
+        .howitworkstitle {
+            color: $gray-800;
+        }
+
+        .howitworkstext {
+            @include font-30-18-normal;
+            color: $gray-600;
+        }
+    }
+
+    &-body {}
+}
+
+.scrollerthumb {
+    width: length(415);
+    position: relative;
+    padding-bottom: length(42);
+    @include flex-center;
+
+    .overlay {
+        position: absolute;
+        width: 100%;
+        height: 60%;
+        background: $footerBg;
+        top: auto;
+        bottom: length(0);
+        left: length(0);
+        z-index: 1;
+        @include radius(14);
+    }
+
+    .scrollthumb-bg {
+        width: length(288);
+        height: length(586);
+        position: relative;
+        z-index: 20;
+        background: url(../images/providers/sync-slider/outer-frame.png) center center/cover;
+
+        .scroll-for {
+            position: relative;
+            z-index: 10;
+            @include flex-center;
+            margin-inline: auto;
+            padding: length(16) length(0);
+            @include radius(34);
+
+            .scroll-thumb {
+                width: length(245);
+                height: length(550);
+                overflow: hidden;
+                position: relative;
+                margin: 0 auto;
+
+                @include breakpoint(tablet991) {
+                    @include radius(34);
+                }
+
+                img {
+                    @include wh100;
+                    object-fit: cover;
+                }
+            }
+
+            .slick-list {
+                @include radius(34);
+                width: 90%;
+                overflow: hidden;
+
+                .slick-track {
+                    .slick-slide {
+                        @include radius(34);
+                        overflow: hidden;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.mainscrollbar {
+    overflow: hidden;
+    height: 100vh;
+
+    .swiper-container,
+    .swiper-wrapper,
+    .swiper-slide {
+        width: 100%;
+        height: 100vh;
+    }
+
+    .swiper-slide {
+        text-align: center;
+        font-size: 18px;
+        background: #fff;
+        /* Center slide text vertically */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        &:nth-child(1) {
+            background: #D8E2DC;
+        }
+
+        &:nth-child(2) {
+            background: #FFE5D9;
+        }
+
+        &:nth-child(3) {
+            background: #FFCAD4;
+        }
+
+        &:nth-child(4) {
+            background: #F4ACB7;
+        }
+    }
+}
+
+// HOW IT WORKS SECTION END
 
 
 // MINDLY CHARACTERSTICS START

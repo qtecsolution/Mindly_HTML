@@ -30,12 +30,16 @@
     }
 }
 
-
-
 .featuredmobile {
     .swiper-slide {
         @include breakpoint(phone499) {
             text-align: center;
         }
+    }
+}
+
+.slick-vertical {
+    .slick-slide {
+        border: length(0);
     }
 }

@@ -290,6 +290,7 @@
 
         @include breakpoint(tablet991) {
             order: 0;
+            justify-content: center;
         }
 
         .policylist {

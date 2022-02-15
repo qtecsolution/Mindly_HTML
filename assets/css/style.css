@@ -1848,6 +1848,9 @@ h6 {
     -webkit-box-ordinal-group: 1;
         -ms-flex-order: 0;
             order: 0;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
 }
 
@@ -4797,6 +4800,10 @@ h6 {
   }
 }
 
+.slick-vertical .slick-slide {
+  border: 0rem;
+}
+
 .offcanvas-end {
   border-left: 0;
 }
@@ -6508,7 +6515,7 @@ h6 {
 
 .roundedwheel {
   padding: 5rem 0rem;
-  background: #ffffff;
+  background: #f7f8f6;
 }
 
 .roundedwheel-content {
@@ -6526,8 +6533,6 @@ h6 {
       -ms-flex-direction: column;
           flex-direction: column;
   gap: 5rem;
-  max-width: 54.8125rem;
-  margin-inline: auto;
 }
 
 .roundedwheel-header {
@@ -6549,7 +6554,7 @@ h6 {
 }
 
 .roundedwheel-header .wheeltitle {
-  color: #718096;
+  color: #2D3748;
 }
 
 .roundedwheel-header .wheeltext {
@@ -6558,15 +6563,305 @@ h6 {
   font-size: 1.125rem;
   font-weight: normal;
   line-height: 1.66667;
-  color: #4A5568;
+  color: #718096;
 }
 
 .roundedwheel-body {
   width: 100%;
 }
 
-.roundedwheel-body .main-container {
+.roundedwheel-body .wheel-nav .slick-list {
+  height: auto !important;
+  margin: auto;
+  padding: 0rem;
+}
+
+.roundedwheel-body .wheel-nav .slick-list .slick-track {
+  height: auto !important;
+}
+
+.roundedwheel-body .wheel-nav .slick-list .slick-track .slick-current .wheelitem-info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  cursor: pointer;
+}
+
+.roundedwheel-body .wheel-nav .slick-list .slick-track .slick-current .wheelitem-info-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  align-items: center;
+  padding: 1.0625rem 0.625rem 1.0625rem 1.5rem;
+  background: #01796F;
+}
+
+.roundedwheel-body .wheel-nav .slick-list .slick-track .slick-current .wheelitem-info-header .wheelitemtitle {
+  color: #ffffff;
+}
+
+.roundedwheel-body .wheel-nav .slick-list .slick-track .slick-current .wheelitem-info-header .icon {
+  -webkit-transform: rotate(180deg);
+  transform: rotate(180deg);
+}
+
+.roundedwheel-body .wheel-nav .slick-list .slick-track .slick-current .wheelitem-info-header .icon svg path {
+  fill: #ffffff;
+}
+
+.roundedwheel-body .wheel-nav .slick-list .slick-track .slick-current .wheelitem-info-body {
+  display: block;
+}
+
+.roundedwheel-body .wheel-nav .wheelitem-info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  cursor: pointer;
+}
+
+.roundedwheel-body .wheel-nav .wheelitem-info-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  align-items: center;
+  padding: 1.0625rem 0.625rem 1.0625rem 1.5rem;
+  background: #FCEBCA;
+}
+
+.roundedwheel-body .wheel-nav .wheelitem-info-header .wheelitemtitle {
+  color: #4A5568;
+  width: calc(100% - 2.25rem);
+}
+
+.roundedwheel-body .wheel-nav .wheelitem-info-header .icon {
+  height: 2.25rem;
+  width: 2.25rem;
+}
+
+.roundedwheel-body .wheel-nav .wheelitem-info-body {
+  padding: 0rem 2.5rem 1.375rem 1.5rem;
+  background: #01796F;
+  display: none;
+}
+
+.roundedwheel-body .wheel-nav .wheelitem-info-body .wheelitemtext {
+  font-family: "Gilroy";
+  font-style: normal;
+  font-size: 1.125rem;
+  font-weight: normal;
+  line-height: 1.66667;
+  color: #E2E8F0;
+}
+
+.roundedwheel-body .wheel-nav .wheelitem-info:not([disabled]):hover .wheelitem-info-header {
+  background: #01796F;
+}
+
+.roundedwheel-body .wheel-nav .wheelitem-info:not([disabled]):hover .wheelitem-info-header .wheelitemtitle {
+  color: #ffffff;
+}
+
+.roundedwheel-body .wheel-nav .wheelitem-info:not([disabled]):hover .wheelitem-info-header .icon {
+  -webkit-transform: rotate(180deg);
+  transform: rotate(180deg);
+}
+
+.roundedwheel-body .wheel-nav .wheelitem-info:not([disabled]):hover .wheelitem-info-header .icon svg path {
+  fill: #ffffff;
+}
+
+.roundedwheel-body .wheel-nav .wheelitem-info:not([disabled]):hover .wheelitem-info-body {
+  display: block;
+}
+
+.howitworks {
+  padding: 5rem 0rem;
+  background: #ffffff;
+}
+
+.howitworks-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 1.5rem;
+  text-align: center;
+}
+
+.howitworks-header .howitworkstitle {
+  color: #2D3748;
+}
+
+.howitworks-header .howitworkstext {
+  font-family: "Gilroy";
+  font-style: normal;
+  font-size: 1.125rem;
+  font-weight: normal;
+  line-height: 1.66667;
+  color: #718096;
+}
+
+.scrollerthumb {
+  width: 25.9375rem;
+  position: relative;
+  padding-bottom: 2.625rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.scrollerthumb .overlay {
+  position: absolute;
   width: 100%;
+  height: 60%;
+  background: #FFF7E6;
+  top: auto;
+  bottom: 0rem;
+  left: 0rem;
+  z-index: 1;
+  border-radius: 0.875rem;
+  border-radius: 0.875rem;
+}
+
+.scrollerthumb .scrollthumb-bg {
+  width: 18rem;
+  height: 36.625rem;
+  position: relative;
+  z-index: 20;
+  background: url(../images/providers/sync-slider/outer-frame.png) center center/cover;
+}
+
+.scrollerthumb .scrollthumb-bg .scroll-for {
+  position: relative;
+  z-index: 10;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-inline: auto;
+  padding: 1rem 0rem;
+  border-radius: 2.125rem;
+  border-radius: 2.125rem;
+}
+
+.scrollerthumb .scrollthumb-bg .scroll-for .scroll-thumb {
+  width: 15.3125rem;
+  height: 34.375rem;
+  overflow: hidden;
+  position: relative;
+  margin: 0 auto;
+}
+
+@media screen and (max-width: 61.9375rem) {
+  .scrollerthumb .scrollthumb-bg .scroll-for .scroll-thumb {
+    border-radius: 2.125rem;
+    border-radius: 2.125rem;
+  }
+}
+
+.scrollerthumb .scrollthumb-bg .scroll-for .scroll-thumb img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.scrollerthumb .scrollthumb-bg .scroll-for .slick-list {
+  border-radius: 2.125rem;
+  border-radius: 2.125rem;
+  width: 90%;
+  overflow: hidden;
+}
+
+.scrollerthumb .scrollthumb-bg .scroll-for .slick-list .slick-track .slick-slide {
+  border-radius: 2.125rem;
+  border-radius: 2.125rem;
+  overflow: hidden;
+}
+
+.mainscrollbar {
+  overflow: hidden;
+  height: 100vh;
+}
+
+.mainscrollbar .swiper-container,
+.mainscrollbar .swiper-wrapper,
+.mainscrollbar .swiper-slide {
+  width: 100%;
+  height: 100vh;
+}
+
+.mainscrollbar .swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+  /* Center slide text vertically */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.mainscrollbar .swiper-slide:nth-child(1) {
+  background: #D8E2DC;
+}
+
+.mainscrollbar .swiper-slide:nth-child(2) {
+  background: #FFE5D9;
+}
+
+.mainscrollbar .swiper-slide:nth-child(3) {
+  background: #FFCAD4;
+}
+
+.mainscrollbar .swiper-slide:nth-child(4) {
+  background: #F4ACB7;
 }
 
 .mindlycharacteristics {
