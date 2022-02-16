@@ -43,3 +43,15 @@
         border: length(0);
     }
 }
+
+.slick-prev:before,
+.slick-next:before {
+    font-size: length(0);
+    content: '';
+    display: none;
+}
+
+.slick-prev,
+.slick-next {
+    @include square(length(36));
+}

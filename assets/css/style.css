@@ -4804,6 +4804,19 @@ h6 {
   border: 0rem;
 }
 
+.slick-prev:before,
+.slick-next:before {
+  font-size: 0rem;
+  content: '';
+  display: none;
+}
+
+.slick-prev,
+.slick-next {
+  height: 2.25rem;
+  width: 2.25rem;
+}
+
 .offcanvas-end {
   border-left: 0;
 }
@@ -6731,7 +6744,280 @@ h6 {
   color: #718096;
 }
 
-.scrollerthumb {
+.scrollslider {
+  padding: 0rem 0rem 5rem;
+  background: #ffffff;
+}
+
+.scrollslider-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 5rem;
+}
+
+.scrollslider .scroll-nav .slick-arrow {
+  top: 2.5rem;
+  z-index: 100;
+}
+
+@media screen and (max-width: 61.9375rem) {
+  .scrollslider .scroll-nav .slick-arrow {
+    top: 3.625rem;
+  }
+}
+
+@media screen and (max-width: 35.9375rem) {
+  .scrollslider .scroll-nav .slick-arrow {
+    top: 3.375rem;
+  }
+}
+
+@media screen and (max-width: 31.25rem) {
+  .scrollslider .scroll-nav .slick-arrow {
+    top: 2.5rem;
+  }
+}
+
+.scrollslider .scroll-nav .slick-arrow svg path {
+  stroke: #B7DBD1;
+}
+
+.scrollslider .scroll-nav .slick-arrow:not([disabled]):hover svg path {
+  stroke: #409E85;
+}
+
+.scrollslider .scroll-nav .slick-prev {
+  left: 36.5%;
+}
+
+@media screen and (max-width: 61.9375rem) {
+  .scrollslider .scroll-nav .slick-prev {
+    left: 38.5%;
+  }
+}
+
+@media screen and (max-width: 48rem) {
+  .scrollslider .scroll-nav .slick-prev {
+    left: 35%;
+  }
+}
+
+@media screen and (max-width: 35.9375rem) {
+  .scrollslider .scroll-nav .slick-prev {
+    left: 36.5%;
+  }
+}
+
+@media screen and (max-width: 31.25rem) {
+  .scrollslider .scroll-nav .slick-prev {
+    left: 34%;
+  }
+}
+
+@media screen and (max-width: 25.875rem) {
+  .scrollslider .scroll-nav .slick-prev {
+    left: 30%;
+  }
+}
+
+.scrollslider .scroll-nav .slick-next {
+  left: 58%;
+}
+
+@media screen and (max-width: 61.9375rem) {
+  .scrollslider .scroll-nav .slick-next {
+    left: 56%;
+  }
+}
+
+@media screen and (max-width: 48rem) {
+  .scrollslider .scroll-nav .slick-next {
+    left: 58%;
+  }
+}
+
+@media screen and (max-width: 35.9375rem) {
+  .scrollslider .scroll-nav .slick-next {
+    left: 57%;
+  }
+}
+
+@media screen and (max-width: 31.25rem) {
+  .scrollslider .scroll-nav .slick-next {
+    left: 59%;
+  }
+}
+
+@media screen and (max-width: 25.875rem) {
+  .scrollslider .scroll-nav .slick-next {
+    left: 60%;
+  }
+}
+
+.scrollslider .scroll-nav .slick-list {
+  padding: 0rem !important;
+}
+
+.scrollslider .scroll-nav .slick-current .slide-item .indicatorinfo .itemcounter {
+  background: #FCAF15;
+}
+
+.scrollslider .scroll-nav .slick-current .slide-item .indicatorinfo .itemcounter .counter {
+  background: #01796F;
+}
+
+.scrollslider .scroll-nav .slide-item {
+  height: 13.75rem;
+}
+
+.scrollslider .scroll-nav .slide-item .indicatorinfo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 1.5rem;
+  height: 13.75rem;
+  text-align: center;
+}
+
+@media screen and (max-width: 61.9375rem) {
+  .scrollslider .scroll-nav .slide-item .indicatorinfo {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    gap: 0.875rem;
+  }
+}
+
+.scrollslider .scroll-nav .slide-item .indicatorinfo .itemcounter {
+  height: 5rem;
+  width: 5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border-radius: 100%;
+  background: #CBD5E0;
+}
+
+@media screen and (max-width: 61.9375rem) {
+  .scrollslider .scroll-nav .slide-item .indicatorinfo .itemcounter {
+    height: 3.75rem;
+    width: 3.75rem;
+  }
+}
+
+.scrollslider .scroll-nav .slide-item .indicatorinfo .itemcounter .counter {
+  background: #A0AEC0;
+  color: #ffffff;
+  height: 3.75rem;
+  width: 3.75rem;
+  font-family: "Gilroy";
+  font-style: normal;
+  font-size: 1.125rem;
+  font-weight: 700;
+  line-height: 1.66667;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
+  border-radius: 100%;
+}
+
+@media screen and (max-width: 61.9375rem) {
+  .scrollslider .scroll-nav .slide-item .indicatorinfo .itemcounter .counter {
+    height: 2.5rem;
+    width: 2.5rem;
+  }
+}
+
+.scrollslider .scroll-nav .slide-item .indicatorinfo .iteminfo {
+  width: calc(100% - 6.5rem);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 0.625rem;
+}
+
+@media screen and (max-width: 61.9375rem) {
+  .scrollslider .scroll-nav .slide-item .indicatorinfo .iteminfo {
+    width: 100%;
+    gap: 0.5rem;
+    padding: 0rem 1.25rem;
+  }
+}
+
+.scrollslider .scroll-nav .slide-item .indicatorinfo .iteminfo .itemtitle {
+  color: #2D3748;
+  letter-spacing: -0.005em;
+}
+
+@media screen and (max-width: 35.9375rem) {
+  .scrollslider .scroll-nav .slide-item .indicatorinfo .iteminfo .itemtitle {
+    font-family: "Gilroy";
+    font-style: normal;
+    font-size: 1rem;
+    font-weight: 600;
+    line-height: 1.625;
+  }
+}
+
+.scrollslider .scroll-nav .slide-item .indicatorinfo .iteminfo .itemtext {
+  font-family: "Gilroy";
+  font-style: normal;
+  font-size: 1rem;
+  font-weight: normal;
+  line-height: 1.625;
+  color: #718096;
+}
+
+@media screen and (max-width: 35.9375rem) {
+  .scrollslider .scroll-nav .slide-item .indicatorinfo .iteminfo .itemtext {
+    font-family: "Gilroy";
+    font-style: normal;
+    font-size: 0.875rem;
+    font-weight: normal;
+    line-height: 1.71429;
+  }
+}
+
+.scrollslider .scrollerthumb {
   width: 25.9375rem;
   position: relative;
   padding-bottom: 2.625rem;
@@ -6744,9 +7030,16 @@ h6 {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  margin-inline: auto;
 }
 
-.scrollerthumb .overlay {
+@media screen and (max-width: 35.9375rem) {
+  .scrollslider .scrollerthumb {
+    width: 100%;
+  }
+}
+
+.scrollslider .scrollerthumb .overlay {
   position: absolute;
   width: 100%;
   height: 60%;
@@ -6759,7 +7052,7 @@ h6 {
   border-radius: 0.875rem;
 }
 
-.scrollerthumb .scrollthumb-bg {
+.scrollslider .scrollerthumb .scrollthumb-bg {
   width: 18rem;
   height: 36.625rem;
   position: relative;
@@ -6767,7 +7060,7 @@ h6 {
   background: url(../images/providers/sync-slider/outer-frame.png) center center/cover;
 }
 
-.scrollerthumb .scrollthumb-bg .scroll-for {
+.scrollslider .scrollerthumb .scrollthumb-bg .scroll-for {
   position: relative;
   z-index: 10;
   display: -webkit-box;
@@ -6785,7 +7078,7 @@ h6 {
   border-radius: 2.125rem;
 }
 
-.scrollerthumb .scrollthumb-bg .scroll-for .scroll-thumb {
+.scrollslider .scrollerthumb .scrollthumb-bg .scroll-for .scroll-thumb {
   width: 15.3125rem;
   height: 34.375rem;
   overflow: hidden;
@@ -6794,27 +7087,27 @@ h6 {
 }
 
 @media screen and (max-width: 61.9375rem) {
-  .scrollerthumb .scrollthumb-bg .scroll-for .scroll-thumb {
+  .scrollslider .scrollerthumb .scrollthumb-bg .scroll-for .scroll-thumb {
     border-radius: 2.125rem;
     border-radius: 2.125rem;
   }
 }
 
-.scrollerthumb .scrollthumb-bg .scroll-for .scroll-thumb img {
+.scrollslider .scrollerthumb .scrollthumb-bg .scroll-for .scroll-thumb img {
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
 }
 
-.scrollerthumb .scrollthumb-bg .scroll-for .slick-list {
+.scrollslider .scrollerthumb .scrollthumb-bg .scroll-for .slick-list {
   border-radius: 2.125rem;
   border-radius: 2.125rem;
   width: 90%;
   overflow: hidden;
 }
 
-.scrollerthumb .scrollthumb-bg .scroll-for .slick-list .slick-track .slick-slide {
+.scrollslider .scrollerthumb .scrollthumb-bg .scroll-for .slick-list .slick-track .slick-slide {
   border-radius: 2.125rem;
   border-radius: 2.125rem;
   overflow: hidden;

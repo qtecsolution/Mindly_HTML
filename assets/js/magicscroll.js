@@ -12,7 +12,18 @@ if(scrollFor.length > 0) {
 		fade: false,
 		asNavFor: '.scroll-nav',
 		vertical: true,
+  		verticalSwiping: true,
 	});
+
+	scrollFor.on('wheel', (function(e) {
+		e.preventDefault();
+
+		if (e.originalEvent.deltaY < 0) {
+			$(this).slick('slickPrev');
+		} else {
+			$(this).slick('slickNext');
+		}
+	}));
 }
 /** SCROLL FOR END */
 
@@ -30,8 +41,19 @@ if(scrollNav.length > 0) {
 		centerMode: true,
 		focusOnSelect: true,
 		prevArrow: solidBackButton,
-		nextArrow: solidNextButton
+		nextArrow: solidNextButton,
+  		verticalSwiping: true
 	});
+
+	scrollNav.on('wheel', (function(e) {
+		e.preventDefault();
+
+		if (e.originalEvent.deltaY < 0) {
+			$(this).slick('slickPrev');
+		} else {
+			$(this).slick('slickNext');
+		}
+	}));
 }
 
 /** SCROLL NAV END */
