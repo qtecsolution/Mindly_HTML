@@ -407,6 +407,9 @@
 		14/14 FONT SIZES
 \*------------------------------------*/
 /*------------------------------------*\
+		20/14 FONT SIZES
+\*------------------------------------*/
+/*------------------------------------*\
 		24/14 FONT SIZES
 \*------------------------------------*/
 /*------------------------------------*\
@@ -981,7 +984,6 @@ h6 {
 
 .header {
   background: #FEEFEC;
-  padding: 0.5rem 0rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -991,12 +993,12 @@ h6 {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  position: relative;
 }
 
 @media screen and (min-width: 61.9375rem) {
   .header {
     background: #ffffff;
-    height: 6.25rem;
   }
 }
 
@@ -1058,11 +1060,14 @@ h6 {
     -webkit-box-flex: 1;
         -ms-flex-positive: 1;
             flex-grow: 1;
-    gap: 2.5rem;
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
   }
+}
+
+.header-content .headermenu-item {
+  padding: 2.6875rem 1.25rem;
 }
 
 .header-content .headermenu-link {
@@ -1081,6 +1086,7 @@ h6 {
       -ms-flex-align: center;
           align-items: center;
   gap: 0.25rem;
+  border-bottom: solid 0.125rem transparent;
 }
 
 .header-content .headermenu-link span {
@@ -1095,46 +1101,26 @@ h6 {
 
 .header-content .headermenu-link:hover:not(.active) {
   color: #F94E26;
+  border-color: #F94E26;
 }
 
 .header-content .headermenu-link.active {
   color: #F94E26;
-}
-
-.header-content .headermenu .mindlydropdown {
-  position: relative;
+  border-color: #F94E26;
 }
 
 .header-content .headermenu .mindlydropdown .mindlysubmenu {
   position: absolute;
   top: 100%;
-  background: rgba(255, 255, 255, 0.75);
-  min-width: 10rem;
-  -webkit-box-shadow: 0rem 0rem 0.0625rem rgba(12, 26, 75, 0.1), 0rem 0.625rem 1rem rgba(20, 37, 63, 0.06);
-          box-shadow: 0rem 0rem 0.0625rem rgba(12, 26, 75, 0.1), 0rem 0.625rem 1rem rgba(20, 37, 63, 0.06);
+  left: 0;
+  background: #ffffff;
+  width: 100%;
+  min-height: 22.625rem;
+  padding: 3rem;
   display: none;
 }
 
-.header-content .headermenu .mindlydropdown .mindlysubmenu-link {
-  padding: 0.75rem 1rem;
-  width: 100%;
-  font-family: "Gilroy";
-  font-style: normal;
-  font-size: 0.875rem;
-  font-weight: 600;
-  line-height: 1;
-  background: #ffffff;
-  color: #2D3748;
-  -webkit-transition: all 250ms ease-in-out;
-  transition: all 250ms ease-in-out;
-}
-
-.header-content .headermenu .mindlydropdown .mindlysubmenu-link:not([disabled]):hover {
-  background: rgba(64, 87, 109, 0.07);
-  color: #2D3748;
-}
-
-.header-content .headermenu .mindlydropdown:not([disabled]):hover .mindlysubmenu {
+.header-content .headermenu .mindlydropdown .mindlysubmenu .mindlysublist {
   margin: 0;
   padding: 0;
   list-style: none;
@@ -1145,6 +1131,44 @@ h6 {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  max-width: 18.75rem;
+}
+
+.header-content .headermenu .mindlydropdown .mindlysubmenu .mindlysublist-item {
+  padding: 1.25rem 0rem;
+}
+
+.header-content .headermenu .mindlydropdown .mindlysubmenu .mindlysublist-link {
+  display: inline-block;
+  font-family: "Gilroy";
+  font-style: normal;
+  font-size: 0.875rem;
+  font-weight: 500;
+  line-height: 1.42857;
+  color: #2D3748;
+  -webkit-transition: all 250ms ease-in-out;
+  transition: all 250ms ease-in-out;
+  border-bottom: solid 0.125rem transparent;
+}
+
+.header-content .headermenu .mindlydropdown .mindlysubmenu .mindlysublist-link:hover:not(.active) {
+  color: #F94E26;
+  border-color: #F94E26;
+}
+
+.header-content .headermenu .mindlydropdown:not([disabled]):hover .mindlysubmenu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
 }
 
 .header-content .sitelogo {
@@ -1304,7 +1328,7 @@ h6 {
 }
 
 .footer {
-  background: #FFF7E6;
+  background: #FFFBF2;
   padding: 3.75rem 0rem 1.5rem;
 }
 
@@ -4703,7 +4727,7 @@ h6 {
 }
 
 .counter-1 {
-  background: #FFF7E6;
+  background: #FFFBF2;
 }
 
 .counter-2 {
@@ -4949,7 +4973,7 @@ h6 {
 }
 
 .offcanvas-body .mobilemenu .accordion-button:not(.collapsed) {
-  background: #FFF7E6;
+  background: #FFFBF2;
   color: #F94E26;
   -webkit-box-shadow: none;
           box-shadow: none;
@@ -4964,11 +4988,11 @@ h6 {
   outline: 0;
   -webkit-box-shadow: none;
           box-shadow: none;
-  background: #FFF7E6;
+  background: #FFFBF2;
 }
 
 .offcanvas-body .mobilemenu .accordion-button:not([disabled]):hover {
-  background: #FFF7E6;
+  background: #FFFBF2;
   color: #F94E26;
 }
 
@@ -4993,7 +5017,7 @@ h6 {
 }
 
 .offcanvas-body .mobilemenu .accordion-body .sublink:not([disabled]):hover {
-  background: #FFF7E6;
+  background: #FFFBF2;
   color: #F94E26;
 }
 
@@ -5009,7 +5033,7 @@ h6 {
 }
 
 .offcanvas-body .mobilemenu-link:not([disabled]):hover {
-  background: #FFF7E6;
+  background: #FFFBF2;
   color: #F94E26;
 }
 
@@ -7047,7 +7071,7 @@ h6 {
   position: absolute;
   width: 100%;
   height: 60%;
-  background: #FFF7E6;
+  background: #FFFBF2;
   top: auto;
   bottom: 0rem;
   left: 0rem;
@@ -7163,7 +7187,7 @@ h6 {
 
 .mindlycharacteristics {
   padding: 5rem 0rem;
-  background: #FFF7E6;
+  background: #FFFBF2;
 }
 
 @media screen and (max-width: 61.9375rem) {
@@ -7523,7 +7547,7 @@ h6 {
   }
 }
 
-.achievepotential-details .unlock {
+.achievepotential-details .achieveunlock {
   height: 13.625rem;
   width: 13.625rem;
   display: -webkit-box;
@@ -7552,7 +7576,7 @@ h6 {
 }
 
 @media screen and (max-width: 87.4375rem) {
-  .achievepotential-details .unlock {
+  .achievepotential-details .achieveunlock {
     height: 10.5rem;
     width: 10.5rem;
     padding: 3rem;
@@ -7560,14 +7584,14 @@ h6 {
 }
 
 @media screen and (max-width: 74.9375rem) {
-  .achievepotential-details .unlock {
+  .achievepotential-details .achieveunlock {
     height: 8.75rem;
     width: 8.75rem;
     padding: 2.25rem;
   }
 }
 
-.achievepotential-details .unlock .icon {
+.achievepotential-details .achieveunlock .lockicon {
   height: 4rem;
   width: 4rem;
   display: -webkit-box;
@@ -7583,12 +7607,37 @@ h6 {
   padding: 0.5rem;
 }
 
-.achievepotential-details .unlock .icon svg {
-  width: 100%;
-  height: 100%;
+.achievepotential-details .achieveunlock .lockicon svg {
+  height: 4rem;
+  width: 4rem;
 }
 
-.achievepotential-details .unlock .text {
+.achievepotential-details .achieveunlock .locktext {
+  font-family: "Gilroy";
+  font-style: normal;
+  font-size: 1.25rem;
+  font-weight: 600;
+  line-height: 1.36;
+  font-weight: bold;
+  color: #323232;
+  text-align: center;
+  display: none;
+}
+
+.achievepotential-details .achieveunlock .unlockicon {
+  height: 4rem;
+  width: 4rem;
+  overflow: hidden;
+  padding: 0.5rem;
+  display: none;
+}
+
+.achievepotential-details .achieveunlock .unlockicon svg {
+  height: 4rem;
+  width: 4rem;
+}
+
+.achievepotential-details .achieveunlock .unlocktext {
   font-family: "Gilroy";
   font-style: normal;
   font-size: 1.25rem;
@@ -7600,6 +7649,8 @@ h6 {
 }
 
 .achievepotential-details .achieve {
+  border-radius: 0.9375rem;
+  border-radius: 0.9375rem;
   overflow: hidden;
   width: 50%;
   position: relative;
@@ -7674,6 +7725,30 @@ h6 {
   top: 50%;
   -webkit-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
+}
+
+.achievepotential-details .achieve:not([disabled]):hover ~ .achieveunlock .unlockicon {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.achievepotential-details .achieve:not([disabled]):hover ~ .achieveunlock .locktext {
+  display: block;
+}
+
+.achievepotential-details .achieve:not([disabled]):hover ~ .achieveunlock .lockicon {
+  display: none;
+}
+
+.achievepotential-details .achieve:not([disabled]):hover ~ .achieveunlock .unlocktext {
+  display: none;
 }
 
 .achievepotential .mobile-potential {
@@ -7965,11 +8040,36 @@ h6 {
   }
 }
 
+.turnteam-info .turnteam-thumbnail {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  overflow: hidden;
+  padding: 2.5rem;
+}
+
 .turnteam-info .turnteam-thumbnail img {
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+  -webkit-transition: transform 250ms ease-in-out;
+  -webkit-transition: -webkit-transform 250ms ease-in-out;
+  transition: -webkit-transform 250ms ease-in-out;
+  transition: transform 250ms ease-in-out;
+  transition: transform 250ms ease-in-out, -webkit-transform 250ms ease-in-out;
+}
+
+.turnteam-info .turnteam-thumbnail img:not([disabled]):hover {
+  -webkit-transform: scale(1.05);
+  transform: scale(1.05);
 }
 
 .youthempowerment {
@@ -7977,7 +8077,7 @@ h6 {
 }
 
 .youthempowerment-content {
-  background: #FFF7E6;
+  background: #FFFBF2;
   -webkit-transform: skew(0deg, -8deg);
   transform: skew(0deg, -8deg);
 }
@@ -8649,7 +8749,7 @@ h6 {
 
 .mindlycharacter {
   padding: 5rem 0rem;
-  background: #FFF7E6;
+  background: #FFFBF2;
 }
 
 @media screen and (max-width: 61.9375rem) {
@@ -9817,7 +9917,7 @@ h6 {
 }
 
 .wellnessaproach-details::-webkit-scrollbar-thumb {
-  background: #FFF7E6;
+  background: #FFFBF2;
 }
 
 .ourbrands {
@@ -10566,7 +10666,7 @@ h6 {
   position: absolute;
   width: 100%;
   height: 60%;
-  background: #FFF7E6;
+  background: #FFFBF2;
   top: auto;
   bottom: 0rem;
   left: 0rem;
@@ -10870,7 +10970,7 @@ h6 {
 }
 
 .coreteam {
-  background: #FFF7E6;
+  background: #FFFBF2;
   padding: 5rem 0rem;
 }
 
@@ -12603,7 +12703,7 @@ h6 {
 }
 
 .blogdetails .bloginfo .blogdescriptions-header .authorinfo-shareinfo .shareinfo .sociallist-link:not([disabled]):hover .icon {
-  background: #FFF7E6;
+  background: #FFFBF2;
 }
 
 .blogdetails .bloginfo .blogdescriptions-header .authorinfo-shareinfo .shareinfo .sociallist-link:not([disabled]):hover .icon svg path {
@@ -13238,7 +13338,7 @@ h6 {
 
 .guidingprinciples {
   padding: 5rem 0rem;
-  background: #FFF7E6;
+  background: #FFFBF2;
 }
 
 @media screen and (max-width: 61.9375rem) {

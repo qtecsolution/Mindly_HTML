@@ -2,12 +2,11 @@
 
 .header {
     background: $headerMobileBg;
-    padding: length(8) length(0);
     @include flex-center;
+    position: relative;
 
     @include breakpoint(tab991) {
         background: $white;
-        height: length(100);
     }
 
     &-content {
@@ -38,8 +37,11 @@
             @include breakpoint(tab991) {
                 @include list-horizontal;
                 flex-grow: 1;
-                gap: length(40);
                 justify-content: center;
+            }
+
+            &-item {
+                padding: length(43) length(20);
             }
 
             &-link {
@@ -48,6 +50,7 @@
                 @include transitions;
                 @include flex-center-vert;
                 gap: length(4);
+                @include border-single(bottom, solid, 2, transparent);
 
                 span {
                     display: block;
@@ -59,42 +62,55 @@
 
                 &:hover:not(.active) {
                     color: $tertiary;
+                    border-color: $tertiary;
                 }
 
                 &.active {
                     color: $tertiary;
+                    border-color: $tertiary;
                 }
             }
 
             .mindlydropdown {
-                position: relative;
-
                 .mindlysubmenu {
                     position: absolute;
                     top: 100%;
-                    background: rgba($white, 0.75);
-                    min-width: length(160);
-                    box-shadow: $box-shadow-1;
+                    left: 0;
+                    background: $white;
+                    @include w100;
+                    min-height: length(362);
+                    padding: length(48);
+                    display: none;
                     @extend %animation;
                     @extend %slideUpIn;
-                    display: none;
 
-                    &-link {
-                        padding: length(12) length(16);
-                        @include w100;
-                        @include font-14-14-semibold;
-                        @include setBgColor($white, $gray-800);
-                        @include transitions;
+                    .mindlysublist {
+                        @include list-vertical;
+                        max-width: length(300);
 
-                        @include hover {
-                            @include setBgColor($hoverBg, $gray-800);
+                        &-item {
+                            padding: length(20) length(0);
+                        }
+
+                        &-link {
+                            display: inline-block;
+                            @include font-20-14-medium;
+                            color: $gray-800;
+                            @include transitions;
+                            @include border-single(bottom, solid, 2, transparent);
+
+                            &:hover:not(.active) {
+                                color: $tertiary;
+                                border-color: $tertiary;
+                            }
                         }
                     }
                 }
 
                 @include hover {
                     .mindlysubmenu {
-                        @include list-vertical;
+                        @include flex-center;
+                        align-items: flex-start;
                     }
                 }
             }

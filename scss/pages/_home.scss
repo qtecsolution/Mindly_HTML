@@ -790,7 +790,7 @@
             display: none;
         }
 
-        .unlock {
+        .achieveunlock {
             @include square(length(218));
             @include flex-center-column;
             overflow: hidden;
@@ -813,18 +813,37 @@
                 padding: length(36);
             }
 
-            .icon {
+            .lockicon {
                 @include square(length(64));
                 @include flex-center;
                 overflow: hidden;
                 padding: length(8);
 
                 svg {
-                    @include wh100;
+                    @include square(length(64));
                 }
             }
 
-            .text {
+            .locktext {
+                @include heading-4;
+                font-weight: bold;
+                color: $textDark;
+                text-align: center;
+                display: none;
+            }
+
+            .unlockicon {
+                @include square(length(64));
+                overflow: hidden;
+                padding: length(8);
+                display: none;
+
+                svg {
+                    @include square(length(64));
+                }
+            }
+
+            .unlocktext {
                 @include heading-4;
                 font-weight: bold;
                 color: $textDark;
@@ -833,6 +852,7 @@
         }
 
         .achieve {
+            @include radius(15);
             overflow: hidden;
             width: 50%;
             position: relative;
@@ -881,6 +901,24 @@
                     bottom: auto;
                     top: 50%;
                     @include transform(translate(-50%, -50%));
+                }
+
+                ~.achieveunlock {
+                    .unlockicon {
+                        @include flex-center;
+                    }
+
+                    .locktext {
+                        display: block;
+                    }
+
+                    .lockicon {
+                        display: none;
+                    }
+
+                    .unlocktext {
+                        display: none;
+                    }
                 }
             }
         }
@@ -1034,9 +1072,19 @@
 
     &-info {
         .turnteam-thumbnail {
+            @include w100;
+            @include flex-center;
+            overflow: hidden;
+            padding: length(40);
+
             img {
                 @include wh100;
                 object-fit: cover;
+                @include transitiontransform;
+
+                @include hover {
+                    @include transform(scale(1.05));
+                }
             }
         }
     }

@@ -141,15 +141,17 @@
                         <a href="#" class="headermenu-link">Services</a>
                         
                         <!-- SERVICES SUBMENU START -->
-                        <ul class="mindlysubmenu">
-                            <li class="mindlysubmenu-item">
-                                <a href="individual.html" class="mindlysubmenu-link">Individual</a>
-                            </li>
+                        <div class="mindlysubmenu">
+                            <ul class="mindlysublist">
+                                <li class="mindlysublist-item">
+                                    <a href="individual.html" class="mindlysublist-link">Individual</a>
+                                </li>
 
-                            <li class="mindlysubmenu-item">
-                                <a href="enterprise.html" class="mindlysubmenu-link"><span>For</span> Organizations</a>
-                            </li>
-                        </ul>
+                                <li class="mindlysublist-item">
+                                    <a href="enterprise.html" class="mindlysublist-link"><span>For</span> Organizations</a>
+                                </li>
+                            </ul>
+                        </div>
                         <!-- SERVICES SUBMENU END -->
                     </li>
                     <!-- SERVICES DROPDOWN END -->
@@ -159,7 +161,7 @@
                     </li>
 
                     <li class="headermenu-item">
-                        <a href="comunity-development.html" class="headermenu-link">Comunity <span>Development Programs</span></a>
+                        <a href="comunity-development.html" class="headermenu-link"><span>For</span> Communities</a>
                     </li>
 
                     <li class="headermenu-item">
@@ -1749,20 +1751,15 @@
                         </div>
                     </div>
 
-                    <div class="unlock">
-                        <div class="icon">
-                            <svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <g clip-path="url(#unlockicon)">
-                                    <path d="M18.5036 27.0674H52.6318C53.328 27.0674 53.9958 27.344 54.4881 27.8363C54.9804 28.3287 55.257 28.9964 55.257 29.6927V55.9451C55.257 56.6413 54.9804 57.3091 54.4881 57.8014C53.9958 58.2937 53.328 58.5703 52.6318 58.5703H10.6279C9.93167 58.5703 9.26393 58.2937 8.7716 57.8014C8.27927 57.3091 8.00269 56.6413 8.00269 55.9451V29.6927C8.00269 28.9964 8.27927 28.3287 8.7716 27.8363C9.26393 27.344 9.93167 27.0674 10.6279 27.0674H13.2532V24.4422C13.2517 20.3014 14.6487 16.2815 17.2178 13.034C19.7869 9.78657 23.3774 7.50196 27.4074 6.55053C31.4374 5.5991 35.6706 6.0366 39.4209 7.79213C43.1711 9.54766 46.2185 12.5183 48.0691 16.2225L43.3726 18.5695C42.0507 15.9233 39.8739 13.8011 37.1949 12.5471C34.5159 11.293 31.4919 10.9805 28.6131 11.6603C25.7343 12.3401 23.1696 13.9724 21.3346 16.2924C19.4996 18.6124 18.5021 21.4842 18.5036 24.4422V27.0674ZM13.2532 32.3179V53.3198H50.0065V32.3179H13.2532ZM26.3794 40.1936H36.8803V45.4441H26.3794V40.1936Z" fill="black"/>
-                                </g>
-                                <defs>
-                                    <clipPath id="unlockicon">
-                                        <rect width="63.0058" height="63.0058" fill="white" transform="translate(0.127197 0.815063)"/>
-                                    </clipPath>
-                                </defs>
-                            </svg>
+                    <div class="achieveunlock">
+                        <div class="unlockicon">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"/><path d="M7 10h13a1 1 0 0 1 1 1v10a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V11a1 1 0 0 1 1-1h1V9a7 7 0 0 1 13.262-3.131l-1.789.894A5 5 0 0 0 7 9v1zm-2 2v8h14v-8H5zm5 3h4v2h-4v-2z"/></svg>
                         </div>
-                        <p class="text">Unlock</p>
+                        <div class="lockicon">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"/><path d="M6 8V7a6 6 0 1 1 12 0v1h2a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V9a1 1 0 0 1 1-1h2zm13 2H5v10h14V10zm-8 5.732a2 2 0 1 1 2 0V18h-2v-2.268zM8 8h8V7a4 4 0 1 0-8 0v1z"/></svg>
+                        </div>
+                        <p class="unlocktext">Unlock</p>
+                        <p class="locktext">Lock</p>
                     </div>
 
                     <div class="achieve">
@@ -1835,7 +1832,7 @@
 
                 <div class="turnteam-info">
                     <div class="row">
-                        <div class="col-lg-6 mx-lg-auto col-12">
+                        <div class="col-lg-10 mx-lg-auto col-12">
                             <div class="turnteam-thumbnail">
                                 <img src="assets/images/home/turn-team/turnteam.png" alt="turnteam-thumbnail">
                             </div>
@@ -3258,5 +3255,6 @@
     <!-- SLIDE JS -->
     <script src="assets/js/wheelslide.js"></script>
     <script src="assets/js/magicscroll.js"></script>
+    <script src="assets/js/toggle-achieve.js"></script>
 </body>
 </html>
