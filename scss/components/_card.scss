@@ -1480,6 +1480,70 @@
 
 // CARD ADVISOR END
 
+
+/* CARD SERVICE-INFO START */
+.card-serviceinfo {
+    overflow: hidden;
+    position: relative;
+
+    &-thumbnail {
+        @include w100;
+        height: length(720);
+        overflow: hidden;
+
+        img {
+            @include wh100;
+            object-fit: cover;
+            @include transitiontransform;
+
+            @include hover {
+                // @include transform(scale(1.05));
+            }
+        }
+    }
+
+    .service-detail {
+        position: absolute;
+        top: length(0);
+        left: length(0);
+        @include wh100;
+        z-index: 10;
+        padding: length(34) length(28);
+        @include flex-column;
+        gap: length(24);
+
+        .service-header {
+            .guideinfo {
+                position: relative;
+                z-index: 12;
+
+                h3 {
+                    color: $white;
+                }
+            }
+        }
+
+        .service-body {
+            display: none;
+
+            .servicetext {
+                color: $white;
+            }
+        }
+    }
+
+    @include hover {
+        .service-detail {
+            background: rgba($black, 0.5);
+
+            .service-body {
+                display: block;
+            }
+        }
+    }
+}
+
+
 .counter-1 {
     background: $footerBg;
 }

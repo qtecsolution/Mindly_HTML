@@ -3,7 +3,6 @@
 .modal {
     &-content {
         @include radius(20);
-        overflow: hidden;
     }
 
     &-header {
@@ -34,3 +33,62 @@
 }
 
 // UPLOAD MEDALLION MODAL END
+
+.videomodal {
+    .modal-content {
+        @include radius(0);
+        border: length(0);
+    }
+
+    .modal-body {
+        position: relative;
+        min-height: length(480);
+
+        @include breakpoint(phone768) {
+            min-height: length(300);
+        }
+
+        .btn-close {
+            position: absolute;
+            right: length(-96);
+            top: length(0);
+            @include square(length(80));
+            @include flex-center;
+            overflow: hidden;
+            background: transparent;
+            @include circle;
+            margin: length(0);
+            padding: length(0);
+            opacity: 1;
+            z-index: 100;
+
+            @include breakpoint(tablet991) {
+                @include square(length(48));
+                right: length(-58);
+            }
+
+            @include breakpoint(phone768) {
+                right: length(20);
+                top: length(20);
+            }
+
+            @include breakpoint(phone575) {
+                right: length(16);
+                top: length(16);
+            }
+
+            &:focus {
+                outline: none;
+                box-shadow: none;
+            }
+        }
+
+        iframe {
+            min-height: length(480);
+
+            @include breakpoint(phone768) {
+                min-height: length(300);
+            }
+        }
+    }
+}

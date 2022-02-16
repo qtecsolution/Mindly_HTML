@@ -106,7 +106,141 @@
         }
     }
 
-    &-body {}
+    .serviceinfo {
+        background: $white;
+        position: relative;
+        z-index: 2;
+
+        &-content {
+            @include flex-center-vert;
+            gap: 0;
+
+            @include breakpoint(tablet991) {
+                display: none;
+            }
+
+            .card-serviceinfo {
+                width: 25%;
+                @include transform(scaleX(1));
+                @include transitions;
+
+                @include hover {
+                    // @include transform(scaleX(1.2));
+                    width: 30%;
+                }
+            }
+        }
+
+        // MOBILE SERVICE START
+        .mobileservice {
+            display: none;
+
+            @include breakpoint(tablet991) {
+                display: block;
+            }
+
+            .accordion {
+                border: none;
+                @include radius(0);
+
+                &-item {
+                    border: none;
+                    @include radius(0);
+                }
+
+                &-button {
+                    padding: length(0);
+                    border: none;
+                    @include transparent-button;
+
+                    .servicemobile {
+                        position: relative;
+                        @include w100;
+
+                        .service-thumbnail {
+                            position: relative;
+                            @include w100;
+                            height: length(210);
+                            overflow: hidden;
+
+                            img {
+                                @include w100;
+                                object-fit: contain;
+                            }
+
+                            .overlay {
+                                position: absolute;
+                                top: 0;
+                                left: 0;
+                                @include wh100;
+                                background: rgba($black, 0.5);
+                                z-index: 1;
+                            }
+                        }
+
+                        .service-header {
+                            position: absolute;
+                            top: 0;
+                            left: 0;
+                            @include w100;
+                            z-index: 2;
+                            @include flex-center-vert;
+                            justify-content: flex-start;
+                            padding: length(0);
+
+                            .guideinfo {
+                                position: relative;
+                                z-index: 12;
+                                padding: length(34) length(28);
+
+                                h3 {
+                                    color: $white;
+                                }
+                            }
+                        }
+                    }
+
+                    &:not(.collapsed) {
+                        color: transparent;
+                        background-color: transparent;
+                        box-shadow: none;
+
+                        &::after {
+                            @include transform(rotate(180deg));
+                            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='white' viewBox='0 0 16 16'%3E%3Cpath d='M15.4 3.7c-.2-.2-.4-.2-.7-.1L8 8.1 1.3 3.6c-.2-.2-.5-.1-.7.1-.2.2-.2.5 0 .7l7 8c.1.1.2.2.4.2s.3-.1.4-.2l7-8c.1-.3.1-.5 0-.7z'%3E%3C/path%3E%3C/svg%3E");
+                        }
+                    }
+
+                    &::after {
+                        position: absolute;
+                        top: 50%;
+                        @include transform(translateY(-50%));
+                        right: length(20);
+                        z-index: 20;
+                        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='white' viewBox='0 0 16 16'%3E%3Cpath d='M15.4 3.7c-.2-.2-.4-.2-.7-.1L8 8.1 1.3 3.6c-.2-.2-.5-.1-.7.1-.2.2-.2.5 0 .7l7 8c.1.1.2.2.4.2s.3-.1.4-.2l7-8c.1-.3.1-.5 0-.7z'%3E%3C/path%3E%3C/svg%3E");
+                    }
+
+                    &:focus {
+                        box-shadow: none;
+                        outline: none;
+                        border: none;
+                        border-color: transparent;
+                    }
+                }
+
+                &-collapse {
+                    @include radius(0);
+                }
+
+                &-body {
+                    .servicetext {
+                        @include font-30-18-normal;
+                        color: $gray-700;
+                    }
+                }
+            }
+        }
+    }
 }
 
 // GUIDING PRINCIPALES SECTION END
