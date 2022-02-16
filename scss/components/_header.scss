@@ -3,7 +3,6 @@
 .header {
     background: $headerMobileBg;
     @include flex-center;
-    position: relative;
 
     @include breakpoint(tab991) {
         background: $white;

@@ -993,7 +993,6 @@ h6 {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  position: relative;
 }
 
 @media screen and (min-width: 61.9375rem) {
@@ -7646,6 +7645,30 @@ h6 {
   font-weight: bold;
   color: #323232;
   text-align: center;
+}
+
+.achievepotential-details .activeachieveunlock .unlockicon {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.achievepotential-details .activeachieveunlock .locktext {
+  display: block;
+}
+
+.achievepotential-details .activeachieveunlock .lockicon {
+  display: none;
+}
+
+.achievepotential-details .activeachieveunlock .unlocktext {
+  display: none;
 }
 
 .achievepotential-details .achieve {

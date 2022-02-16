@@ -67,7 +67,6 @@
         padding: length(54) length(0) length(38);
         @include h100;
 
-
         &-content {
             .bannerinfo {
                 max-width: 60%;
@@ -848,6 +847,24 @@
                 font-weight: bold;
                 color: $textDark;
                 text-align: center;
+            }
+        }
+
+        .activeachieveunlock {
+            .unlockicon {
+                @include flex-center;
+            }
+
+            .locktext {
+                display: block;
+            }
+
+            .lockicon {
+                display: none;
+            }
+
+            .unlocktext {
+                display: none;
             }
         }
 
