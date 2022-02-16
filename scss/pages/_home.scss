@@ -296,20 +296,21 @@
     }
 
     .scroll-nav {
-
         .slick-arrow {
-            top: length(40);
             z-index: 100;
+            @include square(length(80));
+            top: length(40);
 
             @include breakpoint(tablet991) {
-                top: length(58);
+                @include square(length(60));
+                top: length(60);
             }
 
-            @include breakpoint(phone575) {
-                top: length(54);
+            @include breakpoint(phone768) {
+                top: length(46);
             }
 
-            @include breakpoint(phone500) {
+            @include breakpoint(phone414) {
                 top: length(40);
             }
 
@@ -329,50 +330,50 @@
         }
 
         .slick-prev {
-            left: 36.5%;
+            left: 31%;
+
+            @include breakpoint(desktop1400) {
+                left: 32.5%;
+            }
 
             @include breakpoint(tablet991) {
-                left: 38.5%;
+                left: 37%;
             }
 
             @include breakpoint(phone768) {
-                left: 35%;
-            }
-
-            @include breakpoint(phone575) {
-                left: 36.5%;
+                left: 32.5%;
             }
 
             @include breakpoint(phone500) {
-                left: 34%;
+                left: 30%;
             }
 
             @include breakpoint(phone414) {
-                left: 30%;
+                left: 24%;
             }
         }
 
         .slick-next {
-            left: 58%;
+            left: 56.5%;
 
-            @include breakpoint(tablet991) {
+            @include breakpoint(desktop1400) {
                 left: 56%;
             }
 
-            @include breakpoint(phone768) {
-                left: 58%;
+            @include breakpoint(tablet991) {
+                left: 54.5%;
             }
 
-            @include breakpoint(phone575) {
-                left: 57%;
+            @include breakpoint(phone768) {
+                left: 56%;
             }
 
             @include breakpoint(phone500) {
-                left: 59%;
+                left: 57%;
             }
 
             @include breakpoint(phone414) {
-                left: 60%;
+                left: 59%;
             }
         }
 
