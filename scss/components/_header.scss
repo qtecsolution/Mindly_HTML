@@ -3,6 +3,7 @@
 .header {
     background: $headerMobileBg;
     @include flex-center;
+    height: length(100);
 
     @include breakpoint(tab991) {
         background: $white;
@@ -165,6 +166,10 @@
             .authenticationlist {
                 @include list-horizontal;
                 gap: length(24);
+
+                @include breakpoint(desktop1199) {
+                    gap: length(16);
+                }
             }
 
             // AUTHENTICATION LIST END

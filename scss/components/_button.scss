@@ -7,6 +7,10 @@
     @include font-16-16-semibold;
     @include transitions;
 
+    @include breakpoint(desktop1199) {
+        padding: length(14) length(20);
+    }
+
     @include hover {
         @include setBgColor($white, $tertiary);
     }
@@ -20,6 +24,10 @@
     @include radius(6);
     @include font-16-16-semibold;
     @include transitions;
+
+    @include breakpoint(desktop1199) {
+        padding: length(14) length(20);
+    }
 
     @include hover {
         @include setBgColor($tertiary, $white);
