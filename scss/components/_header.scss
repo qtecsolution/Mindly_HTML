@@ -41,6 +41,13 @@
 
             &-item {
                 padding: length(42) length(20);
+
+                @include hover {
+                    .headermenu-link:not(.active) {
+                        color: $tertiary;
+                        border-color: $tertiary;
+                    }
+                }
             }
 
             &-link {
@@ -57,11 +64,6 @@
                     @include breakpoint(desktop1400) {
                         display: none;
                     }
-                }
-
-                &:hover:not(.active) {
-                    color: $tertiary;
-                    border-color: $tertiary;
                 }
 
                 &.active {
@@ -89,6 +91,13 @@
 
                         &-item {
                             padding: length(20) length(0);
+
+                            @include hover {
+                                .mindlysublist-link:not(.active) {
+                                    color: $tertiary;
+                                    border-color: $tertiary;
+                                }
+                            }
                         }
 
                         &-link {
@@ -98,7 +107,7 @@
                             @include transitions;
                             @include border-single(bottom, solid, 2, transparent);
 
-                            &:hover:not(.active) {
+                            &.active {
                                 color: $tertiary;
                                 border-color: $tertiary;
                             }

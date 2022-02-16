@@ -1069,6 +1069,11 @@ h6 {
   padding: 2.625rem 1.25rem;
 }
 
+.header-content .headermenu-item:not([disabled]):hover .headermenu-link:not(.active) {
+  color: #F94E26;
+  border-color: #F94E26;
+}
+
 .header-content .headermenu-link {
   font-family: "Gilroy";
   font-style: normal;
@@ -1096,11 +1101,6 @@ h6 {
   .header-content .headermenu-link span {
     display: none;
   }
-}
-
-.header-content .headermenu-link:hover:not(.active) {
-  color: #F94E26;
-  border-color: #F94E26;
 }
 
 .header-content .headermenu-link.active {
@@ -1137,6 +1137,11 @@ h6 {
   padding: 1.25rem 0rem;
 }
 
+.header-content .headermenu .mindlydropdown .mindlysubmenu .mindlysublist-item:not([disabled]):hover .mindlysublist-link:not(.active) {
+  color: #F94E26;
+  border-color: #F94E26;
+}
+
 .header-content .headermenu .mindlydropdown .mindlysubmenu .mindlysublist-link {
   display: inline-block;
   font-family: "Gilroy";
@@ -1150,7 +1155,7 @@ h6 {
   border-bottom: solid 0.125rem transparent;
 }
 
-.header-content .headermenu .mindlydropdown .mindlysubmenu .mindlysublist-link:hover:not(.active) {
+.header-content .headermenu .mindlydropdown .mindlysubmenu .mindlysublist-link.active {
   color: #F94E26;
   border-color: #F94E26;
 }
