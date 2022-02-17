@@ -136,11 +136,6 @@
                 @include square(length(144));
                 @include circle;
                 @include transparent-button;
-                overflow: hidden;
-
-                svg {
-                    @include wh100;
-                }
 
                 @include breakpoint(desktop1200) {
                     @include square(length(100));
@@ -152,6 +147,46 @@
 
                 @include breakpoint(phone575) {
                     @include square(length(60));
+                }
+
+                svg {
+                    @include wh100;
+                }
+
+                &::before,
+                &::after {
+                    content: "";
+                    position: absolute;
+                    left: 50%;
+                    top: 50%;
+                    @include transform(translate(-50%, -50%));
+                    display: block;
+                    @include square(length(144));
+                    background: transparent;
+                    @include circle;
+                    z-index: 100;
+
+                    @include breakpoint(desktop1200) {
+                        @include square(length(100));
+                    }
+
+                    @include breakpoint(phone768) {
+                        @include square(length(80));
+                    }
+
+                    @include breakpoint(phone575) {
+                        @include square(length(60));
+                    }
+                }
+
+                &::before {
+                    background: rgba($white, 0.75);
+                    animation: pulse-border 1500ms ease-out infinite;
+                }
+
+                &::after {
+                    z-index: 1;
+                    transition: all 200ms;
                 }
             }
 
@@ -207,7 +242,10 @@
     .newsindividualvideo {
         .singlevideo {
             position: relative;
-            height: length(463);
+
+            @include breakpoint(tab991) {
+                height: length(463);
+            }
 
             img {
                 @include wh100;
@@ -223,7 +261,6 @@
                 @include square(length(74));
                 @include circle;
                 @include transparent-button;
-                overflow: hidden;
 
                 svg {
                     @include wh100;
@@ -233,8 +270,32 @@
                     @include square(length(60));
                 }
 
-                @include breakpoint(phone768) {
-                    @include square(length(48));
+                &::before,
+                &::after {
+                    content: "";
+                    position: absolute;
+                    left: 50%;
+                    top: 50%;
+                    @include transform(translate(-50%, -50%));
+                    display: block;
+                    @include square(length(74));
+                    background: transparent;
+                    @include circle;
+                    z-index: 100;
+
+                    @include breakpoint(desktop1200) {
+                        @include square(length(60));
+                    }
+                }
+
+                &::before {
+                    background: rgba($white, 0.75);
+                    animation: pulse-border 1500ms ease-out infinite;
+                }
+
+                &::after {
+                    z-index: 1;
+                    transition: all 200ms;
                 }
             }
 

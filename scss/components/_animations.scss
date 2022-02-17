@@ -1,0 +1,25 @@
+// BUTTON PULSE ANIMATION
+@keyframes pulse-border {
+    0% {
+        @include transform(translateX(-50%) translateY(-50%) translateZ(0) scale(1));
+        opacity: 1;
+    }
+
+    100% {
+        @include transform(translateX(-50%) translateY(-50%) translateZ(0) scale(1.5));
+        opacity: 0;
+    }
+}
+
+
+@keyframes ribbonanimate {
+    0% {
+        @include transform(translateY(length(50)) scaleY(0) translateZ(0));
+        opacity: 0;
+    }
+
+    100% {
+        @include transform(translateY(0) scaleY(1) translateZ(0));
+        opacity: 1;
+    }
+}

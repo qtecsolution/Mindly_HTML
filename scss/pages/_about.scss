@@ -262,7 +262,6 @@
             .btn-playpause {
                 @include square(length(144));
                 @include circle;
-                overflow: hidden;
                 @include flex-center;
                 position: absolute;
                 top: 50%;
@@ -280,6 +279,38 @@
 
                 svg {
                     @include wh100;
+                }
+
+                &::before,
+                &::after {
+                    content: "";
+                    position: absolute;
+                    left: 50%;
+                    top: 50%;
+                    @include transform(translate(-50%, -50%));
+                    display: block;
+                    @include square(length(144));
+                    background: transparent;
+                    @include circle;
+                    z-index: 100;
+
+                    @include breakpoint(desktop1200) {
+                        @include square(length(100));
+                    }
+
+                    @include breakpoint(phone768) {
+                        @include square(length(80));
+                    }
+                }
+
+                &::before {
+                    background: rgba($white, 0.75);
+                    animation: pulse-border 1500ms ease-out infinite;
+                }
+
+                &::after {
+                    z-index: 1;
+                    transition: all 200ms;
                 }
             }
         }

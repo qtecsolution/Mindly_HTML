@@ -952,6 +952,34 @@
             @include flex-center;
             @include circle;
             overflow: hidden;
+
+            &::before,
+            &::after {
+                content: "";
+                position: absolute;
+                left: 50%;
+                top: 50%;
+                @include transform(translate(-50%, -50%));
+                display: block;
+                @include square(length(72));
+                background: transparent;
+                @include circle;
+                z-index: 100;
+            }
+
+            svg {
+                @include wh100;
+            }
+
+            &::before {
+                background: rgba($white, 0.75);
+                animation: pulse-border 1500ms ease-out infinite;
+            }
+
+            &::after {
+                z-index: 1;
+                transition: all 200ms;
+            }
         }
     }
 
