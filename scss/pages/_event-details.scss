@@ -77,7 +77,7 @@
                     @include radius(6);
                     @include font-20-14-normal;
                     box-shadow: $inputshadow;
-                    padding: length(14);
+                    padding: length(14) length(18);
                 }
             }
 

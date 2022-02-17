@@ -14756,7 +14756,7 @@ h6 {
   line-height: 1.42857;
   -webkit-box-shadow: 0rem 0.0625rem 0.125rem rgba(50, 50, 71, 0.08), 0rem 0rem 0.0625rem rgba(50, 50, 71, 0.2);
           box-shadow: 0rem 0.0625rem 0.125rem rgba(50, 50, 71, 0.08), 0rem 0rem 0.0625rem rgba(50, 50, 71, 0.2);
-  padding: 0.875rem;
+  padding: 0.875rem 1.125rem;
 }
 
 .eventinfobox-body .eventform .eventcheck {
