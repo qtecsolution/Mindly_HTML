@@ -4858,6 +4858,11 @@ h6 {
 }
 
 .card-serviceinfo .service-detail .service-body .servicetext {
+  font-family: "Gilroy";
+  font-style: normal;
+  font-size: 1.125rem;
+  font-weight: normal;
+  line-height: 1.66667;
   color: #ffffff;
 }
 
@@ -14414,9 +14419,9 @@ h6 {
 .guidingprinciples .serviceinfo .mobileservice .accordion-body .servicetext {
   font-family: "Gilroy";
   font-style: normal;
-  font-size: 1.125rem;
+  font-size: 1rem;
   font-weight: normal;
-  line-height: 1.66667;
+  line-height: 1.5;
   color: #4A5568;
 }
 

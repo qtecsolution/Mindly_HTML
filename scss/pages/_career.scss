@@ -121,7 +121,6 @@
                 @include transitions;
 
                 @include hover {
-                    // @include transform(scaleX(1.2));
                     width: 30%;
                 }
             }
@@ -230,7 +229,7 @@
 
                 &-body {
                     .servicetext {
-                        @include font-30-18-normal;
+                        @include font-24-16-normal;
                         color: $gray-700;
                     }
                 }
