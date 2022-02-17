@@ -596,6 +596,19 @@
                 }
             }
         }
+
+        .watchlink {
+            .link {
+                @include font-26-16-semibold;
+                color: $secondary;
+                @include flex-center-vert;
+                @include transitions;
+
+                @include hover {
+                    color: $tertiary;
+                }
+            }
+        }
     }
 }
 

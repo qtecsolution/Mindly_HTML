@@ -6,6 +6,26 @@
     @include breakpoint(tablet991) {
         padding: length(40) length(0);
     }
+
+    &-content {
+        @include flex-column;
+        gap: length(80);
+    }
+
+    &-header {
+        @include flex-center-column;
+        gap: length(24);
+        text-align: center;
+
+        .leadershiptitle {
+            color: $gray-800;
+        }
+
+        .leadershiptext {
+            @include font-30-18-normal;
+            color: $gray-600;
+        }
+    }
 }
 
 // LEADERSHIP-BOARD SECTION END

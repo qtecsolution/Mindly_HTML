@@ -3373,6 +3373,27 @@ h6 {
   color: #F94E26;
 }
 
+.cardblog-body .watchlink .link {
+  font-family: "Gilroy";
+  font-style: normal;
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.625;
+  color: #FCAF15;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transition: all 250ms ease-in-out;
+  transition: all 250ms ease-in-out;
+}
+
+.cardblog-body .watchlink .link:not([disabled]):hover {
+  color: #F94E26;
+}
+
 .bloglink:hover .cardblog-body .bloglink .link {
   color: #F94E26;
 }
@@ -14009,6 +14030,48 @@ h6 {
   }
 }
 
+.leadership-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 5rem;
+}
+
+.leadership-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 1.5rem;
+  text-align: center;
+}
+
+.leadership-header .leadershiptitle {
+  color: #2D3748;
+}
+
+.leadership-header .leadershiptext {
+  font-family: "Gilroy";
+  font-style: normal;
+  font-size: 1.125rem;
+  font-weight: normal;
+  line-height: 1.66667;
+  color: #718096;
+}
+
 .leadship {
   padding: 5rem 0rem 10rem;
 }
@@ -14527,4 +14590,296 @@ h6 {
   z-index: 1;
   -webkit-transition: all 200ms;
   transition: all 200ms;
+}
+
+.eventdetails {
+  padding: 2.5rem 0rem 0rem;
+}
+
+.eventdetails-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 2.5rem;
+}
+
+.eventdetails-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 1.5rem;
+}
+
+.eventdetails-header .eventdetailstitle {
+  color: #2D3748;
+}
+
+@media screen and (max-width: 48rem) {
+  .eventdetails-header .eventdetailstitle {
+    font-family: "Gilroy";
+    font-style: normal;
+    font-size: 1.75rem;
+    font-weight: 600;
+    line-height: 1.36;
+  }
+}
+
+.eventdetails-header .eventdatetime {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 0.5rem;
+}
+
+.eventdetails-header .eventdatetime .eventdate {
+  font-family: "Gilroy";
+  font-style: normal;
+  font-size: 0.875rem;
+  font-weight: normal;
+  line-height: 1.71429;
+  color: #718096;
+}
+
+.eventdetails-header .eventdatetime .eventtime {
+  font-family: "Gilroy";
+  font-style: normal;
+  font-size: 0.875rem;
+  font-weight: normal;
+  line-height: 1.71429;
+  color: #718096;
+}
+
+.eventinfobox {
+  background: #FFFBF2;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 1.875rem;
+  padding: 2.5rem;
+  height: 100%;
+  border-radius: 1rem;
+  border-radius: 1rem;
+}
+
+.eventinfobox-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 0.25rem;
+  text-align: center;
+}
+
+.eventinfobox-header .eventinfotitle {
+  color: #2D3748;
+}
+
+.eventinfobox-header .eventinfotext {
+  font-family: "Gilroy";
+  font-style: normal;
+  font-size: 1rem;
+  font-weight: normal;
+  line-height: 1.625;
+  color: #718096;
+}
+
+.eventinfobox-body .eventform {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 1.875rem;
+}
+
+.eventinfobox-body .eventform .inputbox {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 0.5rem;
+}
+
+.eventinfobox-body .eventform .inputbox .inputlabel {
+  font-family: "Gilroy";
+  font-style: normal;
+  font-size: 0.875rem;
+  font-weight: normal;
+  line-height: 1.42857;
+  color: #4A5568;
+}
+
+.eventinfobox-body .eventform .inputbox .inputfield {
+  background: #ffffff;
+  color: #000000;
+  border-radius: 0.375rem;
+  border-radius: 0.375rem;
+  font-family: "Gilroy";
+  font-style: normal;
+  font-size: 0.875rem;
+  font-weight: normal;
+  line-height: 1.42857;
+  -webkit-box-shadow: 0rem 0.0625rem 0.125rem rgba(50, 50, 71, 0.08), 0rem 0rem 0.0625rem rgba(50, 50, 71, 0.2);
+          box-shadow: 0rem 0.0625rem 0.125rem rgba(50, 50, 71, 0.08), 0rem 0rem 0.0625rem rgba(50, 50, 71, 0.2);
+  padding: 0.875rem;
+}
+
+.eventinfobox-body .eventform .eventcheck {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.eventinfobox-body .eventform .eventcheck .checkinput:checked ~ .checklabel::before {
+  background: #01796F;
+  border-color: #01796F;
+}
+
+.eventinfobox-body .eventform .eventcheck .checkinput:checked ~ .checklabel::after {
+  opacity: 1;
+  visibility: visible;
+}
+
+.eventinfobox-body .eventform .eventcheck .checklabel {
+  font-family: "Gilroy";
+  font-style: normal;
+  font-size: 0.75rem;
+  font-weight: normal;
+  line-height: 1.66667;
+  color: #4A5568;
+  cursor: pointer;
+  position: relative;
+  padding-left: 1.875rem;
+}
+
+.eventinfobox-body .eventform .eventcheck .checklabel::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 1.25rem;
+  width: 1.25rem;
+  border: solid 0.125rem #C9CED6;
+  border-radius: 0.25rem;
+  border-radius: 0.25rem;
+  background: transparent;
+  -webkit-transition: all 250ms ease-in-out;
+  transition: all 250ms ease-in-out;
+}
+
+.eventinfobox-body .eventform .eventcheck .checklabel::after {
+  content: '';
+  position: absolute;
+  top: 0.25rem;
+  left: 0.5rem;
+  width: 0.3125rem;
+  height: 0.625rem;
+  border: solid 0.125rem #ffffff;
+  border-top: 0rem;
+  border-left: 0rem;
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: all 250ms ease-in-out;
+  transition: all 250ms ease-in-out;
+}
+
+.eventinfobox-body .eventform .eventcheck .checklabel::-moz-selection {
+  background: transparent;
+  color: #4A5568;
+}
+
+.eventinfobox-body .eventform .eventcheck .checklabel::selection {
+  background: transparent;
+  color: #4A5568;
+}
+
+.eventinfobox-body .eventform .eventcheck .checklabel .link {
+  font-family: "Gilroy";
+  font-style: normal;
+  font-size: 0.75rem;
+  font-weight: 700;
+  line-height: 1.66667;
+  color: #4A5568;
+  -webkit-transition: all 250ms ease-in-out;
+  transition: all 250ms ease-in-out;
+}
+
+.eventinfobox-body .eventform .eventcheck .checklabel .link:not([disabled]):hover {
+  color: #F94E26;
+}
+
+.eventinfobox-body .eventform .submitbox .btn-submit {
+  width: 100%;
+  padding: 1rem;
+  height: 2.875rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
+}
+
+.eventinfo-thumbnail {
+  width: 100%;
+  height: 26.0625rem;
+  border-radius: 1rem;
+  border-radius: 1rem;
+  overflow: hidden;
+}
+
+.eventinfo-thumbnail img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -webkit-transition: transform 250ms ease-in-out;
+  -webkit-transition: -webkit-transform 250ms ease-in-out;
+  transition: -webkit-transform 250ms ease-in-out;
+  transition: transform 250ms ease-in-out;
+  transition: transform 250ms ease-in-out, -webkit-transform 250ms ease-in-out;
+}
+
+.eventinfo-thumbnail img:not([disabled]):hover {
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
 }

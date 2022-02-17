@@ -1,0 +1,180 @@
+.eventdetails {
+    padding: length(40) length(0) length(0);
+
+    &-content {
+        @include flex-column;
+        gap: length(40);
+    }
+
+    &-header {
+        @include flex-column;
+        gap: length(24);
+
+        .eventdetailstitle {
+            color: $gray-800;
+
+            @include breakpoint(phone768) {
+                @include heading-2;
+            }
+        }
+
+        .eventdatetime {
+            @include flex-column;
+            gap: length(8);
+
+            .eventdate {
+                @include font-24-14-normal;
+                color: $gray-600;
+            }
+
+            .eventtime {
+                @include font-24-14-normal;
+                color: $gray-600;
+            }
+        }
+    }
+}
+
+.eventinfobox {
+    background: $footerBg;
+    @include flex-column;
+    gap: length(30);
+    padding: length(40);
+    @include h100;
+    @include radius(16);
+
+    &-header {
+        @include flex-center-column;
+        gap: length(4);
+        text-align: center;
+
+        .eventinfotitle {
+            color: $gray-800;
+        }
+
+        .eventinfotext {
+            @include font-26-16-normal;
+            color: $gray-600;
+        }
+    }
+
+    &-body {
+        .eventform {
+            @include flex-column;
+            gap: length(30);
+
+            .inputbox {
+                @include flex-column;
+                gap: length(8);
+
+                .inputlabel {
+                    @include font-20-14-normal;
+                    color: $gray-700;
+                }
+
+                .inputfield {
+                    @include setBgColor($white, $black);
+                    @include radius(6);
+                    @include font-20-14-normal;
+                    box-shadow: $inputshadow;
+                    padding: length(14);
+                }
+            }
+
+            .eventcheck {
+                @include flex-center-vert;
+
+                .checkinput {
+                    &:checked~.checklabel {
+                        &::before {
+                            background: $primary;
+                            border-color: $primary;
+                        }
+
+                        &::after {
+                            opacity: 1;
+                            visibility: visible
+                        }
+                    }
+                }
+
+                .checklabel {
+                    @include font-20-12-normal;
+                    color: $gray-700;
+                    cursor: pointer;
+                    position: relative;
+                    padding-left: length(30);
+
+                    &::before {
+                        content: '';
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        @include square(length(20));
+                        @include border(solid, 2, $checkBorder);
+                        @include radius(4);
+                        background: transparent;
+                        @include transitions;
+                    }
+
+                    &::after {
+                        content: '';
+                        position: absolute;
+                        top: length(4);
+                        left: length(8);
+                        width: length(5);
+                        height: length(10);
+                        @include border(solid, 2, $white);
+                        border-top: length(0);
+                        border-left: length(0);
+                        @include transform(rotate(45deg));
+                        opacity: 0;
+                        visibility: hidden;
+                        @include transitions;
+                    }
+
+                    &::selection {
+                        @include setBgColor(transparent, $gray-700);
+                    }
+
+                    .link {
+                        @include font-20-12-bold;
+                        color: $gray-700;
+                        @include transitions;
+
+                        @include hover {
+                            color: $tertiary;
+                        }
+                    }
+                }
+            }
+
+            .submitbox {
+                .btn-submit {
+                    @include w100;
+                    padding: length(16);
+                    height: length(46);
+                    @include flex-center;
+                    text-align: center;
+                }
+            }
+        }
+    }
+}
+
+.eventinfo-thumbnail {
+    @include w100;
+    height: length(417);
+    @include radius(16);
+    overflow: hidden;
+
+    img {
+        @include wh100;
+        object-fit: cover;
+        @include transitiontransform;
+
+        @include hover {
+            @include transform(scale(1.1));
+        }
+    }
+}
