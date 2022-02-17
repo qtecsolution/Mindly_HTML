@@ -68,14 +68,16 @@
         @include h100;
 
         &-content {
+            max-width: length(867);
+            @include w100;
+
+            @include breakpoint(desktop1199) {
+                max-width: length(667);
+            }
+
             .bannerinfo {
-                max-width: 60%;
                 @include flex-column;
                 gap: length(32);
-
-                @include breakpoint(desktop1400) {
-                    max-width: 70%;
-                }
 
                 .thumbnail-title {
                     @include display-1;

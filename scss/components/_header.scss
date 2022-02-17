@@ -91,7 +91,7 @@
                         max-width: length(300);
 
                         &-item {
-                            padding: length(20) length(0);
+                            padding: length(8) length(0);
 
                             @include hover {
                                 .mindlysublist-link:not(.active) {

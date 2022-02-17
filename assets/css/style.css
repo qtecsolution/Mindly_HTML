@@ -1135,7 +1135,7 @@ h6 {
 }
 
 .header-content .headermenu .mindlydropdown .mindlysubmenu .mindlysublist-item {
-  padding: 1.25rem 0rem;
+  padding: 0.5rem 0rem;
 }
 
 .header-content .headermenu .mindlydropdown .mindlysubmenu .mindlysublist-item:not([disabled]):hover .mindlysublist-link:not(.active) {
@@ -7089,8 +7089,18 @@ h6 {
   height: 100%;
 }
 
+.homedesktopbanner .desktop-thumnail-content {
+  max-width: 54.1875rem;
+  width: 100%;
+}
+
+@media screen and (max-width: 74.9375rem) {
+  .homedesktopbanner .desktop-thumnail-content {
+    max-width: 41.6875rem;
+  }
+}
+
 .homedesktopbanner .desktop-thumnail-content .bannerinfo {
-  max-width: 60%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -7099,12 +7109,6 @@ h6 {
       -ms-flex-direction: column;
           flex-direction: column;
   gap: 2rem;
-}
-
-@media screen and (max-width: 87.4375rem) {
-  .homedesktopbanner .desktop-thumnail-content .bannerinfo {
-    max-width: 70%;
-  }
 }
 
 .homedesktopbanner .desktop-thumnail-content .bannerinfo .thumbnail-title {
@@ -12325,7 +12329,6 @@ h6 {
   height: 100%;
   position: relative;
   z-index: 120;
-  position: relative;
 }
 
 .desktopbanner .desktop-thumnail-content {
@@ -12339,10 +12342,17 @@ h6 {
   gap: 2.5rem;
   position: relative;
   z-index: 120;
+  max-width: 54.1875rem;
+  width: 100%;
+}
+
+@media screen and (max-width: 74.9375rem) {
+  .desktopbanner .desktop-thumnail-content {
+    max-width: 41.6875rem;
+  }
 }
 
 .desktopbanner .desktop-thumnail-content .bannerinfo {
-  max-width: 80%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -12351,12 +12361,6 @@ h6 {
       -ms-flex-direction: column;
           flex-direction: column;
   gap: 2rem;
-}
-
-@media screen and (max-width: 87.4375rem) {
-  .desktopbanner .desktop-thumnail-content .bannerinfo {
-    max-width: 70%;
-  }
 }
 
 .desktopbanner .desktop-thumnail-content .bannerinfo .thumbnail-title {
