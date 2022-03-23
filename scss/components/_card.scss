@@ -1521,6 +1521,111 @@
 
 // CARD ADVISOR END
 
+// CARD PROVIDER START
+
+.cardprovider {
+    background: $white;
+    padding: length(16);
+    @include radius(16);
+    @include w100;
+    @include flex-column;
+    gap: length(24);
+
+    &-header {
+        @include w100;
+        height: length(390);
+        @include flex-center;
+        @include radius(12);
+        overflow: hidden;
+
+        img {
+            @include wh100;
+            object-fit: cover;
+            @include transitiontransform;
+
+            @include hover {
+                @include transform(scale(1.05));
+            }
+        }
+    }
+
+    &-body {
+        @include flex-center-column;
+        gap: length(19);
+
+        .providerinfos {
+            @include flex-center-column;
+            gap: length(8);
+            text-align: center;
+
+            .name {
+                @include heading-2;
+                color: $gray-800;
+
+                @include breakpoint(phone575) {
+                    @include heading-3;
+                }
+            }
+
+            .position {
+                @include font-24-14-semibold;
+                color: $gray-600;
+            }
+
+            .degrees {
+                @include font-24-14-semibold;
+                color: $gray-600;
+            }
+        }
+
+        .ratings {
+            @include flex-center;
+            gap: length(16);
+
+            .ragingpoint {
+                @include heading-3;
+                color: $secondary;
+            }
+
+            .ratinglist {
+                @include list-horizontal;
+                gap: length(4);
+
+                &-item {
+                    @include square(length(20));
+                    @include flex-center;
+                    overflow: hidden;
+
+                    svg {
+                        @include wh100;
+                    }
+                }
+            }
+        }
+
+        .available-badge {
+            padding: length(8) length(12);
+            @include flex-center;
+            gap: length(8);
+            @include radius(100);
+            background: $badgeBg;
+
+            .active {
+                background: $activeBg;
+                @include square(length(8));
+                @include circle;
+            }
+
+            .badgetext {
+                @include font-12-12-bold;
+                color: $activeBg;
+            }
+        }
+    }
+}
+
+// CARD PROVIDER END
+
 
 /* CARD SERVICE-INFO START */
 .card-serviceinfo {

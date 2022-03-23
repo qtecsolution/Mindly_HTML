@@ -1,0 +1,49 @@
+.providerdetails {
+    padding: length(36) length(0) length(48);
+
+    @include breakpoint(tab991) {
+        padding: length(36) length(0) length(98);
+    }
+
+    .providerdescriptions {
+        @include flex-column;
+        gap: length(56);
+
+        .providerdetail {
+            @include flex-column;
+            gap: length(24);
+
+            .title {
+                color: $gray-800;
+            }
+
+            .text {
+                @include font-24-16-normal;
+                color: $gray-600;
+            }
+        }
+
+        .specialities {
+            @include flex-column;
+            gap: length(24);
+
+            .title {
+                color: $gray-800;
+            }
+
+            &-badges {
+                @include flex-center-vert;
+                gap: length(8);
+                flex-wrap: wrap;
+
+                .badge-speciality {
+                    padding: length(16) length(40);
+                    @include radius(50);
+                    @include setBgColor($white, $gray-600);
+                    @include font-24-14-semibold;
+                    text-align: center;
+                }
+            }
+        }
+    }
+}
