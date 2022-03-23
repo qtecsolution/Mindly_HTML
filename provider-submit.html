@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Provider Register</title>
+    <title>Provider Register | Update Photo</title>
     <!-- FAVICON -->
     <link rel="shortcut icon" href="favicon.svg" type="image/svg">
     <!-- BOOTSTRAP CSS -->
@@ -56,8 +56,8 @@
                 <div class="col-lg-7 mx-lg-auto col-12">
                     <div class="registerbanner-content">
                         <h1 class="banner-title">
-                            Where the mind is without fear <br>
-                            and the head is held high
+                            <span class="colortext">You are almost done!</span> <br>
+                            Submit and give us 12 Days to review!
                         </h1>
 
                         <p class="banner-text">
@@ -70,331 +70,44 @@
     </section>
     <!-- REGISTER BANNER SECTION END -->
 
-    <!-- REGISTER SECTION START -->
-    <section class="registerbox">
+    <!-- PROFILE UPLOAD START -->
+    <section class="profileupload">
         <div class="container">
-            <div class="row">
-                <div class="col-lg-10 mx-lg-auto col-12">
-                    <div class="registerbox-content">
-                        <!-- REGISTERBOX CONTENT HEADER START (PROGRESS) -->
-                        <div class="registerbox-header">
-                            <div class="registerprogress">
-                                <div class="progressinfo active completed">
-                                    <div class="progresscount">
-                                        <span class="progresscounter">1</span>
-                                    </div>
+            <div class="col-lg-8 col-12 mx-lg-auto">
+                <div class="profileupload-content">
+                    <div class="uploadbox">
+                        <div class="uploadthumbnail">
+                            <img src="assets/images/upload/upload-thumbnail.svg" alt="default-profile">
+                        </div>
 
-                                    <div class="progressdetail">
-                                        <h4 class="progresstitle">Personal Information</h4>
-                                    </div>
+                        <div class="uploadinfo">
+                            <input type="file" id="uploadProfile" hidden>
+                            <label class="btn-upload" for="uploadProfile">
+                                <div class="icon">
+                                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M10 2.66634H3.33333V13.333H12.6667V5.33301H10V2.66634ZM2 1.99434C2 1.62901 2.298 1.33301 2.666 1.33301H10.6667L14 4.66634V13.995C14.0006 14.0826 13.984 14.1694 13.951 14.2505C13.9181 14.3316 13.8695 14.4054 13.808 14.4678C13.7466 14.5301 13.6734 14.5797 13.5928 14.6138C13.5121 14.6479 13.4255 14.6657 13.338 14.6663H2.662C2.48692 14.6651 2.31934 14.5951 2.19548 14.4713C2.07161 14.3476 2.0014 14.1801 2 14.005V1.99434ZM8.66667 7.99967V10.6663H7.33333V7.99967H5.33333L8 5.33301L10.6667 7.99967H8.66667Z" fill="white"/>
+                                    </svg>
                                 </div>
                                 
-                                <div class="progressinfo active">
-                                    <div class="progresscount">
-                                        <span class="progresscounter">2</span>
-                                    </div>
-
-                                    <div class="progressdetail">
-                                        <h4 class="progresstitle">Professional Information</h4>
-                                    </div>
-                                </div>
-
-                                <div class="progressinfo">
-                                    <div class="progresscount">
-                                        <span class="progresscounter">3</span>
-                                    </div>
-
-                                    <div class="progressdetail">
-                                        <h4 class="progresstitle">Fix your rate</h4>
-                                    </div>
-                                </div>
-                            </div>
+                                <span class="text">Upload</span>
+                            </label>
                         </div>
-                        <!-- REGISTERBOX CONTENT HEADER END (PROGRESS) -->
+                    </div>
 
-                        <!-- REGISTERBOX BODY CONTENT START -->
-                        <div class="registerbox-body">
-                            <!-- STEP-1 INFO START -->
-                            <div class="step1-info d-none">
-                                <form class="steponeform">
-                                    <div class="row">
-                                        <div class="inputbox">
-                                            <label for="name" class="inputlabel">Your name</label>
-                                            <input type="text" class="inputfield" id="name" autocomplete="off">
-                                        </div>
-                                    </div>
+                    <div class="upload-detail">
+                        <p class="upload-text">
+                            Every aspect of the Coach experience — from intuitive scheduling to automated payroll — is designed to allow you to focus on what you love to do most, serve.
+                        </p>
+                    </div>
 
-                                    <div class="row">
-                                        <div class="col-lg-6 col-12 mobilecol">
-                                            <div class="inputbox">
-                                                <label for="gender" class="inputlabel">Gender</label>
-                                                <select id="gender" class="selectfield" autocomplete="off">
-                                                    <option selected>Male</option>
-                                                    <option value="">Female</option>
-                                                    <option value="">Others</option>
-                                                </select>
-                                            </div>
-                                        </div>
-
-                                        <div class="col-lg-6 col-12">
-                                            <div class="inputbox">
-                                                <label for="email" class="inputlabel">Email Address</label>
-                                                <input type="email" id="email" class="inputfield" autocomplete="off">
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="row">
-                                        <div class="col-lg-6 col-12 mobilecol">
-                                            <div class="inputbox">
-                                                <label for="nidpassport" class="inputlabel">Gender</label>
-                                                <input type="text" id="nidpassport" class="inputfield" autocomplete="off">
-                                            </div>
-                                        </div>
-
-                                        <div class="col-lg-6 col-12">
-                                            <div class="inputbox">
-                                                <label for="phonenumber" class="inputlabel">Phone Number</label>
-                                                <input type="tel" id="phonenumber" class="inputfield" autocomplete="off">
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="row">
-                                        <div class="submitbox">
-                                            <button class="btn-submit" type="button">
-                                                <span class="text">Continue</span>
-                                                <span class="icon">
-                                                    <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M4.06564 1.44064C4.2365 1.26979 4.5135 1.26979 4.68436 1.44064L9.93436 6.69064C10.1052 6.8615 10.1052 7.1385 9.93436 7.30936L4.68436 12.5594C4.5135 12.7302 4.2365 12.7302 4.06564 12.5594C3.89479 12.3885 3.89479 12.1115 4.06564 11.9406L9.00628 7L4.06564 2.05936C3.89479 1.8885 3.89479 1.6115 4.06564 1.44064Z" fill="white"/>
-                                                    </svg>
-                                                </span>
-                                            </button>
-                                        </div>
-                                    </div>
-                                </form>
-                            </div>
-                            <!-- STEP-1 INFO ENE -->
-
-                            <!-- STEP-2 INFO START -->
-                            <div class="step2-info">
-                                <form class="steponeform">
-                                    <div class="row">
-                                        <div class="col-lg-6 col-12 mobilecol">
-                                            <div class="inputbox">
-                                                <label for="designation" class="inputlabel">Your are a</label>
-                                                <select id="designation" class="selectfield" autocomplete="off">
-                                                    <option selected>Psychiatrist</option>
-                                                    <option value="">Medicine Expart</option>
-                                                    <option value="">Others</option>
-                                                </select>
-                                            </div>
-                                        </div>
-
-                                        <div class="col-lg-6 col-12">
-                                            <div class="inputbox">
-                                                <label for="regNumber" class="inputlabel">BMDC Registration Number</label>
-                                                <input type="number" id="regNumber" class="inputfield" autocomplete="off">
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="row">
-                                        <div class="col-lg-6 col-12 mobilecol">
-                                            <div class="inputbox">
-                                                <label for="highEducation" class="inputlabel">Higest Level of Education</label>
-                                                <input type="text" id="highEducation" class="inputfield" autocomplete="off">
-                                            </div>
-                                        </div>
-
-                                        <div class="col-lg-6 col-12">
-                                            <div class="inputbox">
-                                                <label for="currentWorkplace" class="inputlabel">Current Workplace</label>
-                                                <input type="text" id="currentWorkplace" class="inputfield" autocomplete="off">
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="row">
-                                        <div class="col-lg-6 col-12 mobilecol">
-                                            <div class="inputbox">
-                                                <label for="currDesignation" class="inputlabel">Current Designation</label>
-                                                <input type="text" id="currDesignation" class="inputfield" autocomplete="off">
-                                            </div>
-                                        </div>
-
-                                        <div class="col-lg-6 col-12">
-                                            <div class="inputbox">
-                                                <label for="experienceYear" class="inputlabel">Years of job experience</label>
-                                                <input type="text" id="experienceYear" class="inputfield" autocomplete="off">
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="row">
-                                        <div class="col-lg-6 col-12 mobilecol">
-                                            <div class="inputbox">
-                                                <label class="inputlabel">Upload your Resume</label>
-                                                
-                                                <div class="inputinfo">
-                                                    <span class="keepingbox">PDF</span>
-                                                    <input type="file" id="uploadPDF" hidden>
-                                                    <label class="btn-upload" for="uploadPDF">
-                                                        <div class="icon">
-                                                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                                <path d="M10 2.66634H3.33333V13.333H12.6667V5.33301H10V2.66634ZM2 1.99434C2 1.62901 2.298 1.33301 2.666 1.33301H10.6667L14 4.66634V13.995C14.0006 14.0826 13.984 14.1694 13.951 14.2505C13.9181 14.3316 13.8695 14.4054 13.808 14.4678C13.7466 14.5301 13.6734 14.5797 13.5928 14.6138C13.5121 14.6479 13.4255 14.6657 13.338 14.6663H2.662C2.48692 14.6651 2.31934 14.5951 2.19548 14.4713C2.07161 14.3476 2.0014 14.1801 2 14.005V1.99434ZM8.66667 7.99967V10.6663H7.33333V7.99967H5.33333L8 5.33301L10.6667 7.99967H8.66667Z" fill="white"/>
-                                                            </svg>
-                                                        </div>
-                                                        
-                                                        <span class="text">Upload</span>
-                                                    </label>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <div class="col-lg-6 col-12">
-                                            <div class="inputbox">
-                                                <label class="inputlabel">Upload your Certificate</label>
-                                                
-                                                <div class="inputinfo">
-                                                    <span class="keepingbox">JPG/ JPEG/ PDF</span>
-                                                    <input type="file" id="uploadCertificate" hidden>
-                                                    <label class="btn-upload" for="uploadCertificate">
-                                                        <div class="icon">
-                                                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                                <path d="M10 2.66634H3.33333V13.333H12.6667V5.33301H10V2.66634ZM2 1.99434C2 1.62901 2.298 1.33301 2.666 1.33301H10.6667L14 4.66634V13.995C14.0006 14.0826 13.984 14.1694 13.951 14.2505C13.9181 14.3316 13.8695 14.4054 13.808 14.4678C13.7466 14.5301 13.6734 14.5797 13.5928 14.6138C13.5121 14.6479 13.4255 14.6657 13.338 14.6663H2.662C2.48692 14.6651 2.31934 14.5951 2.19548 14.4713C2.07161 14.3476 2.0014 14.1801 2 14.005V1.99434ZM8.66667 7.99967V10.6663H7.33333V7.99967H5.33333L8 5.33301L10.6667 7.99967H8.66667Z" fill="white"/>
-                                                            </svg>
-                                                        </div>
-                                                        
-                                                        <span class="text">Upload</span>
-                                                    </label>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="row">
-                                        <div class="submitbox">
-                                            <button class="btn-submit" type="button">
-                                                <span class="text">Continue</span>
-                                                <span class="icon">
-                                                    <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M4.06564 1.44064C4.2365 1.26979 4.5135 1.26979 4.68436 1.44064L9.93436 6.69064C10.1052 6.8615 10.1052 7.1385 9.93436 7.30936L4.68436 12.5594C4.5135 12.7302 4.2365 12.7302 4.06564 12.5594C3.89479 12.3885 3.89479 12.1115 4.06564 11.9406L9.00628 7L4.06564 2.05936C3.89479 1.8885 3.89479 1.6115 4.06564 1.44064Z" fill="white"/>
-                                                    </svg>
-                                                </span>
-                                            </button>
-                                        </div>
-                                    </div>
-                                </form>
-                            </div>
-                            <!-- STEP-2 INFO ENE -->
-
-                            <!-- STEP-3 INFO START -->
-                            <div class="step3info d-none">
-                                <div class="step3-info">
-                                    <form class="steponeform">
-                                        <div class="stepdetails">
-                                            <div class="selectfees">
-                                                <h2 class="selectfees-title">Select Fees</h2>
-                                            </div>
-                                            
-                                            <!-- TABLE-FEES START -->
-                                            <div class="tablefees">
-                                                <!-- TABLE-FEES HEADER START -->
-                                                <div class="tablefees-header">
-                                                    <div class="tablerow">
-                                                        <div class="tablecol">
-                                                            <span class="table-heading">Type</span>
-                                                        </div>
-                                                        
-                                                        <div class="tablecol">
-                                                            <span class="table-heading">Remuneration <span>Per Session</span></span>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <!-- TABLE-FEES HEADER END -->
-
-                                                <!-- TABLE-FEES BODY START -->
-                                                <div class="tablefees-body">
-                                                    <div class="tablerow">
-                                                        <div class="tablecol">
-                                                            <span class="table-value">Individual</span>
-                                                        </div>
-
-                                                        <div class="tablecol">
-                                                            <div class="value-price">
-                                                                <input type="number" placeholder="2000" class="priceinput" id="price-1">
-                                                                <label id="price-1" class="pricelabel">BDT</label>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-
-                                                    <div class="tablerow">
-                                                        <div class="tablecol">
-                                                            <span class="table-value">Couple</span>
-                                                        </div>
-
-                                                        <div class="tablecol">
-                                                            <div class="value-price">
-                                                                <input type="number" placeholder="2000" class="priceinput" id="price-1">
-                                                                <label id="price-1" class="pricelabel">BDT</label>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    
-                                                    <div class="tablerow">
-                                                        <div class="tablecol">
-                                                            <span class="table-value">Family</span>
-                                                        </div>
-
-                                                        <div class="tablecol">
-                                                            <div class="value-price">
-                                                                <input type="number" placeholder="2000" class="priceinput" id="price-1">
-                                                                <label id="price-1" class="pricelabel">BDT</label>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-
-                                                    <div class="tablerow">
-                                                        <div class="tablecol">
-                                                            <span class="table-value">Group Activities</span>
-                                                        </div>
-
-                                                        <div class="tablecol">
-                                                            <div class="value-price">
-                                                                <input type="number" placeholder="200000" class="priceinput" id="price-1">
-                                                                <label id="price-1" class="pricelabel">BDT</label>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <!-- TABLE-FEES BODY END -->
-                                            </div>
-                                            <!-- TABLE-FEES END -->
-                                        </div>
-                                    </form>
-                                </div>
-                                
-                                <div class="submitbox">
-                                    <button class="btn-submit" type="button">
-                                        <span class="text">Continue</span>
-                                        <span class="icon">
-                                            <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                <path fill-rule="evenodd" clip-rule="evenodd" d="M4.06564 1.44064C4.2365 1.26979 4.5135 1.26979 4.68436 1.44064L9.93436 6.69064C10.1052 6.8615 10.1052 7.1385 9.93436 7.30936L4.68436 12.5594C4.5135 12.7302 4.2365 12.7302 4.06564 12.5594C3.89479 12.3885 3.89479 12.1115 4.06564 11.9406L9.00628 7L4.06564 2.05936C3.89479 1.8885 3.89479 1.6115 4.06564 1.44064Z" fill="white"/>
-                                            </svg>
-                                        </span>
-                                    </button>
-                                </div>
-                            </div>
-                            <!-- STEP-3 INFO ENE -->
-                        </div>
-                        <!-- REGISTERBOX BODY CONTENT END -->
+                    <div class="submitbox">
+                        <button class="btn-submit" type="submit">Submit</button>
                     </div>
                 </div>
             </div>
         </div>
     </section>
-    <!-- REGISTER SECTION END -->
+    <!-- PROFILE UPLOAD END -->
     
     <!-- FOOTER SECTION START -->
     <footer class="footer">
@@ -671,7 +384,6 @@
         </div>
     </footer>
     <!-- FOOTER SECTION END -->
-
     
     <!-- BOOTSTRAP JS -->
     <script src="assets/js/bootstrap.bundle.min.js"></script>

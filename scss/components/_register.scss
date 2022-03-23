@@ -12,6 +12,10 @@
             @include heading-1;
             color: $gray-800;
 
+            .colortext {
+                color: $secondary;
+            }
+
             @include breakpoint(phone768) {
                 @include heading-2;
             }
@@ -455,3 +459,116 @@
 }
 
 // REGISTER BOX END
+
+.profileupload {
+    padding-bottom: length(64);
+
+    @include breakpoint(tab991) {
+        padding-bottom: length(140);
+    }
+
+    &-content {
+        @include flex-center-column;
+        gap: length(20);
+        text-align: center;
+
+        .uploadbox {
+            position: relative;
+            padding: length(24);
+            @include radius(8);
+            background: $gray-300;
+
+            .uploadthumbnail {
+                @include square(length(259));
+                @include flex-center;
+                overflow: hidden;
+
+                @include breakpoint(phone575) {
+                    @include square(length(200));
+                    margin-bottom: length(16);
+                }
+
+                img {
+                    @include wh100;
+                    object-fit: contain;
+                }
+            }
+
+            @include breakpoint(tab991) {
+                padding: length(58);
+            }
+
+            .uploadinfo {
+                position: absolute;
+                top: auto;
+                right: length(-48);
+
+                @include breakpoint(phone575) {
+                    left: 50%;
+                    right: auto;
+                    @include transform(translateX(-50%));
+                }
+
+                .btn-upload {
+                    background: $primary;
+                    @include flex-center;
+                    gap: length(6);
+                    padding: length(8) length(16);
+                    @include radius(4);
+                    cursor: pointer;
+                    width: length(96);
+                    @include transitions;
+
+                    .icon {
+                        @include square(length(16));
+                        @include flex-center;
+                        overflow: hidden;
+
+                        svg {
+                            @include wh100;
+                        }
+                    }
+
+                    .text {
+                        @include font-12-12-semibold;
+                        color: $white;
+                    }
+
+                    @include hover {
+                        background: lighten($primary, 10%);
+                    }
+                }
+            }
+        }
+
+        .upload-detail {
+            margin-bottom: length(20);
+
+            .upload-text {
+                @include font-30-18-normal;
+                color: $gray-600;
+
+                @include breakpoint(phone575) {
+                    @include font-26-16-normal;
+                }
+            }
+        }
+
+        .submitbox {
+            @include flex-center;
+
+            .btn-submit {
+                padding: length(16) length(74);
+                text-align: center;
+                @include setBgColor($tertiary, $white);
+                @include font-16-16-semibold;
+                @include radius(8);
+                @include transitions;
+
+                @include hover {
+                    background: darken($tertiary, 15%);
+                }
+            }
+        }
+    }
+}
