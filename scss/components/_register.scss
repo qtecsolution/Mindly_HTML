@@ -27,6 +27,7 @@
         }
     }
 }
+
 // REGISTER BANNER SECTION END
 
 // REGISTER BOX START
@@ -46,12 +47,13 @@
     &-header {
         .registerprogress {
             @include flex-center-vert;
-            
+
             .progressinfo {
                 width: 33.33%;
                 @include flex-center-column;
                 gap: length(24);
                 text-align: center;
+                cursor: pointer;
 
                 &:first-of-type {
                     .progresscount {
@@ -77,8 +79,8 @@
                         content: '';
                         position: absolute;
                         top: length(40);
-                        left: -330%;
-                        width: 330%;
+                        left: -328.5%;
+                        width: 328.5%;
                         z-index: 1;
                         height: length(5);
                         background: $gray-500;
@@ -167,13 +169,18 @@
     }
 
     &-body {
-        .step1-info {
+        @include w100;
+
+        .step1-info,
+        .step2-info {
             .steponeform {
                 @include flex-column;
                 gap: length(44);
 
                 .mobilecol {
-                    margin-bottom: length(44);
+                    @include breakpoint(tablet991) {
+                        margin-bottom: length(44);
+                    }
                 }
 
                 .inputbox {
@@ -185,12 +192,13 @@
                         @include font-14-14-medium;
                         color: $dateColor;
                     }
-                    
+
                     .inputfield {
                         background: $white;
                         padding: length(16);
                         @include radius(6);
-                        box-shadow: $inputshadow;
+                        @include border(solid, 1, $gray-300);
+                        // box-shadow: $inputshadow;
                         @include font-14-14-normal;
                         color: $gray-800;
                     }
@@ -198,11 +206,56 @@
                     .selectfield {
                         background: $white url("data:image/svg+xml,%3Csvg width='11' height='11' viewBox='0 0 11 11' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cmask id='mask0_5998_44256' style='mask-type:alpha' maskUnits='userSpaceOnUse' x='0' y='0' width='11' height='11'%3E%3Cpath d='M4.98252 7.65869L1.68511 3.89022C1.29615 3.4457 1.61184 2.75 2.20251 2.75H8.79733C9.388 2.75 9.70369 3.4457 9.31473 3.89022L6.01732 7.65869C5.74341 7.97173 5.25643 7.97173 4.98252 7.65869Z' fill='black'/%3E%3C/mask%3E%3Cg mask='url(%23mask0_5998_44256)'%3E%3Crect width='11' height='11' fill='%23B5B5BD'/%3E%3C/g%3E%3C/svg%3E%0A") no-repeat center right 3%;
                         appearance: none;
-                        box-shadow: $inputshadow;
+                        // box-shadow: $inputshadow;
+                        @include border(solid, 1, $gray-300);
                         padding: length(16);
                         @include radius(6);
                         @include font-14-14-normal;
                         color: $gray-800;
+                    }
+                }
+
+                .inputinfo {
+                    @include flex-center-vert;
+                    @include border(solid, 1, $gray-300);
+                    padding: length(8);
+                    @include radius(6);
+
+                    .keepingbox {
+                        width: calc(100% - 6rem);
+                        padding: length(0) length(8);
+                        color: $textPlaceholder;
+                        @include font-15-15-medium;
+                    }
+
+                    .btn-upload {
+                        background: $primary;
+                        @include flex-center;
+                        gap: length(6);
+                        padding: length(8) length(16);
+                        @include radius(4);
+                        cursor: pointer;
+                        width: length(96);
+                        @include transitions;
+
+                        .icon {
+                            @include square(length(16));
+                            @include flex-center;
+                            overflow: hidden;
+
+                            svg {
+                                @include wh100;
+                            }
+                        }
+
+                        .text {
+                            @include font-12-12-semibold;
+                            color: $white;
+                        }
+
+                        @include hover {
+                            background: lighten($primary, 10%);
+                        }
                     }
                 }
 
@@ -233,6 +286,172 @@
                 }
             }
         }
+
+        .step3info {
+            @include flex-column;
+            gap: length(44);
+
+            .step3-info {
+                @include w100;
+                @include border(solid, 1, $step-border);
+                @include radius(12);
+                padding: length(30) length(16) length(86);
+                @include flex-center;
+
+                @include breakpoint(phone768) {
+                    padding: length(24) length(16) length(44);
+                }
+
+                .steponeform {
+                    @include flex-column;
+                    gap: length(44);
+
+                    .stepdetails {
+                        width: length(430);
+                        margin-inline: auto;
+                        @include flex-column;
+                        gap: length(24);
+
+                        @include breakpoint(phone575) {
+                            @include w100;
+                        }
+
+                        .selectfees {
+                            &-title {
+                                @include heading-2;
+                                color: $gray-800;
+
+                                @include breakpoint(phone575) {
+                                    @include heading-3;
+                                }
+                            }
+                        }
+
+                        .tablefees {
+                            @include border(solid, 1, $table-border);
+                            @include radius(8);
+
+                            &-header {
+                                .tablerow {
+                                    @include flex-center-vert;
+                                    @include border-single(bottom, solid, 1, $table-border);
+
+                                    .tablecol {
+                                        width: 50%;
+                                        padding: length(11);
+
+                                        &:first-child {
+                                            @include border-single(right, solid, 1, $table-border);
+                                        }
+
+                                        .table-heading {
+                                            @include font-24-16-semibold;
+                                            color: rgba($black, 0.5);
+
+                                            @include breakpoint(phone575) {
+                                                @include font-24-14-semibold;
+
+                                                span {
+                                                    display: none;
+                                                }
+                                            }
+
+                                            @include breakpoint(phone500) {
+                                                @include font-12-12-semibold;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+
+                            &-body {
+                                .tablerow {
+                                    @include flex-center-vert;
+                                    @include border-single(bottom, solid, 1, $table-border);
+
+                                    &:last-child {
+                                        border: 0;
+                                    }
+
+                                    .tablecol {
+                                        width: 50%;
+                                        padding: length(11);
+
+                                        &:first-child {
+                                            @include border-single(right, solid, 1, $table-border);
+                                        }
+
+                                        .table-value {
+                                            @include font-26-16-normal;
+                                            color: $gray-600;
+                                            font-feature-settings: 'salt'on;
+
+                                            @include breakpoint(phone575) {
+                                                @include font-24-14-normal;
+                                            }
+                                        }
+
+                                        .value-price {
+                                            @include flex-center;
+                                            overflow: hidden;
+
+                                            .priceinput {
+                                                width: length(80);
+                                                text-align: center;
+                                                @include setBgColor(transparent, $gray-600);
+                                                @include font-26-16-normal;
+                                                font-feature-settings: 'salt'on;
+
+                                                @include breakpoint(phone575) {
+                                                    @include font-24-14-normal;
+                                                }
+                                            }
+
+                                            .pricelabel {
+                                                @include font-26-16-normal;
+                                                color: $gray-600;
+                                                font-feature-settings: 'salt'on;
+
+                                                @include breakpoint(phone575) {
+                                                    @include font-24-14-normal;
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            .submitbox {
+                @include flex-end;
+
+                .btn-submit {
+                    @include flex-center;
+                    gap: length(10);
+                    width: length(200);
+                    height: length(48);
+                    @include radius(8);
+                    background: $tertiary;
+
+                    .text {
+                        @include font-16-16-semibold;
+                        color: $white;
+                    }
+
+                    .icon {
+                        overflow: hidden;
+                    }
+
+                    @include hover {
+                        background: darken($tertiary, 10%);
+                    }
+                }
+            }
+        }
     }
 }
+
 // REGISTER BOX END

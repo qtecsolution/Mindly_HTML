@@ -419,6 +419,9 @@
 		26/16 FONT SIZES
 \*------------------------------------*/
 /*------------------------------------*\
+		15/15 FONT SIZES
+\*------------------------------------*/
+/*------------------------------------*\
 		16/16 FONT SIZES
 \*------------------------------------*/
 /*------------------------------------*\
@@ -6382,6 +6385,7 @@ h6 {
           flex-direction: column;
   gap: 1.5rem;
   text-align: center;
+  cursor: pointer;
 }
 
 .registerbox-header .registerprogress .progressinfo:first-of-type .progresscount::before {
@@ -6417,8 +6421,8 @@ h6 {
   content: '';
   position: absolute;
   top: 2.5rem;
-  left: -330%;
-  width: 330%;
+  left: -328.5%;
+  width: 328.5%;
   z-index: 1;
   height: 0.3125rem;
   background: #A0AEC0;
@@ -6522,7 +6526,12 @@ h6 {
   color: #718096;
 }
 
-.registerbox-body .step1-info .steponeform {
+.registerbox-body {
+  width: 100%;
+}
+
+.registerbox-body .step1-info .steponeform,
+.registerbox-body .step2-info .steponeform {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -6533,11 +6542,15 @@ h6 {
   gap: 2.75rem;
 }
 
-.registerbox-body .step1-info .steponeform .mobilecol {
-  margin-bottom: 2.75rem;
+@media screen and (max-width: 61.9375rem) {
+  .registerbox-body .step1-info .steponeform .mobilecol,
+  .registerbox-body .step2-info .steponeform .mobilecol {
+    margin-bottom: 2.75rem;
+  }
 }
 
-.registerbox-body .step1-info .steponeform .inputbox {
+.registerbox-body .step1-info .steponeform .inputbox,
+.registerbox-body .step2-info .steponeform .inputbox {
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -6549,7 +6562,8 @@ h6 {
   gap: 0.5rem;
 }
 
-.registerbox-body .step1-info .steponeform .inputbox .inputlabel {
+.registerbox-body .step1-info .steponeform .inputbox .inputlabel,
+.registerbox-body .step2-info .steponeform .inputbox .inputlabel {
   font-family: "Gilroy";
   font-style: normal;
   font-size: 0.875rem;
@@ -6558,13 +6572,13 @@ h6 {
   color: #425466;
 }
 
-.registerbox-body .step1-info .steponeform .inputbox .inputfield {
+.registerbox-body .step1-info .steponeform .inputbox .inputfield,
+.registerbox-body .step2-info .steponeform .inputbox .inputfield {
   background: #ffffff;
   padding: 1rem;
   border-radius: 0.375rem;
   border-radius: 0.375rem;
-  -webkit-box-shadow: 0rem 0.0625rem 0.125rem rgba(50, 50, 71, 0.08), 0rem 0rem 0.0625rem rgba(50, 50, 71, 0.2);
-          box-shadow: 0rem 0.0625rem 0.125rem rgba(50, 50, 71, 0.08), 0rem 0rem 0.0625rem rgba(50, 50, 71, 0.2);
+  border: solid 0.0625rem #E2E8F0;
   font-family: "Gilroy";
   font-style: normal;
   font-size: 0.875rem;
@@ -6573,13 +6587,13 @@ h6 {
   color: #2D3748;
 }
 
-.registerbox-body .step1-info .steponeform .inputbox .selectfield {
+.registerbox-body .step1-info .steponeform .inputbox .selectfield,
+.registerbox-body .step2-info .steponeform .inputbox .selectfield {
   background: #ffffff url("data:image/svg+xml,%3Csvg width='11' height='11' viewBox='0 0 11 11' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cmask id='mask0_5998_44256' style='mask-type:alpha' maskUnits='userSpaceOnUse' x='0' y='0' width='11' height='11'%3E%3Cpath d='M4.98252 7.65869L1.68511 3.89022C1.29615 3.4457 1.61184 2.75 2.20251 2.75H8.79733C9.388 2.75 9.70369 3.4457 9.31473 3.89022L6.01732 7.65869C5.74341 7.97173 5.25643 7.97173 4.98252 7.65869Z' fill='black'/%3E%3C/mask%3E%3Cg mask='url(%23mask0_5998_44256)'%3E%3Crect width='11' height='11' fill='%23B5B5BD'/%3E%3C/g%3E%3C/svg%3E%0A") no-repeat center right 3%;
   -webkit-appearance: none;
      -moz-appearance: none;
           appearance: none;
-  -webkit-box-shadow: 0rem 0.0625rem 0.125rem rgba(50, 50, 71, 0.08), 0rem 0rem 0.0625rem rgba(50, 50, 71, 0.2);
-          box-shadow: 0rem 0.0625rem 0.125rem rgba(50, 50, 71, 0.08), 0rem 0rem 0.0625rem rgba(50, 50, 71, 0.2);
+  border: solid 0.0625rem #E2E8F0;
   padding: 1rem;
   border-radius: 0.375rem;
   border-radius: 0.375rem;
@@ -6591,7 +6605,93 @@ h6 {
   color: #2D3748;
 }
 
-.registerbox-body .step1-info .steponeform .submitbox {
+.registerbox-body .step1-info .steponeform .inputinfo,
+.registerbox-body .step2-info .steponeform .inputinfo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border: solid 0.0625rem #E2E8F0;
+  padding: 0.5rem;
+  border-radius: 0.375rem;
+  border-radius: 0.375rem;
+}
+
+.registerbox-body .step1-info .steponeform .inputinfo .keepingbox,
+.registerbox-body .step2-info .steponeform .inputinfo .keepingbox {
+  width: calc(100% - 6rem);
+  padding: 0rem 0.5rem;
+  color: #B5B5BD;
+  font-family: "Gilroy";
+  font-style: normal;
+  font-size: 0.9375rem;
+  font-weight: 500;
+  line-height: 1;
+}
+
+.registerbox-body .step1-info .steponeform .inputinfo .btn-upload,
+.registerbox-body .step2-info .steponeform .inputinfo .btn-upload {
+  background: #01796F;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 0.375rem;
+  padding: 0.5rem 1rem;
+  border-radius: 0.25rem;
+  border-radius: 0.25rem;
+  cursor: pointer;
+  width: 6rem;
+  -webkit-transition: all 250ms ease-in-out;
+  transition: all 250ms ease-in-out;
+}
+
+.registerbox-body .step1-info .steponeform .inputinfo .btn-upload .icon,
+.registerbox-body .step2-info .steponeform .inputinfo .btn-upload .icon {
+  height: 1rem;
+  width: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  overflow: hidden;
+}
+
+.registerbox-body .step1-info .steponeform .inputinfo .btn-upload .icon svg,
+.registerbox-body .step2-info .steponeform .inputinfo .btn-upload .icon svg {
+  width: 100%;
+  height: 100%;
+}
+
+.registerbox-body .step1-info .steponeform .inputinfo .btn-upload .text,
+.registerbox-body .step2-info .steponeform .inputinfo .btn-upload .text {
+  font-family: "Gilroy";
+  font-style: normal;
+  font-size: 0.75rem;
+  font-weight: 600;
+  line-height: 1;
+  color: #ffffff;
+}
+
+.registerbox-body .step1-info .steponeform .inputinfo .btn-upload:not([disabled]):hover,
+.registerbox-body .step2-info .steponeform .inputinfo .btn-upload:not([disabled]):hover {
+  background: #01ac9d;
+}
+
+.registerbox-body .step1-info .steponeform .submitbox,
+.registerbox-body .step2-info .steponeform .submitbox {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -6600,7 +6700,8 @@ h6 {
           justify-content: flex-end;
 }
 
-.registerbox-body .step1-info .steponeform .submitbox .btn-submit {
+.registerbox-body .step1-info .steponeform .submitbox .btn-submit,
+.registerbox-body .step2-info .steponeform .submitbox .btn-submit {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -6618,7 +6719,8 @@ h6 {
   background: #F94E26;
 }
 
-.registerbox-body .step1-info .steponeform .submitbox .btn-submit .text {
+.registerbox-body .step1-info .steponeform .submitbox .btn-submit .text,
+.registerbox-body .step2-info .steponeform .submitbox .btn-submit .text {
   font-family: "Gilroy";
   font-style: normal;
   font-size: 1rem;
@@ -6627,11 +6729,299 @@ h6 {
   color: #ffffff;
 }
 
-.registerbox-body .step1-info .steponeform .submitbox .btn-submit .icon {
+.registerbox-body .step1-info .steponeform .submitbox .btn-submit .icon,
+.registerbox-body .step2-info .steponeform .submitbox .btn-submit .icon {
   overflow: hidden;
 }
 
-.registerbox-body .step1-info .steponeform .submitbox .btn-submit:not([disabled]):hover {
+.registerbox-body .step1-info .steponeform .submitbox .btn-submit:not([disabled]):hover,
+.registerbox-body .step2-info .steponeform .submitbox .btn-submit:not([disabled]):hover {
+  background: #e63106;
+}
+
+.registerbox-body .step3info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 2.75rem;
+}
+
+.registerbox-body .step3info .step3-info {
+  width: 100%;
+  border: solid 0.0625rem #EBEBEB;
+  border-radius: 0.75rem;
+  border-radius: 0.75rem;
+  padding: 1.875rem 1rem 5.375rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+@media screen and (max-width: 48rem) {
+  .registerbox-body .step3info .step3-info {
+    padding: 1.5rem 1rem 2.75rem;
+  }
+}
+
+.registerbox-body .step3info .step3-info .steponeform {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 2.75rem;
+}
+
+.registerbox-body .step3info .step3-info .steponeform .stepdetails {
+  width: 26.875rem;
+  margin-inline: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 1.5rem;
+}
+
+@media screen and (max-width: 35.9375rem) {
+  .registerbox-body .step3info .step3-info .steponeform .stepdetails {
+    width: 100%;
+  }
+}
+
+.registerbox-body .step3info .step3-info .steponeform .stepdetails .selectfees-title {
+  font-family: "Gilroy";
+  font-style: normal;
+  font-size: 1.75rem;
+  font-weight: 600;
+  line-height: 1.36;
+  color: #2D3748;
+}
+
+@media screen and (max-width: 35.9375rem) {
+  .registerbox-body .step3info .step3-info .steponeform .stepdetails .selectfees-title {
+    font-family: "Gilroy";
+    font-style: normal;
+    font-size: 1.5rem;
+    font-weight: 600;
+    line-height: 1.36;
+  }
+}
+
+.registerbox-body .step3info .step3-info .steponeform .stepdetails .tablefees {
+  border: solid 0.0625rem #C2C9D1;
+  border-radius: 0.5rem;
+  border-radius: 0.5rem;
+}
+
+.registerbox-body .step3info .step3-info .steponeform .stepdetails .tablefees-header .tablerow {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-bottom: solid 0.0625rem #C2C9D1;
+}
+
+.registerbox-body .step3info .step3-info .steponeform .stepdetails .tablefees-header .tablerow .tablecol {
+  width: 50%;
+  padding: 0.6875rem;
+}
+
+.registerbox-body .step3info .step3-info .steponeform .stepdetails .tablefees-header .tablerow .tablecol:first-child {
+  border-right: solid 0.0625rem #C2C9D1;
+}
+
+.registerbox-body .step3info .step3-info .steponeform .stepdetails .tablefees-header .tablerow .tablecol .table-heading {
+  font-family: "Gilroy";
+  font-style: normal;
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.5;
+  color: rgba(0, 0, 0, 0.5);
+}
+
+@media screen and (max-width: 35.9375rem) {
+  .registerbox-body .step3info .step3-info .steponeform .stepdetails .tablefees-header .tablerow .tablecol .table-heading {
+    font-family: "Gilroy";
+    font-style: normal;
+    font-size: 0.875rem;
+    font-weight: 600;
+    line-height: 1.71429;
+  }
+  .registerbox-body .step3info .step3-info .steponeform .stepdetails .tablefees-header .tablerow .tablecol .table-heading span {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 31.25rem) {
+  .registerbox-body .step3info .step3-info .steponeform .stepdetails .tablefees-header .tablerow .tablecol .table-heading {
+    font-family: "Gilroy";
+    font-style: normal;
+    font-size: 0.75rem;
+    font-weight: 600;
+    line-height: 1;
+  }
+}
+
+.registerbox-body .step3info .step3-info .steponeform .stepdetails .tablefees-body .tablerow {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-bottom: solid 0.0625rem #C2C9D1;
+}
+
+.registerbox-body .step3info .step3-info .steponeform .stepdetails .tablefees-body .tablerow:last-child {
+  border: 0;
+}
+
+.registerbox-body .step3info .step3-info .steponeform .stepdetails .tablefees-body .tablerow .tablecol {
+  width: 50%;
+  padding: 0.6875rem;
+}
+
+.registerbox-body .step3info .step3-info .steponeform .stepdetails .tablefees-body .tablerow .tablecol:first-child {
+  border-right: solid 0.0625rem #C2C9D1;
+}
+
+.registerbox-body .step3info .step3-info .steponeform .stepdetails .tablefees-body .tablerow .tablecol .table-value {
+  font-family: "Gilroy";
+  font-style: normal;
+  font-size: 1rem;
+  font-weight: normal;
+  line-height: 1.625;
+  color: #718096;
+  -webkit-font-feature-settings: 'salt'on;
+          font-feature-settings: 'salt'on;
+}
+
+@media screen and (max-width: 35.9375rem) {
+  .registerbox-body .step3info .step3-info .steponeform .stepdetails .tablefees-body .tablerow .tablecol .table-value {
+    font-family: "Gilroy";
+    font-style: normal;
+    font-size: 0.875rem;
+    font-weight: normal;
+    line-height: 1.71429;
+  }
+}
+
+.registerbox-body .step3info .step3-info .steponeform .stepdetails .tablefees-body .tablerow .tablecol .value-price {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  overflow: hidden;
+}
+
+.registerbox-body .step3info .step3-info .steponeform .stepdetails .tablefees-body .tablerow .tablecol .value-price .priceinput {
+  width: 5rem;
+  text-align: center;
+  background: transparent;
+  color: #718096;
+  font-family: "Gilroy";
+  font-style: normal;
+  font-size: 1rem;
+  font-weight: normal;
+  line-height: 1.625;
+  -webkit-font-feature-settings: 'salt'on;
+          font-feature-settings: 'salt'on;
+}
+
+@media screen and (max-width: 35.9375rem) {
+  .registerbox-body .step3info .step3-info .steponeform .stepdetails .tablefees-body .tablerow .tablecol .value-price .priceinput {
+    font-family: "Gilroy";
+    font-style: normal;
+    font-size: 0.875rem;
+    font-weight: normal;
+    line-height: 1.71429;
+  }
+}
+
+.registerbox-body .step3info .step3-info .steponeform .stepdetails .tablefees-body .tablerow .tablecol .value-price .pricelabel {
+  font-family: "Gilroy";
+  font-style: normal;
+  font-size: 1rem;
+  font-weight: normal;
+  line-height: 1.625;
+  color: #718096;
+  -webkit-font-feature-settings: 'salt'on;
+          font-feature-settings: 'salt'on;
+}
+
+@media screen and (max-width: 35.9375rem) {
+  .registerbox-body .step3info .step3-info .steponeform .stepdetails .tablefees-body .tablerow .tablecol .value-price .pricelabel {
+    font-family: "Gilroy";
+    font-style: normal;
+    font-size: 0.875rem;
+    font-weight: normal;
+    line-height: 1.71429;
+  }
+}
+
+.registerbox-body .step3info .submitbox {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.registerbox-body .step3info .submitbox .btn-submit {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 0.625rem;
+  width: 12.5rem;
+  height: 3rem;
+  border-radius: 0.5rem;
+  border-radius: 0.5rem;
+  background: #F94E26;
+}
+
+.registerbox-body .step3info .submitbox .btn-submit .text {
+  font-family: "Gilroy";
+  font-style: normal;
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1;
+  color: #ffffff;
+}
+
+.registerbox-body .step3info .submitbox .btn-submit .icon {
+  overflow: hidden;
+}
+
+.registerbox-body .step3info .submitbox .btn-submit:not([disabled]):hover {
   background: #e63106;
 }
 
@@ -6741,6 +7131,7 @@ h6 {
           flex-direction: column;
   gap: 1.5rem;
   text-align: center;
+  cursor: pointer;
 }
 
 .registerbox-header .registerprogress .progressinfo:first-of-type .progresscount::before {
@@ -6776,8 +7167,8 @@ h6 {
   content: '';
   position: absolute;
   top: 2.5rem;
-  left: -330%;
-  width: 330%;
+  left: -328.5%;
+  width: 328.5%;
   z-index: 1;
   height: 0.3125rem;
   background: #A0AEC0;
@@ -6881,7 +7272,12 @@ h6 {
   color: #718096;
 }
 
-.registerbox-body .step1-info .steponeform {
+.registerbox-body {
+  width: 100%;
+}
+
+.registerbox-body .step1-info .steponeform,
+.registerbox-body .step2-info .steponeform {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -6892,11 +7288,15 @@ h6 {
   gap: 2.75rem;
 }
 
-.registerbox-body .step1-info .steponeform .mobilecol {
-  margin-bottom: 2.75rem;
+@media screen and (max-width: 61.9375rem) {
+  .registerbox-body .step1-info .steponeform .mobilecol,
+  .registerbox-body .step2-info .steponeform .mobilecol {
+    margin-bottom: 2.75rem;
+  }
 }
 
-.registerbox-body .step1-info .steponeform .inputbox {
+.registerbox-body .step1-info .steponeform .inputbox,
+.registerbox-body .step2-info .steponeform .inputbox {
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -6908,7 +7308,8 @@ h6 {
   gap: 0.5rem;
 }
 
-.registerbox-body .step1-info .steponeform .inputbox .inputlabel {
+.registerbox-body .step1-info .steponeform .inputbox .inputlabel,
+.registerbox-body .step2-info .steponeform .inputbox .inputlabel {
   font-family: "Gilroy";
   font-style: normal;
   font-size: 0.875rem;
@@ -6917,13 +7318,13 @@ h6 {
   color: #425466;
 }
 
-.registerbox-body .step1-info .steponeform .inputbox .inputfield {
+.registerbox-body .step1-info .steponeform .inputbox .inputfield,
+.registerbox-body .step2-info .steponeform .inputbox .inputfield {
   background: #ffffff;
   padding: 1rem;
   border-radius: 0.375rem;
   border-radius: 0.375rem;
-  -webkit-box-shadow: 0rem 0.0625rem 0.125rem rgba(50, 50, 71, 0.08), 0rem 0rem 0.0625rem rgba(50, 50, 71, 0.2);
-          box-shadow: 0rem 0.0625rem 0.125rem rgba(50, 50, 71, 0.08), 0rem 0rem 0.0625rem rgba(50, 50, 71, 0.2);
+  border: solid 0.0625rem #E2E8F0;
   font-family: "Gilroy";
   font-style: normal;
   font-size: 0.875rem;
@@ -6932,13 +7333,13 @@ h6 {
   color: #2D3748;
 }
 
-.registerbox-body .step1-info .steponeform .inputbox .selectfield {
+.registerbox-body .step1-info .steponeform .inputbox .selectfield,
+.registerbox-body .step2-info .steponeform .inputbox .selectfield {
   background: #ffffff url("data:image/svg+xml,%3Csvg width='11' height='11' viewBox='0 0 11 11' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cmask id='mask0_5998_44256' style='mask-type:alpha' maskUnits='userSpaceOnUse' x='0' y='0' width='11' height='11'%3E%3Cpath d='M4.98252 7.65869L1.68511 3.89022C1.29615 3.4457 1.61184 2.75 2.20251 2.75H8.79733C9.388 2.75 9.70369 3.4457 9.31473 3.89022L6.01732 7.65869C5.74341 7.97173 5.25643 7.97173 4.98252 7.65869Z' fill='black'/%3E%3C/mask%3E%3Cg mask='url(%23mask0_5998_44256)'%3E%3Crect width='11' height='11' fill='%23B5B5BD'/%3E%3C/g%3E%3C/svg%3E%0A") no-repeat center right 3%;
   -webkit-appearance: none;
      -moz-appearance: none;
           appearance: none;
-  -webkit-box-shadow: 0rem 0.0625rem 0.125rem rgba(50, 50, 71, 0.08), 0rem 0rem 0.0625rem rgba(50, 50, 71, 0.2);
-          box-shadow: 0rem 0.0625rem 0.125rem rgba(50, 50, 71, 0.08), 0rem 0rem 0.0625rem rgba(50, 50, 71, 0.2);
+  border: solid 0.0625rem #E2E8F0;
   padding: 1rem;
   border-radius: 0.375rem;
   border-radius: 0.375rem;
@@ -6950,7 +7351,93 @@ h6 {
   color: #2D3748;
 }
 
-.registerbox-body .step1-info .steponeform .submitbox {
+.registerbox-body .step1-info .steponeform .inputinfo,
+.registerbox-body .step2-info .steponeform .inputinfo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border: solid 0.0625rem #E2E8F0;
+  padding: 0.5rem;
+  border-radius: 0.375rem;
+  border-radius: 0.375rem;
+}
+
+.registerbox-body .step1-info .steponeform .inputinfo .keepingbox,
+.registerbox-body .step2-info .steponeform .inputinfo .keepingbox {
+  width: calc(100% - 6rem);
+  padding: 0rem 0.5rem;
+  color: #B5B5BD;
+  font-family: "Gilroy";
+  font-style: normal;
+  font-size: 0.9375rem;
+  font-weight: 500;
+  line-height: 1;
+}
+
+.registerbox-body .step1-info .steponeform .inputinfo .btn-upload,
+.registerbox-body .step2-info .steponeform .inputinfo .btn-upload {
+  background: #01796F;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 0.375rem;
+  padding: 0.5rem 1rem;
+  border-radius: 0.25rem;
+  border-radius: 0.25rem;
+  cursor: pointer;
+  width: 6rem;
+  -webkit-transition: all 250ms ease-in-out;
+  transition: all 250ms ease-in-out;
+}
+
+.registerbox-body .step1-info .steponeform .inputinfo .btn-upload .icon,
+.registerbox-body .step2-info .steponeform .inputinfo .btn-upload .icon {
+  height: 1rem;
+  width: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  overflow: hidden;
+}
+
+.registerbox-body .step1-info .steponeform .inputinfo .btn-upload .icon svg,
+.registerbox-body .step2-info .steponeform .inputinfo .btn-upload .icon svg {
+  width: 100%;
+  height: 100%;
+}
+
+.registerbox-body .step1-info .steponeform .inputinfo .btn-upload .text,
+.registerbox-body .step2-info .steponeform .inputinfo .btn-upload .text {
+  font-family: "Gilroy";
+  font-style: normal;
+  font-size: 0.75rem;
+  font-weight: 600;
+  line-height: 1;
+  color: #ffffff;
+}
+
+.registerbox-body .step1-info .steponeform .inputinfo .btn-upload:not([disabled]):hover,
+.registerbox-body .step2-info .steponeform .inputinfo .btn-upload:not([disabled]):hover {
+  background: #01ac9d;
+}
+
+.registerbox-body .step1-info .steponeform .submitbox,
+.registerbox-body .step2-info .steponeform .submitbox {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -6959,7 +7446,8 @@ h6 {
           justify-content: flex-end;
 }
 
-.registerbox-body .step1-info .steponeform .submitbox .btn-submit {
+.registerbox-body .step1-info .steponeform .submitbox .btn-submit,
+.registerbox-body .step2-info .steponeform .submitbox .btn-submit {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -6977,7 +7465,8 @@ h6 {
   background: #F94E26;
 }
 
-.registerbox-body .step1-info .steponeform .submitbox .btn-submit .text {
+.registerbox-body .step1-info .steponeform .submitbox .btn-submit .text,
+.registerbox-body .step2-info .steponeform .submitbox .btn-submit .text {
   font-family: "Gilroy";
   font-style: normal;
   font-size: 1rem;
@@ -6986,11 +7475,299 @@ h6 {
   color: #ffffff;
 }
 
-.registerbox-body .step1-info .steponeform .submitbox .btn-submit .icon {
+.registerbox-body .step1-info .steponeform .submitbox .btn-submit .icon,
+.registerbox-body .step2-info .steponeform .submitbox .btn-submit .icon {
   overflow: hidden;
 }
 
-.registerbox-body .step1-info .steponeform .submitbox .btn-submit:not([disabled]):hover {
+.registerbox-body .step1-info .steponeform .submitbox .btn-submit:not([disabled]):hover,
+.registerbox-body .step2-info .steponeform .submitbox .btn-submit:not([disabled]):hover {
+  background: #e63106;
+}
+
+.registerbox-body .step3info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 2.75rem;
+}
+
+.registerbox-body .step3info .step3-info {
+  width: 100%;
+  border: solid 0.0625rem #EBEBEB;
+  border-radius: 0.75rem;
+  border-radius: 0.75rem;
+  padding: 1.875rem 1rem 5.375rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+@media screen and (max-width: 48rem) {
+  .registerbox-body .step3info .step3-info {
+    padding: 1.5rem 1rem 2.75rem;
+  }
+}
+
+.registerbox-body .step3info .step3-info .steponeform {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 2.75rem;
+}
+
+.registerbox-body .step3info .step3-info .steponeform .stepdetails {
+  width: 26.875rem;
+  margin-inline: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 1.5rem;
+}
+
+@media screen and (max-width: 35.9375rem) {
+  .registerbox-body .step3info .step3-info .steponeform .stepdetails {
+    width: 100%;
+  }
+}
+
+.registerbox-body .step3info .step3-info .steponeform .stepdetails .selectfees-title {
+  font-family: "Gilroy";
+  font-style: normal;
+  font-size: 1.75rem;
+  font-weight: 600;
+  line-height: 1.36;
+  color: #2D3748;
+}
+
+@media screen and (max-width: 35.9375rem) {
+  .registerbox-body .step3info .step3-info .steponeform .stepdetails .selectfees-title {
+    font-family: "Gilroy";
+    font-style: normal;
+    font-size: 1.5rem;
+    font-weight: 600;
+    line-height: 1.36;
+  }
+}
+
+.registerbox-body .step3info .step3-info .steponeform .stepdetails .tablefees {
+  border: solid 0.0625rem #C2C9D1;
+  border-radius: 0.5rem;
+  border-radius: 0.5rem;
+}
+
+.registerbox-body .step3info .step3-info .steponeform .stepdetails .tablefees-header .tablerow {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-bottom: solid 0.0625rem #C2C9D1;
+}
+
+.registerbox-body .step3info .step3-info .steponeform .stepdetails .tablefees-header .tablerow .tablecol {
+  width: 50%;
+  padding: 0.6875rem;
+}
+
+.registerbox-body .step3info .step3-info .steponeform .stepdetails .tablefees-header .tablerow .tablecol:first-child {
+  border-right: solid 0.0625rem #C2C9D1;
+}
+
+.registerbox-body .step3info .step3-info .steponeform .stepdetails .tablefees-header .tablerow .tablecol .table-heading {
+  font-family: "Gilroy";
+  font-style: normal;
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.5;
+  color: rgba(0, 0, 0, 0.5);
+}
+
+@media screen and (max-width: 35.9375rem) {
+  .registerbox-body .step3info .step3-info .steponeform .stepdetails .tablefees-header .tablerow .tablecol .table-heading {
+    font-family: "Gilroy";
+    font-style: normal;
+    font-size: 0.875rem;
+    font-weight: 600;
+    line-height: 1.71429;
+  }
+  .registerbox-body .step3info .step3-info .steponeform .stepdetails .tablefees-header .tablerow .tablecol .table-heading span {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 31.25rem) {
+  .registerbox-body .step3info .step3-info .steponeform .stepdetails .tablefees-header .tablerow .tablecol .table-heading {
+    font-family: "Gilroy";
+    font-style: normal;
+    font-size: 0.75rem;
+    font-weight: 600;
+    line-height: 1;
+  }
+}
+
+.registerbox-body .step3info .step3-info .steponeform .stepdetails .tablefees-body .tablerow {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-bottom: solid 0.0625rem #C2C9D1;
+}
+
+.registerbox-body .step3info .step3-info .steponeform .stepdetails .tablefees-body .tablerow:last-child {
+  border: 0;
+}
+
+.registerbox-body .step3info .step3-info .steponeform .stepdetails .tablefees-body .tablerow .tablecol {
+  width: 50%;
+  padding: 0.6875rem;
+}
+
+.registerbox-body .step3info .step3-info .steponeform .stepdetails .tablefees-body .tablerow .tablecol:first-child {
+  border-right: solid 0.0625rem #C2C9D1;
+}
+
+.registerbox-body .step3info .step3-info .steponeform .stepdetails .tablefees-body .tablerow .tablecol .table-value {
+  font-family: "Gilroy";
+  font-style: normal;
+  font-size: 1rem;
+  font-weight: normal;
+  line-height: 1.625;
+  color: #718096;
+  -webkit-font-feature-settings: 'salt'on;
+          font-feature-settings: 'salt'on;
+}
+
+@media screen and (max-width: 35.9375rem) {
+  .registerbox-body .step3info .step3-info .steponeform .stepdetails .tablefees-body .tablerow .tablecol .table-value {
+    font-family: "Gilroy";
+    font-style: normal;
+    font-size: 0.875rem;
+    font-weight: normal;
+    line-height: 1.71429;
+  }
+}
+
+.registerbox-body .step3info .step3-info .steponeform .stepdetails .tablefees-body .tablerow .tablecol .value-price {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  overflow: hidden;
+}
+
+.registerbox-body .step3info .step3-info .steponeform .stepdetails .tablefees-body .tablerow .tablecol .value-price .priceinput {
+  width: 5rem;
+  text-align: center;
+  background: transparent;
+  color: #718096;
+  font-family: "Gilroy";
+  font-style: normal;
+  font-size: 1rem;
+  font-weight: normal;
+  line-height: 1.625;
+  -webkit-font-feature-settings: 'salt'on;
+          font-feature-settings: 'salt'on;
+}
+
+@media screen and (max-width: 35.9375rem) {
+  .registerbox-body .step3info .step3-info .steponeform .stepdetails .tablefees-body .tablerow .tablecol .value-price .priceinput {
+    font-family: "Gilroy";
+    font-style: normal;
+    font-size: 0.875rem;
+    font-weight: normal;
+    line-height: 1.71429;
+  }
+}
+
+.registerbox-body .step3info .step3-info .steponeform .stepdetails .tablefees-body .tablerow .tablecol .value-price .pricelabel {
+  font-family: "Gilroy";
+  font-style: normal;
+  font-size: 1rem;
+  font-weight: normal;
+  line-height: 1.625;
+  color: #718096;
+  -webkit-font-feature-settings: 'salt'on;
+          font-feature-settings: 'salt'on;
+}
+
+@media screen and (max-width: 35.9375rem) {
+  .registerbox-body .step3info .step3-info .steponeform .stepdetails .tablefees-body .tablerow .tablecol .value-price .pricelabel {
+    font-family: "Gilroy";
+    font-style: normal;
+    font-size: 0.875rem;
+    font-weight: normal;
+    line-height: 1.71429;
+  }
+}
+
+.registerbox-body .step3info .submitbox {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.registerbox-body .step3info .submitbox .btn-submit {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 0.625rem;
+  width: 12.5rem;
+  height: 3rem;
+  border-radius: 0.5rem;
+  border-radius: 0.5rem;
+  background: #F94E26;
+}
+
+.registerbox-body .step3info .submitbox .btn-submit .text {
+  font-family: "Gilroy";
+  font-style: normal;
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1;
+  color: #ffffff;
+}
+
+.registerbox-body .step3info .submitbox .btn-submit .icon {
+  overflow: hidden;
+}
+
+.registerbox-body .step3info .submitbox .btn-submit:not([disabled]):hover {
   background: #e63106;
 }
 
