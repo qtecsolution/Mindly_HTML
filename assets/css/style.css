@@ -158,7 +158,7 @@
   font-display: swap;
 }
 
-.header-content .headermenu .mindlydropdown .mindlysubmenu, .cardapproach .hoverinfo, .cardphoneapproach .hoverinfo {
+.header-content .headermenu .mindlydropdown .mindlysubmenu, .header-content .authentication-menu .userprofile .desktop-profile .desktopdropdown, .cardapproach .hoverinfo, .cardphoneapproach .hoverinfo {
   -webkit-animation-duration: 0.3s;
   animation-duration: 0.3s;
   -webkit-animation-fill-mode: both;
@@ -260,7 +260,7 @@
   }
 }
 
-.header-content .headermenu .mindlydropdown .mindlysubmenu {
+.header-content .headermenu .mindlydropdown .mindlysubmenu, .header-content .authentication-menu .userprofile .desktop-profile .desktopdropdown {
   -webkit-animation-name: slideUpIn;
   animation-name: slideUpIn;
 }
@@ -1253,7 +1253,261 @@ h6 {
   }
 }
 
-.header-content .authentication-menu .userprofile .profilelink {
+.header-content .authentication-menu .userprofile .desktop-profile {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+@media screen and (max-width: 61.9375rem) {
+  .header-content .authentication-menu .userprofile .desktop-profile {
+    display: none;
+  }
+}
+
+.header-content .authentication-menu .userprofile .desktop-profile:not([disabled]):hover .desktopdropdown {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.header-content .authentication-menu .userprofile .desktop-profile .dropdownlink {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 1rem;
+  padding: 1.875rem 1.25rem;
+}
+
+@media screen and (max-width: 74.9375rem) {
+  .header-content .authentication-menu .userprofile .desktop-profile .dropdownlink {
+    padding-right: 0;
+    padding-left: 0;
+  }
+}
+
+.header-content .authentication-menu .userprofile .desktop-profile .dropdownlink .profile-thumb {
+  height: 2.25rem;
+  width: 2.25rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border-radius: 100%;
+  overflow: hidden;
+}
+
+.header-content .authentication-menu .userprofile .desktop-profile .dropdownlink .profile-thumb img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.header-content .authentication-menu .userprofile .desktop-profile .dropdownlink .name-icon {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 0.5rem;
+}
+
+.header-content .authentication-menu .userprofile .desktop-profile .dropdownlink .name-icon .name {
+  font-family: "Gilroy";
+  font-style: normal;
+  font-size: 0.875rem;
+  font-weight: 600;
+  line-height: 1.42857;
+  color: #425466;
+}
+
+.header-content .authentication-menu .userprofile .desktop-profile .dropdownlink .name-icon .icon {
+  height: 1.5rem;
+  width: 1.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  overflow: hidden;
+}
+
+.header-content .authentication-menu .userprofile .desktop-profile .dropdownlink .name-icon .icon svg {
+  width: 100%;
+  height: 100%;
+}
+
+.header-content .authentication-menu .userprofile .desktop-profile .desktopdropdown {
+  width: 21.875rem;
+  background: #ffffff;
+  -webkit-box-shadow: 0 0 1 rgba(12, 26, 75, 0.24), 0 1 1 1 rgba(50, 50, 71, 0.05);
+          box-shadow: 0 0 1 rgba(12, 26, 75, 0.24), 0 1 1 1 rgba(50, 50, 71, 0.05);
+  gap: 12.25rem;
+  position: absolute;
+  top: 100%;
+  right: 0;
+  padding: 0.875rem 0rem 1.25rem;
+  display: none;
+}
+
+.header-content .authentication-menu .userprofile .desktop-profile .desktopdropdown .submenu .sublink {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 0.875rem;
+  padding: 0.5rem 1.375rem;
+}
+
+.header-content .authentication-menu .userprofile .desktop-profile .desktopdropdown .submenu .sublink .icon {
+  height: 2.25rem;
+  width: 2.25rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border-radius: 100%;
+  overflow: hidden;
+}
+
+.header-content .authentication-menu .userprofile .desktop-profile .desktopdropdown .submenu .sublink .description {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.header-content .authentication-menu .userprofile .desktop-profile .desktopdropdown .submenu .sublink .description .title {
+  font-family: "Gilroy";
+  font-style: normal;
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.625;
+  color: #4A5568;
+}
+
+.header-content .authentication-menu .userprofile .desktop-profile .desktopdropdown .submenu .sublink .description .text {
+  font-family: "Gilroy";
+  font-style: normal;
+  font-size: 0.875rem;
+  font-weight: 500;
+  line-height: 1.71429;
+  color: #718096;
+}
+
+.header-content .authentication-menu .userprofile .desktop-profile .desktopdropdown .submenu .sublink:not([disabled]):hover {
+  background: #F7FAFC;
+}
+
+.header-content .authentication-menu .userprofile .desktop-profile .desktopdropdown .logoutmenu .sublink {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 0.875rem;
+  padding: 0.5rem 1.375rem;
+}
+
+.header-content .authentication-menu .userprofile .desktop-profile .desktopdropdown .logoutmenu .sublink .icon {
+  height: 2.25rem;
+  width: 2.25rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border-radius: 100%;
+  overflow: hidden;
+}
+
+.header-content .authentication-menu .userprofile .desktop-profile .desktopdropdown .logoutmenu .sublink .description {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.header-content .authentication-menu .userprofile .desktop-profile .desktopdropdown .logoutmenu .sublink .description .title {
+  color: #4A5568;
+}
+
+.header-content .authentication-menu .userprofile .desktop-profile .desktopdropdown .logoutmenu .sublink .description .text {
+  font-family: "Gilroy";
+  font-style: normal;
+  font-size: 0.875rem;
+  font-weight: 500;
+  line-height: 1.71429;
+  color: #718096;
+}
+
+.header-content .authentication-menu .userprofile .desktop-profile .desktopdropdown .logoutmenu .sublink:not([disabled]):hover {
+  background: #F7FAFC;
+}
+
+.header-content .authentication-menu .userprofile .mobileprofile {
+  display: none;
+}
+
+@media screen and (max-width: 61.9375rem) {
+  .header-content .authentication-menu .userprofile .mobileprofile {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    height: 2.75rem;
+    width: 2.75rem;
+  }
+}
+
+.header-content .authentication-menu .userprofile .mobileprofile .profilelink {
+  background: transparent;
+  border: none;
   height: 2.75rem;
   width: 2.75rem;
   display: -webkit-box;
@@ -1269,7 +1523,7 @@ h6 {
 }
 
 @media screen and (min-width: 61.9375rem) {
-  .header-content .authentication-menu .userprofile .profilelink svg circle {
+  .header-content .authentication-menu .userprofile .mobileprofile .profilelink svg circle {
     fill: #FEEFEC;
   }
 }
@@ -5376,6 +5630,248 @@ h6 {
 .offcanvas-body .mobilemenu-auth .withlogin .logout:not([disabled]):hover {
   background: #F94E26;
   color: #ffffff;
+}
+
+.offcanvas-end {
+  width: 100%;
+}
+
+.offcanvas-end .offcanvas-body {
+  padding: 0rem;
+  width: 100%;
+}
+
+.offcanvas-end .offcanvas-body .closeinfo {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  align-items: center;
+  padding: 1.25rem 1.375rem;
+}
+
+.offcanvas-end .offcanvas-body .closeinfo .profilelink {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 1rem;
+}
+
+.offcanvas-end .offcanvas-body .closeinfo .profilelink .profile-thumb {
+  height: 2.25rem;
+  width: 2.25rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border-radius: 100%;
+  overflow: hidden;
+}
+
+.offcanvas-end .offcanvas-body .closeinfo .profilelink .profile-thumb img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.offcanvas-end .offcanvas-body .closeinfo .profilelink .name {
+  font-family: "Gilroy";
+  font-style: normal;
+  font-size: 0.875rem;
+  font-weight: 600;
+  line-height: 1.42857;
+  color: #425466;
+}
+
+.offcanvas-end .offcanvas-body .closeinfo .btn-close {
+  height: 2.25rem;
+  width: 2.25rem;
+  background: transparent;
+  margin: 0;
+  padding: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  opacity: 1;
+}
+
+.offcanvas-end .offcanvas-body .closeinfo .btn-close svg {
+  -webkit-transition: transform 250ms ease-in-out;
+  -webkit-transition: -webkit-transform 250ms ease-in-out;
+  transition: -webkit-transform 250ms ease-in-out;
+  transition: transform 250ms ease-in-out;
+  transition: transform 250ms ease-in-out, -webkit-transform 250ms ease-in-out;
+}
+
+.offcanvas-end .offcanvas-body .closeinfo .btn-close svg path {
+  -webkit-transition: all 250ms ease-in-out;
+  transition: all 250ms ease-in-out;
+}
+
+.offcanvas-end .offcanvas-body .closeinfo .btn-close:focus {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  outline: none;
+}
+
+.offcanvas-end .offcanvas-body .closeinfo .btn-close:not([disabled]):hover svg {
+  -webkit-transform: rotate(90deg);
+  transform: rotate(90deg);
+}
+
+.offcanvas-end .offcanvas-body .closeinfo .btn-close:not([disabled]):hover svg path {
+  fill: #F94E26;
+}
+
+.offcanvas-end .offcanvas-body .profilephonemenu {
+  width: 100%;
+  height: 100%;
+  background: #ffffff;
+  -webkit-box-shadow: 0 0 1 rgba(12, 26, 75, 0.24), 0 1 1 1 rgba(50, 50, 71, 0.05);
+          box-shadow: 0 0 1 rgba(12, 26, 75, 0.24), 0 1 1 1 rgba(50, 50, 71, 0.05);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 12.25rem;
+  padding: 0.875rem 0rem 1.25rem;
+}
+
+.offcanvas-end .offcanvas-body .profilephonemenu .submenu .sublink {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 0.875rem;
+  padding: 0.5rem 1.375rem;
+}
+
+.offcanvas-end .offcanvas-body .profilephonemenu .submenu .sublink .icon {
+  height: 2.25rem;
+  width: 2.25rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border-radius: 100%;
+  overflow: hidden;
+}
+
+.offcanvas-end .offcanvas-body .profilephonemenu .submenu .sublink .description {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.offcanvas-end .offcanvas-body .profilephonemenu .submenu .sublink .description .title {
+  font-family: "Gilroy";
+  font-style: normal;
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.625;
+  color: #4A5568;
+}
+
+.offcanvas-end .offcanvas-body .profilephonemenu .submenu .sublink .description .text {
+  font-family: "Gilroy";
+  font-style: normal;
+  font-size: 0.875rem;
+  font-weight: 500;
+  line-height: 1.71429;
+  color: #718096;
+}
+
+.offcanvas-end .offcanvas-body .profilephonemenu .submenu .sublink:not([disabled]):hover {
+  background: #F7FAFC;
+}
+
+.offcanvas-end .offcanvas-body .profilephonemenu .logoutmenu .sublink {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 0.875rem;
+  padding: 0.5rem 1.375rem;
+}
+
+.offcanvas-end .offcanvas-body .profilephonemenu .logoutmenu .sublink .icon {
+  height: 2.25rem;
+  width: 2.25rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border-radius: 100%;
+  overflow: hidden;
+}
+
+.offcanvas-end .offcanvas-body .profilephonemenu .logoutmenu .sublink .description {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.offcanvas-end .offcanvas-body .profilephonemenu .logoutmenu .sublink .description .title {
+  color: #4A5568;
+}
+
+.offcanvas-end .offcanvas-body .profilephonemenu .logoutmenu .sublink .description .text {
+  font-family: "Gilroy";
+  font-style: normal;
+  font-size: 0.875rem;
+  font-weight: 500;
+  line-height: 1.71429;
+  color: #718096;
+}
+
+.offcanvas-end .offcanvas-body .profilephonemenu .logoutmenu .sublink:not([disabled]):hover {
+  background: #F7FAFC;
 }
 
 @-webkit-keyframes pulse-border {

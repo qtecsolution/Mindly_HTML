@@ -69,6 +69,12 @@ $shadow-2: rgba(20, 37, 63, 0.06);
 $shadow-3: rgba(50, 50, 71, 0.08);
 $shadow-4: rgba(50, 50, 71, 0.2);
 
+$shadow-5: rgba(12, 26, 75, 0.24);
+$shadow-6: rgba(50, 50, 71, 0.05);
+
 $activeshadow: drop-shadow(0rem 0rem .0625rem $shadow-1) drop-shadow(0rem .625rem 1rem $shadow-2);
 $inputshadow: 0rem .0625rem .125rem $shadow-3,
 0rem 0rem .0625rem $shadow-4;
+
+$dropdownshadow: 0 0 length(1) $shadow-5,
+0 length(3) length(8) length(-1) $shadow-6;

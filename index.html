@@ -180,7 +180,8 @@
 
                 <!-- AUTHENTICATION MENU START -->
                 <div class="authentication-menu">
-                    <div class="authenticationbox">
+                    <!-- AUTNENTICATION-BOX START -->
+                    <div class="authenticationbox d-none">
                         <!-- AUTHENTICATION LIST START -->
                         <div class="authenticationlist">
                             <a href="signup.html" class="btn-signup">Sign Up</a>
@@ -189,17 +190,188 @@
                         </div>
                         <!-- AUTHENTICATION LIST END -->
                     </div>
+                    <!-- AUTHENTICATION-BOX END -->
 
-                    <!-- USER PROFILE START -->
-                    <div class="userprofile d-none">
-                        <a href="#" class="profilelink">
-                            <svg width="44" height="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <circle cx="22" cy="22" r="22" fill="white"/>
-                                <path d="M14 32C14 29.8783 14.8429 27.8434 16.3431 26.3431C17.8434 24.8429 19.8783 24 22 24C24.1217 24 26.1566 24.8429 27.6569 26.3431C29.1571 27.8434 30 29.8783 30 32H28C28 30.4087 27.3679 28.8826 26.2426 27.7574C25.1174 26.6321 23.5913 26 22 26C20.4087 26 18.8826 26.6321 17.7574 27.7574C16.6321 28.8826 16 30.4087 16 32H14ZM22 23C18.685 23 16 20.315 16 17C16 13.685 18.685 11 22 11C25.315 11 28 13.685 28 17C28 20.315 25.315 23 22 23ZM22 21C24.21 21 26 19.21 26 17C26 14.79 24.21 13 22 13C19.79 13 18 14.79 18 17C18 19.21 19.79 21 22 21Z" fill="#718096"/>
-                            </svg>
-                        </a>
+                    <!-- USER PROFILE START (LOGIN VIEW) -->
+                    <div class="userprofile">
+                        <!-- DESKTOP-MENU START -->
+                        <div class="desktop-profile">
+                            <!-- DROPDOWN-LINK START -->
+                            <a href="#" class="dropdownlink">
+                                <span class="profile-thumb">
+                                    <img src="assets/images/profile/profile-thumb.svg" alt="profile-thumb">
+                                </span>
+
+                                <span class="name-icon">
+                                    <span class="name">Nabil Ahmed Emon</span>
+
+                                    <span class="icon">
+                                        <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M12.4998 15.1951L8.25684 10.9521L9.67184 9.53809L12.4998 12.3671L15.3278 9.53809L16.7428 10.9521L12.4998 15.1951Z" fill="black"/>
+                                        </svg>
+                                    </span>
+                                </span>
+                            </a>
+                            <!-- DROPDOWN-LINK END -->
+
+                            <!-- DESKTOP DROPDOWN START -->
+                            <div class="desktopdropdown">
+                                <div class="submenu">
+                                    <a href="#" class="sublink">
+                                        <span class="icon">
+                                            <img src="assets/images/profile/notifybg.svg" alt="notification-thumb">
+                                        </span>
+                                        
+                                        <span class="description">
+                                            <span class="title">Go to dashboard</span>
+                                            <span class="text">View and manage all your appointment</span>
+                                        </span>
+                                    </a>
+
+                                    <a href="#" class="sublink">
+                                        <span class="icon">
+                                            <img src="assets/images/profile/notifybg.svg" alt="notification-thumb">
+                                        </span>
+
+                                        <span class="description">
+                                            <span class="title">Appointments</span>
+                                            <span class="text">View and manage all your appointment</span>
+                                        </span>
+                                    </a>
+                                    
+                                    <a href="#" class="sublink">
+                                        <span class="icon">
+                                            <img src="assets/images/profile/notifybg.svg" alt="notification-thumb">
+                                        </span>
+
+                                        <span class="description">
+                                            <span class="title">Go to dashboard</span>
+                                            <span class="text">View and manage all your appointment</span>
+                                        </span>
+                                    </a>
+
+                                    <a href="#" class="sublink">
+                                        <span class="icon">
+                                            <img src="assets/images/profile/notifybg.svg" alt="notification-thumb">
+                                        </span>
+
+                                        <span class="description">
+                                            <span class="title">Appointments</span>
+                                            <span class="text">View and manage all your appointment</span>
+                                        </span>
+                                    </a>
+                                </div>
+
+                                <div class="logoutmenu">
+                                    <a href="signin.html" class="sublink">
+                                        <span class="icon">
+                                            <img src="assets/images/profile/notifybg.svg" alt="notification-thumb">
+                                        </span>
+
+                                        <span class="description">
+                                            <span class="title">Log Out</span>
+                                        </span>
+                                    </a>
+                                </div>
+                            </div>
+                            <!-- DESKTOP DROPDOWN END -->
+                        </div>
+                        <!-- DESKTOP-MENU END -->
+
+                        <!-- MOBILE MENU START -->
+                        <div class="mobileprofile">
+                            <button type="button" class="profilelink" data-bs-toggle="offcanvas" data-bs-target="#mobileUserMenu" aria-controls="mobileUserMenu">
+                                <svg width="44" height="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <circle cx="22" cy="22" r="22" fill="white"/>
+                                    <path d="M14 32C14 29.8783 14.8429 27.8434 16.3431 26.3431C17.8434 24.8429 19.8783 24 22 24C24.1217 24 26.1566 24.8429 27.6569 26.3431C29.1571 27.8434 30 29.8783 30 32H28C28 30.4087 27.3679 28.8826 26.2426 27.7574C25.1174 26.6321 23.5913 26 22 26C20.4087 26 18.8826 26.6321 17.7574 27.7574C16.6321 28.8826 16 30.4087 16 32H14ZM22 23C18.685 23 16 20.315 16 17C16 13.685 18.685 11 22 11C25.315 11 28 13.685 28 17C28 20.315 25.315 23 22 23ZM22 21C24.21 21 26 19.21 26 17C26 14.79 24.21 13 22 13C19.79 13 18 14.79 18 17C18 19.21 19.79 21 22 21Z" fill="#718096"/>
+                                </svg>
+                            </button>
+                        </div>
+                        <!-- MOBILE MENU END -->
+
+                        <!-- MOBILE-USER MENU START -->
+                        <div class="offcanvas offcanvas-end" tabindex="-1" id="mobileUserMenu" aria-labelledby="mobileUserMenu">
+                            <div class="offcanvas-body">
+                                <div class="closeinfo">
+                                    <a href="#" class="profilelink">
+                                        <span class="profile-thumb">
+                                            <img src="assets/images/profile/profile-thumb.svg" alt="profile-thumb">
+                                        </span>
+                                        
+                                        <span class="name">Nabil Ahmed Emon</span>
+                                    </a>
+
+                                    <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close">
+                                        <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M18.0001 15.8781L25.4251 8.45312L27.5461 10.5741L20.1211 17.9991L27.5461 25.4241L25.4251 27.5451L18.0001 20.1201L10.5751 27.5451L8.4541 25.4241L15.8791 17.9991L8.4541 10.5741L10.5751 8.45312L18.0001 15.8781Z" fill="#A0AEC0"></path>
+                                        </svg>
+                                    </button>
+                                </div>
+
+                                <div class="profilephonemenu">
+                                    <div class="submenu">
+                                        <a href="#" class="sublink">
+                                            <span class="icon">
+                                                <img src="assets/images/profile/notifybg.svg" alt="notification-thumb">
+                                            </span>
+                                            
+                                            <span class="description">
+                                                <span class="title">Go to dashboard</span>
+                                                <span class="text">View and manage all your appointment</span>
+                                            </span>
+                                        </a>
+
+                                        <a href="#" class="sublink">
+                                            <span class="icon">
+                                                <img src="assets/images/profile/notifybg.svg" alt="notification-thumb">
+                                            </span>
+
+                                            <span class="description">
+                                                <span class="title">Appointments</span>
+                                                <span class="text">View and manage all your appointment</span>
+                                            </span>
+                                        </a>
+                                        
+                                        <a href="#" class="sublink">
+                                            <span class="icon">
+                                                <img src="assets/images/profile/notifybg.svg" alt="notification-thumb">
+                                            </span>
+
+                                            <span class="description">
+                                                <span class="title">Go to dashboard</span>
+                                                <span class="text">View and manage all your appointment</span>
+                                            </span>
+                                        </a>
+
+                                        <a href="#" class="sublink">
+                                            <span class="icon">
+                                                <img src="assets/images/profile/notifybg.svg" alt="notification-thumb">
+                                            </span>
+
+                                            <span class="description">
+                                                <span class="title">Appointments</span>
+                                                <span class="text">View and manage all your appointment</span>
+                                            </span>
+                                        </a>
+                                    </div>
+
+                                    <div class="logoutmenu">
+                                        <a href="signin.html" class="sublink">
+                                            <span class="icon">
+                                                <img src="assets/images/profile/notifybg.svg" alt="notification-thumb">
+                                            </span>
+
+                                            <span class="description">
+                                                <span class="title">Log Out</span>
+                                            </span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- MOBILE-USER MENU END -->
                     </div>
-                    <!-- USER PROFILE END -->
+                    <!-- USER PROFILE END (LOGIN VIEW) -->
                 </div>
                 <!-- AUTHENTICATION MENU END -->
             </div>

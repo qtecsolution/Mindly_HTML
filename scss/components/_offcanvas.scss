@@ -204,3 +204,146 @@
         }
     }
 }
+
+.offcanvas-end {
+    @include w100;
+
+    .offcanvas-body {
+        padding: length(0);
+        @include w100;
+
+        .closeinfo {
+            @include w100;
+            @include flex-center-between;
+            padding: length(20) length(22);
+
+            .profilelink {
+                @include flex-center-vert;
+                gap: length(16);
+
+                .profile-thumb {
+                    @include square(length(36));
+                    @include flex-center;
+                    @include circle;
+                    overflow: hidden;
+
+                    img {
+                        @include wh100;
+                        object-fit: cover;
+                    }
+                }
+
+                .name {
+                    @include font-20-14-semibold;
+                    color: $dateColor;
+                }
+            }
+
+            .btn-close {
+                @include square(length(36));
+                background: transparent;
+                margin: 0;
+                padding: 0;
+                @include flex-center;
+                opacity: 1;
+
+                svg {
+                    @include transitiontransform;
+
+                    path {
+                        @include transitions;
+                    }
+                }
+
+                &:focus {
+                    box-shadow: none;
+                    outline: none;
+                }
+
+                @include hover {
+                    svg {
+                        @include transform(rotate(90deg));
+
+                        path {
+                            fill: $tertiary;
+                        }
+                    }
+                }
+            }
+        }
+
+        .profilephonemenu {
+            @include wh100;
+            background: $white;
+            box-shadow: $dropdownshadow;
+            @include flex-column;
+            gap: length(196);
+            padding: length(14) length(0) length(20);
+
+            .submenu {
+                .sublink {
+                    @include flex-center-vert;
+                    gap: length(14);
+                    padding: length(8) length(22);
+
+                    .icon {
+                        @include square(length(36));
+                        @include flex-center;
+                        @include circle;
+                        overflow: hidden;
+                    }
+
+                    .description {
+                        @include flex-column;
+
+                        .title {
+                            @include font-26-16-semibold;
+                            color: $gray-700;
+                        }
+
+                        .text {
+                            @include font-24-14-medium;
+                            color: $gray-600;
+                        }
+                    }
+
+                    @include hover {
+                        background: $gray-100;
+                    }
+                }
+            }
+
+            .logoutmenu {
+                .sublink {
+                    @include flex-center-vert;
+                    gap: length(14);
+                    padding: length(8) length(22);
+
+                    .icon {
+                        @include square(length(36));
+                        @include flex-center;
+                        @include circle;
+                        overflow: hidden;
+                    }
+
+                    .description {
+                        @include flex-column;
+
+                        .title {
+                            color: $gray-700;
+                        }
+
+                        .text {
+                            @include font-24-14-medium;
+                            color: $gray-600;
+                        }
+                    }
+
+                    @include hover {
+                        background: $gray-100;
+                    }
+                }
+            }
+        }
+    }
+}
