@@ -351,10 +351,13 @@
 // REGISTER HEADER START
 
 .registerheader {
-    background: $white;
+    background: $headerMobileBg;
     height: length(100);
-    padding: length(8);
     @include flex-center;
+
+    @include breakpoint(tab991) {
+        background: $white;
+    }
 
     &-content {
         @include flex-center-between;
@@ -379,6 +382,197 @@
                 }
             }
         }
+
+        // AUTHENTICATION MENU START
+        .authentication-menu {
+            .authenticationbox {
+                display: none;
+
+                @include breakpoint(tab991) {
+                    display: block;
+                }
+            }
+
+            // AUTHENTICATION LIST START
+            .authenticationlist {
+                @include list-horizontal;
+                gap: length(24);
+
+                @include breakpoint(desktop1199) {
+                    gap: length(16);
+                }
+            }
+
+            // AUTHENTICATION LIST END
+
+            // USER PROFILE START
+            .userprofile {
+                .desktop-profile {
+                    position: relative;
+                    @include flex-center-vert;
+
+                    @include breakpoint(tablet991) {
+                        display: none;
+                    }
+
+                    @include hover {
+                        .desktopdropdown {
+                            @include flex-column;
+                        }
+                    }
+
+                    .dropdownlink {
+                        @include flex-center-vert;
+                        gap: length(16);
+                        padding: length(30) length(20);
+
+                        @include breakpoint(desktop1199) {
+                            padding-right: 0;
+                            padding-left: 0;
+                        }
+
+                        .profile-thumb {
+                            @include square(length(36));
+                            @include flex-center;
+                            @include circle;
+                            overflow: hidden;
+
+                            img {
+                                @include wh100;
+                                object-fit: cover;
+                            }
+                        }
+
+                        .name-icon {
+                            @include flex-center-vert;
+                            gap: length(8);
+
+                            .name {
+                                @include font-20-14-semibold;
+                                color: $dateColor;
+                            }
+
+                            .icon {
+                                @include square(length(24));
+                                @include flex-center;
+                                overflow: hidden;
+
+                                svg {
+                                    @include wh100;
+                                }
+                            }
+                        }
+                    }
+
+                    .desktopdropdown {
+                        width: length(350);
+                        background: $white;
+                        box-shadow: $dropdownshadow;
+                        gap: length(196);
+                        position: absolute;
+                        top: 100%;
+                        right: 0;
+                        padding: length(14) length(0) length(20);
+                        @extend %animation;
+                        @extend %slideUpIn;
+                        display: none;
+
+                        .submenu {
+                            .sublink {
+                                @include flex-center-vert;
+                                gap: length(14);
+                                padding: length(8) length(22);
+
+                                .icon {
+                                    @include square(length(36));
+                                    @include flex-center;
+                                    @include circle;
+                                    overflow: hidden;
+                                }
+
+                                .description {
+                                    @include flex-column;
+
+                                    .title {
+                                        @include font-26-16-semibold;
+                                        color: $gray-700;
+                                    }
+
+                                    .text {
+                                        @include font-24-14-medium;
+                                        color: $gray-600;
+                                    }
+                                }
+
+                                @include hover {
+                                    background: $gray-100;
+                                }
+                            }
+                        }
+
+                        .logoutmenu {
+                            .sublink {
+                                @include flex-center-vert;
+                                gap: length(14);
+                                padding: length(8) length(22);
+
+                                .icon {
+                                    @include square(length(36));
+                                    @include flex-center;
+                                    @include circle;
+                                    overflow: hidden;
+                                }
+
+                                .description {
+                                    @include flex-column;
+
+                                    .title {
+                                        color: $gray-700;
+                                    }
+
+                                    .text {
+                                        @include font-24-14-medium;
+                                        color: $gray-600;
+                                    }
+                                }
+
+                                @include hover {
+                                    background: $gray-100;
+                                }
+                            }
+                        }
+                    }
+                }
+
+                .mobileprofile {
+                    display: none;
+
+                    @include breakpoint(tablet991) {
+                        @include flex-center;
+                        @include square(length(44));
+                    }
+
+                    .profilelink {
+                        @include transparent-button;
+                        @include square(length(44));
+                        @include flex-center;
+                        overflow: hidden;
+
+                        @include breakpoint(tab991) {
+                            svg {
+                                circle {
+                                    fill: $headerMobileBg;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            // USER PROFILE END
+        }
+
+        // AUTHENTICATION MENU END
     }
 }
 

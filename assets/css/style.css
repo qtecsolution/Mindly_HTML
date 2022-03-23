@@ -158,7 +158,7 @@
   font-display: swap;
 }
 
-.header-content .headermenu .mindlydropdown .mindlysubmenu, .header-content .authentication-menu .userprofile .desktop-profile .desktopdropdown, .cardapproach .hoverinfo, .cardphoneapproach .hoverinfo {
+.header-content .headermenu .mindlydropdown .mindlysubmenu, .header-content .authentication-menu .userprofile .desktop-profile .desktopdropdown, .registerheader-content .authentication-menu .userprofile .desktop-profile .desktopdropdown, .cardapproach .hoverinfo, .cardphoneapproach .hoverinfo {
   -webkit-animation-duration: 0.3s;
   animation-duration: 0.3s;
   -webkit-animation-fill-mode: both;
@@ -260,7 +260,7 @@
   }
 }
 
-.header-content .headermenu .mindlydropdown .mindlysubmenu, .header-content .authentication-menu .userprofile .desktop-profile .desktopdropdown {
+.header-content .headermenu .mindlydropdown .mindlysubmenu, .header-content .authentication-menu .userprofile .desktop-profile .desktopdropdown, .registerheader-content .authentication-menu .userprofile .desktop-profile .desktopdropdown {
   -webkit-animation-name: slideUpIn;
   animation-name: slideUpIn;
 }
@@ -1529,9 +1529,8 @@ h6 {
 }
 
 .registerheader {
-  background: #ffffff;
+  background: #FEEFEC;
   height: 6.25rem;
-  padding: 0.5rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1541,6 +1540,12 @@ h6 {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+}
+
+@media screen and (min-width: 61.9375rem) {
+  .registerheader {
+    background: #ffffff;
+  }
 }
 
 .registerheader-content {
@@ -1593,6 +1598,310 @@ h6 {
 .registerheader-content .sitelogo .logolink img {
   width: 100%;
   height: 100%;
+}
+
+.registerheader-content .authentication-menu .authenticationbox {
+  display: none;
+}
+
+@media screen and (min-width: 61.9375rem) {
+  .registerheader-content .authentication-menu .authenticationbox {
+    display: block;
+  }
+}
+
+.registerheader-content .authentication-menu .authenticationlist {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 1.5rem;
+}
+
+@media screen and (max-width: 74.9375rem) {
+  .registerheader-content .authentication-menu .authenticationlist {
+    gap: 1rem;
+  }
+}
+
+.registerheader-content .authentication-menu .userprofile .desktop-profile {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+@media screen and (max-width: 61.9375rem) {
+  .registerheader-content .authentication-menu .userprofile .desktop-profile {
+    display: none;
+  }
+}
+
+.registerheader-content .authentication-menu .userprofile .desktop-profile:not([disabled]):hover .desktopdropdown {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.registerheader-content .authentication-menu .userprofile .desktop-profile .dropdownlink {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 1rem;
+  padding: 1.875rem 1.25rem;
+}
+
+@media screen and (max-width: 74.9375rem) {
+  .registerheader-content .authentication-menu .userprofile .desktop-profile .dropdownlink {
+    padding-right: 0;
+    padding-left: 0;
+  }
+}
+
+.registerheader-content .authentication-menu .userprofile .desktop-profile .dropdownlink .profile-thumb {
+  height: 2.25rem;
+  width: 2.25rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border-radius: 100%;
+  overflow: hidden;
+}
+
+.registerheader-content .authentication-menu .userprofile .desktop-profile .dropdownlink .profile-thumb img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.registerheader-content .authentication-menu .userprofile .desktop-profile .dropdownlink .name-icon {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 0.5rem;
+}
+
+.registerheader-content .authentication-menu .userprofile .desktop-profile .dropdownlink .name-icon .name {
+  font-family: "Gilroy";
+  font-style: normal;
+  font-size: 0.875rem;
+  font-weight: 600;
+  line-height: 1.42857;
+  color: #425466;
+}
+
+.registerheader-content .authentication-menu .userprofile .desktop-profile .dropdownlink .name-icon .icon {
+  height: 1.5rem;
+  width: 1.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  overflow: hidden;
+}
+
+.registerheader-content .authentication-menu .userprofile .desktop-profile .dropdownlink .name-icon .icon svg {
+  width: 100%;
+  height: 100%;
+}
+
+.registerheader-content .authentication-menu .userprofile .desktop-profile .desktopdropdown {
+  width: 21.875rem;
+  background: #ffffff;
+  -webkit-box-shadow: 0 0 1 rgba(12, 26, 75, 0.24), 0 1 1 1 rgba(50, 50, 71, 0.05);
+          box-shadow: 0 0 1 rgba(12, 26, 75, 0.24), 0 1 1 1 rgba(50, 50, 71, 0.05);
+  gap: 12.25rem;
+  position: absolute;
+  top: 100%;
+  right: 0;
+  padding: 0.875rem 0rem 1.25rem;
+  display: none;
+}
+
+.registerheader-content .authentication-menu .userprofile .desktop-profile .desktopdropdown .submenu .sublink {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 0.875rem;
+  padding: 0.5rem 1.375rem;
+}
+
+.registerheader-content .authentication-menu .userprofile .desktop-profile .desktopdropdown .submenu .sublink .icon {
+  height: 2.25rem;
+  width: 2.25rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border-radius: 100%;
+  overflow: hidden;
+}
+
+.registerheader-content .authentication-menu .userprofile .desktop-profile .desktopdropdown .submenu .sublink .description {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.registerheader-content .authentication-menu .userprofile .desktop-profile .desktopdropdown .submenu .sublink .description .title {
+  font-family: "Gilroy";
+  font-style: normal;
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.625;
+  color: #4A5568;
+}
+
+.registerheader-content .authentication-menu .userprofile .desktop-profile .desktopdropdown .submenu .sublink .description .text {
+  font-family: "Gilroy";
+  font-style: normal;
+  font-size: 0.875rem;
+  font-weight: 500;
+  line-height: 1.71429;
+  color: #718096;
+}
+
+.registerheader-content .authentication-menu .userprofile .desktop-profile .desktopdropdown .submenu .sublink:not([disabled]):hover {
+  background: #F7FAFC;
+}
+
+.registerheader-content .authentication-menu .userprofile .desktop-profile .desktopdropdown .logoutmenu .sublink {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 0.875rem;
+  padding: 0.5rem 1.375rem;
+}
+
+.registerheader-content .authentication-menu .userprofile .desktop-profile .desktopdropdown .logoutmenu .sublink .icon {
+  height: 2.25rem;
+  width: 2.25rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border-radius: 100%;
+  overflow: hidden;
+}
+
+.registerheader-content .authentication-menu .userprofile .desktop-profile .desktopdropdown .logoutmenu .sublink .description {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.registerheader-content .authentication-menu .userprofile .desktop-profile .desktopdropdown .logoutmenu .sublink .description .title {
+  color: #4A5568;
+}
+
+.registerheader-content .authentication-menu .userprofile .desktop-profile .desktopdropdown .logoutmenu .sublink .description .text {
+  font-family: "Gilroy";
+  font-style: normal;
+  font-size: 0.875rem;
+  font-weight: 500;
+  line-height: 1.71429;
+  color: #718096;
+}
+
+.registerheader-content .authentication-menu .userprofile .desktop-profile .desktopdropdown .logoutmenu .sublink:not([disabled]):hover {
+  background: #F7FAFC;
+}
+
+.registerheader-content .authentication-menu .userprofile .mobileprofile {
+  display: none;
+}
+
+@media screen and (max-width: 61.9375rem) {
+  .registerheader-content .authentication-menu .userprofile .mobileprofile {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    height: 2.75rem;
+    width: 2.75rem;
+  }
+}
+
+.registerheader-content .authentication-menu .userprofile .mobileprofile .profilelink {
+  background: transparent;
+  border: none;
+  height: 2.75rem;
+  width: 2.75rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  overflow: hidden;
+}
+
+@media screen and (min-width: 61.9375rem) {
+  .registerheader-content .authentication-menu .userprofile .mobileprofile .profilelink svg circle {
+    fill: #FEEFEC;
+  }
 }
 
 .footer {
