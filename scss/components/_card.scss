@@ -1626,6 +1626,53 @@
 
 // CARD PROVIDER END
 
+// CARD CERTIFICATE START
+.card-certificate {
+    display: flex;
+    background: $white;
+
+    &-cap {
+        @include border-single(right, solid, 1, $gray-300);
+        padding: length(5) length(24);
+        @include flex-center;
+        overflow: hidden;
+        width: length(200);
+
+        @include breakpoint(phone575) {
+            width: length(130);
+            padding: length(5) length(16);
+        }
+
+        img {
+            @include wh100;
+            object-fit: contain;
+        }
+    }
+
+    &-details {
+        @include flex-column;
+        gap: length(4);
+        padding: length(14) length(24);
+        width: calc(100% - 12.5rem);
+
+        @include breakpoint(phone575) {
+            width: calc(100% - 8.125rem);
+            padding: length(14) length(16);
+        }
+
+        .certificate-title {
+            color: $gray-700;
+        }
+
+        .certificate-text {
+            @include font-26-16-normal;
+            color: $gray-600;
+        }
+    }
+}
+
+// CARD CERTIFICATE END
+
 
 /* CARD SERVICE-INFO START */
 .card-serviceinfo {

@@ -5578,6 +5578,76 @@ h6 {
   color: #18BD78;
 }
 
+.card-certificate {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background: #ffffff;
+}
+
+.card-certificate-cap {
+  border-right: solid 0.0625rem #E2E8F0;
+  padding: 0.3125rem 1.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  overflow: hidden;
+  width: 12.5rem;
+}
+
+@media screen and (max-width: 35.9375rem) {
+  .card-certificate-cap {
+    width: 8.125rem;
+    padding: 0.3125rem 1rem;
+  }
+}
+
+.card-certificate-cap img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+.card-certificate-details {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 0.25rem;
+  padding: 0.875rem 1.5rem;
+  width: calc(100% - 12.5rem);
+}
+
+@media screen and (max-width: 35.9375rem) {
+  .card-certificate-details {
+    width: calc(100% - 8.125rem);
+    padding: 0.875rem 1rem;
+  }
+}
+
+.card-certificate-details .certificate-title {
+  color: #4A5568;
+}
+
+.card-certificate-details .certificate-text {
+  font-family: "Gilroy";
+  font-style: normal;
+  font-size: 1rem;
+  font-weight: normal;
+  line-height: 1.625;
+  color: #718096;
+}
+
 /* CARD SERVICE-INFO START */
 .card-serviceinfo {
   overflow: hidden;
@@ -5790,6 +5860,681 @@ h6 {
   .videomodal .modal-body iframe {
     min-height: 18.75rem;
   }
+}
+
+.appointmentModal .modal-content {
+  border: 0;
+  border-radius: 0.5rem;
+  border-radius: 0.5rem;
+}
+
+.appointmentModal .modal-header {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  border-radius: 0;
+}
+
+.appointmentModal .modal-header .btn-close {
+  position: absolute;
+  height: 3.75rem;
+  width: 3.75rem;
+  border-radius: 100%;
+  background: #ffffff;
+  -webkit-box-shadow: 0 0 1 rgba(12, 26, 75, 0.1), 0 1 1 rgba(20, 37, 63, 0.06);
+          box-shadow: 0 0 1 rgba(12, 26, 75, 0.1), 0 1 1 rgba(20, 37, 63, 0.06);
+  top: 0;
+  right: -4.75rem;
+}
+
+.appointmentModal .modal-header .btn-close svg {
+  -webkit-transition: transform 250ms ease-in-out;
+  -webkit-transition: -webkit-transform 250ms ease-in-out;
+  transition: -webkit-transform 250ms ease-in-out;
+  transition: transform 250ms ease-in-out;
+  transition: transform 250ms ease-in-out, -webkit-transform 250ms ease-in-out;
+}
+
+.appointmentModal .modal-header .btn-close svg path {
+  -webkit-transition: all 250ms ease-in-out;
+  transition: all 250ms ease-in-out;
+}
+
+.appointmentModal .modal-header .btn-close:not([disabled]):hover svg {
+  -webkit-transform: rotate(90deg);
+  transform: rotate(90deg);
+}
+
+.appointmentModal .modal-header .btn-close:not([disabled]):hover svg path {
+  fill: red;
+}
+
+.appointmentModal .modal-body {
+  border-radius: 0;
+  padding: 0;
+}
+
+.appointmentModal .modal-body .incomplete {
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 2.5rem;
+  text-align: center;
+  padding: 3.625rem 7.75rem 4.375rem;
+}
+
+@media screen and (max-width: 61.9375rem) {
+  .appointmentModal .modal-body .incomplete {
+    padding: 3rem 4rem 4.375rem;
+  }
+}
+
+@media screen and (max-width: 35.9375rem) {
+  .appointmentModal .modal-body .incomplete {
+    padding: 2.25rem 1.25rem 3rem;
+  }
+}
+
+.appointmentModal .modal-body .incomplete-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.appointmentModal .modal-body .incomplete-header .icon {
+  height: 8.75rem;
+  width: 8.75rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  overflow: hidden;
+}
+
+@media screen and (max-width: 35.9375rem) {
+  .appointmentModal .modal-body .incomplete-header .icon {
+    height: 5rem;
+    width: 5rem;
+  }
+}
+
+.appointmentModal .modal-body .incomplete-header .icon svg {
+  width: 100%;
+  height: 100%;
+}
+
+.appointmentModal .modal-body .incomplete-body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 3.75rem;
+}
+
+.appointmentModal .modal-body .incomplete-body .profileprogress {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 0.75rem;
+  width: 100%;
+}
+
+.appointmentModal .modal-body .incomplete-body .profileprogress .progress {
+  width: 100%;
+  height: 0.75rem;
+  border-radius: 3.125rem;
+  border-radius: 3.125rem;
+  background: #EDF2F7;
+}
+
+@media screen and (max-width: 35.9375rem) {
+  .appointmentModal .modal-body .incomplete-body .profileprogress .progress {
+    height: 0.5rem;
+  }
+}
+
+.appointmentModal .modal-body .incomplete-body .profileprogress .progress-bar {
+  background: #01796F;
+  border-radius: 3.125rem;
+  border-radius: 3.125rem;
+  height: 0.75rem;
+}
+
+@media screen and (max-width: 35.9375rem) {
+  .appointmentModal .modal-body .incomplete-body .profileprogress .progress-bar {
+    height: 0.5rem;
+  }
+}
+
+.appointmentModal .modal-body .incomplete-body .profileprogress .progresstext {
+  color: #718096;
+  font-family: "Gilroy";
+  font-style: normal;
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.625;
+}
+
+.appointmentModal .modal-body .incomplete-body .progressdetail {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 1rem;
+}
+
+.appointmentModal .modal-body .incomplete-body .progressdetail .title {
+  color: #4A5568;
+}
+
+@media screen and (max-width: 61.9375rem) {
+  .appointmentModal .modal-body .incomplete-body .progressdetail .title {
+    font-family: "Gilroy";
+    font-style: normal;
+    font-size: 1.75rem;
+    font-weight: 600;
+    line-height: 1.36;
+  }
+}
+
+@media screen and (max-width: 35.9375rem) {
+  .appointmentModal .modal-body .incomplete-body .progressdetail .title {
+    font-family: "Gilroy";
+    font-style: normal;
+    font-size: 1.5rem;
+    font-weight: 600;
+    line-height: 1.36;
+  }
+}
+
+.appointmentModal .modal-body .incomplete-body .progressdetail .textinfo {
+  max-width: 26.125rem;
+}
+
+.appointmentModal .modal-body .incomplete-body .progressdetail .textinfo .text {
+  color: #718096;
+  font-family: "Gilroy";
+  font-style: normal;
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.625;
+}
+
+.appointmentModal .modal-body .incomplete-footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.appointmentModal .modal-body .incomplete-footer .btn-profile {
+  border-radius: 0.5rem;
+  border-radius: 0.5rem;
+  font-family: "Gilroy";
+  font-style: normal;
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1;
+  background: #F94E26;
+  color: #ffffff;
+  padding: 1rem 3.75rem;
+  text-align: center;
+  -webkit-transition: all 250ms ease-in-out;
+  transition: all 250ms ease-in-out;
+}
+
+.appointmentModal .modal-body .incomplete-footer .btn-profile:not([disabled]):hover {
+  background: #cd2b06;
+  color: #ffffff;
+}
+
+.appointmentModal .modal-body .appointmentdescript {
+  width: 100%;
+  height: 100%;
+  padding: 2rem 0rem 3.5rem;
+}
+
+.appointmentModal .modal-body .appointmentdescript-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.appointmentModal .modal-body .appointmentdescript-header .logo {
+  width: 9.875rem;
+  height: 2.125rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  overflow: hidden;
+}
+
+.appointmentModal .modal-body .appointmentdescript-header .logo img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+.appointmentModal .modal-body .appointmentdescript-body {
+  padding-top: 4rem;
+}
+
+.appointmentModal .modal-body .appointmentdescript-body .providermenber,
+.appointmentModal .modal-body .appointmentdescript-body .datepackage {
+  padding: 0rem 3rem 0rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.appointmentModal .modal-body .appointmentdescript-body .providermenber .provider,
+.appointmentModal .modal-body .appointmentdescript-body .providermenber .member {
+  width: 50%;
+}
+
+.appointmentModal .modal-body .appointmentdescript-body .providermenber .provider {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 1.5rem;
+}
+
+.appointmentModal .modal-body .appointmentdescript-body .providermenber .provider .providername {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 5rem;
+}
+
+.appointmentModal .modal-body .appointmentdescript-body .providermenber .provider .providername .title {
+  font-family: "Gilroy";
+  font-style: normal;
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.625;
+  color: #718096;
+  width: 7.1875rem;
+}
+
+.appointmentModal .modal-body .appointmentdescript-body .providermenber .provider .providername .name {
+  font-family: "Gilroy";
+  font-style: normal;
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.625;
+  color: #2D3748;
+}
+
+.appointmentModal .modal-body .appointmentdescript-body .providermenber .provider .providerid {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 5rem;
+}
+
+.appointmentModal .modal-body .appointmentdescript-body .providermenber .provider .providerid .title {
+  width: 7.1875rem;
+  font-family: "Gilroy";
+  font-style: normal;
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.625;
+  color: #718096;
+}
+
+.appointmentModal .modal-body .appointmentdescript-body .providermenber .provider .providerid .id {
+  font-family: "Gilroy";
+  font-style: normal;
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.625;
+  color: #2D3748;
+}
+
+.appointmentModal .modal-body .appointmentdescript-body .providermenber .member {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 1.5rem;
+}
+
+.appointmentModal .modal-body .appointmentdescript-body .providermenber .member .membername,
+.appointmentModal .modal-body .appointmentdescript-body .providermenber .member .memberid {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 5rem;
+}
+
+.appointmentModal .modal-body .appointmentdescript-body .providermenber .member .membername .title {
+  font-family: "Gilroy";
+  font-style: normal;
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.625;
+  color: #718096;
+  width: 7.1875rem;
+}
+
+.appointmentModal .modal-body .appointmentdescript-body .providermenber .member .membername .name {
+  font-family: "Gilroy";
+  font-style: normal;
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.625;
+  color: #2D3748;
+}
+
+.appointmentModal .modal-body .appointmentdescript-body .providermenber .member .memberid .title {
+  width: 7.1875rem;
+  font-family: "Gilroy";
+  font-style: normal;
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.625;
+  color: #718096;
+}
+
+.appointmentModal .modal-body .appointmentdescript-body .providermenber .member .memberid .id {
+  font-family: "Gilroy";
+  font-style: normal;
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.625;
+  color: #2D3748;
+}
+
+.appointmentModal .modal-body .appointmentdescript-body .datepackage .datetime,
+.appointmentModal .modal-body .appointmentdescript-body .datepackage .packagefee {
+  width: 50%;
+}
+
+.appointmentModal .modal-body .appointmentdescript-body .datepackage .datetime {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 1.5rem;
+}
+
+.appointmentModal .modal-body .appointmentdescript-body .datepackage .datetime .date,
+.appointmentModal .modal-body .appointmentdescript-body .datepackage .datetime .time {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 5rem;
+}
+
+.appointmentModal .modal-body .appointmentdescript-body .datepackage .datetime .date .title {
+  font-family: "Gilroy";
+  font-style: normal;
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.625;
+  color: #718096;
+  width: 7.1875rem;
+}
+
+.appointmentModal .modal-body .appointmentdescript-body .datepackage .datetime .date .text {
+  font-family: "Gilroy";
+  font-style: normal;
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.625;
+  color: #2D3748;
+}
+
+.appointmentModal .modal-body .appointmentdescript-body .datepackage .datetime .time .title {
+  font-family: "Gilroy";
+  font-style: normal;
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.625;
+  color: #718096;
+  width: 7.1875rem;
+}
+
+.appointmentModal .modal-body .appointmentdescript-body .datepackage .datetime .time .text {
+  font-family: "Gilroy";
+  font-style: normal;
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.625;
+  color: #2D3748;
+}
+
+.appointmentModal .modal-body .appointmentdescript-body .datepackage .packagefee {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 1.5rem;
+}
+
+.appointmentModal .modal-body .appointmentdescript-body .datepackage .packagefee .pack,
+.appointmentModal .modal-body .appointmentdescript-body .datepackage .packagefee .fees {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 5rem;
+}
+
+.appointmentModal .modal-body .appointmentdescript-body .datepackage .packagefee .pack .title {
+  font-family: "Gilroy";
+  font-style: normal;
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.625;
+  color: #718096;
+  width: 7.1875rem;
+}
+
+.appointmentModal .modal-body .appointmentdescript-body .datepackage .packagefee .pack .text {
+  font-family: "Gilroy";
+  font-style: normal;
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.625;
+  color: #2D3748;
+}
+
+.appointmentModal .modal-body .appointmentdescript-body .datepackage .packagefee .fees .title {
+  font-family: "Gilroy";
+  font-style: normal;
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.625;
+  color: #718096;
+  width: 7.1875rem;
+}
+
+.appointmentModal .modal-body .appointmentdescript-body .datepackage .packagefee .fees .text {
+  font-family: "Gilroy";
+  font-style: normal;
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.625;
+  color: #2D3748;
+}
+
+.appointmentModal .modal-body .appointmentdescript-body .divider {
+  width: 100%;
+  height: 0.0625rem;
+  background: #E2E8F0;
+  margin: 2.5rem 0rem;
+}
+
+.appointmentModal .modal-body .appointmentdescript-footer {
+  padding: 0rem 3rem 0rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 2.375rem;
+  text-align: center;
+}
+
+.appointmentModal .modal-body .appointmentdescript-footer .textinfo {
+  max-width: 28.5rem;
+}
+
+.appointmentModal .modal-body .appointmentdescript-footer .textinfo .text {
+  font-family: "Gilroy";
+  font-style: normal;
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.625;
+  color: #718096;
+}
+
+.appointmentModal .modal-body .appointmentdescript-footer .textinfo .text span {
+  color: #2D3748;
+}
+
+.appointmentModal .modal-body .appointmentdescript-footer .confirmbox {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.appointmentModal .modal-body .appointmentdescript-footer .confirmbox .btn-confirm {
+  border-radius: 0.5rem;
+  border-radius: 0.5rem;
+  font-family: "Gilroy";
+  font-style: normal;
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1;
+  background: #F94E26;
+  color: #ffffff;
+  padding: 1rem 3.75rem;
+  text-align: center;
+  -webkit-transition: all 250ms ease-in-out;
+  transition: all 250ms ease-in-out;
+}
+
+.appointmentModal .modal-body .appointmentdescript-footer .confirmbox .btn-confirm:not([disabled]):hover {
+  background: #cd2b06;
+  color: #ffffff;
 }
 
 .swiper-button-prev::after {
@@ -14951,6 +15696,472 @@ h6 {
   font-weight: 600;
   line-height: 1.71429;
   text-align: center;
+}
+
+.providerdetails .providerdescriptions .providerexperience {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 1.5rem;
+}
+
+.providerdetails .providerdescriptions .providerexperience .title {
+  color: #2D3748;
+}
+
+.providerdetails .providerdescriptions .providerexperience .text {
+  font-family: "Gilroy";
+  font-style: normal;
+  font-size: 1rem;
+  font-weight: normal;
+  line-height: 1.5;
+  color: #718096;
+}
+
+.providerdetails .providerdescriptions .currentworkplace {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 1.5rem;
+}
+
+.providerdetails .providerdescriptions .currentworkplace .title {
+  color: #2D3748;
+}
+
+.providerdetails .providerdescriptions .currentworkplace .text {
+  font-family: "Gilroy";
+  font-style: normal;
+  font-size: 1rem;
+  font-weight: normal;
+  line-height: 1.5;
+  color: #718096;
+}
+
+.providerdetails .providerdescriptions .myschedule {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 1.5rem;
+}
+
+.providerdetails .providerdescriptions .myschedule .title {
+  color: #2D3748;
+}
+
+.providerdetails .providerdescriptions .myschedule .schedulebox {
+  background: #ffffff;
+  max-width: 100%;
+  padding: 1.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 2.5rem;
+}
+
+@media screen and (min-width: 61.9375rem) {
+  .providerdetails .providerdescriptions .myschedule .schedulebox {
+    max-width: 43.375rem;
+  }
+}
+
+.providerdetails .providerdescriptions .myschedule .schedulebox .schedulesingle {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 1.5rem;
+}
+
+.providerdetails .providerdescriptions .myschedule .schedulebox .schedulesingle .scheduleday,
+.providerdetails .providerdescriptions .myschedule .schedulebox .schedulesingle .timeschedules {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 1.5rem;
+}
+
+.providerdetails .providerdescriptions .myschedule .schedulebox .schedulesingle .scheduleday-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  align-items: center;
+}
+
+.providerdetails .providerdescriptions .myschedule .schedulebox .schedulesingle .scheduleday-header .title {
+  color: #2D3748;
+  font-family: "Gilroy";
+  font-style: normal;
+  font-size: 1rem;
+  font-weight: normal;
+  line-height: 1.625;
+  -webkit-font-feature-settings: 'salt'on;
+          font-feature-settings: 'salt'on;
+}
+
+.providerdetails .providerdescriptions .myschedule .schedulebox .schedulesingle .scheduleday-header .buttonsgroup {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 0.5rem;
+}
+
+.providerdetails .providerdescriptions .myschedule .schedulebox .schedulesingle .scheduleday-header .buttonsgroup button {
+  background: transparent;
+  border: none;
+  height: 1.5rem;
+  width: 1.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  overflow: hidden;
+}
+
+.providerdetails .providerdescriptions .myschedule .schedulebox .schedulesingle .scheduleday-header .buttonsgroup button svg {
+  width: 100%;
+  height: 100%;
+}
+
+.providerdetails .providerdescriptions .myschedule .schedulebox .schedulesingle .scheduleday-body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 1rem;
+}
+
+.providerdetails .providerdescriptions .myschedule .schedulebox .schedulesingle .scheduleday-body .scheduletimer {
+  background: #ffffff;
+  border: solid 0.0625rem #CBD5E0;
+  cursor: pointer;
+  height: 7.1875rem;
+  width: 7.1875rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 0.25rem;
+  text-align: center;
+  -webkit-transition: all 250ms ease-in-out;
+  transition: all 250ms ease-in-out;
+}
+
+.providerdetails .providerdescriptions .myschedule .schedulebox .schedulesingle .scheduleday-body .scheduletimer .day {
+  font-family: "Gilroy";
+  font-style: normal;
+  font-size: 0.875rem;
+  font-weight: 500;
+  line-height: 1.42857;
+  color: #718096;
+}
+
+.providerdetails .providerdescriptions .myschedule .schedulebox .schedulesingle .scheduleday-body .scheduletimer .date {
+  font-family: "Gilroy";
+  font-style: normal;
+  font-size: 0.875rem;
+  font-weight: 700;
+  line-height: 1.42857;
+  color: #718096;
+}
+
+.providerdetails .providerdescriptions .myschedule .schedulebox .schedulesingle .scheduleday-body .scheduletimer .slot {
+  font-family: "Gilroy";
+  font-style: normal;
+  font-size: 0.875rem;
+  font-weight: 500;
+  line-height: 1.42857;
+  color: #718096;
+}
+
+.providerdetails .providerdescriptions .myschedule .schedulebox .schedulesingle .scheduleday-body .scheduletimer:hover:not(.active) {
+  background: rgba(249, 78, 38, 0.1);
+  border-color: #F94E26;
+}
+
+.providerdetails .providerdescriptions .myschedule .schedulebox .schedulesingle .scheduleday-body .scheduletimer.active {
+  background: rgba(249, 78, 38, 0.1);
+  border-color: #F94E26;
+}
+
+.providerdetails .providerdescriptions .myschedule .schedulebox .schedulesingle .timeschedules-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  align-items: center;
+}
+
+.providerdetails .providerdescriptions .myschedule .schedulebox .schedulesingle .timeschedules-header .title {
+  color: #2D3748;
+  font-family: "Gilroy";
+  font-style: normal;
+  font-size: 1rem;
+  font-weight: normal;
+  line-height: 1.625;
+  -webkit-font-feature-settings: 'salt'on;
+          font-feature-settings: 'salt'on;
+}
+
+.providerdetails .providerdescriptions .myschedule .schedulebox .schedulesingle .timeschedules-header .buttonsgroup {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 0.5rem;
+}
+
+.providerdetails .providerdescriptions .myschedule .schedulebox .schedulesingle .timeschedules-header .buttonsgroup button {
+  background: transparent;
+  border: none;
+  height: 1.5rem;
+  width: 1.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  overflow: hidden;
+}
+
+.providerdetails .providerdescriptions .myschedule .schedulebox .schedulesingle .timeschedules-header .buttonsgroup button svg {
+  width: 100%;
+  height: 100%;
+}
+
+.providerdetails .providerdescriptions .myschedule .schedulebox .schedulesingle .timeschedules-body .scheduletimes {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 1rem;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.providerdetails .providerdescriptions .myschedule .schedulebox .schedulesingle .timeschedules-body .scheduletimes .btn-time {
+  background: #ffffff;
+  color: #4A5568;
+  border: solid 0.03125rem #CBD5E0;
+  padding: 0.625rem 1.5rem;
+  -webkit-transition: all 250ms ease-in-out;
+  transition: all 250ms ease-in-out;
+  font-family: "Gilroy";
+  font-style: normal;
+  font-size: 0.875rem;
+  font-weight: 600;
+  line-height: 1.71429;
+  width: calc((100% / 5) - 1rem);
+}
+
+.providerdetails .providerdescriptions .myschedule .schedulebox .schedulesingle .timeschedules-body .scheduletimes .btn-time:hover:not(.active) {
+  background: rgba(249, 78, 38, 0.1);
+  color: #4A5568;
+  border-color: rgba(249, 78, 38, 0.5);
+}
+
+.providerdetails .providerdescriptions .myschedule .schedulebox .schedulesingle .timeschedules-body .scheduletimes .btn-time.active {
+  background: rgba(249, 78, 38, 0.1);
+  color: #4A5568;
+  border-color: rgba(249, 78, 38, 0.5);
+}
+
+.providerdetails .providerdescriptions .myschedule .schedulebox .schedulesingle .types {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 1.5rem;
+}
+
+.providerdetails .providerdescriptions .myschedule .schedulebox .schedulesingle .types .title {
+  color: #2D3748;
+  font-family: "Gilroy";
+  font-style: normal;
+  font-size: 1rem;
+  font-weight: normal;
+  line-height: 1.625;
+  -webkit-font-feature-settings: 'salt'on;
+          font-feature-settings: 'salt'on;
+}
+
+.providerdetails .providerdescriptions .myschedule .schedulebox .schedulesingle .types .typesinfo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 1rem;
+}
+
+@media screen and (max-width: 61.9375rem) {
+  .providerdetails .providerdescriptions .myschedule .schedulebox .schedulesingle .types .typesinfo {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+}
+
+.providerdetails .providerdescriptions .myschedule .schedulebox .schedulesingle .types .typesinfo .fee {
+  padding: 2.1875rem 0.75rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 0.25rem;
+  background: #ffffff;
+  border: solid 0.0625rem #CBD5E0;
+  cursor: pointer;
+  height: 7.375rem;
+  width: 7.375rem;
+}
+
+.providerdetails .providerdescriptions .myschedule .schedulebox .schedulesingle .types .typesinfo .fee .title {
+  font-family: "Gilroy";
+  font-style: normal;
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.625;
+  color: #2D3748;
+}
+
+.providerdetails .providerdescriptions .myschedule .schedulebox .schedulesingle .types .typesinfo .fee .pricefee {
+  font-family: "Gilroy";
+  font-style: normal;
+  font-size: 0.875rem;
+  font-weight: normal;
+  line-height: 1.71429;
+  color: #718096;
+}
+
+.providerdetails .providerdescriptions .myschedule .schedulebox .schedulesingle .types .typesinfo .fee:hover:not(.active) {
+  background: rgba(249, 78, 38, 0.1);
+  border-color: #F94E26;
+}
+
+.providerdetails .providerdescriptions .myschedule .schedulebox .schedulesingle .types .typesinfo .fee.active {
+  background: rgba(249, 78, 38, 0.1);
+  border-color: #F94E26;
+}
+
+.providerdetails .providerdescriptions .myschedule .schedulebox .scheduleapply .btn-apply {
+  border-radius: 0.5rem;
+  border-radius: 0.5rem;
+  font-family: "Gilroy";
+  font-style: normal;
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1;
+  background: #F94E26;
+  color: #ffffff;
+  padding: 1rem 1.5rem;
+  text-align: center;
+  -webkit-transition: all 250ms ease-in-out;
+  transition: all 250ms ease-in-out;
+}
+
+.providerdetails .providerdescriptions .myschedule .schedulebox .scheduleapply .btn-apply:not([disabled]):hover {
+  background: #cd2b06;
+  color: #ffffff;
+}
+
+.providerdetails .providerdescriptions .achievements {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 1.5rem;
+}
+
+.providerdetails .providerdescriptions .achievements .title {
+  color: #2D3748;
+}
+
+.providerdetails .providerdescriptions .achievements .certification {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 1rem;
 }
 
 .blog {

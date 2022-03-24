@@ -92,3 +92,404 @@
         }
     }
 }
+
+.appointmentModal {
+    .modal-content {
+        border: 0;
+        @include radius(8);
+    }
+
+    .modal-header {
+        position: relative;
+        margin: 0;
+        padding: 0;
+        border-radius: 0;
+
+        .btn-close {
+            position: absolute;
+            @include square(length(60));
+            @include circle;
+            background: $white;
+            box-shadow: $modalBtnShadow;
+            top: 0;
+            right: length(-76);
+
+            svg {
+                @include transitiontransform;
+
+                path {
+                    @include transitions;
+                }
+            }
+
+            @include hover {
+                svg {
+                    @include transform(rotate(90deg));
+
+                    path {
+                        fill: red;
+                    }
+                }
+            }
+        }
+    }
+
+    .modal-body {
+        border-radius: 0;
+        padding: 0;
+
+        .incomplete {
+            @include wh100;
+            @include flex-center-column;
+            gap: length(40);
+            text-align: center;
+            padding: length(58) length(124) length(70);
+
+            @include breakpoint(tablet991) {
+                padding: length(48) length(64) length(70);
+            }
+
+            @include breakpoint(phone575) {
+                padding: length(36) length(20) length(48);
+            }
+
+            &-header {
+                @include flex-center;
+
+                .icon {
+                    @include square(length(140));
+                    @include flex-center;
+                    overflow: hidden;
+
+                    @include breakpoint(phone575) {
+                        @include square(length(80));
+                    }
+
+                    svg {
+                        @include wh100;
+                    }
+                }
+            }
+
+            &-body {
+                @include flex-center-column;
+                gap: length(60);
+
+                .profileprogress {
+                    @include flex-center-column;
+                    gap: length(12);
+                    @include w100;
+
+                    .progress {
+                        @include w100;
+                        height: length(12);
+                        @include radius(50);
+                        background: $gray-200;
+
+                        @include breakpoint(phone575) {
+                            height: length(8);
+                        }
+
+                        &-bar {
+                            background: $primary;
+                            @include radius(50);
+                            height: length(12);
+
+                            @include breakpoint(phone575) {
+                                height: length(8);
+                            }
+                        }
+                    }
+
+                    .progresstext {
+                        color: $gray-600;
+                        @include font-26-16-semibold;
+                    }
+                }
+
+                .progressdetail {
+                    @include flex-center-column;
+                    gap: length(16);
+
+                    .title {
+                        color: $gray-700;
+
+                        @include breakpoint(tablet991) {
+                            @include heading-2;
+                        }
+
+                        @include breakpoint(phone575) {
+                            @include heading-3;
+                        }
+                    }
+
+                    .textinfo {
+                        max-width: length(418);
+
+                        .text {
+                            color: $gray-600;
+                            @include font-26-16-semibold;
+                        }
+                    }
+                }
+            }
+
+            &-footer {
+                @include flex-center;
+
+                .btn-profile {
+                    @include radius(8);
+                    @include font-16-16-semibold;
+                    @include setBgColor($tertiary, $white);
+                    padding: length(16) length(60);
+                    text-align: center;
+                    @include transitions;
+
+                    @include hover {
+                        @include setBgColor(darken($tertiary, 15%), $white);
+                    }
+                }
+            }
+        }
+
+        .appointmentdescript {
+            @include wh100;
+            padding: length(32) length(0) length(56);
+
+            &-header {
+                @include flex-center;
+
+                .logo {
+                    width: length(158);
+                    height: length(34);
+                    @include flex-center;
+                    overflow: hidden;
+
+                    img {
+                        @include wh100;
+                        object-fit: contain;
+                    }
+                }
+            }
+
+            &-body {
+                padding-top: length(64);
+
+                .providermenber,
+                .datepackage {
+                    padding: length(0) length(48) length(0);
+                    @include flex-between;
+                }
+
+                .providermenber {
+
+                    .provider,
+                    .member {
+                        width: 50%;
+                    }
+
+                    .provider {
+                        @include flex-column;
+                        gap: length(24);
+
+                        .providername {
+                            @include flex-center-vert;
+                            gap: length(80);
+
+                            .title {
+                                @include font-26-16-semibold;
+                                color: $gray-600;
+                                width: length(115);
+                            }
+
+                            .name {
+                                @include font-26-16-semibold;
+                                color: $gray-800;
+                            }
+                        }
+
+                        .providerid {
+                            @include flex-center-vert;
+                            gap: length(80);
+
+                            .title {
+                                width: length(115);
+                                @include font-26-16-semibold;
+                                color: $gray-600;
+                            }
+
+                            .id {
+                                @include font-26-16-semibold;
+                                color: $gray-800;
+                            }
+                        }
+                    }
+
+                    .member {
+                        @include flex-column;
+                        gap: length(24);
+
+                        .membername,
+                        .memberid {
+                            @include flex-center-vert;
+                            gap: length(80);
+                        }
+
+                        .membername {
+                            .title {
+                                @include font-26-16-semibold;
+                                color: $gray-600;
+                                width: length(115);
+                            }
+
+                            .name {
+                                @include font-26-16-semibold;
+                                color: $gray-800;
+                            }
+                        }
+
+                        .memberid {
+                            .title {
+                                width: length(115);
+                                @include font-26-16-semibold;
+                                color: $gray-600;
+                            }
+
+                            .id {
+                                @include font-26-16-semibold;
+                                color: $gray-800;
+                            }
+                        }
+                    }
+                }
+
+                .datepackage {
+
+                    .datetime,
+                    .packagefee {
+                        width: 50%;
+                    }
+
+                    .datetime {
+                        @include flex-column;
+                        gap: length(24);
+
+                        .date,
+                        .time {
+                            @include flex-center-vert;
+                            gap: length(80);
+                        }
+
+                        .date {
+
+                            .title {
+                                @include font-26-16-semibold;
+                                color: $gray-600;
+                                width: length(115);
+                            }
+
+                            .text {
+                                @include font-26-16-semibold;
+                                color: $gray-800;
+                            }
+                        }
+
+                        .time {
+                            .title {
+                                @include font-26-16-semibold;
+                                color: $gray-600;
+                                width: length(115);
+                            }
+
+                            .text {
+                                @include font-26-16-semibold;
+                                color: $gray-800;
+                            }
+                        }
+                    }
+
+                    .packagefee {
+                        @include flex-column;
+                        gap: length(24);
+
+                        .pack,
+                        .fees {
+                            @include flex-center-vert;
+                            gap: length(80);
+                        }
+
+                        .pack {
+                            .title {
+                                @include font-26-16-semibold;
+                                color: $gray-600;
+                                width: length(115);
+                            }
+
+                            .text {
+                                @include font-26-16-semibold;
+                                color: $gray-800;
+                            }
+                        }
+
+                        .fees {
+                            .title {
+                                @include font-26-16-semibold;
+                                color: $gray-600;
+                                width: length(115);
+                            }
+
+                            .text {
+                                @include font-26-16-semibold;
+                                color: $gray-800;
+                            }
+                        }
+                    }
+                }
+
+                .divider {
+                    @include w100;
+                    height: length(1);
+                    background: $gray-300;
+                    margin: length(40) length(0);
+                }
+            }
+
+            &-footer {
+                padding: length(0) length(48) length(0);
+                @include flex-center-column;
+                gap: length(38);
+                text-align: center;
+
+                .textinfo {
+                    max-width: length(456);
+
+                    .text {
+                        @include font-26-16-semibold;
+                        color: $gray-600;
+
+                        span {
+                            color: $gray-800;
+                        }
+                    }
+                }
+
+                .confirmbox {
+                    @include flex-center;
+
+                    .btn-confirm {
+                        @include radius(8);
+                        @include font-16-16-semibold;
+                        @include setBgColor($tertiary, $white);
+                        padding: length(16) length(60);
+                        text-align: center;
+                        @include transitions;
+
+                        @include hover {
+                            @include setBgColor(darken($tertiary, 15%), $white);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
