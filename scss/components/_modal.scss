@@ -760,3 +760,83 @@
         }
     }
 }
+
+.appointModal {
+    .modal-content {
+        border: 0;
+        @include radius(8);
+        overflow: hidden;
+    }
+
+    .modal-body {
+        padding: 0;
+        @include w100;
+
+        .appointinfo {
+            background: url(../images/modal/modalbg.svg) no-repeat;
+            padding: length(60) length(60) length(105);
+            @include w100;
+            @include flex-center-column;
+            gap: length(48);
+
+            @include breakpoint(phone768) {
+                padding: length(24) length(20) length(64);
+            }
+
+            &-header {
+                @include flex-center;
+                @include w100;
+
+                .icon {
+                    @include square(length(140));
+                    @include flex-center;
+                    overflow: hidden;
+
+                    @include breakpoint(tablet991) {
+                        @include square(length(80));
+                    }
+
+                    svg {
+                        @include wh100;
+                    }
+                }
+            }
+
+            &-body {
+                @include w100;
+                @include w100;
+                @include flex-center-column;
+                gap: length(40);
+                text-align: center;
+
+                .title {
+                    @include display-3;
+                    color: $gray-700;
+
+                    @include breakpoint(tablet991) {
+                        @include heading-1;
+                    }
+                }
+
+                .appointbuttons {
+                    @include flex-center;
+                    flex-wrap: wrap;
+                    gap: length(24);
+                    @include w100;
+
+                    .btn-square {
+                        width: calc((100% / 4) - 1.5rem);
+
+                        @include breakpoint(tablet991) {
+                            width: calc((100% / 2) - 1.5rem);
+                        }
+
+                        @include breakpoint(phone768) {
+                            @include w100;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

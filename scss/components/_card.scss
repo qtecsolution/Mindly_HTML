@@ -121,25 +121,11 @@
 
 // PACKAGE CARD START
 .cardpackage {
-    padding: length(56);
     background: $white;
-    @include border(solid, 1, $gray-700);
-    @include radius(15);
+    @include radius(8);
     @include flex-center-column;
-    gap: length(12);
     cursor: pointer;
-
-    @include breakpoint(desktop1400) {
-        padding: length(48);
-    }
-
-    @include breakpoint(desktop1199) {
-        padding: length(24) length(24) length(48);
-    }
-
-    @include breakpoint(tablet991) {
-        padding: length(16) length(16) length(32);
-    }
+    overflow: hidden;
 
     @include breakpoint(phone499) {
         max-width: length(340);
@@ -147,60 +133,53 @@
     }
 
     &-header {
-        display: flex;
-        gap: length(28);
+        @include flex-center-column;
+        gap: length(4);
+        padding: length(30);
+        background: $primary;
+        @include w100;
+        text-align: center;
 
-        .headerinfos {
-            @include flex-column;
-            gap: length(4);
+        .packagedesc {
+            @include flex-center-column;
+            gap: length(5);
 
-            .packagetitle {
-                @include font-21-18-bold;
-                color: $secondary;
-                letter-spacing: length(-0.08);
+            .icon {
+                @include square(length(60));
+                @include flex-center;
+                overflow: hidden;
 
-                @include breakpoint(phone768) {
-                    font-size: length(15);
-                }
-
-                @include breakpoint(phone480) {
-                    font-size: length(18);
-                }
-            }
-
-            .packageprice {
-                color: $gray-700;
-
-                @include breakpoint(phone768) {
-                    font-size: length(16);
-                }
-
-                @include breakpoint(phone480) {
-                    font-size: length(24);
+                svg {
+                    @include wh100;
                 }
             }
 
-            .packagedurations {
-                @include font-24-14-semibold;
-                color: $gray-700;
+            .headerinfos {
+                @include flex-center-column;
+                gap: length(4);
+
+                .packagetitle {
+                    @include heading-4;
+                    color: $secondary;
+                }
+
+                .packagedurations {
+                    @include font-24-14-semibold;
+                    color: $white;
+                }
             }
         }
 
-        .icon {
-            width: length(68);
-            height: length(74);
-            @include flex-center;
-            overflow: hidden;
-
-            @include breakpoint(phone575) {
-                width: length(40);
-                height: length(48);
-            }
+        .packageprice {
+            @include heading-2;
+            color: $white;
         }
     }
 
     &-body {
-        margin-bottom: length(8);
+        @include flex-center-column;
+        gap: length(24);
+        padding: length(24);
 
         .packagelist {
             @include flex-column;
@@ -208,10 +187,10 @@
 
             &-item {
                 @include flex-center-vert;
-                gap: length(8);
+                gap: length(12);
 
                 .icon {
-                    @include square(length(16));
+                    @include square(length(24));
                     @include flex-center;
                     overflow: hidden;
                 }
@@ -238,11 +217,6 @@
                 }
             }
         }
-    }
-
-    &-footer {
-        @include flex-center-column;
-        gap: length(10);
 
         .btn-membership {
             @include flex-center;
@@ -278,18 +252,6 @@
 
             @include hover {
                 background: darken($tertiary, 10%);
-            }
-        }
-
-        .link {
-            @include font-12-12-semibold;
-            color: $gray-500;
-            text-align: center;
-            letter-spacing: length(-0.08);
-
-            @include hover {
-                text-decoration: underline;
-                color: $secondary;
             }
         }
     }
@@ -515,11 +477,11 @@
     background: $clientBg;
     padding: length(10);
     @include radius(10);
-    @include square(length(200));
+    padding: length(24) length(54);
 
     img {
         max-width: 100%;
-        width: auto;
+        width: 100%;
         object-fit: contain;
     }
 }

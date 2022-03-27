@@ -39,6 +39,7 @@
     @include flex-center-between;
     background: $secondary;
     @include radius(5);
+    text-align: left;
 
     .text {
         @include font-16-16-semibold;
@@ -83,6 +84,7 @@
     .appointmentinfo {
         @include flex-column;
         gap: length(16);
+        text-align: left;
 
         .text {
             @include font-16-16-semibold;
@@ -213,4 +215,46 @@
     @include hover {
         @include setBgColor($secondary, $white);
     }
+}
+
+.btn-square {
+    @include radius(8);
+    @include flex-center-column;
+    gap: length(14);
+    text-align: center;
+    padding: length(28);
+
+    .btn-title {
+        @include heading-1;
+        color: $gray-800;
+
+        @include breakpoint(desktop1199) {
+            @include heading-2;
+        }
+    }
+
+    .btn-text {
+        @include heading-5;
+        color: $primary;
+
+        @include breakpoint(desktop1199) {
+            @include font-24-14-semibold;
+        }
+    }
+}
+
+.btn-me {
+    background: $mobileDropdownBg;
+}
+
+.btn-couple {
+    background: $bg-3;
+}
+
+.btn-family {
+    background: $bg-2;
+}
+
+.btn-group {
+    background: $mobileDropdownBg;
 }
