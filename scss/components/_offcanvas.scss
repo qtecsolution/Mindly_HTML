@@ -277,7 +277,7 @@
             background: $white;
             box-shadow: $dropdownshadow;
             @include flex-column;
-            gap: length(196);
+            gap: length(80);
             padding: length(14) length(0) length(20);
 
             .submenu {
@@ -307,7 +307,11 @@
                         }
                     }
 
-                    @include hover {
+                    &:hover:not(.active) {
+                        background: $gray-100;
+                    }
+
+                    .active {
                         background: $gray-100;
                     }
                 }

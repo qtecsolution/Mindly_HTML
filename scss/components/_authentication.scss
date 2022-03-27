@@ -39,18 +39,15 @@
                     height: length(80);
                     overflow: hidden;
 
-                    @include breakpoint(phone575) {
-                        width: 80%;
+                    @include breakpoint(tablet991) {
+                        width: length(200);
+                        height: length(80);
                         margin-inline: auto;
                     }
 
                     img {
                         @include wh100;
-                        object-fit: cover;
-
-                        @include breakpoint(phone575) {
-                            object-fit: contain;
-                        }
+                        object-fit: contain;
                     }
                 }
             }

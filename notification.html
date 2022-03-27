@@ -1,15 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" http-equiv="encoding">
+    <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mindly | Enterprise</title>
+    <title>Provider Dashboard | Notification</title>
     <!-- FAVICON -->
     <link rel="shortcut icon" href="favicon.svg" type="image/svg">
-    <!-- SWIPER CSS -->
-    <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
     <!-- BOOTSTRAP CSS -->
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
     <!-- MINDLY STYLESHEET -->
@@ -59,11 +56,24 @@
                     <!-- OFFCANVAS BODY START -->
                     <div class="offcanvas-body">
                         <ul class="mobilemenu">
-                            <li class="mobilemenu-item">
-                                <a href="enterprise.html" class="mobilemenu-link active">
-                                    For Organizations
-                                </a>
-                            </li>
+                            <!-- MOBILE DROPDOWN START -->
+                            <div class="accordion" id="servicesDropdown">
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="heading-1">
+                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-1" aria-expanded="false" aria-controls="collapse-1">
+                                            Services
+                                        </button>
+                                    </h2>
+
+                                    <div id="collapse-1" class="accordion-collapse collapse" aria-labelledby="heading-1" data-bs-parent="#servicesDropdown">
+                                        <div class="accordion-body">
+                                            <a href="individual.html" class="sublink">Individual</a>
+                                            <a href="enterprise.html" class="sublink">For Organizations</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- MOBILE DROPDOWN END -->
 
                             <li class="mobilemenu-item">
                                 <a href="providers.html" class="mobilemenu-link">For Providers</a>
@@ -117,9 +127,25 @@
 
                 <!-- HEADER MENU START -->
                 <ul class="headermenu">
-                    <li class="headermenu-item">
-                        <a href="enterprise.html" class="headermenu-link active"><span>For</span> Organizations</a>
+                    <!-- SERVICES DROPDOWN START -->
+                    <li class="headermenu-item mindlydropdown">
+                        <a href="#" class="headermenu-link">Services</a>
+                        
+                        <!-- SERVICES SUBMENU START -->
+                        <div class="mindlysubmenu">
+                            <ul class="mindlysublist">
+                                <li class="mindlysublist-item">
+                                    <a href="individual.html" class="mindlysublist-link">Individual</a>
+                                </li>
+
+                                <li class="mindlysublist-item">
+                                    <a href="enterprise.html" class="mindlysublist-link"><span>For</span> Organizations</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <!-- SERVICES SUBMENU END -->
                     </li>
+                    <!-- SERVICES DROPDOWN END -->
 
                     <li class="headermenu-item">
                         <a href="providers.html" class="headermenu-link"><span>For</span> Providers</a>
@@ -388,588 +414,88 @@
     </header>
     <!-- HEADER SECTION END -->
 
-    <!-- MOBILE BANNER SECTION START -->
-    <section class="mobilebanner">
-        <div class="mobilebanner-content">
-            <div class="banner-thumbnail" style="background: url(assets/images/enterprise/enterprise-thumb.png) no-repeat center center/cover">
-                <div class="container">
-                    <div class="banner-thumbnail-content">
-                        <h1 class="thumbnail-title">
-                            The direction you want. <br>
-                            The motivation you need.
-                        </h1>
-
-                        <div class="banner-info">
-                            <p class="textinfo">
-                                Mindly helps employees build the skills, mindsets, behaviors, and workplace culture needed to perform at their prime — both personally and professionally.
-                            </p>
-                        </div>
-
-                        <div class="meetinginfo">
-                            <a href="#" class="btn-request">Request a meeting</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="container">
-            <div class="banner-details">
-                <div class="banner-info">
-                    <p class="textinfo">
-                        Mindly helps employees build the skills, mindsets, behaviors, and workplace culture needed to perform at their prime — both personally and professionally.
-                    </p>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- MOBILE BANNER SECTION END -->
-
-    <!-- DESKTOP BANNER SECTION START -->
-    <section class="desktopbanner">
-        <!-- DEAKTOP THUMBNAIL START -->
-        <div id="parallax" class="desktop-thumnail" style="background: url(assets/images/enterprise/enterprise-thumb.png) no-repeat; background-attachment: fixed;">
-            <div class="container">
-                <div class="desktop-thumnail-content">
-                    <div class="bannerinfo">
-                        <h1 class="thumbnail-title">
-                            Build a champion <br>
-                            workforce.
-                        </h1>
-
-                        <p class="thumbnail-text">
-                            Mindly helps employees build the skills, mindsets, behaviors, and workplace culture needed to perform at their prime — both personally and professionally.
-                        </p>
-                    </div>
-
-                    <div class="meetinginfo">
-                        <a href="#" class="btn-request">Request a meeting</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- DEAKTOP THUMBNAIL END -->
-    </section>
-    <!-- DESKTOP BANNER SECTION END -->
-
-    <!-- ENTERPRISE SECTION START -->
-    <section class="enterprise">
+    <!-- DASHBOARD-SECTION START -->
+    <main class="dashboard">
         <div class="container">
             <div class="row">
-                <div class="col-lg-6 mx-lg-auto col-12">
-                    <div class="enterprise-thumbnail">
-                        <img src="assets/images/home/turn-team/turnteam.png" alt="enterprise-thumbnail">
-                    </div>
+                <div class="col-lg-3 col-12 d-none d-lg-block">
+                    <nav class="dashboard-navigation">
+                        <ul class="dashboardlist">
+                            <li class="dashboardlist-item">
+                                <a href="" class="dashboardlist-link">
+                                    <span class="icon">
+                                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M5.83333 5.00033V2.50033C5.83333 2.27931 5.92113 2.06735 6.07741 1.91107C6.23369 1.75479 6.44565 1.66699 6.66667 1.66699H16.6667C16.8877 1.66699 17.0996 1.75479 17.2559 1.91107C17.4122 2.06735 17.5 2.27931 17.5 2.50033V14.167C17.5 14.388 17.4122 14.6 17.2559 14.7562C17.0996 14.9125 16.8877 15.0003 16.6667 15.0003H14.1667V17.5003C14.1667 17.9603 13.7917 18.3337 13.3275 18.3337H3.33917C3.22927 18.3343 3.12033 18.3133 3.0186 18.2717C2.91687 18.2301 2.82436 18.1688 2.74638 18.0914C2.6684 18.014 2.60649 17.9219 2.56421 17.8205C2.52193 17.719 2.50011 17.6102 2.5 17.5003L2.5025 5.83366C2.5025 5.37366 2.8775 5.00033 3.34083 5.00033H5.83333ZM4.16833 6.66699L4.16667 16.667H12.5V6.66699H4.16833ZM7.5 5.00033H14.1667V13.3337H15.8333V3.33366H7.5V5.00033ZM5.83333 9.16699H10.8333V10.8337H5.83333V9.16699ZM5.83333 12.5003H10.8333V14.167H5.83333V12.5003Z" fill="#4A5568"/>
+                                        </svg>
+                                    </span>
+                                    <span class="text">Dashboard</span>
+                                </a>
+                            </li>
+
+                            <li class="dashboardlist-item">
+                                <a href="" class="dashboardlist-link">
+                                    <span class="icon">
+                                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M5.83333 5.00033V2.50033C5.83333 2.27931 5.92113 2.06735 6.07741 1.91107C6.23369 1.75479 6.44565 1.66699 6.66667 1.66699H16.6667C16.8877 1.66699 17.0996 1.75479 17.2559 1.91107C17.4122 2.06735 17.5 2.27931 17.5 2.50033V14.167C17.5 14.388 17.4122 14.6 17.2559 14.7562C17.0996 14.9125 16.8877 15.0003 16.6667 15.0003H14.1667V17.5003C14.1667 17.9603 13.7917 18.3337 13.3275 18.3337H3.33917C3.22927 18.3343 3.12033 18.3133 3.0186 18.2717C2.91687 18.2301 2.82436 18.1688 2.74638 18.0914C2.6684 18.014 2.60649 17.9219 2.56421 17.8205C2.52193 17.719 2.50011 17.6102 2.5 17.5003L2.5025 5.83366C2.5025 5.37366 2.8775 5.00033 3.34083 5.00033H5.83333ZM4.16833 6.66699L4.16667 16.667H12.5V6.66699H4.16833ZM7.5 5.00033H14.1667V13.3337H15.8333V3.33366H7.5V5.00033ZM5.83333 9.16699H10.8333V10.8337H5.83333V9.16699ZM5.83333 12.5003H10.8333V14.167H5.83333V12.5003Z" fill="#4A5568"/>
+                                        </svg>
+                                    </span>
+                                    <span class="text">Bookings</span>
+                                </a>
+                            </li>
+
+                            <li class="dashboardlist-item">
+                                <a href="" class="dashboardlist-link">
+                                    <span class="icon">
+                                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M5.83333 5.00033V2.50033C5.83333 2.27931 5.92113 2.06735 6.07741 1.91107C6.23369 1.75479 6.44565 1.66699 6.66667 1.66699H16.6667C16.8877 1.66699 17.0996 1.75479 17.2559 1.91107C17.4122 2.06735 17.5 2.27931 17.5 2.50033V14.167C17.5 14.388 17.4122 14.6 17.2559 14.7562C17.0996 14.9125 16.8877 15.0003 16.6667 15.0003H14.1667V17.5003C14.1667 17.9603 13.7917 18.3337 13.3275 18.3337H3.33917C3.22927 18.3343 3.12033 18.3133 3.0186 18.2717C2.91687 18.2301 2.82436 18.1688 2.74638 18.0914C2.6684 18.014 2.60649 17.9219 2.56421 17.8205C2.52193 17.719 2.50011 17.6102 2.5 17.5003L2.5025 5.83366C2.5025 5.37366 2.8775 5.00033 3.34083 5.00033H5.83333ZM4.16833 6.66699L4.16667 16.667H12.5V6.66699H4.16833ZM7.5 5.00033H14.1667V13.3337H15.8333V3.33366H7.5V5.00033ZM5.83333 9.16699H10.8333V10.8337H5.83333V9.16699ZM5.83333 12.5003H10.8333V14.167H5.83333V12.5003Z" fill="#4A5568"/>
+                                        </svg>
+                                    </span>
+                                    <span class="text">Membership</span>
+                                </a>
+                            </li>
+
+                            <li class="dashboardlist-item">
+                                <a href="" class="dashboardlist-link">
+                                    <span class="icon">
+                                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M5.83333 5.00033V2.50033C5.83333 2.27931 5.92113 2.06735 6.07741 1.91107C6.23369 1.75479 6.44565 1.66699 6.66667 1.66699H16.6667C16.8877 1.66699 17.0996 1.75479 17.2559 1.91107C17.4122 2.06735 17.5 2.27931 17.5 2.50033V14.167C17.5 14.388 17.4122 14.6 17.2559 14.7562C17.0996 14.9125 16.8877 15.0003 16.6667 15.0003H14.1667V17.5003C14.1667 17.9603 13.7917 18.3337 13.3275 18.3337H3.33917C3.22927 18.3343 3.12033 18.3133 3.0186 18.2717C2.91687 18.2301 2.82436 18.1688 2.74638 18.0914C2.6684 18.014 2.60649 17.9219 2.56421 17.8205C2.52193 17.719 2.50011 17.6102 2.5 17.5003L2.5025 5.83366C2.5025 5.37366 2.8775 5.00033 3.34083 5.00033H5.83333ZM4.16833 6.66699L4.16667 16.667H12.5V6.66699H4.16833ZM7.5 5.00033H14.1667V13.3337H15.8333V3.33366H7.5V5.00033ZM5.83333 9.16699H10.8333V10.8337H5.83333V9.16699ZM5.83333 12.5003H10.8333V14.167H5.83333V12.5003Z" fill="#4A5568"/>
+                                        </svg>
+                                    </span>
+                                    <span class="text">Intake Form</span>
+                                </a>
+                            </li>
+
+                            <li class="dashboardlist-item">
+                                <a href="" class="dashboardlist-link active">
+                                    <span class="icon">
+                                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M5.83333 5.00033V2.50033C5.83333 2.27931 5.92113 2.06735 6.07741 1.91107C6.23369 1.75479 6.44565 1.66699 6.66667 1.66699H16.6667C16.8877 1.66699 17.0996 1.75479 17.2559 1.91107C17.4122 2.06735 17.5 2.27931 17.5 2.50033V14.167C17.5 14.388 17.4122 14.6 17.2559 14.7562C17.0996 14.9125 16.8877 15.0003 16.6667 15.0003H14.1667V17.5003C14.1667 17.9603 13.7917 18.3337 13.3275 18.3337H3.33917C3.22927 18.3343 3.12033 18.3133 3.0186 18.2717C2.91687 18.2301 2.82436 18.1688 2.74638 18.0914C2.6684 18.014 2.60649 17.9219 2.56421 17.8205C2.52193 17.719 2.50011 17.6102 2.5 17.5003L2.5025 5.83366C2.5025 5.37366 2.8775 5.00033 3.34083 5.00033H5.83333ZM4.16833 6.66699L4.16667 16.667H12.5V6.66699H4.16833ZM7.5 5.00033H14.1667V13.3337H15.8333V3.33366H7.5V5.00033ZM5.83333 9.16699H10.8333V10.8337H5.83333V9.16699ZM5.83333 12.5003H10.8333V14.167H5.83333V12.5003Z" fill="#4A5568"/>
+                                        </svg>
+                                    </span>
+                                    <span class="text">Notification</span>
+                                </a>
+                            </li>
+
+                            <li class="dashboardlist-item">
+                                <a href="" class="dashboardlist-link">
+                                    <span class="icon">
+                                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M5.83333 5.00033V2.50033C5.83333 2.27931 5.92113 2.06735 6.07741 1.91107C6.23369 1.75479 6.44565 1.66699 6.66667 1.66699H16.6667C16.8877 1.66699 17.0996 1.75479 17.2559 1.91107C17.4122 2.06735 17.5 2.27931 17.5 2.50033V14.167C17.5 14.388 17.4122 14.6 17.2559 14.7562C17.0996 14.9125 16.8877 15.0003 16.6667 15.0003H14.1667V17.5003C14.1667 17.9603 13.7917 18.3337 13.3275 18.3337H3.33917C3.22927 18.3343 3.12033 18.3133 3.0186 18.2717C2.91687 18.2301 2.82436 18.1688 2.74638 18.0914C2.6684 18.014 2.60649 17.9219 2.56421 17.8205C2.52193 17.719 2.50011 17.6102 2.5 17.5003L2.5025 5.83366C2.5025 5.37366 2.8775 5.00033 3.34083 5.00033H5.83333ZM4.16833 6.66699L4.16667 16.667H12.5V6.66699H4.16833ZM7.5 5.00033H14.1667V13.3337H15.8333V3.33366H7.5V5.00033ZM5.83333 9.16699H10.8333V10.8337H5.83333V9.16699ZM5.83333 12.5003H10.8333V14.167H5.83333V12.5003Z" fill="#4A5568"/>
+                                        </svg>
+                                    </span>
+                                    <span class="text">Profile</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
                 </div>
+                
+                <div class="col-lg-9 col-12"></div>
             </div>
         </div>
-    </section>
-    <!-- ENTERPRISE SECTION END -->
-
-    <!-- COMPREHENSIVE SECTION START -->
-    <section class="comprehensive">
-        <div class="container">
-            <div class="comprehensive-content">
-                <div class="row">
-                    <div class="col-lg-8 mx-lg-auto col-12">
-                        <div class="comprehensive-details">
-                            <h1 class="comprehensivetitle">The most comprehensive approach for your team</h1>
-                            <p class="comprehensivetext">
-                                We help organizations build more productive workforces by providing individuals the instruments and assistance they require to thrive in all regards of their lives. When employees drive that energy to work, they start to create stronger, more resilient teams. And of that growth, your people build a culture of high-performance across your entire organization.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="row g-4">
-                    <div class="col-lg-6 col-12">
-                        <div class="cardcomprehensive">
-                            <div class="cardinfo">
-                                <h2 class="cardtitle">Confidentiality of information</h2>
-                                <p class="cardtext">
-                                    We undergo rigorous security audits, and our service providers adhere to strict ethical codes regarding client confidentiality.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="col-lg-6 col-12">
-                        <div class="cardcomprehensive">
-                            <div class="cardinfo">
-                                <h2 class="cardtitle">Confidentiality of information</h2>
-                                <p class="cardtext">
-                                    We undergo rigorous security audits, and our service providers adhere to strict ethical codes regarding client confidentiality.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-6 col-12">
-                        <div class="cardcomprehensive">
-                            <div class="cardinfo">
-                                <h2 class="cardtitle">Confidentiality of information</h2>
-                                <p class="cardtext">
-                                    We undergo rigorous security audits, and our service providers adhere to strict ethical codes regarding client confidentiality.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-6 col-12">
-                        <div class="cardcomprehensive">
-                            <div class="cardinfo">
-                                <h2 class="cardtitle">Confidentiality of information</h2>
-                                <p class="cardtext">
-                                    We undergo rigorous security audits, and our service providers adhere to strict ethical codes regarding client confidentiality.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- COMPREHENSIVE SECTION END -->
-
-    <!-- WELLNESS-APROACH SECTION START -->
-    <section class="wellnessaproach">
-        <div class="container">
-            <div class="row">
-                <div class="col-xl-10 mx-xl-auto col-12">
-                    <!-- WELLNESS-APROACH CONTENT START -->
-                    <div class="wellnessaproach-content">
-                        <!-- WELLNESS-APROACH HEADER START -->
-                        <div class="wellnessaproach-header">
-                            <h1 class="wellnessaproachtitle">A COMPREHENSIVE Wellness APPROACH</h1>
-                            <p class="wellnessaproachtext">
-                                Explore our most holistic offering for employers
-                            </p>
-                        </div>
-                        <!-- WELLNESS-APROACH END START -->
-
-                        <div class="row">
-                            <div class="col-lg-8 col-12">
-                                <!-- WELLNESS-APROACH THUMBNAIL START -->
-                                <div class="wellnessaproach-thumbnail">
-                                    <img src="assets/images/enterprise/wellnessaproach-banner.png" alt="wellnessaproach-thumbnail">
-                                </div>
-                                <!-- WELLNESS-APROACH THUMBNAIL END -->
-                            </div>
-
-                            <div class="col-lg-4 col-12">
-                                <!-- WELLNESS-APROACH DETAILS START -->
-                                <div class="wellnessaproach-details">
-                                    <!-- CARD WELLNESS-APROACH START -->
-                                    <div class="cardwellnessaproach">
-                                        <div class="cardwellnessaproach-header">
-                                            <div class="cardcap">
-
-                                            </div>
-
-                                            <h3 class="cardtitle">The Mindly Wellness Wheel</h3>
-                                        </div>
-                                        
-                                        <div class="cardwellnessaproach-body">
-                                            <ul class="cardlist">
-                                                <li class="cardlist-item">Assesment</li>
-                                                <li class="cardlist-item">Care navigation</li>
-                                                <li class="cardlist-item">Assesment</li>
-                                            </ul>
-                                            
-                                            <ul class="cardlist">
-                                                <li class="cardlist-item">Assesment</li>
-                                                <li class="cardlist-item">Care navigation</li>
-                                                <li class="cardlist-item">Assesment</li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                    <!-- CARD WELLNESS-APROACH END -->
-
-                                    <!-- CARD WELLNESS-APROACH START -->
-                                    <div class="cardwellnessaproach">
-                                        <div class="cardwellnessaproach-header">
-                                            <div class="cardcap">
-
-                                            </div>
-
-                                            <h3 class="cardtitle">The Mindly Wellness Wheel</h3>
-                                        </div>
-                                        
-                                        <div class="cardwellnessaproach-body">
-                                            <ul class="cardlist">
-                                                <li class="cardlist-item">Assesment</li>
-                                                <li class="cardlist-item">Assesment</li>
-                                            </ul>
-
-                                            <ul class="cardlist">
-                                                <li class="cardlist-item">Assesment</li>
-                                                <li class="cardlist-item">Assesment</li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                    <!-- CARD WELLNESS-APROACH END -->
-
-                                    <!-- CARD WELLNESS-APROACH START -->
-                                    <div class="cardwellnessaproach">
-                                        <div class="cardwellnessaproach-header">
-                                            <div class="cardcap">
-
-                                            </div>
-
-                                            <h3 class="cardtitle">The Mindly Wellness Wheel</h3>
-                                        </div>
-                                        
-                                        <div class="cardwellnessaproach-body">
-                                            <ul class="cardlist">
-                                                <li class="cardlist-item">Assesment</li>
-                                                <li class="cardlist-item">Care navigation</li>
-                                            </ul>
-
-                                            <ul class="cardlist">
-                                                <li class="cardlist-item">Assesment</li>
-                                                <li class="cardlist-item">Care navigation</li>
-                                                <li class="cardlist-item">Assesment</li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                    <!-- CARD WELLNESS-APROACH END -->
-
-                                    <!-- CARD WELLNESS-APROACH START -->
-                                    <div class="cardwellnessaproach">
-                                        <div class="cardwellnessaproach-header">
-                                            <div class="cardcap">
-
-                                            </div>
-
-                                            <h3 class="cardtitle">The Mindly Wellness Wheel</h3>
-                                        </div>
-                                        
-                                        <div class="cardwellnessaproach-body">
-                                            <ul class="cardlist">
-                                                <li class="cardlist-item">Assesment</li>
-                                                <li class="cardlist-item">Care navigation</li>
-                                            </ul>
-
-                                            <ul class="cardlist">
-                                                <li class="cardlist-item">Assesment</li>
-                                                <li class="cardlist-item">Care navigation</li>
-                                                <li class="cardlist-item">Assesment</li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                    <!-- CARD WELLNESS-APROACH END -->
-                                </div>
-                                <!-- WELLNESS-APROACH DETAILS END -->
-                            </div>
-                        </div>
-                    </div>
-                    <!-- WELLNESS-APROACH CONTENT START -->
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- WELLNESS-APROACH SECTION END -->
+    </main>
+    <!-- DASHBOARD-SECTION END -->
     
-    <!-- MEMBER REVIEW START -->
-    <section class="memberreview">
-        <div class="memberreview-content">
-            <!-- MEMBER REVIEW HEADER START -->
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-4 mx-lg-auto col-12">
-                        <div class="reviewdetails">
-                            <p class="reviewsubtitle">Member  Stories of transformation</p>
-                            <h2 class="reviewtitle">
-                                We help you to live better, perform greater!
-                            </h2>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- MEMBER REVIEW HEADER END -->
-
-            <div class="container">
-                <!-- SLIDER MAIN CONTAINER START -->
-                <div class="swiper swiper-userreview">
-                    <!-- SWIPER WRAPPER START -->
-                    <div class="swiper-wrapper">
-                        <!-- SWIPER SINGLE SLIDE START -->
-                        <div class="swiper-slide">
-                            <div class="cardreview">
-                                <ul class="reviewlist">
-                                    <li class="reviewlist-item">
-                                        <svg width="12" height="13" viewBox="0 0 12 13" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M5.42958 2.60195C5.60958 2.04935 6.39138 2.04935 6.57078 2.60195L7.21278 4.57715C7.252 4.69744 7.32825 4.80226 7.43062 4.87661C7.533 4.95097 7.65625 4.99106 7.78278 4.99115H9.85998C10.4414 4.99115 10.6826 5.73515 10.2128 6.07715L8.53278 7.29755C8.4302 7.37197 8.35381 7.47696 8.31458 7.59746C8.27534 7.71797 8.27528 7.8478 8.31438 7.96835L8.95638 9.94355C9.13638 10.4962 8.50338 10.9564 8.03238 10.6144L6.35238 9.39395C6.2499 9.31955 6.12651 9.27949 5.99988 9.27949C5.87324 9.27949 5.74986 9.31955 5.64738 9.39395L3.96738 10.6144C3.49698 10.9564 2.86458 10.4962 3.04398 9.94355L3.68598 7.96835C3.72508 7.8478 3.72501 7.71797 3.68578 7.59746C3.64655 7.47696 3.57016 7.37197 3.46758 7.29755L1.78818 6.07775C1.31838 5.73575 1.56018 4.99175 2.14098 4.99175H4.21758C4.34421 4.99178 4.4676 4.95175 4.57009 4.87739C4.67259 4.80303 4.74892 4.69814 4.78818 4.57775L5.43018 2.60255L5.42958 2.60195Z" fill="#F2B807"/>
-                                        </svg>
-                                    </li>
-                                    <li class="reviewlist-item">
-                                        <svg width="12" height="13" viewBox="0 0 12 13" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M5.42958 2.60195C5.60958 2.04935 6.39138 2.04935 6.57078 2.60195L7.21278 4.57715C7.252 4.69744 7.32825 4.80226 7.43062 4.87661C7.533 4.95097 7.65625 4.99106 7.78278 4.99115H9.85998C10.4414 4.99115 10.6826 5.73515 10.2128 6.07715L8.53278 7.29755C8.4302 7.37197 8.35381 7.47696 8.31458 7.59746C8.27534 7.71797 8.27528 7.8478 8.31438 7.96835L8.95638 9.94355C9.13638 10.4962 8.50338 10.9564 8.03238 10.6144L6.35238 9.39395C6.2499 9.31955 6.12651 9.27949 5.99988 9.27949C5.87324 9.27949 5.74986 9.31955 5.64738 9.39395L3.96738 10.6144C3.49698 10.9564 2.86458 10.4962 3.04398 9.94355L3.68598 7.96835C3.72508 7.8478 3.72501 7.71797 3.68578 7.59746C3.64655 7.47696 3.57016 7.37197 3.46758 7.29755L1.78818 6.07775C1.31838 5.73575 1.56018 4.99175 2.14098 4.99175H4.21758C4.34421 4.99178 4.4676 4.95175 4.57009 4.87739C4.67259 4.80303 4.74892 4.69814 4.78818 4.57775L5.43018 2.60255L5.42958 2.60195Z" fill="#F2B807"/>
-                                        </svg>
-                                    </li>
-                                    <li class="reviewlist-item">
-                                        <svg width="12" height="13" viewBox="0 0 12 13" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M5.42958 2.60195C5.60958 2.04935 6.39138 2.04935 6.57078 2.60195L7.21278 4.57715C7.252 4.69744 7.32825 4.80226 7.43062 4.87661C7.533 4.95097 7.65625 4.99106 7.78278 4.99115H9.85998C10.4414 4.99115 10.6826 5.73515 10.2128 6.07715L8.53278 7.29755C8.4302 7.37197 8.35381 7.47696 8.31458 7.59746C8.27534 7.71797 8.27528 7.8478 8.31438 7.96835L8.95638 9.94355C9.13638 10.4962 8.50338 10.9564 8.03238 10.6144L6.35238 9.39395C6.2499 9.31955 6.12651 9.27949 5.99988 9.27949C5.87324 9.27949 5.74986 9.31955 5.64738 9.39395L3.96738 10.6144C3.49698 10.9564 2.86458 10.4962 3.04398 9.94355L3.68598 7.96835C3.72508 7.8478 3.72501 7.71797 3.68578 7.59746C3.64655 7.47696 3.57016 7.37197 3.46758 7.29755L1.78818 6.07775C1.31838 5.73575 1.56018 4.99175 2.14098 4.99175H4.21758C4.34421 4.99178 4.4676 4.95175 4.57009 4.87739C4.67259 4.80303 4.74892 4.69814 4.78818 4.57775L5.43018 2.60255L5.42958 2.60195Z" fill="#F2B807"/>
-                                        </svg>
-                                    </li>
-                                    <li class="reviewlist-item">
-                                        <svg width="12" height="13" viewBox="0 0 12 13" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M5.42958 2.60195C5.60958 2.04935 6.39138 2.04935 6.57078 2.60195L7.21278 4.57715C7.252 4.69744 7.32825 4.80226 7.43062 4.87661C7.533 4.95097 7.65625 4.99106 7.78278 4.99115H9.85998C10.4414 4.99115 10.6826 5.73515 10.2128 6.07715L8.53278 7.29755C8.4302 7.37197 8.35381 7.47696 8.31458 7.59746C8.27534 7.71797 8.27528 7.8478 8.31438 7.96835L8.95638 9.94355C9.13638 10.4962 8.50338 10.9564 8.03238 10.6144L6.35238 9.39395C6.2499 9.31955 6.12651 9.27949 5.99988 9.27949C5.87324 9.27949 5.74986 9.31955 5.64738 9.39395L3.96738 10.6144C3.49698 10.9564 2.86458 10.4962 3.04398 9.94355L3.68598 7.96835C3.72508 7.8478 3.72501 7.71797 3.68578 7.59746C3.64655 7.47696 3.57016 7.37197 3.46758 7.29755L1.78818 6.07775C1.31838 5.73575 1.56018 4.99175 2.14098 4.99175H4.21758C4.34421 4.99178 4.4676 4.95175 4.57009 4.87739C4.67259 4.80303 4.74892 4.69814 4.78818 4.57775L5.43018 2.60255L5.42958 2.60195Z" fill="#F2B807"/>
-                                        </svg>
-                                    </li>
-                                    <li class="reviewlist-item">
-                                        <svg width="12" height="13" viewBox="0 0 12 13" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M5.42958 2.60195C5.60958 2.04935 6.39138 2.04935 6.57078 2.60195L7.21278 4.57715C7.252 4.69744 7.32825 4.80226 7.43062 4.87661C7.533 4.95097 7.65625 4.99106 7.78278 4.99115H9.85998C10.4414 4.99115 10.6826 5.73515 10.2128 6.07715L8.53278 7.29755C8.4302 7.37197 8.35381 7.47696 8.31458 7.59746C8.27534 7.71797 8.27528 7.8478 8.31438 7.96835L8.95638 9.94355C9.13638 10.4962 8.50338 10.9564 8.03238 10.6144L6.35238 9.39395C6.2499 9.31955 6.12651 9.27949 5.99988 9.27949C5.87324 9.27949 5.74986 9.31955 5.64738 9.39395L3.96738 10.6144C3.49698 10.9564 2.86458 10.4962 3.04398 9.94355L3.68598 7.96835C3.72508 7.8478 3.72501 7.71797 3.68578 7.59746C3.64655 7.47696 3.57016 7.37197 3.46758 7.29755L1.78818 6.07775C1.31838 5.73575 1.56018 4.99175 2.14098 4.99175H4.21758C4.34421 4.99178 4.4676 4.95175 4.57009 4.87739C4.67259 4.80303 4.74892 4.69814 4.78818 4.57775L5.43018 2.60255L5.42958 2.60195Z" fill="#F2B807"/>
-                                        </svg>
-                                    </li>
-                                </ul>
-
-                                <p class="reviewtext">
-                                    Emotional resilience is how we empower ourselves to perceive adversities as 'temporary' and keep evolving through the agony and sufferings. 
-                                </p>
-
-                                <p class="reviewauthor">
-                                    -Mursalin Mohiuddin
-                                </p>
-                            </div>
-                        </div>
-                        <!-- SWIPER SINGLE SLIDE END -->
-                        
-                        <!-- SWIPER SINGLE SLIDE START -->
-                        <div class="swiper-slide">
-                            <div class="cardreview">
-                                <ul class="reviewlist">
-                                    <li class="reviewlist-item">
-                                        <svg width="12" height="13" viewBox="0 0 12 13" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M5.42958 2.60195C5.60958 2.04935 6.39138 2.04935 6.57078 2.60195L7.21278 4.57715C7.252 4.69744 7.32825 4.80226 7.43062 4.87661C7.533 4.95097 7.65625 4.99106 7.78278 4.99115H9.85998C10.4414 4.99115 10.6826 5.73515 10.2128 6.07715L8.53278 7.29755C8.4302 7.37197 8.35381 7.47696 8.31458 7.59746C8.27534 7.71797 8.27528 7.8478 8.31438 7.96835L8.95638 9.94355C9.13638 10.4962 8.50338 10.9564 8.03238 10.6144L6.35238 9.39395C6.2499 9.31955 6.12651 9.27949 5.99988 9.27949C5.87324 9.27949 5.74986 9.31955 5.64738 9.39395L3.96738 10.6144C3.49698 10.9564 2.86458 10.4962 3.04398 9.94355L3.68598 7.96835C3.72508 7.8478 3.72501 7.71797 3.68578 7.59746C3.64655 7.47696 3.57016 7.37197 3.46758 7.29755L1.78818 6.07775C1.31838 5.73575 1.56018 4.99175 2.14098 4.99175H4.21758C4.34421 4.99178 4.4676 4.95175 4.57009 4.87739C4.67259 4.80303 4.74892 4.69814 4.78818 4.57775L5.43018 2.60255L5.42958 2.60195Z" fill="#F2B807"/>
-                                        </svg>
-                                    </li>
-                                    <li class="reviewlist-item">
-                                        <svg width="12" height="13" viewBox="0 0 12 13" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M5.42958 2.60195C5.60958 2.04935 6.39138 2.04935 6.57078 2.60195L7.21278 4.57715C7.252 4.69744 7.32825 4.80226 7.43062 4.87661C7.533 4.95097 7.65625 4.99106 7.78278 4.99115H9.85998C10.4414 4.99115 10.6826 5.73515 10.2128 6.07715L8.53278 7.29755C8.4302 7.37197 8.35381 7.47696 8.31458 7.59746C8.27534 7.71797 8.27528 7.8478 8.31438 7.96835L8.95638 9.94355C9.13638 10.4962 8.50338 10.9564 8.03238 10.6144L6.35238 9.39395C6.2499 9.31955 6.12651 9.27949 5.99988 9.27949C5.87324 9.27949 5.74986 9.31955 5.64738 9.39395L3.96738 10.6144C3.49698 10.9564 2.86458 10.4962 3.04398 9.94355L3.68598 7.96835C3.72508 7.8478 3.72501 7.71797 3.68578 7.59746C3.64655 7.47696 3.57016 7.37197 3.46758 7.29755L1.78818 6.07775C1.31838 5.73575 1.56018 4.99175 2.14098 4.99175H4.21758C4.34421 4.99178 4.4676 4.95175 4.57009 4.87739C4.67259 4.80303 4.74892 4.69814 4.78818 4.57775L5.43018 2.60255L5.42958 2.60195Z" fill="#F2B807"/>
-                                        </svg>
-                                    </li>
-                                    <li class="reviewlist-item">
-                                        <svg width="12" height="13" viewBox="0 0 12 13" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M5.42958 2.60195C5.60958 2.04935 6.39138 2.04935 6.57078 2.60195L7.21278 4.57715C7.252 4.69744 7.32825 4.80226 7.43062 4.87661C7.533 4.95097 7.65625 4.99106 7.78278 4.99115H9.85998C10.4414 4.99115 10.6826 5.73515 10.2128 6.07715L8.53278 7.29755C8.4302 7.37197 8.35381 7.47696 8.31458 7.59746C8.27534 7.71797 8.27528 7.8478 8.31438 7.96835L8.95638 9.94355C9.13638 10.4962 8.50338 10.9564 8.03238 10.6144L6.35238 9.39395C6.2499 9.31955 6.12651 9.27949 5.99988 9.27949C5.87324 9.27949 5.74986 9.31955 5.64738 9.39395L3.96738 10.6144C3.49698 10.9564 2.86458 10.4962 3.04398 9.94355L3.68598 7.96835C3.72508 7.8478 3.72501 7.71797 3.68578 7.59746C3.64655 7.47696 3.57016 7.37197 3.46758 7.29755L1.78818 6.07775C1.31838 5.73575 1.56018 4.99175 2.14098 4.99175H4.21758C4.34421 4.99178 4.4676 4.95175 4.57009 4.87739C4.67259 4.80303 4.74892 4.69814 4.78818 4.57775L5.43018 2.60255L5.42958 2.60195Z" fill="#F2B807"/>
-                                        </svg>
-                                    </li>
-                                    <li class="reviewlist-item">
-                                        <svg width="12" height="13" viewBox="0 0 12 13" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M5.42958 2.60195C5.60958 2.04935 6.39138 2.04935 6.57078 2.60195L7.21278 4.57715C7.252 4.69744 7.32825 4.80226 7.43062 4.87661C7.533 4.95097 7.65625 4.99106 7.78278 4.99115H9.85998C10.4414 4.99115 10.6826 5.73515 10.2128 6.07715L8.53278 7.29755C8.4302 7.37197 8.35381 7.47696 8.31458 7.59746C8.27534 7.71797 8.27528 7.8478 8.31438 7.96835L8.95638 9.94355C9.13638 10.4962 8.50338 10.9564 8.03238 10.6144L6.35238 9.39395C6.2499 9.31955 6.12651 9.27949 5.99988 9.27949C5.87324 9.27949 5.74986 9.31955 5.64738 9.39395L3.96738 10.6144C3.49698 10.9564 2.86458 10.4962 3.04398 9.94355L3.68598 7.96835C3.72508 7.8478 3.72501 7.71797 3.68578 7.59746C3.64655 7.47696 3.57016 7.37197 3.46758 7.29755L1.78818 6.07775C1.31838 5.73575 1.56018 4.99175 2.14098 4.99175H4.21758C4.34421 4.99178 4.4676 4.95175 4.57009 4.87739C4.67259 4.80303 4.74892 4.69814 4.78818 4.57775L5.43018 2.60255L5.42958 2.60195Z" fill="#F2B807"/>
-                                        </svg>
-                                    </li>
-                                    <li class="reviewlist-item">
-                                        <svg width="12" height="13" viewBox="0 0 12 13" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M5.42958 2.60195C5.60958 2.04935 6.39138 2.04935 6.57078 2.60195L7.21278 4.57715C7.252 4.69744 7.32825 4.80226 7.43062 4.87661C7.533 4.95097 7.65625 4.99106 7.78278 4.99115H9.85998C10.4414 4.99115 10.6826 5.73515 10.2128 6.07715L8.53278 7.29755C8.4302 7.37197 8.35381 7.47696 8.31458 7.59746C8.27534 7.71797 8.27528 7.8478 8.31438 7.96835L8.95638 9.94355C9.13638 10.4962 8.50338 10.9564 8.03238 10.6144L6.35238 9.39395C6.2499 9.31955 6.12651 9.27949 5.99988 9.27949C5.87324 9.27949 5.74986 9.31955 5.64738 9.39395L3.96738 10.6144C3.49698 10.9564 2.86458 10.4962 3.04398 9.94355L3.68598 7.96835C3.72508 7.8478 3.72501 7.71797 3.68578 7.59746C3.64655 7.47696 3.57016 7.37197 3.46758 7.29755L1.78818 6.07775C1.31838 5.73575 1.56018 4.99175 2.14098 4.99175H4.21758C4.34421 4.99178 4.4676 4.95175 4.57009 4.87739C4.67259 4.80303 4.74892 4.69814 4.78818 4.57775L5.43018 2.60255L5.42958 2.60195Z" fill="#F2B807"/>
-                                        </svg>
-                                    </li>
-                                </ul>
-
-                                <p class="reviewtext">
-                                    Emotional resilience is how we empower ourselves to perceive adversities as 'temporary' and keep evolving through the agony and sufferings. 
-                                </p>
-
-                                <p class="reviewauthor">
-                                    -Mursalin Mohiuddin
-                                </p>
-                            </div>
-                        </div>
-                        <!-- SWIPER SINGLE SLIDE END -->
-
-                        <!-- SWIPER SINGLE SLIDE START -->
-                        <div class="swiper-slide">
-                            <div class="cardreview">
-                                <ul class="reviewlist">
-                                    <li class="reviewlist-item">
-                                        <svg width="12" height="13" viewBox="0 0 12 13" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M5.42958 2.60195C5.60958 2.04935 6.39138 2.04935 6.57078 2.60195L7.21278 4.57715C7.252 4.69744 7.32825 4.80226 7.43062 4.87661C7.533 4.95097 7.65625 4.99106 7.78278 4.99115H9.85998C10.4414 4.99115 10.6826 5.73515 10.2128 6.07715L8.53278 7.29755C8.4302 7.37197 8.35381 7.47696 8.31458 7.59746C8.27534 7.71797 8.27528 7.8478 8.31438 7.96835L8.95638 9.94355C9.13638 10.4962 8.50338 10.9564 8.03238 10.6144L6.35238 9.39395C6.2499 9.31955 6.12651 9.27949 5.99988 9.27949C5.87324 9.27949 5.74986 9.31955 5.64738 9.39395L3.96738 10.6144C3.49698 10.9564 2.86458 10.4962 3.04398 9.94355L3.68598 7.96835C3.72508 7.8478 3.72501 7.71797 3.68578 7.59746C3.64655 7.47696 3.57016 7.37197 3.46758 7.29755L1.78818 6.07775C1.31838 5.73575 1.56018 4.99175 2.14098 4.99175H4.21758C4.34421 4.99178 4.4676 4.95175 4.57009 4.87739C4.67259 4.80303 4.74892 4.69814 4.78818 4.57775L5.43018 2.60255L5.42958 2.60195Z" fill="#F2B807"/>
-                                        </svg>
-                                    </li>
-                                    <li class="reviewlist-item">
-                                        <svg width="12" height="13" viewBox="0 0 12 13" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M5.42958 2.60195C5.60958 2.04935 6.39138 2.04935 6.57078 2.60195L7.21278 4.57715C7.252 4.69744 7.32825 4.80226 7.43062 4.87661C7.533 4.95097 7.65625 4.99106 7.78278 4.99115H9.85998C10.4414 4.99115 10.6826 5.73515 10.2128 6.07715L8.53278 7.29755C8.4302 7.37197 8.35381 7.47696 8.31458 7.59746C8.27534 7.71797 8.27528 7.8478 8.31438 7.96835L8.95638 9.94355C9.13638 10.4962 8.50338 10.9564 8.03238 10.6144L6.35238 9.39395C6.2499 9.31955 6.12651 9.27949 5.99988 9.27949C5.87324 9.27949 5.74986 9.31955 5.64738 9.39395L3.96738 10.6144C3.49698 10.9564 2.86458 10.4962 3.04398 9.94355L3.68598 7.96835C3.72508 7.8478 3.72501 7.71797 3.68578 7.59746C3.64655 7.47696 3.57016 7.37197 3.46758 7.29755L1.78818 6.07775C1.31838 5.73575 1.56018 4.99175 2.14098 4.99175H4.21758C4.34421 4.99178 4.4676 4.95175 4.57009 4.87739C4.67259 4.80303 4.74892 4.69814 4.78818 4.57775L5.43018 2.60255L5.42958 2.60195Z" fill="#F2B807"/>
-                                        </svg>
-                                    </li>
-                                    <li class="reviewlist-item">
-                                        <svg width="12" height="13" viewBox="0 0 12 13" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M5.42958 2.60195C5.60958 2.04935 6.39138 2.04935 6.57078 2.60195L7.21278 4.57715C7.252 4.69744 7.32825 4.80226 7.43062 4.87661C7.533 4.95097 7.65625 4.99106 7.78278 4.99115H9.85998C10.4414 4.99115 10.6826 5.73515 10.2128 6.07715L8.53278 7.29755C8.4302 7.37197 8.35381 7.47696 8.31458 7.59746C8.27534 7.71797 8.27528 7.8478 8.31438 7.96835L8.95638 9.94355C9.13638 10.4962 8.50338 10.9564 8.03238 10.6144L6.35238 9.39395C6.2499 9.31955 6.12651 9.27949 5.99988 9.27949C5.87324 9.27949 5.74986 9.31955 5.64738 9.39395L3.96738 10.6144C3.49698 10.9564 2.86458 10.4962 3.04398 9.94355L3.68598 7.96835C3.72508 7.8478 3.72501 7.71797 3.68578 7.59746C3.64655 7.47696 3.57016 7.37197 3.46758 7.29755L1.78818 6.07775C1.31838 5.73575 1.56018 4.99175 2.14098 4.99175H4.21758C4.34421 4.99178 4.4676 4.95175 4.57009 4.87739C4.67259 4.80303 4.74892 4.69814 4.78818 4.57775L5.43018 2.60255L5.42958 2.60195Z" fill="#F2B807"/>
-                                        </svg>
-                                    </li>
-                                    <li class="reviewlist-item">
-                                        <svg width="12" height="13" viewBox="0 0 12 13" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M5.42958 2.60195C5.60958 2.04935 6.39138 2.04935 6.57078 2.60195L7.21278 4.57715C7.252 4.69744 7.32825 4.80226 7.43062 4.87661C7.533 4.95097 7.65625 4.99106 7.78278 4.99115H9.85998C10.4414 4.99115 10.6826 5.73515 10.2128 6.07715L8.53278 7.29755C8.4302 7.37197 8.35381 7.47696 8.31458 7.59746C8.27534 7.71797 8.27528 7.8478 8.31438 7.96835L8.95638 9.94355C9.13638 10.4962 8.50338 10.9564 8.03238 10.6144L6.35238 9.39395C6.2499 9.31955 6.12651 9.27949 5.99988 9.27949C5.87324 9.27949 5.74986 9.31955 5.64738 9.39395L3.96738 10.6144C3.49698 10.9564 2.86458 10.4962 3.04398 9.94355L3.68598 7.96835C3.72508 7.8478 3.72501 7.71797 3.68578 7.59746C3.64655 7.47696 3.57016 7.37197 3.46758 7.29755L1.78818 6.07775C1.31838 5.73575 1.56018 4.99175 2.14098 4.99175H4.21758C4.34421 4.99178 4.4676 4.95175 4.57009 4.87739C4.67259 4.80303 4.74892 4.69814 4.78818 4.57775L5.43018 2.60255L5.42958 2.60195Z" fill="#F2B807"/>
-                                        </svg>
-                                    </li>
-                                    <li class="reviewlist-item">
-                                        <svg width="12" height="13" viewBox="0 0 12 13" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M5.42958 2.60195C5.60958 2.04935 6.39138 2.04935 6.57078 2.60195L7.21278 4.57715C7.252 4.69744 7.32825 4.80226 7.43062 4.87661C7.533 4.95097 7.65625 4.99106 7.78278 4.99115H9.85998C10.4414 4.99115 10.6826 5.73515 10.2128 6.07715L8.53278 7.29755C8.4302 7.37197 8.35381 7.47696 8.31458 7.59746C8.27534 7.71797 8.27528 7.8478 8.31438 7.96835L8.95638 9.94355C9.13638 10.4962 8.50338 10.9564 8.03238 10.6144L6.35238 9.39395C6.2499 9.31955 6.12651 9.27949 5.99988 9.27949C5.87324 9.27949 5.74986 9.31955 5.64738 9.39395L3.96738 10.6144C3.49698 10.9564 2.86458 10.4962 3.04398 9.94355L3.68598 7.96835C3.72508 7.8478 3.72501 7.71797 3.68578 7.59746C3.64655 7.47696 3.57016 7.37197 3.46758 7.29755L1.78818 6.07775C1.31838 5.73575 1.56018 4.99175 2.14098 4.99175H4.21758C4.34421 4.99178 4.4676 4.95175 4.57009 4.87739C4.67259 4.80303 4.74892 4.69814 4.78818 4.57775L5.43018 2.60255L5.42958 2.60195Z" fill="#F2B807"/>
-                                        </svg>
-                                    </li>
-                                </ul>
-
-                                <p class="reviewtext">
-                                    Emotional resilience is how we empower ourselves to perceive adversities as 'temporary' and keep evolving through the agony and sufferings. 
-                                </p>
-
-                                <p class="reviewauthor">
-                                    -Mursalin Mohiuddin
-                                </p>
-                            </div>
-                        </div>
-                        <!-- SWIPER SINGLE SLIDE END -->
-                    </div>
-                    <!-- SWIPER WRAPPER END -->
-                </div>
-                <!-- SLIDER MAIN CONTAINER END -->
-            </div>
-        </div>
-    </section>
-    <!-- MEMBER REVIEW END -->
-
-    <!-- OUR CLIENTS SECTION START -->
-    <section class="ourbrands">
-        <div class="ourbrands-content">
-            <!-- CLIENTS BRAND HEADER START -->
-            <div class="container">
-                <div class="ourbrands-header">
-                    <h1 class="brandstitle">Brands that trust us</h1>
-                </div>
-            </div>
-            <!-- CLIENTS BRAND HEADER END -->
-
-            <!-- OUR CLILENTS SLIDER START -->
-            <div class="container">
-                <div class="brandslider">
-                    <!-- SLIDER MAIN CONTAINER START -->
-                    <div class="swiper swiper-homebrands">
-                        <!-- SWIPER WRAPPER START -->
-                        <div class="swiper-wrapper">
-                            <!-- SWIPER SINGLE SLIDE START -->
-                            <div class="swiper-slide">
-                                <div class="cardclient">
-                                    <img src="assets/images/home/clients/airbnb.png" alt="client-thumbnail">
-                                </div>
-                            </div>
-                            <!-- SWIPER SINGLE SLIDE END -->
-                            
-                            <!-- SWIPER SINGLE SLIDE START -->
-                            <div class="swiper-slide">
-                                <div class="cardclient">
-                                    <img src="assets/images/home/clients/airbnb.png" alt="client-thumbnail">
-                                </div>
-                            </div>
-                            <!-- SWIPER SINGLE SLIDE END -->
-
-                            <!-- SWIPER SINGLE SLIDE START -->
-                            <div class="swiper-slide">
-                                <div class="cardclient">
-                                    <img src="assets/images/home/clients/airbnb.png" alt="client-thumbnail">
-                                </div>
-                            </div>
-                            <!-- SWIPER SINGLE SLIDE END -->
-
-                            <!-- SWIPER SINGLE SLIDE START -->
-                            <div class="swiper-slide">
-                                <div class="cardclient">
-                                    <img src="assets/images/home/clients/airbnb.png" alt="client-thumbnail">
-                                </div>
-                            </div>
-                            <!-- SWIPER SINGLE SLIDE END -->
-
-                            <!-- SWIPER SINGLE SLIDE START -->
-                            <div class="swiper-slide">
-                                <div class="cardclient">
-                                    <img src="assets/images/home/clients/airbnb.png" alt="client-thumbnail">
-                                </div>
-                            </div>
-                            <!-- SWIPER SINGLE SLIDE END -->
-
-                            <!-- SWIPER SINGLE SLIDE START -->
-                            <div class="swiper-slide">
-                                <div class="cardclient">
-                                    <img src="assets/images/home/clients/airbnb.png" alt="client-thumbnail">
-                                </div>
-                            </div>
-                            <!-- SWIPER SINGLE SLIDE END -->
-                        </div>
-                        <!-- SWIPER WRAPPER END -->
-                    </div>
-                    <!-- SLIDER MAIN CONTAINER END -->
-                </div>
-            </div>
-            <!-- OUR CLIENTS SLIDER END -->
-        </div>
-    </section>
-    <!-- OUR CLIENTS SECTION END -->
-
-    <!-- SECTION MEETING START -->
-    <section class="meeting">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-8 mx-lg-auto col-12">
-                    <!-- MEETING CONTENT START -->
-                    <div class="meeting-content">
-                        <!-- MEETING HEADER START -->
-                        <div class="meeting-header">
-                            <h1 class="meetingtitle">Want to set up a meeting with us?</h1>
-                            <p class="meetingtext">
-                                You can now set a meeting with us to discuss your pain points. We will help you to build a champion team!
-                            </p>
-                        </div>
-                        <!-- MEETING HEADER END -->
-                        
-                        <!-- MEETING FORM START -->
-                        <form class="meeting-form">
-                            <div class="inputrow">
-                                <div class="inputbox">
-                                    <div class="infobox">
-                                        <label for="meetingname" class="infolabel">Your Name</label>
-                                        <input type="text" id="meetingname" placeholder="Enter full name" class="inputfield">
-                                    </div>
-                                    <p class="error-message">This field is required</p>
-                                </div>
-                                
-                                <div class="inputbox">
-                                    <div class="infobox">
-                                        <label for="meetingcontact" class="infolabel">Your Contact Number</label>
-                                        <input type="tel" id="meetingcontact" placeholder="Enter phone number" class="inputfield">
-                                    </div>
-                                    <p class="error-message">This field is required</p>
-                                </div>
-                            </div>
-
-                            <div class="inputrow">
-                                <div class="inputbox">
-                                    <div class="infobox">
-                                        <label for="meetingemail" class="infolabel">Your Work E-mail</label>
-                                        <input type="email" id="meetingemail" placeholder="Enter email address" class="inputfield">
-                                    </div>
-                                    <p class="error-message">This field is required</p>
-                                </div>
-                                
-                                <div class="inputbox">
-                                    <div class="infobox">
-                                        <label for="meetingcompany" class="infolabel">Your Company Name</label>
-                                        <input type="text" id="meetingcompany" placeholder="Enter company name" class="inputfield">
-                                    </div>
-                                    <p class="error-message">This field is required</p>
-                                </div>
-                            </div>
-
-                            <div class="submitrow">
-                                <button type="button" class="btn-submit">Request a Meeting</button>
-                            </div>
-                        </form>
-                        <!-- MEETING FORM END -->
-                    </div>
-                    <!-- MEETING CONTENT END -->
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- SECTION MEETING END -->
-
     <!-- FOOTER SECTION START -->
     <footer class="footer">
         <div class="container">
@@ -1245,28 +771,12 @@
         </div>
     </footer>
     <!-- FOOTER SECTION END -->
-
+    
     <!-- BOOTSTRAP JS -->
     <script src="assets/js/bootstrap.bundle.min.js"></script>
     <!-- PRELOADER JS -->
     <script src="assets/js/pageloader.js"></script>
     <!-- TOOLTIP JS -->
     <script src="assets/js/mindlytooltip.js"></script>
-    <!-- JQUERY -->
-    <script src="assets/js/jquery-3.5.1.min.js"></script>
-    <!-- OWL-CAROUSEL JS -->
-    <script src="assets/js/owl.carousel.min.js"></script>
-    <!-- SLIDERS JS -->
-    <script src="assets/js/sliders.js"></script>
-    <!-- GSAP JS -->
-    <script src="assets/js/gsap.min.js"></script>
-    <!-- ANIMATIONS JS -->
-    <script src="assets/js/animations/enterprise.js"></script>
-    <!-- PARALLAX JS -->
-    <script src="assets/js/parallax.js"></script>
-    <!-- SWIPER JS -->
-    <script src="assets/js/swiper-bundle.min.js"></script>
-    <!-- MINDLY-CAROUSEL JS -->
-    <script src="assets/js/mindlycarousel.js"></script>
 </body>
 </html>
