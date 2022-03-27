@@ -1113,7 +1113,7 @@
                             </div>
 
                             <div class="confirmbox">
-                                <button class="btn-confirm" type="button">Confirm &amp; Pay</button>
+                                <button class="btn-confirm" id="confirm-button" type="button">Confirm &amp; Pay</button>
                             </div>
                         </div>
                     </div>
@@ -1123,6 +1123,72 @@
         </div>
     </div>
     <!-- APPOINTMENT MODAL END -->
+
+    <!-- SUCCESS MODAL START -->
+    <div class="modal fade appointmentModal" id="successModal" tabindex="-1" aria-labelledby="successModal" aria-hidden="true">
+        <div class="modal-dialog modal-xl modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
+                        <svg width="38" height="38" viewBox="0 0 38 38" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M19.0004 16.7891L26.7348 9.05469L28.9441 11.2641L21.2098 18.9984L28.9441 26.7328L26.7348 28.9422L19.0004 21.2078L11.266 28.9422L9.05664 26.7328L16.791 18.9984L9.05664 11.2641L11.266 9.05469L19.0004 16.7891Z" fill="#718096"/>
+                        </svg>
+                    </button>
+                </div>
+
+                <div class="modal-body">
+                    <!-- APPOINTMENT-SUCCESS START -->
+                    <div class="appointmentsuccess">
+                        <div class="icon">
+                            <svg width="140" height="140" viewBox="0 0 140 140" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <g filter="url(#successappointment-1)">
+                                    <path d="M140 33.079V106.873C140.004 111.222 139.151 115.529 137.49 119.548C135.829 123.567 133.392 127.219 130.318 130.295C127.244 133.372 123.595 135.813 119.577 137.478C115.56 139.143 111.254 140 106.905 140H33.111C24.3335 139.996 15.9165 136.508 9.70837 130.303C3.50023 124.098 0.00851576 115.683 1.5565e-05 106.905V33.111C-0.00420225 28.763 0.848829 24.4568 2.51032 20.4387C4.17181 16.4206 6.60915 12.7695 9.68293 9.69427C12.7567 6.61899 16.4066 4.17988 20.4239 2.51645C24.4412 0.853012 28.747 -0.0021068 33.095 3.89786e-06H106.889C111.235 -0.0021033 115.539 0.851837 119.555 2.51307C123.571 4.1743 127.221 6.61029 130.295 9.68196C133.37 12.7536 135.81 16.4008 137.475 20.4153C139.14 24.4297 139.998 28.7329 140 33.079Z" fill="#01796F"/>
+                                </g>
+                                <g style="mix-blend-mode:soft-light" opacity="0.4">
+                                    <path d="M70.3317 54.5723L66.5137 74.641L70.3317 77.689V54.5723Z" fill="black"/>
+                                </g>
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M30.625 78.75C30.625 126.875 109.375 126.875 109.375 78.75C82.8049 88.449 56.5549 88.7385 30.625 78.75Z" fill="white"/>
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M38.2812 100.625C53.9758 117.905 85.6945 118.128 101.719 101.261C80.7727 105.466 59.1322 105.249 38.2812 100.625Z" fill="#DDDBDB"/>
+                                <path d="M70.0399 115.93C60.0158 116.112 50.2313 112.848 42.31 106.681C33.9878 99.9325 29.5312 90.2825 29.5312 78.8211C29.5331 78.6354 29.5789 78.4527 29.665 78.2882C29.7511 78.1238 29.875 77.9822 30.0264 77.8754C30.18 77.7729 30.3553 77.708 30.5384 77.6857C30.7214 77.6635 30.9072 77.6845 31.0807 77.7471C56.143 87.3651 82.3235 87.3651 108.871 77.7471C109.047 77.6727 109.238 77.6433 109.428 77.6615C109.618 77.6797 109.8 77.7451 109.959 77.8516C110.117 77.9581 110.247 78.1025 110.336 78.2717C110.425 78.441 110.47 78.6298 110.469 78.8211C110.469 90.2825 106.076 99.9325 97.6899 106.681C89.7877 112.826 80.0359 116.089 70.0399 115.93ZM31.9113 80.4882C32.8058 103.251 52.0858 113.654 70.0399 113.654C87.9941 113.654 107.354 103.251 108.169 80.4562C82.1638 89.5451 56.5264 89.5611 31.9113 80.4882Z" fill="black"/>
+                                <g style="mix-blend-mode:soft-light" opacity="0.4">
+                                    <path d="M53.5938 117.031C58.518 122.676 80.972 123.05 86.4062 117.031C75.5985 119.463 64.4015 119.463 53.5938 117.031Z" fill="black"/>
+                                </g>
+                                <path d="M106.578 69.9118H99.3586C88.7227 69.9118 88.7227 69.992 88.7227 59.2758V55.6663C88.7269 51.8895 90.2291 48.2686 92.8997 45.598C95.5704 42.9274 99.1913 41.4251 102.968 41.4209C106.745 41.4251 110.366 42.9274 113.036 45.598C115.707 48.2686 117.209 51.8895 117.214 55.6663V59.356C117.181 69.992 117.181 69.9118 106.578 69.9118Z" fill="black"/>
+                                <path d="M98.1854 51.9704C99.5649 51.9704 100.683 50.852 100.683 49.4725C100.683 48.093 99.5649 46.9746 98.1854 46.9746C96.8058 46.9746 95.6875 48.093 95.6875 49.4725C95.6875 50.852 96.8058 51.9704 98.1854 51.9704Z" fill="white"/>
+                                <path opacity="0.1" d="M102.812 61.5935C106.022 61.5935 108.625 58.9912 108.625 55.7811C108.625 52.571 106.022 49.9688 102.812 49.9688C99.6023 49.9688 97 52.571 97 55.7811C97 58.9912 99.6023 61.5935 102.812 61.5935Z" fill="white"/>
+                                <path d="M39.8588 69.9118H32.6399C22.0039 69.9118 22.0039 69.992 22.0039 59.2758V55.6663C22.0082 51.8895 23.5104 48.2686 26.181 45.598C28.8516 42.9274 32.4725 41.4251 36.2494 41.4209C40.0262 41.4251 43.6471 42.9274 46.3177 45.598C48.9883 48.2686 50.4906 51.8895 50.4948 55.6663V59.356C50.4627 69.992 50.4627 69.9118 39.8588 69.9118Z" fill="black"/>
+                                <path d="M31.5807 51.9895C32.9628 51.9895 34.0833 50.8691 34.0833 49.487C34.0833 48.1048 32.9628 46.9844 31.5807 46.9844C30.1986 46.9844 29.0781 48.1048 29.0781 49.487C29.0781 50.8691 30.1986 51.9895 31.5807 51.9895Z" fill="white"/>
+                                <path opacity="0.1" d="M36.2159 61.631C39.432 61.631 42.0392 59.0238 42.0392 55.8077C42.0392 52.5916 39.432 49.9844 36.2159 49.9844C32.9998 49.9844 30.3926 52.5916 30.3926 55.8077C30.3926 59.0238 32.9998 61.631 36.2159 61.631Z" fill="white"/>
+                                <defs>
+                                    <filter id="successappointment-1" x="0" y="0" width="140" height="140" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                                        <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+                                        <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+                                        <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+                                        <feOffset dx="-6" dy="-6"/>
+                                        <feComposite in2="hardAlpha" operator="arithmetic" k2="-1" k3="1"/>
+                                        <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.04 0"/>
+                                        <feBlend mode="normal" in2="shape" result="effect1_innerShadow_6171_79183"/>
+                                    </filter>
+                                </defs>
+                            </svg>
+                        </div>
+
+                        <div class="appointmentsuccess-details">
+                            <h1 class="successtitle">Payment Successful!</h1>
+                            <div class="textinfo">
+                                <p class="successtext">
+                                    <span class="link">Session link and intake form</span> has been sent to <span class="mail">nabilemon.qtec@gmail.com.</span>
+                                    Please fillup the form before the session!
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- APPOINTMENT-SUCCESS END -->
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- SUCCESS MODAL END -->
     
     <!-- BOOTSTRAP JS -->
     <script src="assets/js/bootstrap.bundle.min.js"></script>
@@ -1130,6 +1196,8 @@
     <script src="assets/js/pageloader.js"></script>
     <!-- TOOLTIP JS -->
     <script src="assets/js/mindlytooltip.js"></script>
+    <!-- TOOLTIP JS -->
+    <script src="assets/js/modal.js"></script>
     <!-- SWIPER JS -->
     <script src="assets/js/swiper-bundle.min.js"></script>
     <!-- JQUERY -->
@@ -1137,7 +1205,5 @@
     <!-- SLICK JS -->
     <script src="assets/js/slick.js"></script>
     <!-- PROVIDER JS -->
-    <script src="assets/js/provide.js"></script>
-    <script src="assets/js/provider.js"></script>
 </body>
 </html>

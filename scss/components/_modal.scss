@@ -113,6 +113,14 @@
             box-shadow: $modalBtnShadow;
             top: 0;
             right: length(-76);
+            z-index: 810;
+
+            @include breakpoint(phone768) {
+                @include square(length(40));
+                padding: length(8);
+                right: length(20);
+                top: length(20);
+            }
 
             svg {
                 @include transitiontransform;
@@ -254,7 +262,7 @@
 
         .appointmentdescript {
             @include wh100;
-            padding: length(32) length(0) length(56);
+            padding: length(32) length(20) length(56);
 
             &-header {
                 @include flex-center;
@@ -279,6 +287,16 @@
                 .datepackage {
                     padding: length(0) length(48) length(0);
                     @include flex-between;
+
+                    @include breakpoint(desktop1199) {
+                        padding: length(0);
+                    }
+
+                    @include breakpoint(tablet991) {
+                        flex-direction: column;
+                        align-items: flex-start;
+                        gap: length(24);
+                    }
                 }
 
                 .providermenber {
@@ -286,6 +304,10 @@
                     .provider,
                     .member {
                         width: 50%;
+
+                        @include breakpoint(tablet991) {
+                            @include w100;
+                        }
                     }
 
                     .provider {
@@ -296,15 +318,37 @@
                             @include flex-center-vert;
                             gap: length(80);
 
+                            @include breakpoint(desktop1199) {
+                                gap: length(40);
+                            }
+
                             .title {
                                 @include font-26-16-semibold;
                                 color: $gray-600;
                                 width: length(115);
+
+                                @include breakpoint(phone575) {
+                                    @include font-24-14-semibold;
+                                    width: length(110);
+                                }
+
+                                @include breakpoint(phone500) {
+                                    @include font-20-12-semibold;
+                                    width: length(88);
+                                }
                             }
 
                             .name {
                                 @include font-26-16-semibold;
                                 color: $gray-800;
+
+                                @include breakpoint(phone575) {
+                                    @include font-24-14-semibold;
+                                }
+
+                                @include breakpoint(phone500) {
+                                    @include font-20-12-semibold;
+                                }
                             }
                         }
 
@@ -312,15 +356,37 @@
                             @include flex-center-vert;
                             gap: length(80);
 
+                            @include breakpoint(desktop1199) {
+                                gap: length(40);
+                            }
+
                             .title {
                                 width: length(115);
                                 @include font-26-16-semibold;
                                 color: $gray-600;
+
+                                @include breakpoint(phone575) {
+                                    @include font-24-14-semibold;
+                                    width: length(110);
+                                }
+
+                                @include breakpoint(phone500) {
+                                    @include font-20-12-semibold;
+                                    width: length(88);
+                                }
                             }
 
                             .id {
                                 @include font-26-16-semibold;
                                 color: $gray-800;
+
+                                @include breakpoint(phone575) {
+                                    @include font-24-14-semibold;
+                                }
+
+                                @include breakpoint(phone500) {
+                                    @include font-20-12-semibold;
+                                }
                             }
                         }
                     }
@@ -333,6 +399,10 @@
                         .memberid {
                             @include flex-center-vert;
                             gap: length(80);
+
+                            @include breakpoint(desktop1199) {
+                                gap: length(40);
+                            }
                         }
 
                         .membername {
@@ -340,11 +410,29 @@
                                 @include font-26-16-semibold;
                                 color: $gray-600;
                                 width: length(115);
+
+                                @include breakpoint(phone575) {
+                                    @include font-24-14-semibold;
+                                    width: length(110);
+                                }
+
+                                @include breakpoint(phone500) {
+                                    @include font-20-12-semibold;
+                                    width: length(88);
+                                }
                             }
 
                             .name {
                                 @include font-26-16-semibold;
                                 color: $gray-800;
+
+                                @include breakpoint(phone575) {
+                                    @include font-24-14-semibold;
+                                }
+
+                                @include breakpoint(phone500) {
+                                    @include font-20-12-semibold;
+                                }
                             }
                         }
 
@@ -353,11 +441,29 @@
                                 width: length(115);
                                 @include font-26-16-semibold;
                                 color: $gray-600;
+
+                                @include breakpoint(phone575) {
+                                    @include font-24-14-semibold;
+                                    width: length(110);
+                                }
+
+                                @include breakpoint(phone500) {
+                                    @include font-20-12-semibold;
+                                    width: length(88);
+                                }
                             }
 
                             .id {
                                 @include font-26-16-semibold;
                                 color: $gray-800;
+
+                                @include breakpoint(phone575) {
+                                    @include font-24-14-semibold;
+                                }
+
+                                @include breakpoint(phone500) {
+                                    @include font-20-12-semibold;
+                                }
                             }
                         }
                     }
@@ -368,6 +474,10 @@
                     .datetime,
                     .packagefee {
                         width: 50%;
+
+                        @include breakpoint(tablet991) {
+                            @include w100;
+                        }
                     }
 
                     .datetime {
@@ -378,6 +488,10 @@
                         .time {
                             @include flex-center-vert;
                             gap: length(80);
+
+                            @include breakpoint(desktop1199) {
+                                gap: length(40);
+                            }
                         }
 
                         .date {
@@ -386,11 +500,29 @@
                                 @include font-26-16-semibold;
                                 color: $gray-600;
                                 width: length(115);
+
+                                @include breakpoint(phone575) {
+                                    @include font-24-14-semibold;
+                                    width: length(110);
+                                }
+
+                                @include breakpoint(phone500) {
+                                    @include font-20-12-semibold;
+                                    width: length(88);
+                                }
                             }
 
                             .text {
                                 @include font-26-16-semibold;
                                 color: $gray-800;
+
+                                @include breakpoint(phone575) {
+                                    @include font-24-14-semibold;
+                                }
+
+                                @include breakpoint(phone500) {
+                                    @include font-20-12-semibold;
+                                }
                             }
                         }
 
@@ -399,11 +531,29 @@
                                 @include font-26-16-semibold;
                                 color: $gray-600;
                                 width: length(115);
+
+                                @include breakpoint(phone575) {
+                                    @include font-24-14-semibold;
+                                    width: length(110);
+                                }
+
+                                @include breakpoint(phone500) {
+                                    @include font-20-12-semibold;
+                                    width: length(88);
+                                }
                             }
 
                             .text {
                                 @include font-26-16-semibold;
                                 color: $gray-800;
+
+                                @include breakpoint(phone575) {
+                                    @include font-24-14-semibold;
+                                }
+
+                                @include breakpoint(phone500) {
+                                    @include font-20-12-semibold;
+                                }
                             }
                         }
                     }
@@ -416,6 +566,10 @@
                         .fees {
                             @include flex-center-vert;
                             gap: length(80);
+
+                            @include breakpoint(desktop1199) {
+                                gap: length(40);
+                            }
                         }
 
                         .pack {
@@ -423,11 +577,29 @@
                                 @include font-26-16-semibold;
                                 color: $gray-600;
                                 width: length(115);
+
+                                @include breakpoint(phone575) {
+                                    @include font-24-14-semibold;
+                                    width: length(110);
+                                }
+
+                                @include breakpoint(phone500) {
+                                    @include font-20-12-semibold;
+                                    width: length(88);
+                                }
                             }
 
                             .text {
                                 @include font-26-16-semibold;
                                 color: $gray-800;
+
+                                @include breakpoint(phone575) {
+                                    @include font-24-14-semibold;
+                                }
+
+                                @include breakpoint(phone500) {
+                                    @include font-20-12-semibold;
+                                }
                             }
                         }
 
@@ -436,11 +608,29 @@
                                 @include font-26-16-semibold;
                                 color: $gray-600;
                                 width: length(115);
+
+                                @include breakpoint(phone575) {
+                                    @include font-24-14-semibold;
+                                    width: length(110);
+                                }
+
+                                @include breakpoint(phone500) {
+                                    @include font-20-12-semibold;
+                                    width: length(88);
+                                }
                             }
 
                             .text {
                                 @include font-26-16-semibold;
                                 color: $gray-800;
+
+                                @include breakpoint(phone575) {
+                                    @include font-24-14-semibold;
+                                }
+
+                                @include breakpoint(phone500) {
+                                    @include font-20-12-semibold;
+                                }
                             }
                         }
                     }
@@ -460,6 +650,10 @@
                 gap: length(38);
                 text-align: center;
 
+                @include breakpoint(phone575) {
+                    padding: length(0);
+                }
+
                 .textinfo {
                     max-width: length(456);
 
@@ -469,6 +663,10 @@
 
                         span {
                             color: $gray-800;
+                        }
+
+                        @include breakpoint(phone575) {
+                            @include font-24-14-semibold;
                         }
                     }
                 }
@@ -486,6 +684,75 @@
 
                         @include hover {
                             @include setBgColor(darken($tertiary, 15%), $white);
+                        }
+                    }
+                }
+            }
+        }
+
+        .appointmentsuccess {
+            padding: length(56) length(20) length(90);
+            @include flex-center-column;
+            gap: length(40);
+
+            .icon {
+                @include square(length(140));
+                @include flex-center;
+                overflow: hidden;
+
+                @include breakpoint(phone575) {
+                    @include square(length(80));
+                }
+
+                svg {
+                    @include wh100;
+                }
+            }
+
+            &-details {
+                @include flex-center-column;
+                gap: length(16);
+                text-align: center;
+
+                .successtitle {
+                    color: $gray-700;
+
+                    @include breakpoint(phone768) {
+                        @include heading-2;
+                    }
+
+                    @include breakpoint(phone575) {
+                        @include heading-3;
+                    }
+                }
+
+                .textinfo {
+                    max-width: length(545);
+
+                    .successtext {
+                        @include font-26-16-semibold;
+                        color: $gray-600;
+
+                        @include breakpoint(phone575) {
+                            @include font-24-14-semibold;
+                        }
+
+                        .mail {
+                            @include font-26-16-semibold;
+                            color: $gray-800;
+
+                            @include breakpoint(phone575) {
+                                @include font-24-14-semibold;
+                            }
+                        }
+
+                        .link {
+                            @include font-26-16-semibold;
+                            color: $tertiary;
+
+                            @include breakpoint(phone575) {
+                                @include font-24-14-semibold;
+                            }
                         }
                     }
                 }

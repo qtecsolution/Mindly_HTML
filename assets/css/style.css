@@ -5885,6 +5885,17 @@ h6 {
           box-shadow: 0 0 1 rgba(12, 26, 75, 0.1), 0 1 1 rgba(20, 37, 63, 0.06);
   top: 0;
   right: -4.75rem;
+  z-index: 810;
+}
+
+@media screen and (max-width: 48rem) {
+  .appointmentModal .modal-header .btn-close {
+    height: 2.5rem;
+    width: 2.5rem;
+    padding: 0.5rem;
+    right: 1.25rem;
+    top: 1.25rem;
+  }
 }
 
 .appointmentModal .modal-header .btn-close svg {
@@ -6147,7 +6158,7 @@ h6 {
 .appointmentModal .modal-body .appointmentdescript {
   width: 100%;
   height: 100%;
-  padding: 2rem 0rem 3.5rem;
+  padding: 2rem 1.25rem 3.5rem;
 }
 
 .appointmentModal .modal-body .appointmentdescript-header {
@@ -6202,9 +6213,37 @@ h6 {
           justify-content: space-between;
 }
 
+@media screen and (max-width: 74.9375rem) {
+  .appointmentModal .modal-body .appointmentdescript-body .providermenber,
+  .appointmentModal .modal-body .appointmentdescript-body .datepackage {
+    padding: 0rem;
+  }
+}
+
+@media screen and (max-width: 61.9375rem) {
+  .appointmentModal .modal-body .appointmentdescript-body .providermenber,
+  .appointmentModal .modal-body .appointmentdescript-body .datepackage {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    gap: 1.5rem;
+  }
+}
+
 .appointmentModal .modal-body .appointmentdescript-body .providermenber .provider,
 .appointmentModal .modal-body .appointmentdescript-body .providermenber .member {
   width: 50%;
+}
+
+@media screen and (max-width: 61.9375rem) {
+  .appointmentModal .modal-body .appointmentdescript-body .providermenber .provider,
+  .appointmentModal .modal-body .appointmentdescript-body .providermenber .member {
+    width: 100%;
+  }
 }
 
 .appointmentModal .modal-body .appointmentdescript-body .providermenber .provider {
@@ -6228,6 +6267,12 @@ h6 {
   gap: 5rem;
 }
 
+@media screen and (max-width: 74.9375rem) {
+  .appointmentModal .modal-body .appointmentdescript-body .providermenber .provider .providername {
+    gap: 2.5rem;
+  }
+}
+
 .appointmentModal .modal-body .appointmentdescript-body .providermenber .provider .providername .title {
   font-family: "Gilroy";
   font-style: normal;
@@ -6238,6 +6283,28 @@ h6 {
   width: 7.1875rem;
 }
 
+@media screen and (max-width: 35.9375rem) {
+  .appointmentModal .modal-body .appointmentdescript-body .providermenber .provider .providername .title {
+    font-family: "Gilroy";
+    font-style: normal;
+    font-size: 0.875rem;
+    font-weight: 600;
+    line-height: 1.71429;
+    width: 6.875rem;
+  }
+}
+
+@media screen and (max-width: 31.25rem) {
+  .appointmentModal .modal-body .appointmentdescript-body .providermenber .provider .providername .title {
+    font-family: "Gilroy";
+    font-style: normal;
+    font-size: 0.75rem;
+    font-weight: 600;
+    line-height: 1.66667;
+    width: 5.5rem;
+  }
+}
+
 .appointmentModal .modal-body .appointmentdescript-body .providermenber .provider .providername .name {
   font-family: "Gilroy";
   font-style: normal;
@@ -6245,6 +6312,26 @@ h6 {
   font-weight: 600;
   line-height: 1.625;
   color: #2D3748;
+}
+
+@media screen and (max-width: 35.9375rem) {
+  .appointmentModal .modal-body .appointmentdescript-body .providermenber .provider .providername .name {
+    font-family: "Gilroy";
+    font-style: normal;
+    font-size: 0.875rem;
+    font-weight: 600;
+    line-height: 1.71429;
+  }
+}
+
+@media screen and (max-width: 31.25rem) {
+  .appointmentModal .modal-body .appointmentdescript-body .providermenber .provider .providername .name {
+    font-family: "Gilroy";
+    font-style: normal;
+    font-size: 0.75rem;
+    font-weight: 600;
+    line-height: 1.66667;
+  }
 }
 
 .appointmentModal .modal-body .appointmentdescript-body .providermenber .provider .providerid {
@@ -6257,6 +6344,12 @@ h6 {
   gap: 5rem;
 }
 
+@media screen and (max-width: 74.9375rem) {
+  .appointmentModal .modal-body .appointmentdescript-body .providermenber .provider .providerid {
+    gap: 2.5rem;
+  }
+}
+
 .appointmentModal .modal-body .appointmentdescript-body .providermenber .provider .providerid .title {
   width: 7.1875rem;
   font-family: "Gilroy";
@@ -6267,6 +6360,28 @@ h6 {
   color: #718096;
 }
 
+@media screen and (max-width: 35.9375rem) {
+  .appointmentModal .modal-body .appointmentdescript-body .providermenber .provider .providerid .title {
+    font-family: "Gilroy";
+    font-style: normal;
+    font-size: 0.875rem;
+    font-weight: 600;
+    line-height: 1.71429;
+    width: 6.875rem;
+  }
+}
+
+@media screen and (max-width: 31.25rem) {
+  .appointmentModal .modal-body .appointmentdescript-body .providermenber .provider .providerid .title {
+    font-family: "Gilroy";
+    font-style: normal;
+    font-size: 0.75rem;
+    font-weight: 600;
+    line-height: 1.66667;
+    width: 5.5rem;
+  }
+}
+
 .appointmentModal .modal-body .appointmentdescript-body .providermenber .provider .providerid .id {
   font-family: "Gilroy";
   font-style: normal;
@@ -6274,6 +6389,26 @@ h6 {
   font-weight: 600;
   line-height: 1.625;
   color: #2D3748;
+}
+
+@media screen and (max-width: 35.9375rem) {
+  .appointmentModal .modal-body .appointmentdescript-body .providermenber .provider .providerid .id {
+    font-family: "Gilroy";
+    font-style: normal;
+    font-size: 0.875rem;
+    font-weight: 600;
+    line-height: 1.71429;
+  }
+}
+
+@media screen and (max-width: 31.25rem) {
+  .appointmentModal .modal-body .appointmentdescript-body .providermenber .provider .providerid .id {
+    font-family: "Gilroy";
+    font-style: normal;
+    font-size: 0.75rem;
+    font-weight: 600;
+    line-height: 1.66667;
+  }
 }
 
 .appointmentModal .modal-body .appointmentdescript-body .providermenber .member {
@@ -6298,6 +6433,13 @@ h6 {
   gap: 5rem;
 }
 
+@media screen and (max-width: 74.9375rem) {
+  .appointmentModal .modal-body .appointmentdescript-body .providermenber .member .membername,
+  .appointmentModal .modal-body .appointmentdescript-body .providermenber .member .memberid {
+    gap: 2.5rem;
+  }
+}
+
 .appointmentModal .modal-body .appointmentdescript-body .providermenber .member .membername .title {
   font-family: "Gilroy";
   font-style: normal;
@@ -6308,6 +6450,28 @@ h6 {
   width: 7.1875rem;
 }
 
+@media screen and (max-width: 35.9375rem) {
+  .appointmentModal .modal-body .appointmentdescript-body .providermenber .member .membername .title {
+    font-family: "Gilroy";
+    font-style: normal;
+    font-size: 0.875rem;
+    font-weight: 600;
+    line-height: 1.71429;
+    width: 6.875rem;
+  }
+}
+
+@media screen and (max-width: 31.25rem) {
+  .appointmentModal .modal-body .appointmentdescript-body .providermenber .member .membername .title {
+    font-family: "Gilroy";
+    font-style: normal;
+    font-size: 0.75rem;
+    font-weight: 600;
+    line-height: 1.66667;
+    width: 5.5rem;
+  }
+}
+
 .appointmentModal .modal-body .appointmentdescript-body .providermenber .member .membername .name {
   font-family: "Gilroy";
   font-style: normal;
@@ -6315,6 +6479,26 @@ h6 {
   font-weight: 600;
   line-height: 1.625;
   color: #2D3748;
+}
+
+@media screen and (max-width: 35.9375rem) {
+  .appointmentModal .modal-body .appointmentdescript-body .providermenber .member .membername .name {
+    font-family: "Gilroy";
+    font-style: normal;
+    font-size: 0.875rem;
+    font-weight: 600;
+    line-height: 1.71429;
+  }
+}
+
+@media screen and (max-width: 31.25rem) {
+  .appointmentModal .modal-body .appointmentdescript-body .providermenber .member .membername .name {
+    font-family: "Gilroy";
+    font-style: normal;
+    font-size: 0.75rem;
+    font-weight: 600;
+    line-height: 1.66667;
+  }
 }
 
 .appointmentModal .modal-body .appointmentdescript-body .providermenber .member .memberid .title {
@@ -6327,6 +6511,28 @@ h6 {
   color: #718096;
 }
 
+@media screen and (max-width: 35.9375rem) {
+  .appointmentModal .modal-body .appointmentdescript-body .providermenber .member .memberid .title {
+    font-family: "Gilroy";
+    font-style: normal;
+    font-size: 0.875rem;
+    font-weight: 600;
+    line-height: 1.71429;
+    width: 6.875rem;
+  }
+}
+
+@media screen and (max-width: 31.25rem) {
+  .appointmentModal .modal-body .appointmentdescript-body .providermenber .member .memberid .title {
+    font-family: "Gilroy";
+    font-style: normal;
+    font-size: 0.75rem;
+    font-weight: 600;
+    line-height: 1.66667;
+    width: 5.5rem;
+  }
+}
+
 .appointmentModal .modal-body .appointmentdescript-body .providermenber .member .memberid .id {
   font-family: "Gilroy";
   font-style: normal;
@@ -6336,9 +6542,36 @@ h6 {
   color: #2D3748;
 }
 
+@media screen and (max-width: 35.9375rem) {
+  .appointmentModal .modal-body .appointmentdescript-body .providermenber .member .memberid .id {
+    font-family: "Gilroy";
+    font-style: normal;
+    font-size: 0.875rem;
+    font-weight: 600;
+    line-height: 1.71429;
+  }
+}
+
+@media screen and (max-width: 31.25rem) {
+  .appointmentModal .modal-body .appointmentdescript-body .providermenber .member .memberid .id {
+    font-family: "Gilroy";
+    font-style: normal;
+    font-size: 0.75rem;
+    font-weight: 600;
+    line-height: 1.66667;
+  }
+}
+
 .appointmentModal .modal-body .appointmentdescript-body .datepackage .datetime,
 .appointmentModal .modal-body .appointmentdescript-body .datepackage .packagefee {
   width: 50%;
+}
+
+@media screen and (max-width: 61.9375rem) {
+  .appointmentModal .modal-body .appointmentdescript-body .datepackage .datetime,
+  .appointmentModal .modal-body .appointmentdescript-body .datepackage .packagefee {
+    width: 100%;
+  }
 }
 
 .appointmentModal .modal-body .appointmentdescript-body .datepackage .datetime {
@@ -6363,6 +6596,13 @@ h6 {
   gap: 5rem;
 }
 
+@media screen and (max-width: 74.9375rem) {
+  .appointmentModal .modal-body .appointmentdescript-body .datepackage .datetime .date,
+  .appointmentModal .modal-body .appointmentdescript-body .datepackage .datetime .time {
+    gap: 2.5rem;
+  }
+}
+
 .appointmentModal .modal-body .appointmentdescript-body .datepackage .datetime .date .title {
   font-family: "Gilroy";
   font-style: normal;
@@ -6373,6 +6613,28 @@ h6 {
   width: 7.1875rem;
 }
 
+@media screen and (max-width: 35.9375rem) {
+  .appointmentModal .modal-body .appointmentdescript-body .datepackage .datetime .date .title {
+    font-family: "Gilroy";
+    font-style: normal;
+    font-size: 0.875rem;
+    font-weight: 600;
+    line-height: 1.71429;
+    width: 6.875rem;
+  }
+}
+
+@media screen and (max-width: 31.25rem) {
+  .appointmentModal .modal-body .appointmentdescript-body .datepackage .datetime .date .title {
+    font-family: "Gilroy";
+    font-style: normal;
+    font-size: 0.75rem;
+    font-weight: 600;
+    line-height: 1.66667;
+    width: 5.5rem;
+  }
+}
+
 .appointmentModal .modal-body .appointmentdescript-body .datepackage .datetime .date .text {
   font-family: "Gilroy";
   font-style: normal;
@@ -6380,6 +6642,26 @@ h6 {
   font-weight: 600;
   line-height: 1.625;
   color: #2D3748;
+}
+
+@media screen and (max-width: 35.9375rem) {
+  .appointmentModal .modal-body .appointmentdescript-body .datepackage .datetime .date .text {
+    font-family: "Gilroy";
+    font-style: normal;
+    font-size: 0.875rem;
+    font-weight: 600;
+    line-height: 1.71429;
+  }
+}
+
+@media screen and (max-width: 31.25rem) {
+  .appointmentModal .modal-body .appointmentdescript-body .datepackage .datetime .date .text {
+    font-family: "Gilroy";
+    font-style: normal;
+    font-size: 0.75rem;
+    font-weight: 600;
+    line-height: 1.66667;
+  }
 }
 
 .appointmentModal .modal-body .appointmentdescript-body .datepackage .datetime .time .title {
@@ -6392,6 +6674,28 @@ h6 {
   width: 7.1875rem;
 }
 
+@media screen and (max-width: 35.9375rem) {
+  .appointmentModal .modal-body .appointmentdescript-body .datepackage .datetime .time .title {
+    font-family: "Gilroy";
+    font-style: normal;
+    font-size: 0.875rem;
+    font-weight: 600;
+    line-height: 1.71429;
+    width: 6.875rem;
+  }
+}
+
+@media screen and (max-width: 31.25rem) {
+  .appointmentModal .modal-body .appointmentdescript-body .datepackage .datetime .time .title {
+    font-family: "Gilroy";
+    font-style: normal;
+    font-size: 0.75rem;
+    font-weight: 600;
+    line-height: 1.66667;
+    width: 5.5rem;
+  }
+}
+
 .appointmentModal .modal-body .appointmentdescript-body .datepackage .datetime .time .text {
   font-family: "Gilroy";
   font-style: normal;
@@ -6399,6 +6703,26 @@ h6 {
   font-weight: 600;
   line-height: 1.625;
   color: #2D3748;
+}
+
+@media screen and (max-width: 35.9375rem) {
+  .appointmentModal .modal-body .appointmentdescript-body .datepackage .datetime .time .text {
+    font-family: "Gilroy";
+    font-style: normal;
+    font-size: 0.875rem;
+    font-weight: 600;
+    line-height: 1.71429;
+  }
+}
+
+@media screen and (max-width: 31.25rem) {
+  .appointmentModal .modal-body .appointmentdescript-body .datepackage .datetime .time .text {
+    font-family: "Gilroy";
+    font-style: normal;
+    font-size: 0.75rem;
+    font-weight: 600;
+    line-height: 1.66667;
+  }
 }
 
 .appointmentModal .modal-body .appointmentdescript-body .datepackage .packagefee {
@@ -6423,6 +6747,13 @@ h6 {
   gap: 5rem;
 }
 
+@media screen and (max-width: 74.9375rem) {
+  .appointmentModal .modal-body .appointmentdescript-body .datepackage .packagefee .pack,
+  .appointmentModal .modal-body .appointmentdescript-body .datepackage .packagefee .fees {
+    gap: 2.5rem;
+  }
+}
+
 .appointmentModal .modal-body .appointmentdescript-body .datepackage .packagefee .pack .title {
   font-family: "Gilroy";
   font-style: normal;
@@ -6433,6 +6764,28 @@ h6 {
   width: 7.1875rem;
 }
 
+@media screen and (max-width: 35.9375rem) {
+  .appointmentModal .modal-body .appointmentdescript-body .datepackage .packagefee .pack .title {
+    font-family: "Gilroy";
+    font-style: normal;
+    font-size: 0.875rem;
+    font-weight: 600;
+    line-height: 1.71429;
+    width: 6.875rem;
+  }
+}
+
+@media screen and (max-width: 31.25rem) {
+  .appointmentModal .modal-body .appointmentdescript-body .datepackage .packagefee .pack .title {
+    font-family: "Gilroy";
+    font-style: normal;
+    font-size: 0.75rem;
+    font-weight: 600;
+    line-height: 1.66667;
+    width: 5.5rem;
+  }
+}
+
 .appointmentModal .modal-body .appointmentdescript-body .datepackage .packagefee .pack .text {
   font-family: "Gilroy";
   font-style: normal;
@@ -6440,6 +6793,26 @@ h6 {
   font-weight: 600;
   line-height: 1.625;
   color: #2D3748;
+}
+
+@media screen and (max-width: 35.9375rem) {
+  .appointmentModal .modal-body .appointmentdescript-body .datepackage .packagefee .pack .text {
+    font-family: "Gilroy";
+    font-style: normal;
+    font-size: 0.875rem;
+    font-weight: 600;
+    line-height: 1.71429;
+  }
+}
+
+@media screen and (max-width: 31.25rem) {
+  .appointmentModal .modal-body .appointmentdescript-body .datepackage .packagefee .pack .text {
+    font-family: "Gilroy";
+    font-style: normal;
+    font-size: 0.75rem;
+    font-weight: 600;
+    line-height: 1.66667;
+  }
 }
 
 .appointmentModal .modal-body .appointmentdescript-body .datepackage .packagefee .fees .title {
@@ -6452,6 +6825,28 @@ h6 {
   width: 7.1875rem;
 }
 
+@media screen and (max-width: 35.9375rem) {
+  .appointmentModal .modal-body .appointmentdescript-body .datepackage .packagefee .fees .title {
+    font-family: "Gilroy";
+    font-style: normal;
+    font-size: 0.875rem;
+    font-weight: 600;
+    line-height: 1.71429;
+    width: 6.875rem;
+  }
+}
+
+@media screen and (max-width: 31.25rem) {
+  .appointmentModal .modal-body .appointmentdescript-body .datepackage .packagefee .fees .title {
+    font-family: "Gilroy";
+    font-style: normal;
+    font-size: 0.75rem;
+    font-weight: 600;
+    line-height: 1.66667;
+    width: 5.5rem;
+  }
+}
+
 .appointmentModal .modal-body .appointmentdescript-body .datepackage .packagefee .fees .text {
   font-family: "Gilroy";
   font-style: normal;
@@ -6459,6 +6854,26 @@ h6 {
   font-weight: 600;
   line-height: 1.625;
   color: #2D3748;
+}
+
+@media screen and (max-width: 35.9375rem) {
+  .appointmentModal .modal-body .appointmentdescript-body .datepackage .packagefee .fees .text {
+    font-family: "Gilroy";
+    font-style: normal;
+    font-size: 0.875rem;
+    font-weight: 600;
+    line-height: 1.71429;
+  }
+}
+
+@media screen and (max-width: 31.25rem) {
+  .appointmentModal .modal-body .appointmentdescript-body .datepackage .packagefee .fees .text {
+    font-family: "Gilroy";
+    font-style: normal;
+    font-size: 0.75rem;
+    font-weight: 600;
+    line-height: 1.66667;
+  }
 }
 
 .appointmentModal .modal-body .appointmentdescript-body .divider {
@@ -6487,6 +6902,12 @@ h6 {
   text-align: center;
 }
 
+@media screen and (max-width: 35.9375rem) {
+  .appointmentModal .modal-body .appointmentdescript-footer {
+    padding: 0rem;
+  }
+}
+
 .appointmentModal .modal-body .appointmentdescript-footer .textinfo {
   max-width: 28.5rem;
 }
@@ -6502,6 +6923,16 @@ h6 {
 
 .appointmentModal .modal-body .appointmentdescript-footer .textinfo .text span {
   color: #2D3748;
+}
+
+@media screen and (max-width: 35.9375rem) {
+  .appointmentModal .modal-body .appointmentdescript-footer .textinfo .text {
+    font-family: "Gilroy";
+    font-style: normal;
+    font-size: 0.875rem;
+    font-weight: 600;
+    line-height: 1.71429;
+  }
 }
 
 .appointmentModal .modal-body .appointmentdescript-footer .confirmbox {
@@ -6535,6 +6966,154 @@ h6 {
 .appointmentModal .modal-body .appointmentdescript-footer .confirmbox .btn-confirm:not([disabled]):hover {
   background: #cd2b06;
   color: #ffffff;
+}
+
+.appointmentModal .modal-body .appointmentsuccess {
+  padding: 3.5rem 1.25rem 5.625rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 2.5rem;
+}
+
+.appointmentModal .modal-body .appointmentsuccess .icon {
+  height: 8.75rem;
+  width: 8.75rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  overflow: hidden;
+}
+
+@media screen and (max-width: 35.9375rem) {
+  .appointmentModal .modal-body .appointmentsuccess .icon {
+    height: 5rem;
+    width: 5rem;
+  }
+}
+
+.appointmentModal .modal-body .appointmentsuccess .icon svg {
+  width: 100%;
+  height: 100%;
+}
+
+.appointmentModal .modal-body .appointmentsuccess-details {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 1rem;
+  text-align: center;
+}
+
+.appointmentModal .modal-body .appointmentsuccess-details .successtitle {
+  color: #4A5568;
+}
+
+@media screen and (max-width: 48rem) {
+  .appointmentModal .modal-body .appointmentsuccess-details .successtitle {
+    font-family: "Gilroy";
+    font-style: normal;
+    font-size: 1.75rem;
+    font-weight: 600;
+    line-height: 1.36;
+  }
+}
+
+@media screen and (max-width: 35.9375rem) {
+  .appointmentModal .modal-body .appointmentsuccess-details .successtitle {
+    font-family: "Gilroy";
+    font-style: normal;
+    font-size: 1.5rem;
+    font-weight: 600;
+    line-height: 1.36;
+  }
+}
+
+.appointmentModal .modal-body .appointmentsuccess-details .textinfo {
+  max-width: 34.0625rem;
+}
+
+.appointmentModal .modal-body .appointmentsuccess-details .textinfo .successtext {
+  font-family: "Gilroy";
+  font-style: normal;
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.625;
+  color: #718096;
+}
+
+@media screen and (max-width: 35.9375rem) {
+  .appointmentModal .modal-body .appointmentsuccess-details .textinfo .successtext {
+    font-family: "Gilroy";
+    font-style: normal;
+    font-size: 0.875rem;
+    font-weight: 600;
+    line-height: 1.71429;
+  }
+}
+
+.appointmentModal .modal-body .appointmentsuccess-details .textinfo .successtext .mail {
+  font-family: "Gilroy";
+  font-style: normal;
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.625;
+  color: #2D3748;
+}
+
+@media screen and (max-width: 35.9375rem) {
+  .appointmentModal .modal-body .appointmentsuccess-details .textinfo .successtext .mail {
+    font-family: "Gilroy";
+    font-style: normal;
+    font-size: 0.875rem;
+    font-weight: 600;
+    line-height: 1.71429;
+  }
+}
+
+.appointmentModal .modal-body .appointmentsuccess-details .textinfo .successtext .link {
+  font-family: "Gilroy";
+  font-style: normal;
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.625;
+  color: #F94E26;
+}
+
+@media screen and (max-width: 35.9375rem) {
+  .appointmentModal .modal-body .appointmentsuccess-details .textinfo .successtext .link {
+    font-family: "Gilroy";
+    font-style: normal;
+    font-size: 0.875rem;
+    font-weight: 600;
+    line-height: 1.71429;
+  }
 }
 
 .swiper-button-prev::after {
