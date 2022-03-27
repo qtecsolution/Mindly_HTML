@@ -258,3 +258,13 @@
 .btn-group {
     background: $mobileDropdownBg;
 }
+
+.btn-readmore {
+    @include setBgColor(transparent, $secondary);
+    @include font-26-16-semibold;
+    @include transitions;
+
+    @include hover {
+        color: $tertiary;
+    }
+}

@@ -1,6 +1,284 @@
 .dashboard {
     &-navigation {
-        padding: length(64) length(0);
+        padding: length(64) length(45) length(64) length(30);
         background: $profileSidebarBg;
+
+        .dashboardlist {
+            @include list-vertical;
+            gap: length(20);
+
+            &-link {
+                background: $profileSidebarBg;
+                @include w100;
+                @include radius(5);
+                padding: length(10);
+                @include flex-center-vert;
+                gap: length(14);
+
+                .icon {
+                    @include square(length(20));
+                    @include flex-center;
+                    overflow: hidden;
+
+                    svg {
+                        @include wh100;
+                    }
+                }
+
+                .text {
+                    color: $gray-700;
+                    @include font-16-16-medium;
+                }
+
+                &:hover:not(.active) {
+                    background: $activeItemBg;
+
+                    svg {
+                        path {
+                            fill: $tertiary;
+                        }
+                    }
+
+                    .text {
+                        color: $tertiary;
+                    }
+                }
+
+                &.active {
+                    background: $activeItemBg;
+
+                    svg {
+                        path {
+                            fill: $tertiary;
+                        }
+                    }
+
+                    .text {
+                        color: $tertiary;
+                    }
+                }
+            }
+        }
+    }
+
+    .notifications {
+        padding: length(64) length(0) length(120);
+
+        @include breakpoint(tablet991) {
+            padding: length(32) length(0) length(64);
+        }
+
+        .membernotifications {
+            @include flex-column;
+            gap: length(56);
+
+            @include breakpoint(tablet991) {
+                gap: length(36);
+            }
+
+            .title {
+                @include heading-1;
+                color: $gray-800;
+
+                @include breakpoint(tablet991) {
+                    @include heading-2;
+                }
+            }
+
+            .notificationlist {
+                @include list-vertical;
+                background: $white;
+
+                &-item {
+                    padding: length(16);
+                    @include flex-center-vert;
+                    gap: length(24);
+                    @include border-single(bottom, solid, 1, $gray-100);
+
+                    &:last-of-type {
+                        border-bottom: 0;
+                    }
+
+                    .icon {
+                        @include square(length(60));
+                        @include circle;
+                        @include flex-center;
+                        overflow: hidden;
+                        padding: length(8);
+                        background: $notifyIconBg;
+                    }
+
+                    .textinfo {
+                        width: calc(100% - 5.25rem);
+                    }
+
+                    .text {
+                        @include font-26-16-normal;
+                        color: $gray-700;
+
+                        .announce {
+                            color: $gray-700;
+                            @include font-26-16-bold;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    &-detail {
+        @include flex-column;
+        gap: length(45);
+        padding-bottom: length(68);
+
+        @include breakpoint(tablet991) {
+            padding-bottom: length(48);
+        }
+    }
+
+    &-header {
+        @include flex-column;
+        gap: length(8);
+        padding: length(64) length(0);
+
+        .titles {
+            .title {
+                @include heading-1;
+                color: $gray-600;
+            }
+
+            .name {
+                @include heading-1;
+                color: $gray-800;
+            }
+        }
+
+
+        .memberid-memberemail {
+            @include flex-center-between;
+
+            .memberid {
+                .id {
+                    @include font-26-16-semibold;
+                    color: $gray-600;
+                }
+            }
+
+            .memberemail {
+                @include flex-center-vert;
+                gap: length(13);
+
+                .mail {
+                    @include font-26-16-semibold;
+                    color: $gray-600;
+                }
+
+                .icon {
+                    background: $emailBg;
+                    @include square(length(32));
+                    @include circle;
+                    @include flex-center;
+                    overflow: hidden;
+                }
+            }
+        }
+    }
+
+    &-incompleted {
+        background: $white url(../images/profile/profilebg.svg) no-repeat center center/cover;
+        padding: length(32);
+        @include flex-column;
+        gap: length(40);
+
+        .headercontent {
+            @include flex-column;
+            gap: length(20);
+
+            .info {
+                @include flex-center-vert;
+                gap: length(24);
+
+                .icon {
+                    @include square(length(94));
+                    @include flex-center;
+                    overflow: hidden;
+
+                    svg {
+                        @include wh100;
+                    }
+                }
+
+                .descript {
+                    @include flex-column;
+                    gap: length(8);
+
+                    &-title {
+                        color: $gray-700;
+                        @include font-32-24-bold;
+                    }
+
+                    &-text {
+                        color: $gray-600;
+                        @include font-26-16-normal;
+                        font-feature-settings: 'salt'on;
+                    }
+                }
+            }
+
+            .incompleteprogress {
+                @include flex-column;
+                gap: length(16);
+
+                .progressinfo {
+                    @include flex-end;
+
+                    .progresstext {
+                        color: $gray-600;
+                        @include font-26-16-semibold;
+                        font-feature-settings: 'salt'on;
+                    }
+                }
+
+                .progress {
+                    background: $gray-200;
+                    height: length(12);
+                    @include radius(50);
+
+                    &-bar {
+                        background: $primary;
+                        height: length(12);
+                        @include radius(50);
+                    }
+                }
+            }
+        }
+
+        .bodycontent {
+            .completelist {
+                @include list-vertical;
+                gap: length(10);
+
+                &-item {
+                    @include flex-center-vert;
+                    gap: length(10);
+
+                    .icon {
+                        @include square(length(24));
+                        @include flex-center;
+                        overflow: hidden;
+
+                        svg {
+                            @include wh100;
+                        }
+                    }
+
+                    .text {
+                        color: $gray-800;
+                        @include font-26-16-normal;
+                        font-feature-settings: 'salt'on;
+                    }
+                }
+            }
+        }
     }
 }

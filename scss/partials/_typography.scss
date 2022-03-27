@@ -587,6 +587,41 @@ $font-weights: ('light': 300, 'normal': normal, 'medium': 500, 'semibold': 600, 
 }
 
 /*------------------------------------*\
+		32/24 FONT SIZES
+\*------------------------------------*/
+@mixin font-32-24-normal {
+	@include font(family($gilroy),
+		style('normal'),
+		size('s24'),
+		weight('normal'),
+		line-height(32.77, size('s24')));
+}
+
+@mixin font-32-24-medium {
+	@include font(family($gilroy),
+		style('normal'),
+		size('s24'),
+		weight('medium'),
+		line-height(32.77, size('s24')));
+}
+
+@mixin font-32-24-semibold {
+	@include font(family($gilroy),
+		style('normal'),
+		size('s24'),
+		weight('semibold'),
+		line-height(32.77, size('s24')));
+}
+
+@mixin font-32-24-bold {
+	@include font(family($gilroy),
+		style('normal'),
+		size('s24'),
+		weight('bold'),
+		line-height(32.77, size('s24')));
+}
+
+/*------------------------------------*\
 		38/24 FONT SIZES
 \*------------------------------------*/
 @mixin font-38-24-normal {
