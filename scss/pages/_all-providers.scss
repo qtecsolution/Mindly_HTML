@@ -1,0 +1,78 @@
+.allproviders {
+    &-content {
+        .provider-filter {
+            padding: length(57) length(0) length(12);
+
+            @include breakpoint(tablet991) {
+                padding: length(48) length(0) length(12);
+            }
+
+            .providersearch {
+                @include w100;
+                @include border(solid, 1, $gray-300);
+                @include radius(6);
+                @include flex-center-vert;
+                overflow: hidden;
+                background: $white;
+
+                .btn-search {
+                    @include square(length(46));
+                    @include flex-center;
+                    overflow: hidden;
+                    padding: length(12);
+                    background: $tertiary;
+                    @include transitions;
+
+                    @include hover {
+                        background: darken($tertiary, 10%);
+                    }
+                }
+
+                .searchfield {
+                    padding: length(11) length(16);
+                    width: calc(100% - 3rem);
+                    @include setBgColor(transparent, $gray-800);
+                    @include font-13-13-medium;
+
+                    &::placeholder {
+                        color: $textPlaceholder;
+                    }
+                }
+            }
+
+            .selectbox {
+                @include w100;
+                @include flex-column;
+                gap: length(8);
+
+                .selectlabel {
+                    color: $dateColor;
+                    @include font-20-14-medium;
+                }
+
+                .selectfield {
+                    @include border(solid, 1, $gray-300);
+                    @include radius(6);
+                    padding: length(15.5) length(16);
+                    @include w100;
+                    -webkit-appearance: none;
+                    -moz-appearance: none;
+                    -o-appearance: none;
+                    -ms-appearance: none;
+                    appearance: none;
+                    background: $white url("data:image/svg+xml,%3Csvg width='11' height='11' viewBox='0 0 11 11' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cmask id='mask0_6207_55743' style='mask-type:alpha' maskUnits='userSpaceOnUse' x='0' y='0' width='11' height='11'%3E%3Cpath d='M4.98448 7.65869L1.68707 3.89022C1.29811 3.4457 1.61379 2.75 2.20446 2.75H8.79928C9.38995 2.75 9.70564 3.4457 9.31668 3.89022L6.01927 7.65869C5.74536 7.97173 5.25838 7.97173 4.98448 7.65869Z' fill='black'/%3E%3C/mask%3E%3Cg mask='url(%23mask0_6207_55743)'%3E%3Crect width='11' height='11' fill='%23B5B5BD'/%3E%3C/g%3E%3C/svg%3E%0A") no-repeat center right 4%;
+                    color: $textPlaceholder;
+                    @include font-15-15-medium;
+                }
+            }
+        }
+
+        .providers {
+            padding: length(80) length(0);
+
+            @include breakpoint(tablet991) {
+                padding: length(48) length(0);
+            }
+        }
+    }
+}

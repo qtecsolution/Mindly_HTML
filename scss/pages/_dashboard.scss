@@ -1,3 +1,6 @@
 .dashboard {
-    padding: length(64) length(0);
+    &-navigation {
+        padding: length(64) length(0);
+        background: $profileSidebarBg;
+    }
 }

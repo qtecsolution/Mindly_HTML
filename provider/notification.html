@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Provider Register | Update Photo</title>
+    <title>Provider Dashboard | Notification</title>
     <!-- FAVICON -->
     <link rel="shortcut icon" href="favicon.svg" type="image/svg">
     <!-- BOOTSTRAP CSS -->
@@ -208,7 +208,7 @@
                             <!-- DESKTOP DROPDOWN START -->
                             <div class="desktopdropdown">
                                 <div class="submenu">
-                                    <a href="provider/dashboard.html" class="sublink">
+                                    <a href="dashboard.html" class="sublink">
                                         <span class="icon">
                                             <img src="assets/images/profile/notifybg.svg" alt="notification-thumb">
                                         </span>
@@ -219,7 +219,7 @@
                                         </span>
                                     </a>
 
-                                    <a href="provider/appointment.html" class="sublink">
+                                    <a href="appointment.html" class="sublink">
                                         <span class="icon">
                                             <img src="assets/images/profile/notifybg.svg" alt="notification-thumb">
                                         </span>
@@ -230,7 +230,7 @@
                                         </span>
                                     </a>
                                     
-                                    <a href="provider/membership.html" class="sublink">
+                                    <a href="membership.html" class="sublink">
                                         <span class="icon">
                                             <img src="assets/images/profile/notifybg.svg" alt="notification-thumb">
                                         </span>
@@ -241,7 +241,7 @@
                                         </span>
                                     </a>
 
-                                    <a href="provider/intakeform.html" class="sublink">
+                                    <a href="intakeform.html" class="sublink">
                                         <span class="icon">
                                             <img src="assets/images/profile/notifybg.svg" alt="notification-thumb">
                                         </span>
@@ -252,7 +252,7 @@
                                         </span>
                                     </a>
 
-                                    <a href="provider/notification.html" class="sublink">
+                                    <a href="notification.html" class="sublink">
                                         <span class="icon">
                                             <img src="assets/images/profile/notifybg.svg" alt="notification-thumb">
                                         </span>
@@ -263,7 +263,7 @@
                                         </span>
                                     </a>
 
-                                    <a href="provider/profile.html" class="sublink">
+                                    <a href="profile.html" class="sublink">
                                         <span class="icon">
                                             <img src="assets/images/profile/notifybg.svg" alt="notification-thumb">
                                         </span>
@@ -323,7 +323,7 @@
 
                                 <div class="profilephonemenu">
                                     <div class="submenu">
-                                        <a href="provider/dashboard.html" class="sublink">
+                                        <a href="dashboard.html" class="sublink">
                                             <span class="icon">
                                                 <img src="assets/images/profile/notifybg.svg" alt="notification-thumb">
                                             </span>
@@ -334,7 +334,7 @@
                                             </span>
                                         </a>
 
-                                        <a href="provider/appointment.html" class="sublink">
+                                        <a href="appointment.html" class="sublink">
                                             <span class="icon">
                                                 <img src="assets/images/profile/notifybg.svg" alt="notification-thumb">
                                             </span>
@@ -345,7 +345,7 @@
                                             </span>
                                         </a>
                                         
-                                        <a href="provider/membership.html" class="sublink">
+                                        <a href="membership.html" class="sublink">
                                             <span class="icon">
                                                 <img src="assets/images/profile/notifybg.svg" alt="notification-thumb">
                                             </span>
@@ -356,7 +356,7 @@
                                             </span>
                                         </a>
 
-                                        <a href="provider/intakeform.html" class="sublink">
+                                        <a href="intakeform.html" class="sublink">
                                             <span class="icon">
                                                 <img src="assets/images/profile/notifybg.svg" alt="notification-thumb">
                                             </span>
@@ -367,7 +367,7 @@
                                             </span>
                                         </a>
 
-                                        <a href="provider/notification.html" class="sublink">
+                                        <a href="notification.html" class="sublink">
                                             <span class="icon">
                                                 <img src="assets/images/profile/notifybg.svg" alt="notification-thumb">
                                             </span>
@@ -378,7 +378,7 @@
                                             </span>
                                         </a>
 
-                                        <a href="provider/profile.html" class="sublink">
+                                        <a href="profile.html" class="sublink">
                                             <span class="icon">
                                                 <img src="assets/images/profile/notifybg.svg" alt="notification-thumb">
                                             </span>
@@ -414,304 +414,87 @@
     </header>
     <!-- HEADER SECTION END -->
 
-    <!-- PROVIER-DETAILS START -->
-    <section class="providerdetails">
+    <!-- DASHBOARD-SECTION START -->
+    <main class="dashboard">
         <div class="container">
-            <div class="row g-0">
-                <div class="col-lg-11">
-                    <div class="row">
-                        <!-- PROVIDER INFO START -->
-                        <div class="col-lg-4 col-12">
-                            <div class="cardprovider">
-                                <!-- PROVIDER HEADER START -->
-                                <div class="cardprovider-header">
-                                    <img src="assets/images/provider/provider-thumbnail.png" alt="provider-thumbnail">
-                                </div>
-                                <!-- PROVIDER HEADER END -->
+            <div class="row">
+                <div class="col-lg-3 col-12 d-none d-lg-block">
+                    <nav class="dashboard-navigation">
+                        <ul class="dashboardlist">
+                            <li class="dashboardlist-item">
+                                <a href="" class="dashboardlist-link">
+                                    <span class="icon">
+                                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M5.83333 5.00033V2.50033C5.83333 2.27931 5.92113 2.06735 6.07741 1.91107C6.23369 1.75479 6.44565 1.66699 6.66667 1.66699H16.6667C16.8877 1.66699 17.0996 1.75479 17.2559 1.91107C17.4122 2.06735 17.5 2.27931 17.5 2.50033V14.167C17.5 14.388 17.4122 14.6 17.2559 14.7562C17.0996 14.9125 16.8877 15.0003 16.6667 15.0003H14.1667V17.5003C14.1667 17.9603 13.7917 18.3337 13.3275 18.3337H3.33917C3.22927 18.3343 3.12033 18.3133 3.0186 18.2717C2.91687 18.2301 2.82436 18.1688 2.74638 18.0914C2.6684 18.014 2.60649 17.9219 2.56421 17.8205C2.52193 17.719 2.50011 17.6102 2.5 17.5003L2.5025 5.83366C2.5025 5.37366 2.8775 5.00033 3.34083 5.00033H5.83333ZM4.16833 6.66699L4.16667 16.667H12.5V6.66699H4.16833ZM7.5 5.00033H14.1667V13.3337H15.8333V3.33366H7.5V5.00033ZM5.83333 9.16699H10.8333V10.8337H5.83333V9.16699ZM5.83333 12.5003H10.8333V14.167H5.83333V12.5003Z" fill="#4A5568"/>
+                                        </svg>
+                                    </span>
+                                    <span class="text">Dashboard</span>
+                                </a>
+                            </li>
 
-                                <!-- PROVIDER BODY START -->
-                                <div class="cardprovider-body">
-                                    <div class="providerinfos">
-                                        <h4 class="name">Jhon Doe</h4>
-                                        <p class="position">Psychiatrist</p>
-                                        <p class="degrees">MEd, LPC, NCC</p>
-                                    </div>
+                            <li class="dashboardlist-item">
+                                <a href="" class="dashboardlist-link">
+                                    <span class="icon">
+                                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M5.83333 5.00033V2.50033C5.83333 2.27931 5.92113 2.06735 6.07741 1.91107C6.23369 1.75479 6.44565 1.66699 6.66667 1.66699H16.6667C16.8877 1.66699 17.0996 1.75479 17.2559 1.91107C17.4122 2.06735 17.5 2.27931 17.5 2.50033V14.167C17.5 14.388 17.4122 14.6 17.2559 14.7562C17.0996 14.9125 16.8877 15.0003 16.6667 15.0003H14.1667V17.5003C14.1667 17.9603 13.7917 18.3337 13.3275 18.3337H3.33917C3.22927 18.3343 3.12033 18.3133 3.0186 18.2717C2.91687 18.2301 2.82436 18.1688 2.74638 18.0914C2.6684 18.014 2.60649 17.9219 2.56421 17.8205C2.52193 17.719 2.50011 17.6102 2.5 17.5003L2.5025 5.83366C2.5025 5.37366 2.8775 5.00033 3.34083 5.00033H5.83333ZM4.16833 6.66699L4.16667 16.667H12.5V6.66699H4.16833ZM7.5 5.00033H14.1667V13.3337H15.8333V3.33366H7.5V5.00033ZM5.83333 9.16699H10.8333V10.8337H5.83333V9.16699ZM5.83333 12.5003H10.8333V14.167H5.83333V12.5003Z" fill="#4A5568"/>
+                                        </svg>
+                                    </span>
+                                    <span class="text">Bookings</span>
+                                </a>
+                            </li>
 
-                                    <div class="ratings">
-                                        <span class="ragingpoint">4.5</span>
-                                        
-                                        <ul class="ratinglist">
-                                            <li class="ratinglist-item">
-                                                <svg width="21" height="20" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                    <path d="M9.96694 2.93294C10.2669 2.01194 11.5699 2.01194 11.8689 2.93294L12.9389 6.22494C13.0043 6.42543 13.1314 6.60012 13.302 6.72404C13.4726 6.84797 13.6781 6.91478 13.8889 6.91494H17.3509C18.3199 6.91494 18.7219 8.15494 17.9389 8.72494L15.1389 10.7589C14.968 10.883 14.8407 11.0579 14.7753 11.2588C14.7099 11.4596 14.7098 11.676 14.7749 11.8769L15.8449 15.1689C16.1449 16.0899 15.0899 16.8569 14.3049 16.2869L11.5049 14.2529C11.3341 14.1289 11.1285 14.0622 10.9174 14.0622C10.7064 14.0622 10.5007 14.1289 10.3299 14.2529L7.52994 16.2869C6.74594 16.8569 5.69194 16.0899 5.99094 15.1689L7.06094 11.8769C7.12612 11.676 7.126 11.4596 7.06061 11.2588C6.99522 11.0579 6.86791 10.883 6.69694 10.7589L3.89794 8.72594C3.11494 8.15594 3.51794 6.91594 4.48594 6.91594H7.94694C8.15799 6.91599 8.36365 6.84928 8.53447 6.72534C8.70529 6.6014 8.83252 6.42659 8.89794 6.22594L9.96794 2.93394L9.96694 2.93294Z" fill="#F2B807"/>
-                                                </svg>
-                                            </li>
-                                            <li class="ratinglist-item">
-                                                <svg width="21" height="20" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                    <path d="M9.96694 2.93294C10.2669 2.01194 11.5699 2.01194 11.8689 2.93294L12.9389 6.22494C13.0043 6.42543 13.1314 6.60012 13.302 6.72404C13.4726 6.84797 13.6781 6.91478 13.8889 6.91494H17.3509C18.3199 6.91494 18.7219 8.15494 17.9389 8.72494L15.1389 10.7589C14.968 10.883 14.8407 11.0579 14.7753 11.2588C14.7099 11.4596 14.7098 11.676 14.7749 11.8769L15.8449 15.1689C16.1449 16.0899 15.0899 16.8569 14.3049 16.2869L11.5049 14.2529C11.3341 14.1289 11.1285 14.0622 10.9174 14.0622C10.7064 14.0622 10.5007 14.1289 10.3299 14.2529L7.52994 16.2869C6.74594 16.8569 5.69194 16.0899 5.99094 15.1689L7.06094 11.8769C7.12612 11.676 7.126 11.4596 7.06061 11.2588C6.99522 11.0579 6.86791 10.883 6.69694 10.7589L3.89794 8.72594C3.11494 8.15594 3.51794 6.91594 4.48594 6.91594H7.94694C8.15799 6.91599 8.36365 6.84928 8.53447 6.72534C8.70529 6.6014 8.83252 6.42659 8.89794 6.22594L9.96794 2.93394L9.96694 2.93294Z" fill="#F2B807"/>
-                                                </svg>
-                                            </li>
-                                            <li class="ratinglist-item">
-                                                <svg width="21" height="20" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                    <path d="M9.96694 2.93294C10.2669 2.01194 11.5699 2.01194 11.8689 2.93294L12.9389 6.22494C13.0043 6.42543 13.1314 6.60012 13.302 6.72404C13.4726 6.84797 13.6781 6.91478 13.8889 6.91494H17.3509C18.3199 6.91494 18.7219 8.15494 17.9389 8.72494L15.1389 10.7589C14.968 10.883 14.8407 11.0579 14.7753 11.2588C14.7099 11.4596 14.7098 11.676 14.7749 11.8769L15.8449 15.1689C16.1449 16.0899 15.0899 16.8569 14.3049 16.2869L11.5049 14.2529C11.3341 14.1289 11.1285 14.0622 10.9174 14.0622C10.7064 14.0622 10.5007 14.1289 10.3299 14.2529L7.52994 16.2869C6.74594 16.8569 5.69194 16.0899 5.99094 15.1689L7.06094 11.8769C7.12612 11.676 7.126 11.4596 7.06061 11.2588C6.99522 11.0579 6.86791 10.883 6.69694 10.7589L3.89794 8.72594C3.11494 8.15594 3.51794 6.91594 4.48594 6.91594H7.94694C8.15799 6.91599 8.36365 6.84928 8.53447 6.72534C8.70529 6.6014 8.83252 6.42659 8.89794 6.22594L9.96794 2.93394L9.96694 2.93294Z" fill="#F2B807"/>
-                                                </svg>
-                                            </li>
-                                            <li class="ratinglist-item">
-                                                <svg width="21" height="20" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                    <path d="M9.96694 2.93294C10.2669 2.01194 11.5699 2.01194 11.8689 2.93294L12.9389 6.22494C13.0043 6.42543 13.1314 6.60012 13.302 6.72404C13.4726 6.84797 13.6781 6.91478 13.8889 6.91494H17.3509C18.3199 6.91494 18.7219 8.15494 17.9389 8.72494L15.1389 10.7589C14.968 10.883 14.8407 11.0579 14.7753 11.2588C14.7099 11.4596 14.7098 11.676 14.7749 11.8769L15.8449 15.1689C16.1449 16.0899 15.0899 16.8569 14.3049 16.2869L11.5049 14.2529C11.3341 14.1289 11.1285 14.0622 10.9174 14.0622C10.7064 14.0622 10.5007 14.1289 10.3299 14.2529L7.52994 16.2869C6.74594 16.8569 5.69194 16.0899 5.99094 15.1689L7.06094 11.8769C7.12612 11.676 7.126 11.4596 7.06061 11.2588C6.99522 11.0579 6.86791 10.883 6.69694 10.7589L3.89794 8.72594C3.11494 8.15594 3.51794 6.91594 4.48594 6.91594H7.94694C8.15799 6.91599 8.36365 6.84928 8.53447 6.72534C8.70529 6.6014 8.83252 6.42659 8.89794 6.22594L9.96794 2.93394L9.96694 2.93294Z" fill="#F2B807"/>
-                                                </svg>
-                                            </li>
-                                            <li class="ratinglist-item">
-                                                <svg width="21" height="20" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                    <path d="M9.96694 2.93294C10.2669 2.01194 11.5699 2.01194 11.8689 2.93294L12.9389 6.22494C13.0043 6.42543 13.1314 6.60012 13.302 6.72404C13.4726 6.84797 13.6781 6.91478 13.8889 6.91494H17.3509C18.3199 6.91494 18.7219 8.15494 17.9389 8.72494L15.1389 10.7589C14.968 10.883 14.8407 11.0579 14.7753 11.2588C14.7099 11.4596 14.7098 11.676 14.7749 11.8769L15.8449 15.1689C16.1449 16.0899 15.0899 16.8569 14.3049 16.2869L11.5049 14.2529C11.3341 14.1289 11.1285 14.0622 10.9174 14.0622C10.7064 14.0622 10.5007 14.1289 10.3299 14.2529L7.52994 16.2869C6.74594 16.8569 5.69194 16.0899 5.99094 15.1689L7.06094 11.8769C7.12612 11.676 7.126 11.4596 7.06061 11.2588C6.99522 11.0579 6.86791 10.883 6.69694 10.7589L3.89794 8.72594C3.11494 8.15594 3.51794 6.91594 4.48594 6.91594H7.94694C8.15799 6.91599 8.36365 6.84928 8.53447 6.72534C8.70529 6.6014 8.83252 6.42659 8.89794 6.22594L9.96794 2.93394L9.96694 2.93294Z" fill="#F2B807"/>
-                                                </svg>
-                                            </li>
-                                        </ul>
-                                    </div>
+                            <li class="dashboardlist-item">
+                                <a href="" class="dashboardlist-link">
+                                    <span class="icon">
+                                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M5.83333 5.00033V2.50033C5.83333 2.27931 5.92113 2.06735 6.07741 1.91107C6.23369 1.75479 6.44565 1.66699 6.66667 1.66699H16.6667C16.8877 1.66699 17.0996 1.75479 17.2559 1.91107C17.4122 2.06735 17.5 2.27931 17.5 2.50033V14.167C17.5 14.388 17.4122 14.6 17.2559 14.7562C17.0996 14.9125 16.8877 15.0003 16.6667 15.0003H14.1667V17.5003C14.1667 17.9603 13.7917 18.3337 13.3275 18.3337H3.33917C3.22927 18.3343 3.12033 18.3133 3.0186 18.2717C2.91687 18.2301 2.82436 18.1688 2.74638 18.0914C2.6684 18.014 2.60649 17.9219 2.56421 17.8205C2.52193 17.719 2.50011 17.6102 2.5 17.5003L2.5025 5.83366C2.5025 5.37366 2.8775 5.00033 3.34083 5.00033H5.83333ZM4.16833 6.66699L4.16667 16.667H12.5V6.66699H4.16833ZM7.5 5.00033H14.1667V13.3337H15.8333V3.33366H7.5V5.00033ZM5.83333 9.16699H10.8333V10.8337H5.83333V9.16699ZM5.83333 12.5003H10.8333V14.167H5.83333V12.5003Z" fill="#4A5568"/>
+                                        </svg>
+                                    </span>
+                                    <span class="text">Membership</span>
+                                </a>
+                            </li>
 
-                                    <div class="available-badge">
-                                        <span class="active"></span>
-                                        <span class="badgetext">Available now</span>
-                                    </div>
-                                </div>
-                                <!-- PROVIDER BODY END -->
-                            </div>
-                        </div>
-                        <!-- PROVIDER INFO END -->
-                        
-                        <!-- PROVIDER DESCTIPTIONS START -->
-                        <div class="col-lg-8 col-12">
-                            <div class="providerdescriptions">
-                                <!-- PROVIDER DETAIL START -->
-                                <div class="providerdetail">
-                                    <h3 class="title">I am from DU, 10th Batch</h3>
+                            <li class="dashboardlist-item">
+                                <a href="" class="dashboardlist-link">
+                                    <span class="icon">
+                                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M5.83333 5.00033V2.50033C5.83333 2.27931 5.92113 2.06735 6.07741 1.91107C6.23369 1.75479 6.44565 1.66699 6.66667 1.66699H16.6667C16.8877 1.66699 17.0996 1.75479 17.2559 1.91107C17.4122 2.06735 17.5 2.27931 17.5 2.50033V14.167C17.5 14.388 17.4122 14.6 17.2559 14.7562C17.0996 14.9125 16.8877 15.0003 16.6667 15.0003H14.1667V17.5003C14.1667 17.9603 13.7917 18.3337 13.3275 18.3337H3.33917C3.22927 18.3343 3.12033 18.3133 3.0186 18.2717C2.91687 18.2301 2.82436 18.1688 2.74638 18.0914C2.6684 18.014 2.60649 17.9219 2.56421 17.8205C2.52193 17.719 2.50011 17.6102 2.5 17.5003L2.5025 5.83366C2.5025 5.37366 2.8775 5.00033 3.34083 5.00033H5.83333ZM4.16833 6.66699L4.16667 16.667H12.5V6.66699H4.16833ZM7.5 5.00033H14.1667V13.3337H15.8333V3.33366H7.5V5.00033ZM5.83333 9.16699H10.8333V10.8337H5.83333V9.16699ZM5.83333 12.5003H10.8333V14.167H5.83333V12.5003Z" fill="#4A5568"/>
+                                        </svg>
+                                    </span>
+                                    <span class="text">Intake Form</span>
+                                </a>
+                            </li>
 
-                                    <p class="text">
-                                        Physician or scientist, or group, whose work has led to significant advances in the fields of health care and scientific research. hysician or scientist, or group, whose work has led to significant advances in the fields of health care and scientific research. Hysician or scientist, or group, whose work has led to significant advances in the fields of health care and scientific research.
-                                    </p>
-                                </div>
-                                <!-- PROVIDER DETAIL END -->
+                            <li class="dashboardlist-item">
+                                <a href="" class="dashboardlist-link active">
+                                    <span class="icon">
+                                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M5.83333 5.00033V2.50033C5.83333 2.27931 5.92113 2.06735 6.07741 1.91107C6.23369 1.75479 6.44565 1.66699 6.66667 1.66699H16.6667C16.8877 1.66699 17.0996 1.75479 17.2559 1.91107C17.4122 2.06735 17.5 2.27931 17.5 2.50033V14.167C17.5 14.388 17.4122 14.6 17.2559 14.7562C17.0996 14.9125 16.8877 15.0003 16.6667 15.0003H14.1667V17.5003C14.1667 17.9603 13.7917 18.3337 13.3275 18.3337H3.33917C3.22927 18.3343 3.12033 18.3133 3.0186 18.2717C2.91687 18.2301 2.82436 18.1688 2.74638 18.0914C2.6684 18.014 2.60649 17.9219 2.56421 17.8205C2.52193 17.719 2.50011 17.6102 2.5 17.5003L2.5025 5.83366C2.5025 5.37366 2.8775 5.00033 3.34083 5.00033H5.83333ZM4.16833 6.66699L4.16667 16.667H12.5V6.66699H4.16833ZM7.5 5.00033H14.1667V13.3337H15.8333V3.33366H7.5V5.00033ZM5.83333 9.16699H10.8333V10.8337H5.83333V9.16699ZM5.83333 12.5003H10.8333V14.167H5.83333V12.5003Z" fill="#4A5568"/>
+                                        </svg>
+                                    </span>
+                                    <span class="text">Notification</span>
+                                </a>
+                            </li>
 
-                                <!-- SPECIALITIES START -->
-                                <div class="specialities">
-                                    <h3 class="title">Specialities</h3>
-
-                                    <div class="specialities-badges">
-                                        <div class="badge-speciality">Depression</div>
-                                        <div class="badge-speciality">Anxiety</div>
-                                        <div class="badge-speciality">Couple Counseling</div>
-                                        <div class="badge-speciality">Mindfulness</div>
-                                    </div>
-                                </div>
-                                <!-- SPECIALITIES END -->
-
-                                <!-- EXPERIENCE START -->
-                                <div class="providerexperience">
-                                    <h3 class="title">Experience</h3>
-
-                                    <p class="text">
-                                        10 Years of experience | 1500+ Case Solved
-                                    </p>
-                                </div>
-                                <!-- EXPERIENCE END -->
-
-                                <!-- CURRENT-WORKPLACE START -->
-                                <div class="currentworkplace">
-                                    <h3 class="title">Current Workplace</h3>
-
-                                    <p class="text">
-                                        Assistant Professor, Department of Clinical Psycology <br>
-                                        University of Dhaka
-                                    </p>
-                                </div>
-                                <!-- CURRENT-WORKPLACE END -->
-
-                                <!-- MY-SCHEDULES START -->
-                                <div class="myschedule">
-                                    <h3 class="title">Mindly Schedule</h3>
-
-                                    <div class="schedulebox">
-                                        <div class="schedulesingle">
-                                            <div class="scheduleday">
-                                                <div class="scheduleday-header">
-                                                    <h4 class="title">Available dates</h4>
-
-                                                    <div class="buttonsgroup">
-                                                        <button type="button" class="btn-prev">
-                                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                                <path d="M11.8273 11.9992L14.6563 14.8272L13.2423 16.2422L8.99925 11.9992L13.2423 7.75619L14.6563 9.17119L11.8273 11.9992Z" fill="#E2E8F0"/>
-                                                            </svg>
-                                                        </button>
-
-                                                        <button type="button" class="btn-next">
-                                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                                <path d="M12.1727 12.0008L9.34375 9.17281L10.7577 7.75781L15.0007 12.0008L10.7577 16.2438L9.34375 14.8288L12.1727 12.0008Z" fill="#4A5568"/>
-                                                            </svg>
-                                                        </button>
-                                                    </div>
-                                                </div>
-
-                                                <div class="scheduleday-body">
-                                                    <div class="scheduletimer">
-                                                        <span class="day">Thr</span>
-                                                        <span class="date">24 Mar</span>
-                                                        <span class="slot">1 slots</span>
-                                                    </div>
-
-                                                    <div class="scheduletimer">
-                                                        <span class="day">Fri</span>
-                                                        <span class="date">25 Mar</span>
-                                                        <span class="slot">2 slots</span>
-                                                    </div>
-
-                                                    <div class="scheduletimer active">
-                                                        <span class="day">Sat</span>
-                                                        <span class="date">26 Mar</span>
-                                                        <span class="slot">3 slots</span>
-                                                    </div>
-
-                                                    <div class="scheduletimer">
-                                                        <span class="day">Sun</span>
-                                                        <span class="date">27 Mar</span>
-                                                        <span class="slot">4 slots</span>
-                                                    </div>
-
-                                                    <div class="scheduletimer">
-                                                        <span class="day">Mon</span>
-                                                        <span class="date">28 Mar</span>
-                                                        <span class="slot">5 slots</span>
-                                                    </div>
-                                                </div>
-                                            </div>                                        
-
-                                            <div class="timeschedules">
-                                                <div class="timeschedules-header">
-                                                    <h3 class="title">Available time slots</h3>
-
-                                                    <div class="buttonsgroup">
-                                                        <button type="button" class="btn-prev">
-                                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                                <path d="M11.8273 11.9992L14.6563 14.8272L13.2423 16.2422L8.99925 11.9992L13.2423 7.75619L14.6563 9.17119L11.8273 11.9992Z" fill="#E2E8F0"/>
-                                                            </svg>
-                                                        </button>
-
-                                                        <button type="button" class="btn-next">
-                                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                                <path d="M12.1727 12.0008L9.34375 9.17281L10.7577 7.75781L15.0007 12.0008L10.7577 16.2438L9.34375 14.8288L12.1727 12.0008Z" fill="#4A5568"/>
-                                                            </svg>
-                                                        </button>
-                                                    </div>
-                                                </div>
-
-                                                <div class="timeschedules-body">
-                                                    <div class="scheduletimes timetable">
-                                                        <button class="btn-time">02:00 pm</button>
-                                                        <button class="btn-time">03:00 pm</button>
-                                                        <button class="btn-time active">04:00 pm</button>
-                                                        <button class="btn-time">05:00 pm</button>
-                                                        <button class="btn-time">06:00 pm</button>
-                                                        <button class="btn-time">07:00 pm</button>
-                                                        <button class="btn-time">08:00 pm</button>
-                                                        <button class="btn-time">09:00 pm</button>
-                                                        <button class="btn-time">10:00 pm</button>
-                                                        <button class="btn-time">11:00 pm</button>
-                                                    </div>
-                                                </div>
-                                            </div>
-
-                                            <!-- PROVIDE-TYPE START -->
-                                            <div class="types">
-                                                <h3 class="title">Type</h3>
-
-                                                <div class="typesinfo">
-                                                    <div class="fee active">
-                                                        <h5 class="title">Individual (1)</h5>
-                                                        <p class="pricefee">2000 BDT</p>
-                                                    </div>
-
-                                                    <div class="fee">
-                                                        <h5 class="title">Couple (2)</h5>
-                                                        <p class="pricefee">3000 BDT</p>
-                                                    </div>
-
-                                                    <div class="fee">
-                                                        <h5 class="title">Family (3)</h5>
-                                                        <p class="pricefee">5000 BDT</p>
-                                                    </div>
-
-                                                    <div class="fee">
-                                                        <h5 class="title">Group (10)</h5>
-                                                        <p class="pricefee">12000 BDT</p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <!-- PROVIDE-TYPE END -->
-                                        </div>
-
-                                        <div class="scheduleapply">
-                                            <button type="button" class="btn-apply"  data-bs-toggle="modal" data-bs-target="#appointmentModal">
-                                                Get Appointment for 14 Feb 2022 at 6.00 pm
-                                            </button>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- MY-SCHEDULES END -->
-
-                                <!-- ACHIEVEMENTS START -->
-                                <div class="achievements">
-                                    <h3 class="title">Achievements &amp; Certification</h3>
-
-                                    <div class="certification">
-                                        <div class="card-certificate">
-                                            <div class="card-certificate-cap">
-                                                <img src="assets/images/achievements/achievement-1.png" alt="certificate-thumnail">
-                                            </div>
-
-                                            <div class="card-certificate-details">
-                                                <h4 class="certificate-title">ASCB Public Service Award</h4>
-                                                <p class="certificate-text">
-                                                    hysician or scientist, or group, whose work has led to significant advances in the fields of health care and scientific research.
-                                                </p>
-                                            </div>
-                                        </div>
-
-                                        <div class="card-certificate">
-                                            <div class="card-certificate-cap">
-                                                <img src="assets/images/achievements/achievement-1.png" alt="certificate-thumnail">
-                                            </div>
-
-                                            <div class="card-certificate-details">
-                                                <h4 class="certificate-title">ASCB Public Service Award</h4>
-                                                <p class="certificate-text">
-                                                    hysician or scientist, or group, whose work has led to significant advances in the fields of health care and scientific research.
-                                                </p>
-                                            </div>
-                                        </div>
-                                        
-                                        <div class="card-certificate">
-                                            <div class="card-certificate-cap">
-                                                <img src="assets/images/achievements/achievement-1.png" alt="certificate-thumnail">
-                                            </div>
-
-                                            <div class="card-certificate-details">
-                                                <h4 class="certificate-title">ASCB Public Service Award</h4>
-                                                <p class="certificate-text">
-                                                    hysician or scientist, or group, whose work has led to significant advances in the fields of health care and scientific research.
-                                                </p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- ACHIEVEMENTS END -->
-                            </div>
-                        </div>
-                        <!-- PROVIDER DESCTIPTIONS END -->
-                    </div>
+                            <li class="dashboardlist-item">
+                                <a href="" class="dashboardlist-link">
+                                    <span class="icon">
+                                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M5.83333 5.00033V2.50033C5.83333 2.27931 5.92113 2.06735 6.07741 1.91107C6.23369 1.75479 6.44565 1.66699 6.66667 1.66699H16.6667C16.8877 1.66699 17.0996 1.75479 17.2559 1.91107C17.4122 2.06735 17.5 2.27931 17.5 2.50033V14.167C17.5 14.388 17.4122 14.6 17.2559 14.7562C17.0996 14.9125 16.8877 15.0003 16.6667 15.0003H14.1667V17.5003C14.1667 17.9603 13.7917 18.3337 13.3275 18.3337H3.33917C3.22927 18.3343 3.12033 18.3133 3.0186 18.2717C2.91687 18.2301 2.82436 18.1688 2.74638 18.0914C2.6684 18.014 2.60649 17.9219 2.56421 17.8205C2.52193 17.719 2.50011 17.6102 2.5 17.5003L2.5025 5.83366C2.5025 5.37366 2.8775 5.00033 3.34083 5.00033H5.83333ZM4.16833 6.66699L4.16667 16.667H12.5V6.66699H4.16833ZM7.5 5.00033H14.1667V13.3337H15.8333V3.33366H7.5V5.00033ZM5.83333 9.16699H10.8333V10.8337H5.83333V9.16699ZM5.83333 12.5003H10.8333V14.167H5.83333V12.5003Z" fill="#4A5568"/>
+                                        </svg>
+                                    </span>
+                                    <span class="text">Profile</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
                 </div>
+                
+                <div class="col-lg-9 col-12"></div>
             </div>
         </div>
-    </section>
-    <!-- PROVIER-DETAILS END -->
+    </main>
+    <!-- DASHBOARD-SECTION END -->
     
     <!-- FOOTER SECTION START -->
     <footer class="footer">
@@ -988,246 +771,6 @@
         </div>
     </footer>
     <!-- FOOTER SECTION END -->
-
-    <!-- APPOINTMENT MODAL START -->
-    <div class="modal fade appointmentModal" id="appointmentModal" tabindex="-1" aria-labelledby="appointmentModal" aria-hidden="true">
-        <div class="modal-dialog modal-xl modal-dialog-centered">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
-                        <svg width="38" height="38" viewBox="0 0 38 38" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M19.0004 16.7891L26.7348 9.05469L28.9441 11.2641L21.2098 18.9984L28.9441 26.7328L26.7348 28.9422L19.0004 21.2078L11.266 28.9422L9.05664 26.7328L16.791 18.9984L9.05664 11.2641L11.266 9.05469L19.0004 16.7891Z" fill="#718096"/>
-                        </svg>
-                    </button>
-                </div>
-
-                <div class="modal-body">
-                    <!-- IF PROFILE INCOMPLETED -->
-                    <div class="incomplete d-none">
-                        <div class="incomplete-header">
-                            <div class="icon">
-                                <svg width="140" height="140" viewBox="0 0 140 140" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <g filter="url(#smileyicon-1)">
-                                        <path d="M140 33.079V106.873C140.004 111.222 139.151 115.529 137.49 119.548C135.829 123.567 133.392 127.219 130.318 130.295C127.244 133.372 123.595 135.813 119.577 137.478C115.56 139.143 111.254 140 106.905 140H33.111C24.3335 139.996 15.9165 136.508 9.70837 130.303C3.50023 124.098 0.00851576 115.683 1.5565e-05 106.905V33.111C-0.00420225 28.763 0.848829 24.4568 2.51032 20.4387C4.17181 16.4206 6.60915 12.7695 9.68293 9.69427C12.7567 6.61899 16.4066 4.17988 20.4239 2.51645C24.4412 0.853012 28.747 -0.0021068 33.095 3.89786e-06H106.889C111.235 -0.0021033 115.539 0.851837 119.555 2.51307C123.571 4.1743 127.221 6.61029 130.295 9.68196C133.37 12.7536 135.81 16.4008 137.475 20.4153C139.14 24.4297 139.998 28.7329 140 33.079V33.079Z" fill="#FCAF15"/>
-                                    </g>
-                                    <g style="mix-blend-mode:soft-light" opacity="0.4">
-                                        <path d="M70.3298 54.5723L66.5117 74.641L70.3298 77.689V54.5723Z" fill="black"/>
-                                    </g>
-                                    <g style="mix-blend-mode:soft-light" filter="url(#smileyicon-2)">
-                                        <path d="M41.4405 72.1875H29.6532C24.7534 72.1875 20.7812 76.105 20.7812 80.9375C20.7812 85.77 24.7534 89.6875 29.6532 89.6875H41.4405C46.3404 89.6875 50.3125 85.77 50.3125 80.9375C50.3125 76.105 46.3404 72.1875 41.4405 72.1875Z" fill="#C140A3"/>
-                                    </g>
-                                    <g style="mix-blend-mode:soft-light" filter="url(#smileyicon-3)">
-                                        <path d="M109.27 72.1875H97.4484C92.5581 72.1875 88.5938 76.1015 88.5938 80.9297V80.9453C88.5938 85.7735 92.5581 89.6875 97.4484 89.6875H109.27C114.161 89.6875 118.125 85.7735 118.125 80.9453V80.9297C118.125 76.1015 114.161 72.1875 109.27 72.1875Z" fill="#C140A3"/>
-                                    </g>
-                                    <path d="M70.5931 110.469H69.7693C59.1562 110.23 47.0247 104.682 43.8424 92.8077C43.7695 92.6102 43.7392 92.4 43.7534 92.1904C43.7677 91.9809 43.8263 91.7765 43.9253 91.5904C44.0244 91.4044 44.1619 91.2407 44.3289 91.1099C44.4959 90.9791 44.6888 90.884 44.8953 90.8307C45.1017 90.7774 45.3172 90.767 45.528 90.8004C45.7388 90.8337 45.9401 90.9099 46.1193 91.0241C46.2984 91.1384 46.4513 91.2882 46.5683 91.4639C46.6853 91.6396 46.7637 91.8374 46.7986 92.0446C49.5932 102.393 60.3839 107.242 69.8339 107.448C78.8477 107.623 90.6561 103.247 94.4038 91.5158C94.6003 91.2386 94.8815 91.0304 95.2065 90.9212C95.5315 90.812 95.8834 90.8076 96.2112 90.9086C96.5389 91.0096 96.8254 91.2108 97.029 91.4829C97.2327 91.755 97.3429 92.0839 97.3438 92.4219C93.903 103.152 83.4515 110.469 70.5931 110.469Z" fill="black"/>
-                                    <g clip-path="url(#smileyicon-4)">
-                                        <path d="M90.4531 62.3437C90.266 62.3417 90.0804 62.3093 89.9033 62.2476C89.6699 62.1745 89.4529 62.0551 89.2649 61.8962C89.0768 61.7372 88.9214 61.542 88.8075 61.3216C88.6937 61.1012 88.6236 60.8601 88.6014 60.612C88.5792 60.3639 88.6053 60.1138 88.6781 59.8761C89.5677 56.7671 91.4321 54.0414 93.9855 52.1168C96.539 50.1921 99.6406 49.1746 102.815 49.2202C105.986 49.1905 109.08 50.2141 111.63 52.1364C114.181 54.0587 116.049 56.7754 116.952 59.8761C117.094 60.3584 117.044 60.8785 116.811 61.3229C116.579 61.7672 116.183 62.0996 115.711 62.2476C115.478 62.3241 115.233 62.3524 114.989 62.3308C114.745 62.3091 114.508 62.238 114.291 62.1216C114.075 62.0052 113.883 61.8458 113.728 61.6528C113.572 61.4598 113.456 61.2371 113.386 60.9977C112.705 58.6666 111.3 56.6245 109.382 55.1794C107.463 53.7343 105.137 52.9644 102.752 52.9858C100.379 52.9783 98.0662 53.7546 96.1607 55.1987C94.2553 56.6428 92.8592 58.6772 92.181 60.9977C92.0644 61.3766 91.8358 61.7095 91.5264 61.9505C91.217 62.1915 90.8421 62.3289 90.4531 62.3437Z" fill="black"/>
-                                        <path d="M23.7482 62.3437C23.5608 62.3454 23.3747 62.3128 23.1986 62.2475C22.9638 62.1761 22.7452 62.0579 22.5555 61.8997C22.3658 61.7415 22.2087 61.5465 22.0933 61.3259C21.9779 61.1054 21.9066 60.8637 21.8833 60.6148C21.8601 60.3659 21.8855 60.1148 21.958 59.876C22.852 56.7697 24.717 54.047 27.2687 52.1231C29.8204 50.1992 32.9186 49.1796 36.091 49.2199C39.2622 49.1849 42.358 50.2065 44.9086 52.1296C47.4593 54.0528 49.3255 56.7724 50.2241 59.876C50.2991 60.1137 50.3268 60.3643 50.3056 60.6131C50.2844 60.8618 50.2147 61.1038 50.1006 61.3247C49.9865 61.5456 49.8303 61.7411 49.6412 61.8995C49.452 62.058 49.2338 62.1763 48.9992 62.2475C48.5265 62.3981 48.0146 62.351 47.5759 62.1166C47.1372 61.8823 46.8075 61.4798 46.6594 60.9977C45.9791 58.6691 44.5763 56.6289 42.6619 55.184C40.7475 53.7391 38.425 52.9676 36.0439 52.9856C33.6682 52.9746 31.3529 53.7493 29.4448 55.1937C27.5367 56.6381 26.1386 58.6744 25.4598 60.9977C25.3463 61.3753 25.1206 61.7076 24.814 61.9487C24.5074 62.1899 24.135 62.3279 23.7482 62.3437Z" fill="black"/>
-                                    </g>
-                                    <defs>
-                                        <filter id="smileyicon-1" x="0" y="0" width="140" height="140" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-                                            <feFlood flood-opacity="0" result="BackgroundImageFix"/>
-                                            <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
-                                            <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
-                                            <feOffset dx="-7.17188" dy="-7.17188"/>
-                                            <feComposite in2="hardAlpha" operator="arithmetic" k2="-1" k3="1"/>
-                                            <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.04 0"/>
-                                            <feBlend mode="normal" in2="shape" result="effect1_innerShadow_6171_79033"/>
-                                        </filter>
-                                        <filter id="smileyicon-2" x="8.82812" y="60.2344" width="53.4375" height="41.4062" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-                                            <feFlood flood-opacity="0" result="BackgroundImageFix"/>
-                                            <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
-                                            <feGaussianBlur stdDeviation="5.97656" result="effect1_foregroundBlur_6171_79033"/>
-                                        </filter>
-                                        <filter id="smileyicon-3" x="76.6406" y="60.2344" width="53.4375" height="41.4062" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-                                            <feFlood flood-opacity="0" result="BackgroundImageFix"/>
-                                            <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
-                                            <feGaussianBlur stdDeviation="5.97656" result="effect1_foregroundBlur_6171_79033"/>
-                                        </filter>
-                                        <clipPath id="smileyicon-4">
-                                            <rect width="95.6595" height="32.7741" fill="white" transform="translate(21.875 41.5625)"/>
-                                        </clipPath>
-                                    </defs>
-                                </svg>
-                            </div>
-                        </div>
-
-                        <div class="incomplete-body">
-                            <div class="profileprogress">
-                                <div class="progress">
-                                    <div class="progress-bar" role="progressbar" style="width: 75%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
-                                </div>
-                                <p class="progresstext">Your Profile is 75% complete!</p>
-                            </div>
-
-                            <div class="progressdetail">
-                                <h1 class="title">Please Complete Your Profile First!</h1>
-                                <div class="textinfo">
-                                    <p class="text">
-                                        Because we need your Name, Mail and other information
-                                        for booking process.
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="incomplete-footer">
-                            <a href="profile.html" class="btn-profile">Go to your Profile</a>
-                        </div>
-                    </div>
-                    <!-- IF PROFILE INCOMPLETED -->
-
-                    <!-- APPOINTMENT-DESCRIPT START -->
-                    <div class="appointmentdescript">
-                        <div class="appointmentdescript-header">
-                            <div class="logo">
-                                <img src="assets/images/logo/logo.svg" alt="logo">
-                            </div>
-                        </div>
-
-                        <div class="appointmentdescript-body">
-                            <div class="providermenber">
-                                <div class="provider">
-                                    <div class="providername">
-                                        <span class="title">Provider Name:</span>
-                                        <span class="name">Dr Ahmed Rubel</span>
-                                    </div>
-
-                                    <div class="providerid">
-                                        <span class="title">Provider ID: </span>
-                                        <span class="id">205 674 334</span>
-                                    </div>
-                                </div>
-
-                                <div class="member">
-                                    <div class="membername">
-                                        <span class="title">Member Name:</span>
-                                        <span class="name">Nabil Ahmed Emon</span>
-                                    </div>
-
-                                    <div class="memberid">
-                                        <span class="title">Member ID: </span>
-                                        <span class="id">362 674 334</span>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="divider"></div>
-
-                            <div class="datepackage">
-                                <div class="datetime">
-                                    <div class="date">
-                                        <span class="title">Date:</span>
-                                        <span class="text">14th Feb, Saturday, 2022</span>
-                                    </div>
-
-                                    <div class="time">
-                                        <span class="title">Time:</span>
-                                        <span class="text">6.00 pm - 7.00 pm</span>
-                                    </div>
-                                </div>
-
-                                <div class="packagefee">
-                                    <div class="pack">
-                                        <span class="title">Package:</span>
-                                        <span class="text">Individual (1)</span>
-                                    </div>
-
-                                    <div class="fees">
-                                        <span class="title">Fee:</span>
-                                        <span class="text">5000 BDT</span>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="divider"></div>
-                        </div>
-
-                        <div class="appointmentdescript-footer">
-                            <div class="textinfo">
-                                <p class="text">
-                                    Confirmation mail will be sent to <span>nabilemon.qtec@gmail.com</span> <br>
-                                    If you want to change the mail, go to your profile and chnage.
-                                </p>
-                            </div>
-
-                            <div class="confirmbox">
-                                <button class="btn-confirm" id="confirm-button" type="button">Confirm &amp; Pay</button>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- APPOINTMENT-DESCRIPT END -->
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- APPOINTMENT MODAL END -->
-
-    <!-- SUCCESS MODAL START -->
-    <div class="modal fade appointmentModal" id="successModal" tabindex="-1" aria-labelledby="successModal" aria-hidden="true">
-        <div class="modal-dialog modal-xl modal-dialog-centered">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
-                        <svg width="38" height="38" viewBox="0 0 38 38" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M19.0004 16.7891L26.7348 9.05469L28.9441 11.2641L21.2098 18.9984L28.9441 26.7328L26.7348 28.9422L19.0004 21.2078L11.266 28.9422L9.05664 26.7328L16.791 18.9984L9.05664 11.2641L11.266 9.05469L19.0004 16.7891Z" fill="#718096"/>
-                        </svg>
-                    </button>
-                </div>
-
-                <div class="modal-body">
-                    <!-- APPOINTMENT-SUCCESS START -->
-                    <div class="appointmentsuccess">
-                        <div class="icon">
-                            <svg width="140" height="140" viewBox="0 0 140 140" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <g filter="url(#successappointment-1)">
-                                    <path d="M140 33.079V106.873C140.004 111.222 139.151 115.529 137.49 119.548C135.829 123.567 133.392 127.219 130.318 130.295C127.244 133.372 123.595 135.813 119.577 137.478C115.56 139.143 111.254 140 106.905 140H33.111C24.3335 139.996 15.9165 136.508 9.70837 130.303C3.50023 124.098 0.00851576 115.683 1.5565e-05 106.905V33.111C-0.00420225 28.763 0.848829 24.4568 2.51032 20.4387C4.17181 16.4206 6.60915 12.7695 9.68293 9.69427C12.7567 6.61899 16.4066 4.17988 20.4239 2.51645C24.4412 0.853012 28.747 -0.0021068 33.095 3.89786e-06H106.889C111.235 -0.0021033 115.539 0.851837 119.555 2.51307C123.571 4.1743 127.221 6.61029 130.295 9.68196C133.37 12.7536 135.81 16.4008 137.475 20.4153C139.14 24.4297 139.998 28.7329 140 33.079Z" fill="#01796F"/>
-                                </g>
-                                <g style="mix-blend-mode:soft-light" opacity="0.4">
-                                    <path d="M70.3317 54.5723L66.5137 74.641L70.3317 77.689V54.5723Z" fill="black"/>
-                                </g>
-                                <path fill-rule="evenodd" clip-rule="evenodd" d="M30.625 78.75C30.625 126.875 109.375 126.875 109.375 78.75C82.8049 88.449 56.5549 88.7385 30.625 78.75Z" fill="white"/>
-                                <path fill-rule="evenodd" clip-rule="evenodd" d="M38.2812 100.625C53.9758 117.905 85.6945 118.128 101.719 101.261C80.7727 105.466 59.1322 105.249 38.2812 100.625Z" fill="#DDDBDB"/>
-                                <path d="M70.0399 115.93C60.0158 116.112 50.2313 112.848 42.31 106.681C33.9878 99.9325 29.5312 90.2825 29.5312 78.8211C29.5331 78.6354 29.5789 78.4527 29.665 78.2882C29.7511 78.1238 29.875 77.9822 30.0264 77.8754C30.18 77.7729 30.3553 77.708 30.5384 77.6857C30.7214 77.6635 30.9072 77.6845 31.0807 77.7471C56.143 87.3651 82.3235 87.3651 108.871 77.7471C109.047 77.6727 109.238 77.6433 109.428 77.6615C109.618 77.6797 109.8 77.7451 109.959 77.8516C110.117 77.9581 110.247 78.1025 110.336 78.2717C110.425 78.441 110.47 78.6298 110.469 78.8211C110.469 90.2825 106.076 99.9325 97.6899 106.681C89.7877 112.826 80.0359 116.089 70.0399 115.93ZM31.9113 80.4882C32.8058 103.251 52.0858 113.654 70.0399 113.654C87.9941 113.654 107.354 103.251 108.169 80.4562C82.1638 89.5451 56.5264 89.5611 31.9113 80.4882Z" fill="black"/>
-                                <g style="mix-blend-mode:soft-light" opacity="0.4">
-                                    <path d="M53.5938 117.031C58.518 122.676 80.972 123.05 86.4062 117.031C75.5985 119.463 64.4015 119.463 53.5938 117.031Z" fill="black"/>
-                                </g>
-                                <path d="M106.578 69.9118H99.3586C88.7227 69.9118 88.7227 69.992 88.7227 59.2758V55.6663C88.7269 51.8895 90.2291 48.2686 92.8997 45.598C95.5704 42.9274 99.1913 41.4251 102.968 41.4209C106.745 41.4251 110.366 42.9274 113.036 45.598C115.707 48.2686 117.209 51.8895 117.214 55.6663V59.356C117.181 69.992 117.181 69.9118 106.578 69.9118Z" fill="black"/>
-                                <path d="M98.1854 51.9704C99.5649 51.9704 100.683 50.852 100.683 49.4725C100.683 48.093 99.5649 46.9746 98.1854 46.9746C96.8058 46.9746 95.6875 48.093 95.6875 49.4725C95.6875 50.852 96.8058 51.9704 98.1854 51.9704Z" fill="white"/>
-                                <path opacity="0.1" d="M102.812 61.5935C106.022 61.5935 108.625 58.9912 108.625 55.7811C108.625 52.571 106.022 49.9688 102.812 49.9688C99.6023 49.9688 97 52.571 97 55.7811C97 58.9912 99.6023 61.5935 102.812 61.5935Z" fill="white"/>
-                                <path d="M39.8588 69.9118H32.6399C22.0039 69.9118 22.0039 69.992 22.0039 59.2758V55.6663C22.0082 51.8895 23.5104 48.2686 26.181 45.598C28.8516 42.9274 32.4725 41.4251 36.2494 41.4209C40.0262 41.4251 43.6471 42.9274 46.3177 45.598C48.9883 48.2686 50.4906 51.8895 50.4948 55.6663V59.356C50.4627 69.992 50.4627 69.9118 39.8588 69.9118Z" fill="black"/>
-                                <path d="M31.5807 51.9895C32.9628 51.9895 34.0833 50.8691 34.0833 49.487C34.0833 48.1048 32.9628 46.9844 31.5807 46.9844C30.1986 46.9844 29.0781 48.1048 29.0781 49.487C29.0781 50.8691 30.1986 51.9895 31.5807 51.9895Z" fill="white"/>
-                                <path opacity="0.1" d="M36.2159 61.631C39.432 61.631 42.0392 59.0238 42.0392 55.8077C42.0392 52.5916 39.432 49.9844 36.2159 49.9844C32.9998 49.9844 30.3926 52.5916 30.3926 55.8077C30.3926 59.0238 32.9998 61.631 36.2159 61.631Z" fill="white"/>
-                                <defs>
-                                    <filter id="successappointment-1" x="0" y="0" width="140" height="140" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-                                        <feFlood flood-opacity="0" result="BackgroundImageFix"/>
-                                        <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
-                                        <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
-                                        <feOffset dx="-6" dy="-6"/>
-                                        <feComposite in2="hardAlpha" operator="arithmetic" k2="-1" k3="1"/>
-                                        <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.04 0"/>
-                                        <feBlend mode="normal" in2="shape" result="effect1_innerShadow_6171_79183"/>
-                                    </filter>
-                                </defs>
-                            </svg>
-                        </div>
-
-                        <div class="appointmentsuccess-details">
-                            <h1 class="successtitle">Payment Successful!</h1>
-                            <div class="textinfo">
-                                <p class="successtext">
-                                    <span class="link">Session link and intake form</span> has been sent to <span class="mail">nabilemon.qtec@gmail.com.</span>
-                                    Please fillup the form before the session!
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- APPOINTMENT-SUCCESS END -->
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- SUCCESS MODAL END -->
     
     <!-- BOOTSTRAP JS -->
     <script src="assets/js/bootstrap.bundle.min.js"></script>
@@ -1235,7 +778,5 @@
     <script src="assets/js/pageloader.js"></script>
     <!-- TOOLTIP JS -->
     <script src="assets/js/mindlytooltip.js"></script>
-    <!-- TOOLTIP JS -->
-    <script src="assets/js/modal.js"></script>
 </body>
 </html>

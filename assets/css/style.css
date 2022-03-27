@@ -404,6 +404,9 @@
 		12/12 FONT SIZES
 \*------------------------------------*/
 /*------------------------------------*\
+		13/13 FONT SIZES
+\*------------------------------------*/
+/*------------------------------------*\
 		14/14 FONT SIZES
 \*------------------------------------*/
 /*------------------------------------*\
@@ -18955,6 +18958,134 @@ h6 {
   transform: scale(1.1);
 }
 
-.dashboard {
+.allproviders-content .provider-filter {
+  padding: 3.5625rem 0rem 0.75rem;
+}
+
+@media screen and (max-width: 61.9375rem) {
+  .allproviders-content .provider-filter {
+    padding: 3rem 0rem 0.75rem;
+  }
+}
+
+.allproviders-content .provider-filter .providersearch {
+  width: 100%;
+  border: solid 0.0625rem #E2E8F0;
+  border-radius: 0.375rem;
+  border-radius: 0.375rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  overflow: hidden;
+  background: #ffffff;
+}
+
+.allproviders-content .provider-filter .providersearch .btn-search {
+  height: 2.875rem;
+  width: 2.875rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  overflow: hidden;
+  padding: 0.75rem;
+  background: #F94E26;
+  -webkit-transition: all 250ms ease-in-out;
+  transition: all 250ms ease-in-out;
+}
+
+.allproviders-content .provider-filter .providersearch .btn-search:not([disabled]):hover {
+  background: #e63106;
+}
+
+.allproviders-content .provider-filter .providersearch .searchfield {
+  padding: 0.6875rem 1rem;
+  width: calc(100% - 3rem);
+  background: transparent;
+  color: #2D3748;
+  font-family: "Gilroy";
+  font-style: normal;
+  font-size: 0.8125rem;
+  font-weight: 500;
+  line-height: 1;
+}
+
+.allproviders-content .provider-filter .providersearch .searchfield::-webkit-input-placeholder {
+  color: #B5B5BD;
+}
+
+.allproviders-content .provider-filter .providersearch .searchfield:-ms-input-placeholder {
+  color: #B5B5BD;
+}
+
+.allproviders-content .provider-filter .providersearch .searchfield::-ms-input-placeholder {
+  color: #B5B5BD;
+}
+
+.allproviders-content .provider-filter .providersearch .searchfield::placeholder {
+  color: #B5B5BD;
+}
+
+.allproviders-content .provider-filter .selectbox {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 0.5rem;
+}
+
+.allproviders-content .provider-filter .selectbox .selectlabel {
+  color: #425466;
+  font-family: "Gilroy";
+  font-style: normal;
+  font-size: 0.875rem;
+  font-weight: 500;
+  line-height: 1.42857;
+}
+
+.allproviders-content .provider-filter .selectbox .selectfield {
+  border: solid 0.0625rem #E2E8F0;
+  border-radius: 0.375rem;
+  border-radius: 0.375rem;
+  padding: 0.96875rem 1rem;
+  width: 100%;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -o-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+  background: #ffffff url("data:image/svg+xml,%3Csvg width='11' height='11' viewBox='0 0 11 11' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cmask id='mask0_6207_55743' style='mask-type:alpha' maskUnits='userSpaceOnUse' x='0' y='0' width='11' height='11'%3E%3Cpath d='M4.98448 7.65869L1.68707 3.89022C1.29811 3.4457 1.61379 2.75 2.20446 2.75H8.79928C9.38995 2.75 9.70564 3.4457 9.31668 3.89022L6.01927 7.65869C5.74536 7.97173 5.25838 7.97173 4.98448 7.65869Z' fill='black'/%3E%3C/mask%3E%3Cg mask='url(%23mask0_6207_55743)'%3E%3Crect width='11' height='11' fill='%23B5B5BD'/%3E%3C/g%3E%3C/svg%3E%0A") no-repeat center right 4%;
+  color: #B5B5BD;
+  font-family: "Gilroy";
+  font-style: normal;
+  font-size: 0.9375rem;
+  font-weight: 500;
+  line-height: 1;
+}
+
+.allproviders-content .providers {
+  padding: 5rem 0rem;
+}
+
+@media screen and (max-width: 61.9375rem) {
+  .allproviders-content .providers {
+    padding: 3rem 0rem;
+  }
+}
+
+.dashboard-navigation {
   padding: 4rem 0rem;
+  background: linear-gradient(268.05deg, #ffffff -73.52%, rgba(255, 255, 255, 0) 148.76%);
 }
