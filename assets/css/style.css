@@ -1368,8 +1368,8 @@ h6 {
 .header-content .authentication-menu .userprofile .desktop-profile .desktopdropdown {
   width: 21.875rem;
   background: #ffffff;
-  -webkit-box-shadow: 0 0 1 rgba(12, 26, 75, 0.24), 0 1 1 1 rgba(50, 50, 71, 0.05);
-          box-shadow: 0 0 1 rgba(12, 26, 75, 0.24), 0 1 1 1 rgba(50, 50, 71, 0.05);
+  -webkit-box-shadow: 0 0 0.0625rem rgba(12, 26, 75, 0.24), 0 0.1875rem 0.5rem -0.0625rem rgba(50, 50, 71, 0.05);
+          box-shadow: 0 0 0.0625rem rgba(12, 26, 75, 0.24), 0 0.1875rem 0.5rem -0.0625rem rgba(50, 50, 71, 0.05);
   gap: 4rem;
   position: absolute;
   top: 100%;
@@ -1744,8 +1744,8 @@ h6 {
 .registerheader-content .authentication-menu .userprofile .desktop-profile .desktopdropdown {
   width: 21.875rem;
   background: #ffffff;
-  -webkit-box-shadow: 0 0 1 rgba(12, 26, 75, 0.24), 0 1 1 1 rgba(50, 50, 71, 0.05);
-          box-shadow: 0 0 1 rgba(12, 26, 75, 0.24), 0 1 1 1 rgba(50, 50, 71, 0.05);
+  -webkit-box-shadow: 0 0 0.0625rem rgba(12, 26, 75, 0.24), 0 0.1875rem 0.5rem -0.0625rem rgba(50, 50, 71, 0.05);
+          box-shadow: 0 0 0.0625rem rgba(12, 26, 75, 0.24), 0 0.1875rem 0.5rem -0.0625rem rgba(50, 50, 71, 0.05);
   gap: 12.25rem;
   position: absolute;
   top: 100%;
@@ -3030,6 +3030,111 @@ h6 {
 
 .btn-readmore:not([disabled]):hover {
   color: #F94E26;
+}
+
+.btn-booking {
+  background: transparent;
+  border: none;
+  border: solid 0.0625rem transparent;
+  border-radius: 0.375rem;
+  border-radius: 0.375rem;
+  font-family: "Gilroy";
+  font-style: normal;
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1;
+  padding: 0.75rem 1.5rem;
+  text-align: center;
+  -webkit-transition: all 250ms ease-in-out;
+  transition: all 250ms ease-in-out;
+}
+
+.btn-bordered {
+  background: #ffffff;
+  color: #F94E26;
+  border-color: #F94E26;
+}
+
+.btn-bordered:not([disabled]):hover {
+  background: #F94E26;
+  color: #ffffff;
+}
+
+.btn-fill {
+  background: #F94E26;
+  color: #ffffff;
+}
+
+.btn-fill:not([disabled]):hover {
+  background: #ffffff;
+  color: #F94E26;
+  border-color: #F94E26;
+}
+
+.btn-print {
+  background: #FCAF15;
+  color: #ffffff;
+}
+
+.btn-print:not([disabled]):hover {
+  background: #ffffff;
+  color: #FCAF15;
+  border-color: #FCAF15;
+}
+
+.btn-text {
+  color: #4A5568;
+}
+
+.btn-text:not([disabled]):hover {
+  color: #FCAF15;
+}
+
+.btn-continue {
+  padding: 1rem 3.375rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 0.625rem;
+  border-radius: 0.5rem;
+  border-radius: 0.5rem;
+  background: #F94E26;
+  -webkit-transition: all 250ms ease-in-out;
+  transition: all 250ms ease-in-out;
+}
+
+.btn-continue .text {
+  font-family: "Gilroy";
+  font-style: normal;
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1;
+  color: #ffffff;
+}
+
+.btn-continue .icon {
+  height: 0.875rem;
+  width: 0.875rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  overflow: hidden;
+}
+
+.btn-continue:not([disabled]):hover {
+  background: #cd2b06;
 }
 
 .cardcharacteristic {
@@ -5810,6 +5915,888 @@ h6 {
   background: #D9F3F1;
 }
 
+.card-booking {
+  background: #ffffff url(../images/modal/cardbg.svg) no-repeat center center/cover;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 1.5rem;
+  padding: 1.125rem 1.5rem 1.25rem;
+}
+
+@media screen and (max-width: 35.9375rem) {
+  .card-booking {
+    padding: 0.875rem;
+  }
+}
+
+.card-booking-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  align-items: center;
+}
+
+@media screen and (max-width: 48rem) {
+  .card-booking-header {
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+}
+
+@media screen and (max-width: 35.9375rem) {
+  .card-booking-header {
+    overflow: hidden;
+  }
+}
+
+.card-booking-header .bookinginfo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 0.5rem;
+}
+
+.card-booking-header .bookinginfo .session-providername {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 1.375rem;
+}
+
+@media screen and (max-width: 48rem) {
+  .card-booking-header .bookinginfo .session-providername {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    gap: 0.5rem;
+  }
+}
+
+.card-booking-header .bookinginfo .session-providername .session {
+  min-width: 13.125rem;
+}
+
+.card-booking-header .bookinginfo .session-providername .session .sessionid {
+  font-family: "Gilroy";
+  font-style: normal;
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.625;
+  color: #718096;
+}
+
+@media screen and (max-width: 35.9375rem) {
+  .card-booking-header .bookinginfo .session-providername .session .sessionid {
+    font-size: 0.875rem;
+  }
+}
+
+.card-booking-header .bookinginfo .session-providername .providername {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 0.5rem;
+}
+
+@media screen and (max-width: 25.875rem) {
+  .card-booking-header .bookinginfo .session-providername .providername {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    gap: 0rem;
+  }
+}
+
+.card-booking-header .bookinginfo .session-providername .providername .title {
+  font-family: "Gilroy";
+  font-style: normal;
+  font-size: 1rem;
+  font-weight: normal;
+  line-height: 1.625;
+  color: #4A5568;
+  -webkit-font-feature-settings: 'salt'on;
+          font-feature-settings: 'salt'on;
+}
+
+@media screen and (max-width: 35.9375rem) {
+  .card-booking-header .bookinginfo .session-providername .providername .title {
+    font-size: 0.875rem;
+  }
+}
+
+.card-booking-header .bookinginfo .session-providername .providername .name {
+  font-family: "Gilroy";
+  font-style: normal;
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.625;
+  color: #4A5568;
+}
+
+@media screen and (max-width: 35.9375rem) {
+  .card-booking-header .bookinginfo .session-providername .providername .name {
+    font-size: 0.875rem;
+  }
+}
+
+.card-booking-header .bookinginfo .date-time {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 1.375rem;
+}
+
+@media screen and (max-width: 48rem) {
+  .card-booking-header .bookinginfo .date-time {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    gap: 0.5rem;
+  }
+}
+
+.card-booking-header .bookinginfo .date-time .date {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 0.5rem;
+}
+
+.card-booking-header .bookinginfo .date-time .date .icon {
+  height: 1.25rem;
+  width: 1.25rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  overflow: hidden;
+}
+
+.card-booking-header .bookinginfo .date-time .date .icon svg {
+  width: 100%;
+  height: 100%;
+}
+
+.card-booking-header .bookinginfo .date-time .date .sessiondate {
+  font-family: "Gilroy";
+  font-style: normal;
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.625;
+  color: #4A5568;
+}
+
+@media screen and (max-width: 35.9375rem) {
+  .card-booking-header .bookinginfo .date-time .date .sessiondate {
+    font-size: 0.875rem;
+  }
+}
+
+.card-booking-header .bookinginfo .date-time .time {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 0.5rem;
+}
+
+.card-booking-header .bookinginfo .date-time .time .icon {
+  height: 1.25rem;
+  width: 1.25rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  overflow: hidden;
+}
+
+.card-booking-header .bookinginfo .date-time .time .icon svg {
+  width: 100%;
+  height: 100%;
+}
+
+.card-booking-header .bookinginfo .date-time .time .sessiontime {
+  font-family: "Gilroy";
+  font-style: normal;
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.625;
+  color: #4A5568;
+}
+
+@media screen and (max-width: 35.9375rem) {
+  .card-booking-header .bookinginfo .date-time .time .sessiontime {
+    font-size: 0.875rem;
+  }
+}
+
+.card-booking-header .bookingstatus .bookingbadge {
+  display: inline-block;
+  background: #EDF2F7;
+  color: #4A5568;
+  border-radius: 6.25rem;
+  border-radius: 6.25rem;
+  padding: 0.5rem 0.75rem;
+  font-family: "Gilroy";
+  font-style: normal;
+  font-size: 0.875rem;
+  font-weight: 700;
+  line-height: 1.42857;
+  text-align: center;
+}
+
+@media screen and (max-width: 35.9375rem) {
+  .card-booking-header .bookingstatus .bookingbadge {
+    font-size: 0.75rem;
+  }
+}
+
+.card-booking-body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+@media screen and (max-width: 48rem) {
+  .card-booking-body {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+}
+
+.card-booking-body .bookingbuttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 1rem;
+}
+
+@media screen and (max-width: 48rem) {
+  .card-booking-body .bookingbuttons {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+}
+
+@media screen and (max-width: 31.25rem) {
+  .card-booking-body .bookingbuttons {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    gap: 0.5rem;
+  }
+}
+
+@media screen and (max-width: 31.25rem) {
+  .card-booking-body .refund {
+    -ms-flex-item-align: end;
+        align-self: flex-end;
+  }
+}
+
+.card-booking-body .refund .btn-refund {
+  background: transparent;
+  border: none;
+  color: #4A5568;
+  font-family: "Gilroy";
+  font-style: normal;
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1;
+  -webkit-transition: all 250ms ease-in-out;
+  transition: all 250ms ease-in-out;
+}
+
+@media screen and (max-width: 35.9375rem) {
+  .card-booking-body .refund .btn-refund {
+    font-size: 0.875rem;
+  }
+}
+
+.card-booking-body .refund .btn-refund:not([disabled]):hover {
+  color: #FCAF15;
+}
+
+.card-booking-body .refund .btn-review {
+  background: transparent;
+  border: none;
+  color: #FCAF15;
+  font-family: "Gilroy";
+  font-style: normal;
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1;
+  -webkit-transition: all 250ms ease-in-out;
+  transition: all 250ms ease-in-out;
+}
+
+@media screen and (max-width: 35.9375rem) {
+  .card-booking-body .refund .btn-review {
+    font-size: 0.875rem;
+  }
+}
+
+.card-booking-body .refund .btn-review:not([disabled]):hover {
+  color: #4A5568;
+}
+
+.card-cancel-booking {
+  background: #ffffff url(../images/modal/cardbg-2.svg) no-repeat center center/cover;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 1.5rem;
+  padding: 1.125rem 1.5rem 1.25rem;
+}
+
+.card-cancel-booking-info {
+  padding: 1.875rem 1.5rem 1.25rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  align-items: center;
+  border-bottom: dashed 0.0625rem #CBD5E0;
+  margin: 0rem -1.5rem;
+}
+
+@media screen and (max-width: 48rem) {
+  .card-cancel-booking-info {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    gap: 1rem;
+  }
+}
+
+.card-cancel-booking-info .leftinfo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 1rem;
+  width: 60%;
+}
+
+@media screen and (max-width: 48rem) {
+  .card-cancel-booking-info .leftinfo {
+    width: 100%;
+  }
+}
+
+.card-cancel-booking-info .leftinfo .icon {
+  height: 1.6875rem;
+  width: 1.6875rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  overflow: hidden;
+}
+
+.card-cancel-booking-info .leftinfo .icon svg {
+  width: 100%;
+  height: 100%;
+}
+
+.card-cancel-booking-info .leftinfo .infotext {
+  width: calc(100% - 1.6875rem);
+}
+
+.card-cancel-booking-info .leftinfo .infotext .text {
+  font-family: "Gilroy";
+  font-style: normal;
+  font-size: 1rem;
+  font-weight: normal;
+  line-height: 1.625;
+  color: #4A5568;
+}
+
+@media screen and (max-width: 35.9375rem) {
+  .card-cancel-booking-info .leftinfo .infotext .text {
+    font-size: 0.875rem;
+  }
+}
+
+.card-cancel-booking-info .rightinfo {
+  width: 40%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+@media screen and (max-width: 48rem) {
+  .card-cancel-booking-info .rightinfo {
+    width: 100%;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
+}
+
+.card-cancel-booking-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  align-items: center;
+}
+
+@media screen and (max-width: 48rem) {
+  .card-cancel-booking-header {
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+}
+
+@media screen and (max-width: 35.9375rem) {
+  .card-cancel-booking-header {
+    overflow: hidden;
+  }
+}
+
+.card-cancel-booking-header .bookinginfo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 0.5rem;
+}
+
+.card-cancel-booking-header .bookinginfo .session-providername {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 1.375rem;
+}
+
+@media screen and (max-width: 48rem) {
+  .card-cancel-booking-header .bookinginfo .session-providername {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    gap: 0.5rem;
+  }
+}
+
+.card-cancel-booking-header .bookinginfo .session-providername .session {
+  min-width: 13.125rem;
+}
+
+.card-cancel-booking-header .bookinginfo .session-providername .session .sessionid {
+  font-family: "Gilroy";
+  font-style: normal;
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.625;
+  color: #718096;
+}
+
+@media screen and (max-width: 35.9375rem) {
+  .card-cancel-booking-header .bookinginfo .session-providername .session .sessionid {
+    font-size: 0.875rem;
+  }
+}
+
+.card-cancel-booking-header .bookinginfo .session-providername .providername {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 0.5rem;
+}
+
+@media screen and (max-width: 25.875rem) {
+  .card-cancel-booking-header .bookinginfo .session-providername .providername {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    gap: 0rem;
+  }
+}
+
+.card-cancel-booking-header .bookinginfo .session-providername .providername .title {
+  font-family: "Gilroy";
+  font-style: normal;
+  font-size: 1rem;
+  font-weight: normal;
+  line-height: 1.625;
+  color: #4A5568;
+  -webkit-font-feature-settings: 'salt'on;
+          font-feature-settings: 'salt'on;
+}
+
+@media screen and (max-width: 35.9375rem) {
+  .card-cancel-booking-header .bookinginfo .session-providername .providername .title {
+    font-size: 0.875rem;
+  }
+}
+
+.card-cancel-booking-header .bookinginfo .session-providername .providername .name {
+  font-family: "Gilroy";
+  font-style: normal;
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.625;
+  color: #4A5568;
+}
+
+@media screen and (max-width: 35.9375rem) {
+  .card-cancel-booking-header .bookinginfo .session-providername .providername .name {
+    font-size: 0.875rem;
+  }
+}
+
+.card-cancel-booking-header .bookinginfo .date-time {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 1.375rem;
+}
+
+@media screen and (max-width: 48rem) {
+  .card-cancel-booking-header .bookinginfo .date-time {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    gap: 0.5rem;
+  }
+}
+
+.card-cancel-booking-header .bookinginfo .date-time .date {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 0.5rem;
+}
+
+.card-cancel-booking-header .bookinginfo .date-time .date .icon {
+  height: 1.25rem;
+  width: 1.25rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  overflow: hidden;
+}
+
+.card-cancel-booking-header .bookinginfo .date-time .date .icon svg {
+  width: 100%;
+  height: 100%;
+}
+
+.card-cancel-booking-header .bookinginfo .date-time .date .sessiondate {
+  font-family: "Gilroy";
+  font-style: normal;
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.625;
+  color: #4A5568;
+}
+
+@media screen and (max-width: 35.9375rem) {
+  .card-cancel-booking-header .bookinginfo .date-time .date .sessiondate {
+    font-size: 0.875rem;
+  }
+}
+
+.card-cancel-booking-header .bookinginfo .date-time .time {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 0.5rem;
+}
+
+.card-cancel-booking-header .bookinginfo .date-time .time .icon {
+  height: 1.25rem;
+  width: 1.25rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  overflow: hidden;
+}
+
+.card-cancel-booking-header .bookinginfo .date-time .time .icon svg {
+  width: 100%;
+  height: 100%;
+}
+
+.card-cancel-booking-header .bookinginfo .date-time .time .sessiontime {
+  font-family: "Gilroy";
+  font-style: normal;
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.625;
+  color: #4A5568;
+}
+
+@media screen and (max-width: 35.9375rem) {
+  .card-cancel-booking-header .bookinginfo .date-time .time .sessiontime {
+    font-size: 0.875rem;
+  }
+}
+
+.card-cancel-booking-header .bookingstatus .bookingbadge {
+  display: inline-block;
+  background: #EDF2F7;
+  color: #4A5568;
+  border-radius: 6.25rem;
+  border-radius: 6.25rem;
+  padding: 0.5rem 0.75rem;
+  font-family: "Gilroy";
+  font-style: normal;
+  font-size: 0.875rem;
+  font-weight: 700;
+  line-height: 1.42857;
+  text-align: center;
+}
+
+@media screen and (max-width: 35.9375rem) {
+  .card-cancel-booking-header .bookingstatus .bookingbadge {
+    font-size: 0.75rem;
+  }
+}
+
+.card-cancel-booking-body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+@media screen and (max-width: 48rem) {
+  .card-cancel-booking-body {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+}
+
+.card-cancel-booking-body .bookingbuttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 1rem;
+}
+
+@media screen and (max-width: 48rem) {
+  .card-cancel-booking-body .bookingbuttons {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+}
+
+@media screen and (max-width: 31.25rem) {
+  .card-cancel-booking-body .bookingbuttons {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    gap: 0.5rem;
+  }
+}
+
+@media screen and (max-width: 31.25rem) {
+  .card-cancel-booking-body .refund {
+    -ms-flex-item-align: end;
+        align-self: flex-end;
+  }
+}
+
+.card-cancel-booking-body .refund .btn-refund {
+  background: transparent;
+  border: none;
+  color: #4A5568;
+  font-family: "Gilroy";
+  font-style: normal;
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1;
+  -webkit-transition: all 250ms ease-in-out;
+  transition: all 250ms ease-in-out;
+}
+
+@media screen and (max-width: 35.9375rem) {
+  .card-cancel-booking-body .refund .btn-refund {
+    font-size: 0.875rem;
+  }
+}
+
+.card-cancel-booking-body .refund .btn-refund:not([disabled]):hover {
+  color: #FCAF15;
+}
+
+.card-cancel-booking-body .refund .btn-review {
+  background: transparent;
+  border: none;
+  color: #FCAF15;
+  font-family: "Gilroy";
+  font-style: normal;
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1;
+  -webkit-transition: all 250ms ease-in-out;
+  transition: all 250ms ease-in-out;
+}
+
+@media screen and (max-width: 35.9375rem) {
+  .card-cancel-booking-body .refund .btn-review {
+    font-size: 0.875rem;
+  }
+}
+
+.card-cancel-booking-body .refund .btn-review:not([disabled]):hover {
+  color: #4A5568;
+}
+
 .owl-carousel .owl-item img {
   width: 100%;
   max-width: 100%;
@@ -5955,8 +6942,8 @@ h6 {
   width: 3.75rem;
   border-radius: 100%;
   background: #ffffff;
-  -webkit-box-shadow: 0 0 1 rgba(12, 26, 75, 0.1), 0 1 1 rgba(20, 37, 63, 0.06);
-          box-shadow: 0 0 1 rgba(12, 26, 75, 0.1), 0 1 1 rgba(20, 37, 63, 0.06);
+  -webkit-box-shadow: 0 0 0.0625rem rgba(12, 26, 75, 0.1), 0 0.625rem 1rem rgba(20, 37, 63, 0.06);
+          box-shadow: 0 0 0.0625rem rgba(12, 26, 75, 0.1), 0 0.625rem 1rem rgba(20, 37, 63, 0.06);
   top: 0;
   right: -4.75rem;
   z-index: 810;
@@ -7814,8 +8801,8 @@ h6 {
   width: 100%;
   height: 100%;
   background: #ffffff;
-  -webkit-box-shadow: 0 0 1 rgba(12, 26, 75, 0.24), 0 1 1 1 rgba(50, 50, 71, 0.05);
-          box-shadow: 0 0 1 rgba(12, 26, 75, 0.24), 0 1 1 1 rgba(50, 50, 71, 0.05);
+  -webkit-box-shadow: 0 0 0.0625rem rgba(12, 26, 75, 0.24), 0 0.1875rem 0.5rem -0.0625rem rgba(50, 50, 71, 0.05);
+          box-shadow: 0 0 0.0625rem rgba(12, 26, 75, 0.24), 0 0.1875rem 0.5rem -0.0625rem rgba(50, 50, 71, 0.05);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -20057,5 +21044,708 @@ h6 {
 }
 
 .dashboard .profiledetails .profile-body .profileinformation .submitrow .btn-save:not([disabled]):hover {
+  background: #FCAF15;
+}
+
+.dashboard .memberbooking {
+  padding: 4rem 0rem 7.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 3.5rem;
+}
+
+@media screen and (max-width: 61.9375rem) {
+  .dashboard .memberbooking {
+    padding: 2rem 0rem 4rem;
+    gap: 2.25rem;
+  }
+}
+
+.dashboard .memberbooking-header .memberbookingtitle {
+  font-family: "Gilroy";
+  font-style: normal;
+  font-size: 2.25rem;
+  font-weight: 600;
+  line-height: 1.36;
+  color: #2D3748;
+}
+
+@media screen and (max-width: 61.9375rem) {
+  .dashboard .memberbooking-header .memberbookingtitle {
+    font-family: "Gilroy";
+    font-style: normal;
+    font-size: 1.75rem;
+    font-weight: 600;
+    line-height: 1.36;
+  }
+}
+
+.dashboard .memberbooking-body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 1.5rem;
+}
+
+.dashboard .memberbooking-body .nav-tabs {
+  border: 0;
+  margin: 0;
+  padding: 0;
+  gap: 0.125rem;
+}
+
+.dashboard .memberbooking-body .nav-tabs .nav-link {
+  border: 0;
+  margin: 0;
+  padding: 0.9375rem 0.5rem;
+  background: transparent;
+  color: #27272E;
+  border-radius: 0.5rem;
+  border-radius: 0.5rem;
+  font-family: "Gilroy";
+  font-style: normal;
+  font-size: 0.875rem;
+  font-weight: 600;
+  line-height: 1;
+}
+
+.dashboard .memberbooking-body .nav-tabs .nav-link.active {
+  background: #ffffff;
+  -webkit-box-shadow: 0 0.25rem 1.25rem -0.125rem rgba(50, 50, 71, 0.08);
+          box-shadow: 0 0.25rem 1.25rem -0.125rem rgba(50, 50, 71, 0.08);
+  -webkit-filter: drop-shadow(0 0 0.0625rem rgba(12, 26, 75, 0.1));
+          filter: drop-shadow(0 0 0.0625rem rgba(12, 26, 75, 0.1));
+}
+
+.dashboard .memberbooking-body .nav-tabs .nav-link:hover:not(.active) {
+  background: #ffffff;
+  -webkit-box-shadow: 0 0.25rem 1.25rem -0.125rem rgba(50, 50, 71, 0.08);
+          box-shadow: 0 0.25rem 1.25rem -0.125rem rgba(50, 50, 71, 0.08);
+  -webkit-filter: drop-shadow(0 0 0.0625rem rgba(12, 26, 75, 0.1));
+          filter: drop-shadow(0 0 0.0625rem rgba(12, 26, 75, 0.1));
+}
+
+.dashboard .memberbooking-body .upcomingdetails {
+  max-width: 80%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 1rem;
+}
+
+@media screen and (max-width: 74.9375rem) {
+  .dashboard .memberbooking-body .upcomingdetails {
+    max-width: 100%;
+  }
+}
+
+.dashboard .memberbooking-body .pastdetails {
+  max-width: 80%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 1rem;
+}
+
+@media screen and (max-width: 74.9375rem) {
+  .dashboard .memberbooking-body .pastdetails {
+    max-width: 100%;
+  }
+}
+
+.dashboard .memberintakeform {
+  padding: 4rem 0rem 7.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 3.5rem;
+}
+
+@media screen and (max-width: 61.9375rem) {
+  .dashboard .memberintakeform {
+    padding: 2rem 0rem 4rem;
+    gap: 2.25rem;
+  }
+}
+
+.dashboard .memberintakeform-header .breadcrumb {
+  margin-bottom: 0rem;
+}
+
+.dashboard .memberintakeform-header .breadcrumb-item {
+  font-family: "Gilroy";
+  font-style: normal;
+  font-size: 2.25rem;
+  font-weight: 600;
+  line-height: 1.36;
+  color: #2D3748;
+}
+
+@media screen and (max-width: 61.9375rem) {
+  .dashboard .memberintakeform-header .breadcrumb-item {
+    font-family: "Gilroy";
+    font-style: normal;
+    font-size: 1.75rem;
+    font-weight: 600;
+    line-height: 1.36;
+  }
+}
+
+@media screen and (max-width: 48rem) {
+  .dashboard .memberintakeform-header .breadcrumb-item {
+    font-family: "Gilroy";
+    font-style: normal;
+    font-size: 1.5rem;
+    font-weight: 600;
+    line-height: 1.36;
+  }
+}
+
+.dashboard .memberintakeform-header .breadcrumb-item a {
+  font-family: "Gilroy";
+  font-style: normal;
+  font-size: 2.25rem;
+  font-weight: 600;
+  line-height: 1.36;
+  color: #2D3748;
+}
+
+@media screen and (max-width: 61.9375rem) {
+  .dashboard .memberintakeform-header .breadcrumb-item a {
+    font-family: "Gilroy";
+    font-style: normal;
+    font-size: 1.75rem;
+    font-weight: 600;
+    line-height: 1.36;
+  }
+}
+
+@media screen and (max-width: 48rem) {
+  .dashboard .memberintakeform-header .breadcrumb-item a {
+    font-family: "Gilroy";
+    font-style: normal;
+    font-size: 1.5rem;
+    font-weight: 600;
+    line-height: 1.36;
+  }
+}
+
+.dashboard .memberintakeform-body {
+  background: #ffffff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 3rem;
+}
+
+.dashboard .memberintakeform-body .userbooking {
+  border-bottom: solid 0.0625rem #EDF2F7;
+}
+
+.dashboard .memberintakeform-body .userbooking .bookinginfos {
+  max-width: 80%;
+}
+
+@media screen and (max-width: 74.9375rem) {
+  .dashboard .memberintakeform-body .userbooking .bookinginfos {
+    max-width: 100%;
+  }
+}
+
+.dashboard .memberintakeform-body .intakeformtabs {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 2.5rem;
+  padding: 0rem 1.5rem 1.5rem;
+}
+
+.dashboard .memberintakeform-body .intakeformtabs .nav-tabs {
+  border: 0;
+  margin: 0;
+  padding: 0;
+  gap: 0.125rem;
+}
+
+.dashboard .memberintakeform-body .intakeformtabs .nav-tabs .nav-link {
+  border: 0;
+  margin: 0;
+  padding: 0.9375rem 0.5rem;
+  background: transparent;
+  color: #27272E;
+  border-radius: 0.5rem;
+  border-radius: 0.5rem;
+  font-family: "Gilroy";
+  font-style: normal;
+  font-size: 0.875rem;
+  font-weight: 600;
+  line-height: 1;
+}
+
+.dashboard .memberintakeform-body .intakeformtabs .nav-tabs .nav-link.active {
+  background: #ffffff;
+  -webkit-box-shadow: 0 0.25rem 1.25rem -0.125rem rgba(50, 50, 71, 0.08);
+          box-shadow: 0 0.25rem 1.25rem -0.125rem rgba(50, 50, 71, 0.08);
+  -webkit-filter: drop-shadow(0 0 0.0625rem rgba(12, 26, 75, 0.1));
+          filter: drop-shadow(0 0 0.0625rem rgba(12, 26, 75, 0.1));
+}
+
+.dashboard .memberintakeform-body .intakeformtabs .nav-tabs .nav-link:hover:not(.active) {
+  background: #ffffff;
+  -webkit-box-shadow: 0 0.25rem 1.25rem -0.125rem rgba(50, 50, 71, 0.08);
+          box-shadow: 0 0.25rem 1.25rem -0.125rem rgba(50, 50, 71, 0.08);
+  -webkit-filter: drop-shadow(0 0 0.0625rem rgba(12, 26, 75, 0.1));
+          filter: drop-shadow(0 0 0.0625rem rgba(12, 26, 75, 0.1));
+}
+
+.dashboard .memberintakeform-body .intakeformtabs .personalinformation {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 2.75rem;
+}
+
+@media screen and (max-width: 61.9375rem) {
+  .dashboard .memberintakeform-body .intakeformtabs .personalinformation {
+    gap: 1.5rem;
+  }
+}
+
+.dashboard .memberintakeform-body .intakeformtabs .personalinformation .inputrow {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 1.5rem;
+  width: 100%;
+}
+
+@media screen and (max-width: 61.9375rem) {
+  .dashboard .memberintakeform-body .intakeformtabs .personalinformation .inputrow {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+.dashboard .memberintakeform-body .intakeformtabs .personalinformation .inputrow .inputcol {
+  width: 50%;
+}
+
+@media screen and (max-width: 61.9375rem) {
+  .dashboard .memberintakeform-body .intakeformtabs .personalinformation .inputrow .inputcol {
+    width: 100%;
+  }
+}
+
+.dashboard .memberintakeform-body .intakeformtabs .personalinformation .inputrow .inputbox {
+  width: 100%;
+}
+
+.dashboard .memberintakeform-body .intakeformtabs .personalinformation .inputrow .inputbox .inputinfo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 0.5rem;
+}
+
+.dashboard .memberintakeform-body .intakeformtabs .personalinformation .inputrow .inputbox .inputinfo .inputlabel {
+  color: #425466;
+  font-family: "Gilroy";
+  font-style: normal;
+  font-size: 0.875rem;
+  font-weight: 500;
+  line-height: 1.42857;
+}
+
+.dashboard .memberintakeform-body .intakeformtabs .personalinformation .inputrow .inputbox .inputinfo .inputlabel span {
+  color: #FF3000;
+}
+
+.dashboard .memberintakeform-body .intakeformtabs .personalinformation .inputrow .inputbox .inputinfo .inputfield {
+  background: #ffffff;
+  color: #4A5568;
+  border: solid 0.0625rem #E2E8F0;
+  border-radius: 0.375rem;
+  border-radius: 0.375rem;
+  font-family: "Gilroy";
+  font-style: normal;
+  font-size: 0.9375rem;
+  font-weight: 500;
+  line-height: 1;
+  padding: 0.8125rem 1rem;
+}
+
+.dashboard .memberintakeform-body .intakeformtabs .personalinformation .inputrow .inputbox .inputinfo .inputfield::-webkit-input-placeholder {
+  color: #B5B5BD;
+}
+
+.dashboard .memberintakeform-body .intakeformtabs .personalinformation .inputrow .inputbox .inputinfo .inputfield:-ms-input-placeholder {
+  color: #B5B5BD;
+}
+
+.dashboard .memberintakeform-body .intakeformtabs .personalinformation .inputrow .inputbox .inputinfo .inputfield::-ms-input-placeholder {
+  color: #B5B5BD;
+}
+
+.dashboard .memberintakeform-body .intakeformtabs .personalinformation .inputrow .inputbox .inputinfo .inputfield::placeholder {
+  color: #B5B5BD;
+}
+
+.dashboard .memberintakeform-body .intakeformtabs .personalinformation .inputrow .inputbox .inputinfo .selectfield {
+  border: solid 0.0625rem #E2E8F0;
+  border-radius: 0.375rem;
+  border-radius: 0.375rem;
+  padding: 0.90625rem 1rem;
+  width: 100%;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -o-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+  background: #ffffff url("data:image/svg+xml,%3Csvg width='11' height='11' viewBox='0 0 11 11' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cmask id='mask0_6207_55743' style='mask-type:alpha' maskUnits='userSpaceOnUse' x='0' y='0' width='11' height='11'%3E%3Cpath d='M4.98448 7.65869L1.68707 3.89022C1.29811 3.4457 1.61379 2.75 2.20446 2.75H8.79928C9.38995 2.75 9.70564 3.4457 9.31668 3.89022L6.01927 7.65869C5.74536 7.97173 5.25838 7.97173 4.98448 7.65869Z' fill='black'/%3E%3C/mask%3E%3Cg mask='url(%23mask0_6207_55743)'%3E%3Crect width='11' height='11' fill='%23B5B5BD'/%3E%3C/g%3E%3C/svg%3E%0A") no-repeat center right 4%;
+  color: #B5B5BD;
+  font-family: "Gilroy";
+  font-style: normal;
+  font-size: 0.9375rem;
+  font-weight: 500;
+  line-height: 1;
+}
+
+.dashboard .memberintakeform-body .intakeformtabs .personalinformation .inputrow .inputbox .inputinfo .genderbox {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 0.5rem;
+}
+
+@media screen and (max-width: 48rem) {
+  .dashboard .memberintakeform-body .intakeformtabs .personalinformation .inputrow .inputbox .inputinfo .genderbox {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+}
+
+.dashboard .memberintakeform-body .intakeformtabs .personalinformation .inputrow .inputbox .inputinfo .genderbox .gender {
+  width: 33.33%;
+}
+
+@media screen and (max-width: 48rem) {
+  .dashboard .memberintakeform-body .intakeformtabs .personalinformation .inputrow .inputbox .inputinfo .genderbox .gender {
+    width: 100%;
+  }
+}
+
+.dashboard .memberintakeform-body .intakeformtabs .personalinformation .inputrow .inputbox .inputinfo .genderbox .gender input[type="radio"]:checked ~ label::before {
+  border-color: #01796F;
+}
+
+.dashboard .memberintakeform-body .intakeformtabs .personalinformation .inputrow .inputbox .inputinfo .genderbox .gender input[type="radio"]:checked ~ label::after {
+  background: #01796F;
+  opacity: 1;
+}
+
+.dashboard .memberintakeform-body .intakeformtabs .personalinformation .inputrow .inputbox .inputinfo .genderbox .gender label {
+  width: 100%;
+  position: relative;
+  padding: 0.875rem 1.125rem 0.875rem 3rem;
+  border: solid 0.0625rem #E2E8F0;
+  font-family: "Gilroy";
+  font-style: normal;
+  font-size: 0.875rem;
+  font-weight: 500;
+  line-height: 1.71429;
+  color: #27272E;
+  cursor: pointer;
+}
+
+.dashboard .memberintakeform-body .intakeformtabs .personalinformation .inputrow .inputbox .inputinfo .genderbox .gender label::before {
+  content: '';
+  height: 1.25rem;
+  width: 1.25rem;
+  border-radius: 100%;
+  border: solid 0.125rem #C9CED6;
+  background: transparent;
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+  left: 1.125rem;
+  -webkit-transition: all 250ms ease-in-out;
+  transition: all 250ms ease-in-out;
+}
+
+.dashboard .memberintakeform-body .intakeformtabs .personalinformation .inputrow .inputbox .inputinfo .genderbox .gender label::after {
+  content: '';
+  height: 0.625rem;
+  width: 0.625rem;
+  border-radius: 100%;
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+  left: 1.4375rem;
+  background: #ffffff;
+  opacity: 0;
+  -webkit-transition: all 250ms ease-in-out;
+  transition: all 250ms ease-in-out;
+}
+
+.dashboard .memberintakeform-body .intakeformtabs .personalinformation .inputrow .inputbox .inputinfo textarea:focus {
+  outline: none;
+}
+
+.dashboard .memberintakeform-body .intakeformtabs .personalinformation .inputrow .uploadinfo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 0.5rem;
+}
+
+.dashboard .memberintakeform-body .intakeformtabs .personalinformation .inputrow .uploadinfo .inputlabel {
+  color: #425466;
+  font-family: "Gilroy";
+  font-style: normal;
+  font-size: 0.875rem;
+  font-weight: 500;
+  line-height: 1.42857;
+}
+
+.dashboard .memberintakeform-body .intakeformtabs .personalinformation .inputrow .uploadinfo .inputlabel span {
+  color: #FF3000;
+}
+
+.dashboard .memberintakeform-body .intakeformtabs .personalinformation .inputrow .uploadinfo .uploadbox {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border: solid 0.0625rem #E2E8F0;
+  padding: 0.5rem;
+  border-radius: 0.375rem;
+  border-radius: 0.375rem;
+}
+
+.dashboard .memberintakeform-body .intakeformtabs .personalinformation .inputrow .uploadinfo .uploadbox .keepingbox {
+  width: calc(100% - 6rem);
+  padding: 0rem 0.5rem;
+  color: #B5B5BD;
+  font-family: "Gilroy";
+  font-style: normal;
+  font-size: 0.9375rem;
+  font-weight: 500;
+  line-height: 1;
+}
+
+.dashboard .memberintakeform-body .intakeformtabs .personalinformation .inputrow .uploadinfo .uploadbox .btn-upload {
+  background: #01796F;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 0.375rem;
+  padding: 0.5rem 1rem;
+  border-radius: 0.25rem;
+  border-radius: 0.25rem;
+  cursor: pointer;
+  width: 6rem;
+  -webkit-transition: all 250ms ease-in-out;
+  transition: all 250ms ease-in-out;
+}
+
+.dashboard .memberintakeform-body .intakeformtabs .personalinformation .inputrow .uploadinfo .uploadbox .btn-upload .icon {
+  height: 1rem;
+  width: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  overflow: hidden;
+}
+
+.dashboard .memberintakeform-body .intakeformtabs .personalinformation .inputrow .uploadinfo .uploadbox .btn-upload .icon svg {
+  width: 100%;
+  height: 100%;
+}
+
+.dashboard .memberintakeform-body .intakeformtabs .personalinformation .inputrow .uploadinfo .uploadbox .btn-upload .text {
+  font-family: "Gilroy";
+  font-style: normal;
+  font-size: 0.75rem;
+  font-weight: 600;
+  line-height: 1;
+  color: #ffffff;
+}
+
+.dashboard .memberintakeform-body .intakeformtabs .personalinformation .inputrow .uploadinfo .uploadbox .btn-upload:not([disabled]):hover {
+  background: #01ac9d;
+}
+
+.dashboard .memberintakeform-body .intakeformtabs .personalinformation .checkrow {
+  max-width: 60%;
+}
+
+@media screen and (max-width: 74.9375rem) {
+  .dashboard .memberintakeform-body .intakeformtabs .personalinformation .checkrow {
+    max-width: 100%;
+  }
+}
+
+.dashboard .memberintakeform-body .intakeformtabs .personalinformation .checkrow .requiredcheck:checked ~ .checklabel::before {
+  background: #01796F;
+  border-color: #01796F;
+}
+
+.dashboard .memberintakeform-body .intakeformtabs .personalinformation .checkrow .requiredcheck:checked ~ .checklabel::after {
+  opacity: 1;
+  visibility: visible;
+}
+
+.dashboard .memberintakeform-body .intakeformtabs .personalinformation .checkrow .checklabel {
+  position: relative;
+  padding-left: 1.875rem;
+  cursor: pointer;
+}
+
+.dashboard .memberintakeform-body .intakeformtabs .personalinformation .checkrow .checklabel .text {
+  font-family: "Gilroy";
+  font-style: normal;
+  font-size: 0.875rem;
+  font-weight: 500;
+  line-height: 1.71429;
+  color: #4A5568;
+  margin-top: -0.25rem;
+  display: inline-block;
+}
+
+.dashboard .memberintakeform-body .intakeformtabs .personalinformation .checkrow .checklabel .text::-moz-selection {
+  background: transparent;
+  color: #4A5568;
+}
+
+.dashboard .memberintakeform-body .intakeformtabs .personalinformation .checkrow .checklabel .text::selection {
+  background: transparent;
+  color: #4A5568;
+}
+
+.dashboard .memberintakeform-body .intakeformtabs .personalinformation .checkrow .checklabel::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: transparent;
+  height: 1.25rem;
+  width: 1.25rem;
+  border: solid 0.125rem #CBD5E0;
+  border-radius: 0.25rem;
+  border-radius: 0.25rem;
+  -webkit-transition: all 250ms ease-in-out;
+  transition: all 250ms ease-in-out;
+}
+
+.dashboard .memberintakeform-body .intakeformtabs .personalinformation .checkrow .checklabel::after {
+  content: '';
+  position: absolute;
+  top: 0.25rem;
+  left: 0.5rem;
+  width: 0.3125rem;
+  height: 0.625rem;
+  border: solid 0.125rem #ffffff;
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+  border-top: 0;
+  border-left: 0;
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: all 250ms ease-in-out;
+  transition: all 250ms ease-in-out;
+}
+
+.dashboard .memberintakeform-body .intakeformtabs .personalinformation .submitrow {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  gap: 1.5rem;
+}
+
+.dashboard .memberintakeform-body .intakeformtabs .personalinformation .submitrow .btn-save {
+  padding: 1rem 5rem;
+  text-align: center;
+  border-radius: 0.5rem;
+  border-radius: 0.5rem;
+  background: #CBD5E0;
+  color: #ffffff;
+  font-family: "Gilroy";
+  font-style: normal;
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1;
+  -webkit-transition: all 250ms ease-in-out;
+  transition: all 250ms ease-in-out;
+}
+
+.dashboard .memberintakeform-body .intakeformtabs .personalinformation .submitrow .btn-save:not([disabled]):hover {
   background: #FCAF15;
 }

@@ -35,6 +35,10 @@ $arrowHoverColor: #409E85;
 $step-border: #EBEBEB;
 $table-border: #C2C9D1;
 $fileBg: #EEEEEE;
+$tabLinkText: #27272E;
+$textDanger: #FF3000;
+
+$checkBorder: rgba(5, 16, 51, 0.0001);
 
 // BACKGROUND COLORS
 $bodyBg: #f7f8f6;
@@ -82,8 +86,11 @@ $activeshadow: drop-shadow(0rem 0rem .0625rem $shadow-1) drop-shadow(0rem .625re
 $inputshadow: 0rem .0625rem .125rem $shadow-3,
 0rem 0rem .0625rem $shadow-4;
 
-$dropdownshadow: 0 0 length(1) $shadow-5,
-0 length(3) length(8) length(-1) $shadow-6;
+$dropdownshadow: 0 0 .0625rem $shadow-5,
+0 .1875rem .5rem -0.0625rem $shadow-6;
 
-$modalBtnShadow: 0 0 length(1) $shadow-1,
-0 length(10) length(16) $shadow-2;
+$modalBtnShadow: 0 0 .0625rem $shadow-1,
+0 0.625rem 1rem $shadow-2;
+
+$tabShadow: 0 .25rem 1.25rem -0.125rem $shadow-3;
+$tabLinkShadow: drop-shadow(0 0 .0625rem $shadow-1);

@@ -1715,6 +1715,492 @@
     background: $bg-3;
 }
 
+.card-booking {
+    background: $white url(../images/modal/cardbg.svg) no-repeat center center/cover;
+    @include flex-column;
+    gap: length(24);
+    padding: length(18) length(24) length(20);
+
+    @include breakpoint(phone575) {
+        padding: length(14);
+    }
+
+    &-header {
+        @include flex-center-between;
+
+        @include breakpoint(phone768) {
+            align-items: flex-start;
+        }
+
+        @include breakpoint(phone575) {
+            overflow: hidden;
+        }
+
+        .bookinginfo {
+            @include flex-column;
+            gap: length(8);
+
+            .session-providername {
+                @include flex-center-vert;
+                gap: length(22);
+
+                @include breakpoint(phone768) {
+                    flex-direction: column;
+                    align-items: flex-start;
+                    gap: length(8);
+                }
+
+                .session {
+                    min-width: length(210);
+
+                    .sessionid {
+                        @include font-26-16-semibold;
+                        color: $gray-600;
+
+                        @include breakpoint(phone575) {
+                            font-size: length(14);
+                        }
+                    }
+                }
+
+                .providername {
+                    @include flex-center-vert;
+                    gap: length(8);
+
+                    @include breakpoint(phone414) {
+                        flex-direction: column;
+                        align-items: flex-start;
+                        gap: length(0);
+                    }
+
+                    .title {
+                        @include font-26-16-normal;
+                        color: $gray-700;
+                        font-feature-settings: 'salt'on;
+
+                        @include breakpoint(phone575) {
+                            font-size: length(14);
+                        }
+                    }
+
+                    .name {
+                        @include font-26-16-semibold;
+                        color: $gray-700;
+
+                        @include breakpoint(phone575) {
+                            font-size: length(14);
+                        }
+                    }
+                }
+            }
+
+            .date-time {
+                @include flex-center-vert;
+                gap: length(22);
+
+                @include breakpoint(phone768) {
+                    flex-direction: column;
+                    align-items: flex-start;
+                    gap: length(8);
+                }
+
+                .date {
+                    @include flex-center-vert;
+                    gap: length(8);
+
+                    .icon {
+                        @include square(length(20));
+                        @include flex-center;
+                        overflow: hidden;
+
+                        svg {
+                            @include wh100;
+                        }
+                    }
+
+                    .sessiondate {
+                        @include font-26-16-semibold;
+                        color: $gray-700;
+
+                        @include breakpoint(phone575) {
+                            font-size: length(14);
+                        }
+                    }
+                }
+
+                .time {
+                    @include flex-center-vert;
+                    gap: length(8);
+
+                    .icon {
+                        @include square(length(20));
+                        @include flex-center;
+                        overflow: hidden;
+
+                        svg {
+                            @include wh100;
+                        }
+                    }
+
+                    .sessiontime {
+                        @include font-26-16-semibold;
+                        color: $gray-700;
+
+                        @include breakpoint(phone575) {
+                            font-size: length(14);
+                        }
+                    }
+                }
+            }
+        }
+
+        .bookingstatus {
+            .bookingbadge {
+                display: inline-block;
+                @include setBgColor($gray-200, $gray-700);
+                @include radius(100);
+                padding: length(8) length(12);
+                @include font-20-14-bold;
+                text-align: center;
+
+                @include breakpoint(phone575) {
+                    font-size: length(12);
+                }
+            }
+        }
+    }
+
+    &-body {
+        @include flex-center-between;
+        gap: length(12);
+
+        @include breakpoint(phone768) {
+            flex-wrap: wrap;
+        }
+
+        .bookingbuttons {
+            @include flex-center-vert;
+            gap: length(16);
+
+            @include breakpoint(phone768) {
+                flex-wrap: wrap;
+            }
+
+            @include breakpoint(phone500) {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: length(8);
+            }
+        }
+
+        .refund {
+
+            @include breakpoint(phone500) {
+                align-self: flex-end;
+            }
+
+            .btn-refund {
+                @include transparent-button;
+                color: $gray-700;
+                @include font-16-16-semibold;
+                @include transitions;
+
+                @include breakpoint(phone575) {
+                    font-size: length(14);
+                }
+
+                @include hover {
+                    color: $secondary;
+                }
+            }
+
+            .btn-review {
+                @include transparent-button;
+                color: $secondary;
+                @include font-16-16-semibold;
+                @include transitions;
+
+                @include breakpoint(phone575) {
+                    font-size: length(14);
+                }
+
+                @include hover {
+                    color: $gray-700;
+                }
+            }
+        }
+    }
+}
+
+.card-cancel-booking {
+    background: $white url(../images/modal/cardbg-2.svg) no-repeat center center/cover;
+    @include flex-column;
+    gap: length(24);
+    padding: length(18) length(24) length(20);
+
+    &-info {
+        padding: length(30) length(24) length(20);
+        @include flex-center-between;
+        @include border-single(bottom, dashed, 1, $gray-400);
+        margin: length(0) length(-24);
+
+        @include breakpoint(phone768) {
+            flex-direction: column;
+            align-items: flex-start;
+            gap: length(16);
+        }
+
+        .leftinfo {
+            @include flex-center-vert;
+            gap: length(16);
+            width: 60%;
+
+            @include breakpoint(phone768) {
+                @include w100;
+            }
+
+            .icon {
+                @include square(length(27));
+                @include flex-center;
+                overflow: hidden;
+
+                svg {
+                    @include wh100;
+                }
+            }
+
+            .infotext {
+                width: calc(100% - 1.6875rem);
+
+                .text {
+                    @include font-26-16-normal;
+                    color: $gray-700;
+
+                    @include breakpoint(phone575) {
+                        font-size: length(14);
+                    }
+                }
+            }
+        }
+
+        .rightinfo {
+            width: 40%;
+            @include flex-end;
+
+            @include breakpoint(phone768) {
+                @include w100;
+                justify-content: flex-start;
+            }
+        }
+    }
+
+    &-header {
+        @include flex-center-between;
+
+        @include breakpoint(phone768) {
+            align-items: flex-start;
+        }
+
+        @include breakpoint(phone575) {
+            overflow: hidden;
+        }
+
+        .bookinginfo {
+            @include flex-column;
+            gap: length(8);
+
+            .session-providername {
+                @include flex-center-vert;
+                gap: length(22);
+
+                @include breakpoint(phone768) {
+                    flex-direction: column;
+                    align-items: flex-start;
+                    gap: length(8);
+                }
+
+                .session {
+                    min-width: length(210);
+
+                    .sessionid {
+                        @include font-26-16-semibold;
+                        color: $gray-600;
+
+                        @include breakpoint(phone575) {
+                            font-size: length(14);
+                        }
+                    }
+                }
+
+                .providername {
+                    @include flex-center-vert;
+                    gap: length(8);
+
+                    @include breakpoint(phone414) {
+                        flex-direction: column;
+                        align-items: flex-start;
+                        gap: length(0);
+                    }
+
+                    .title {
+                        @include font-26-16-normal;
+                        color: $gray-700;
+                        font-feature-settings: 'salt'on;
+
+                        @include breakpoint(phone575) {
+                            font-size: length(14);
+                        }
+                    }
+
+                    .name {
+                        @include font-26-16-semibold;
+                        color: $gray-700;
+
+                        @include breakpoint(phone575) {
+                            font-size: length(14);
+                        }
+                    }
+                }
+            }
+
+            .date-time {
+                @include flex-center-vert;
+                gap: length(22);
+
+                @include breakpoint(phone768) {
+                    flex-direction: column;
+                    align-items: flex-start;
+                    gap: length(8);
+                }
+
+                .date {
+                    @include flex-center-vert;
+                    gap: length(8);
+
+                    .icon {
+                        @include square(length(20));
+                        @include flex-center;
+                        overflow: hidden;
+
+                        svg {
+                            @include wh100;
+                        }
+                    }
+
+                    .sessiondate {
+                        @include font-26-16-semibold;
+                        color: $gray-700;
+
+                        @include breakpoint(phone575) {
+                            font-size: length(14);
+                        }
+                    }
+                }
+
+                .time {
+                    @include flex-center-vert;
+                    gap: length(8);
+
+                    .icon {
+                        @include square(length(20));
+                        @include flex-center;
+                        overflow: hidden;
+
+                        svg {
+                            @include wh100;
+                        }
+                    }
+
+                    .sessiontime {
+                        @include font-26-16-semibold;
+                        color: $gray-700;
+
+                        @include breakpoint(phone575) {
+                            font-size: length(14);
+                        }
+                    }
+                }
+            }
+        }
+
+        .bookingstatus {
+            .bookingbadge {
+                display: inline-block;
+                @include setBgColor($gray-200, $gray-700);
+                @include radius(100);
+                padding: length(8) length(12);
+                @include font-20-14-bold;
+                text-align: center;
+
+                @include breakpoint(phone575) {
+                    font-size: length(12);
+                }
+            }
+        }
+    }
+
+    &-body {
+        @include flex-center-between;
+        gap: length(12);
+
+        @include breakpoint(phone768) {
+            flex-wrap: wrap;
+        }
+
+        .bookingbuttons {
+            @include flex-center-vert;
+            gap: length(16);
+
+            @include breakpoint(phone768) {
+                flex-wrap: wrap;
+            }
+
+            @include breakpoint(phone500) {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: length(8);
+            }
+        }
+
+        .refund {
+
+            @include breakpoint(phone500) {
+                align-self: flex-end;
+            }
+
+            .btn-refund {
+                @include transparent-button;
+                color: $gray-700;
+                @include font-16-16-semibold;
+                @include transitions;
+
+                @include breakpoint(phone575) {
+                    font-size: length(14);
+                }
+
+                @include hover {
+                    color: $secondary;
+                }
+            }
+
+            .btn-review {
+                @include transparent-button;
+                color: $secondary;
+                @include font-16-16-semibold;
+                @include transitions;
+
+                @include breakpoint(phone575) {
+                    font-size: length(14);
+                }
+
+                @include hover {
+                    color: $gray-700;
+                }
+            }
+        }
+    }
+}
+
 .owl-carousel {
     .owl-item {
         img {

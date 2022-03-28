@@ -426,5 +426,461 @@
         }
     }
 
+    .memberbooking {
+        padding: length(64) length(0) length(120);
+        @include flex-column;
+        gap: length(56);
 
+        @include breakpoint(tablet991) {
+            padding: length(32) length(0) length(64);
+            gap: length(36);
+        }
+
+        &-header {
+            .memberbookingtitle {
+                @include heading-1;
+                color: $gray-800;
+
+                @include breakpoint(tablet991) {
+                    @include heading-2;
+                }
+            }
+        }
+
+        &-body {
+            @include flex-column;
+            gap: length(24);
+
+            .nav-tabs {
+                border: 0;
+                margin: 0;
+                padding: 0;
+                gap: length(2);
+
+                .nav-link {
+                    border: 0;
+                    margin: 0;
+                    padding: length(15) length(8);
+                    @include setBgColor(transparent, $tabLinkText);
+                    @include radius(8);
+                    @include font-14-14-semibold;
+
+                    &.active {
+                        background: $white;
+                        box-shadow: $tabShadow;
+                        filter: $tabLinkShadow;
+                    }
+
+                    &:hover:not(.active) {
+                        background: $white;
+                        box-shadow: $tabShadow;
+                        filter: $tabLinkShadow;
+                    }
+                }
+            }
+
+            .upcomingdetails {
+                max-width: 80%;
+                @include flex-column;
+                gap: length(16);
+
+                @include breakpoint(desktop1199) {
+                    max-width: 100%;
+                }
+            }
+
+            .pastdetails {
+                max-width: 80%;
+                @include flex-column;
+                gap: length(16);
+
+                @include breakpoint(desktop1199) {
+                    max-width: 100%;
+                }
+            }
+        }
+    }
+
+    .memberintakeform {
+        padding: length(64) length(0) length(120);
+        @include flex-column;
+        gap: length(56);
+
+        @include breakpoint(tablet991) {
+            padding: length(32) length(0) length(64);
+            gap: length(36);
+        }
+
+        &-header {
+            .breadcrumb {
+                margin-bottom: length(0);
+
+                &-item {
+                    @include heading-1;
+                    color: $gray-800;
+
+                    @include breakpoint(tablet991) {
+                        @include heading-2;
+                    }
+
+                    @include breakpoint(phone768) {
+                        @include heading-3;
+                    }
+
+                    a {
+                        @include heading-1;
+                        color: $gray-800;
+
+                        @include breakpoint(tablet991) {
+                            @include heading-2;
+                        }
+
+                        @include breakpoint(phone768) {
+                            @include heading-3;
+                        }
+                    }
+                }
+            }
+        }
+
+        &-body {
+            background: $white;
+            @include flex-column;
+            gap: length(48);
+
+            .userbooking {
+                @include border-single(bottom, solid, 1, $gray-200);
+
+                .bookinginfos {
+                    max-width: 80%;
+
+                    @include breakpoint(desktop1199) {
+                        max-width: 100%;
+                    }
+                }
+            }
+
+            .intakeformtabs {
+                @include flex-column;
+                gap: length(40);
+                padding: length(0) length(24) length(24);
+
+                .nav-tabs {
+                    border: 0;
+                    margin: 0;
+                    padding: 0;
+                    gap: length(2);
+
+                    .nav-link {
+                        border: 0;
+                        margin: 0;
+                        padding: length(15) length(8);
+                        @include setBgColor(transparent, $tabLinkText);
+                        @include radius(8);
+                        @include font-14-14-semibold;
+
+                        &.active {
+                            background: $white;
+                            box-shadow: $tabShadow;
+                            filter: $tabLinkShadow;
+                        }
+
+                        &:hover:not(.active) {
+                            background: $white;
+                            box-shadow: $tabShadow;
+                            filter: $tabLinkShadow;
+                        }
+                    }
+                }
+
+                .personalinformation {
+                    @include flex-column;
+                    gap: length(44);
+
+                    @include breakpoint(tablet991) {
+                        gap: length(24);
+                    }
+
+                    .inputrow {
+                        @include flex-center-vert;
+                        gap: length(24);
+                        @include w100;
+
+                        @include breakpoint(tablet991) {
+                            flex-direction: column;
+                        }
+
+                        .inputcol {
+                            width: 50%;
+
+                            @include breakpoint(tablet991) {
+                                @include w100;
+                            }
+                        }
+
+                        .inputbox {
+                            @include w100;
+
+                            .inputinfo {
+                                @include flex-column;
+                                gap: length(8);
+
+                                .inputlabel {
+                                    color: $dateColor;
+                                    @include font-20-14-medium;
+
+                                    span {
+                                        color: $textDanger;
+                                    }
+                                }
+
+                                .inputfield {
+                                    @include setBgColor($white, $gray-700);
+                                    @include border(solid, 1, $gray-300);
+                                    @include radius(6);
+                                    @include font-15-15-medium;
+                                    padding: length(13) length(16);
+
+                                    &::placeholder {
+                                        color: $textPlaceholder;
+                                    }
+                                }
+
+                                .selectfield {
+                                    @include border(solid, 1, $gray-300);
+                                    @include radius(6);
+                                    padding: length(14.5) length(16);
+                                    @include w100;
+                                    -webkit-appearance: none;
+                                    -moz-appearance: none;
+                                    -o-appearance: none;
+                                    -ms-appearance: none;
+                                    appearance: none;
+                                    background: $white url("data:image/svg+xml,%3Csvg width='11' height='11' viewBox='0 0 11 11' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cmask id='mask0_6207_55743' style='mask-type:alpha' maskUnits='userSpaceOnUse' x='0' y='0' width='11' height='11'%3E%3Cpath d='M4.98448 7.65869L1.68707 3.89022C1.29811 3.4457 1.61379 2.75 2.20446 2.75H8.79928C9.38995 2.75 9.70564 3.4457 9.31668 3.89022L6.01927 7.65869C5.74536 7.97173 5.25838 7.97173 4.98448 7.65869Z' fill='black'/%3E%3C/mask%3E%3Cg mask='url(%23mask0_6207_55743)'%3E%3Crect width='11' height='11' fill='%23B5B5BD'/%3E%3C/g%3E%3C/svg%3E%0A") no-repeat center right 4%;
+                                    color: $textPlaceholder;
+                                    @include font-15-15-medium;
+                                }
+
+                                .genderbox {
+                                    @include flex-center-vert;
+                                    gap: length(8);
+
+                                    @include breakpoint(phone768) {
+                                        flex-wrap: wrap;
+                                    }
+
+                                    .gender {
+                                        width: 33.33%;
+
+                                        @include breakpoint(phone768) {
+                                            @include w100;
+                                        }
+
+                                        input[type="radio"] {
+                                            &:checked~label {
+                                                &::before {
+                                                    border-color: $primary;
+                                                }
+
+                                                &::after {
+                                                    background: $primary;
+                                                    opacity: 1;
+                                                }
+                                            }
+                                        }
+
+                                        label {
+                                            @include w100;
+                                            position: relative;
+                                            padding: length(14) length(18) length(14) length(48);
+                                            @include border(solid, 1, $gray-300);
+                                            @include font-24-14-medium;
+                                            color: $tabLinkText;
+                                            cursor: pointer;
+
+                                            &::before {
+                                                content: '';
+                                                @include square(length(20));
+                                                @include circle;
+                                                @include border(solid, 2, $checkBorder);
+                                                background: transparent;
+                                                position: absolute;
+                                                top: 50%;
+                                                @include transform(translateY(-50%));
+                                                left: length(18);
+                                                @include transitions;
+                                            }
+
+                                            &::after {
+                                                content: '';
+                                                @include square(length(10));
+                                                @include circle;
+                                                position: absolute;
+                                                top: 50%;
+                                                @include transform(translateY(-50%));
+                                                left: length(23);
+                                                background: $white;
+                                                opacity: 0;
+                                                @include transitions;
+                                            }
+                                        }
+                                    }
+                                }
+
+                                textarea {
+                                    &:focus {
+                                        outline: none;
+                                    }
+                                }
+                            }
+                        }
+
+                        .uploadinfo {
+                            @include flex-column;
+                            gap: length(8);
+
+                            .inputlabel {
+                                color: $dateColor;
+                                @include font-20-14-medium;
+
+                                span {
+                                    color: $textDanger;
+                                }
+                            }
+
+                            .uploadbox {
+                                @include flex-center-vert;
+                                @include border(solid, 1, $gray-300);
+                                padding: length(8);
+                                @include radius(6);
+
+                                .keepingbox {
+                                    width: calc(100% - 6rem);
+                                    padding: length(0) length(8);
+                                    color: $textPlaceholder;
+                                    @include font-15-15-medium;
+                                }
+
+                                .btn-upload {
+                                    background: $primary;
+                                    @include flex-center;
+                                    gap: length(6);
+                                    padding: length(8) length(16);
+                                    @include radius(4);
+                                    cursor: pointer;
+                                    width: length(96);
+                                    @include transitions;
+
+                                    .icon {
+                                        @include square(length(16));
+                                        @include flex-center;
+                                        overflow: hidden;
+
+                                        svg {
+                                            @include wh100;
+                                        }
+                                    }
+
+                                    .text {
+                                        @include font-12-12-semibold;
+                                        color: $white;
+                                    }
+
+                                    @include hover {
+                                        background: lighten($primary, 10%);
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                    .checkrow {
+                        max-width: 60%;
+
+                        @include breakpoint(desktop1199) {
+                            max-width: 100%;
+                        }
+
+                        .requiredcheck {
+                            &:checked~.checklabel {
+                                &::before {
+                                    background: $primary;
+                                    border-color: $primary;
+                                }
+
+                                &::after {
+                                    opacity: 1;
+                                    visibility: visible;
+                                }
+                            }
+                        }
+
+                        .checklabel {
+                            position: relative;
+                            padding-left: length(30);
+                            cursor: pointer;
+
+                            .text {
+                                @include font-24-14-medium;
+                                color: $gray-700;
+                                margin-top: length(-4);
+                                display: inline-block;
+
+                                &::selection {
+                                    background: transparent;
+                                    color: $gray-700;
+                                }
+                            }
+
+                            &::before {
+                                content: '';
+                                position: absolute;
+                                top: 0;
+                                left: 0;
+                                background: transparent;
+                                @include square(length(20));
+                                @include border(solid, 2, $gray-400);
+                                @include radius(4);
+                                @include transitions;
+                            }
+
+                            &::after {
+                                content: '';
+                                position: absolute;
+                                top: length(4);
+                                left: length(8);
+                                width: length(5);
+                                height: length(10);
+                                @include border(solid, 2, $white);
+                                @include transform(rotate(45deg));
+                                border-top: 0;
+                                border-left: 0;
+                                opacity: 0;
+                                visibility: hidden;
+                                @include transitions;
+                            }
+                        }
+                    }
+
+                    .submitrow {
+                        @include flex-end;
+                        gap: length(24);
+
+                        .btn-save {
+                            padding: length(16) length(80);
+                            text-align: center;
+                            @include radius(8);
+                            @include setBgColor($gray-400, $white);
+                            @include font-16-16-semibold;
+                            @include transitions;
+
+                            @include hover {
+                                background: $secondary;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
 }

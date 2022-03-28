@@ -268,3 +268,72 @@
         color: $tertiary;
     }
 }
+
+.btn-booking {
+    @include transparent-button;
+    @include border(solid, 1, transparent);
+    @include radius(6);
+    @include font-16-16-semibold;
+    padding: length(12) length(24);
+    text-align: center;
+    @include transitions;
+}
+
+.btn-bordered {
+    @include setBgColor($white, $tertiary);
+    border-color: $tertiary;
+
+    @include hover {
+        @include setBgColor($tertiary, $white);
+    }
+}
+
+.btn-fill {
+    @include setBgColor($tertiary, $white);
+
+    @include hover {
+        @include setBgColor($white, $tertiary);
+        border-color: $tertiary;
+    }
+}
+
+.btn-print {
+    @include setBgColor($secondary, $white);
+
+    @include hover {
+        @include setBgColor($white, $secondary);
+        border-color: $secondary;
+    }
+}
+
+.btn-text {
+    color: $gray-700;
+
+    @include hover {
+        color: $secondary;
+    }
+}
+
+.btn-continue {
+    padding: length(16) length(54);
+    @include flex-center;
+    gap: length(10);
+    @include radius(8);
+    background: $tertiary;
+    @include transitions;
+
+    .text {
+        @include font-16-16-semibold;
+        color: $white;
+    }
+
+    .icon {
+        @include square(length(14));
+        @include flex-center;
+        overflow: hidden;
+    }
+
+    @include hover {
+        background: darken($tertiary, 15%);
+    }
+}
