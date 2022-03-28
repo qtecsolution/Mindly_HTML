@@ -19826,3 +19826,236 @@ h6 {
   -webkit-font-feature-settings: 'salt'on;
           font-feature-settings: 'salt'on;
 }
+
+.dashboard .profiledetails {
+  padding: 4rem 0rem 7.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 3.5rem;
+}
+
+@media screen and (max-width: 61.9375rem) {
+  .dashboard .profiledetails {
+    padding: 2rem 0rem 4rem;
+    gap: 2.25rem;
+  }
+}
+
+.dashboard .profiledetails .profile-header .profiletitle {
+  font-family: "Gilroy";
+  font-style: normal;
+  font-size: 2.25rem;
+  font-weight: 600;
+  line-height: 1.36;
+  color: #2D3748;
+}
+
+@media screen and (max-width: 61.9375rem) {
+  .dashboard .profiledetails .profile-header .profiletitle {
+    font-family: "Gilroy";
+    font-style: normal;
+    font-size: 1.75rem;
+    font-weight: 600;
+    line-height: 1.36;
+  }
+}
+
+.dashboard .profiledetails .profile-body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 3.5rem;
+}
+
+@media screen and (max-width: 61.9375rem) {
+  .dashboard .profiledetails .profile-body {
+    gap: 2.25rem;
+  }
+}
+
+.dashboard .profiledetails .profile-body .profile-thumbnail {
+  height: 6.3125rem;
+  width: 6.3125rem;
+  border-radius: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: relative;
+}
+
+.dashboard .profiledetails .profile-body .profile-thumbnail img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.dashboard .profiledetails .profile-body .profile-thumbnail .filetype {
+  position: absolute;
+  right: -1rem;
+  bottom: 0;
+}
+
+.dashboard .profiledetails .profile-body .profile-thumbnail .filetype .form-label {
+  background: #EEEEEE;
+  height: 2rem;
+  width: 2rem;
+  border-radius: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  overflow: hidden;
+  padding: 0.5rem;
+  cursor: pointer;
+}
+
+.dashboard .profiledetails .profile-body .profile-thumbnail .filetype .form-label svg {
+  width: 100%;
+  height: 100%;
+}
+
+.dashboard .profiledetails .profile-body .profileinformation {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 2.75rem;
+}
+
+@media screen and (max-width: 61.9375rem) {
+  .dashboard .profiledetails .profile-body .profileinformation {
+    gap: 1.5rem;
+  }
+}
+
+.dashboard .profiledetails .profile-body .profileinformation .inputrow {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 1.5rem;
+}
+
+@media screen and (max-width: 61.9375rem) {
+  .dashboard .profiledetails .profile-body .profileinformation .inputrow {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+.dashboard .profiledetails .profile-body .profileinformation .inputrow .inputcol {
+  width: 50%;
+}
+
+@media screen and (max-width: 61.9375rem) {
+  .dashboard .profiledetails .profile-body .profileinformation .inputrow .inputcol {
+    width: 100%;
+  }
+}
+
+.dashboard .profiledetails .profile-body .profileinformation .inputrow .inputcol .inputbox .inputinfo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 0.5rem;
+}
+
+.dashboard .profiledetails .profile-body .profileinformation .inputrow .inputcol .inputbox .inputinfo .inputlabel {
+  color: #425466;
+  font-family: "Gilroy";
+  font-style: normal;
+  font-size: 0.875rem;
+  font-weight: 500;
+  line-height: 1.42857;
+}
+
+.dashboard .profiledetails .profile-body .profileinformation .inputrow .inputcol .inputbox .inputinfo .inputfield {
+  background: #ffffff;
+  color: #4A5568;
+  border: solid 0.0625rem #E2E8F0;
+  border-radius: 0.375rem;
+  border-radius: 0.375rem;
+  font-family: "Gilroy";
+  font-style: normal;
+  font-size: 0.9375rem;
+  font-weight: 500;
+  line-height: 1;
+  padding: 0.8125rem 1rem;
+}
+
+.dashboard .profiledetails .profile-body .profileinformation .inputrow .inputcol .inputbox .inputinfo .inputfield::-webkit-input-placeholder {
+  color: #B5B5BD;
+}
+
+.dashboard .profiledetails .profile-body .profileinformation .inputrow .inputcol .inputbox .inputinfo .inputfield:-ms-input-placeholder {
+  color: #B5B5BD;
+}
+
+.dashboard .profiledetails .profile-body .profileinformation .inputrow .inputcol .inputbox .inputinfo .inputfield::-ms-input-placeholder {
+  color: #B5B5BD;
+}
+
+.dashboard .profiledetails .profile-body .profileinformation .inputrow .inputcol .inputbox .inputinfo .inputfield::placeholder {
+  color: #B5B5BD;
+}
+
+.dashboard .profiledetails .profile-body .profileinformation .submitrow {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.dashboard .profiledetails .profile-body .profileinformation .submitrow .btn-save {
+  padding: 1rem 5rem;
+  text-align: center;
+  border-radius: 0.5rem;
+  border-radius: 0.5rem;
+  background: #CBD5E0;
+  color: #ffffff;
+  font-family: "Gilroy";
+  font-style: normal;
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1;
+  -webkit-transition: all 250ms ease-in-out;
+  transition: all 250ms ease-in-out;
+}
+
+.dashboard .profiledetails .profile-body .profileinformation .submitrow .btn-save:not([disabled]):hover {
+  background: #FCAF15;
+}

@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Member Dashboard | Profile</title>
     <!-- FAVICON -->
-    <link rel="shortcut icon" href="favicon.svg" type="image/svg">
+    <link rel="shortcut icon" href="../favicon.svg" type="image/svg">
     <!-- BOOTSTRAP CSS -->
     <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
     <!-- MINDLY STYLESHEET -->
@@ -490,7 +490,74 @@
                     </nav>
                 </div>
                 
-                <div class="col-lg-9 col-12"></div>
+                <div class="col-lg-9 col-12">
+                    <div class="profiledetails">
+                        <div class="profile-header">
+                            <h1 class="profiletitle">Your Profile</h1>
+                        </div>
+
+                        <div class="profile-body">
+                            <div class="profile-thumbnail">
+                                <img src="../assets/images/profile/profile-thumb.svg" alt="profile-thumb">
+                                
+                                <div class="filetype">
+                                    <input class="form-control" type="file" id="profileThumbnail" hidden>
+                                    <label for="profileThumbnail" class="form-label">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-pencil" viewBox="0 0 16 16">
+                                            <path d="M12.146.146a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1 0 .708l-10 10a.5.5 0 0 1-.168.11l-5 2a.5.5 0 0 1-.65-.65l2-5a.5.5 0 0 1 .11-.168l10-10zM11.207 2.5 13.5 4.793 14.793 3.5 12.5 1.207 11.207 2.5zm1.586 3L10.5 3.207 4 9.707V10h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.293l6.5-6.5zm-9.761 5.175-.106.106-1.528 3.821 3.821-1.528.106-.106A.5.5 0 0 1 5 12.5V12h-.5a.5.5 0 0 1-.5-.5V11h-.5a.5.5 0 0 1-.468-.325z"/>
+                                        </svg>
+                                    </label>
+                                </div>
+                            </div>
+
+                            <div class="profileinformation">
+                                <div class="inputrow">
+                                    <div class="inputcol">
+                                        <div class="inputbox">
+                                            <div class="inputinfo">
+                                                <label for="profilename" class="inputlabel">Name</label>
+                                                <input type="text" placeholder="Nabil Ahmed Emon" class="inputfield" id="profilename">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="inputcol">
+                                        <div class="inputbox">
+                                            <div class="inputinfo">
+                                                <label for="profilemail" class="inputlabel">Mail</label>
+                                                <input type="email" placeholder="nabilemon.qtec@gmail.com" class="inputfield" id="profilemail">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="inputrow">
+                                    <div class="inputcol">
+                                        <div class="inputbox">
+                                            <div class="inputinfo">
+                                                <label for="profilephone" class="inputlabel">Phone Number</label>
+                                                <input type="tel" placeholder="+88 01799391786" class="inputfield" id="profilephone">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="inputcol">
+                                        <div class="inputbox">
+                                            <div class="inputinfo">
+                                                <label for="profileaddress" class="inputlabel">Address</label>
+                                                <input type="text" placeholder="Nikunja, Dhaka, Bangladesh" class="inputfield" id="profileaddress">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="submitrow">
+                                    <button type="button" class="btn-save">Save</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </main>

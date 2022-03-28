@@ -295,4 +295,136 @@
             }
         }
     }
+
+    .profiledetails {
+        padding: length(64) length(0) length(120);
+        @include flex-column;
+        gap: length(56);
+
+        @include breakpoint(tablet991) {
+            padding: length(32) length(0) length(64);
+            gap: length(36);
+        }
+
+        .profile-header {
+            .profiletitle {
+                @include heading-1;
+                color: $gray-800;
+
+                @include breakpoint(tablet991) {
+                    @include heading-2;
+                }
+            }
+        }
+
+        .profile-body {
+            @include flex-column;
+            gap: length(56);
+
+            @include breakpoint(tablet991) {
+                gap: length(36);
+            }
+
+            .profile-thumbnail {
+                @include square(length(101));
+                @include circle;
+                @include flex-center;
+                position: relative;
+
+                img {
+                    @include wh100;
+                    object-fit: cover;
+                }
+
+                .filetype {
+                    position: absolute;
+                    right: length(-16);
+                    bottom: 0;
+
+                    .form-label {
+                        background: $fileBg;
+                        @include square(length(32));
+                        @include circle;
+                        @include flex-center;
+                        overflow: hidden;
+                        padding: length(8);
+                        cursor: pointer;
+
+                        svg {
+                            @include wh100;
+                        }
+                    }
+                }
+            }
+
+            .profileinformation {
+                @include flex-column;
+                gap: length(44);
+
+                @include breakpoint(tablet991) {
+                    gap: length(24);
+                }
+
+                .inputrow {
+                    @include flex-center-vert;
+                    gap: length(24);
+
+                    @include breakpoint(tablet991) {
+                        flex-direction: column;
+                    }
+
+                    .inputcol {
+                        width: 50%;
+
+                        @include breakpoint(tablet991) {
+                            @include w100;
+                        }
+
+                        .inputbox {
+                            .inputinfo {
+                                @include flex-column;
+                                gap: length(8);
+
+                                .inputlabel {
+                                    color: $dateColor;
+                                    @include font-20-14-medium;
+                                }
+
+                                .inputfield {
+                                    @include setBgColor($white, $gray-700);
+                                    @include border(solid, 1, $gray-300);
+                                    @include radius(6);
+                                    @include font-15-15-medium;
+                                    padding: length(13) length(16);
+
+                                    &::placeholder {
+                                        color: $textPlaceholder;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+
+                .submitrow {
+                    @include flex-end;
+
+                    .btn-save {
+                        padding: length(16) length(80);
+                        text-align: center;
+                        @include radius(8);
+                        @include setBgColor($gray-400, $white);
+                        @include font-16-16-semibold;
+                        @include transitions;
+
+                        @include hover {
+                            background: $secondary;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+
 }
