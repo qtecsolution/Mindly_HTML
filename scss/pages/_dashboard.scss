@@ -131,6 +131,10 @@
         gap: length(45);
         padding-bottom: length(68);
 
+        @include breakpoint(phone575) {
+            gap: length(0);
+        }
+
         @include breakpoint(tablet991) {
             padding-bottom: length(48);
         }
@@ -156,6 +160,11 @@
 
         .memberid-memberemail {
             @include flex-center-between;
+
+            @include breakpoint(phone575) {
+                flex-direction: column;
+                align-items: flex-start;
+            }
 
             .memberid {
                 .id {
@@ -197,6 +206,11 @@
             .info {
                 @include flex-center-vert;
                 gap: length(24);
+
+                @include breakpoint(phone575) {
+                    flex-direction: column;
+                    text-align: center;
+                }
 
                 .icon {
                     @include square(length(94));
