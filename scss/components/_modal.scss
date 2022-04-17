@@ -29,7 +29,9 @@
         }
     }
 
-    &-body {}
+    &-body {
+        
+    }
 }
 
 // UPLOAD MEDALLION MODAL END
@@ -834,6 +836,88 @@
                         @include breakpoint(phone768) {
                             @include w100;
                         }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.prescriptionmodal {
+
+    .modal-content {
+        @include radius(0);
+    }
+
+    .modal-body {
+        padding: 0;
+        
+        .prescription {
+            &-header {
+                @include flex-center-column;
+
+                @include breakpoint(mobile768) {
+                    flex-direction: row;
+                }
+
+                .logo {
+                    @include w100;
+                    @include flex-center;
+
+                    @include breakpoint(mobile768) {
+                        width: 50%;
+                    }
+
+                    .logoicon {
+                        width: length(190);
+                        height: length(48);
+
+                        img {
+                            @include wh100;
+                            object-fit: contain;
+                        }
+                    }
+                }
+
+                .docinfo {
+                    @include w100;
+                    background: $primary;
+                    padding: length(18) length(20);
+                    @include flex-column;
+                    gap: length(16);
+                    text-align: center;
+
+                    @include breakpoint(mobile768) {
+                        width: 50%;
+                        text-align: left;
+                    }
+
+                    .name {
+                        color: $white;
+                        @include font-20-12-semibold;
+                    }
+
+                    .id {
+                        color: $white;
+                        @include font-20-12-semibold;
+                    }
+                }
+            }
+
+            &-footer {
+                @include flex-end;
+                padding: length(16);
+
+                .btn-download {
+                    padding: length(16) length(24);
+                    @include radius(8);
+                    @include font-16-16-semibold;
+                    @include setBgColor($tertiary, $white);
+                    text-align: center;
+                    @include transitions;
+                    
+                    @include hover {
+                        background: $primary;
                     }
                 }
             }

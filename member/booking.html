@@ -480,7 +480,8 @@
                 </div>
                 
                 <div class="col-lg-9 col-12">
-                    <div class="memberbooking d-none">
+                    <!-- MEMBER-BOOKING START -->
+                    <div class="memberbooking">
                         <div class="memberbooking-header">
                             <h1 class="memberbookingtitle">Your Bookings</h1>
                         </div>
@@ -736,7 +737,8 @@
                                             
                                             <div class="card-booking-body">
                                                 <div class="bookingbuttons">
-                                                    <button type="button" class="btn-booking btn-bordered">View Prescription</button>
+                                                    <button type="button" class="btn-booking btn-bordered" data-bs-toggle="modal" data-bs-target="#prescriptionModal">View
+                                                        Prescription</button>
                                                     <button type="button" class="btn-booking btn-bordered">Intake Form</button>
                                                     <button type="button" class="btn-booking btn-fill">Book Next Session</button>
                                                 </div>
@@ -792,7 +794,8 @@
                                             
                                             <div class="card-booking-body">
                                                 <div class="bookingbuttons">
-                                                    <button type="button" class="btn-booking btn-bordered">View Prescription</button>
+                                                    <button type="button" class="btn-booking btn-bordered" data-bs-toggle="modal" data-bs-target="#prescriptionModal">View
+                                                        Prescription</button>
                                                     <button type="button" class="btn-booking btn-bordered">Intake Form</button>
                                                     <button type="button" class="btn-booking btn-fill">Book Next Session</button>
                                                 </div>
@@ -848,7 +851,8 @@
                                             
                                             <div class="card-booking-body">
                                                 <div class="bookingbuttons">
-                                                    <button type="button" class="btn-booking btn-bordered">View Prescription</button>
+                                                    <button type="button" class="btn-booking btn-bordered" data-bs-toggle="modal" data-bs-target="#prescriptionModal">View
+                                                        Prescription</button>
                                                     <button type="button" class="btn-booking btn-bordered">Intake Form</button>
                                                     <button type="button" class="btn-booking btn-fill">Book Next Session</button>
                                                 </div>
@@ -863,8 +867,10 @@
                             </div>
                         </div>
                     </div>
+                    <!-- MEMBER-BOOKING END -->
 
-                    <div class="memberintakeform">
+                    <!-- INTAKE-FORM SECTION START -->
+                    <div class="memberintakeform d-none">
                         <div class="memberintakeform-header">
                             <nav aria-label="breadcrumb">
                                 <ol class="breadcrumb">
@@ -1174,6 +1180,206 @@
                                             </div>
 
                                             <div class="inputrow">
+                                                <div class="tableinput">
+                                                    <div class="tableinput-header">
+                                                        <div class="titlebox"></div>
+                                                        
+                                                        <div class="databox">
+                                                            <div class="datatitlebox titlebox-1">
+                                                                <h4 class="title">Mild</h4>
+                                                            </div>
+
+                                                            <div class="datatitlebox titlebox-2">
+                                                                <h4 class="title">Moderate</h4>
+                                                            </div>
+
+                                                            <div class="datatitlebox titlebox-3">
+                                                                <h4 class="title">Severe</h4>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="tableinput-body">
+                                                        <div class="datarow">
+                                                            <div class="titlebox">
+                                                                <span class="title">Difficulty getting out of bed</span>
+                                                            </div>
+
+                                                            <div class="databox">
+                                                                <div class="datatitlebox titlebox-1">
+                                                                    <div class="datacheck">
+                                                                        <input type="checkbox" id="data-1" class="datacheckinput" hidden>
+                                                                        <label for="data-1" class="datachecklabel"></label>
+                                                                    </div>
+                                                                </div>
+
+                                                                <div class="datatitlebox titlebox-2">
+                                                                    <div class="datacheck">
+                                                                        <input type="checkbox" id="data-2"
+                                                                            class="datacheckinput" hidden checked>
+                                                                        <label for="data-2"
+                                                                            class="datachecklabel"></label>
+                                                                    </div>
+                                                                </div>
+
+                                                                <div class="datatitlebox titlebox-3">
+                                                                    <div class="datacheck">
+                                                                        <input type="checkbox" id="data-3"
+                                                                            class="datacheckinput" hidden>
+                                                                        <label for="data-3"
+                                                                            class="datachecklabel"></label>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="datarow">
+                                                            <div class="titlebox">
+                                                                <span class="title">Aggression</span>
+                                                            </div>
+
+                                                            <div class="databox">
+                                                                <div class="datatitlebox titlebox-1">
+                                                                    <div class="datacheck">
+                                                                        <input type="checkbox" id="data-4"
+                                                                            class="datacheckinput" hidden>
+                                                                        <label for="data-4"
+                                                                            class="datachecklabel"></label>
+                                                                    </div>
+                                                                </div>
+
+                                                                <div class="datatitlebox titlebox-2">
+                                                                    <div class="datacheck">
+                                                                        <input type="checkbox" id="data-5"
+                                                                            class="datacheckinput" hidden>
+                                                                        <label for="data-5"
+                                                                            class="datachecklabel"></label>
+                                                                    </div>
+                                                                </div>
+
+                                                                <div class="datatitlebox titlebox-3">
+                                                                    <div class="datacheck">
+                                                                        <input type="checkbox" id="data-6"
+                                                                            class="datacheckinput" hidden>
+                                                                        <label for="data-6"
+                                                                            class="datachecklabel"></label>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="inputrow">
+                                                <div class="inputcol">
+                                                    <div class="inputchecks">
+                                                        <label class="inputlabel">Please select the following symptoms you are experiencing</label>
+
+                                                        <div class="allchecks">
+                                                            <div class="inputcheck">
+                                                                <input type="checkbox" class="checkinput" id="check-1" hidden>
+                                                                <label for="check-1" class="checklabel">
+                                                                    <span class="labeltitle">Bipolar disorder</span>
+                                                                </label>
+                                                            </div>
+
+                                                            <div class="inputcheck">
+                                                                <input type="checkbox" class="checkinput" id="check-2" hidden>
+                                                                <label for="check-2" class="checklabel">
+                                                                    <span class="labeltitle">Bipolar disorder</span>
+                                                                </label>
+                                                            </div>
+
+                                                            <div class="inputcheck">
+                                                                <input type="checkbox" class="checkinput" id="check-3" hidden>
+                                                                <label for="check-3" class="checklabel">
+                                                                    <span class="labeltitle">Anxiety</span>
+                                                                </label>
+                                                            </div>
+
+                                                            <div class="inputcheck">
+                                                                <input type="checkbox" class="checkinput" id="check-4" hidden>
+                                                                <label for="check-4" class="checklabel">
+                                                                    <span class="labeltitle">Anxiety</span>
+                                                                </label>
+                                                            </div>
+
+                                                            <div class="inputcheck">
+                                                                <input type="checkbox" class="checkinput" id="check-5" hidden>
+                                                                <label for="check-5" class="checklabel">
+                                                                    <span class="labeltitle">Anxiety</span>
+                                                                </label>
+                                                            </div>
+
+                                                            <div class="inputcheck">
+                                                                <input type="checkbox" class="checkinput" id="check-6" hidden>
+                                                                <label for="check-6" class="checklabel">
+                                                                    <span class="labeltitle">Anxiety</span>
+                                                                </label>
+                                                            </div>
+
+                                                            <div class="inputcheck">
+                                                                <input type="checkbox" class="checkinput" id="check-7" hidden checked>
+                                                                <label for="check-7" class="checklabel">
+                                                                    <span class="labeltitle">Anxiety</span>
+                                                                </label>
+                                                            </div>
+
+                                                            <div class="inputcheck">
+                                                                <input type="checkbox" class="checkinput" id="check-8" hidden checked>
+                                                                <label for="check-8" class="checklabel">
+                                                                    <span class="labeltitle">Anxiety</span>
+                                                                </label>
+                                                            </div>
+
+                                                            <div class="inputcheck">
+                                                                <input type="checkbox" class="checkinput" id="check-9" hidden>
+                                                                <label for="check-9" class="checklabel">
+                                                                    <span class="labeltitle">Anxiety</span>
+                                                                </label>
+                                                            </div>
+
+                                                            <div class="inputcheck">
+                                                                <input type="checkbox" class="checkinput" id="check-10" hidden>
+                                                                <label for="check-10" class="checklabel">
+                                                                    <span class="labeltitle">Anxiety</span>
+                                                                </label>
+                                                            </div>
+
+                                                            <div class="inputcheck">
+                                                                <input type="checkbox" class="checkinput" id="check-11" hidden>
+                                                                <label for="check-11" class="checklabel">
+                                                                    <span class="labeltitle">Anxiety</span>
+                                                                </label>
+                                                            </div>
+
+                                                            <div class="inputcheck">
+                                                                <input type="checkbox" class="checkinput" id="check-12" hidden>
+                                                                <label for="check-12" class="checklabel">
+                                                                    <span class="labeltitle">Anxiety</span>
+                                                                </label>
+                                                            </div>
+
+                                                            <div class="inputcheck">
+                                                                <input type="checkbox" class="checkinput" id="check-13" hidden>
+                                                                <label for="check-13" class="checklabel">
+                                                                    <span class="labeltitle">Anxiety</span>
+                                                                </label>
+                                                            </div>
+
+                                                            <div class="inputcheck">
+                                                                <input type="checkbox" class="checkinput" id="check-14" hidden>
+                                                                <label for="check-14" class="checklabel">
+                                                                    <span class="labeltitle">Anxiety</span>
+                                                                </label>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="inputrow">
                                                 <div class="inputcol">
                                                     <div class="inputbox">
                                                         <div class="inputinfo">
@@ -1235,6 +1441,7 @@
                             </div>
                         </div>
                     </div>
+                    <!-- INTAKE-FORM SECTION END -->
                 </div>
             </div>
         </div>
@@ -1516,6 +1723,37 @@
         </div>
     </footer>
     <!-- FOOTER SECTION END -->
+
+    <div class="modal fade prescriptionmodal" id="prescriptionModal" tabindex="-1" aria-labelledby="prescriptionModal" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-body p-0">
+                    <div class="prescription">
+                        <div class="prescription-header">
+                            <div class="logo">
+                                <div class="logoicon">
+                                    <img src="../assets/images/logo/logo.svg" alt="prescription-logo">
+                                </div>
+                            </div>
+
+                            <div class="docinfo">
+                                <p class="name">Provider Name: Dr Istiak Tushar</p>
+                                <p class="id">Provider ID: 1523 1212 456</p>
+                            </div>
+                        </div>
+
+                        <div class="prescription-body">
+                            
+                        </div>
+
+                        <div class="prescription-footer">
+                            <button class="btn-download" type="button">Download</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
     
     <!-- BOOTSTRAP JS -->
     <script src="../assets/js/bootstrap.bundle.min.js"></script>

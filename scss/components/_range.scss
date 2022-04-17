@@ -1,0 +1,122 @@
+.inputcheck {
+    // width: calc(50% - 1.5rem);
+    @include w100;
+
+    @include breakpoint(mobile575) {
+        width: calc(50% - 1.5rem);
+    }
+
+    .checkinput {
+        &:checked~.checklabel {
+            &::before {
+                background: $primary;
+                border-color: $primary;
+            }
+
+            &::after {
+                opacity: 1;
+                visibility: visible;
+            }
+        }
+    }
+
+    .checklabel {
+        position: relative;
+        padding-left: length(30);
+        cursor: pointer;
+        @include flex-center-vert;
+
+        .labeltitle {
+            @include font-24-14-medium;
+            color: $gray-700;
+            display: inline-block;
+            margin-top: length(-2);
+
+            &::selection {
+                background: transparent;
+                color: $gray-700;
+            }
+        }
+
+        &::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            background: transparent;
+            @include square(length(20));
+            @include border(solid, 2, $gray-400);
+            @include radius(4);
+            @include transitions;
+        }
+
+        &::after {
+            content: '';
+            position: absolute;
+            top: length(4);
+            left: length(8);
+            width: length(5);
+            height: length(10);
+            @include border(solid, 2, $white);
+            @include transform(rotate(45deg));
+            border-top: 0;
+            border-left: 0;
+            opacity: 0;
+            visibility: hidden;
+            @include transitions;
+        }
+    }
+}
+
+.datacheck {
+    @include square(length(20));
+    @include flex-center;
+
+    .datacheckinput {
+        &:checked~.datachecklabel {
+            &::before {
+                background: $primary;
+                border-color: $primary;
+            }
+
+            &::after {
+                opacity: 1;
+                visibility: visible;
+            }
+        }
+    }
+
+    .datachecklabel {
+        @include square(length(20));
+        position: relative;
+        cursor: pointer;
+        
+        &::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            background: transparent;
+            @include square(length(20));
+            @include border(solid, 2, $gray-400);
+            @include radius(4);
+            @include transitions;
+        }
+
+        &::after {
+            content: '';
+            position: absolute;
+            top: length(4);
+            left: length(8);
+            width: length(5);
+            height: length(10);
+            @include border(solid, 2, $white);
+            @include transform(rotate(45deg));
+            border-top: 0;
+            border-left: 0;
+            opacity: 0;
+            visibility: hidden;
+            @include transitions;
+        }
+    }
+}
