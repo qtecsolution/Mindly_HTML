@@ -72,5 +72,32 @@ $(document).ready(function(){
         });
     }
     // PRESS SLIDER END
+
+    // MOBILE CHARACTER SLIDER START
+    const characters = $('.mobile-character');
+    
+    if (characters.length > 0) {
+        characters.owlCarousel({
+            loop: true,
+            autoplay: true,
+            autoplayTimeout: 5000,
+            nav: false,
+            dots: false,
+            responsiveClass:true,
+            responsive : {
+                // breakpoint from 0 up
+                0 : {
+                    items: 1
+                },
+
+                // breakpoint from 480 up
+                480 : {
+                    items: 2,
+                    margin: 12
+                }
+            }
+        });
+    }
+    // MOBILE CHARACTER SLIDER END
     
 });
