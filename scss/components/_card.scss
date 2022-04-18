@@ -2247,3 +2247,53 @@
         }
     }
 }
+
+.card-congrats {
+    background: $white;
+    position: relative;
+    padding: length(30) length(32) length(56);
+
+    .cardicon {
+        width: length(199);
+        height: length(78);
+        @include flex-center;
+        overflow: hidden;
+        position: absolute;
+        bottom: 0;
+        right: 0;
+
+        svg {
+            @include wh100;
+        }
+    }
+
+    .cardinfo {
+        @include flex-center-vert;
+        gap: length(28);
+
+        .icon {
+            @include square(length(94));
+            @include flex-center;
+            overflow: hidden;
+
+            svg {
+                @include wh100;
+            }
+        }
+
+        .detail {
+            @include flex-column;
+            gap: length(6);
+
+            .title {
+                color: $gray-700;
+                @include font-32-24-bold;
+            }
+
+            .text {
+                color: $gray-600;
+                @include font-26-16-normal;
+            }
+        }
+    }
+}
