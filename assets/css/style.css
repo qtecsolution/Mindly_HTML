@@ -3027,6 +3027,47 @@ h6 {
   color: #ffffff;
 }
 
+.btn-cancel {
+  background: transparent;
+  color: #F94E26;
+  border-radius: 0.375rem;
+  border-radius: 0.375rem;
+  font-family: "Gilroy";
+  font-style: normal;
+  font-size: 0.75rem;
+  font-weight: 600;
+  line-height: 1;
+  padding: 0.75rem 1.5rem;
+  text-align: center;
+  -webkit-transition: all 250ms ease-in-out;
+  transition: all 250ms ease-in-out;
+}
+
+@media screen and (min-width: 61.9375rem) {
+  .btn-cancel {
+    font-family: "Gilroy";
+    font-style: normal;
+    font-size: 0.875rem;
+    font-weight: 600;
+    line-height: 1;
+  }
+}
+
+@media screen and (min-width: 75rem) {
+  .btn-cancel {
+    font-family: "Gilroy";
+    font-style: normal;
+    font-size: 1rem;
+    font-weight: 600;
+    line-height: 1;
+  }
+}
+
+.btn-cancel:not([disabled]):hover {
+  background: transparent;
+  color: #FCAF15;
+}
+
 .btn-prescript {
   background: transparent;
   color: #F94E26;
@@ -21949,6 +21990,17 @@ h6 {
   gap: 1.5rem;
 }
 
+.dashboard .memberbooking-body .bookinfos {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 1.5rem;
+}
+
 .dashboard .memberbooking-body .nav-tabs {
   border: 0;
   margin: 0;
@@ -22009,6 +22061,11 @@ h6 {
   .dashboard .memberbooking-body .upcomingdetails {
     max-width: 100%;
   }
+}
+
+.dashboard .memberbooking-body .upcomingdetails.patientinfo {
+  max-width: 100%;
+  padding: 1.5rem 0rem;
 }
 
 .dashboard .memberbooking-body .pastdetails {
@@ -22120,6 +22177,7 @@ h6 {
       -ms-flex-direction: column;
           flex-direction: column;
   gap: 3rem;
+  padding: 1.5rem 0rem;
 }
 
 .dashboard .memberintakeform-body .userbooking {
@@ -22186,7 +22244,23 @@ h6 {
           filter: drop-shadow(0 0 0.0625rem rgba(12, 26, 75, 0.1));
 }
 
-.dashboard .memberintakeform-body .intakeformtabs .personalinformation {
+.providertabinfo {
+  background: #ffffff;
+  padding: 1.25rem;
+}
+
+@media screen and (max-width: 61.9375rem) {
+  .providertabinfo {
+    padding: 1.5rem;
+  }
+}
+
+.providerinfobody {
+  background: #ffffff;
+}
+
+.personalinformation {
+  background: #ffffff;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -22198,12 +22272,12 @@ h6 {
 }
 
 @media screen and (max-width: 61.9375rem) {
-  .dashboard .memberintakeform-body .intakeformtabs .personalinformation {
+  .personalinformation {
     gap: 1.5rem;
   }
 }
 
-.dashboard .memberintakeform-body .intakeformtabs .personalinformation .inputrow {
+.personalinformation .inputrow {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -22215,7 +22289,7 @@ h6 {
 }
 
 @media screen and (max-width: 61.9375rem) {
-  .dashboard .memberintakeform-body .intakeformtabs .personalinformation .inputrow {
+  .personalinformation .inputrow {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
@@ -22223,7 +22297,7 @@ h6 {
   }
 }
 
-.dashboard .memberintakeform-body .intakeformtabs .personalinformation .inputrow .tableinput {
+.personalinformation .inputrow .tableinput {
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -22234,7 +22308,7 @@ h6 {
           flex-direction: column;
 }
 
-.dashboard .memberintakeform-body .intakeformtabs .personalinformation .inputrow .tableinput-header {
+.personalinformation .inputrow .tableinput-header {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -22244,17 +22318,17 @@ h6 {
   border-bottom: solid 0.0625rem #E2E8F0;
 }
 
-.dashboard .memberintakeform-body .intakeformtabs .personalinformation .inputrow .tableinput-header .titlebox {
+.personalinformation .inputrow .tableinput-header .titlebox {
   width: 40%;
 }
 
 @media screen and (min-width: 35.9375rem) {
-  .dashboard .memberintakeform-body .intakeformtabs .personalinformation .inputrow .tableinput-header .titlebox {
+  .personalinformation .inputrow .tableinput-header .titlebox {
     width: 30%;
   }
 }
 
-.dashboard .memberintakeform-body .intakeformtabs .personalinformation .inputrow .tableinput-header .databox {
+.personalinformation .inputrow .tableinput-header .databox {
   width: 60%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -22265,12 +22339,12 @@ h6 {
 }
 
 @media screen and (min-width: 35.9375rem) {
-  .dashboard .memberintakeform-body .intakeformtabs .personalinformation .inputrow .tableinput-header .databox {
+  .personalinformation .inputrow .tableinput-header .databox {
     width: 70%;
   }
 }
 
-.dashboard .memberintakeform-body .intakeformtabs .personalinformation .inputrow .tableinput-header .databox .datatitlebox {
+.personalinformation .inputrow .tableinput-header .databox .datatitlebox {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -22285,7 +22359,7 @@ h6 {
   padding: 0.9375rem;
 }
 
-.dashboard .memberintakeform-body .intakeformtabs .personalinformation .inputrow .tableinput-header .databox .datatitlebox .title {
+.personalinformation .inputrow .tableinput-header .databox .datatitlebox .title {
   color: #4A5568;
   font-family: "Gilroy";
   font-style: normal;
@@ -22296,7 +22370,7 @@ h6 {
 }
 
 @media screen and (min-width: 35.9375rem) {
-  .dashboard .memberintakeform-body .intakeformtabs .personalinformation .inputrow .tableinput-header .databox .datatitlebox .title {
+  .personalinformation .inputrow .tableinput-header .databox .datatitlebox .title {
     font-family: "Gilroy";
     font-style: normal;
     font-size: 0.875rem;
@@ -22305,19 +22379,19 @@ h6 {
   }
 }
 
-.dashboard .memberintakeform-body .intakeformtabs .personalinformation .inputrow .tableinput-header .databox .titlebox-1 {
+.personalinformation .inputrow .tableinput-header .databox .titlebox-1 {
   background: #FFFBF2;
 }
 
-.dashboard .memberintakeform-body .intakeformtabs .personalinformation .inputrow .tableinput-header .databox .titlebox-2 {
+.personalinformation .inputrow .tableinput-header .databox .titlebox-2 {
   background: #FFF7E5;
 }
 
-.dashboard .memberintakeform-body .intakeformtabs .personalinformation .inputrow .tableinput-header .databox .titlebox-3 {
+.personalinformation .inputrow .tableinput-header .databox .titlebox-3 {
   background: #FFF3D9;
 }
 
-.dashboard .memberintakeform-body .intakeformtabs .personalinformation .inputrow .tableinput-body {
+.personalinformation .inputrow .tableinput-body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -22327,7 +22401,7 @@ h6 {
           flex-direction: column;
 }
 
-.dashboard .memberintakeform-body .intakeformtabs .personalinformation .inputrow .tableinput-body .datarow {
+.personalinformation .inputrow .tableinput-body .datarow {
   border-bottom: solid 0.0625rem #E2E8F0;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -22337,17 +22411,17 @@ h6 {
           align-items: center;
 }
 
-.dashboard .memberintakeform-body .intakeformtabs .personalinformation .inputrow .tableinput-body .datarow .titlebox {
+.personalinformation .inputrow .tableinput-body .datarow .titlebox {
   width: 40%;
 }
 
 @media screen and (min-width: 35.9375rem) {
-  .dashboard .memberintakeform-body .intakeformtabs .personalinformation .inputrow .tableinput-body .datarow .titlebox {
+  .personalinformation .inputrow .tableinput-body .datarow .titlebox {
     width: 30%;
   }
 }
 
-.dashboard .memberintakeform-body .intakeformtabs .personalinformation .inputrow .tableinput-body .datarow .titlebox .title {
+.personalinformation .inputrow .tableinput-body .datarow .titlebox .title {
   color: #4A5568;
   font-family: "Gilroy";
   font-style: normal;
@@ -22362,7 +22436,7 @@ h6 {
 }
 
 @media screen and (min-width: 35.9375rem) {
-  .dashboard .memberintakeform-body .intakeformtabs .personalinformation .inputrow .tableinput-body .datarow .titlebox .title {
+  .personalinformation .inputrow .tableinput-body .datarow .titlebox .title {
     font-family: "Gilroy";
     font-style: normal;
     font-size: 0.875rem;
@@ -22371,7 +22445,7 @@ h6 {
   }
 }
 
-.dashboard .memberintakeform-body .intakeformtabs .personalinformation .inputrow .tableinput-body .datarow .databox {
+.personalinformation .inputrow .tableinput-body .datarow .databox {
   width: 60%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -22382,12 +22456,12 @@ h6 {
 }
 
 @media screen and (min-width: 35.9375rem) {
-  .dashboard .memberintakeform-body .intakeformtabs .personalinformation .inputrow .tableinput-body .datarow .databox {
+  .personalinformation .inputrow .tableinput-body .datarow .databox {
     width: 70%;
   }
 }
 
-.dashboard .memberintakeform-body .intakeformtabs .personalinformation .inputrow .tableinput-body .datarow .databox .datatitlebox {
+.personalinformation .inputrow .tableinput-body .datarow .databox .datatitlebox {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -22402,29 +22476,29 @@ h6 {
   padding: 0.9375rem 0rem;
 }
 
-.dashboard .memberintakeform-body .intakeformtabs .personalinformation .inputrow .tableinput-body .datarow .databox .titlebox-1 {
+.personalinformation .inputrow .tableinput-body .datarow .databox .titlebox-1 {
   background: #FFFBF2;
 }
 
-.dashboard .memberintakeform-body .intakeformtabs .personalinformation .inputrow .tableinput-body .datarow .databox .titlebox-2 {
+.personalinformation .inputrow .tableinput-body .datarow .databox .titlebox-2 {
   background: #FFF7E5;
 }
 
-.dashboard .memberintakeform-body .intakeformtabs .personalinformation .inputrow .tableinput-body .datarow .databox .titlebox-3 {
+.personalinformation .inputrow .tableinput-body .datarow .databox .titlebox-3 {
   background: #FFF3D9;
 }
 
-.dashboard .memberintakeform-body .intakeformtabs .personalinformation .inputrow .inputcol {
+.personalinformation .inputrow .inputcol {
   width: 50%;
 }
 
 @media screen and (max-width: 61.9375rem) {
-  .dashboard .memberintakeform-body .intakeformtabs .personalinformation .inputrow .inputcol {
+  .personalinformation .inputrow .inputcol {
     width: 100%;
   }
 }
 
-.dashboard .memberintakeform-body .intakeformtabs .personalinformation .inputrow .inputchecks {
+.personalinformation .inputrow .inputchecks {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -22435,7 +22509,7 @@ h6 {
   gap: 0.5rem;
 }
 
-.dashboard .memberintakeform-body .intakeformtabs .personalinformation .inputrow .inputchecks .inputlabel {
+.personalinformation .inputrow .inputchecks .inputlabel {
   color: #425466;
   font-family: "Gilroy";
   font-style: normal;
@@ -22444,7 +22518,7 @@ h6 {
   line-height: 1.42857;
 }
 
-.dashboard .memberintakeform-body .intakeformtabs .personalinformation .inputrow .inputchecks .allchecks {
+.personalinformation .inputrow .inputchecks .allchecks {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -22460,11 +22534,11 @@ h6 {
       flex-wrap: wrap;
 }
 
-.dashboard .memberintakeform-body .intakeformtabs .personalinformation .inputrow .inputbox {
+.personalinformation .inputrow .inputbox {
   width: 100%;
 }
 
-.dashboard .memberintakeform-body .intakeformtabs .personalinformation .inputrow .inputbox .inputinfo {
+.personalinformation .inputrow .inputbox .inputinfo {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -22475,7 +22549,7 @@ h6 {
   gap: 0.5rem;
 }
 
-.dashboard .memberintakeform-body .intakeformtabs .personalinformation .inputrow .inputbox .inputinfo .inputlabel {
+.personalinformation .inputrow .inputbox .inputinfo .inputlabel {
   color: #425466;
   font-family: "Gilroy";
   font-style: normal;
@@ -22484,11 +22558,11 @@ h6 {
   line-height: 1.42857;
 }
 
-.dashboard .memberintakeform-body .intakeformtabs .personalinformation .inputrow .inputbox .inputinfo .inputlabel span {
+.personalinformation .inputrow .inputbox .inputinfo .inputlabel span {
   color: #FF3000;
 }
 
-.dashboard .memberintakeform-body .intakeformtabs .personalinformation .inputrow .inputbox .inputinfo .inputfield {
+.personalinformation .inputrow .inputbox .inputinfo .inputfield {
   background: #ffffff;
   color: #4A5568;
   border: solid 0.0625rem #E2E8F0;
@@ -22502,23 +22576,23 @@ h6 {
   padding: 0.8125rem 1rem;
 }
 
-.dashboard .memberintakeform-body .intakeformtabs .personalinformation .inputrow .inputbox .inputinfo .inputfield::-webkit-input-placeholder {
+.personalinformation .inputrow .inputbox .inputinfo .inputfield::-webkit-input-placeholder {
   color: #B5B5BD;
 }
 
-.dashboard .memberintakeform-body .intakeformtabs .personalinformation .inputrow .inputbox .inputinfo .inputfield:-ms-input-placeholder {
+.personalinformation .inputrow .inputbox .inputinfo .inputfield:-ms-input-placeholder {
   color: #B5B5BD;
 }
 
-.dashboard .memberintakeform-body .intakeformtabs .personalinformation .inputrow .inputbox .inputinfo .inputfield::-ms-input-placeholder {
+.personalinformation .inputrow .inputbox .inputinfo .inputfield::-ms-input-placeholder {
   color: #B5B5BD;
 }
 
-.dashboard .memberintakeform-body .intakeformtabs .personalinformation .inputrow .inputbox .inputinfo .inputfield::placeholder {
+.personalinformation .inputrow .inputbox .inputinfo .inputfield::placeholder {
   color: #B5B5BD;
 }
 
-.dashboard .memberintakeform-body .intakeformtabs .personalinformation .inputrow .inputbox .inputinfo .selectfield {
+.personalinformation .inputrow .inputbox .inputinfo .selectfield {
   border: solid 0.0625rem #E2E8F0;
   border-radius: 0.375rem;
   border-radius: 0.375rem;
@@ -22538,7 +22612,7 @@ h6 {
   line-height: 1;
 }
 
-.dashboard .memberintakeform-body .intakeformtabs .personalinformation .inputrow .inputbox .inputinfo .genderbox {
+.personalinformation .inputrow .inputbox .inputinfo .genderbox {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -22549,32 +22623,32 @@ h6 {
 }
 
 @media screen and (max-width: 48rem) {
-  .dashboard .memberintakeform-body .intakeformtabs .personalinformation .inputrow .inputbox .inputinfo .genderbox {
+  .personalinformation .inputrow .inputbox .inputinfo .genderbox {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
   }
 }
 
-.dashboard .memberintakeform-body .intakeformtabs .personalinformation .inputrow .inputbox .inputinfo .genderbox .gender {
+.personalinformation .inputrow .inputbox .inputinfo .genderbox .gender {
   width: 33.33%;
 }
 
 @media screen and (max-width: 48rem) {
-  .dashboard .memberintakeform-body .intakeformtabs .personalinformation .inputrow .inputbox .inputinfo .genderbox .gender {
+  .personalinformation .inputrow .inputbox .inputinfo .genderbox .gender {
     width: 100%;
   }
 }
 
-.dashboard .memberintakeform-body .intakeformtabs .personalinformation .inputrow .inputbox .inputinfo .genderbox .gender input[type="radio"]:checked ~ label::before {
+.personalinformation .inputrow .inputbox .inputinfo .genderbox .gender input[type="radio"]:checked ~ label::before {
   border-color: #01796F;
 }
 
-.dashboard .memberintakeform-body .intakeformtabs .personalinformation .inputrow .inputbox .inputinfo .genderbox .gender input[type="radio"]:checked ~ label::after {
+.personalinformation .inputrow .inputbox .inputinfo .genderbox .gender input[type="radio"]:checked ~ label::after {
   background: #01796F;
   opacity: 1;
 }
 
-.dashboard .memberintakeform-body .intakeformtabs .personalinformation .inputrow .inputbox .inputinfo .genderbox .gender label {
+.personalinformation .inputrow .inputbox .inputinfo .genderbox .gender label {
   width: 100%;
   position: relative;
   padding: 0.875rem 1.125rem 0.875rem 3rem;
@@ -22588,7 +22662,7 @@ h6 {
   cursor: pointer;
 }
 
-.dashboard .memberintakeform-body .intakeformtabs .personalinformation .inputrow .inputbox .inputinfo .genderbox .gender label::before {
+.personalinformation .inputrow .inputbox .inputinfo .genderbox .gender label::before {
   content: '';
   height: 1.25rem;
   width: 1.25rem;
@@ -22604,7 +22678,7 @@ h6 {
   transition: all 250ms ease-in-out;
 }
 
-.dashboard .memberintakeform-body .intakeformtabs .personalinformation .inputrow .inputbox .inputinfo .genderbox .gender label::after {
+.personalinformation .inputrow .inputbox .inputinfo .genderbox .gender label::after {
   content: '';
   height: 0.625rem;
   width: 0.625rem;
@@ -22620,11 +22694,11 @@ h6 {
   transition: all 250ms ease-in-out;
 }
 
-.dashboard .memberintakeform-body .intakeformtabs .personalinformation .inputrow .inputbox .inputinfo textarea:focus {
+.personalinformation .inputrow .inputbox .inputinfo textarea:focus {
   outline: none;
 }
 
-.dashboard .memberintakeform-body .intakeformtabs .personalinformation .inputrow .uploadinfo {
+.personalinformation .inputrow .uploadinfo {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -22635,7 +22709,7 @@ h6 {
   gap: 0.5rem;
 }
 
-.dashboard .memberintakeform-body .intakeformtabs .personalinformation .inputrow .uploadinfo .inputlabel {
+.personalinformation .inputrow .uploadinfo .inputlabel {
   color: #425466;
   font-family: "Gilroy";
   font-style: normal;
@@ -22644,11 +22718,11 @@ h6 {
   line-height: 1.42857;
 }
 
-.dashboard .memberintakeform-body .intakeformtabs .personalinformation .inputrow .uploadinfo .inputlabel span {
+.personalinformation .inputrow .uploadinfo .inputlabel span {
   color: #FF3000;
 }
 
-.dashboard .memberintakeform-body .intakeformtabs .personalinformation .inputrow .uploadinfo .uploadbox {
+.personalinformation .inputrow .uploadinfo .uploadbox {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -22661,7 +22735,7 @@ h6 {
   border-radius: 0.375rem;
 }
 
-.dashboard .memberintakeform-body .intakeformtabs .personalinformation .inputrow .uploadinfo .uploadbox .keepingbox {
+.personalinformation .inputrow .uploadinfo .uploadbox .keepingbox {
   width: calc(100% - 6rem);
   padding: 0rem 0.5rem;
   color: #B5B5BD;
@@ -22672,7 +22746,7 @@ h6 {
   line-height: 1;
 }
 
-.dashboard .memberintakeform-body .intakeformtabs .personalinformation .inputrow .uploadinfo .uploadbox .btn-upload {
+.personalinformation .inputrow .uploadinfo .uploadbox .btn-upload {
   background: #01796F;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -22693,7 +22767,7 @@ h6 {
   transition: all 250ms ease-in-out;
 }
 
-.dashboard .memberintakeform-body .intakeformtabs .personalinformation .inputrow .uploadinfo .uploadbox .btn-upload .icon {
+.personalinformation .inputrow .uploadinfo .uploadbox .btn-upload .icon {
   height: 1rem;
   width: 1rem;
   display: -webkit-box;
@@ -22708,12 +22782,12 @@ h6 {
   overflow: hidden;
 }
 
-.dashboard .memberintakeform-body .intakeformtabs .personalinformation .inputrow .uploadinfo .uploadbox .btn-upload .icon svg {
+.personalinformation .inputrow .uploadinfo .uploadbox .btn-upload .icon svg {
   width: 100%;
   height: 100%;
 }
 
-.dashboard .memberintakeform-body .intakeformtabs .personalinformation .inputrow .uploadinfo .uploadbox .btn-upload .text {
+.personalinformation .inputrow .uploadinfo .uploadbox .btn-upload .text {
   font-family: "Gilroy";
   font-style: normal;
   font-size: 0.75rem;
@@ -22722,37 +22796,37 @@ h6 {
   color: #ffffff;
 }
 
-.dashboard .memberintakeform-body .intakeformtabs .personalinformation .inputrow .uploadinfo .uploadbox .btn-upload:not([disabled]):hover {
+.personalinformation .inputrow .uploadinfo .uploadbox .btn-upload:not([disabled]):hover {
   background: #01ac9d;
 }
 
-.dashboard .memberintakeform-body .intakeformtabs .personalinformation .checkrow {
+.personalinformation .checkrow {
   max-width: 60%;
 }
 
 @media screen and (max-width: 74.9375rem) {
-  .dashboard .memberintakeform-body .intakeformtabs .personalinformation .checkrow {
+  .personalinformation .checkrow {
     max-width: 100%;
   }
 }
 
-.dashboard .memberintakeform-body .intakeformtabs .personalinformation .checkrow .requiredcheck:checked ~ .checklabel::before {
+.personalinformation .checkrow .requiredcheck:checked ~ .checklabel::before {
   background: #01796F;
   border-color: #01796F;
 }
 
-.dashboard .memberintakeform-body .intakeformtabs .personalinformation .checkrow .requiredcheck:checked ~ .checklabel::after {
+.personalinformation .checkrow .requiredcheck:checked ~ .checklabel::after {
   opacity: 1;
   visibility: visible;
 }
 
-.dashboard .memberintakeform-body .intakeformtabs .personalinformation .checkrow .checklabel {
+.personalinformation .checkrow .checklabel {
   position: relative;
   padding-left: 1.875rem;
   cursor: pointer;
 }
 
-.dashboard .memberintakeform-body .intakeformtabs .personalinformation .checkrow .checklabel .text {
+.personalinformation .checkrow .checklabel .text {
   font-family: "Gilroy";
   font-style: normal;
   font-size: 0.875rem;
@@ -22763,17 +22837,17 @@ h6 {
   display: inline-block;
 }
 
-.dashboard .memberintakeform-body .intakeformtabs .personalinformation .checkrow .checklabel .text::-moz-selection {
+.personalinformation .checkrow .checklabel .text::-moz-selection {
   background: transparent;
   color: #4A5568;
 }
 
-.dashboard .memberintakeform-body .intakeformtabs .personalinformation .checkrow .checklabel .text::selection {
+.personalinformation .checkrow .checklabel .text::selection {
   background: transparent;
   color: #4A5568;
 }
 
-.dashboard .memberintakeform-body .intakeformtabs .personalinformation .checkrow .checklabel::before {
+.personalinformation .checkrow .checklabel::before {
   content: '';
   position: absolute;
   top: 0;
@@ -22788,7 +22862,7 @@ h6 {
   transition: all 250ms ease-in-out;
 }
 
-.dashboard .memberintakeform-body .intakeformtabs .personalinformation .checkrow .checklabel::after {
+.personalinformation .checkrow .checklabel::after {
   content: '';
   position: absolute;
   top: 0.25rem;
@@ -22806,7 +22880,7 @@ h6 {
   transition: all 250ms ease-in-out;
 }
 
-.dashboard .memberintakeform-body .intakeformtabs .personalinformation .submitrow {
+.personalinformation .submitrow {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -22816,7 +22890,7 @@ h6 {
   gap: 1.5rem;
 }
 
-.dashboard .memberintakeform-body .intakeformtabs .personalinformation .submitrow .btn-save {
+.personalinformation .submitrow .btn-save {
   padding: 1rem 5rem;
   text-align: center;
   border-radius: 0.5rem;
@@ -22832,7 +22906,7 @@ h6 {
   transition: all 250ms ease-in-out;
 }
 
-.dashboard .memberintakeform-body .intakeformtabs .personalinformation .submitrow .btn-save:not([disabled]):hover {
+.personalinformation .submitrow .btn-save:not([disabled]):hover {
   background: #FCAF15;
 }
 
@@ -23149,5 +23223,81 @@ h6 {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  gap: 1rem;
+}
+
+.membinfo {
+  border-bottom: solid 0.0625rem #E2E8F0;
+}
+
+.bookingbread .breadcrumb {
+  margin-bottom: 0rem;
+}
+
+.bookingbread .breadcrumb-item {
+  font-family: "Gilroy";
+  font-style: normal;
+  font-size: 2.25rem;
+  font-weight: 600;
+  line-height: 1.36;
+  color: #2D3748;
+}
+
+@media screen and (max-width: 61.9375rem) {
+  .bookingbread .breadcrumb-item {
+    font-family: "Gilroy";
+    font-style: normal;
+    font-size: 1.75rem;
+    font-weight: 600;
+    line-height: 1.36;
+  }
+}
+
+@media screen and (max-width: 48rem) {
+  .bookingbread .breadcrumb-item {
+    font-family: "Gilroy";
+    font-style: normal;
+    font-size: 1.5rem;
+    font-weight: 600;
+    line-height: 1.36;
+  }
+}
+
+.bookingbread .breadcrumb-item a {
+  font-family: "Gilroy";
+  font-style: normal;
+  font-size: 2.25rem;
+  font-weight: 600;
+  line-height: 1.36;
+  color: #2D3748;
+}
+
+@media screen and (max-width: 61.9375rem) {
+  .bookingbread .breadcrumb-item a {
+    font-family: "Gilroy";
+    font-style: normal;
+    font-size: 1.75rem;
+    font-weight: 600;
+    line-height: 1.36;
+  }
+}
+
+@media screen and (max-width: 48rem) {
+  .bookingbread .breadcrumb-item a {
+    font-family: "Gilroy";
+    font-style: normal;
+    font-size: 1.5rem;
+    font-weight: 600;
+    line-height: 1.36;
+  }
+}
+
+.refund {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   gap: 1rem;
 }

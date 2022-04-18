@@ -256,6 +256,27 @@
     }
 }
 
+.btn-cancel {
+    @include setBgColor(transparent, $tertiary);
+    @include radius(6);
+    @include font-12-12-semibold;
+    padding: length(12) length(24);
+    text-align: center;
+    @include transitions;
+
+    @include breakpoint(tab991) {
+        @include font-14-14-semibold;
+    }
+
+    @include breakpoint(laptop1200) {
+        @include font-16-16-semibold;
+    }
+
+    @include hover {
+        @include setBgColor(transparent, $secondary);
+    }
+}
+
 .btn-prescript {
     @include setBgColor(transparent, $tertiary);
     @include radius(6);
