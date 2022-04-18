@@ -419,6 +419,9 @@
 		24/14 FONT SIZES
 \*------------------------------------*/
 /*------------------------------------*\
+		20/16 FONT SIZES
+\*------------------------------------*/
+/*------------------------------------*\
 		24/16 FONT SIZES
 \*------------------------------------*/
 /*------------------------------------*\
@@ -3001,6 +3004,109 @@ h6 {
     font-weight: 600;
     line-height: 1.71429;
   }
+}
+
+.btn-history {
+  background: #F94E26;
+  color: #ffffff;
+  border-radius: 0.375rem;
+  border-radius: 0.375rem;
+  font-family: "Gilroy";
+  font-style: normal;
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1;
+  padding: 0.75rem 1.25rem;
+  text-align: center;
+  -webkit-transition: all 250ms ease-in-out;
+  transition: all 250ms ease-in-out;
+}
+
+.btn-history:not([disabled]):hover {
+  background: #cd2b06;
+  color: #ffffff;
+}
+
+.btn-prescript {
+  background: transparent;
+  color: #F94E26;
+  border-radius: 0.375rem;
+  border-radius: 0.375rem;
+  font-family: "Gilroy";
+  font-style: normal;
+  font-size: 0.75rem;
+  font-weight: 600;
+  line-height: 1;
+  padding: 0.75rem 1.5rem;
+  text-align: center;
+  -webkit-transition: all 250ms ease-in-out;
+  transition: all 250ms ease-in-out;
+}
+
+@media screen and (min-width: 61.9375rem) {
+  .btn-prescript {
+    font-family: "Gilroy";
+    font-style: normal;
+    font-size: 0.875rem;
+    font-weight: 600;
+    line-height: 1;
+  }
+}
+
+@media screen and (min-width: 75rem) {
+  .btn-prescript {
+    font-family: "Gilroy";
+    font-style: normal;
+    font-size: 1rem;
+    font-weight: 600;
+    line-height: 1;
+  }
+}
+
+.btn-prescript:not([disabled]):hover {
+  background: transparent;
+  color: #FCAF15;
+}
+
+.btn-intake {
+  background: #F94E26;
+  color: #ffffff;
+  border-radius: 0.375rem;
+  border-radius: 0.375rem;
+  font-family: "Gilroy";
+  font-style: normal;
+  font-size: 0.75rem;
+  font-weight: 600;
+  line-height: 1;
+  padding: 0.75rem 1.5rem;
+  text-align: center;
+  -webkit-transition: all 250ms ease-in-out;
+  transition: all 250ms ease-in-out;
+}
+
+@media screen and (min-width: 61.9375rem) {
+  .btn-intake {
+    font-family: "Gilroy";
+    font-style: normal;
+    font-size: 0.875rem;
+    font-weight: 600;
+    line-height: 1;
+  }
+}
+
+@media screen and (min-width: 75rem) {
+  .btn-intake {
+    font-family: "Gilroy";
+    font-style: normal;
+    font-size: 1rem;
+    font-weight: 600;
+    line-height: 1;
+  }
+}
+
+.btn-intake:not([disabled]):hover {
+  background: #cd2b06;
+  color: #ffffff;
 }
 
 .btn-me {
@@ -6047,8 +6153,8 @@ h6 {
   font-weight: normal;
   line-height: 1.625;
   color: #4A5568;
-  -webkit-font-feature-settings: 'salt'on;
-          font-feature-settings: 'salt'on;
+  -webkit-font-feature-settings: 'salt';
+          font-feature-settings: 'salt';
 }
 
 @media screen and (max-width: 35.9375rem) {
@@ -6537,8 +6643,8 @@ h6 {
   font-weight: normal;
   line-height: 1.625;
   color: #4A5568;
-  -webkit-font-feature-settings: 'salt'on;
-          font-feature-settings: 'salt'on;
+  -webkit-font-feature-settings: 'salt';
+          font-feature-settings: 'salt';
 }
 
 @media screen and (max-width: 35.9375rem) {
@@ -6803,6 +6909,83 @@ h6 {
 .owl-carousel .owl-item img {
   width: 100%;
   max-width: 100%;
+}
+
+.card-memberlist {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  align-items: center;
+  background: #ffffff;
+  padding: 0.875rem 1.5rem 1.125rem;
+}
+
+.card-memberlist .memberdescript {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 0.5rem;
+}
+
+.card-memberlist .memberdescript .capname {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 1rem;
+}
+
+.card-memberlist .memberdescript .capname .cap {
+  height: 2.25rem;
+  width: 2.25rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border-radius: 100%;
+  overflow: hidden;
+}
+
+.card-memberlist .memberdescript .capname .cap img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.card-memberlist .memberdescript .capname .name {
+  color: #4A5568;
+  font-family: "Gilroy";
+  font-style: normal;
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.25;
+}
+
+.card-memberlist .memberdescript .memberid {
+  color: #4A5568;
+  font-family: "Gilroy";
+  font-style: normal;
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.25;
 }
 
 .modal-content {
@@ -21292,8 +21475,8 @@ h6 {
   font-size: 1rem;
   font-weight: normal;
   line-height: 1.625;
-  -webkit-font-feature-settings: 'salt'on;
-          font-feature-settings: 'salt'on;
+  -webkit-font-feature-settings: 'salt';
+          font-feature-settings: 'salt';
 }
 
 .dashboard-incompleted .headercontent .incompleteprogress {
@@ -21323,8 +21506,8 @@ h6 {
   font-size: 1rem;
   font-weight: 600;
   line-height: 1.625;
-  -webkit-font-feature-settings: 'salt'on;
-          font-feature-settings: 'salt'on;
+  -webkit-font-feature-settings: 'salt';
+          font-feature-settings: 'salt';
 }
 
 .dashboard-incompleted .headercontent .incompleteprogress .progress {
@@ -21392,8 +21575,8 @@ h6 {
   font-size: 1rem;
   font-weight: normal;
   line-height: 1.625;
-  -webkit-font-feature-settings: 'salt'on;
-          font-feature-settings: 'salt'on;
+  -webkit-font-feature-settings: 'salt';
+          font-feature-settings: 'salt';
 }
 
 .dashboard .profiledetails {
@@ -21698,6 +21881,12 @@ h6 {
   font-size: 0.875rem;
   font-weight: 600;
   line-height: 1;
+}
+
+@media screen and (min-width: 61.9375rem) {
+  .dashboard .memberbooking-body .nav-tabs .nav-link {
+    min-width: 15rem;
+  }
 }
 
 .dashboard .memberbooking-body .nav-tabs .nav-link.active {
@@ -22557,4 +22746,320 @@ h6 {
 
 .dashboard .memberintakeform-body .intakeformtabs .personalinformation .submitrow .btn-save:not([disabled]):hover {
   background: #FCAF15;
+}
+
+.dashinfo {
+  position: relative;
+}
+
+.dashinfo .dashboard-thumb {
+  width: 100%;
+  height: 16.25rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  overflow: hidden;
+}
+
+.dashinfo .dashboard-thumb img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+  margin-top: 25%;
+}
+
+.provider-memberlist {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 3.5rem;
+  padding: 3.375rem 0rem 5rem;
+}
+
+.provider-memberlist-header .memberlist-title {
+  color: #2D3748;
+  font-family: "Gilroy";
+  font-style: normal;
+  font-size: 1.75rem;
+  font-weight: 600;
+  line-height: 1.36;
+}
+
+@media screen and (min-width: 61.9375rem) {
+  .provider-memberlist-header .memberlist-title {
+    font-family: "Gilroy";
+    font-style: normal;
+    font-size: 2.25rem;
+    font-weight: 600;
+    line-height: 1.36;
+  }
+}
+
+.provider-memberlist-body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 2.5rem;
+}
+
+.provider-memberlist-body .memberlist-search {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: #ffffff;
+  border: solid 0.0625rem #E2E8F0;
+  border-radius: 0.5rem;
+  border-radius: 0.5rem;
+  height: 3rem;
+  overflow: hidden;
+}
+
+.provider-memberlist-body .memberlist-search .btn-search {
+  height: 3rem;
+  width: 3rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  overflow: hidden;
+  background: #F94E26;
+  -webkit-transition: all 250ms ease-in-out;
+  transition: all 250ms ease-in-out;
+}
+
+.provider-memberlist-body .memberlist-search .btn-search:not([disabled]):hover {
+  background: #cd2b06;
+}
+
+.provider-memberlist-body .memberlist-search .searchfield {
+  padding: 1rem;
+  width: calc(100% - 3rem);
+  font-family: "Gilroy";
+  font-style: normal;
+  font-size: 0.8125rem;
+  font-weight: 500;
+  line-height: 1;
+  color: #4A5568;
+}
+
+.provider-memberlist-body .memberlist-search .searchfield::-webkit-input-placeholder {
+  color: #B5B5BD;
+}
+
+.provider-memberlist-body .memberlist-search .searchfield:-ms-input-placeholder {
+  color: #B5B5BD;
+}
+
+.provider-memberlist-body .memberlist-search .searchfield::-ms-input-placeholder {
+  color: #B5B5BD;
+}
+
+.provider-memberlist-body .memberlist-search .searchfield::placeholder {
+  color: #B5B5BD;
+}
+
+.provider-memberlist-body .listdetails {
+  background: #ffffff;
+  border-top: solid 0.0625rem #E2E8F0;
+  padding: 0.875rem 1.5rem 1.125rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 0.875rem;
+}
+
+@media screen and (min-width: 48rem) {
+  .provider-memberlist-body .listdetails {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+}
+
+.provider-memberlist-body .listdetails .session-payment {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 0.5rem;
+}
+
+.provider-memberlist-body .listdetails .session-payment .session .id {
+  color: #718096;
+  font-family: "Gilroy";
+  font-style: normal;
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.5;
+}
+
+.provider-memberlist-body .listdetails .session-payment .payment .price {
+  color: #4A5568;
+  font-family: "Gilroy";
+  font-style: normal;
+  font-size: 0.875rem;
+  font-weight: 600;
+  line-height: 1.42857;
+}
+
+@media screen and (min-width: 75rem) {
+  .provider-memberlist-body .listdetails .session-payment .payment .price {
+    font-family: "Gilroy";
+    font-style: normal;
+    font-size: 1rem;
+    font-weight: 600;
+    line-height: 1.5;
+  }
+}
+
+.provider-memberlist-body .listdetails .date-time {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 0.5rem;
+}
+
+.provider-memberlist-body .listdetails .date-time .date,
+.provider-memberlist-body .listdetails .date-time .time {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 0.5rem;
+}
+
+.provider-memberlist-body .listdetails .date-time .date .icon,
+.provider-memberlist-body .listdetails .date-time .time .icon {
+  height: 1.25rem;
+  width: 1.25rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  overflow: hidden;
+}
+
+.provider-memberlist-body .listdetails .date-time .date .icon svg,
+.provider-memberlist-body .listdetails .date-time .time .icon svg {
+  width: 100%;
+  height: 100%;
+}
+
+.provider-memberlist-body .listdetails .date-time .date .text,
+.provider-memberlist-body .listdetails .date-time .time .text {
+  color: #4A5568;
+  font-family: "Gilroy";
+  font-style: normal;
+  font-size: 0.875rem;
+  font-weight: 600;
+  line-height: 1.42857;
+}
+
+@media screen and (min-width: 75rem) {
+  .provider-memberlist-body .listdetails .date-time .date .text,
+  .provider-memberlist-body .listdetails .date-time .time .text {
+    font-family: "Gilroy";
+    font-style: normal;
+    font-size: 1rem;
+    font-weight: 600;
+    line-height: 1.5;
+  }
+}
+
+.provider-memberlist-body .listdetails .info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 0.875rem;
+  width: 100%;
+}
+
+@media screen and (min-width: 31.25rem) {
+  .provider-memberlist-body .listdetails .info {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+}
+
+@media screen and (min-width: 48rem) {
+  .provider-memberlist-body .listdetails .info {
+    width: 60%;
+  }
+}
+
+@media screen and (min-width: 31.25rem) {
+  .provider-memberlist-body .listdetails .buttons {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+    max-height: 2.5rem;
+  }
+}
+
+.provider-memberlist-body .memberlist {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 1rem;
 }

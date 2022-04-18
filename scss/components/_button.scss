@@ -243,6 +243,61 @@
     }
 }
 
+.btn-history {
+    @include setBgColor($tertiary, $white);
+    @include radius(6);
+    @include font-16-16-semibold;
+    padding: length(12) length(20);
+    text-align: center;
+    @include transitions;
+
+    @include hover {
+        @include setBgColor(darken($tertiary, 15%), $white);
+    }
+}
+
+.btn-prescript {
+    @include setBgColor(transparent, $tertiary);
+    @include radius(6);
+    @include font-12-12-semibold;
+    padding: length(12) length(24);
+    text-align: center;
+    @include transitions;
+
+    @include breakpoint(tab991) {
+        @include font-14-14-semibold;
+    }
+
+    @include breakpoint(laptop1200) {
+        @include font-16-16-semibold;
+    }
+
+    @include hover {
+        @include setBgColor(transparent, $secondary);
+    }
+}
+
+.btn-intake {
+    @include setBgColor($tertiary, $white);
+    @include radius(6);
+    @include font-12-12-semibold;
+    padding: length(12) length(24);
+    text-align: center;
+    @include transitions;
+
+    @include breakpoint(tab991) {
+        @include font-14-14-semibold;
+    }
+
+    @include breakpoint(laptop1200) {
+        @include font-16-16-semibold;
+    }
+
+    @include hover {
+        @include setBgColor(darken($tertiary, 15%), $white);
+    }
+}
+
 .btn-me {
     background: $mobileDropdownBg;
 }

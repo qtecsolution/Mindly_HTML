@@ -1776,7 +1776,7 @@
                     .title {
                         @include font-26-16-normal;
                         color: $gray-700;
-                        font-feature-settings: 'salt'on;
+                        font-feature-settings: 'salt';
 
                         @include breakpoint(phone575) {
                             font-size: length(14);
@@ -2045,7 +2045,7 @@
                     .title {
                         @include font-26-16-normal;
                         color: $gray-700;
-                        font-feature-settings: 'salt'on;
+                        font-feature-settings: 'salt';
 
                         @include breakpoint(phone575) {
                             font-size: length(14);
@@ -2206,6 +2206,44 @@
         img {
             @include w100;
             max-width: 100%;
+        }
+    }
+}
+
+.card-memberlist {
+    @include flex-center-between;
+    background: $white;
+    padding: length(14) length(24) length(18);
+
+    .memberdescript {
+        @include flex-column;
+        gap: length(8);
+
+        .capname {
+            @include flex-center-vert;
+            gap: length(16);
+
+            .cap {
+                @include square(length(36));
+                @include flex-center;
+                @include circle;
+                overflow: hidden;
+
+                img {
+                    @include wh100;
+                    object-fit: cover;
+                }
+            }
+
+            .name {
+                color: $gray-700;
+                @include font-20-16-semibold;
+            }
+        }
+
+        .memberid {
+            color: $gray-700;
+            @include font-20-16-semibold;
         }
     }
 }

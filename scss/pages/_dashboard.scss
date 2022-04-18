@@ -234,7 +234,7 @@
                     &-text {
                         color: $gray-600;
                         @include font-26-16-normal;
-                        font-feature-settings: 'salt'on;
+                        font-feature-settings: 'salt';
                     }
                 }
             }
@@ -249,7 +249,7 @@
                     .progresstext {
                         color: $gray-600;
                         @include font-26-16-semibold;
-                        font-feature-settings: 'salt'on;
+                        font-feature-settings: 'salt';
                     }
                 }
 
@@ -289,7 +289,7 @@
                     .text {
                         color: $gray-800;
                         @include font-26-16-normal;
-                        font-feature-settings: 'salt'on;
+                        font-feature-settings: 'salt';
                     }
                 }
             }
@@ -464,6 +464,10 @@
                     @include setBgColor(transparent, $tabLinkText);
                     @include radius(8);
                     @include font-14-14-semibold;
+
+                    @include breakpoint(tab991) {
+                        min-width: length(240);
+                    }
 
                     &.active {
                         background: $white;
@@ -1009,6 +1013,170 @@
                     }
                 }
             }
+        }
+    }
+}
+
+.dashinfo {
+    position: relative;
+
+    .dashboard-thumb {
+        @include w100;
+        height: length(260);
+        @include flex-center;
+        overflow: hidden;
+
+        img {
+            @include wh100;
+            object-fit: contain;
+            margin-top: 25%;
+        }
+    }
+}
+
+.provider-memberlist {
+    @include flex-column;
+    gap: length(56);
+    padding: length(54) length(0) length(80);
+
+    &-header {
+        .memberlist-title {
+            color: $gray-800;
+            @include heading-2;
+
+            @include breakpoint(tab991) {
+                @include heading-1;
+            }
+        }
+    }
+
+    &-body {
+        @include flex-column;
+        gap: length(40);
+
+        .memberlist-search {
+            @include flex-center-vert;
+            background: $white;
+            @include border(solid, 1, $gray-300);
+            @include radius(8);
+            height: length(48);
+            overflow: hidden;
+
+            .btn-search {
+                @include square(length(48));
+                @include flex-center;
+                overflow: hidden;
+                background: $tertiary;
+                @include transitions;
+
+                @include hover {
+                    background: darken($tertiary, 15%);
+                }
+            }
+
+            .searchfield {
+                padding: length(16);
+                width: calc(100% - 3rem);
+                @include font-13-13-medium;
+                color: $gray-700;
+
+                &::placeholder {
+                    color: $textPlaceholder;
+                }
+            }
+        }
+
+        .listdetails {
+            background: $white;
+            @include border-single(top, solid, 1, $gray-300);
+            padding: length(14) length(24) length(18);
+            @include flex-column;
+            gap: length(14);
+            
+            @include breakpoint(mobile768) {
+                flex-direction: row;
+                justify-content: space-between;
+            }
+        
+            .session-payment {
+                @include flex-column;
+                gap: length(8);
+
+                .session {
+                    .id {
+                        color: $gray-600;
+                        @include font-24-16-semibold;
+                    }
+                }
+
+                .payment {
+                    .price {
+                        color: $gray-700;
+                        @include font-20-14-semibold;
+            
+                        @include breakpoint(laptop1200) {
+                            @include font-24-16-semibold;
+                        }
+                    }
+                }
+            }
+
+            .date-time {
+                @include flex-column;
+                gap: length(8);
+
+                .date,
+                .time {
+                    @include flex-center-vert;
+                    gap: length(8);
+                    
+                    .icon {
+                        @include square(length(20));
+                        @include flex-center;
+                        overflow: hidden;
+
+                        svg {
+                            @include wh100;
+                        }
+                    }
+
+                    .text {
+                        color: $gray-700;
+                        @include font-20-14-semibold;
+            
+                        @include breakpoint(laptop1200) {
+                            @include font-24-16-semibold;
+                        }
+                    }
+                }
+            }
+
+            .info {
+                @include flex-column;
+                gap: length(14);
+                @include w100;
+                
+                @include breakpoint(mobile500) {
+                    flex-direction: row;
+                    justify-content: space-between;
+                }
+
+                @include breakpoint(mobile768) {
+                    width: 60%;
+                }
+            }
+
+            .buttons {
+                @include breakpoint(mobile500) {
+                    @include flex-end;
+                    max-height: length(40);
+                }
+            }
+        }
+
+        .memberlist {
+            @include flex-column;
+            gap: length(16);
         }
     }
 }
