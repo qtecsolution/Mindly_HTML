@@ -8434,6 +8434,300 @@ h6 {
   line-height: 1.66667;
 }
 
+.prescriptionmodal .modal-body .prescription-body {
+  padding: 1.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 2.5rem;
+}
+
+.prescriptionmodal .modal-body .prescription-body .patientinfo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 0.5rem;
+}
+
+@media screen and (min-width: 48rem) {
+  .prescriptionmodal .modal-body .prescription-body .patientinfo {
+    gap: 1rem;
+  }
+}
+
+.prescriptionmodal .modal-body .prescription-body .patientinfo .patientrow {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 0.5rem;
+}
+
+@media screen and (min-width: 48rem) {
+  .prescriptionmodal .modal-body .prescription-body .patientinfo .patientrow {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+}
+
+.prescriptionmodal .modal-body .prescription-body .patientinfo .patientrow .patientcol {
+  width: 100%;
+}
+
+@media screen and (min-width: 48rem) {
+  .prescriptionmodal .modal-body .prescription-body .patientinfo .patientrow .patientcol {
+    width: 50%;
+  }
+}
+
+.prescriptionmodal .modal-body .prescription-body .patientinfo .patientrow .patientcol .name,
+.prescriptionmodal .modal-body .prescription-body .patientinfo .patientrow .patientcol .date,
+.prescriptionmodal .modal-body .prescription-body .patientinfo .patientrow .patientcol .age,
+.prescriptionmodal .modal-body .prescription-body .patientinfo .patientrow .patientcol .id {
+  color: #2D3748;
+  font-family: "Gilroy";
+  font-style: normal;
+  font-size: 0.75rem;
+  font-weight: 600;
+  line-height: 1.66667;
+}
+
+.prescriptionmodal .modal-body .prescription-body .prescriptioninfo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 1.5rem;
+}
+
+@media screen and (min-width: 61.9375rem) {
+  .prescriptionmodal .modal-body .prescription-body .prescriptioninfo {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+}
+
+.prescriptionmodal .modal-body .prescription-body .prescriptioninfo .concern {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 1rem;
+  border-bottom: solid 0.0625rem #E2E8F0;
+  padding-bottom: 1.5rem;
+}
+
+@media screen and (min-width: 61.9375rem) {
+  .prescriptionmodal .modal-body .prescription-body .prescriptioninfo .concern {
+    border-bottom: 0;
+    padding-bottom: 0;
+    padding-right: 1rem;
+    border-right: solid 0.0625rem #E2E8F0;
+    width: calc(50% - 1.5rem);
+  }
+}
+
+.prescriptionmodal .modal-body .prescription-body .prescriptioninfo .concern-header .concerntitle {
+  color: #2D3748;
+  font-family: "Gilroy";
+  font-style: normal;
+  font-size: 1.125rem;
+  font-weight: 600;
+  line-height: 1.36;
+  letter-spacing: -0.005rem;
+}
+
+.prescriptionmodal .modal-body .prescription-body .prescriptioninfo .concern-body .prescriptlist {
+  padding-left: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 0.25rem;
+}
+
+.prescriptionmodal .modal-body .prescription-body .prescriptioninfo .concern-body .prescriptlist-item {
+  color: #4A5568;
+  font-family: "Gilroy";
+  font-style: normal;
+  font-size: 0.75rem;
+  font-weight: 600;
+  line-height: 1.66667;
+  -webkit-font-feature-settings: 'salt';
+          font-feature-settings: 'salt';
+}
+
+.prescriptionmodal .modal-body .prescription-body .prescriptioninfo .medication {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 1rem;
+  border-bottom: solid 0.0625rem #E2E8F0;
+  padding-bottom: 1.5rem;
+}
+
+@media screen and (min-width: 61.9375rem) {
+  .prescriptionmodal .modal-body .prescription-body .prescriptioninfo .medication {
+    border-bottom: 0;
+    padding-bottom: 0;
+    padding-left: 1rem;
+    width: calc(50% - 1.5rem);
+  }
+}
+
+.prescriptionmodal .modal-body .prescription-body .prescriptioninfo .medication-header .medicationtitle {
+  color: #2D3748;
+  font-family: "Gilroy";
+  font-style: normal;
+  font-size: 1.125rem;
+  font-weight: 600;
+  line-height: 1.36;
+  letter-spacing: -0.005rem;
+}
+
+.prescriptionmodal .modal-body .prescription-body .prescriptioninfo .medication-body .medicationlist {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 1.5rem;
+}
+
+.prescriptionmodal .modal-body .prescription-body .prescriptioninfo .medication-body .medicationlist-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 0.5rem;
+}
+
+.prescriptionmodal .modal-body .prescription-body .prescriptioninfo .medication-body .medicationlist-item .medicinename {
+  color: #4A5568;
+  font-family: "Gilroy";
+  font-style: normal;
+  font-size: 0.75rem;
+  font-weight: 600;
+  line-height: 1.66667;
+  -webkit-font-feature-settings: 'salt';
+          font-feature-settings: 'salt';
+}
+
+.prescriptionmodal .modal-body .prescription-body .prescriptioninfo .medication-body .medicationlist-item .medicationinfo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  align-items: center;
+  padding-left: 1rem;
+}
+
+.prescriptionmodal .modal-body .prescription-body .prescriptioninfo .medication-body .medicationlist-item .medicationinfo span {
+  color: #4A5568;
+  font-family: "Gilroy";
+  font-style: normal;
+  font-size: 0.75rem;
+  font-weight: 600;
+  line-height: 1.66667;
+  -webkit-font-feature-settings: 'salt';
+          font-feature-settings: 'salt';
+}
+
+.prescriptionmodal .modal-body .prescription-body .prescriptioninfo .health {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 1rem;
+  border-bottom: solid 0.0625rem #E2E8F0;
+  padding-bottom: 1.5rem;
+}
+
+@media screen and (min-width: 61.9375rem) {
+  .prescriptionmodal .modal-body .prescription-body .prescriptioninfo .health {
+    border-bottom: 0;
+    padding-bottom: 0;
+    padding-left: 1rem;
+    width: calc(50% - 1.5rem);
+  }
+}
+
+.prescriptionmodal .modal-body .prescription-body .prescriptioninfo .health-header .healthtitle {
+  color: #2D3748;
+  font-family: "Gilroy";
+  font-style: normal;
+  font-size: 1.125rem;
+  font-weight: 600;
+  line-height: 1.36;
+  letter-spacing: -0.005rem;
+}
+
+.prescriptionmodal .modal-body .prescription-body .prescriptioninfo .health-body .healthlist {
+  padding-left: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 0.25rem;
+}
+
+.prescriptionmodal .modal-body .prescription-body .prescriptioninfo .health-body .healthlist-item {
+  color: #4A5568;
+  font-family: "Gilroy";
+  font-style: normal;
+  font-size: 0.75rem;
+  font-weight: 600;
+  line-height: 1.66667;
+  -webkit-font-feature-settings: 'salt';
+          font-feature-settings: 'salt';
+}
+
 .prescriptionmodal .modal-body .prescription-footer {
   display: -webkit-box;
   display: -ms-flexbox;

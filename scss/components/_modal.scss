@@ -844,7 +844,6 @@
 }
 
 .prescriptionmodal {
-
     .modal-content {
         @include radius(0);
     }
@@ -900,6 +899,180 @@
                     .id {
                         color: $white;
                         @include font-20-12-semibold;
+                    }
+                }
+            }
+
+            &-body {
+                padding: length(24);
+                @include flex-column;
+                gap: length(40);
+
+                .patientinfo {
+                    @include flex-column;
+                    gap: length(8);
+                    
+                    @include breakpoint(mobile768) {
+                        gap: length(16);
+                    }
+
+                    .patientrow {
+                        @include flex-column;
+                        gap: length(8);
+
+                        @include breakpoint(mobile768) {
+                            flex-direction: row;
+                        }
+
+                        .patientcol {
+                            @include w100;
+                            
+                            @include breakpoint(mobile768) {
+                                width: 50%;
+                            }
+
+                            .name,
+                            .date,
+                            .age,
+                            .id {
+                                color: $gray-800;
+                                @include font-20-12-semibold;
+                            }
+                        }
+                    }
+                }
+
+                .prescriptioninfo {
+                    @include flex-column;
+                    gap: length(24);
+
+                    @include breakpoint(tab991) {
+                        flex-direction: row;
+                        flex-wrap: wrap;
+                    }
+
+                    .concern {
+                        @include flex-column;
+                        gap: length(16);
+                        @include border-single(bottom, solid, 1, $gray-300);
+                        padding-bottom: length(24);
+
+                        @include breakpoint(tab991) {
+                            border-bottom: 0;
+                            padding-bottom: 0;
+                            padding-right: length(16);
+                            @include border-single(right, solid, 1, $gray-300);
+                            width: calc(50% - 1.5rem);
+                        }
+
+                        &-header {
+                            .concerntitle {
+                                color: $gray-800;
+                                @include heading-5;
+                                letter-spacing: length(-0.08);
+                            }
+                        }
+
+                        &-body {
+                            .prescriptlist {
+                                padding-left: length(16);
+                                @include flex-column;
+                                gap: length(4);
+
+                                &-item {
+                                    color: $gray-700;
+                                    @include font-20-12-semibold ;
+                                    font-feature-settings: 'salt';
+                                }
+                            }
+                        }
+                    }
+
+                    .medication {
+                        @include flex-column;
+                        gap: length(16);
+                        @include border-single(bottom, solid, 1, $gray-300);
+                        padding-bottom: length(24);
+
+                        @include breakpoint(tab991) {
+                            border-bottom: 0;
+                            padding-bottom: 0;
+                            padding-left: length(16);
+                            width: calc(50% - 1.5rem);
+                        }
+
+                        &-header {
+                            .medicationtitle {
+                                color: $gray-800;
+                                @include heading-5;
+                                letter-spacing: length(-0.08);
+                            }
+                        }
+
+                        &-body {
+                            .medicationlist {
+                                @include flex-column;
+                                gap: length(24);
+
+                                &-item {
+                                    @include flex-column;
+                                    gap: length(8);
+
+                                    .medicinename {
+                                        color: $gray-700;
+                                        @include font-20-12-semibold ;
+                                        font-feature-settings: 'salt';
+                                    }
+
+                                    .medicationinfo {
+                                        @include flex-center-between;
+                                        padding-left: length(16);
+
+                                        span {
+                                            color: $gray-700;
+                                            @include font-20-12-semibold ;
+                                            font-feature-settings: 'salt';
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                    .health {
+                        @include flex-column;
+                        gap: length(16);
+                        @include border-single(bottom, solid, 1, $gray-300);
+                        padding-bottom: length(24);
+
+                        @include breakpoint(tab991) {
+                            border-bottom: 0;
+                            padding-bottom: 0;
+                            padding-left: length(16);
+                            width: calc(50% - 1.5rem);
+                        }
+
+                        &-header {
+                            .healthtitle {
+                                color: $gray-800;
+                                @include heading-5;
+                                letter-spacing: length(-0.08);
+                            }
+                        }
+
+                        &-body {
+                            .healthlist {
+                                padding-left: length(16);
+                                @include flex-column;
+                                gap: length(4);
+
+                                &-item {
+                                    color: $gray-700;
+                                    @include font-20-12-semibold ;
+                                    font-feature-settings: 'salt';
+                                }
+                            }
+                        }
                     }
                 }
             }
