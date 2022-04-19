@@ -611,7 +611,11 @@
         @include font-16-16-semibold;
         @include transitions;
 
-        @include hover {
+        &:hover:not(.active) {
+            background: $secondary;
+        }
+
+        .active {
             background: $secondary;
         }
     }
@@ -1519,6 +1523,65 @@
                         background: lighten($primary, 10%);
                     }
                 }
+            }
+        }
+    }
+}
+
+.dashboard-statement {
+    @include flex-column;
+    gap: length(40);
+    padding: length(32) length(0) length(64);
+
+    @include breakpoint(tab991) {
+        gap: length(56);
+        padding: length(64) length(0) length(120);
+    }
+
+    &-header {
+        @include flex-column;
+        gap: length(12);
+
+        @include breakpoint(mobile480) {
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-around;
+        }
+
+        .titlebox {
+            @include w100;
+
+            @include breakpoint(mobile480) {
+                width: 50%;
+            }
+
+            .title {
+                color: $gray-800;
+                @include heading-2;
+
+                @include breakpoint(tab991) {
+                    @include heading-1;
+                }
+            }
+        }
+
+        .balancebox {
+            @include flex-column;
+            @include w100;
+            
+            @include breakpoint(mobile480) {
+                width: 50%;
+                align-items: flex-end;
+            }
+            
+            .title {
+                color: $gray-600;
+                @include font-26-16-semibold;
+            }
+
+            .balance {
+                color: $gray-800;
+                @include heading-2;
             }
         }
     }

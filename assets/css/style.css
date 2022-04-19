@@ -22368,7 +22368,11 @@ h6 {
   transition: all 250ms ease-in-out;
 }
 
-.submitrow .btn-save:not([disabled]):hover {
+.submitrow .btn-save:hover:not(.active) {
+  background: #FCAF15;
+}
+
+.submitrow .btn-save .active {
   background: #FCAF15;
 }
 
@@ -23847,4 +23851,115 @@ h6 {
 
 .providerprofile-body .steponeform .inputinfo .btn-upload:not([disabled]):hover {
   background: #01ac9d;
+}
+
+.dashboard-statement {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 2.5rem;
+  padding: 2rem 0rem 4rem;
+}
+
+@media screen and (min-width: 61.9375rem) {
+  .dashboard-statement {
+    gap: 3.5rem;
+    padding: 4rem 0rem 7.5rem;
+  }
+}
+
+.dashboard-statement-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 0.75rem;
+}
+
+@media screen and (min-width: 30rem) {
+  .dashboard-statement-header {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+}
+
+.dashboard-statement-header .titlebox {
+  width: 100%;
+}
+
+@media screen and (min-width: 30rem) {
+  .dashboard-statement-header .titlebox {
+    width: 50%;
+  }
+}
+
+.dashboard-statement-header .titlebox .title {
+  color: #2D3748;
+  font-family: "Gilroy";
+  font-style: normal;
+  font-size: 1.75rem;
+  font-weight: 600;
+  line-height: 1.36;
+}
+
+@media screen and (min-width: 61.9375rem) {
+  .dashboard-statement-header .titlebox .title {
+    font-family: "Gilroy";
+    font-style: normal;
+    font-size: 2.25rem;
+    font-weight: 600;
+    line-height: 1.36;
+  }
+}
+
+.dashboard-statement-header .balancebox {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 100%;
+}
+
+@media screen and (min-width: 30rem) {
+  .dashboard-statement-header .balancebox {
+    width: 50%;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
+  }
+}
+
+.dashboard-statement-header .balancebox .title {
+  color: #718096;
+  font-family: "Gilroy";
+  font-style: normal;
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.625;
+}
+
+.dashboard-statement-header .balancebox .balance {
+  color: #2D3748;
+  font-family: "Gilroy";
+  font-style: normal;
+  font-size: 1.75rem;
+  font-weight: 600;
+  line-height: 1.36;
 }
