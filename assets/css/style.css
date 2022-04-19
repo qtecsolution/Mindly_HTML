@@ -7051,6 +7051,7 @@ h6 {
   position: absolute;
   bottom: 0;
   right: 0;
+  z-index: 1;
 }
 
 .card-congrats .cardicon svg {
@@ -7065,7 +7066,27 @@ h6 {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   gap: 1.75rem;
+  text-align: center;
+  position: relative;
+  z-index: 2;
+}
+
+@media screen and (min-width: 35.9375rem) {
+  .card-congrats .cardinfo {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    text-align: left;
+  }
 }
 
 .card-congrats .cardinfo .icon {
@@ -7097,6 +7118,13 @@ h6 {
       -ms-flex-direction: column;
           flex-direction: column;
   gap: 0.375rem;
+  width: 100%;
+}
+
+@media screen and (min-width: 48rem) {
+  .card-congrats .cardinfo .detail {
+    width: calc(100% - 5.875rem);
+  }
 }
 
 .card-congrats .cardinfo .detail .title {
@@ -7115,6 +7143,47 @@ h6 {
   font-size: 1rem;
   font-weight: normal;
   line-height: 1.625;
+}
+
+.card-dashboard {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 2.1875rem;
+  background: #ffffff;
+  padding: 1.25rem;
+}
+
+.card-dashboard .cardcap {
+  height: 3.75rem;
+  width: 3.75rem;
+  border-radius: 100%;
+  background: #FCF4F4;
+}
+
+.card-dashboard .cardinfo {
+  width: calc(100% - 5.9375rem);
+}
+
+.card-dashboard .cardinfo .title {
+  color: #718096;
+  font-family: "Gilroy";
+  font-style: normal;
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.625;
+}
+
+.card-dashboard .cardinfo .counter {
+  color: #4A5568;
+  font-family: "Gilroy";
+  font-style: normal;
+  font-size: 2.25rem;
+  font-weight: 600;
+  line-height: 1.36;
 }
 
 .modal-content {
@@ -21367,76 +21436,6 @@ h6 {
   }
 }
 
-.dashboard .notifications .membernotifications .notificationlist {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  background: #ffffff;
-}
-
-.dashboard .notifications .membernotifications .notificationlist-item {
-  padding: 1rem;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  gap: 1.5rem;
-  border-bottom: solid 0.0625rem #F7FAFC;
-}
-
-.dashboard .notifications .membernotifications .notificationlist-item:last-of-type {
-  border-bottom: 0;
-}
-
-.dashboard .notifications .membernotifications .notificationlist-item .icon {
-  height: 3.75rem;
-  width: 3.75rem;
-  border-radius: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  overflow: hidden;
-  padding: 0.5rem;
-  background: #F2EEEE;
-}
-
-.dashboard .notifications .membernotifications .notificationlist-item .textinfo {
-  width: calc(100% - 5.25rem);
-}
-
-.dashboard .notifications .membernotifications .notificationlist-item .text {
-  font-family: "Gilroy";
-  font-style: normal;
-  font-size: 1rem;
-  font-weight: normal;
-  line-height: 1.625;
-  color: #4A5568;
-}
-
-.dashboard .notifications .membernotifications .notificationlist-item .text .announce {
-  color: #4A5568;
-  font-family: "Gilroy";
-  font-style: normal;
-  font-size: 1rem;
-  font-weight: 700;
-  line-height: 1.625;
-}
-
 .dashboard-detail {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -21459,6 +21458,17 @@ h6 {
   .dashboard-detail {
     padding-bottom: 3rem;
   }
+}
+
+.dashboard-detail .descriptions {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 2.125rem;
 }
 
 .dashboard-header {
@@ -22165,6 +22175,76 @@ h6 {
           box-shadow: 0 0.25rem 1.25rem -0.125rem rgba(50, 50, 71, 0.08);
   -webkit-filter: drop-shadow(0 0 0.0625rem rgba(12, 26, 75, 0.1));
           filter: drop-shadow(0 0 0.0625rem rgba(12, 26, 75, 0.1));
+}
+
+.notificationlist {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background: #ffffff;
+}
+
+.notificationlist-item {
+  padding: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 1.5rem;
+  border-bottom: solid 0.0625rem #F7FAFC;
+}
+
+.notificationlist-item:last-of-type {
+  border-bottom: 0;
+}
+
+.notificationlist-item .icon {
+  height: 3.75rem;
+  width: 3.75rem;
+  border-radius: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  overflow: hidden;
+  padding: 0.5rem;
+  background: #F2EEEE;
+}
+
+.notificationlist-item .textinfo {
+  width: calc(100% - 5.25rem);
+}
+
+.notificationlist-item .text {
+  font-family: "Gilroy";
+  font-style: normal;
+  font-size: 1rem;
+  font-weight: normal;
+  line-height: 1.625;
+  color: #4A5568;
+}
+
+.notificationlist-item .text .announce {
+  color: #4A5568;
+  font-family: "Gilroy";
+  font-style: normal;
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 1.625;
 }
 
 .profileinformation {

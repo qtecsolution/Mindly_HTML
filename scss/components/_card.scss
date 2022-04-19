@@ -2261,6 +2261,7 @@
         position: absolute;
         bottom: 0;
         right: 0;
+        z-index: 1;
 
         svg {
             @include wh100;
@@ -2268,8 +2269,16 @@
     }
 
     .cardinfo {
-        @include flex-center-vert;
+        @include flex-center-column;
         gap: length(28);
+        text-align: center;
+        position: relative;
+        z-index: 2;
+
+        @include breakpoint(mobile575) {
+            flex-direction: row;
+            text-align: left;
+        }
 
         .icon {
             @include square(length(94));
@@ -2284,6 +2293,11 @@
         .detail {
             @include flex-column;
             gap: length(6);
+            @include w100;
+
+            @include breakpoint(mobile768) {
+                width: calc(100% - 5.875rem);
+            }
 
             .title {
                 color: $gray-700;
@@ -2294,6 +2308,33 @@
                 color: $gray-600;
                 @include font-26-16-normal;
             }
+        }
+    }
+}
+
+.card-dashboard {
+    @include flex-center-vert;
+    gap: length(35);
+    background: $white;
+    padding: length(20);
+
+    .cardcap {
+        @include square(length(60));
+        @include circle;
+        background: $capBg;
+    }
+
+    .cardinfo {
+        width: calc(100% - 5.9375rem);
+
+        .title {
+            color: $gray-600;
+            @include font-26-16-semibold;
+        }
+
+        .counter {
+            color: $gray-700;
+            @include heading-1;
         }
     }
 }

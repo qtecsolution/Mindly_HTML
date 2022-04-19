@@ -84,45 +84,6 @@
                     @include heading-2;
                 }
             }
-
-            .notificationlist {
-                @include list-vertical;
-                background: $white;
-
-                &-item {
-                    padding: length(16);
-                    @include flex-center-vert;
-                    gap: length(24);
-                    @include border-single(bottom, solid, 1, $gray-100);
-
-                    &:last-of-type {
-                        border-bottom: 0;
-                    }
-
-                    .icon {
-                        @include square(length(60));
-                        @include circle;
-                        @include flex-center;
-                        overflow: hidden;
-                        padding: length(8);
-                        background: $notifyIconBg;
-                    }
-
-                    .textinfo {
-                        width: calc(100% - 5.25rem);
-                    }
-
-                    .text {
-                        @include font-26-16-normal;
-                        color: $gray-700;
-
-                        .announce {
-                            color: $gray-700;
-                            @include font-26-16-bold;
-                        }
-                    }
-                }
-            }
         }
     }
 
@@ -137,6 +98,11 @@
 
         @include breakpoint(tablet991) {
             padding-bottom: length(48);
+        }
+
+        .descriptions {
+            @include flex-column;
+            gap: length(34)
         }
     }
 
@@ -540,6 +506,45 @@
                         }
                     }
                 }
+            }
+        }
+    }
+}
+
+.notificationlist {
+    @include list-vertical;
+    background: $white;
+
+    &-item {
+        padding: length(16);
+        @include flex-center-vert;
+        gap: length(24);
+        @include border-single(bottom, solid, 1, $gray-100);
+
+        &:last-of-type {
+            border-bottom: 0;
+        }
+
+        .icon {
+            @include square(length(60));
+            @include circle;
+            @include flex-center;
+            overflow: hidden;
+            padding: length(8);
+            background: $notifyIconBg;
+        }
+
+        .textinfo {
+            width: calc(100% - 5.25rem);
+        }
+
+        .text {
+            @include font-26-16-normal;
+            color: $gray-700;
+
+            .announce {
+                color: $gray-700;
+                @include font-26-16-bold;
             }
         }
     }
