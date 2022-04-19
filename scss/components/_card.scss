@@ -2338,3 +2338,73 @@
         }
     }
 }
+
+.cardstatement {
+    background: $white;
+    padding: length(20);
+    @include flex-column;
+    gap: length(16);
+
+    @include breakpoint(mobile500) {
+        flex-direction: row;
+    }
+
+    .cardcap {
+        background: $notifyIconBg;
+        @include square(length(50));
+        @include circle;
+    }
+
+    .details {
+        @include flex-column;
+        gap: length(8);
+        @include w100;
+
+        @include breakpoint(mobile500) {
+            width: calc(100% - 4.125rem);
+            flex-direction: row;
+        }
+
+        &-left {
+            @include flex-column;
+            gap: length(4);
+            @include w100;
+
+            @include breakpoint(mobile500) {
+                width: 50%;
+            }
+
+            .title {
+                color: $gray-700;
+                @include font-26-16-semibold;
+            }
+
+            .id {
+                color: $gray-700;
+                @include font-26-16-semibold;
+            }
+        }
+
+        &-right {
+            @include flex-column;
+            gap: length(4);
+            @include w100;
+
+            @include breakpoint(mobile500) {
+                width: 50%;
+                align-items: flex-end;
+            }
+
+            .price {
+                color: $gray-700;
+                @include font-26-16-semibold;
+            }
+
+            .date {
+                color: $gray-600;
+                @include font-12-12-semibold;
+                letter-spacing: length(0.48);
+            }
+        }
+    }
+}

@@ -7186,6 +7186,133 @@ h6 {
   line-height: 1.36;
 }
 
+.cardstatement {
+  background: #ffffff;
+  padding: 1.25rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 1rem;
+}
+
+@media screen and (min-width: 31.25rem) {
+  .cardstatement {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+}
+
+.cardstatement .cardcap {
+  background: #F2EEEE;
+  height: 3.125rem;
+  width: 3.125rem;
+  border-radius: 100%;
+}
+
+.cardstatement .details {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 0.5rem;
+  width: 100%;
+}
+
+@media screen and (min-width: 31.25rem) {
+  .cardstatement .details {
+    width: calc(100% - 4.125rem);
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+}
+
+.cardstatement .details-left {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 0.25rem;
+  width: 100%;
+}
+
+@media screen and (min-width: 31.25rem) {
+  .cardstatement .details-left {
+    width: 50%;
+  }
+}
+
+.cardstatement .details-left .title {
+  color: #4A5568;
+  font-family: "Gilroy";
+  font-style: normal;
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.625;
+}
+
+.cardstatement .details-left .id {
+  color: #4A5568;
+  font-family: "Gilroy";
+  font-style: normal;
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.625;
+}
+
+.cardstatement .details-right {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 0.25rem;
+  width: 100%;
+}
+
+@media screen and (min-width: 31.25rem) {
+  .cardstatement .details-right {
+    width: 50%;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
+  }
+}
+
+.cardstatement .details-right .price {
+  color: #4A5568;
+  font-family: "Gilroy";
+  font-style: normal;
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.625;
+}
+
+.cardstatement .details-right .date {
+  color: #718096;
+  font-family: "Gilroy";
+  font-style: normal;
+  font-size: 0.75rem;
+  font-weight: 600;
+  line-height: 1;
+  letter-spacing: 0.03rem;
+}
+
 .modal-content {
   border-radius: 1.25rem;
   border-radius: 1.25rem;
@@ -23962,4 +24089,15 @@ h6 {
   font-size: 1.75rem;
   font-weight: 600;
   line-height: 1.36;
+}
+
+.dashboard-statement-body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 1rem;
 }
