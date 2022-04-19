@@ -179,10 +179,16 @@
         .step2-info {
             .steponeform {
                 @include flex-column;
-                gap: length(44);
+                gap: length(32);
+                
+                @include breakpoint(tab991) {
+                    gap: length(44);
+                }
 
                 .mobilecol {
-                    @include breakpoint(tablet991) {
+                    margin-bottom: length(32);
+                
+                    @include breakpoint(tab991) {
                         margin-bottom: length(44);
                     }
                 }
@@ -199,10 +205,9 @@
 
                     .inputfield {
                         background: $white;
-                        padding: length(16);
+                        padding: length(14) length(16);
                         @include radius(6);
                         @include border(solid, 1, $gray-300);
-                        // box-shadow: $inputshadow;
                         @include font-14-14-normal;
                         color: $gray-800;
                     }
@@ -210,9 +215,8 @@
                     .selectfield {
                         background: $white url("data:image/svg+xml,%3Csvg width='11' height='11' viewBox='0 0 11 11' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cmask id='mask0_5998_44256' style='mask-type:alpha' maskUnits='userSpaceOnUse' x='0' y='0' width='11' height='11'%3E%3Cpath d='M4.98252 7.65869L1.68511 3.89022C1.29615 3.4457 1.61184 2.75 2.20251 2.75H8.79733C9.388 2.75 9.70369 3.4457 9.31473 3.89022L6.01732 7.65869C5.74341 7.97173 5.25643 7.97173 4.98252 7.65869Z' fill='black'/%3E%3C/mask%3E%3Cg mask='url(%23mask0_5998_44256)'%3E%3Crect width='11' height='11' fill='%23B5B5BD'/%3E%3C/g%3E%3C/svg%3E%0A") no-repeat center right 3%;
                         appearance: none;
-                        // box-shadow: $inputshadow;
                         @include border(solid, 1, $gray-300);
-                        padding: length(16);
+                        padding: length(14) length(16);
                         @include radius(6);
                         @include font-14-14-normal;
                         color: $gray-800;
@@ -222,7 +226,7 @@
                 .inputinfo {
                     @include flex-center-vert;
                     @include border(solid, 1, $gray-300);
-                    padding: length(8);
+                    padding: length(6);
                     @include radius(6);
 
                     .keepingbox {
@@ -293,7 +297,11 @@
 
         .step3info {
             @include flex-column;
-            gap: length(44);
+            gap: length(32);
+                
+            @include breakpoint(tab991) {
+                gap: length(44);
+            }
 
             .step3-info {
                 @include w100;
@@ -308,7 +316,11 @@
 
                 .steponeform {
                     @include flex-column;
-                    gap: length(44);
+                    gap: length(32);
+                        
+                    @include breakpoint(tab991) {
+                        gap: length(44);
+                    }
 
                     .stepdetails {
                         width: length(430);
@@ -388,7 +400,7 @@
                                         .table-value {
                                             @include font-26-16-normal;
                                             color: $gray-600;
-                                            font-feature-settings: 'salt'on;
+                                            font-feature-settings: 'salt';
 
                                             @include breakpoint(phone575) {
                                                 @include font-24-14-normal;
@@ -404,7 +416,7 @@
                                                 text-align: center;
                                                 @include setBgColor(transparent, $gray-600);
                                                 @include font-26-16-normal;
-                                                font-feature-settings: 'salt'on;
+                                                font-feature-settings: 'salt';
 
                                                 @include breakpoint(phone575) {
                                                     @include font-24-14-normal;
@@ -414,7 +426,7 @@
                                             .pricelabel {
                                                 @include font-26-16-normal;
                                                 color: $gray-600;
-                                                font-feature-settings: 'salt'on;
+                                                font-feature-settings: 'salt';
 
                                                 @include breakpoint(phone575) {
                                                     @include font-24-14-normal;

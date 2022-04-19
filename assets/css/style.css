@@ -10984,10 +10984,22 @@ h6 {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  gap: 2.75rem;
+  gap: 2rem;
 }
 
-@media screen and (max-width: 61.9375rem) {
+@media screen and (min-width: 61.9375rem) {
+  .registerbox-body .step1-info .steponeform,
+  .registerbox-body .step2-info .steponeform {
+    gap: 2.75rem;
+  }
+}
+
+.registerbox-body .step1-info .steponeform .mobilecol,
+.registerbox-body .step2-info .steponeform .mobilecol {
+  margin-bottom: 2rem;
+}
+
+@media screen and (min-width: 61.9375rem) {
   .registerbox-body .step1-info .steponeform .mobilecol,
   .registerbox-body .step2-info .steponeform .mobilecol {
     margin-bottom: 2.75rem;
@@ -11020,7 +11032,7 @@ h6 {
 .registerbox-body .step1-info .steponeform .inputbox .inputfield,
 .registerbox-body .step2-info .steponeform .inputbox .inputfield {
   background: #ffffff;
-  padding: 1rem;
+  padding: 0.875rem 1rem;
   border-radius: 0.375rem;
   border-radius: 0.375rem;
   border: solid 0.0625rem #E2E8F0;
@@ -11039,7 +11051,7 @@ h6 {
      -moz-appearance: none;
           appearance: none;
   border: solid 0.0625rem #E2E8F0;
-  padding: 1rem;
+  padding: 0.875rem 1rem;
   border-radius: 0.375rem;
   border-radius: 0.375rem;
   font-family: "Gilroy";
@@ -11059,7 +11071,7 @@ h6 {
       -ms-flex-align: center;
           align-items: center;
   border: solid 0.0625rem #E2E8F0;
-  padding: 0.5rem;
+  padding: 0.375rem;
   border-radius: 0.375rem;
   border-radius: 0.375rem;
 }
@@ -11192,7 +11204,13 @@ h6 {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  gap: 2.75rem;
+  gap: 2rem;
+}
+
+@media screen and (min-width: 61.9375rem) {
+  .registerbox-body .step3info {
+    gap: 2.75rem;
+  }
 }
 
 .registerbox-body .step3info .step3-info {
@@ -11226,7 +11244,13 @@ h6 {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  gap: 2.75rem;
+  gap: 2rem;
+}
+
+@media screen and (min-width: 61.9375rem) {
+  .registerbox-body .step3info .step3-info .steponeform {
+    gap: 2.75rem;
+  }
 }
 
 .registerbox-body .step3info .step3-info .steponeform .stepdetails {
@@ -11354,8 +11378,8 @@ h6 {
   font-weight: normal;
   line-height: 1.625;
   color: #718096;
-  -webkit-font-feature-settings: 'salt'on;
-          font-feature-settings: 'salt'on;
+  -webkit-font-feature-settings: 'salt';
+          font-feature-settings: 'salt';
 }
 
 @media screen and (max-width: 35.9375rem) {
@@ -11391,8 +11415,8 @@ h6 {
   font-size: 1rem;
   font-weight: normal;
   line-height: 1.625;
-  -webkit-font-feature-settings: 'salt'on;
-          font-feature-settings: 'salt'on;
+  -webkit-font-feature-settings: 'salt';
+          font-feature-settings: 'salt';
 }
 
 @media screen and (max-width: 35.9375rem) {
@@ -11412,8 +11436,8 @@ h6 {
   font-weight: normal;
   line-height: 1.625;
   color: #718096;
-  -webkit-font-feature-settings: 'salt'on;
-          font-feature-settings: 'salt'on;
+  -webkit-font-feature-settings: 'salt';
+          font-feature-settings: 'salt';
 }
 
 @media screen and (max-width: 35.9375rem) {
@@ -11930,10 +11954,22 @@ h6 {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  gap: 2.75rem;
+  gap: 2rem;
 }
 
-@media screen and (max-width: 61.9375rem) {
+@media screen and (min-width: 61.9375rem) {
+  .registerbox-body .step1-info .steponeform,
+  .registerbox-body .step2-info .steponeform {
+    gap: 2.75rem;
+  }
+}
+
+.registerbox-body .step1-info .steponeform .mobilecol,
+.registerbox-body .step2-info .steponeform .mobilecol {
+  margin-bottom: 2rem;
+}
+
+@media screen and (min-width: 61.9375rem) {
   .registerbox-body .step1-info .steponeform .mobilecol,
   .registerbox-body .step2-info .steponeform .mobilecol {
     margin-bottom: 2.75rem;
@@ -11966,7 +12002,7 @@ h6 {
 .registerbox-body .step1-info .steponeform .inputbox .inputfield,
 .registerbox-body .step2-info .steponeform .inputbox .inputfield {
   background: #ffffff;
-  padding: 1rem;
+  padding: 0.875rem 1rem;
   border-radius: 0.375rem;
   border-radius: 0.375rem;
   border: solid 0.0625rem #E2E8F0;
@@ -11985,7 +12021,7 @@ h6 {
      -moz-appearance: none;
           appearance: none;
   border: solid 0.0625rem #E2E8F0;
-  padding: 1rem;
+  padding: 0.875rem 1rem;
   border-radius: 0.375rem;
   border-radius: 0.375rem;
   font-family: "Gilroy";
@@ -12005,7 +12041,7 @@ h6 {
       -ms-flex-align: center;
           align-items: center;
   border: solid 0.0625rem #E2E8F0;
-  padding: 0.5rem;
+  padding: 0.375rem;
   border-radius: 0.375rem;
   border-radius: 0.375rem;
 }
@@ -12138,7 +12174,13 @@ h6 {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  gap: 2.75rem;
+  gap: 2rem;
+}
+
+@media screen and (min-width: 61.9375rem) {
+  .registerbox-body .step3info {
+    gap: 2.75rem;
+  }
 }
 
 .registerbox-body .step3info .step3-info {
@@ -12172,7 +12214,13 @@ h6 {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  gap: 2.75rem;
+  gap: 2rem;
+}
+
+@media screen and (min-width: 61.9375rem) {
+  .registerbox-body .step3info .step3-info .steponeform {
+    gap: 2.75rem;
+  }
 }
 
 .registerbox-body .step3info .step3-info .steponeform .stepdetails {
@@ -12300,8 +12348,8 @@ h6 {
   font-weight: normal;
   line-height: 1.625;
   color: #718096;
-  -webkit-font-feature-settings: 'salt'on;
-          font-feature-settings: 'salt'on;
+  -webkit-font-feature-settings: 'salt';
+          font-feature-settings: 'salt';
 }
 
 @media screen and (max-width: 35.9375rem) {
@@ -12337,8 +12385,8 @@ h6 {
   font-size: 1rem;
   font-weight: normal;
   line-height: 1.625;
-  -webkit-font-feature-settings: 'salt'on;
-          font-feature-settings: 'salt'on;
+  -webkit-font-feature-settings: 'salt';
+          font-feature-settings: 'salt';
 }
 
 @media screen and (max-width: 35.9375rem) {
@@ -12358,8 +12406,8 @@ h6 {
   font-weight: normal;
   line-height: 1.625;
   color: #718096;
-  -webkit-font-feature-settings: 'salt'on;
-          font-feature-settings: 'salt'on;
+  -webkit-font-feature-settings: 'salt';
+          font-feature-settings: 'salt';
 }
 
 @media screen and (max-width: 35.9375rem) {
@@ -21816,131 +21864,6 @@ h6 {
   height: 100%;
 }
 
-.dashboard .profiledetails .profile-body .profileinformation {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  gap: 2.75rem;
-}
-
-@media screen and (max-width: 61.9375rem) {
-  .dashboard .profiledetails .profile-body .profileinformation {
-    gap: 1.5rem;
-  }
-}
-
-.dashboard .profiledetails .profile-body .profileinformation .inputrow {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  gap: 1.5rem;
-}
-
-@media screen and (max-width: 61.9375rem) {
-  .dashboard .profiledetails .profile-body .profileinformation .inputrow {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-  }
-}
-
-.dashboard .profiledetails .profile-body .profileinformation .inputrow .inputcol {
-  width: 50%;
-}
-
-@media screen and (max-width: 61.9375rem) {
-  .dashboard .profiledetails .profile-body .profileinformation .inputrow .inputcol {
-    width: 100%;
-  }
-}
-
-.dashboard .profiledetails .profile-body .profileinformation .inputrow .inputcol .inputbox .inputinfo {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  gap: 0.5rem;
-}
-
-.dashboard .profiledetails .profile-body .profileinformation .inputrow .inputcol .inputbox .inputinfo .inputlabel {
-  color: #425466;
-  font-family: "Gilroy";
-  font-style: normal;
-  font-size: 0.875rem;
-  font-weight: 500;
-  line-height: 1.42857;
-}
-
-.dashboard .profiledetails .profile-body .profileinformation .inputrow .inputcol .inputbox .inputinfo .inputfield {
-  background: #ffffff;
-  color: #4A5568;
-  border: solid 0.0625rem #E2E8F0;
-  border-radius: 0.375rem;
-  border-radius: 0.375rem;
-  font-family: "Gilroy";
-  font-style: normal;
-  font-size: 0.9375rem;
-  font-weight: 500;
-  line-height: 1;
-  padding: 0.8125rem 1rem;
-}
-
-.dashboard .profiledetails .profile-body .profileinformation .inputrow .inputcol .inputbox .inputinfo .inputfield::-webkit-input-placeholder {
-  color: #B5B5BD;
-}
-
-.dashboard .profiledetails .profile-body .profileinformation .inputrow .inputcol .inputbox .inputinfo .inputfield:-ms-input-placeholder {
-  color: #B5B5BD;
-}
-
-.dashboard .profiledetails .profile-body .profileinformation .inputrow .inputcol .inputbox .inputinfo .inputfield::-ms-input-placeholder {
-  color: #B5B5BD;
-}
-
-.dashboard .profiledetails .profile-body .profileinformation .inputrow .inputcol .inputbox .inputinfo .inputfield::placeholder {
-  color: #B5B5BD;
-}
-
-.dashboard .profiledetails .profile-body .profileinformation .submitrow {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
-}
-
-.dashboard .profiledetails .profile-body .profileinformation .submitrow .btn-save {
-  padding: 1rem 5rem;
-  text-align: center;
-  border-radius: 0.5rem;
-  border-radius: 0.5rem;
-  background: #CBD5E0;
-  color: #ffffff;
-  font-family: "Gilroy";
-  font-style: normal;
-  font-size: 1rem;
-  font-weight: 600;
-  line-height: 1;
-  -webkit-transition: all 250ms ease-in-out;
-  transition: all 250ms ease-in-out;
-}
-
-.dashboard .profiledetails .profile-body .profileinformation .submitrow .btn-save:not([disabled]):hover {
-  background: #FCAF15;
-}
-
 .dashboard .memberbooking {
   padding: 4rem 0rem 7.5rem;
   display: -webkit-box;
@@ -22242,6 +22165,131 @@ h6 {
           box-shadow: 0 0.25rem 1.25rem -0.125rem rgba(50, 50, 71, 0.08);
   -webkit-filter: drop-shadow(0 0 0.0625rem rgba(12, 26, 75, 0.1));
           filter: drop-shadow(0 0 0.0625rem rgba(12, 26, 75, 0.1));
+}
+
+.profileinformation {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 2.5rem;
+}
+
+@media screen and (max-width: 61.9375rem) {
+  .profileinformation {
+    gap: 1.5rem;
+  }
+}
+
+.profileinformation .inputrow {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 1.5rem;
+}
+
+@media screen and (max-width: 61.9375rem) {
+  .profileinformation .inputrow {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+.profileinformation .inputrow .inputcol {
+  width: 50%;
+}
+
+@media screen and (max-width: 61.9375rem) {
+  .profileinformation .inputrow .inputcol {
+    width: 100%;
+  }
+}
+
+.profileinformation .inputrow .inputcol .inputbox .inputinfo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 0.5rem;
+}
+
+.profileinformation .inputrow .inputcol .inputbox .inputinfo .inputlabel {
+  color: #425466;
+  font-family: "Gilroy";
+  font-style: normal;
+  font-size: 0.875rem;
+  font-weight: 500;
+  line-height: 1.42857;
+}
+
+.profileinformation .inputrow .inputcol .inputbox .inputinfo .inputfield {
+  background: #ffffff;
+  color: #4A5568;
+  border: solid 0.0625rem #E2E8F0;
+  border-radius: 0.375rem;
+  border-radius: 0.375rem;
+  font-family: "Gilroy";
+  font-style: normal;
+  font-size: 0.9375rem;
+  font-weight: 500;
+  line-height: 1;
+  padding: 0.8125rem 1rem;
+}
+
+.profileinformation .inputrow .inputcol .inputbox .inputinfo .inputfield::-webkit-input-placeholder {
+  color: #B5B5BD;
+}
+
+.profileinformation .inputrow .inputcol .inputbox .inputinfo .inputfield:-ms-input-placeholder {
+  color: #B5B5BD;
+}
+
+.profileinformation .inputrow .inputcol .inputbox .inputinfo .inputfield::-ms-input-placeholder {
+  color: #B5B5BD;
+}
+
+.profileinformation .inputrow .inputcol .inputbox .inputinfo .inputfield::placeholder {
+  color: #B5B5BD;
+}
+
+.submitrow {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.submitrow .btn-save {
+  padding: 1rem 5rem;
+  text-align: center;
+  border-radius: 0.5rem;
+  border-radius: 0.5rem;
+  background: #CBD5E0;
+  color: #ffffff;
+  font-family: "Gilroy";
+  font-style: normal;
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1;
+  -webkit-transition: all 250ms ease-in-out;
+  transition: all 250ms ease-in-out;
+}
+
+.submitrow .btn-save:not([disabled]):hover {
+  background: #FCAF15;
 }
 
 .providertabinfo {
@@ -22912,6 +22960,7 @@ h6 {
 
 .dashinfo {
   position: relative;
+  overflow: hidden;
 }
 
 .dashinfo .dashboard-thumb {
@@ -22926,7 +22975,14 @@ h6 {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  margin-bottom: -4rem;
   overflow: hidden;
+}
+
+@media screen and (min-width: 61.9375rem) {
+  .dashinfo .dashboard-thumb {
+    margin-bottom: 0rem;
+  }
 }
 
 .dashinfo .dashboard-thumb img {
@@ -23300,4 +23356,415 @@ h6 {
       -ms-flex-align: center;
           align-items: center;
   gap: 1rem;
+}
+
+.genderbox {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 0.5rem;
+}
+
+@media screen and (max-width: 48rem) {
+  .genderbox {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+}
+
+.genderbox .gender {
+  width: 33.33%;
+}
+
+@media screen and (max-width: 48rem) {
+  .genderbox .gender {
+    width: 100%;
+  }
+}
+
+.genderbox .gender input[type="radio"]:checked ~ label::before {
+  border-color: #01796F;
+}
+
+.genderbox .gender input[type="radio"]:checked ~ label::after {
+  background: #01796F;
+  opacity: 1;
+}
+
+.genderbox .gender label {
+  width: 100%;
+  position: relative;
+  padding: 0.875rem 1.125rem 0.875rem 3rem;
+  border: solid 0.0625rem #E2E8F0;
+  font-family: "Gilroy";
+  font-style: normal;
+  font-size: 0.875rem;
+  font-weight: 500;
+  line-height: 1.71429;
+  color: #27272E;
+  cursor: pointer;
+}
+
+.genderbox .gender label::before {
+  content: '';
+  height: 1.25rem;
+  width: 1.25rem;
+  border-radius: 100%;
+  border: solid 0.125rem #C9CED6;
+  background: transparent;
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+  left: 1.125rem;
+  -webkit-transition: all 250ms ease-in-out;
+  transition: all 250ms ease-in-out;
+}
+
+.genderbox .gender label::after {
+  content: '';
+  height: 0.625rem;
+  width: 0.625rem;
+  border-radius: 100%;
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+  left: 1.4375rem;
+  background: #ffffff;
+  opacity: 0;
+  -webkit-transition: all 250ms ease-in-out;
+  transition: all 250ms ease-in-out;
+}
+
+.providerprofile {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 2.5rem;
+  padding: 2rem 0rem 4rem;
+}
+
+@media screen and (min-width: 61.9375rem) {
+  .providerprofile {
+    gap: 3.5rem;
+    padding: 4rem 0rem 7.5rem;
+  }
+}
+
+.providerprofile-header .profiletitle {
+  color: #2D3748;
+  font-family: "Gilroy";
+  font-style: normal;
+  font-size: 1.75rem;
+  font-weight: 600;
+  line-height: 1.36;
+}
+
+@media screen and (min-width: 61.9375rem) {
+  .providerprofile-header .profiletitle {
+    font-family: "Gilroy";
+    font-style: normal;
+    font-size: 2.25rem;
+    font-weight: 600;
+    line-height: 1.36;
+  }
+}
+
+.providerprofile-body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 2.5rem;
+}
+
+@media screen and (min-width: 61.9375rem) {
+  .providerprofile-body {
+    gap: 3.5rem;
+  }
+}
+
+.providerprofile-body .nav-tabs {
+  border: 0;
+  margin: 0;
+  padding: 0;
+  gap: 0.125rem;
+}
+
+.providerprofile-body .nav-tabs .nav-link {
+  border: 0;
+  margin: 0;
+  padding: 0.9375rem 0.5rem;
+  background: transparent;
+  color: #27272E;
+  border-radius: 0.5rem;
+  border-radius: 0.5rem;
+  font-family: "Gilroy";
+  font-style: normal;
+  font-size: 0.875rem;
+  font-weight: 600;
+  line-height: 1;
+}
+
+@media screen and (min-width: 61.9375rem) {
+  .providerprofile-body .nav-tabs .nav-link {
+    min-width: 15rem;
+  }
+}
+
+.providerprofile-body .nav-tabs .nav-link.active {
+  background: #ffffff;
+  -webkit-box-shadow: 0 0.25rem 1.25rem -0.125rem rgba(50, 50, 71, 0.08);
+          box-shadow: 0 0.25rem 1.25rem -0.125rem rgba(50, 50, 71, 0.08);
+  -webkit-filter: drop-shadow(0 0 0.0625rem rgba(12, 26, 75, 0.1));
+          filter: drop-shadow(0 0 0.0625rem rgba(12, 26, 75, 0.1));
+}
+
+.providerprofile-body .nav-tabs .nav-link:hover:not(.active) {
+  background: #ffffff;
+  -webkit-box-shadow: 0 0.25rem 1.25rem -0.125rem rgba(50, 50, 71, 0.08);
+          box-shadow: 0 0.25rem 1.25rem -0.125rem rgba(50, 50, 71, 0.08);
+  -webkit-filter: drop-shadow(0 0 0.0625rem rgba(12, 26, 75, 0.1));
+          filter: drop-shadow(0 0 0.0625rem rgba(12, 26, 75, 0.1));
+}
+
+.providerprofile-body .personalinfo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 2.5rem;
+}
+
+@media screen and (min-width: 61.9375rem) {
+  .providerprofile-body .personalinfo {
+    gap: 3.5rem;
+  }
+}
+
+.providerprofile-body .personalinfo .profilethumb {
+  position: relative;
+  height: 13.75rem;
+  width: 13.75rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border-top-left-radius: 0.75rem;
+  border-top-right-radius: 0.75rem;
+}
+
+@media screen and (min-width: 22.5rem) {
+  .providerprofile-body .personalinfo .profilethumb {
+    height: 16.0625rem;
+    width: 16.0625rem;
+  }
+}
+
+.providerprofile-body .personalinfo .profilethumb img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.providerprofile-body .personalinfo .profilethumb .input-group {
+  position: absolute;
+  bottom: -0.5625rem;
+  right: -0.5625rem;
+  height: 2.25rem;
+  width: 2.25rem;
+  border-radius: 100%;
+}
+
+.providerprofile-body .personalinfo .profilethumb .input-group-text {
+  background: #EEEEEE;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  border-radius: 100% !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  border: none;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 0.875rem;
+  cursor: pointer;
+}
+
+.providerprofile-body .steponeform {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 2rem;
+}
+
+@media screen and (min-width: 61.9375rem) {
+  .providerprofile-body .steponeform {
+    margin-bottom: 2.5rem;
+  }
+}
+
+.providerprofile-body .steponeform .mobilecol {
+  margin-bottom: 2rem;
+}
+
+@media screen and (min-width: 61.9375rem) {
+  .providerprofile-body .steponeform .mobilecol {
+    margin-bottom: 2.5rem;
+  }
+}
+
+.providerprofile-body .steponeform .inputbox {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 0.5rem;
+}
+
+.providerprofile-body .steponeform .inputbox .inputlabel {
+  font-family: "Gilroy";
+  font-style: normal;
+  font-size: 0.875rem;
+  font-weight: 500;
+  line-height: 1;
+  color: #425466;
+}
+
+.providerprofile-body .steponeform .inputbox .inputfield {
+  background: #ffffff;
+  padding: 0.875rem 1rem;
+  border-radius: 0.375rem;
+  border-radius: 0.375rem;
+  border: solid 0.0625rem #E2E8F0;
+  font-family: "Gilroy";
+  font-style: normal;
+  font-size: 0.875rem;
+  font-weight: normal;
+  line-height: 1;
+  color: #2D3748;
+}
+
+.providerprofile-body .steponeform .inputbox .selectfield {
+  background: #ffffff url("data:image/svg+xml,%3Csvg width='11' height='11' viewBox='0 0 11 11' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cmask id='mask0_5998_44256' style='mask-type:alpha' maskUnits='userSpaceOnUse' x='0' y='0' width='11' height='11'%3E%3Cpath d='M4.98252 7.65869L1.68511 3.89022C1.29615 3.4457 1.61184 2.75 2.20251 2.75H8.79733C9.388 2.75 9.70369 3.4457 9.31473 3.89022L6.01732 7.65869C5.74341 7.97173 5.25643 7.97173 4.98252 7.65869Z' fill='black'/%3E%3C/mask%3E%3Cg mask='url(%23mask0_5998_44256)'%3E%3Crect width='11' height='11' fill='%23B5B5BD'/%3E%3C/g%3E%3C/svg%3E%0A") no-repeat center right 3%;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  border: solid 0.0625rem #E2E8F0;
+  padding: 0.875rem 1rem;
+  border-radius: 0.375rem;
+  border-radius: 0.375rem;
+  font-family: "Gilroy";
+  font-style: normal;
+  font-size: 0.875rem;
+  font-weight: normal;
+  line-height: 1;
+  color: #2D3748;
+}
+
+.providerprofile-body .steponeform .inputinfo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border: solid 0.0625rem #E2E8F0;
+  padding: 0.375rem;
+  border-radius: 0.375rem;
+  border-radius: 0.375rem;
+}
+
+.providerprofile-body .steponeform .inputinfo .keepingbox {
+  width: calc(100% - 6rem);
+  padding: 0rem 0.5rem;
+  color: #B5B5BD;
+  font-family: "Gilroy";
+  font-style: normal;
+  font-size: 0.9375rem;
+  font-weight: 500;
+  line-height: 1;
+}
+
+.providerprofile-body .steponeform .inputinfo .btn-upload {
+  background: #01796F;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 0.375rem;
+  padding: 0.5rem 1rem;
+  border-radius: 0.25rem;
+  border-radius: 0.25rem;
+  cursor: pointer;
+  width: 6rem;
+  -webkit-transition: all 250ms ease-in-out;
+  transition: all 250ms ease-in-out;
+}
+
+.providerprofile-body .steponeform .inputinfo .btn-upload .icon {
+  height: 1rem;
+  width: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  overflow: hidden;
+}
+
+.providerprofile-body .steponeform .inputinfo .btn-upload .icon svg {
+  width: 100%;
+  height: 100%;
+}
+
+.providerprofile-body .steponeform .inputinfo .btn-upload .text {
+  font-family: "Gilroy";
+  font-style: normal;
+  font-size: 0.75rem;
+  font-weight: 600;
+  line-height: 1;
+  color: #ffffff;
+}
+
+.providerprofile-body .steponeform .inputinfo .btn-upload:not([disabled]):hover {
+  background: #01ac9d;
 }
