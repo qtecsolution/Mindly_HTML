@@ -512,6 +512,12 @@
                                         Mental Health Status/History
                                     </button>
                                 </li>
+
+                                <li class="nav-item" role="presentation">
+                                    <button class="nav-link" id="publicinfo-tab" data-bs-toggle="tab" data-bs-target="#publicinfo" type="button" role="tab" aria-controls="publicinfo" aria-selected="false">
+                                        Public Info
+                                    </button>
+                                </li>
                             </ul>
 
                             <div class="tab-content" id="profileTabContent">
@@ -732,6 +738,121 @@
                                                 <div class="submitrow">
                                                     <button type="button" class="btn-save">Save</button>
                                                 </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+
+                                <div class="tab-pane fade" id="publicinfo" role="tabpanel" aria-labelledby="publicinfo-tab">
+                                    <div class="publicinfo">
+                                        <form class="steponeform">
+                                            <div class="row g-4">
+                                                <div class="col-lg-6 col-12">
+                                                    <div class="inputbox">
+                                                        <label for="profileHeading" class="inputlabel">Profile Heading</label>
+                                                        <input type="text" id="profileHeading" class="inputfield" autocomplete="off">
+                                                    </div>
+                                                </div>
+                                                
+                                                <div class="col-lg-6 col-12">
+                                                    <div class="inputbox">
+                                                        <label for="specialities" class="inputlabel">Specialities (comma sepatated)</label>
+                                                        <input type="text" id="specialities" class="inputfield" autocomplete="off">
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="row">
+                                                <div class="col-12">
+                                                    <div class="inputbox">
+                                                        <label for="profileDescription" class="inputlabel">Profile Description</label>
+                                                        <textarea id="profileDescription" class="inputfield" rows="7" autocomplete="off"></textarea>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="stepdetails prostepdetails">
+                                                <div class="selectfees">
+                                                    <h2 class="selectfees-title">Select Fees</h2>
+                                                </div>
+
+                                                <!-- TABLE-FEES START -->
+                                                <div class="tablefees">
+                                                    <!-- TABLE-FEES HEADER START -->
+                                                    <div class="tablefees-header">
+                                                        <div class="tablerow">
+                                                            <div class="tablecol">
+                                                                <span class="table-heading">Type</span>
+                                                            </div>
+
+                                                            <div class="tablecol">
+                                                                <span class="table-heading">Remuneration <span>Per Session</span></span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <!-- TABLE-FEES HEADER END -->
+
+                                                    <!-- TABLE-FEES BODY START -->
+                                                    <div class="tablefees-body">
+                                                        <div class="tablerow">
+                                                            <div class="tablecol">
+                                                                <span class="table-value">Individual</span>
+                                                            </div>
+
+                                                            <div class="tablecol">
+                                                                <div class="value-price">
+                                                                    <input type="number" placeholder="2000"
+                                                                        class="priceinput" id="price-1">
+                                                                    <label id="price-1" class="pricelabel">BDT</label>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="tablerow">
+                                                            <div class="tablecol">
+                                                                <span class="table-value">Couple</span>
+                                                            </div>
+
+                                                            <div class="tablecol">
+                                                                <div class="value-price">
+                                                                    <input type="number" placeholder="2000"
+                                                                        class="priceinput" id="price-1">
+                                                                    <label id="price-1" class="pricelabel">BDT</label>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="tablerow">
+                                                            <div class="tablecol">
+                                                                <span class="table-value">Family</span>
+                                                            </div>
+
+                                                            <div class="tablecol">
+                                                                <div class="value-price">
+                                                                    <input type="number" placeholder="2000"
+                                                                        class="priceinput" id="price-1">
+                                                                    <label id="price-1" class="pricelabel">BDT</label>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="tablerow">
+                                                            <div class="tablecol">
+                                                                <span class="table-value">Group Activities</span>
+                                                            </div>
+
+                                                            <div class="tablecol">
+                                                                <div class="value-price">
+                                                                    <input type="number" placeholder="200000"
+                                                                        class="priceinput" id="price-1">
+                                                                    <label id="price-1" class="pricelabel">BDT</label>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <!-- TABLE-FEES BODY END -->
+                                                </div>
+                                                <!-- TABLE-FEES END -->
                                             </div>
                                         </form>
                                     </div>

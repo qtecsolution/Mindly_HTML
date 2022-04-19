@@ -803,6 +803,10 @@ textarea {
   resize: none;
 }
 
+textarea:focus {
+  outline: none;
+}
+
 ::-webkit-datetime-edit-year-field:not([aria-valuenow]),
 ::-webkit-datetime-edit-month-field:not([aria-valuenow]),
 ::-webkit-datetime-edit-day-field:not([aria-valuenow]) {
@@ -11432,220 +11436,6 @@ h6 {
   }
 }
 
-.registerbox-body .step3info .step3-info .steponeform {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  gap: 2rem;
-}
-
-@media screen and (min-width: 61.9375rem) {
-  .registerbox-body .step3info .step3-info .steponeform {
-    gap: 2.75rem;
-  }
-}
-
-.registerbox-body .step3info .step3-info .steponeform .stepdetails {
-  width: 26.875rem;
-  margin-inline: auto;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  gap: 1.5rem;
-}
-
-@media screen and (max-width: 35.9375rem) {
-  .registerbox-body .step3info .step3-info .steponeform .stepdetails {
-    width: 100%;
-  }
-}
-
-.registerbox-body .step3info .step3-info .steponeform .stepdetails .selectfees-title {
-  font-family: "Gilroy";
-  font-style: normal;
-  font-size: 1.75rem;
-  font-weight: 600;
-  line-height: 1.36;
-  color: #2D3748;
-}
-
-@media screen and (max-width: 35.9375rem) {
-  .registerbox-body .step3info .step3-info .steponeform .stepdetails .selectfees-title {
-    font-family: "Gilroy";
-    font-style: normal;
-    font-size: 1.5rem;
-    font-weight: 600;
-    line-height: 1.36;
-  }
-}
-
-.registerbox-body .step3info .step3-info .steponeform .stepdetails .tablefees {
-  border: solid 0.0625rem #C2C9D1;
-  border-radius: 0.5rem;
-  border-radius: 0.5rem;
-}
-
-.registerbox-body .step3info .step3-info .steponeform .stepdetails .tablefees-header .tablerow {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  border-bottom: solid 0.0625rem #C2C9D1;
-}
-
-.registerbox-body .step3info .step3-info .steponeform .stepdetails .tablefees-header .tablerow .tablecol {
-  width: 50%;
-  padding: 0.6875rem;
-}
-
-.registerbox-body .step3info .step3-info .steponeform .stepdetails .tablefees-header .tablerow .tablecol:first-child {
-  border-right: solid 0.0625rem #C2C9D1;
-}
-
-.registerbox-body .step3info .step3-info .steponeform .stepdetails .tablefees-header .tablerow .tablecol .table-heading {
-  font-family: "Gilroy";
-  font-style: normal;
-  font-size: 1rem;
-  font-weight: 600;
-  line-height: 1.5;
-  color: rgba(0, 0, 0, 0.5);
-}
-
-@media screen and (max-width: 35.9375rem) {
-  .registerbox-body .step3info .step3-info .steponeform .stepdetails .tablefees-header .tablerow .tablecol .table-heading {
-    font-family: "Gilroy";
-    font-style: normal;
-    font-size: 0.875rem;
-    font-weight: 600;
-    line-height: 1.71429;
-  }
-  .registerbox-body .step3info .step3-info .steponeform .stepdetails .tablefees-header .tablerow .tablecol .table-heading span {
-    display: none;
-  }
-}
-
-@media screen and (max-width: 31.25rem) {
-  .registerbox-body .step3info .step3-info .steponeform .stepdetails .tablefees-header .tablerow .tablecol .table-heading {
-    font-family: "Gilroy";
-    font-style: normal;
-    font-size: 0.75rem;
-    font-weight: 600;
-    line-height: 1;
-  }
-}
-
-.registerbox-body .step3info .step3-info .steponeform .stepdetails .tablefees-body .tablerow {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  border-bottom: solid 0.0625rem #C2C9D1;
-}
-
-.registerbox-body .step3info .step3-info .steponeform .stepdetails .tablefees-body .tablerow:last-child {
-  border: 0;
-}
-
-.registerbox-body .step3info .step3-info .steponeform .stepdetails .tablefees-body .tablerow .tablecol {
-  width: 50%;
-  padding: 0.6875rem;
-}
-
-.registerbox-body .step3info .step3-info .steponeform .stepdetails .tablefees-body .tablerow .tablecol:first-child {
-  border-right: solid 0.0625rem #C2C9D1;
-}
-
-.registerbox-body .step3info .step3-info .steponeform .stepdetails .tablefees-body .tablerow .tablecol .table-value {
-  font-family: "Gilroy";
-  font-style: normal;
-  font-size: 1rem;
-  font-weight: normal;
-  line-height: 1.625;
-  color: #718096;
-  -webkit-font-feature-settings: 'salt';
-          font-feature-settings: 'salt';
-}
-
-@media screen and (max-width: 35.9375rem) {
-  .registerbox-body .step3info .step3-info .steponeform .stepdetails .tablefees-body .tablerow .tablecol .table-value {
-    font-family: "Gilroy";
-    font-style: normal;
-    font-size: 0.875rem;
-    font-weight: normal;
-    line-height: 1.71429;
-  }
-}
-
-.registerbox-body .step3info .step3-info .steponeform .stepdetails .tablefees-body .tablerow .tablecol .value-price {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  overflow: hidden;
-}
-
-.registerbox-body .step3info .step3-info .steponeform .stepdetails .tablefees-body .tablerow .tablecol .value-price .priceinput {
-  width: 5rem;
-  text-align: center;
-  background: transparent;
-  color: #718096;
-  font-family: "Gilroy";
-  font-style: normal;
-  font-size: 1rem;
-  font-weight: normal;
-  line-height: 1.625;
-  -webkit-font-feature-settings: 'salt';
-          font-feature-settings: 'salt';
-}
-
-@media screen and (max-width: 35.9375rem) {
-  .registerbox-body .step3info .step3-info .steponeform .stepdetails .tablefees-body .tablerow .tablecol .value-price .priceinput {
-    font-family: "Gilroy";
-    font-style: normal;
-    font-size: 0.875rem;
-    font-weight: normal;
-    line-height: 1.71429;
-  }
-}
-
-.registerbox-body .step3info .step3-info .steponeform .stepdetails .tablefees-body .tablerow .tablecol .value-price .pricelabel {
-  font-family: "Gilroy";
-  font-style: normal;
-  font-size: 1rem;
-  font-weight: normal;
-  line-height: 1.625;
-  color: #718096;
-  -webkit-font-feature-settings: 'salt';
-          font-feature-settings: 'salt';
-}
-
-@media screen and (max-width: 35.9375rem) {
-  .registerbox-body .step3info .step3-info .steponeform .stepdetails .tablefees-body .tablerow .tablecol .value-price .pricelabel {
-    font-family: "Gilroy";
-    font-style: normal;
-    font-size: 0.875rem;
-    font-weight: normal;
-    line-height: 1.71429;
-  }
-}
-
 .registerbox-body .step3info .submitbox {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -11688,6 +11478,240 @@ h6 {
 
 .registerbox-body .step3info .submitbox .btn-submit:not([disabled]):hover {
   background: #e63106;
+}
+
+.steponeform {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 2rem;
+}
+
+@media screen and (min-width: 61.9375rem) {
+  .steponeform {
+    gap: 2.75rem;
+  }
+}
+
+.steponeform .stepdetails {
+  width: 26.875rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 1.5rem;
+}
+
+@media screen and (max-width: 35.9375rem) {
+  .steponeform .stepdetails {
+    width: 100%;
+  }
+}
+
+.steponeform .stepdetails .selectfees-title {
+  font-family: "Gilroy";
+  font-style: normal;
+  font-size: 1.75rem;
+  font-weight: 600;
+  line-height: 1.36;
+  color: #2D3748;
+}
+
+@media screen and (max-width: 35.9375rem) {
+  .steponeform .stepdetails .selectfees-title {
+    font-family: "Gilroy";
+    font-style: normal;
+    font-size: 1.5rem;
+    font-weight: 600;
+    line-height: 1.36;
+  }
+}
+
+.steponeform .stepdetails .tablefees {
+  border: solid 0.0625rem #C2C9D1;
+  border-radius: 0.5rem;
+  border-radius: 0.5rem;
+}
+
+.steponeform .stepdetails .tablefees-header .tablerow {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-bottom: solid 0.0625rem #C2C9D1;
+}
+
+.steponeform .stepdetails .tablefees-header .tablerow .tablecol {
+  width: 50%;
+  padding: 0.6875rem;
+}
+
+.steponeform .stepdetails .tablefees-header .tablerow .tablecol:first-child {
+  border-right: solid 0.0625rem #C2C9D1;
+}
+
+.steponeform .stepdetails .tablefees-header .tablerow .tablecol .table-heading {
+  font-family: "Gilroy";
+  font-style: normal;
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.5;
+  color: rgba(0, 0, 0, 0.5);
+}
+
+@media screen and (max-width: 35.9375rem) {
+  .steponeform .stepdetails .tablefees-header .tablerow .tablecol .table-heading {
+    font-family: "Gilroy";
+    font-style: normal;
+    font-size: 0.875rem;
+    font-weight: 600;
+    line-height: 1.71429;
+  }
+  .steponeform .stepdetails .tablefees-header .tablerow .tablecol .table-heading span {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 31.25rem) {
+  .steponeform .stepdetails .tablefees-header .tablerow .tablecol .table-heading {
+    font-family: "Gilroy";
+    font-style: normal;
+    font-size: 0.75rem;
+    font-weight: 600;
+    line-height: 1;
+  }
+}
+
+.steponeform .stepdetails .tablefees-body .tablerow {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-bottom: solid 0.0625rem #C2C9D1;
+}
+
+.steponeform .stepdetails .tablefees-body .tablerow:last-child {
+  border: 0;
+}
+
+.steponeform .stepdetails .tablefees-body .tablerow .tablecol {
+  width: 50%;
+  padding: 0.6875rem;
+}
+
+.steponeform .stepdetails .tablefees-body .tablerow .tablecol:first-child {
+  border-right: solid 0.0625rem #C2C9D1;
+}
+
+.steponeform .stepdetails .tablefees-body .tablerow .tablecol .table-value {
+  font-family: "Gilroy";
+  font-style: normal;
+  font-size: 1rem;
+  font-weight: normal;
+  line-height: 1.625;
+  color: #718096;
+  -webkit-font-feature-settings: 'salt';
+          font-feature-settings: 'salt';
+}
+
+@media screen and (max-width: 35.9375rem) {
+  .steponeform .stepdetails .tablefees-body .tablerow .tablecol .table-value {
+    font-family: "Gilroy";
+    font-style: normal;
+    font-size: 0.875rem;
+    font-weight: normal;
+    line-height: 1.71429;
+  }
+}
+
+.steponeform .stepdetails .tablefees-body .tablerow .tablecol .value-price {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  overflow: hidden;
+}
+
+.steponeform .stepdetails .tablefees-body .tablerow .tablecol .value-price .priceinput {
+  width: 5rem;
+  text-align: center;
+  background: transparent;
+  color: #000000;
+  font-family: "Gilroy";
+  font-style: normal;
+  font-size: 1rem;
+  font-weight: normal;
+  line-height: 1.625;
+  -webkit-font-feature-settings: 'salt';
+          font-feature-settings: 'salt';
+}
+
+@media screen and (max-width: 35.9375rem) {
+  .steponeform .stepdetails .tablefees-body .tablerow .tablecol .value-price .priceinput {
+    font-family: "Gilroy";
+    font-style: normal;
+    font-size: 0.875rem;
+    font-weight: normal;
+    line-height: 1.71429;
+  }
+}
+
+.steponeform .stepdetails .tablefees-body .tablerow .tablecol .value-price .priceinput::-webkit-input-placeholder {
+  color: #B5B5BD;
+}
+
+.steponeform .stepdetails .tablefees-body .tablerow .tablecol .value-price .priceinput:-ms-input-placeholder {
+  color: #B5B5BD;
+}
+
+.steponeform .stepdetails .tablefees-body .tablerow .tablecol .value-price .priceinput::-ms-input-placeholder {
+  color: #B5B5BD;
+}
+
+.steponeform .stepdetails .tablefees-body .tablerow .tablecol .value-price .priceinput::placeholder {
+  color: #B5B5BD;
+}
+
+.steponeform .stepdetails .tablefees-body .tablerow .tablecol .value-price .pricelabel {
+  font-family: "Gilroy";
+  font-style: normal;
+  font-size: 1rem;
+  font-weight: normal;
+  line-height: 1.625;
+  color: #718096;
+  -webkit-font-feature-settings: 'salt';
+          font-feature-settings: 'salt';
+}
+
+@media screen and (max-width: 35.9375rem) {
+  .steponeform .stepdetails .tablefees-body .tablerow .tablecol .value-price .pricelabel {
+    font-family: "Gilroy";
+    font-style: normal;
+    font-size: 0.875rem;
+    font-weight: normal;
+    line-height: 1.71429;
+  }
+}
+
+.steponeform .stepdetails.prostepdetails .selectfees-title {
+  color: #425466;
+  font-weight: 500;
 }
 
 .profileupload {
@@ -12402,220 +12426,6 @@ h6 {
   }
 }
 
-.registerbox-body .step3info .step3-info .steponeform {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  gap: 2rem;
-}
-
-@media screen and (min-width: 61.9375rem) {
-  .registerbox-body .step3info .step3-info .steponeform {
-    gap: 2.75rem;
-  }
-}
-
-.registerbox-body .step3info .step3-info .steponeform .stepdetails {
-  width: 26.875rem;
-  margin-inline: auto;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  gap: 1.5rem;
-}
-
-@media screen and (max-width: 35.9375rem) {
-  .registerbox-body .step3info .step3-info .steponeform .stepdetails {
-    width: 100%;
-  }
-}
-
-.registerbox-body .step3info .step3-info .steponeform .stepdetails .selectfees-title {
-  font-family: "Gilroy";
-  font-style: normal;
-  font-size: 1.75rem;
-  font-weight: 600;
-  line-height: 1.36;
-  color: #2D3748;
-}
-
-@media screen and (max-width: 35.9375rem) {
-  .registerbox-body .step3info .step3-info .steponeform .stepdetails .selectfees-title {
-    font-family: "Gilroy";
-    font-style: normal;
-    font-size: 1.5rem;
-    font-weight: 600;
-    line-height: 1.36;
-  }
-}
-
-.registerbox-body .step3info .step3-info .steponeform .stepdetails .tablefees {
-  border: solid 0.0625rem #C2C9D1;
-  border-radius: 0.5rem;
-  border-radius: 0.5rem;
-}
-
-.registerbox-body .step3info .step3-info .steponeform .stepdetails .tablefees-header .tablerow {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  border-bottom: solid 0.0625rem #C2C9D1;
-}
-
-.registerbox-body .step3info .step3-info .steponeform .stepdetails .tablefees-header .tablerow .tablecol {
-  width: 50%;
-  padding: 0.6875rem;
-}
-
-.registerbox-body .step3info .step3-info .steponeform .stepdetails .tablefees-header .tablerow .tablecol:first-child {
-  border-right: solid 0.0625rem #C2C9D1;
-}
-
-.registerbox-body .step3info .step3-info .steponeform .stepdetails .tablefees-header .tablerow .tablecol .table-heading {
-  font-family: "Gilroy";
-  font-style: normal;
-  font-size: 1rem;
-  font-weight: 600;
-  line-height: 1.5;
-  color: rgba(0, 0, 0, 0.5);
-}
-
-@media screen and (max-width: 35.9375rem) {
-  .registerbox-body .step3info .step3-info .steponeform .stepdetails .tablefees-header .tablerow .tablecol .table-heading {
-    font-family: "Gilroy";
-    font-style: normal;
-    font-size: 0.875rem;
-    font-weight: 600;
-    line-height: 1.71429;
-  }
-  .registerbox-body .step3info .step3-info .steponeform .stepdetails .tablefees-header .tablerow .tablecol .table-heading span {
-    display: none;
-  }
-}
-
-@media screen and (max-width: 31.25rem) {
-  .registerbox-body .step3info .step3-info .steponeform .stepdetails .tablefees-header .tablerow .tablecol .table-heading {
-    font-family: "Gilroy";
-    font-style: normal;
-    font-size: 0.75rem;
-    font-weight: 600;
-    line-height: 1;
-  }
-}
-
-.registerbox-body .step3info .step3-info .steponeform .stepdetails .tablefees-body .tablerow {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  border-bottom: solid 0.0625rem #C2C9D1;
-}
-
-.registerbox-body .step3info .step3-info .steponeform .stepdetails .tablefees-body .tablerow:last-child {
-  border: 0;
-}
-
-.registerbox-body .step3info .step3-info .steponeform .stepdetails .tablefees-body .tablerow .tablecol {
-  width: 50%;
-  padding: 0.6875rem;
-}
-
-.registerbox-body .step3info .step3-info .steponeform .stepdetails .tablefees-body .tablerow .tablecol:first-child {
-  border-right: solid 0.0625rem #C2C9D1;
-}
-
-.registerbox-body .step3info .step3-info .steponeform .stepdetails .tablefees-body .tablerow .tablecol .table-value {
-  font-family: "Gilroy";
-  font-style: normal;
-  font-size: 1rem;
-  font-weight: normal;
-  line-height: 1.625;
-  color: #718096;
-  -webkit-font-feature-settings: 'salt';
-          font-feature-settings: 'salt';
-}
-
-@media screen and (max-width: 35.9375rem) {
-  .registerbox-body .step3info .step3-info .steponeform .stepdetails .tablefees-body .tablerow .tablecol .table-value {
-    font-family: "Gilroy";
-    font-style: normal;
-    font-size: 0.875rem;
-    font-weight: normal;
-    line-height: 1.71429;
-  }
-}
-
-.registerbox-body .step3info .step3-info .steponeform .stepdetails .tablefees-body .tablerow .tablecol .value-price {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  overflow: hidden;
-}
-
-.registerbox-body .step3info .step3-info .steponeform .stepdetails .tablefees-body .tablerow .tablecol .value-price .priceinput {
-  width: 5rem;
-  text-align: center;
-  background: transparent;
-  color: #718096;
-  font-family: "Gilroy";
-  font-style: normal;
-  font-size: 1rem;
-  font-weight: normal;
-  line-height: 1.625;
-  -webkit-font-feature-settings: 'salt';
-          font-feature-settings: 'salt';
-}
-
-@media screen and (max-width: 35.9375rem) {
-  .registerbox-body .step3info .step3-info .steponeform .stepdetails .tablefees-body .tablerow .tablecol .value-price .priceinput {
-    font-family: "Gilroy";
-    font-style: normal;
-    font-size: 0.875rem;
-    font-weight: normal;
-    line-height: 1.71429;
-  }
-}
-
-.registerbox-body .step3info .step3-info .steponeform .stepdetails .tablefees-body .tablerow .tablecol .value-price .pricelabel {
-  font-family: "Gilroy";
-  font-style: normal;
-  font-size: 1rem;
-  font-weight: normal;
-  line-height: 1.625;
-  color: #718096;
-  -webkit-font-feature-settings: 'salt';
-          font-feature-settings: 'salt';
-}
-
-@media screen and (max-width: 35.9375rem) {
-  .registerbox-body .step3info .step3-info .steponeform .stepdetails .tablefees-body .tablerow .tablecol .value-price .pricelabel {
-    font-family: "Gilroy";
-    font-style: normal;
-    font-size: 0.875rem;
-    font-weight: normal;
-    line-height: 1.71429;
-  }
-}
-
 .registerbox-body .step3info .submitbox {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -12658,6 +12468,240 @@ h6 {
 
 .registerbox-body .step3info .submitbox .btn-submit:not([disabled]):hover {
   background: #e63106;
+}
+
+.steponeform {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 2rem;
+}
+
+@media screen and (min-width: 61.9375rem) {
+  .steponeform {
+    gap: 2.75rem;
+  }
+}
+
+.steponeform .stepdetails {
+  width: 26.875rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 1.5rem;
+}
+
+@media screen and (max-width: 35.9375rem) {
+  .steponeform .stepdetails {
+    width: 100%;
+  }
+}
+
+.steponeform .stepdetails .selectfees-title {
+  font-family: "Gilroy";
+  font-style: normal;
+  font-size: 1.75rem;
+  font-weight: 600;
+  line-height: 1.36;
+  color: #2D3748;
+}
+
+@media screen and (max-width: 35.9375rem) {
+  .steponeform .stepdetails .selectfees-title {
+    font-family: "Gilroy";
+    font-style: normal;
+    font-size: 1.5rem;
+    font-weight: 600;
+    line-height: 1.36;
+  }
+}
+
+.steponeform .stepdetails .tablefees {
+  border: solid 0.0625rem #C2C9D1;
+  border-radius: 0.5rem;
+  border-radius: 0.5rem;
+}
+
+.steponeform .stepdetails .tablefees-header .tablerow {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-bottom: solid 0.0625rem #C2C9D1;
+}
+
+.steponeform .stepdetails .tablefees-header .tablerow .tablecol {
+  width: 50%;
+  padding: 0.6875rem;
+}
+
+.steponeform .stepdetails .tablefees-header .tablerow .tablecol:first-child {
+  border-right: solid 0.0625rem #C2C9D1;
+}
+
+.steponeform .stepdetails .tablefees-header .tablerow .tablecol .table-heading {
+  font-family: "Gilroy";
+  font-style: normal;
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.5;
+  color: rgba(0, 0, 0, 0.5);
+}
+
+@media screen and (max-width: 35.9375rem) {
+  .steponeform .stepdetails .tablefees-header .tablerow .tablecol .table-heading {
+    font-family: "Gilroy";
+    font-style: normal;
+    font-size: 0.875rem;
+    font-weight: 600;
+    line-height: 1.71429;
+  }
+  .steponeform .stepdetails .tablefees-header .tablerow .tablecol .table-heading span {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 31.25rem) {
+  .steponeform .stepdetails .tablefees-header .tablerow .tablecol .table-heading {
+    font-family: "Gilroy";
+    font-style: normal;
+    font-size: 0.75rem;
+    font-weight: 600;
+    line-height: 1;
+  }
+}
+
+.steponeform .stepdetails .tablefees-body .tablerow {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-bottom: solid 0.0625rem #C2C9D1;
+}
+
+.steponeform .stepdetails .tablefees-body .tablerow:last-child {
+  border: 0;
+}
+
+.steponeform .stepdetails .tablefees-body .tablerow .tablecol {
+  width: 50%;
+  padding: 0.6875rem;
+}
+
+.steponeform .stepdetails .tablefees-body .tablerow .tablecol:first-child {
+  border-right: solid 0.0625rem #C2C9D1;
+}
+
+.steponeform .stepdetails .tablefees-body .tablerow .tablecol .table-value {
+  font-family: "Gilroy";
+  font-style: normal;
+  font-size: 1rem;
+  font-weight: normal;
+  line-height: 1.625;
+  color: #718096;
+  -webkit-font-feature-settings: 'salt';
+          font-feature-settings: 'salt';
+}
+
+@media screen and (max-width: 35.9375rem) {
+  .steponeform .stepdetails .tablefees-body .tablerow .tablecol .table-value {
+    font-family: "Gilroy";
+    font-style: normal;
+    font-size: 0.875rem;
+    font-weight: normal;
+    line-height: 1.71429;
+  }
+}
+
+.steponeform .stepdetails .tablefees-body .tablerow .tablecol .value-price {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  overflow: hidden;
+}
+
+.steponeform .stepdetails .tablefees-body .tablerow .tablecol .value-price .priceinput {
+  width: 5rem;
+  text-align: center;
+  background: transparent;
+  color: #000000;
+  font-family: "Gilroy";
+  font-style: normal;
+  font-size: 1rem;
+  font-weight: normal;
+  line-height: 1.625;
+  -webkit-font-feature-settings: 'salt';
+          font-feature-settings: 'salt';
+}
+
+@media screen and (max-width: 35.9375rem) {
+  .steponeform .stepdetails .tablefees-body .tablerow .tablecol .value-price .priceinput {
+    font-family: "Gilroy";
+    font-style: normal;
+    font-size: 0.875rem;
+    font-weight: normal;
+    line-height: 1.71429;
+  }
+}
+
+.steponeform .stepdetails .tablefees-body .tablerow .tablecol .value-price .priceinput::-webkit-input-placeholder {
+  color: #B5B5BD;
+}
+
+.steponeform .stepdetails .tablefees-body .tablerow .tablecol .value-price .priceinput:-ms-input-placeholder {
+  color: #B5B5BD;
+}
+
+.steponeform .stepdetails .tablefees-body .tablerow .tablecol .value-price .priceinput::-ms-input-placeholder {
+  color: #B5B5BD;
+}
+
+.steponeform .stepdetails .tablefees-body .tablerow .tablecol .value-price .priceinput::placeholder {
+  color: #B5B5BD;
+}
+
+.steponeform .stepdetails .tablefees-body .tablerow .tablecol .value-price .pricelabel {
+  font-family: "Gilroy";
+  font-style: normal;
+  font-size: 1rem;
+  font-weight: normal;
+  line-height: 1.625;
+  color: #718096;
+  -webkit-font-feature-settings: 'salt';
+          font-feature-settings: 'salt';
+}
+
+@media screen and (max-width: 35.9375rem) {
+  .steponeform .stepdetails .tablefees-body .tablerow .tablecol .value-price .pricelabel {
+    font-family: "Gilroy";
+    font-style: normal;
+    font-size: 0.875rem;
+    font-weight: normal;
+    line-height: 1.71429;
+  }
+}
+
+.steponeform .stepdetails.prostepdetails .selectfees-title {
+  color: #425466;
+  font-weight: 500;
 }
 
 .profileupload {

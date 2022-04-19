@@ -313,132 +313,6 @@
                 @include breakpoint(phone768) {
                     padding: length(24) length(16) length(44);
                 }
-
-                .steponeform {
-                    @include flex-column;
-                    gap: length(32);
-                        
-                    @include breakpoint(tab991) {
-                        gap: length(44);
-                    }
-
-                    .stepdetails {
-                        width: length(430);
-                        margin-inline: auto;
-                        @include flex-column;
-                        gap: length(24);
-
-                        @include breakpoint(phone575) {
-                            @include w100;
-                        }
-
-                        .selectfees {
-                            &-title {
-                                @include heading-2;
-                                color: $gray-800;
-
-                                @include breakpoint(phone575) {
-                                    @include heading-3;
-                                }
-                            }
-                        }
-
-                        .tablefees {
-                            @include border(solid, 1, $table-border);
-                            @include radius(8);
-
-                            &-header {
-                                .tablerow {
-                                    @include flex-center-vert;
-                                    @include border-single(bottom, solid, 1, $table-border);
-
-                                    .tablecol {
-                                        width: 50%;
-                                        padding: length(11);
-
-                                        &:first-child {
-                                            @include border-single(right, solid, 1, $table-border);
-                                        }
-
-                                        .table-heading {
-                                            @include font-24-16-semibold;
-                                            color: rgba($black, 0.5);
-
-                                            @include breakpoint(phone575) {
-                                                @include font-24-14-semibold;
-
-                                                span {
-                                                    display: none;
-                                                }
-                                            }
-
-                                            @include breakpoint(phone500) {
-                                                @include font-12-12-semibold;
-                                            }
-                                        }
-                                    }
-                                }
-                            }
-
-                            &-body {
-                                .tablerow {
-                                    @include flex-center-vert;
-                                    @include border-single(bottom, solid, 1, $table-border);
-
-                                    &:last-child {
-                                        border: 0;
-                                    }
-
-                                    .tablecol {
-                                        width: 50%;
-                                        padding: length(11);
-
-                                        &:first-child {
-                                            @include border-single(right, solid, 1, $table-border);
-                                        }
-
-                                        .table-value {
-                                            @include font-26-16-normal;
-                                            color: $gray-600;
-                                            font-feature-settings: 'salt';
-
-                                            @include breakpoint(phone575) {
-                                                @include font-24-14-normal;
-                                            }
-                                        }
-
-                                        .value-price {
-                                            @include flex-center;
-                                            overflow: hidden;
-
-                                            .priceinput {
-                                                width: length(80);
-                                                text-align: center;
-                                                @include setBgColor(transparent, $gray-600);
-                                                @include font-26-16-normal;
-                                                font-feature-settings: 'salt';
-
-                                                @include breakpoint(phone575) {
-                                                    @include font-24-14-normal;
-                                                }
-                                            }
-
-                                            .pricelabel {
-                                                @include font-26-16-normal;
-                                                color: $gray-600;
-                                                font-feature-settings: 'salt';
-
-                                                @include breakpoint(phone575) {
-                                                    @include font-24-14-normal;
-                                                }
-                                            }
-                                        }
-                                    }
-                                }
-                            }
-                        }
-                    }
-                }
             }
 
             .submitbox {
@@ -464,6 +338,145 @@
                     @include hover {
                         background: darken($tertiary, 10%);
                     }
+                }
+            }
+        }
+    }
+}
+
+
+.steponeform {
+    @include flex-column;
+    gap: length(32);
+        
+    @include breakpoint(tab991) {
+        gap: length(44);
+    }
+
+    .stepdetails {
+        width: length(430);
+        @include flex-column;
+        gap: length(24);
+
+        @include breakpoint(phone575) {
+            @include w100;
+        }
+
+        .selectfees {
+            &-title {
+                @include heading-2;
+                color: $gray-800;
+
+                @include breakpoint(phone575) {
+                    @include heading-3;
+                }
+            }
+        }
+
+        .tablefees {
+            @include border(solid, 1, $table-border);
+            @include radius(8);
+
+            &-header {
+                .tablerow {
+                    @include flex-center-vert;
+                    @include border-single(bottom, solid, 1, $table-border);
+
+                    .tablecol {
+                        width: 50%;
+                        padding: length(11);
+
+                        &:first-child {
+                            @include border-single(right, solid, 1, $table-border);
+                        }
+
+                        .table-heading {
+                            @include font-24-16-semibold;
+                            color: rgba($black, 0.5);
+
+                            @include breakpoint(phone575) {
+                                @include font-24-14-semibold;
+
+                                span {
+                                    display: none;
+                                }
+                            }
+
+                            @include breakpoint(phone500) {
+                                @include font-12-12-semibold;
+                            }
+                        }
+                    }
+                }
+            }
+
+            &-body {
+                .tablerow {
+                    @include flex-center-vert;
+                    @include border-single(bottom, solid, 1, $table-border);
+
+                    &:last-child {
+                        border: 0;
+                    }
+
+                    .tablecol {
+                        width: 50%;
+                        padding: length(11);
+
+                        &:first-child {
+                            @include border-single(right, solid, 1, $table-border);
+                        }
+
+                        .table-value {
+                            @include font-26-16-normal;
+                            color: $gray-600;
+                            font-feature-settings: 'salt';
+
+                            @include breakpoint(phone575) {
+                                @include font-24-14-normal;
+                            }
+                        }
+
+                        .value-price {
+                            @include flex-center;
+                            overflow: hidden;
+
+                            .priceinput {
+                                width: length(80);
+                                text-align: center;
+                                @include setBgColor(transparent, $black);
+                                @include font-26-16-normal;
+                                font-feature-settings: 'salt';
+
+                                @include breakpoint(phone575) {
+                                    @include font-24-14-normal;
+                                }
+
+                                &::placeholder {
+                                    color: $textPlaceholder;
+                                }
+                            }
+
+                            .pricelabel {
+                                @include font-26-16-normal;
+                                color: $gray-600;
+                                font-feature-settings: 'salt';
+
+                                @include breakpoint(phone575) {
+                                    @include font-24-14-normal;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        &.prostepdetails {
+            .selectfees {
+                &-title {
+                    color: $dateColor;
+                    font-weight: 500;
                 }
             }
         }
