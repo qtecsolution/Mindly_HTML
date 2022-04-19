@@ -81,218 +81,6 @@
             .title {
                 color: $gray-800;
             }
-
-            .schedulebox {
-                background: $white;
-                max-width: 100%;
-                padding: length(24);
-                @include flex-column;
-                gap: length(40);
-
-                @include breakpoint(tab991) {
-                    max-width: length(694);
-                }
-
-                .schedulesingle {
-                    @include flex-column;
-                    gap: length(24);
-
-                    .scheduleday,
-                    .timeschedules {
-                        @include flex-column;
-                        gap: length(24);
-                    }
-
-                    .scheduleday {
-                        &-header {
-                            @include flex-center-between;
-
-                            .title {
-                                color: $gray-800;
-                                @include font-26-16-normal;
-                                font-feature-settings: 'salt'on;
-                            }
-
-                            .buttonsgroup {
-                                @include flex-center-vert;
-                                gap: length(8);
-
-                                button {
-                                    @include transparent-button;
-                                    @include square(length(24));
-                                    @include flex-center;
-                                    overflow: hidden;
-
-                                    svg {
-                                        @include wh100;
-                                    }
-                                }
-                            }
-                        }
-
-                        &-body {
-                            @include flex-center-vert;
-                            gap: length(16);
-
-                            .scheduletimer {
-                                background: $white;
-                                @include border(solid, 1, $gray-400);
-                                cursor: pointer;
-                                @include square(length(115));
-                                @include flex-center-column;
-                                gap: length(4);
-                                text-align: center;
-                                @include transitions;
-
-                                .day {
-                                    @include font-20-14-medium;
-                                    color: $gray-600;
-                                }
-
-                                .date {
-                                    @include font-20-14-bold;
-                                    color: $gray-600;
-                                }
-
-                                .slot {
-                                    @include font-20-14-medium;
-                                    color: $gray-600;
-                                }
-
-                                &:hover:not(.active) {
-                                    background: $conversationBg;
-                                    border-color: $tertiary;
-                                }
-
-                                &.active {
-                                    background: $conversationBg;
-                                    border-color: $tertiary;
-                                }
-                            }
-                        }
-                    }
-
-                    .timeschedules {
-                        &-header {
-                            @include flex-center-between;
-
-                            .title {
-                                color: $gray-800;
-                                @include font-26-16-normal;
-                                font-feature-settings: 'salt'on;
-                            }
-
-                            .buttonsgroup {
-                                @include flex-center-vert;
-                                gap: length(8);
-
-                                button {
-                                    @include transparent-button;
-                                    @include square(length(24));
-                                    @include flex-center;
-                                    overflow: hidden;
-
-                                    svg {
-                                        @include wh100;
-                                    }
-                                }
-                            }
-                        }
-
-                        &-body {
-                            .scheduletimes {
-                                @include flex-center-vert;
-                                gap: length(16);
-                                flex-wrap: wrap;
-
-                                .btn-time {
-                                    @include setBgColor($white, $gray-700);
-                                    @include border(solid, 0.5, $gray-400);
-                                    padding: length(10) length(24);
-                                    @include transitions;
-                                    @include font-24-14-semibold;
-                                    width: calc((100% / 5) - 1rem);
-
-                                    &:hover:not(.active) {
-                                        @include setBgColor($conversationBg, $gray-700);
-                                        border-color: rgba($tertiary, 0.5);
-                                    }
-
-                                    &.active {
-                                        @include setBgColor($conversationBg, $gray-700);
-                                        border-color: rgba($tertiary, 0.5);
-                                    }
-                                }
-                            }
-                        }
-                    }
-
-                    .types {
-                        @include flex-column;
-                        gap: length(24);
-
-                        .title {
-                            color: $gray-800;
-                            @include font-26-16-normal;
-                            font-feature-settings: 'salt'on;
-                        }
-
-                        .typesinfo {
-                            @include flex-center-vert;
-                            gap: length(16);
-
-                            @include breakpoint(tablet991) {
-                                flex-wrap: wrap;
-                            }
-
-                            .fee {
-                                padding: length(35) length(12);
-                                @include flex-center-column;
-                                gap: length(4);
-                                background: $white;
-                                @include border(solid, 1, $gray-400);
-                                cursor: pointer;
-                                @include square(length(118));
-
-                                .title {
-                                    @include font-26-16-semibold;
-                                    color: $gray-800;
-                                }
-
-                                .pricefee {
-                                    @include font-24-14-normal;
-                                    color: $gray-600;
-                                }
-
-                                &:hover:not(.active) {
-                                    background: $conversationBg;
-                                    border-color: $tertiary;
-                                }
-
-                                &.active {
-                                    background: $conversationBg;
-                                    border-color: $tertiary;
-                                }
-                            }
-                        }
-                    }
-                }
-
-                .scheduleapply {
-                    .btn-apply {
-                        @include radius(8);
-                        @include font-16-16-semibold;
-                        @include setBgColor($tertiary, $white);
-                        padding: length(16) length(24);
-                        text-align: center;
-                        @include transitions;
-
-                        @include hover {
-                            @include setBgColor(darken($tertiary, 15%), $white);
-                        }
-                    }
-                }
-            }
         }
 
         .achievements {
@@ -306,6 +94,219 @@
             .certification {
                 @include flex-column;
                 gap: length(16);
+            }
+        }
+    }
+}
+
+
+.schedulebox {
+    background: $white;
+    max-width: 100%;
+    padding: length(24);
+    @include flex-column;
+    gap: length(40);
+
+    @include breakpoint(tab991) {
+        max-width: length(694);
+    }
+
+    .schedulesingle {
+        @include flex-column;
+        gap: length(24);
+
+        .scheduleday,
+        .timeschedules {
+            @include flex-column;
+            gap: length(24);
+        }
+
+        .scheduleday {
+            &-header {
+                @include flex-center-between;
+
+                .title {
+                    color: $gray-800;
+                    @include font-26-16-normal;
+                    font-feature-settings: 'salt';
+                }
+
+                .buttonsgroup {
+                    @include flex-center-vert;
+                    gap: length(8);
+
+                    button {
+                        @include transparent-button;
+                        @include square(length(24));
+                        @include flex-center;
+                        overflow: hidden;
+
+                        svg {
+                            @include wh100;
+                        }
+                    }
+                }
+            }
+
+            &-body {
+                @include flex-center-vert;
+                gap: length(16);
+
+                .scheduletimer {
+                    background: $white;
+                    @include border(solid, 1, $gray-400);
+                    cursor: pointer;
+                    @include square(length(115));
+                    @include flex-center-column;
+                    gap: length(4);
+                    text-align: center;
+                    @include transitions;
+
+                    .day {
+                        @include font-20-14-medium;
+                        color: $gray-600;
+                    }
+
+                    .date {
+                        @include font-20-14-bold;
+                        color: $gray-600;
+                    }
+
+                    .slot {
+                        @include font-20-14-medium;
+                        color: $gray-600;
+                    }
+
+                    &:hover:not(.active) {
+                        background: $conversationBg;
+                        border-color: $tertiary;
+                    }
+
+                    &.active {
+                        background: $conversationBg;
+                        border-color: $tertiary;
+                    }
+                }
+            }
+        }
+
+        .timeschedules {
+            &-header {
+                @include flex-center-between;
+
+                .title {
+                    color: $gray-800;
+                    @include font-26-16-normal;
+                    font-feature-settings: 'salt';
+                }
+
+                .buttonsgroup {
+                    @include flex-center-vert;
+                    gap: length(8);
+
+                    button {
+                        @include transparent-button;
+                        @include square(length(24));
+                        @include flex-center;
+                        overflow: hidden;
+
+                        svg {
+                            @include wh100;
+                        }
+                    }
+                }
+            }
+
+            &-body {
+                .scheduletimes {
+                    @include flex-center-vert;
+                    gap: length(16);
+                    flex-wrap: wrap;
+
+                    .btn-time {
+                        @include setBgColor($white, $gray-700);
+                        @include border(solid, 0.5, $gray-400);
+                        padding: length(10) length(24);
+                        @include transitions;
+                        @include font-24-14-semibold;
+                        width: calc((100% / 5) - 1rem);
+
+                        &:hover:not(.active) {
+                            @include setBgColor($conversationBg, $gray-700);
+                            border-color: rgba($tertiary, 0.5);
+                        }
+
+                        &.active {
+                            @include setBgColor($conversationBg, $gray-700);
+                            border-color: rgba($tertiary, 0.5);
+                        }
+                    }
+                }
+            }
+        }
+
+        .types {
+            @include flex-column;
+            gap: length(24);
+
+            .title {
+                color: $gray-800;
+                @include font-26-16-normal;
+                font-feature-settings: 'salt';
+            }
+
+            .typesinfo {
+                @include flex-center-vert;
+                gap: length(16);
+
+                @include breakpoint(tablet991) {
+                    flex-wrap: wrap;
+                }
+
+                .fee {
+                    padding: length(35) length(12);
+                    @include flex-center-column;
+                    gap: length(4);
+                    background: $white;
+                    @include border(solid, 1, $gray-400);
+                    cursor: pointer;
+                    @include square(length(118));
+
+                    .title {
+                        @include font-26-16-semibold;
+                        color: $gray-800;
+                    }
+
+                    .pricefee {
+                        @include font-24-14-normal;
+                        color: $gray-600;
+                    }
+
+                    &:hover:not(.active) {
+                        background: $conversationBg;
+                        border-color: $tertiary;
+                    }
+
+                    &.active {
+                        background: $conversationBg;
+                        border-color: $tertiary;
+                    }
+                }
+            }
+        }
+    }
+
+    .scheduleapply {
+        .btn-apply {
+            @include radius(8);
+            @include font-16-16-semibold;
+            @include setBgColor($tertiary, $white);
+            padding: length(16) length(24);
+            text-align: center;
+            @include transitions;
+
+            @include hover {
+                @include setBgColor(darken($tertiary, 15%), $white);
             }
         }
     }

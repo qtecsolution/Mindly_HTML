@@ -7,9 +7,7 @@ const appointment = new bootstrap.Modal(appointmentModal);
 
 const confirmAppointment = document.querySelector('#confirm-button');
 
-
 confirmAppointment.addEventListener('click', showSuccess);
-
 
 // SHOW SIGNUP
 function showSuccess() {

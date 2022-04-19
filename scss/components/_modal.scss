@@ -1097,3 +1097,57 @@
         }
     }
 }
+
+.sessionModal {
+    .modal-content {
+        border: 0;
+        @include radius(8);
+    }
+
+    .modal-header {
+        position: relative;
+        margin: 0;
+        padding: 0;
+        border-radius: 0;
+
+        .btn-close {
+            position: absolute;
+            @include square(length(60));
+            @include circle;
+            background: $white;
+            box-shadow: $modalBtnShadow;
+            top: 0;
+            right: length(-76);
+            z-index: 810;
+
+            @include breakpoint(phone768) {
+                @include square(length(40));
+                padding: length(8);
+                right: length(20);
+                top: length(20);
+            }
+
+            svg {
+                @include transitiontransform;
+
+                path {
+                    @include transitions;
+                }
+            }
+
+            @include hover {
+                svg {
+                    @include transform(rotate(90deg));
+
+                    path {
+                        fill: red;
+                    }
+                }
+            }
+        }
+    }
+    
+    .modal-body {
+        @include flex-center;
+    }
+}

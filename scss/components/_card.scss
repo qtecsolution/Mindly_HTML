@@ -2408,3 +2408,72 @@
         }
     }
 }
+
+.cardmembership {
+    background: $primary;
+    @include radius(8);
+    padding: length(28);
+    @include flex-center-column;
+    gap: length(10);
+
+    &-header {
+        @include flex-center-column;
+        gap: length(4);
+        text-align: center;
+        @include w100;
+
+        .icon-title {
+            @include flex-center-column;
+            gap: length(5);
+
+            .icon {
+                @include square(length(60));
+                @include flex-center;
+                overflow: hidden;
+
+                svg {
+                    @include wh100;
+                }
+            }
+
+            .title {
+                @include heading-4;
+                color: $secondary;
+            }
+        }
+
+        .duration-validate {
+            @include flex-center-column;
+            gap: length(4);
+            text-align: center;
+
+            .duration,
+            .validate {
+                @include font-24-14-semibold;
+                color: $white;
+            }
+        }
+    }
+
+    &-body {
+        @include flex-column;
+        gap: length(4);
+        @include w100;
+
+        .title {
+            @include font-24-14-semibold;
+            color: $white;
+        }
+
+        .progress {
+            background: $gray-200;
+            @include radius(50);
+            height: length(6);
+
+            &-bar {
+                background: $secondary;
+                @include radius(50);
+            }
+        }
+    }
+}
