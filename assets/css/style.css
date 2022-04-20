@@ -1001,6 +1001,10 @@ h6 {
           justify-content: center;
 }
 
+.cp {
+  cursor: pointer;
+}
+
 .header {
   background: #FEEFEC;
   display: -webkit-box;
@@ -22387,7 +22391,7 @@ h6 {
 
 .dashboard .memberbooking-body .upcomingdetails.patientinfo {
   max-width: 100%;
-  padding: 1.5rem 0rem;
+  padding-bottom: 2rem;
 }
 
 .dashboard .memberbooking-body .pastdetails {
@@ -22767,12 +22771,20 @@ h6 {
 
 .providertabinfo {
   background: #ffffff;
-  padding: 1.25rem;
+  padding: 0rem 1.25rem 1.25rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 2.5rem;
 }
 
 @media screen and (max-width: 61.9375rem) {
   .providertabinfo {
-    padding: 1.5rem;
+    padding: 0rem 1.5rem 1.5rem;
   }
 }
 
@@ -23429,6 +23441,514 @@ h6 {
 
 .personalinformation .submitrow .btn-save:not([disabled]):hover {
   background: #FCAF15;
+}
+
+.genderbox {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 0.5rem;
+}
+
+@media screen and (max-width: 48rem) {
+  .genderbox {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+}
+
+.genderbox .gender {
+  width: calc(33.33% - 0.5rem);
+}
+
+@media screen and (max-width: 48rem) {
+  .genderbox .gender {
+    width: 100%;
+  }
+}
+
+.genderbox .gender input[type="radio"]:checked ~ label::before {
+  border-color: #01796F;
+}
+
+.genderbox .gender input[type="radio"]:checked ~ label::after {
+  background: #01796F;
+  opacity: 1;
+}
+
+.genderbox .gender label {
+  width: 100%;
+  position: relative;
+  padding: 0.875rem 1.125rem 0.875rem 3rem;
+  border: solid 0.0625rem #E2E8F0;
+  font-family: "Gilroy";
+  font-style: normal;
+  font-size: 0.875rem;
+  font-weight: 500;
+  line-height: 1.71429;
+  color: #27272E;
+  cursor: pointer;
+}
+
+.genderbox .gender label::before {
+  content: '';
+  height: 1.25rem;
+  width: 1.25rem;
+  border-radius: 100%;
+  border: solid 0.125rem #C9CED6;
+  background: transparent;
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+  left: 1.125rem;
+  -webkit-transition: all 250ms ease-in-out;
+  transition: all 250ms ease-in-out;
+}
+
+.genderbox .gender label::after {
+  content: '';
+  height: 0.625rem;
+  width: 0.625rem;
+  border-radius: 100%;
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+  left: 1.4375rem;
+  background: #ffffff;
+  opacity: 0;
+  -webkit-transition: all 250ms ease-in-out;
+  transition: all 250ms ease-in-out;
+}
+
+.racebox {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 0.5rem;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+@media screen and (max-width: 48rem) {
+  .racebox .race {
+    width: 100%;
+  }
+}
+
+.racebox .race input[type="radio"]:checked ~ label::before {
+  border-color: #01796F;
+}
+
+.racebox .race input[type="radio"]:checked ~ label::after {
+  background: #01796F;
+  opacity: 1;
+}
+
+.racebox .race label {
+  width: 100%;
+  position: relative;
+  padding: 0.875rem 1.125rem 0.875rem 3rem;
+  border: solid 0.0625rem #E2E8F0;
+  font-family: "Gilroy";
+  font-style: normal;
+  font-size: 0.875rem;
+  font-weight: 500;
+  line-height: 1.71429;
+  color: #27272E;
+  cursor: pointer;
+}
+
+.racebox .race label::before {
+  content: '';
+  height: 1.25rem;
+  width: 1.25rem;
+  border-radius: 100%;
+  border: solid 0.125rem #C9CED6;
+  background: transparent;
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+  left: 1.125rem;
+  -webkit-transition: all 250ms ease-in-out;
+  transition: all 250ms ease-in-out;
+}
+
+.racebox .race label::after {
+  content: '';
+  height: 0.625rem;
+  width: 0.625rem;
+  border-radius: 100%;
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+  left: 1.4375rem;
+  background: #ffffff;
+  opacity: 0;
+  -webkit-transition: all 250ms ease-in-out;
+  transition: all 250ms ease-in-out;
+}
+
+.statebox-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-bottom: solid 0.0625rem #E2E8F0;
+}
+
+.statebox-header .stateleft,
+.statebox-header .statecenter,
+.statebox-header .stateright {
+  width: 33.33%;
+  padding: 0.875rem;
+}
+
+.statebox-header .statecenter {
+  border-left: solid 0.0625rem #E2E8F0;
+  border-right: solid 0.0625rem #E2E8F0;
+}
+
+.statebox-header .statecenter,
+.statebox-header .stateright {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
+}
+
+.statebox-header .statecenter .title,
+.statebox-header .stateright .title {
+  color: #4A5568;
+  font-family: "Gilroy";
+  font-style: normal;
+  font-size: 0.875rem;
+  font-weight: 500;
+  line-height: 1.17214;
+}
+
+@media screen and (max-width: 48rem) {
+  .statebox-header .statecenter .title,
+  .statebox-header .stateright .title {
+    font-size: 0.75rem;
+  }
+}
+
+@media screen and (max-width: 35.9375rem) {
+  .statebox-header .statecenter .title,
+  .statebox-header .stateright .title {
+    font-size: 0.625rem;
+  }
+}
+
+.statebox-body .staterow {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-bottom: solid 0.0625rem #E2E8F0;
+}
+
+.statebox-body .staterow .stateleft,
+.statebox-body .staterow .statecenter,
+.statebox-body .staterow .stateright {
+  width: 33.33%;
+  padding: 0.875rem;
+}
+
+.statebox-body .staterow .stateleft {
+  padding-left: 0;
+}
+
+.statebox-body .staterow .stateleft .title {
+  color: #4A5568;
+  font-family: "Gilroy";
+  font-style: normal;
+  font-size: 0.875rem;
+  font-weight: 500;
+  line-height: 1.17214;
+}
+
+@media screen and (max-width: 48rem) {
+  .statebox-body .staterow .stateleft .title {
+    font-size: 0.75rem;
+  }
+}
+
+@media screen and (max-width: 35.9375rem) {
+  .statebox-body .staterow .stateleft .title {
+    font-size: 0.625rem;
+  }
+}
+
+.statebox-body .staterow .statecenter {
+  border-left: solid 0.0625rem #E2E8F0;
+  border-right: solid 0.0625rem #E2E8F0;
+}
+
+.statebox-body .staterow .statecenter,
+.statebox-body .staterow .stateright {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
+}
+
+.statebox-body .staterow .statecenter .stateinput,
+.statebox-body .staterow .stateright .stateinput {
+  color: #000000;
+  font-family: "Gilroy";
+  font-style: normal;
+  font-size: 0.875rem;
+  font-weight: 500;
+  line-height: 1.17214;
+  border: solid 0.0625rem #E2E8F0;
+  border-radius: 0.375rem;
+  border-radius: 0.375rem;
+  width: 100%;
+  height: 2.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
+  padding: 0.5rem;
+}
+
+@media screen and (max-width: 48rem) {
+  .statebox-body .staterow .statecenter .stateinput,
+  .statebox-body .staterow .stateright .stateinput {
+    font-size: 0.75rem;
+    padding: 0.25rem;
+  }
+}
+
+@media screen and (max-width: 35.9375rem) {
+  .statebox-body .staterow .statecenter .stateinput,
+  .statebox-body .staterow .stateright .stateinput {
+    font-size: 0.625rem;
+  }
+}
+
+.medication-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-bottom: solid 0.0625rem #E2E8F0;
+}
+
+.medication-header .medication-left {
+  width: 10%;
+}
+
+.medication-header .medication-right {
+  width: 90%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.medication-header .medication-right .medication-info {
+  width: calc(100% / 4);
+  padding: 0.875rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+@media screen and (max-width: 48rem) {
+  .medication-header .medication-right .medication-info {
+    padding: 0.375rem;
+  }
+}
+
+.medication-header .medication-right .medication-info .title {
+  color: #4A5568;
+  font-family: "Gilroy";
+  font-style: normal;
+  font-size: 0.875rem;
+  font-weight: 500;
+  line-height: 1.17214;
+  text-align: center;
+}
+
+@media screen and (max-width: 48rem) {
+  .medication-header .medication-right .medication-info .title {
+    font-size: 0.75rem;
+  }
+}
+
+@media screen and (max-width: 35.9375rem) {
+  .medication-header .medication-right .medication-info .title {
+    font-size: 0.625rem;
+  }
+}
+
+.medication-body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.medication-row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-bottom: solid 0.0625rem #E2E8F0;
+}
+
+.medication-row .medication-left {
+  width: 10%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.medication-row .medication-left .serial {
+  color: #000000;
+  font-family: "Gilroy";
+  font-style: normal;
+  font-size: 0.875rem;
+  font-weight: 500;
+  line-height: 1.17214;
+  text-align: center;
+}
+
+@media screen and (max-width: 48rem) {
+  .medication-row .medication-left .serial {
+    font-size: 0.75rem;
+  }
+}
+
+@media screen and (max-width: 35.9375rem) {
+  .medication-row .medication-left .serial {
+    font-size: 0.625rem;
+  }
+}
+
+.medication-row .medication-right {
+  width: 90%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.medication-row .medication-right .medication-info {
+  width: calc(100% / 4);
+  padding: 0.875rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+@media screen and (max-width: 48rem) {
+  .medication-row .medication-right .medication-info {
+    padding: 0.375rem;
+  }
+}
+
+.medication-row .medication-right .medication-info .medicationinput {
+  color: #000000;
+  font-family: "Gilroy";
+  font-style: normal;
+  font-size: 0.875rem;
+  font-weight: 500;
+  line-height: 1.17214;
+  border: solid 0.0625rem #E2E8F0;
+  border-radius: 0.375rem;
+  border-radius: 0.375rem;
+  width: 100%;
+  height: 2.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
+  padding: 0.5rem;
+}
+
+@media screen and (max-width: 48rem) {
+  .medication-row .medication-right .medication-info .medicationinput {
+    font-size: 0.75rem;
+    padding: 0.25rem;
+  }
+}
+
+@media screen and (max-width: 35.9375rem) {
+  .medication-row .medication-right .medication-info .medicationinput {
+    font-size: 0.625rem;
+  }
 }
 
 .dashinfo {

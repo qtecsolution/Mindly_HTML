@@ -399,7 +399,7 @@
 
             .upcomingdetails.patientinfo {
                 max-width: 100%;
-                padding: length(24) length(0);
+                padding-bottom: length(32);
             }
 
             .pastdetails {
@@ -623,10 +623,12 @@
 
 .providertabinfo {
     background: $white;
-    padding: length(20);
+    padding: length(0) length(20) length(20);
+    @include flex-column;
+    gap: length(40);
 
     @include breakpoint(tablet991) {
-        padding: length(24);
+        padding: length(0) length(24) length(24);
     }
 }
 
@@ -1046,6 +1048,343 @@
 
             @include hover {
                 background: $secondary;
+            }
+        }
+    }
+}
+
+.genderbox {
+    @include w100;
+    @include flex-center-vert;
+    gap: length(8);
+
+    @include breakpoint(phone768) {
+        flex-wrap: wrap;
+    }
+
+    .gender {
+        width: calc(33.33% - 0.5rem);
+
+        @include breakpoint(phone768) {
+            @include w100;
+        }
+
+        input[type="radio"] {
+            &:checked~label {
+                &::before {
+                    border-color: $primary;
+                }
+
+                &::after {
+                    background: $primary;
+                    opacity: 1;
+                }
+            }
+        }
+
+        label {
+            @include w100;
+            position: relative;
+            padding: length(14) length(18) length(14) length(48);
+            @include border(solid, 1, $gray-300);
+            @include font-24-14-medium;
+            color: $tabLinkText;
+            cursor: pointer;
+
+            &::before {
+                content: '';
+                @include square(length(20));
+                @include circle;
+                @include border(solid, 2, $checkBorder);
+                background: transparent;
+                position: absolute;
+                top: 50%;
+                @include transform(translateY(-50%));
+                left: length(18);
+                @include transitions;
+            }
+
+            &::after {
+                content: '';
+                @include square(length(10));
+                @include circle;
+                position: absolute;
+                top: 50%;
+                @include transform(translateY(-50%));
+                left: length(23);
+                background: $white;
+                opacity: 0;
+                @include transitions;
+            }
+        }
+    }
+}
+
+.racebox {
+    @include w100;
+    @include flex-center-vert;
+    gap: length(8);
+    flex-wrap: wrap;
+
+    .race {
+        // width: calc((100% / 5) - 0.5rem);
+
+        @include breakpoint(phone768) {
+            @include w100;
+        }
+
+        input[type="radio"] {
+            &:checked~label {
+                &::before {
+                    border-color: $primary;
+                }
+
+                &::after {
+                    background: $primary;
+                    opacity: 1;
+                }
+            }
+        }
+
+        label {
+            @include w100;
+            position: relative;
+            padding: length(14) length(18) length(14) length(48);
+            @include border(solid, 1, $gray-300);
+            @include font-24-14-medium;
+            color: $tabLinkText;
+            cursor: pointer;
+
+            &::before {
+                content: '';
+                @include square(length(20));
+                @include circle;
+                @include border(solid, 2, $checkBorder);
+                background: transparent;
+                position: absolute;
+                top: 50%;
+                @include transform(translateY(-50%));
+                left: length(18);
+                @include transitions;
+            }
+
+            &::after {
+                content: '';
+                @include square(length(10));
+                @include circle;
+                position: absolute;
+                top: 50%;
+                @include transform(translateY(-50%));
+                left: length(23);
+                background: $white;
+                opacity: 0;
+                @include transitions;
+            }
+        }
+    }
+}
+
+.statebox {
+    &-header {
+        @include flex-center-vert;
+        @include border-single(bottom, solid, 1, $gray-300);
+
+        .stateleft,
+        .statecenter,
+        .stateright {
+            width: 33.33%;
+            padding: length(14);
+        }
+
+        .statecenter {
+            @include border-single(left, solid, 1, $gray-300);
+            @include border-single(right, solid, 1, $gray-300);
+        }
+
+        .statecenter,
+        .stateright {
+            @include flex-center;
+            text-align: center;
+
+            .title {
+                color: $gray-700;
+                @include font-16-14-medium;
+
+                @include breakpoint(phone768) {
+                    font-size: length(12);
+                }
+
+                @include breakpoint(phone575) {
+                    font-size: length(10);
+                }
+            }
+        }
+    }
+
+    &-body {
+        .staterow {
+            @include flex-center-vert;
+            @include border-single(bottom, solid, 1, $gray-300);
+
+            .stateleft,
+            .statecenter,
+            .stateright {
+                width: 33.33%;
+                padding: length(14);
+            }
+
+            .stateleft {
+                padding-left: 0;
+
+                .title {
+                    color: $gray-700;
+                    @include font-16-14-medium;
+
+                    @include breakpoint(phone768) {
+                        font-size: length(12);
+                    }
+
+                    @include breakpoint(phone575) {
+                        font-size: length(10);
+                    }
+                }
+            }
+
+            .statecenter {
+                @include border-single(left, solid, 1, $gray-300);
+                @include border-single(right, solid, 1, $gray-300);
+            }
+
+            .statecenter,
+            .stateright {
+                @include flex-center;
+                text-align: center;
+
+                .stateinput {
+                    color: $black;
+                    @include font-16-14-medium;
+                    @include border(solid, 1, $gray-300);
+                    @include radius(6);
+                    @include w100;
+                    height: length(40);
+                    @include flex-center;
+                    text-align: center;
+                    padding: length(8);
+
+                    @include breakpoint(phone768) {
+                        font-size: length(12);
+                        padding: length(4);
+                    }
+
+                    @include breakpoint(phone575) {
+                        font-size: length(10);
+                    }
+                }
+            }
+        }
+    }
+}
+
+.medication {
+
+    &-header {
+        @include flex-center-vert;
+        @include border-single(bottom, solid, 1, $gray-300);
+
+        .medication-left {
+            width: 10%;
+        }
+
+        .medication-right {
+            width: 90%;
+            @include flex-center-vert;
+
+            .medication-info {
+                width: calc(100% / 4);
+                padding: length(14);
+                @include flex-center;
+
+                @include breakpoint(phone768) {
+                    padding: length(6);
+                }
+
+                .title {
+                    color: $gray-700;
+                    @include font-16-14-medium;
+                    text-align: center;
+
+                    @include breakpoint(phone768) {
+                        font-size: length(12);
+                    }
+
+                    @include breakpoint(phone575) {
+                        font-size: length(10);
+                    }
+                }
+            }
+        }
+    }
+
+    &-body {
+        @include flex-column;
+    }
+
+    &-row {
+        @include flex-center-vert;
+        @include border-single(bottom, solid, 1, $gray-300);
+
+        .medication-left {
+            width: 10%;
+            @include flex-center;
+
+            .serial {
+                color: $black;
+                @include font-16-14-medium;
+                text-align: center;
+
+                @include breakpoint(phone768) {
+                    font-size: length(12);
+                }
+
+                @include breakpoint(phone575) {
+                    font-size: length(10);
+                }
+            }
+        }
+
+        .medication-right {
+            width: 90%;
+            @include flex-center-vert;
+
+            .medication-info {
+                width: calc(100% / 4);
+                padding: length(14);
+                @include flex-center;
+                
+                @include breakpoint(phone768) {
+                    padding: length(6);
+                }
+
+                .medicationinput {
+                    color: $black;
+                    @include font-16-14-medium;
+                    @include border(solid, 1, $gray-300);
+                    @include radius(6);
+                    @include w100;
+                    height: length(40);
+                    @include flex-center;
+                    text-align: center;
+                    padding: length(8);
+
+                    @include breakpoint(phone768) {
+                        font-size: length(12);
+                        padding: length(4);
+                    }
+
+                    @include breakpoint(phone575) {
+                        font-size: length(10);
+                    }
+                }
             }
         }
     }

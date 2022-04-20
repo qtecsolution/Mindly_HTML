@@ -37,3 +37,7 @@
 .flex-center-baseline {
     @include flex-center-baseline;
 }
+
+.cp {
+    cursor: pointer;
+}

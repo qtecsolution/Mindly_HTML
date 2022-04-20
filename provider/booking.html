@@ -9,6 +9,8 @@
     <!-- FAVICON -->
     <link rel="shortcut icon" href="../favicon.svg" type="image/svg">
     <!-- BOOTSTRAP CSS -->
+    <link rel="stylesheet" href="../assets/css/mc-calendar.min.css">
+    <!-- BOOTSTRAP CSS -->
     <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
     <!-- MINDLY STYLESHEET -->
     <link rel="stylesheet" href="../assets/css/style.css">
@@ -828,18 +830,15 @@
                                 </ul>
 
                                 <div class="tab-content" id="bookingTabContent">
-                                    <div class="tab-pane fade show active" id="patient" role="tabpanel"
-                                        aria-labelledby="patient-tab">
+                                    <div class="tab-pane fade show active" id="patient" role="tabpanel" aria-labelledby="patient-tab">
                                         <div class="upcomingdetails patientinfo">
                                             <div class="personalinformation">
                                                 <div class="inputrow">
                                                     <div class="inputcol">
                                                         <div class="inputbox">
                                                             <div class="inputinfo">
-                                                                <label for="personalinfo-1"
-                                                                    class="inputlabel">Name</label>
-                                                                <input type="text" placeholder="Nabil Ahmed Emon"
-                                                                    class="inputfield" id="personalinfo-1">
+                                                                <label for="personalinfo-1" class="inputlabel">Name</label>
+                                                                <input type="text" placeholder="Nabil Ahmed Emon" class="inputfield" id="personalinfo-1">
                                                             </div>
                                                         </div>
                                                     </div>
@@ -847,10 +846,8 @@
                                                     <div class="inputcol">
                                                         <div class="inputbox">
                                                             <div class="inputinfo">
-                                                                <label for="personalinfo-2"
-                                                                    class="inputlabel">Age</label>
-                                                                <input type="number" placeholder="28" class="inputfield"
-                                                                    id="personalinfo-2">
+                                                                <label for="personalinfo-2" class="inputlabel">Age</label>
+                                                                <input type="number" placeholder="28" class="inputfield" id="personalinfo-2">
                                                             </div>
                                                         </div>
                                                     </div>
@@ -860,10 +857,8 @@
                                                     <div class="inputcol">
                                                         <div class="inputbox">
                                                             <div class="inputinfo">
-                                                                <label for="personalinfo-3" class="inputlabel">Phone
-                                                                    Number</label>
-                                                                <input type="tel" placeholder="+88 01799391786"
-                                                                    class="inputfield" id="personalinfo-3">
+                                                                <label for="personalinfo-3" class="inputlabel">Phone Number</label>
+                                                                <input type="tel" placeholder="+88 01799391786" class="inputfield" id="personalinfo-3">
                                                             </div>
                                                         </div>
                                                     </div>
@@ -871,11 +866,8 @@
                                                     <div class="inputcol">
                                                         <div class="inputbox">
                                                             <div class="inputinfo">
-                                                                <label for="personalinfo-4"
-                                                                    class="inputlabel">Email</label>
-                                                                <input type="email"
-                                                                    placeholder="nabilemon.qtec@gmail.com"
-                                                                    class="inputfield" id="personalinfo-4">
+                                                                <label for="personalinfo-4" class="inputlabel">Email</label>
+                                                                <input type="email" placeholder="nabilemon.qtec@gmail.com" class="inputfield" id="personalinfo-4">
                                                             </div>
                                                         </div>
                                                     </div>
@@ -885,11 +877,8 @@
                                                     <div class="inputcol">
                                                         <div class="inputbox">
                                                             <div class="inputinfo">
-                                                                <label for="personalinfo-5"
-                                                                    class="inputlabel">Address</label>
-                                                                <input type="tel"
-                                                                    placeholder="Nikunja-2, Khilkhet, Dhaka, Bangladesh"
-                                                                    class="inputfield" id="personalinfo-5">
+                                                                <label for="personalinfo-5" class="inputlabel">Address</label>
+                                                                <input type="tel" placeholder="Nikunja-2, Khilkhet, Dhaka, Bangladesh" class="inputfield" id="personalinfo-5">
                                                             </div>
                                                         </div>
                                                     </div>
@@ -897,10 +886,8 @@
                                                     <div class="inputcol">
                                                         <div class="inputbox">
                                                             <div class="inputinfo">
-                                                                <label for="personalinfo-6" class="inputlabel">Date of
-                                                                    Birth</label>
-                                                                <input type="email" placeholder="10/11/1995"
-                                                                    class="inputfield" id="personalinfo-6">
+                                                                <label for="personalinfo-6" class="inputlabel">Date of Birth</label>
+                                                                <input type="email" placeholder="10/11/1995" class="inputfield" id="personalinfo-6">
                                                             </div>
                                                         </div>
                                                     </div>
@@ -915,20 +902,17 @@
 
                                                                 <div class="genderbox">
                                                                     <div class="gender">
-                                                                        <input type="radio" name="gender" id="male"
-                                                                            hidden checked>
+                                                                        <input type="radio" name="gend" id="male" hidden checked>
                                                                         <label for="male">Male</label>
                                                                     </div>
 
                                                                     <div class="gender">
-                                                                        <input type="radio" name="gender" id="female"
-                                                                            hidden>
+                                                                        <input type="radio" name="gend" id="female" hidden>
                                                                         <label for="female">Female</label>
                                                                     </div>
 
                                                                     <div class="gender">
-                                                                        <input type="radio" name="gender" id="other"
-                                                                            hidden>
+                                                                        <input type="radio" name="gend" id="other" hidden>
                                                                         <label for="other">Other</label>
                                                                     </div>
                                                                 </div>
@@ -940,15 +924,24 @@
                                                         <div class="inputbox">
                                                             <div class="inputinfo">
                                                                 <label for="personalinfo-8"
-                                                                    class="inputlabel">Occupation</label>
-                                                                <select class="selectfield" id="personalinfo-8">
-                                                                    <option value="">Please Select
-                                                                    </option>
-                                                                    <option value="">Doctor</option>
-                                                                    <option value="">Engineer</option>
-                                                                    <option value="">Driver</option>
-                                                                    <option value="">Pilot</option>
-                                                                </select>
+                                                                    class="inputlabel">Race</label>
+
+                                                                <div class="genderbox">
+                                                                    <div class="gender">
+                                                                        <input type="radio" name="rac" id="race-1" hidden checked>
+                                                                        <label for="race-1">Black</label>
+                                                                    </div>
+
+                                                                    <div class="gender">
+                                                                        <input type="radio" name="rac" id="race-2" hidden>
+                                                                        <label for="race-2">White</label>
+                                                                    </div>
+
+                                                                    <div class="gender">
+                                                                        <input type="radio" name="rac" id="race-3" hidden>
+                                                                        <label for="race-3">Middle</label>
+                                                                    </div>
+                                                                </div>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -958,11 +951,8 @@
                                                     <div class="inputcol">
                                                         <div class="inputbox">
                                                             <div class="inputinfo">
-                                                                <label for="personalinfo-9" class="inputlabel">Emergency
-                                                                    Contact
-                                                                    Person Name</label>
-                                                                <input type="text" placeholder="Istiak Hossain Tushar"
-                                                                    class="inputfield" id="personalinfo-9">
+                                                                <label for="personalinfo-9" class="inputlabel">Emergency Contact Person Name</label>
+                                                                <input type="text" placeholder="Istiak Hossain Tushar" class="inputfield" id="personalinfo-9">
                                                             </div>
                                                         </div>
                                                     </div>
@@ -970,13 +960,9 @@
                                                     <div class="inputcol">
                                                         <div class="inputbox">
                                                             <div class="inputinfo">
-                                                                <label for="personalinfo-10"
-                                                                    class="inputlabel">Relationship
-                                                                    of
-                                                                    Emergency Contact Person</label>
+                                                                <label for="personalinfo-10" class="inputlabel">Relationship of Emergency Contact Person</label>
                                                                 <select class="selectfield" id="personalinfo-10">
-                                                                    <option value="">Please Select
-                                                                    </option>
+                                                                    <option value="">Please Select</option>
                                                                     <option value="">One</option>
                                                                     <option value="">Two</option>
                                                                     <option value="">Three</option>
@@ -988,15 +974,38 @@
                                                 </div>
 
                                                 <div class="inputrow">
-                                                    <div class="inputcol">
-                                                        <div class="inputbox">
-                                                            <div class="inputinfo">
-                                                                <label for="personalinfo-11" class="inputlabel">Phone
-                                                                    Number
-                                                                    of
-                                                                    Emergency Contact Person</label>
-                                                                <input type="tel" placeholder="+88 01799391786"
-                                                                    class="inputfield" id="personalinfo-11">
+                                                    <div class="inputbox">
+                                                        <div class="inputinfo">
+                                                            <label for="personalinfo-9" class="inputlabel">Race</label>
+
+                                                            <div class="racebox">
+                                                                <div class="race">
+                                                                    <input type="radio" name="race" id="asian" hidden
+                                                                        checked>
+                                                                    <label for="asian">Asian</label>
+                                                                </div>
+
+                                                                <div class="race">
+                                                                    <input type="radio" name="race" id="american-indian"
+                                                                        hidden>
+                                                                    <label for="american-indian">American Indian</label>
+                                                                </div>
+
+                                                                <div class="race">
+                                                                    <input type="radio" name="race" id="black" hidden>
+                                                                    <label for="black">Black or African American</label>
+                                                                </div>
+
+                                                                <div class="race">
+                                                                    <input type="radio" name="race" id="hawaiian"
+                                                                        hidden>
+                                                                    <label for="hawaiian">Native Hawaiian</label>
+                                                                </div>
+
+                                                                <div class="race">
+                                                                    <input type="radio" name="race" id="white" hidden>
+                                                                    <label for="white">White</label>
+                                                                </div>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -1007,11 +1016,8 @@
                                                         <span class="text">Continue</span>
 
                                                         <span class="icon">
-                                                            <svg width="14" height="14" viewBox="0 0 14 14" fill="none"
-                                                                xmlns="http://www.w3.org/2000/svg">
-                                                                <path fill-rule="evenodd" clip-rule="evenodd"
-                                                                    d="M4.06564 1.44064C4.2365 1.26979 4.5135 1.26979 4.68436 1.44064L9.93436 6.69064C10.1052 6.8615 10.1052 7.1385 9.93436 7.30936L4.68436 12.5594C4.5135 12.7302 4.2365 12.7302 4.06564 12.5594C3.89479 12.3885 3.89479 12.1115 4.06564 11.9406L9.00628 7L4.06564 2.05936C3.89479 1.8885 3.89479 1.6115 4.06564 1.44064Z"
-                                                                    fill="white" />
+                                                            <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                <path fill-rule="evenodd" clip-rule="evenodd" d="M4.06564 1.44064C4.2365 1.26979 4.5135 1.26979 4.68436 1.44064L9.93436 6.69064C10.1052 6.8615 10.1052 7.1385 9.93436 7.30936L4.68436 12.5594C4.5135 12.7302 4.2365 12.7302 4.06564 12.5594C3.89479 12.3885 3.89479 12.1115 4.06564 11.9406L9.00628 7L4.06564 2.05936C3.89479 1.8885 3.89479 1.6115 4.06564 1.44064Z" fill="white" />
                                                             </svg>
                                                         </span>
                                                     </button>
@@ -1026,10 +1032,11 @@
                                                 <div class="inputcol">
                                                     <div class="inputbox">
                                                         <div class="inputinfo">
-                                                            <label for="weight" class="inputlabel">Weight
-                                                                (Kg)</label>
-                                                            <input type="number" placeholder="70" class="inputfield"
-                                                                id="weight">
+                                                            <label for="assesmentdate" class="formlabel">Assesment Start Date</label>
+
+                                                            <div class="info">
+                                                                <input type="text" id="dateassesment" class="inputfield w-100">
+                                                            </div>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -1037,10 +1044,30 @@
                                                 <div class="inputcol">
                                                     <div class="inputbox">
                                                         <div class="inputinfo">
-                                                            <label for="height" class="inputlabel">Height
-                                                                (CM)</label>
-                                                            <input type="number" placeholder="70" class="inputfield"
-                                                                id="height">
+                                                            <label for="timeassesment" class="formlabel">Assesment Time</label>
+                                                            <div class="info">
+                                                                <input type="text" class="inputfield w-100">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="inputrow">
+                                                <div class="inputcol">
+                                                    <div class="inputbox">
+                                                        <div class="inputinfo">
+                                                            <label for="weight" class="inputlabel">Weight (Kg)</label>
+                                                            <input type="number" placeholder="70" class="inputfield" id="weight">
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="inputcol">
+                                                    <div class="inputbox">
+                                                        <div class="inputinfo">
+                                                            <label for="height" class="inputlabel">Height (CM)</label>
+                                                            <input type="number" placeholder="70" class="inputfield" id="height">
                                                         </div>
                                                     </div>
                                                 </div>
@@ -1049,11 +1076,26 @@
                                             <div class="inputrow">
                                                 <div class="inputbox">
                                                     <div class="inputinfo">
-                                                        <label for="experience" class="inputlabel">What issues or
-                                                            problems are you currently
-                                                            experiencing?</label>
-                                                        <textarea class="inputfield" id="experience"
-                                                            rows="7"></textarea>
+                                                        <label for="experience" class="inputlabel">What issues or problems are you currently experiencing?</label>
+                                                        <textarea class="inputfield" id="experience" rows="7"></textarea>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="inputrow">
+                                                <div class="inputbox">
+                                                    <div class="inputinfo">
+                                                        <label for="experience-2" class="inputlabel">Primary Concern (symptoms, duration, intensity)</label>
+                                                        <textarea class="inputfield" id="experience-2" rows="7"></textarea>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="inputrow">
+                                                <div class="inputbox">
+                                                    <div class="inputinfo">
+                                                        <label for="experience-3" class="inputlabel">Family Relationship/Interpersonal (Kindly describe the social relationship of the patient to anyone.)</label>
+                                                        <textarea class="inputfield" id="experience-3" rows="7"></textarea>
                                                     </div>
                                                 </div>
                                             </div>
@@ -1062,21 +1104,16 @@
                                                 <div class="inputcol">
                                                     <div class="inputbox">
                                                         <div class="inputinfo">
-                                                            <label for="personalinfo-7" class="inputlabel">Have you
-                                                                received
-                                                                any counseling or psychiatric
-                                                                sessions before?</label>
+                                                            <label for="personalinfo-7" class="inputlabel">Have you received any counseling or psychiatric sessions before?</label>
 
                                                             <div class="genderbox">
                                                                 <div class="gender">
-                                                                    <input type="radio" name="psychiatric"
-                                                                        id="psychiatric-1" hidden checked>
+                                                                    <input type="radio" name="psychiat" id="psychiatric-1" hidden checked>
                                                                     <label for="psychiatric-1">Yes</label>
                                                                 </div>
 
                                                                 <div class="gender">
-                                                                    <input type="radio" name="psychiatric"
-                                                                        id="psychiatric-2" hidden>
+                                                                    <input type="radio" name="psychiat" id="psychiatric-2" hidden>
                                                                     <label for="psychiatric-2">No</label>
                                                                 </div>
                                                             </div>
@@ -1086,21 +1123,15 @@
 
                                                 <div class="inputcol">
                                                     <div class="uploadinfo">
-                                                        <label class="inputlabel">Upload previous
-                                                            prescription
-                                                            <span>(Optional)*</span></label>
+                                                        <label class="inputlabel">Upload previous prescription <span>(Optional)*</span></label>
 
                                                         <div class="uploadbox">
-                                                            <span class="keepingbox">JPG/ JPEG/
-                                                                PDF</span>
+                                                            <span class="keepingbox">JPG/ JPEG/ PDF</span>
                                                             <input type="file" id="uploadCertificate" hidden>
                                                             <label class="btn-upload" for="uploadCertificate">
                                                                 <div class="icon">
-                                                                    <svg width="16" height="16" viewBox="0 0 16 16"
-                                                                        fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                                        <path
-                                                                            d="M10 2.66634H3.33333V13.333H12.6667V5.33301H10V2.66634ZM2 1.99434C2 1.62901 2.298 1.33301 2.666 1.33301H10.6667L14 4.66634V13.995C14.0006 14.0826 13.984 14.1694 13.951 14.2505C13.9181 14.3316 13.8695 14.4054 13.808 14.4678C13.7466 14.5301 13.6734 14.5797 13.5928 14.6138C13.5121 14.6479 13.4255 14.6657 13.338 14.6663H2.662C2.48692 14.6651 2.31934 14.5951 2.19548 14.4713C2.07161 14.3476 2.0014 14.1801 2 14.005V1.99434ZM8.66667 7.99967V10.6663H7.33333V7.99967H5.33333L8 5.33301L10.6667 7.99967H8.66667Z"
-                                                                            fill="white" />
+                                                                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                        <path d="M10 2.66634H3.33333V13.333H12.6667V5.33301H10V2.66634ZM2 1.99434C2 1.62901 2.298 1.33301 2.666 1.33301H10.6667L14 4.66634V13.995C14.0006 14.0826 13.984 14.1694 13.951 14.2505C13.9181 14.3316 13.8695 14.4054 13.808 14.4678C13.7466 14.5301 13.6734 14.5797 13.5928 14.6138C13.5121 14.6479 13.4255 14.6657 13.338 14.6663H2.662C2.48692 14.6651 2.31934 14.5951 2.19548 14.4713C2.07161 14.3476 2.0014 14.1801 2 14.005V1.99434ZM8.66667 7.99967V10.6663H7.33333V7.99967H5.33333L8 5.33301L10.6667 7.99967H8.66667Z" fill="white" />
                                                                     </svg>
                                                                 </div>
 
@@ -1112,96 +1143,501 @@
                                             </div>
 
                                             <div class="inputrow">
-                                                <div class="tableinput">
-                                                    <div class="tableinput-header">
-                                                        <div class="titlebox"></div>
+                                                <div class="inputbox">
+                                                    <div class="inputinfo">
+                                                        <label class="inputlabel">General Appearance</label>
 
-                                                        <div class="databox">
-                                                            <div class="datatitlebox titlebox-1">
-                                                                <h4 class="title">Mild</h4>
+                                                        <div class="racebox">
+                                                            <div class="race">
+                                                                <input type="radio" name="appearance" id="normal" hidden checked>
+                                                                <label for="normal">Normal</label>
                                                             </div>
 
-                                                            <div class="datatitlebox titlebox-2">
-                                                                <h4 class="title">Moderate</h4>
+                                                            <div class="race">
+                                                                <input type="radio" name="appearance" id="emaciated" hidden>
+                                                                <label for="emaciated">Emaciated</label>
                                                             </div>
 
-                                                            <div class="datatitlebox titlebox-3">
-                                                                <h4 class="title">Severe</h4>
+                                                            <div class="race">
+                                                                <input type="radio" name="appearance" id="obese" hidden>
+                                                                <label for="obese">Obese</label>
+                                                            </div>
+
+                                                            <div class="race">
+                                                                <input type="radio" name="appearance" id="hygiene" hidden>
+                                                                <label for="hygiene">Poor Hygiene</label>
+                                                            </div>
+
+                                                            <div class="race">
+                                                                <input type="radio" name="appearance" id="appearanceother" hidden>
+                                                                <label for="appearanceother">Other</label>
                                                             </div>
                                                         </div>
                                                     </div>
+                                                </div>
+                                            </div>
 
-                                                    <div class="tableinput-body">
-                                                        <div class="datarow">
-                                                            <div class="titlebox">
-                                                                <span class="title">Difficulty
-                                                                    getting out of bed</span>
+                                            <div class="inputrow">
+                                                <div class="inputbox">
+                                                    <div class="inputinfo">
+                                                        <label class="inputlabel">Motor Activity</label>
+
+                                                        <div class="racebox">
+                                                            <div class="race">
+                                                                <input type="radio" name="activity" id="normalact" hidden checked>
+                                                                <label for="normalact">Normal</label>
                                                             </div>
 
-                                                            <div class="databox">
-                                                                <div class="datatitlebox titlebox-1">
-                                                                    <div class="datacheck">
-                                                                        <input type="checkbox" id="data-1"
-                                                                            class="datacheckinput" hidden>
-                                                                        <label for="data-1"
-                                                                            class="datachecklabel"></label>
+                                                            <div class="race">
+                                                                <input type="radio" name="activity" id="agitation" hidden>
+                                                                <label for="agitation">Agitation</label>
+                                                            </div>
+
+                                                            <div class="race">
+                                                                <input type="radio" name="activity" id="repetitive" hidden>
+                                                                <label for="repetitive">Repetitive Actions</label>
+                                                            </div>
+
+                                                            <div class="race">
+                                                                <input type="radio" name="activity" id="tremors" hidden>
+                                                                <label for="tremors">Tremors</label>
+                                                            </div>
+
+                                                            <div class="race">
+                                                                <input type="radio" name="activity" id="posturing" hidden>
+                                                                <label for="posturing">Distinct Posturing</label>
+                                                            </div>
+
+                                                            <div class="race">
+                                                                <input type="radio" name="activity" id="activityother" hidden>
+                                                                <label for="activityother">Other</label>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="inputrow">
+                                                <div class="inputcol">
+                                                    <div class="inputbox">
+                                                        <div class="inputinfo">
+                                                            <label class="inputlabel">Judgment</label>
+
+                                                            <div class="genderbox">
+                                                                <div class="gender">
+                                                                    <input type="radio" name="judgment" id="good" hidden checked>
+                                                                    <label for="good">Good</label>
+                                                                </div>
+
+                                                                <div class="gender">
+                                                                    <input type="radio" name="judgment" id="fair" hidden>
+                                                                    <label for="fair">Fair</label>
+                                                                </div>
+
+                                                                <div class="gender">
+                                                                    <input type="radio" name="judgment" id="poor" hidden>
+                                                                    <label for="poor">Poor</label>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="inputcol">
+                                                    <div class="inputbox">
+                                                        <div class="inputinfo">
+                                                            <label class="inputlabel">Judgment</label>
+
+                                                            <div class="genderbox">
+                                                                <div class="gender">
+                                                                    <input type="radio" name="judgemen" id="judgemen-1" hidden checked>
+                                                                    <label for="judgemen-1">Intact</label>
+                                                                </div>
+
+                                                                <div class="gender">
+                                                                    <input type="radio" name="judgemen" id="judgemen-2" hidden>
+                                                                    <label for="judgemen-2">Distance</label>
+                                                                </div>
+
+                                                                <div class="gender">
+                                                                    <input type="radio" name="judgemen" id="judgemen-3" hidden>
+                                                                    <label for="judgemen-3">Recent</label>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="inputrow">
+                                                <div class="inputcol">
+                                                    <div class="inputbox">
+                                                        <div class="inputinfo">
+                                                            <label class="inputlabel">Concentration</label>
+
+                                                            <div class="genderbox">
+                                                                <div class="gender">
+                                                                    <input type="radio" name="concentration" id="concentration-1" hidden checked>
+                                                                    <label for="concentration-1">Good</label>
+                                                                </div>
+
+                                                                <div class="gender">
+                                                                    <input type="radio" name="concentration" id="concentration-2" hidden>
+                                                                    <label for="concentration-2">Distractible</label>
+                                                                </div>
+
+                                                                <div class="gender">
+                                                                    <input type="radio" name="concentration" id="concentration-3" hidden>
+                                                                    <label for="concentration-3">Variable</label>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="inputcol">
+                                                    <div class="inputbox">
+                                                        <div class="inputinfo">
+                                                            <label class="inputlabel">Judgment</label>
+
+                                                            <div class="genderbox">
+                                                                <div class="gender">
+                                                                    <input type="radio" name="judge" id="judge-1" hidden checked>
+                                                                    <label for="judge-1">Intact</label>
+                                                                </div>
+
+                                                                <div class="gender">
+                                                                    <input type="radio" name="judge" id="judge-2" hidden>
+                                                                    <label for="judge-2">Distance</label>
+                                                                </div>
+
+                                                                <div class="gender">
+                                                                    <input type="radio" name="judge" id="judge-3" hidden>
+                                                                    <label for="judge-3">Recent</label>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="inputrow">
+                                                <div class="inputcol">
+                                                    <div class="inputbox">
+                                                        <div class="inputinfo">
+                                                            <label class="inputlabel">Insight</label>
+
+                                                            <div class="genderbox">
+                                                                <div class="gender">
+                                                                    <input type="radio" name="insight" id="insight-1" hidden checked>
+                                                                    <label for="insight-1">Good</label>
+                                                                </div>
+
+                                                                <div class="gender">
+                                                                    <input type="radio" name="insight" id="insight-2" hidden>
+                                                                    <label for="insight-2">Fair</label>
+                                                                </div>
+
+                                                                <div class="gender">
+                                                                    <input type="radio" name="insight" id="insight-3" hidden>
+                                                                    <label for="insight-3">Poor</label>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="inputcol">
+                                                    <div class="inputbox">
+                                                        <div class="inputinfo">
+                                                            <label class="inputlabel">Cognitive</label>
+
+                                                            <div class="genderbox">
+                                                                <div class="gender">
+                                                                    <input type="radio" name="cognitive" id="cognitive-1" hidden checked>
+                                                                    <label for="cognitive-1">Intact</label>
+                                                                </div>
+
+                                                                <div class="gender">
+                                                                    <input type="radio" name="cognitive" id="cognitive-2" hidden>
+                                                                    <label for="cognitive-2">Impaired</label>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="inputrow">
+                                                <div class="inputbox">
+                                                    <div class="inputinfo">
+                                                        <label class="inputlabel">Speech</label>
+
+                                                        <div class="racebox">
+                                                            <div class="race">
+                                                                <input type="radio" name="speech" id="normalspeech" hidden checked>
+                                                                <label for="normalspeech">Normal</label>
+                                                            </div>
+
+                                                            <div class="race">
+                                                                <input type="radio" name="speech" id="pressured" hidden>
+                                                                <label for="pressured">Pressured</label>
+                                                            </div>
+
+                                                            <div class="race">
+                                                                <input type="radio" name="speech" id="slurred" hidden>
+                                                                <label for="slurred">Slurred</label>
+                                                            </div>
+
+                                                            <div class="race">
+                                                                <input type="radio" name="speech" id="soft" hidden>
+                                                                <label for="soft">Soft</label>
+                                                            </div>
+
+                                                            <div class="race">
+                                                                <input type="radio" name="speech" id="sluttering" hidden>
+                                                                <label for="sluttering">Sluttering</label>
+                                                            </div>
+
+                                                            <div class="race">
+                                                                <input type="radio" name="speech" id="hesitant" hidden>
+                                                                <label for="hesitant">Hesitant</label>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="inputrow">
+                                                <div class="inputbox">
+                                                    <div class="inputinfo">
+                                                        <label class="inputlabel">Affect</label>
+
+                                                        <div class="racebox">
+                                                            <div class="race">
+                                                                <input type="radio" name="affect" id="appropriate" hidden checked>
+                                                                <label for="appropriate">Appropriate</label>
+                                                            </div>
+
+                                                            <div class="race">
+                                                                <input type="radio" name="affect" id="anxious" hidden>
+                                                                <label for="anxious">Anxious</label>
+                                                            </div>
+
+                                                            <div class="race">
+                                                                <input type="radio" name="affect" id="blunted" hidden>
+                                                                <label for="blunted">Blunted</label>
+                                                            </div>
+
+                                                            <div class="race">
+                                                                <input type="radio" name="affect" id="depressed" hidden>
+                                                                <label for="depressed">Depressed</label>
+                                                            </div>
+
+                                                            <div class="race">
+                                                                <input type="radio" name="affect" id="irritable" hidden>
+                                                                <label for="irritable">Irritable</label>
+                                                            </div>
+
+                                                            <div class="race">
+                                                                <input type="radio" name="affect" id="affOther" hidden>
+                                                                <label for="affOther">Other</label>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="inputrow">
+                                                <div class="inputbox">
+                                                    <div class="inputinfo">
+                                                        <label class="inputlabel">Daily Patterns</label>
+
+                                                        <div class="racebox">
+                                                            <div class="race">
+                                                                <input type="radio" name="pattern" id="pattern-1" hidden checked>
+                                                                <label for="pattern-1">Normal Sleep</label>
+                                                            </div>
+
+                                                            <div class="race">
+                                                                <input type="radio" name="pattern" id="pattern-2" hidden>
+                                                                <label for="pattern-2">Poor Sleep</label>
+                                                            </div>
+
+                                                            <div class="race">
+                                                                <input type="radio" name="pattern" id="pattern-3" hidden>
+                                                                <label for="pattern-3">Nightmares</label>
+                                                            </div>
+
+                                                            <div class="race">
+                                                                <input type="radio" name="pattern" id="pattern-4"
+                                                                    hidden>
+                                                                <label for="pattern-4">Fatigue</label>
+                                                            </div>
+
+                                                            <div class="race">
+                                                                <input type="radio" name="pattern" id="pattern-5" hidden>
+                                                                <label for="pattern-5">Normal Appetite</label>
+                                                            </div>
+
+                                                            <div class="race">
+                                                                <input type="radio" name="pattern" id="pattern-6" hidden>
+                                                                <label for="pattern-6">Social Withdrawl</label>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="inputrow">
+                                                <div class="inputbox">
+                                                    <div class="inputinfo">
+                                                        <label class="inputlabel">Checking Mental State</label>
+
+                                                        <div class="statebox">
+                                                            <div class="statebox-header">
+                                                                <div class="stateleft"></div>
+
+                                                                <div class="statecenter">
+                                                                    <h5 class="title">Status</h5>
+                                                                </div>
+
+                                                                <div class="stateright">
+                                                                    <h5 class="title">Remarks</h5>
+                                                                </div>
+                                                            </div>
+
+                                                            <div class="statebox-body">
+                                                                <div class="staterow">
+                                                                    <div class="stateleft">
+                                                                        <label class="title">Appearance</label>
+                                                                    </div>
+
+                                                                    <div class="statecenter">
+                                                                        <input type="text" class="stateinput">
+                                                                    </div>
+
+                                                                    <div class="stateright">
+                                                                        <input type="text" class="stateinput">
                                                                     </div>
                                                                 </div>
 
-                                                                <div class="datatitlebox titlebox-2">
-                                                                    <div class="datacheck">
-                                                                        <input type="checkbox" id="data-2"
-                                                                            class="datacheckinput" hidden checked>
-                                                                        <label for="data-2"
-                                                                            class="datachecklabel"></label>
+                                                                <div class="staterow">
+                                                                    <div class="stateleft">
+                                                                        <label class="title">Conversation</label>
+                                                                    </div>
+
+                                                                    <div class="statecenter">
+                                                                        <input type="text" class="stateinput">
+                                                                    </div>
+
+                                                                    <div class="stateright">
+                                                                        <input type="text" class="stateinput">
                                                                     </div>
                                                                 </div>
 
-                                                                <div class="datatitlebox titlebox-3">
-                                                                    <div class="datacheck">
-                                                                        <input type="checkbox" id="data-3"
-                                                                            class="datacheckinput" hidden>
-                                                                        <label for="data-3"
-                                                                            class="datachecklabel"></label>
+                                                                <div class="staterow">
+                                                                    <div class="stateleft">
+                                                                        <label class="title">Affect</label>
+                                                                    </div>
+
+                                                                    <div class="statecenter">
+                                                                        <input type="text" class="stateinput">
+                                                                    </div>
+
+                                                                    <div class="stateright">
+                                                                        <input type="text" class="stateinput">
+                                                                    </div>
+                                                                </div>
+
+                                                                <div class="staterow">
+                                                                    <div class="stateleft">
+                                                                        <label class="title">Perception</label>
+                                                                    </div>
+
+                                                                    <div class="statecenter">
+                                                                        <input type="text" class="stateinput">
+                                                                    </div>
+
+                                                                    <div class="stateright">
+                                                                        <input type="text" class="stateinput">
+                                                                    </div>
+                                                                </div>
+
+                                                                <div class="staterow">
+                                                                    <div class="stateleft">
+                                                                        <label class="title">Cognition</label>
+                                                                    </div>
+
+                                                                    <div class="statecenter">
+                                                                        <input type="text" class="stateinput">
+                                                                    </div>
+
+                                                                    <div class="stateright">
+                                                                        <input type="text" class="stateinput">
                                                                     </div>
                                                                 </div>
                                                             </div>
                                                         </div>
+                                                    </div>
+                                                </div>
+                                            </div>
 
-                                                        <div class="datarow">
-                                                            <div class="titlebox">
-                                                                <span class="title">Aggression</span>
-                                                            </div>
+                                            <div class="inputrow">
+                                                <div class="inputbox">
+                                                    <div class="inputinfo">
+                                                        <label for="experience-4" class="inputlabel">Any current or
+                                                            history of violent behavior? If yes, please explain below
+                                                            when, how, and what happened.</label>
+                                                        <textarea class="inputfield" id="experience-4"
+                                                            rows="7"></textarea>
+                                                    </div>
+                                                </div>
+                                            </div>
 
-                                                            <div class="databox">
-                                                                <div class="datatitlebox titlebox-1">
-                                                                    <div class="datacheck">
-                                                                        <input type="checkbox" id="data-4"
-                                                                            class="datacheckinput" hidden>
-                                                                        <label for="data-4"
-                                                                            class="datachecklabel"></label>
-                                                                    </div>
-                                                                </div>
+                                            <div class="inputrow">
+                                                <div class="inputbox">
+                                                    <div class="inputinfo">
+                                                        <label for="experience-5" class="inputlabel">Does the patient
+                                                            have any past or current medical condition that you would
+                                                            like to declare? (head injury, accident, etc.)</label>
+                                                        <textarea class="inputfield" id="experience-5"
+                                                            rows="7"></textarea>
+                                                    </div>
+                                                </div>
+                                            </div>
 
-                                                                <div class="datatitlebox titlebox-2">
-                                                                    <div class="datacheck">
-                                                                        <input type="checkbox" id="data-5"
-                                                                            class="datacheckinput" hidden>
-                                                                        <label for="data-5"
-                                                                            class="datachecklabel"></label>
-                                                                    </div>
-                                                                </div>
+                                            <div class="inputrow">
+                                                <div class="inputbox">
+                                                    <div class="inputinfo">
+                                                        <label for="experience-6" class="inputlabel">Is there any
+                                                            previous hospitalization? If yes, please explain the reason.
+                                                            If no, leave blank</label>
+                                                        <textarea class="inputfield" id="experience-6"
+                                                            rows="7"></textarea>
+                                                    </div>
+                                                </div>
+                                            </div>
 
-                                                                <div class="datatitlebox titlebox-3">
-                                                                    <div class="datacheck">
-                                                                        <input type="checkbox" id="data-6"
-                                                                            class="datacheckinput" hidden>
-                                                                        <label for="data-6"
-                                                                            class="datachecklabel"></label>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
+                                            <div class="inputrow">
+                                                <div class="inputbox">
+                                                    <div class="inputinfo">
+                                                        <label for="experience-7" class="inputlabel">Does the patient
+                                                            have any allergies? If yes, please list them below:</label>
+                                                        <textarea class="inputfield" id="experience-7"
+                                                            rows="7"></textarea>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="inputrow">
+                                                <div class="inputbox">
+                                                    <div class="inputinfo">
+                                                        <label for="experience-8" class="inputlabel">Is the patient
+                                                            currently taking any medications? If yes, please list them
+                                                            below:</label>
+                                                        <textarea class="inputfield" id="experience-8"
+                                                            rows="7"></textarea>
                                                     </div>
                                                 </div>
                                             </div>
@@ -1336,21 +1772,17 @@
                                                 <div class="inputcol">
                                                     <div class="inputbox">
                                                         <div class="inputinfo">
-                                                            <label for="personalinfo-7" class="inputlabel">Do you have
-                                                                any
-                                                                allergies?</label>
+                                                            <label class="inputlabel">Do you have any allergies?</label>
 
                                                             <div class="genderbox">
                                                                 <div class="gender">
-                                                                    <input type="radio" name="allergy" id="allergy-1"
-                                                                        hidden checked>
-                                                                    <label for="allergy-1">Yes</label>
+                                                                    <input type="radio" name="anyallergy" id="anyallergy-1" hidden checked>
+                                                                    <label for="anyallergy-1">Yes</label>
                                                                 </div>
 
                                                                 <div class="gender">
-                                                                    <input type="radio" name="allergy" id="allergy-2"
-                                                                        hidden>
-                                                                    <label for="allergy-2">No</label>
+                                                                    <input type="radio" name="anyallergy" id="anyallergy-2" hidden>
+                                                                    <label for="anyallergy-2">No</label>
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -1365,13 +1797,13 @@
 
                                                             <div class="genderbox">
                                                                 <div class="gender">
-                                                                    <input type="radio" name="smoking" id="smoking-1"
+                                                                    <input type="radio" name="smok" id="smoking-1"
                                                                         hidden checked>
                                                                     <label for="smoking-1">Yes</label>
                                                                 </div>
 
                                                                 <div class="gender">
-                                                                    <input type="radio" name="smoking" id="smoking-2"
+                                                                    <input type="radio" name="smok" id="smoking-2"
                                                                         hidden>
                                                                     <label for="smoking-2">No</label>
                                                                 </div>
@@ -1381,30 +1813,241 @@
                                                 </div>
                                             </div>
 
-                                            <div class="checkrow">
-                                                <input type="checkbox" class="requiredcheck" id="checkform" hidden>
-                                                <label for="checkform" class="checklabel">
-                                                    <span class="text">
-                                                        I confirm that all information in this form
-                                                        is true and accurate.
-                                                        I also understand that all data entered in
-                                                        this form will be strictly confidential. *
-                                                    </span>
-                                                </label>
-                                            </div>
-
                                             <div class="submitrow">
-                                                <button type="button" class="btn-booking btn-print">Print
-                                                    Form</button>
-                                                <button type="button" class="btn-booking btn-fill">Submit</button>
+                                                <button type="button" class="btn-continue">
+                                                    <span class="text">Continue</span>
+
+                                                    <span class="icon">
+                                                        <svg width="14" height="14" viewBox="0 0 14 14" fill="none"
+                                                            xmlns="http://www.w3.org/2000/svg">
+                                                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                                                d="M4.06564 1.44064C4.2365 1.26979 4.5135 1.26979 4.68436 1.44064L9.93436 6.69064C10.1052 6.8615 10.1052 7.1385 9.93436 7.30936L4.68436 12.5594C4.5135 12.7302 4.2365 12.7302 4.06564 12.5594C3.89479 12.3885 3.89479 12.1115 4.06564 11.9406L9.00628 7L4.06564 2.05936C3.89479 1.8885 3.89479 1.6115 4.06564 1.44064Z"
+                                                                fill="white" />
+                                                        </svg>
+                                                    </span>
+                                                </button>
                                             </div>
                                         </div>
                                     </div>
 
-                                    <div class="tab-pane fade" id="treatment" role="tabpanel"
-                                        aria-labelledby="treatment-tab">
-                                        <div class="treatment">
+                                    <div class="tab-pane fade" id="treatment" role="tabpanel" aria-labelledby="treatment-tab">
+                                        <div class="personalinformation">
+                                            <div class="inputrow">
+                                                <div class="inputbox">
+                                                    <div class="inputinfo">
+                                                        <label for="mentalhealth" class="inputlabel">Mental Health Diagnosis</label>
+                                                        <textarea class="inputfield" id="mentalhealth" rows="7"></textarea>
+                                                    </div>
+                                                </div>
+                                            </div>
 
+                                            <div class="inputrow">
+                                                <div class="inputbox">
+                                                    <div class="inputinfo">
+                                                        <label for="treatment" class="inputlabel">Plan of Treatment</label>
+                                                        <textarea class="inputfield" id="treatment" rows="7"></textarea>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="inputrow">
+                                                <div class="inputbox">
+                                                    <div class="inputinfo">
+                                                        <label class="inputlabel">Medications (If needed)</label>
+
+                                                        <div class="medication">
+                                                            <div class="medication-header">
+                                                                <div class="medication-left"></div>
+
+                                                                <div class="medication-right">
+                                                                    <div class="medication-info">
+                                                                        <h5 class="title">Medication Name</h5>
+                                                                    </div>
+
+                                                                    <div class="medication-info">
+                                                                        <h5 class="title">Dosage / Frequency</h5>
+                                                                    </div>
+
+                                                                    <div class="medication-info">
+                                                                        <h5 class="title">Time</h5>
+                                                                    </div>
+
+                                                                    <div class="medication-info">
+                                                                        <h5 class="title">Purpose</h5>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            
+                                                            <div class="medication-body">
+                                                                <div class="medication-row">
+                                                                    <div class="medication-left">
+                                                                        <h5 class="serial">1</h5>
+                                                                    </div>
+
+                                                                    <div class="medication-right">
+                                                                        <div class="medication-info">
+                                                                            <input type="text" class="medicationinput">
+                                                                        </div>
+
+                                                                        <div class="medication-info">
+                                                                            <input type="text" class="medicationinput">
+                                                                        </div>
+
+                                                                        <div class="medication-info">
+                                                                            <input type="text" class="medicationinput">
+                                                                        </div>
+
+                                                                        <div class="medication-info">
+                                                                            <input type="text" class="medicationinput">
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+
+                                                                <div class="medication-row">
+                                                                    <div class="medication-left">
+                                                                        <h5 class="serial">2</h5>
+                                                                    </div>
+
+                                                                    <div class="medication-right">
+                                                                        <div class="medication-info">
+                                                                            <input type="text" class="medicationinput">
+                                                                        </div>
+
+                                                                        <div class="medication-info">
+                                                                            <input type="text" class="medicationinput">
+                                                                        </div>
+
+                                                                        <div class="medication-info">
+                                                                            <input type="text" class="medicationinput">
+                                                                        </div>
+
+                                                                        <div class="medication-info">
+                                                                            <input type="text" class="medicationinput">
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+
+                                                                <div class="medication-row">
+                                                                    <div class="medication-left">
+                                                                        <h5 class="serial">3</h5>
+                                                                    </div>
+
+                                                                    <div class="medication-right">
+                                                                        <div class="medication-info">
+                                                                            <input type="text" class="medicationinput">
+                                                                        </div>
+
+                                                                        <div class="medication-info">
+                                                                            <input type="text" class="medicationinput">
+                                                                        </div>
+
+                                                                        <div class="medication-info">
+                                                                            <input type="text" class="medicationinput">
+                                                                        </div>
+
+                                                                        <div class="medication-info">
+                                                                            <input type="text" class="medicationinput">
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+
+                                                                <div class="medication-row">
+                                                                    <div class="medication-left">
+                                                                        <h5 class="serial">4</h5>
+                                                                    </div>
+
+                                                                    <div class="medication-right">
+                                                                        <div class="medication-info">
+                                                                            <input type="text" class="medicationinput">
+                                                                        </div>
+
+                                                                        <div class="medication-info">
+                                                                            <input type="text" class="medicationinput">
+                                                                        </div>
+
+                                                                        <div class="medication-info">
+                                                                            <input type="text" class="medicationinput">
+                                                                        </div>
+
+                                                                        <div class="medication-info">
+                                                                            <input type="text" class="medicationinput">
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+
+                                                                <div class="medication-row">
+                                                                    <div class="medication-left">
+                                                                        <h5 class="serial">5</h5>
+                                                                    </div>
+
+                                                                    <div class="medication-right">
+                                                                        <div class="medication-info">
+                                                                            <input type="text" class="medicationinput">
+                                                                        </div>
+
+                                                                        <div class="medication-info">
+                                                                            <input type="text" class="medicationinput">
+                                                                        </div>
+
+                                                                        <div class="medication-info">
+                                                                            <input type="text" class="medicationinput">
+                                                                        </div>
+
+                                                                        <div class="medication-info">
+                                                                            <input type="text" class="medicationinput">
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="inputrow">
+                                                <div class="inputcol">
+                                                    <div class="inputbox">
+                                                        <div class="inputinfo">
+                                                            <label for="workername" class="inputlabel">Health Care Worker Name</label>
+                                                            <input type="text" class="inputfield" id="workername">
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="inputcol">
+                                                    <div class="inputbox">
+                                                        <div class="inputinfo">
+                                                            <label for="positiontitle" class="inputlabel">Position Title</label>
+                                                            <input type="text" class="inputfield" id="positiontitle">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="inputrow">
+                                                <div class="inputbox">
+                                                    <div class="inputinfo">
+                                                        <label for="signature" class="inputlabel">Health Care Worker Signature</label>
+                                                        <textarea class="inputfield" id="signature" rows="7"></textarea>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="inputrow">
+                                                <div class="inputcol">
+                                                    <div class="inputbox">
+                                                        <div class="inputinfo">
+                                                            <label for="signed-6" class="inputlabel">Date Signed</label>
+                                                            <input type="date" class="inputfield" id="signed-6">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="submitrow">
+                                                <button type="button" class="btn-booking btn-print">Print Form</button>
+                                                <button type="button" class="btn-booking btn-fill">Submit</button>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -2439,6 +3082,9 @@
     <script src="../assets/js/pageloader.js"></script>
     <!-- TOOLTIP JS -->
     <script src="../assets/js/mindlytooltip.js"></script>
+    <!-- TOOLTIP JS -->
+    <!-- <script src="../assets/js/mc-calendar.min.js"></script>
+    <script src="../assets/js/calendar.js"></script> -->
 </body>
 
 </html>
