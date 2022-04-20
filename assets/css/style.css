@@ -10395,6 +10395,70 @@ h6 {
   transition: all 250ms ease-in-out;
 }
 
+.mc-display__header {
+  background: #01796F;
+}
+
+.mc-calendar--modal.mc-calendar--opened .mc-display {
+  margin-top: 6.25rem;
+}
+
+@media screen and (min-width: 37.5rem) {
+  .mc-calendar--modal.mc-calendar--opened .mc-display {
+    margin-top: 0rem;
+  }
+}
+
+.mc-select__data--month span, .mc-select__data--month span,
+.mc-select__data--year span, .mc-select__data--year span {
+  color: #A0AEC0;
+}
+
+.mc-date--active.mc-date--picked {
+  background: #01796F;
+}
+
+.mc-select__nav svg path {
+  fill: #A0AEC0;
+}
+
+.mc-display__body {
+  background: #014641;
+}
+
+.mc-table__weekday {
+  color: #01796F;
+}
+
+.mc-date--active {
+  color: #2D3748;
+}
+
+.mc-date--active.mc-date--today {
+  background: #718096;
+  color: #F7FAFC;
+}
+
+.mc-btn--success {
+  color: #01796F;
+  -webkit-transition: all 250ms ease-in-out;
+  transition: all 250ms ease-in-out;
+}
+
+.mc-btn--success:not([disabled]):hover {
+  color: #02decc;
+}
+
+.mc-btn--danger {
+  color: #F94E26;
+  -webkit-transition: all 250ms ease-in-out;
+  transition: all 250ms ease-in-out;
+}
+
+.mc-btn--danger:not([disabled]):hover {
+  color: #FCAF15;
+}
+
 .individualfaq {
   background: #ffffff;
   padding: 5rem 0rem;
@@ -22771,7 +22835,7 @@ h6 {
 
 .providertabinfo {
   background: #ffffff;
-  padding: 0rem 1.25rem 1.25rem;
+  padding: 1.25rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -22784,7 +22848,26 @@ h6 {
 
 @media screen and (max-width: 61.9375rem) {
   .providertabinfo {
-    padding: 0rem 1.5rem 1.5rem;
+    padding: 1.5rem;
+  }
+}
+
+.bookingcalander {
+  width: 100%;
+  overflow: hidden;
+}
+
+.bookingcalander input {
+  width: 100%;
+  padding: 0.6875rem 1rem 0.75rem;
+  border: solid 0.0625rem #E2E8F0;
+  border-radius: 0.375rem;
+  border-radius: 0.375rem;
+}
+
+@media screen and (min-width: 61.9375rem) {
+  .bookingcalander {
+    width: 50%;
   }
 }
 

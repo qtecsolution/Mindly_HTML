@@ -1,0 +1,68 @@
+.mc-display__header {
+    background: $primary;
+
+    .mc-display__day {
+        // color: $gray-100;
+    }
+}
+
+.mc-calendar--modal.mc-calendar--opened .mc-display {
+    margin-top: length(100);
+
+    @include breakpoint(mobile600) {
+        margin-top: length(0);
+    }
+}
+
+.mc-select__data--month, .mc-select__data--month,
+.mc-select__data--year, .mc-select__data--year {
+    span {
+        color: $gray-500;
+    }
+}
+
+.mc-date--active.mc-date--picked {
+    background: $primary;
+}
+
+.mc-select__nav {
+    svg {
+        path {
+            fill: $gray-500;
+        }
+    }
+}
+
+.mc-display__body {
+    background: darken($primary, 10%);;
+}
+
+.mc-table__weekday {
+    color: $primary;
+}
+
+.mc-date--active {
+    color: $gray-800;
+}
+
+.mc-date--active.mc-date--today {
+    @include setBgColor($gray-600, $gray-100);
+}
+
+.mc-btn--success {
+    color: $primary;
+    @include transitions;
+
+    @include hover {
+        color: lighten($primary, 20%);
+    }
+}
+
+.mc-btn--danger {
+    color: $tertiary;
+    @include transitions;
+
+    @include hover {
+        color: $secondary;
+    }
+}

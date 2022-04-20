@@ -1,4 +1,4 @@
-const birthDayPick = MCDatepicker.create({ 
-    el: '#assesmentdate',
+const bookingDayPick = MCDatepicker.create({ 
+    el: '#bookingdate',
     dateFormat: 'MM-DD-YYYY'
 });

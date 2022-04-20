@@ -623,12 +623,28 @@
 
 .providertabinfo {
     background: $white;
-    padding: length(0) length(20) length(20);
+    padding: length(20);
     @include flex-column;
     gap: length(40);
 
     @include breakpoint(tablet991) {
-        padding: length(0) length(24) length(24);
+        padding: length(24);
+    }
+}
+
+.bookingcalander {
+    width: 100%;
+    overflow: hidden;
+
+    input {
+        @include w100;
+        padding: length(11) length(16) length(12);
+        @include border(solid, 1, $gray-300);
+        @include radius(6);
+    }
+
+    @include breakpoint(tab991) {
+        width: 50%;
     }
 }
 
