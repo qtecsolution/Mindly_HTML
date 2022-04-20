@@ -62,3 +62,12 @@
         color: $secondary;
     }
 }
+
+#mc-btn__cancel {
+    color: $secondary;
+    @include transitions;
+
+    @include hover {
+        color: $tertiary;
+    }
+}

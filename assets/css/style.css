@@ -10459,6 +10459,16 @@ h6 {
   color: #FCAF15;
 }
 
+#mc-btn__cancel {
+  color: #FCAF15;
+  -webkit-transition: all 250ms ease-in-out;
+  transition: all 250ms ease-in-out;
+}
+
+#mc-btn__cancel:not([disabled]):hover {
+  color: #F94E26;
+}
+
 .individualfaq {
   background: #ffffff;
   padding: 5rem 0rem;
