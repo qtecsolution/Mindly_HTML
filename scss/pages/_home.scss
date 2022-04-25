@@ -751,6 +751,46 @@
     }
 }
 
+.mindlydoc {
+    padding: length(40) length(0);
+
+    &-content {
+        @include flex-center-column;
+        gap: length(32);
+
+        .seeallinfo {
+            width: length(200);
+            @include flex-center;
+
+            @include breakpoint(tablet991) {
+                display: none;
+            }
+
+            .btn-seeall {
+                padding: length(16) length(32);
+                @include border(solid, 1.45, $secondary);
+                @include radius(8);
+                @include setBgColor(transparent, $secondary);
+                @include font-14-14-semibold;
+                text-align: center;
+                @include transitions;
+
+                @include hover {
+                    @include setBgColor($secondary, $white);
+                }
+            }
+        }
+
+        .mobiledoclist {
+            display: none;
+
+            @include breakpoint(tablet991) {
+                display: block;
+            }
+        }
+    }
+}
+
 // MINDLY DOCTORS END
 
 // ACHIEVEPOTENTIAL START

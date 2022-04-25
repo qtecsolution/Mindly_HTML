@@ -48,130 +48,6 @@
         }
     }
 
-    &-header {
-        .registerprogress {
-            @include flex-center-vert;
-
-            .progressinfo {
-                width: 33.33%;
-                @include flex-center-column;
-                gap: length(24);
-                text-align: center;
-                cursor: pointer;
-
-                &:first-of-type {
-                    .progresscount {
-                        &::before {
-                            width: 0;
-                            left: 0;
-                        }
-                    }
-                }
-
-                .progresscount {
-                    background: $gray-600;
-                    @include square(length(80));
-                    @include flex-center;
-                    @include circle;
-                    position: relative;
-
-                    @include breakpoint(phone768) {
-                        @include square(length(60));
-                    }
-
-                    &::before {
-                        content: '';
-                        position: absolute;
-                        top: length(40);
-                        left: -328.5%;
-                        width: 328.5%;
-                        z-index: 1;
-                        height: length(5);
-                        background: $gray-500;
-
-                        @include breakpoint(desktop1400) {
-                            width: 270%;
-                            left: -270%;
-                        }
-
-                        @include breakpoint(desktop1199) {
-                            width: 205%;
-                            left: -205%;
-                        }
-
-                        @include breakpoint(tablet991) {
-                            width: 180%;
-                            left: -180%;
-                        }
-
-                        @include breakpoint(phone768) {
-                            top: length(30);
-                            width: 160%;
-                            left: -160%;
-                        }
-
-                        @include breakpoint(phone575) {
-                            width: 0;
-                            left: 0;
-                        }
-                    }
-
-                    .progresscounter {
-                        @include square(length(60));
-                        @include flex-center;
-                        @include circle;
-                        @include setBgColor($gray-800, $white);
-                        @include font-30-18-bold;
-                        text-align: center;
-
-                        @include breakpoint(phone768) {
-                            @include square(length(40));
-                        }
-                    }
-                }
-
-                &.active {
-                    .progresscount {
-                        background: $secondary;
-                        filter: $activeshadow;
-
-                        &::before {
-                            background: $secondary;
-                        }
-                    }
-
-                    .progresscounter {
-                        @include setBgColor($primary, $white);
-                    }
-
-                    .progressdetail {
-                        .progresstitle {
-                            color: $secondary;
-                        }
-                    }
-                }
-
-                &.completed {
-                    .progresscount {
-                        filter: none;
-                    }
-
-                    .progressdetail {
-                        .progresstitle {
-                            color: $gray-800;
-                        }
-                    }
-                }
-
-                .progressdetail {
-                    .progresstitle {
-                        color: $gray-600;
-                    }
-                }
-            }
-        }
-    }
-
     &-body {
         @include w100;
 
@@ -339,6 +215,153 @@
                         background: darken($tertiary, 10%);
                     }
                 }
+            }
+        }
+    }
+}
+
+.registerprogress {
+    @include flex-center-vert;
+
+    .progressinfo {
+        width: 33.33%;
+        @include flex-center-column;
+        gap: length(24);
+        text-align: center;
+        cursor: pointer;
+
+        &:first-of-type {
+            .progresscount {
+                &::before {
+                    width: 0;
+                    left: 0;
+                }
+            }
+        }
+
+        .progresscount {
+            background: $gray-600;
+            @include square(length(80));
+            @include flex-center;
+            @include circle;
+            position: relative;
+
+            @include breakpoint(phone768) {
+                @include square(length(60));
+            }
+
+            &::before {
+                content: '';
+                position: absolute;
+                top: length(40);
+                left: -328.5%;
+                width: 328.5%;
+                z-index: 1;
+                height: length(5);
+                background: $gray-500;
+
+                @include breakpoint(desktop1400) {
+                    width: 270%;
+                    left: -270%;
+                }
+
+                @include breakpoint(desktop1199) {
+                    width: 205%;
+                    left: -205%;
+                }
+
+                @include breakpoint(tablet991) {
+                    width: 180%;
+                    left: -180%;
+                }
+
+                @include breakpoint(phone768) {
+                    top: length(30);
+                    width: 160%;
+                    left: -160%;
+                }
+
+                @include breakpoint(phone575) {
+                    width: 190%;
+                    left: -190%;
+                }
+
+                @include breakpoint(phone500) {
+                    width: 160%;
+                    left: -160%;
+                }
+
+                @include breakpoint(phone480) {
+                    width: 145%;
+                    left: -145%;
+                }
+
+                @include breakpoint(phone414) {
+                    width: 108%;
+                    left: -108%;
+                }
+
+                @include breakpoint(phone375) {
+                    width: 80%;
+                    left: -80%;
+                }
+
+                @include breakpoint(phone359) {
+                    width: 55%;
+                    left: -55%;
+                }
+            }
+
+            .progresscounter {
+                @include square(length(60));
+                @include flex-center;
+                @include circle;
+                @include setBgColor($gray-800, $white);
+                @include font-30-18-bold;
+                text-align: center;
+
+                @include breakpoint(phone768) {
+                    @include square(length(40));
+                }
+            }
+        }
+
+        &.active {
+            .progresscount {
+                background: $secondary;
+                filter: $activeshadow;
+
+                &::before {
+                    background: $secondary;
+                }
+            }
+
+            .progresscounter {
+                @include setBgColor($primary, $white);
+            }
+
+            .progressdetail {
+                .progresstitle {
+                    color: $secondary;
+                }
+            }
+        }
+
+        &.completed {
+            .progresscount {
+                filter: none;
+            }
+
+            .progressdetail {
+                .progresstitle {
+                    color: $gray-800;
+                }
+            }
+        }
+
+        .progressdetail {
+            .progresstitle {
+                color: $gray-600;
             }
         }
     }

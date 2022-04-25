@@ -816,7 +816,11 @@
                     color: $gray-700;
 
                     @include breakpoint(tablet991) {
-                        @include heading-1;
+                        @include heading-2;
+                    }
+
+                    @include breakpoint(phone768) {
+                        @include heading-3;
                     }
                 }
 
@@ -834,6 +838,24 @@
                         }
 
                         @include breakpoint(phone768) {
+                            @include w100;
+                        }
+                    }
+                }
+
+                .assesmentbuttons {
+                    @include breakpoint(tablet991) {
+                        justify-content: flex-start;
+                    }
+
+                    .btn-square {
+                        width: calc((100% / 3) - 1.5rem);
+
+                        @include breakpoint(desktop1199) {
+                            width: calc((100% / 2) - 1rem);
+                        }
+
+                        @include breakpoint(tablet991) {
                             @include w100;
                         }
                     }

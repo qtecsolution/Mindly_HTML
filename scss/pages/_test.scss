@@ -1,0 +1,485 @@
+.testsection {
+    padding: length(48) length(8);
+
+    @include breakpoint(tab991) {
+        padding: length(64) length(0);
+    }
+
+    @include breakpoint(laptop1200) {
+        padding: length(120) length(0);
+    }
+
+    &-content {
+        @include flex-column;
+        gap: length(60);
+
+        .submitinfo {
+            @include flex-center;
+            gap: length(16);
+
+            .btn-back {
+                padding: length(12) length(32);
+                text-align: center;
+                @include setBgColor(transparent, $gray-700);
+                @include font-16-16-semibold;
+                @include radius(8);
+            }
+
+            .btn-submit {
+                padding: length(15.5) length(32);
+                text-align: center;
+                @include setBgColor($tertiary, $white);
+                @include font-16-16-semibold;
+                @include radius(8);
+                @include transitions;
+
+                @include hover {
+                    background: darken($tertiary, 15%);
+                }
+            }
+        }
+    }
+
+    &-details {
+        @include flex-column;
+        gap: length(40);
+
+        .testinfo {
+            @include flex-column;
+            gap: length(40);
+
+            .test-title {
+                color: $gray-700;
+                @include display-1;
+                text-align: center;
+
+                @include breakpoint(desktop1400) {
+                    @include heading-1;
+                }
+                
+                @include breakpoint(desktop1200) {
+                    @include heading-2;
+                }
+            }
+
+            .test-text {
+                @include font-21-18-normal;
+                line-height: 1.6;
+                color: $gray-700;
+                
+                @include breakpoint(tablet991) {
+                    @include font-26-16-normal;
+                }
+
+                @include breakpoint(phone575) {
+                    @include font-24-14-normal;
+                }
+            }
+
+            .testbutton {
+                @include flex-center;
+
+                .requestbox {
+                    width: length(164);
+                }
+            }
+        }
+
+        .testdescriptions {
+            @include flex-column;
+            gap: length(44);
+
+            .descriptions {
+                .text {
+                    @include font-21-18-normal;
+                    line-height: 1.6;
+                    color: $gray-700;
+                    
+                    @include breakpoint(tablet991) {
+                        @include font-26-16-normal;
+                    }
+
+                    @include breakpoint(phone575) {
+                        @include font-24-14-normal;
+                    }
+                }
+            }
+
+            .testprogress {
+                padding: length(0) length(24);
+
+                @include breakpoint(phone575) {
+                    padding: length(0);
+                }
+            }
+
+            .assesment {
+                @include flex-column;
+                gap: length(32);
+
+                @include breakpoint(tab991) {
+                    gap: length(16);
+                }
+
+                &-single {
+                    @include flex-column;
+                    gap: length(16);
+
+                    .assesment-description {
+                        @include border(solid, 1, $gray-400);
+                        flex-grow: 100;
+                        @include flex-center-vert;
+
+                        .counterbox {
+                            @include square(length(48));
+                            @include flex-center;
+                            text-align: center;
+                            @include border-single(right, solid, 1, $gray-400);
+
+                            @include breakpoint(tab991) {
+                                @include square(length(64));
+                            }
+
+                            .counter {
+                                color: $black;
+                                @include font-20-12-normal;
+                                font-feature-settings: 'salt';
+
+                                @include breakpoint(mobile768) {
+                                    @include font-24-14-normal;
+                                }
+
+                                @include breakpoint(tab991) {
+                                    @include font-26-16-normal;
+                                }
+                            }
+                        }
+
+                        .info {
+                            width: calc(100% - 4rem);
+                            @include h100;
+                            padding: length(0) length(12);
+
+                            @include breakpoint(tab991) {
+                                padding: length(0) length(24);
+                            }
+
+                            .infotext {
+                                color: $black;
+                                @include font-20-12-normal;
+                                font-feature-settings: 'salt';
+
+                                @include breakpoint(mobile768) {
+                                    @include font-24-14-normal;
+                                }
+
+                                @include breakpoint(tab991) {
+                                    @include font-26-16-normal;
+                                }
+                            }
+                        }
+                    }
+
+                    .mobileasses {
+                        @include flex-center-vert;
+                        gap: length(10);
+
+                        @include breakpoint(tab991) {
+                            display: none;
+                        }
+
+                        .asses-box {
+                            @include flex-center-column;
+                            gap: length(16);
+                            text-align: center;
+
+                            .assestitle {
+                                .title {
+                                    @include font-10-10-normal;
+                                    color: $gray-600;
+                                }
+                            }
+
+                            .assesinput {
+                                @include square(length(48));
+                                @include flex-center;
+                                text-align: center;
+                                @include border(solid, 1.5, transparent);
+                                cursor: pointer;
+                                @include breakpoint(tab991) {
+                                    @include square(length(64));
+                                }
+
+                                .input {
+                                    color: $black;
+                                    @include font-20-12-normal;
+                                    font-feature-settings: 'salt';
+
+                                    @include breakpoint(mobile768) {
+                                        @include font-24-14-normal;
+                                    }
+
+                                    @include breakpoint(tab991) {
+                                        @include font-26-16-normal;
+                                    }
+                                }
+
+                                &.active {
+                                    border-color: $primary;
+                                }
+                            }
+
+                            .input-1 {
+                                background: $input-1;
+                            }
+
+                            .input-2 {
+                                background: $input-2;
+                            }
+
+                            .input-3 {
+                                background: $input-3;
+                            }
+
+                            .input-4 {
+                                background: $secondary;
+                            }
+                        }
+                    }
+                }
+
+                &-detail {
+                    @include flex-center-vert;
+                    gap: length(24);
+
+                    @include breakpoint(tab991) {
+                        &:first-child {
+                            .desktopassesment {
+                                margin-top: length(-24);
+                            }
+                        }
+                    }
+
+
+                    .assesment-single {
+                        flex-grow: 100;
+                    }
+                }
+
+                .desktopassesment {
+                    display: none;
+
+                    @include breakpoint(tab991) {
+                        @include flex-center-vert;
+                        gap: length(5);
+                    }
+
+                    .assesbox {
+                        @include flex-center-column;
+                        gap: length(16);
+                        text-align: center;
+
+                        .titlebox {
+                            .title {
+                                @include font-10-10-normal;
+                                color: $gray-600;
+                            }
+                        }
+
+                        .assesinput {
+                            @include square(length(40));
+                            @include flex-center;
+                            text-align: center;
+                            @include border(solid, 1, transparent);
+                            cursor: pointer;
+
+                            @include breakpoint(mobile768) {
+                                @include square(length(48));
+                            }
+
+                            @include breakpoint(tab991) {
+                                @include square(length(64));
+                            }
+
+                            .input {
+                                color: $black;
+                                @include font-20-12-normal;
+                                font-feature-settings: 'salt';
+
+                                @include breakpoint(mobile768) {
+                                    @include font-24-14-normal;
+                                }
+
+                                @include breakpoint(tab991) {
+                                    @include font-26-16-normal;
+                                }
+                            }
+
+                            &.active {
+                                border-color: $primary;
+                            }
+                        }
+
+                        .input-1 {
+                            background: $input-1;
+                        }
+
+                        .input-2 {
+                            background: $input-2;
+                        }
+
+                        .input-3 {
+                            background: $input-3;
+                        }
+
+                        .input-4 {
+                            background: $secondary;
+                        }
+                    }
+                }
+            }
+        }
+
+        .testresult {
+            @include flex-column;
+            gap: length(40);
+
+            &-header {
+                .result-title {
+                    @include heading-1;
+                    color: $gray-700;
+                }
+            }
+            
+            &-body {
+                @include flex-column;
+                gap: length(48);
+                background: $white;
+                padding: length(36) length(16) length(48);
+
+                @include breakpoint(tab991) {
+                    gap: length(80);
+                    padding: length(52) length(28) length(74);
+                }
+
+                .result {
+                    @include flex-column;
+                    gap: length(24);
+
+                    &-header {
+                        .result-title {
+                            @include heading-4;
+                            color: $gray-700;
+                        }
+                    }
+
+                    &-body {
+                        @include flex-column;
+                        gap: length(8);
+
+                        .resulthead {
+                            @include flex-center-between;
+
+                            .counterbox {
+                                width: calc(100% / 5);
+                                @include flex-center;
+
+                                .result-count {
+                                    @include square(length(48));
+                                    @include flex-center;
+                                    text-align: center;
+                                    @include setBgColor(transparent, $gray-700);
+                                    @include font-24-16-semibold;
+                                    @include circle;
+                                    position: relative;
+
+                                    &::after {
+                                        content: '';
+                                        position: absolute;
+                                        top: 100%;
+                                        bottom: 0;
+                                        left: 50%;
+                                        @include transform(translateX(-50%));
+                                        width: length(2);
+                                        height: 100%;
+                                        background: $counterPipeBg;
+                                        opacity: 0;
+                                        visibility: hidden;
+                                    }
+
+                                    &.active {
+                                        @include setBgColor($primary, $white);
+
+                                        &::after {
+                                            opacity: 1;
+                                            visibility: visible;
+                                        }
+                                    }
+
+                                    @include breakpoint(desktop1200) {
+                                        @include font-20-12-semibold;
+                                    }
+
+                                    @include breakpoint(tablet991) {
+                                        @include font-10-10-semibold;
+                                        @include square(length(48));
+                                    }
+
+                                    @include breakpoint(phone768) {
+                                        @include square(length(32));
+                                    }
+                                }
+                            }
+                        }
+
+                        .resultbody {
+                            background: $resultBg;
+                            @include flex-center-between;
+
+                            .resultdetail {
+                                width: calc(100% / 5);
+                                @include flex-center;
+                                text-align: center;
+                                padding: length(16);
+
+                                .result-title {
+                                    display: inline-block;
+                                    color: $gray-800;
+                                    @include font-24-16-semibold;
+
+                                    @include breakpoint(desktop1200) {
+                                        @include font-20-12-semibold;
+                                    }
+
+                                    @include breakpoint(tablet991) {
+                                        @include font-10-10-semibold;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+
+                .resultinfo {
+                    @include breakpoint(tab991) {
+                        max-width: 60%;
+                    }
+
+                    .resulttext {
+                        @include font-21-18-normal;
+                        line-height: 1.6;
+                        color: $gray-700;
+                        
+                        @include breakpoint(tablet991) {
+                            @include font-26-16-normal;
+                        }
+
+                        @include breakpoint(phone575) {
+                            @include font-24-14-normal;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

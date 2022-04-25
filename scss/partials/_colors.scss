@@ -70,12 +70,19 @@ $emailBg: #EAEAEA;
 $col-2: #FFF7E5;
 $col-3: #FFF3D9;
 
+$input-1: rgba(252, 175, 21, 0.13);
+$input-2: rgba(252, 175, 21, 0.33);
+$input-3: rgba(252, 175, 21, 0.53);
+
 // BORDER COLORS
 $faqBorder: #969696;
+$grad-1: rgba(252, 175, 21, 0.1);
 
 $achieveHoverBg: radial-gradient(39.74% 39.74% at 50% 50%, $black 48.92%, rgba($black, 0) 100%);
 $overlayBg: linear-gradient(180deg, rgba($black, 0) 43.06%, $black 95.65%);
 $profileSidebarBg: linear-gradient(268.05deg, $white -73.52%, rgba($white, 0) 148.76%);
+$resultBg: linear-gradient(270deg, $secondary -3.03%, $grad-1 107.39%);
+$counterPipeBg: linear-gradient(180deg, $primary 0%, rgba($white, 0) 100%, $white 100%);
 
 $shadow-1: rgba(12, 26, 75, 0.1);
 $shadow-2: rgba(20, 37, 63, 0.06);

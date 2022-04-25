@@ -401,6 +401,9 @@
 		20/12 FONT SIZES
 \*------------------------------------*/
 /*------------------------------------*\
+		10/10 FONT SIZES
+\*------------------------------------*/
+/*------------------------------------*\
 		12/12 FONT SIZES
 \*------------------------------------*/
 /*------------------------------------*\
@@ -2979,7 +2982,7 @@ h6 {
 .btn-square .btn-title {
   font-family: "Gilroy";
   font-style: normal;
-  font-size: 2.25rem;
+  font-size: 1.5rem;
   font-weight: 600;
   line-height: 1.36;
   color: #2D3748;
@@ -2989,9 +2992,19 @@ h6 {
   .btn-square .btn-title {
     font-family: "Gilroy";
     font-style: normal;
-    font-size: 1.75rem;
+    font-size: 1.5rem;
     font-weight: 600;
     line-height: 1.36;
+  }
+}
+
+@media screen and (max-width: 48rem) {
+  .btn-square .btn-title {
+    font-family: "Gilroy";
+    font-style: normal;
+    font-size: 1.25rem;
+    font-weight: 600;
+    line-height: 1.365;
   }
 }
 
@@ -3012,6 +3025,10 @@ h6 {
     font-weight: 600;
     line-height: 1.71429;
   }
+}
+
+.btn-square .btn-text:not([disabled]):hover {
+  color: #01796F;
 }
 
 .btn-history {
@@ -8955,7 +8972,17 @@ h6 {
   .appointModal .modal-body .appointinfo-body .title {
     font-family: "Gilroy";
     font-style: normal;
-    font-size: 2.25rem;
+    font-size: 1.75rem;
+    font-weight: 600;
+    line-height: 1.36;
+  }
+}
+
+@media screen and (max-width: 48rem) {
+  .appointModal .modal-body .appointinfo-body .title {
+    font-family: "Gilroy";
+    font-style: normal;
+    font-size: 1.5rem;
     font-weight: 600;
     line-height: 1.36;
   }
@@ -8989,6 +9016,30 @@ h6 {
 
 @media screen and (max-width: 48rem) {
   .appointModal .modal-body .appointinfo-body .appointbuttons .btn-square {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 61.9375rem) {
+  .appointModal .modal-body .appointinfo-body .assesmentbuttons {
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
+}
+
+.appointModal .modal-body .appointinfo-body .assesmentbuttons .btn-square {
+  width: calc((100% / 3) - 1.5rem);
+}
+
+@media screen and (max-width: 74.9375rem) {
+  .appointModal .modal-body .appointinfo-body .assesmentbuttons .btn-square {
+    width: calc((100% / 2) - 1rem);
+  }
+}
+
+@media screen and (max-width: 61.9375rem) {
+  .appointModal .modal-body .appointinfo-body .assesmentbuttons .btn-square {
     width: 100%;
   }
 }
@@ -11300,173 +11351,6 @@ h6 {
   }
 }
 
-.registerbox-header .registerprogress {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-.registerbox-header .registerprogress .progressinfo {
-  width: 33.33%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  gap: 1.5rem;
-  text-align: center;
-  cursor: pointer;
-}
-
-.registerbox-header .registerprogress .progressinfo:first-of-type .progresscount::before {
-  width: 0;
-  left: 0;
-}
-
-.registerbox-header .registerprogress .progressinfo .progresscount {
-  background: #718096;
-  height: 5rem;
-  width: 5rem;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  border-radius: 100%;
-  position: relative;
-}
-
-@media screen and (max-width: 48rem) {
-  .registerbox-header .registerprogress .progressinfo .progresscount {
-    height: 3.75rem;
-    width: 3.75rem;
-  }
-}
-
-.registerbox-header .registerprogress .progressinfo .progresscount::before {
-  content: '';
-  position: absolute;
-  top: 2.5rem;
-  left: -328.5%;
-  width: 328.5%;
-  z-index: 1;
-  height: 0.3125rem;
-  background: #A0AEC0;
-}
-
-@media screen and (max-width: 87.4375rem) {
-  .registerbox-header .registerprogress .progressinfo .progresscount::before {
-    width: 270%;
-    left: -270%;
-  }
-}
-
-@media screen and (max-width: 74.9375rem) {
-  .registerbox-header .registerprogress .progressinfo .progresscount::before {
-    width: 205%;
-    left: -205%;
-  }
-}
-
-@media screen and (max-width: 61.9375rem) {
-  .registerbox-header .registerprogress .progressinfo .progresscount::before {
-    width: 180%;
-    left: -180%;
-  }
-}
-
-@media screen and (max-width: 48rem) {
-  .registerbox-header .registerprogress .progressinfo .progresscount::before {
-    top: 1.875rem;
-    width: 160%;
-    left: -160%;
-  }
-}
-
-@media screen and (max-width: 35.9375rem) {
-  .registerbox-header .registerprogress .progressinfo .progresscount::before {
-    width: 0;
-    left: 0;
-  }
-}
-
-.registerbox-header .registerprogress .progressinfo .progresscount .progresscounter {
-  height: 3.75rem;
-  width: 3.75rem;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  border-radius: 100%;
-  background: #2D3748;
-  color: #ffffff;
-  font-family: "Gilroy";
-  font-style: normal;
-  font-size: 1.125rem;
-  font-weight: 700;
-  line-height: 1.66667;
-  text-align: center;
-}
-
-@media screen and (max-width: 48rem) {
-  .registerbox-header .registerprogress .progressinfo .progresscount .progresscounter {
-    height: 2.5rem;
-    width: 2.5rem;
-  }
-}
-
-.registerbox-header .registerprogress .progressinfo.active .progresscount {
-  background: #FCAF15;
-  -webkit-filter: drop-shadow(0rem 0rem 0.0625rem rgba(12, 26, 75, 0.1)) drop-shadow(0rem 0.625rem 1rem rgba(20, 37, 63, 0.06));
-          filter: drop-shadow(0rem 0rem 0.0625rem rgba(12, 26, 75, 0.1)) drop-shadow(0rem 0.625rem 1rem rgba(20, 37, 63, 0.06));
-}
-
-.registerbox-header .registerprogress .progressinfo.active .progresscount::before {
-  background: #FCAF15;
-}
-
-.registerbox-header .registerprogress .progressinfo.active .progresscounter {
-  background: #01796F;
-  color: #ffffff;
-}
-
-.registerbox-header .registerprogress .progressinfo.active .progressdetail .progresstitle {
-  color: #FCAF15;
-}
-
-.registerbox-header .registerprogress .progressinfo.completed .progresscount {
-  -webkit-filter: none;
-          filter: none;
-}
-
-.registerbox-header .registerprogress .progressinfo.completed .progressdetail .progresstitle {
-  color: #2D3748;
-}
-
-.registerbox-header .registerprogress .progressinfo .progressdetail .progresstitle {
-  color: #718096;
-}
-
 .registerbox-body {
   width: 100%;
 }
@@ -11774,6 +11658,208 @@ h6 {
 
 .registerbox-body .step3info .submitbox .btn-submit:not([disabled]):hover {
   background: #e63106;
+}
+
+.registerprogress {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.registerprogress .progressinfo {
+  width: 33.33%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 1.5rem;
+  text-align: center;
+  cursor: pointer;
+}
+
+.registerprogress .progressinfo:first-of-type .progresscount::before {
+  width: 0;
+  left: 0;
+}
+
+.registerprogress .progressinfo .progresscount {
+  background: #718096;
+  height: 5rem;
+  width: 5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border-radius: 100%;
+  position: relative;
+}
+
+@media screen and (max-width: 48rem) {
+  .registerprogress .progressinfo .progresscount {
+    height: 3.75rem;
+    width: 3.75rem;
+  }
+}
+
+.registerprogress .progressinfo .progresscount::before {
+  content: '';
+  position: absolute;
+  top: 2.5rem;
+  left: -328.5%;
+  width: 328.5%;
+  z-index: 1;
+  height: 0.3125rem;
+  background: #A0AEC0;
+}
+
+@media screen and (max-width: 87.4375rem) {
+  .registerprogress .progressinfo .progresscount::before {
+    width: 270%;
+    left: -270%;
+  }
+}
+
+@media screen and (max-width: 74.9375rem) {
+  .registerprogress .progressinfo .progresscount::before {
+    width: 205%;
+    left: -205%;
+  }
+}
+
+@media screen and (max-width: 61.9375rem) {
+  .registerprogress .progressinfo .progresscount::before {
+    width: 180%;
+    left: -180%;
+  }
+}
+
+@media screen and (max-width: 48rem) {
+  .registerprogress .progressinfo .progresscount::before {
+    top: 1.875rem;
+    width: 160%;
+    left: -160%;
+  }
+}
+
+@media screen and (max-width: 35.9375rem) {
+  .registerprogress .progressinfo .progresscount::before {
+    width: 190%;
+    left: -190%;
+  }
+}
+
+@media screen and (max-width: 31.25rem) {
+  .registerprogress .progressinfo .progresscount::before {
+    width: 160%;
+    left: -160%;
+  }
+}
+
+@media screen and (max-width: 30rem) {
+  .registerprogress .progressinfo .progresscount::before {
+    width: 145%;
+    left: -145%;
+  }
+}
+
+@media screen and (max-width: 25.875rem) {
+  .registerprogress .progressinfo .progresscount::before {
+    width: 108%;
+    left: -108%;
+  }
+}
+
+@media screen and (max-width: 23.4375rem) {
+  .registerprogress .progressinfo .progresscount::before {
+    width: 80%;
+    left: -80%;
+  }
+}
+
+@media screen and (max-width: 22.4375rem) {
+  .registerprogress .progressinfo .progresscount::before {
+    width: 55%;
+    left: -55%;
+  }
+}
+
+.registerprogress .progressinfo .progresscount .progresscounter {
+  height: 3.75rem;
+  width: 3.75rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border-radius: 100%;
+  background: #2D3748;
+  color: #ffffff;
+  font-family: "Gilroy";
+  font-style: normal;
+  font-size: 1.125rem;
+  font-weight: 700;
+  line-height: 1.66667;
+  text-align: center;
+}
+
+@media screen and (max-width: 48rem) {
+  .registerprogress .progressinfo .progresscount .progresscounter {
+    height: 2.5rem;
+    width: 2.5rem;
+  }
+}
+
+.registerprogress .progressinfo.active .progresscount {
+  background: #FCAF15;
+  -webkit-filter: drop-shadow(0rem 0rem 0.0625rem rgba(12, 26, 75, 0.1)) drop-shadow(0rem 0.625rem 1rem rgba(20, 37, 63, 0.06));
+          filter: drop-shadow(0rem 0rem 0.0625rem rgba(12, 26, 75, 0.1)) drop-shadow(0rem 0.625rem 1rem rgba(20, 37, 63, 0.06));
+}
+
+.registerprogress .progressinfo.active .progresscount::before {
+  background: #FCAF15;
+}
+
+.registerprogress .progressinfo.active .progresscounter {
+  background: #01796F;
+  color: #ffffff;
+}
+
+.registerprogress .progressinfo.active .progressdetail .progresstitle {
+  color: #FCAF15;
+}
+
+.registerprogress .progressinfo.completed .progresscount {
+  -webkit-filter: none;
+          filter: none;
+}
+
+.registerprogress .progressinfo.completed .progressdetail .progresstitle {
+  color: #2D3748;
+}
+
+.registerprogress .progressinfo .progressdetail .progresstitle {
+  color: #718096;
 }
 
 .steponeform {
@@ -12290,173 +12376,6 @@ h6 {
   }
 }
 
-.registerbox-header .registerprogress {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-.registerbox-header .registerprogress .progressinfo {
-  width: 33.33%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  gap: 1.5rem;
-  text-align: center;
-  cursor: pointer;
-}
-
-.registerbox-header .registerprogress .progressinfo:first-of-type .progresscount::before {
-  width: 0;
-  left: 0;
-}
-
-.registerbox-header .registerprogress .progressinfo .progresscount {
-  background: #718096;
-  height: 5rem;
-  width: 5rem;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  border-radius: 100%;
-  position: relative;
-}
-
-@media screen and (max-width: 48rem) {
-  .registerbox-header .registerprogress .progressinfo .progresscount {
-    height: 3.75rem;
-    width: 3.75rem;
-  }
-}
-
-.registerbox-header .registerprogress .progressinfo .progresscount::before {
-  content: '';
-  position: absolute;
-  top: 2.5rem;
-  left: -328.5%;
-  width: 328.5%;
-  z-index: 1;
-  height: 0.3125rem;
-  background: #A0AEC0;
-}
-
-@media screen and (max-width: 87.4375rem) {
-  .registerbox-header .registerprogress .progressinfo .progresscount::before {
-    width: 270%;
-    left: -270%;
-  }
-}
-
-@media screen and (max-width: 74.9375rem) {
-  .registerbox-header .registerprogress .progressinfo .progresscount::before {
-    width: 205%;
-    left: -205%;
-  }
-}
-
-@media screen and (max-width: 61.9375rem) {
-  .registerbox-header .registerprogress .progressinfo .progresscount::before {
-    width: 180%;
-    left: -180%;
-  }
-}
-
-@media screen and (max-width: 48rem) {
-  .registerbox-header .registerprogress .progressinfo .progresscount::before {
-    top: 1.875rem;
-    width: 160%;
-    left: -160%;
-  }
-}
-
-@media screen and (max-width: 35.9375rem) {
-  .registerbox-header .registerprogress .progressinfo .progresscount::before {
-    width: 0;
-    left: 0;
-  }
-}
-
-.registerbox-header .registerprogress .progressinfo .progresscount .progresscounter {
-  height: 3.75rem;
-  width: 3.75rem;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  border-radius: 100%;
-  background: #2D3748;
-  color: #ffffff;
-  font-family: "Gilroy";
-  font-style: normal;
-  font-size: 1.125rem;
-  font-weight: 700;
-  line-height: 1.66667;
-  text-align: center;
-}
-
-@media screen and (max-width: 48rem) {
-  .registerbox-header .registerprogress .progressinfo .progresscount .progresscounter {
-    height: 2.5rem;
-    width: 2.5rem;
-  }
-}
-
-.registerbox-header .registerprogress .progressinfo.active .progresscount {
-  background: #FCAF15;
-  -webkit-filter: drop-shadow(0rem 0rem 0.0625rem rgba(12, 26, 75, 0.1)) drop-shadow(0rem 0.625rem 1rem rgba(20, 37, 63, 0.06));
-          filter: drop-shadow(0rem 0rem 0.0625rem rgba(12, 26, 75, 0.1)) drop-shadow(0rem 0.625rem 1rem rgba(20, 37, 63, 0.06));
-}
-
-.registerbox-header .registerprogress .progressinfo.active .progresscount::before {
-  background: #FCAF15;
-}
-
-.registerbox-header .registerprogress .progressinfo.active .progresscounter {
-  background: #01796F;
-  color: #ffffff;
-}
-
-.registerbox-header .registerprogress .progressinfo.active .progressdetail .progresstitle {
-  color: #FCAF15;
-}
-
-.registerbox-header .registerprogress .progressinfo.completed .progresscount {
-  -webkit-filter: none;
-          filter: none;
-}
-
-.registerbox-header .registerprogress .progressinfo.completed .progressdetail .progresstitle {
-  color: #2D3748;
-}
-
-.registerbox-header .registerprogress .progressinfo .progressdetail .progresstitle {
-  color: #718096;
-}
-
 .registerbox-body {
   width: 100%;
 }
@@ -12764,6 +12683,208 @@ h6 {
 
 .registerbox-body .step3info .submitbox .btn-submit:not([disabled]):hover {
   background: #e63106;
+}
+
+.registerprogress {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.registerprogress .progressinfo {
+  width: 33.33%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 1.5rem;
+  text-align: center;
+  cursor: pointer;
+}
+
+.registerprogress .progressinfo:first-of-type .progresscount::before {
+  width: 0;
+  left: 0;
+}
+
+.registerprogress .progressinfo .progresscount {
+  background: #718096;
+  height: 5rem;
+  width: 5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border-radius: 100%;
+  position: relative;
+}
+
+@media screen and (max-width: 48rem) {
+  .registerprogress .progressinfo .progresscount {
+    height: 3.75rem;
+    width: 3.75rem;
+  }
+}
+
+.registerprogress .progressinfo .progresscount::before {
+  content: '';
+  position: absolute;
+  top: 2.5rem;
+  left: -328.5%;
+  width: 328.5%;
+  z-index: 1;
+  height: 0.3125rem;
+  background: #A0AEC0;
+}
+
+@media screen and (max-width: 87.4375rem) {
+  .registerprogress .progressinfo .progresscount::before {
+    width: 270%;
+    left: -270%;
+  }
+}
+
+@media screen and (max-width: 74.9375rem) {
+  .registerprogress .progressinfo .progresscount::before {
+    width: 205%;
+    left: -205%;
+  }
+}
+
+@media screen and (max-width: 61.9375rem) {
+  .registerprogress .progressinfo .progresscount::before {
+    width: 180%;
+    left: -180%;
+  }
+}
+
+@media screen and (max-width: 48rem) {
+  .registerprogress .progressinfo .progresscount::before {
+    top: 1.875rem;
+    width: 160%;
+    left: -160%;
+  }
+}
+
+@media screen and (max-width: 35.9375rem) {
+  .registerprogress .progressinfo .progresscount::before {
+    width: 190%;
+    left: -190%;
+  }
+}
+
+@media screen and (max-width: 31.25rem) {
+  .registerprogress .progressinfo .progresscount::before {
+    width: 160%;
+    left: -160%;
+  }
+}
+
+@media screen and (max-width: 30rem) {
+  .registerprogress .progressinfo .progresscount::before {
+    width: 145%;
+    left: -145%;
+  }
+}
+
+@media screen and (max-width: 25.875rem) {
+  .registerprogress .progressinfo .progresscount::before {
+    width: 108%;
+    left: -108%;
+  }
+}
+
+@media screen and (max-width: 23.4375rem) {
+  .registerprogress .progressinfo .progresscount::before {
+    width: 80%;
+    left: -80%;
+  }
+}
+
+@media screen and (max-width: 22.4375rem) {
+  .registerprogress .progressinfo .progresscount::before {
+    width: 55%;
+    left: -55%;
+  }
+}
+
+.registerprogress .progressinfo .progresscount .progresscounter {
+  height: 3.75rem;
+  width: 3.75rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border-radius: 100%;
+  background: #2D3748;
+  color: #ffffff;
+  font-family: "Gilroy";
+  font-style: normal;
+  font-size: 1.125rem;
+  font-weight: 700;
+  line-height: 1.66667;
+  text-align: center;
+}
+
+@media screen and (max-width: 48rem) {
+  .registerprogress .progressinfo .progresscount .progresscounter {
+    height: 2.5rem;
+    width: 2.5rem;
+  }
+}
+
+.registerprogress .progressinfo.active .progresscount {
+  background: #FCAF15;
+  -webkit-filter: drop-shadow(0rem 0rem 0.0625rem rgba(12, 26, 75, 0.1)) drop-shadow(0rem 0.625rem 1rem rgba(20, 37, 63, 0.06));
+          filter: drop-shadow(0rem 0rem 0.0625rem rgba(12, 26, 75, 0.1)) drop-shadow(0rem 0.625rem 1rem rgba(20, 37, 63, 0.06));
+}
+
+.registerprogress .progressinfo.active .progresscount::before {
+  background: #FCAF15;
+}
+
+.registerprogress .progressinfo.active .progresscounter {
+  background: #01796F;
+  color: #ffffff;
+}
+
+.registerprogress .progressinfo.active .progressdetail .progresstitle {
+  color: #FCAF15;
+}
+
+.registerprogress .progressinfo.completed .progresscount {
+  -webkit-filter: none;
+          filter: none;
+}
+
+.registerprogress .progressinfo.completed .progressdetail .progresstitle {
+  color: #2D3748;
+}
+
+.registerprogress .progressinfo .progressdetail .progresstitle {
+  color: #718096;
 }
 
 .steponeform {
@@ -14323,6 +14444,78 @@ h6 {
   font-weight: normal;
   line-height: 1.66667;
   color: #718096;
+}
+
+.mindlydoc {
+  padding: 2.5rem 0rem;
+}
+
+.mindlydoc-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 2rem;
+}
+
+.mindlydoc-content .seeallinfo {
+  width: 12.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+@media screen and (max-width: 61.9375rem) {
+  .mindlydoc-content .seeallinfo {
+    display: none;
+  }
+}
+
+.mindlydoc-content .seeallinfo .btn-seeall {
+  padding: 1rem 2rem;
+  border: solid 0.09062rem #FCAF15;
+  border-radius: 0.5rem;
+  border-radius: 0.5rem;
+  background: transparent;
+  color: #FCAF15;
+  font-family: "Gilroy";
+  font-style: normal;
+  font-size: 0.875rem;
+  font-weight: 600;
+  line-height: 1;
+  text-align: center;
+  -webkit-transition: all 250ms ease-in-out;
+  transition: all 250ms ease-in-out;
+}
+
+.mindlydoc-content .seeallinfo .btn-seeall:not([disabled]):hover {
+  background: #FCAF15;
+  color: #ffffff;
+}
+
+.mindlydoc-content .mobiledoclist {
+  display: none;
+}
+
+@media screen and (max-width: 61.9375rem) {
+  .mindlydoc-content .mobiledoclist {
+    display: block;
+  }
 }
 
 .achievepotential {
@@ -25125,4 +25318,902 @@ h6 {
   font-weight: 600;
   line-height: 1;
   padding: 0.75rem 1.25rem;
+}
+
+.testsection {
+  padding: 3rem 0.5rem;
+}
+
+@media screen and (min-width: 61.9375rem) {
+  .testsection {
+    padding: 4rem 0rem;
+  }
+}
+
+@media screen and (min-width: 75rem) {
+  .testsection {
+    padding: 7.5rem 0rem;
+  }
+}
+
+.testsection-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 3.75rem;
+}
+
+.testsection-content .submitinfo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 1rem;
+}
+
+.testsection-content .submitinfo .btn-back {
+  padding: 0.75rem 2rem;
+  text-align: center;
+  background: transparent;
+  color: #4A5568;
+  font-family: "Gilroy";
+  font-style: normal;
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1;
+  border-radius: 0.5rem;
+  border-radius: 0.5rem;
+}
+
+.testsection-content .submitinfo .btn-submit {
+  padding: 0.96875rem 2rem;
+  text-align: center;
+  background: #F94E26;
+  color: #ffffff;
+  font-family: "Gilroy";
+  font-style: normal;
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1;
+  border-radius: 0.5rem;
+  border-radius: 0.5rem;
+  -webkit-transition: all 250ms ease-in-out;
+  transition: all 250ms ease-in-out;
+}
+
+.testsection-content .submitinfo .btn-submit:not([disabled]):hover {
+  background: #cd2b06;
+}
+
+.testsection-details {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 2.5rem;
+}
+
+.testsection-details .testinfo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 2.5rem;
+}
+
+.testsection-details .testinfo .test-title {
+  color: #4A5568;
+  font-family: "Gilroy";
+  font-style: normal;
+  font-size: 4rem;
+  font-weight: 700;
+  line-height: 1.20312;
+  text-align: center;
+}
+
+@media screen and (max-width: 87.4375rem) {
+  .testsection-details .testinfo .test-title {
+    font-family: "Gilroy";
+    font-style: normal;
+    font-size: 2.25rem;
+    font-weight: 600;
+    line-height: 1.36;
+  }
+}
+
+@media screen and (max-width: 75rem) {
+  .testsection-details .testinfo .test-title {
+    font-family: "Gilroy";
+    font-style: normal;
+    font-size: 1.75rem;
+    font-weight: 600;
+    line-height: 1.36;
+  }
+}
+
+.testsection-details .testinfo .test-text {
+  font-family: "Gilroy";
+  font-style: normal;
+  font-size: 1.125rem;
+  font-weight: normal;
+  line-height: 1.16667;
+  line-height: 1.6;
+  color: #4A5568;
+}
+
+@media screen and (max-width: 61.9375rem) {
+  .testsection-details .testinfo .test-text {
+    font-family: "Gilroy";
+    font-style: normal;
+    font-size: 1rem;
+    font-weight: normal;
+    line-height: 1.625;
+  }
+}
+
+@media screen and (max-width: 35.9375rem) {
+  .testsection-details .testinfo .test-text {
+    font-family: "Gilroy";
+    font-style: normal;
+    font-size: 0.875rem;
+    font-weight: normal;
+    line-height: 1.71429;
+  }
+}
+
+.testsection-details .testinfo .testbutton {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.testsection-details .testinfo .testbutton .requestbox {
+  width: 10.25rem;
+}
+
+.testsection-details .testdescriptions {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 2.75rem;
+}
+
+.testsection-details .testdescriptions .descriptions .text {
+  font-family: "Gilroy";
+  font-style: normal;
+  font-size: 1.125rem;
+  font-weight: normal;
+  line-height: 1.16667;
+  line-height: 1.6;
+  color: #4A5568;
+}
+
+@media screen and (max-width: 61.9375rem) {
+  .testsection-details .testdescriptions .descriptions .text {
+    font-family: "Gilroy";
+    font-style: normal;
+    font-size: 1rem;
+    font-weight: normal;
+    line-height: 1.625;
+  }
+}
+
+@media screen and (max-width: 35.9375rem) {
+  .testsection-details .testdescriptions .descriptions .text {
+    font-family: "Gilroy";
+    font-style: normal;
+    font-size: 0.875rem;
+    font-weight: normal;
+    line-height: 1.71429;
+  }
+}
+
+.testsection-details .testdescriptions .testprogress {
+  padding: 0rem 1.5rem;
+}
+
+@media screen and (max-width: 35.9375rem) {
+  .testsection-details .testdescriptions .testprogress {
+    padding: 0rem;
+  }
+}
+
+.testsection-details .testdescriptions .assesment {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 2rem;
+}
+
+@media screen and (min-width: 61.9375rem) {
+  .testsection-details .testdescriptions .assesment {
+    gap: 1rem;
+  }
+}
+
+.testsection-details .testdescriptions .assesment-single {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 1rem;
+}
+
+.testsection-details .testdescriptions .assesment-single .assesment-description {
+  border: solid 0.0625rem #CBD5E0;
+  -webkit-box-flex: 100;
+      -ms-flex-positive: 100;
+          flex-grow: 100;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.testsection-details .testdescriptions .assesment-single .assesment-description .counterbox {
+  height: 3rem;
+  width: 3rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
+  border-right: solid 0.0625rem #CBD5E0;
+}
+
+@media screen and (min-width: 61.9375rem) {
+  .testsection-details .testdescriptions .assesment-single .assesment-description .counterbox {
+    height: 4rem;
+    width: 4rem;
+  }
+}
+
+.testsection-details .testdescriptions .assesment-single .assesment-description .counterbox .counter {
+  color: #000000;
+  font-family: "Gilroy";
+  font-style: normal;
+  font-size: 0.75rem;
+  font-weight: normal;
+  line-height: 1.66667;
+  -webkit-font-feature-settings: 'salt';
+          font-feature-settings: 'salt';
+}
+
+@media screen and (min-width: 48rem) {
+  .testsection-details .testdescriptions .assesment-single .assesment-description .counterbox .counter {
+    font-family: "Gilroy";
+    font-style: normal;
+    font-size: 0.875rem;
+    font-weight: normal;
+    line-height: 1.71429;
+  }
+}
+
+@media screen and (min-width: 61.9375rem) {
+  .testsection-details .testdescriptions .assesment-single .assesment-description .counterbox .counter {
+    font-family: "Gilroy";
+    font-style: normal;
+    font-size: 1rem;
+    font-weight: normal;
+    line-height: 1.625;
+  }
+}
+
+.testsection-details .testdescriptions .assesment-single .assesment-description .info {
+  width: calc(100% - 4rem);
+  height: 100%;
+  padding: 0rem 0.75rem;
+}
+
+@media screen and (min-width: 61.9375rem) {
+  .testsection-details .testdescriptions .assesment-single .assesment-description .info {
+    padding: 0rem 1.5rem;
+  }
+}
+
+.testsection-details .testdescriptions .assesment-single .assesment-description .info .infotext {
+  color: #000000;
+  font-family: "Gilroy";
+  font-style: normal;
+  font-size: 0.75rem;
+  font-weight: normal;
+  line-height: 1.66667;
+  -webkit-font-feature-settings: 'salt';
+          font-feature-settings: 'salt';
+}
+
+@media screen and (min-width: 48rem) {
+  .testsection-details .testdescriptions .assesment-single .assesment-description .info .infotext {
+    font-family: "Gilroy";
+    font-style: normal;
+    font-size: 0.875rem;
+    font-weight: normal;
+    line-height: 1.71429;
+  }
+}
+
+@media screen and (min-width: 61.9375rem) {
+  .testsection-details .testdescriptions .assesment-single .assesment-description .info .infotext {
+    font-family: "Gilroy";
+    font-style: normal;
+    font-size: 1rem;
+    font-weight: normal;
+    line-height: 1.625;
+  }
+}
+
+.testsection-details .testdescriptions .assesment-single .mobileasses {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 0.625rem;
+}
+
+@media screen and (min-width: 61.9375rem) {
+  .testsection-details .testdescriptions .assesment-single .mobileasses {
+    display: none;
+  }
+}
+
+.testsection-details .testdescriptions .assesment-single .mobileasses .asses-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 1rem;
+  text-align: center;
+}
+
+.testsection-details .testdescriptions .assesment-single .mobileasses .asses-box .assestitle .title {
+  font-family: "Gilroy";
+  font-style: normal;
+  font-size: 0.625rem;
+  font-weight: normal;
+  line-height: 1;
+  color: #718096;
+}
+
+.testsection-details .testdescriptions .assesment-single .mobileasses .asses-box .assesinput {
+  height: 3rem;
+  width: 3rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
+  border: solid 0.09375rem transparent;
+  cursor: pointer;
+}
+
+@media screen and (min-width: 61.9375rem) {
+  .testsection-details .testdescriptions .assesment-single .mobileasses .asses-box .assesinput {
+    height: 4rem;
+    width: 4rem;
+  }
+}
+
+.testsection-details .testdescriptions .assesment-single .mobileasses .asses-box .assesinput .input {
+  color: #000000;
+  font-family: "Gilroy";
+  font-style: normal;
+  font-size: 0.75rem;
+  font-weight: normal;
+  line-height: 1.66667;
+  -webkit-font-feature-settings: 'salt';
+          font-feature-settings: 'salt';
+}
+
+@media screen and (min-width: 48rem) {
+  .testsection-details .testdescriptions .assesment-single .mobileasses .asses-box .assesinput .input {
+    font-family: "Gilroy";
+    font-style: normal;
+    font-size: 0.875rem;
+    font-weight: normal;
+    line-height: 1.71429;
+  }
+}
+
+@media screen and (min-width: 61.9375rem) {
+  .testsection-details .testdescriptions .assesment-single .mobileasses .asses-box .assesinput .input {
+    font-family: "Gilroy";
+    font-style: normal;
+    font-size: 1rem;
+    font-weight: normal;
+    line-height: 1.625;
+  }
+}
+
+.testsection-details .testdescriptions .assesment-single .mobileasses .asses-box .assesinput.active {
+  border-color: #01796F;
+}
+
+.testsection-details .testdescriptions .assesment-single .mobileasses .asses-box .input-1 {
+  background: rgba(252, 175, 21, 0.13);
+}
+
+.testsection-details .testdescriptions .assesment-single .mobileasses .asses-box .input-2 {
+  background: rgba(252, 175, 21, 0.33);
+}
+
+.testsection-details .testdescriptions .assesment-single .mobileasses .asses-box .input-3 {
+  background: rgba(252, 175, 21, 0.53);
+}
+
+.testsection-details .testdescriptions .assesment-single .mobileasses .asses-box .input-4 {
+  background: #FCAF15;
+}
+
+.testsection-details .testdescriptions .assesment-detail {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 1.5rem;
+}
+
+@media screen and (min-width: 61.9375rem) {
+  .testsection-details .testdescriptions .assesment-detail:first-child .desktopassesment {
+    margin-top: -1.5rem;
+  }
+}
+
+.testsection-details .testdescriptions .assesment-detail .assesment-single {
+  -webkit-box-flex: 100;
+      -ms-flex-positive: 100;
+          flex-grow: 100;
+}
+
+.testsection-details .testdescriptions .assesment .desktopassesment {
+  display: none;
+}
+
+@media screen and (min-width: 61.9375rem) {
+  .testsection-details .testdescriptions .assesment .desktopassesment {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    gap: 0.3125rem;
+  }
+}
+
+.testsection-details .testdescriptions .assesment .desktopassesment .assesbox {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 1rem;
+  text-align: center;
+}
+
+.testsection-details .testdescriptions .assesment .desktopassesment .assesbox .titlebox .title {
+  font-family: "Gilroy";
+  font-style: normal;
+  font-size: 0.625rem;
+  font-weight: normal;
+  line-height: 1;
+  color: #718096;
+}
+
+.testsection-details .testdescriptions .assesment .desktopassesment .assesbox .assesinput {
+  height: 2.5rem;
+  width: 2.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
+  border: solid 0.0625rem transparent;
+  cursor: pointer;
+}
+
+@media screen and (min-width: 48rem) {
+  .testsection-details .testdescriptions .assesment .desktopassesment .assesbox .assesinput {
+    height: 3rem;
+    width: 3rem;
+  }
+}
+
+@media screen and (min-width: 61.9375rem) {
+  .testsection-details .testdescriptions .assesment .desktopassesment .assesbox .assesinput {
+    height: 4rem;
+    width: 4rem;
+  }
+}
+
+.testsection-details .testdescriptions .assesment .desktopassesment .assesbox .assesinput .input {
+  color: #000000;
+  font-family: "Gilroy";
+  font-style: normal;
+  font-size: 0.75rem;
+  font-weight: normal;
+  line-height: 1.66667;
+  -webkit-font-feature-settings: 'salt';
+          font-feature-settings: 'salt';
+}
+
+@media screen and (min-width: 48rem) {
+  .testsection-details .testdescriptions .assesment .desktopassesment .assesbox .assesinput .input {
+    font-family: "Gilroy";
+    font-style: normal;
+    font-size: 0.875rem;
+    font-weight: normal;
+    line-height: 1.71429;
+  }
+}
+
+@media screen and (min-width: 61.9375rem) {
+  .testsection-details .testdescriptions .assesment .desktopassesment .assesbox .assesinput .input {
+    font-family: "Gilroy";
+    font-style: normal;
+    font-size: 1rem;
+    font-weight: normal;
+    line-height: 1.625;
+  }
+}
+
+.testsection-details .testdescriptions .assesment .desktopassesment .assesbox .assesinput.active {
+  border-color: #01796F;
+}
+
+.testsection-details .testdescriptions .assesment .desktopassesment .assesbox .input-1 {
+  background: rgba(252, 175, 21, 0.13);
+}
+
+.testsection-details .testdescriptions .assesment .desktopassesment .assesbox .input-2 {
+  background: rgba(252, 175, 21, 0.33);
+}
+
+.testsection-details .testdescriptions .assesment .desktopassesment .assesbox .input-3 {
+  background: rgba(252, 175, 21, 0.53);
+}
+
+.testsection-details .testdescriptions .assesment .desktopassesment .assesbox .input-4 {
+  background: #FCAF15;
+}
+
+.testsection-details .testresult {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 2.5rem;
+}
+
+.testsection-details .testresult-header .result-title {
+  font-family: "Gilroy";
+  font-style: normal;
+  font-size: 2.25rem;
+  font-weight: 600;
+  line-height: 1.36;
+  color: #4A5568;
+}
+
+.testsection-details .testresult-body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 3rem;
+  background: #ffffff;
+  padding: 2.25rem 1rem 3rem;
+}
+
+@media screen and (min-width: 61.9375rem) {
+  .testsection-details .testresult-body {
+    gap: 5rem;
+    padding: 3.25rem 1.75rem 4.625rem;
+  }
+}
+
+.testsection-details .testresult-body .result {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 1.5rem;
+}
+
+.testsection-details .testresult-body .result-header .result-title {
+  font-family: "Gilroy";
+  font-style: normal;
+  font-size: 1.25rem;
+  font-weight: 600;
+  line-height: 1.365;
+  color: #4A5568;
+}
+
+.testsection-details .testresult-body .result-body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 0.5rem;
+}
+
+.testsection-details .testresult-body .result-body .resulthead {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  align-items: center;
+}
+
+.testsection-details .testresult-body .result-body .resulthead .counterbox {
+  width: calc(100% / 5);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.testsection-details .testresult-body .result-body .resulthead .counterbox .result-count {
+  height: 3rem;
+  width: 3rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
+  background: transparent;
+  color: #4A5568;
+  font-family: "Gilroy";
+  font-style: normal;
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.5;
+  border-radius: 100%;
+  position: relative;
+}
+
+.testsection-details .testresult-body .result-body .resulthead .counterbox .result-count::after {
+  content: '';
+  position: absolute;
+  top: 100%;
+  bottom: 0;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
+  width: 0.125rem;
+  height: 100%;
+  background: -webkit-gradient(linear, left top, left bottom, from(#01796F), color-stop(100%, rgba(255, 255, 255, 0)), to(#ffffff));
+  background: linear-gradient(180deg, #01796F 0%, rgba(255, 255, 255, 0) 100%, #ffffff 100%);
+  opacity: 0;
+  visibility: hidden;
+}
+
+.testsection-details .testresult-body .result-body .resulthead .counterbox .result-count.active {
+  background: #01796F;
+  color: #ffffff;
+}
+
+.testsection-details .testresult-body .result-body .resulthead .counterbox .result-count.active::after {
+  opacity: 1;
+  visibility: visible;
+}
+
+@media screen and (max-width: 75rem) {
+  .testsection-details .testresult-body .result-body .resulthead .counterbox .result-count {
+    font-family: "Gilroy";
+    font-style: normal;
+    font-size: 0.75rem;
+    font-weight: 600;
+    line-height: 1.66667;
+  }
+}
+
+@media screen and (max-width: 61.9375rem) {
+  .testsection-details .testresult-body .result-body .resulthead .counterbox .result-count {
+    font-family: "Gilroy";
+    font-style: normal;
+    font-size: 0.625rem;
+    font-weight: 600;
+    line-height: 1;
+    height: 3rem;
+    width: 3rem;
+  }
+}
+
+@media screen and (max-width: 48rem) {
+  .testsection-details .testresult-body .result-body .resulthead .counterbox .result-count {
+    height: 2rem;
+    width: 2rem;
+  }
+}
+
+.testsection-details .testresult-body .result-body .resultbody {
+  background: -webkit-gradient(linear, right top, left top, color-stop(-3.03%, #FCAF15), color-stop(107.39%, rgba(252, 175, 21, 0.1)));
+  background: linear-gradient(270deg, #FCAF15 -3.03%, rgba(252, 175, 21, 0.1) 107.39%);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  align-items: center;
+}
+
+.testsection-details .testresult-body .result-body .resultbody .resultdetail {
+  width: calc(100% / 5);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
+  padding: 1rem;
+}
+
+.testsection-details .testresult-body .result-body .resultbody .resultdetail .result-title {
+  display: inline-block;
+  color: #2D3748;
+  font-family: "Gilroy";
+  font-style: normal;
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.5;
+}
+
+@media screen and (max-width: 75rem) {
+  .testsection-details .testresult-body .result-body .resultbody .resultdetail .result-title {
+    font-family: "Gilroy";
+    font-style: normal;
+    font-size: 0.75rem;
+    font-weight: 600;
+    line-height: 1.66667;
+  }
+}
+
+@media screen and (max-width: 61.9375rem) {
+  .testsection-details .testresult-body .result-body .resultbody .resultdetail .result-title {
+    font-family: "Gilroy";
+    font-style: normal;
+    font-size: 0.625rem;
+    font-weight: 600;
+    line-height: 1;
+  }
+}
+
+@media screen and (min-width: 61.9375rem) {
+  .testsection-details .testresult-body .resultinfo {
+    max-width: 60%;
+  }
+}
+
+.testsection-details .testresult-body .resultinfo .resulttext {
+  font-family: "Gilroy";
+  font-style: normal;
+  font-size: 1.125rem;
+  font-weight: normal;
+  line-height: 1.16667;
+  line-height: 1.6;
+  color: #4A5568;
+}
+
+@media screen and (max-width: 61.9375rem) {
+  .testsection-details .testresult-body .resultinfo .resulttext {
+    font-family: "Gilroy";
+    font-style: normal;
+    font-size: 1rem;
+    font-weight: normal;
+    line-height: 1.625;
+  }
+}
+
+@media screen and (max-width: 35.9375rem) {
+  .testsection-details .testresult-body .resultinfo .resulttext {
+    font-family: "Gilroy";
+    font-style: normal;
+    font-size: 0.875rem;
+    font-weight: normal;
+    line-height: 1.71429;
+  }
 }

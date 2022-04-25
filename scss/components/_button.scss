@@ -225,11 +225,15 @@
     padding: length(28);
 
     .btn-title {
-        @include heading-1;
+        @include heading-3;
         color: $gray-800;
 
         @include breakpoint(desktop1199) {
-            @include heading-2;
+            @include heading-3;
+        }
+
+        @include breakpoint(phone768) {
+            @include heading-4;
         }
     }
 
@@ -239,6 +243,10 @@
 
         @include breakpoint(desktop1199) {
             @include font-24-14-semibold;
+        }
+
+        @include hover {
+            color: $primary;
         }
     }
 }
