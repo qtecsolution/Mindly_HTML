@@ -11,6 +11,67 @@
     <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
     <!-- MINDLY STYLESHEET -->
     <link rel="stylesheet" href="../assets/css/style.css">
+
+    <style>
+		.print {
+            /* margin: 0 auto;
+            width: 216mm; */
+            width: 100%;
+        }
+
+		.print .print-body {
+			padding: 1.5rem;
+			display: -webkit-box;
+			display: -ms-flexbox;
+			display: flex;
+			-webkit-box-pack: end;
+				-ms-flex-pack: end;
+					justify-content: flex-end;
+			padding: 1rem;
+		}
+
+		.print .print-body .btn-download {
+			padding: 1rem 1.5rem;
+			border-radius: 0.5rem;
+			border-radius: 0.5rem;
+			font-family: "Gilroy";
+			font-style: normal;
+			font-size: 1rem;
+			font-weight: 600;
+			line-height: 1;
+			background: #F94E26;
+			color: #ffffff;
+			text-align: center;
+			-webkit-transition: all 250ms ease-in-out;
+			transition: all 250ms ease-in-out;
+		}
+	
+		.print .print-body .btn-download:not([disabled]):hover {
+			background: #01796F;
+		}
+
+		button {
+			cursor: pointer;
+		}
+
+		table {
+			width: 100%;
+		}
+
+		table th, td {
+			width: 50%;
+			height: 100%;
+		}
+
+		table thead, tbody {
+			width: 100%;
+		}
+
+		table tbody td {
+			padding: 0.875rem 0;
+		}
+
+	</style>
 </head>
 <body>
     <!-- PRELOADER START -->
@@ -1713,191 +1774,243 @@
     <div class="modal fade prescriptionmodal" id="prescriptionModal" tabindex="-1" aria-labelledby="prescriptionModal" aria-hidden="true">
         <div class="modal-dialog modal-lg modal-dialog-centered">
             <div class="modal-content">
-                <div class="modal-body p-0">
-                    <div class="prescription">
-                        <div class="prescription-header">
-                            <div class="logo">
-                                <div class="logoicon">
-                                    <img src="../assets/images/logo/logo.svg" alt="prescription-logo">
-                                </div>
-                            </div>
-
-                            <div class="docinfo">
-                                <p class="name">Provider Name: Dr Istiak Tushar</p>
-                                <p class="id">Provider ID: 1523 1212 456</p>
-                            </div>
-                        </div>
-
-                        <div class="prescription-body">
-                            <div class="patientinfo">
-                                <div class="patientrow">
-                                    <div class="patientcol">
-                                        <p class="name">Patient Name: Nabil Ahmed Emon</p>
-                                    </div>
-
-                                    <div class="patientcol">
-                                        <p class="date">Date: 24 January 2022</p>
-                                    </div>
-                                </div>
-
-                                <div class="patientrow">
-                                    <div class="patientcol">
-                                        <p class="age">Age: 26</p>
-                                    </div>
-
-                                    <div class="patientcol">
-                                        <p class="id">Session ID: 1255 4566 123</p>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="prescriptioninfo">
-                                <div class="concern">
-                                    <div class="concern-header">
-                                        <h4 class="concerntitle">Primary Concern</h4>
-                                    </div>
-
-                                    <div class="concern-body">
-                                        <ul class="prescriptlist">
-                                            <li class="prescriptlist-item">
-                                                Difficult degglutation for 6 months
-                                            </li>
-
-                                            <li class="prescriptlist-item">
-                                                Bodyache
-                                            </li>
-
-                                            <li class="prescriptlist-item">
-                                                Fever
-                                            </li>
-
-                                            <li class="prescriptlist-item">
-                                                Cough
-                                            </li>
-
-                                            <li class="prescriptlist-item">
-                                                SOB
-                                            </li>
-                                            
-                                            <li class="prescriptlist-item">
-                                                Former Smoker
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-
-                                <div class="medication">
-                                    <div class="medication-header">
-                                        <h4 class="medicationtitle">Medication</h4>
-                                    </div>
-
-                                    <div class="medication-body">
-                                        <ul class="medicationlist">
-                                            <li class="medicationlist-item">
-                                                <p class="medicinename">Tab Domin 10mg</p>
-
-                                                <div class="medicationinfo">
-                                                    <span>2+2+2</span>
-                                                    <span>After Meal</span>
-                                                    <span>Decrease Depression</span>
-                                                </div>
-                                            </li>
-
-                                            <li class="medicationlist-item">
-                                                <p class="medicinename">Tab Domin 10mg</p>
-
-                                                <div class="medicationinfo">
-                                                    <span>2+2+2</span>
-                                                    <span>After Meal</span>
-                                                    <span>Decrease Depression</span>
-                                                </div>
-                                            </li>
-
-                                            <li class="medicationlist-item">
-                                                <p class="medicinename">Tab Domin 10mg</p>
-
-                                                <div class="medicationinfo">
-                                                    <span>2+2+2</span>
-                                                    <span>After Meal</span>
-                                                    <span>Decrease Depression</span>
-                                                </div>
-                                            </li>
-
-                                            <li class="medicationlist-item">
-                                                <p class="medicinename">Tab Domin 10mg</p>
-
-                                                <div class="medicationinfo">
-                                                    <span>2+2+2</span>
-                                                    <span>After Meal</span>
-                                                    <span>Decrease Depression</span>
-                                                </div>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-
-                                <div class="concern">
-                                    <div class="concern-header">
-                                        <h4 class="concerntitle">Complaints</h4>
-                                    </div>
-
-                                    <div class="concern-body">
-                                        <ul class="prescriptlist">
-                                            <li class="prescriptlist-item">
-                                                Difficult degglutation for 6 months
-                                            </li>
-
-                                            <li class="prescriptlist-item">
-                                                Bodyache
-                                            </li>
-
-                                            <li class="prescriptlist-item">
-                                                Fever
-                                            </li>
-
-                                            <li class="prescriptlist-item">
-                                                Cough
-                                            </li>
-
-                                            <li class="prescriptlist-item">
-                                                SOB
-                                            </li>
-
-                                            <li class="prescriptlist-item">
-                                                Former Smoker
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-
-                                <div class="health">
-                                    <div class="health-header">
-                                        <h4 class="healthtitle">Mental Health Diagnosis</h4>
-                                    </div>
-
-                                    <div class="health-body">
-                                        <ul class="healthlist">
-                                            <li class="healthlist-item">
-                                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam curabitur nulla
-                                                ipsum eu fringilla volutpat metus.
-                                            </li>
-
-                                            <li class="healthlist-item">
-                                                Potenti volutpat nunc at sit vitae. Risus, amet nulla enim felis sed.
-                                            </li>
-
-                                            <li class="healthlist-item">
-                                                Potenti volutpat nunc at sit vitae. Risus, amet nulla enim felis sed. Urna
-                                                mattis massa adipiscing id fringilla platea sit.
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="prescription-footer">
-                            <button class="btn-download" type="button">Download</button>
+                <div class="modal-body p-5">
+                    <div class="print">
+                        <table class="prescription" id="prescription">
+                            <thead class="prescription-header">
+                                <tr>
+                                    <th>
+                                        <div class="logo" style=" display: flex; align-items: center; overflow: hidden;">
+                                            <div class="logoicon" style="width: 11.875rem; height: 4rem;">
+                                                <img src="../assets/images/logo/logo.svg" alt="prescription-logo" style="max-width: 100%; object-fit: contain">
+                                            </div>
+                                        </div>
+                                    </th>
+                    
+                                    <th>
+                                        <div class="docinfo" style="background: #01796F; width: 100%; padding: 1.125rem 1.25rem; display: flex; flex-direction: column; gap: 0.25rem; text-align: left;">
+                                            <p class="name" style="color: #ffffff; font-family: 'Gilroy'; font-style: normal; font-size: 0.75rem; font-weight: 600; line-height: 1.66667;">
+                                                Provider Name: Dr Istiak Tushar
+                                            </p>
+                    
+                                            <p class="id" style="color: #ffffff; font-family: 'Gilroy'; font-style: normal; font-size: 0.75rem; font-weight: 600; line-height: 1.66667;">
+                                                Provider ID: 1523 1212 456
+                                            </p>
+                                        </div>
+                                    </th>
+                                </tr>
+                
+                                <tr>
+                                    <td>
+                                        <div style="padding: 1.5rem 0;">
+                                            <p style="color: #2D3748; font-family: 'Gilroy'; font-style: normal; font-size: 0.75rem; font-weight: 600; line-height: 1.66667;">Patient Name: Nabil Ahmed Emon</p>
+                                            <p style="color: #2D3748; font-family: 'Gilroy'; font-style: normal; font-size: 0.75rem; font-weight: 600; line-height: 1.66667;">Date: 24 January 2022</p>
+                                        </div>
+                                    </td>
+                
+                                    <td>
+                                        <div style="padding: 1.5rem 0;">
+                                            <p style="color: #2D3748; font-family: 'Gilroy'; font-style: normal; font-size: 0.75rem; font-weight: 600; line-height: 1.66667;">Age: 26</p>
+                                            <p style="color: #2D3748; font-family: 'Gilroy'; font-style: normal; font-size: 0.75rem; font-weight: 600; line-height: 1.66667;">Session ID: 1255 4566 123</p>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </thead>
+                
+                            <tbody>
+                                <tr>
+                                    <td style="display: flex; align-items: flex-start;">
+                                        <div style="display: flex; flex-direction: column; gap: 1rem;">
+                                            <h4 style="color: #2D3748; font-family: 'Gilroy'; font-style: normal; font-size: 1.125rem; font-weight: 600; line-height: 1.36; letter-spacing: -0.005rem;">
+                                                Primary Concern
+                                            </h4>
+                    
+                                            <ul style="padding-left: 1rem; display: flex; flex-direction: column; gap: 0.25rem;">
+                                                <li style="color: #4A5568; font-family: 'Gilroy'; font-style: normal; font-size: 0.75rem; font-weight: 600; line-height: 1.66667; font-feature-settings: 'salt';">
+                                                    Difficult degglutation for 6 months
+                                                </li>
+                
+                                                <li style="color: #4A5568; font-family: 'Gilroy'; font-style: normal; font-size: 0.75rem; font-weight: 600; line-height: 1.66667; font-feature-settings: 'salt';">
+                                                    Bodyache
+                                                </li>
+                
+                                                <li style="color: #4A5568; font-family: 'Gilroy'; font-style: normal; font-size: 0.75rem; font-weight: 600; line-height: 1.66667; font-feature-settings: 'salt';">
+                                                    Fever
+                                                </li>
+                
+                                                <li style="color: #4A5568; font-family: 'Gilroy'; font-style: normal; font-size: 0.75rem; font-weight: 600; line-height: 1.66667; font-feature-settings: 'salt';">
+                                                    Cough
+                                                </li>
+                
+                                                <li style="color: #4A5568; font-family: 'Gilroy'; font-style: normal; font-size: 0.75rem; font-weight: 600; line-height: 1.66667; font-feature-settings: 'salt';">
+                                                    SOB
+                                                </li>
+                                                
+                                                <li style="color: #4A5568; font-family: 'Gilroy'; font-style: normal; font-size: 0.75rem; font-weight: 600; line-height: 1.66667; font-feature-settings: 'salt';">
+                                                    Former Smoker
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </td>
+                
+                                    <td>
+                                        <div style="display: flex; flex-direction: column; gap: 1rem;">
+                                            <h4 style="color: #2D3748; font-family: 'Gilroy'; font-style: normal; font-size: 1.125rem; font-weight: 600; line-height: 1.36; letter-spacing: -0.005rem;">
+                                                Medication
+                                            </h4>
+                    
+                                            <ul style="display: flex; flex-direction: column; gap: 0.875rem;">
+                                                <li style="display: flex; flex-direction: column; gap: 0.5rem;">
+                                                    <p style="color: #4A5568; font-family: 'Gilroy'; font-style: normal; font-size: 0.75rem; font-weight: 600; line-height: 1.66667; font-feature-settings: 'salt';">
+                                                        Tab Domin 10mg
+                                                    </p>
+                
+                                                    <div style="display: flex; justify-content: space-between; align-items: center; padding-left: 1rem;">
+                                                        <span style="color: #4A5568; font-family: 'Gilroy'; font-style: normal; font-size: 0.75rem; font-weight: 600; line-height: 1.66667; font-feature-settings: 'salt';">
+                                                            2+2+2
+                                                        </span>
+                
+                                                        <span style="color: #4A5568; font-family: 'Gilroy'; font-style: normal; font-size: 0.75rem; font-weight: 600; line-height: 1.66667; font-feature-settings: 'salt';">
+                                                            After Meal
+                                                        </span>
+                
+                                                        <span style="color: #4A5568; font-family: 'Gilroy'; font-style: normal; font-size: 0.75rem; font-weight: 600; line-height: 1.66667; font-feature-settings: 'salt';">
+                                                            Decrease Depression
+                                                        </span>
+                                                    </div>
+                                                </li>
+                
+                                                <li style="display: flex; flex-direction: column; gap: 0.5rem;">
+                                                    <p style="color: #4A5568; font-family: 'Gilroy'; font-style: normal; font-size: 0.75rem; font-weight: 600; line-height: 1.66667; font-feature-settings: 'salt';">
+                                                        Tab Domin 10mg
+                                                    </p>
+                
+                                                    <div style="display: flex; justify-content: space-between; align-items: center; padding-left: 1rem;">
+                                                        <span style="color: #4A5568; font-family: 'Gilroy'; font-style: normal; font-size: 0.75rem; font-weight: 600; line-height: 1.66667; font-feature-settings: 'salt';">
+                                                            2+2+2
+                                                        </span style="color: #4A5568; font-family: 'Gilroy'; font-style: normal; font-size: 0.75rem; font-weight: 600; line-height: 1.66667; font-feature-settings: 'salt';">
+                
+                                                        <span style="color: #4A5568; font-family: 'Gilroy'; font-style: normal; font-size: 0.75rem; font-weight: 600; line-height: 1.66667; font-feature-settings: 'salt';">
+                                                            After Meal
+                                                        </span>
+                
+                                                        <span style="color: #4A5568; font-family: 'Gilroy'; font-style: normal; font-size: 0.75rem; font-weight: 600; line-height: 1.66667; font-feature-settings: 'salt';">
+                                                            Decrease Depression
+                                                        </span>
+                                                    </div>
+                                                </li>
+                
+                                                <li style="display: flex; flex-direction: column; gap: 0.5rem;">
+                                                    <p style="color: #4A5568; font-family: 'Gilroy'; font-style: normal; font-size: 0.75rem; font-weight: 600; line-height: 1.66667; font-feature-settings: 'salt';">
+                                                        Tab Domin 10mg
+                                                    </p>
+                
+                                                    <div style="display: flex; justify-content: space-between; align-items: center; padding-left: 1rem;">
+                                                        <span style="color: #4A5568; font-family: 'Gilroy'; font-style: normal; font-size: 0.75rem; font-weight: 600; line-height: 1.66667; font-feature-settings: 'salt';">
+                                                            2+2+2
+                                                        </span>
+                
+                                                        <span style="color: #4A5568; font-family: 'Gilroy'; font-style: normal; font-size: 0.75rem; font-weight: 600; line-height: 1.66667; font-feature-settings: 'salt';">
+                                                            After Meal
+                                                        </span>
+                
+                                                        <span style="color: #4A5568; font-family: 'Gilroy'; font-style: normal; font-size: 0.75rem; font-weight: 600; line-height: 1.66667; font-feature-settings: 'salt';">
+                                                            Decrease Depression
+                                                        </span>
+                                                    </div>
+                                                </li>
+                
+                                                <li style="display: flex; flex-direction: column; gap: 0.5rem;">
+                                                    <p style="color: #4A5568; font-family: 'Gilroy'; font-style: normal; font-size: 0.75rem; font-weight: 600; line-height: 1.66667; font-feature-settings: 'salt';">
+                                                        Tab Domin 10mg
+                                                    </p>
+                
+                                                    <div style="display: flex; justify-content: space-between; align-items: center; padding-left: 1rem;">
+                                                        <span style="color: #4A5568; font-family: 'Gilroy'; font-style: normal; font-size: 0.75rem; font-weight: 600; line-height: 1.66667; font-feature-settings: 'salt';">
+                                                            2+2+2
+                                                        </span>
+                
+                                                        <span style="color: #4A5568; font-family: 'Gilroy'; font-style: normal; font-size: 0.75rem; font-weight: 600; line-height: 1.66667; font-feature-settings: 'salt';">
+                                                            After Meal
+                                                        </span>
+                
+                                                        <span style="color: #4A5568; font-family: 'Gilroy'; font-style: normal; font-size: 0.75rem; font-weight: 600; line-height: 1.66667; font-feature-settings: 'salt';">
+                                                            Decrease Depression
+                                                        </span>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </td>
+                                </tr>
+                
+                                <tr>
+                                    <td>
+                                        <div style="display: flex; flex-direction: column; gap: 1rem;">
+                                            <h4 style="color: #2D3748; font-family: 'Gilroy'; font-style: normal; font-size: 1.125rem; font-weight: 600; line-height: 1.36; letter-spacing: -0.005rem;">
+                                                Complaints
+                                            </h4>
+                    
+                                            <ul style="padding-left: 1rem; display: flex; flex-direction: column; gap: 0.25rem;">
+                                                <li style="color: #4A5568; font-family: 'Gilroy'; font-style: normal; font-size: 0.75rem; font-weight: 600; line-height: 1.66667; font-feature-settings: 'salt';">
+                                                    Difficult degglutation for 6 months
+                                                </li>
+                
+                                                <li style="color: #4A5568; font-family: 'Gilroy'; font-style: normal; font-size: 0.75rem; font-weight: 600; line-height: 1.66667; font-feature-settings: 'salt';">
+                                                    Bodyache
+                                                </li>
+                
+                                                <li style="color: #4A5568; font-family: 'Gilroy'; font-style: normal; font-size: 0.75rem; font-weight: 600; line-height: 1.66667; font-feature-settings: 'salt';">
+                                                    Fever
+                
+                                                </li>
+                
+                                                <li style="color: #4A5568; font-family: 'Gilroy'; font-style: normal; font-size: 0.75rem; font-weight: 600; line-height: 1.66667; font-feature-settings: 'salt';">
+                                                    Cough
+                
+                                                </li>
+                
+                                                <li style="color: #4A5568; font-family: 'Gilroy'; font-style: normal; font-size: 0.75rem; font-weight: 600; line-height: 1.66667; font-feature-settings: 'salt';">
+                                                    SOB
+                
+                                                </li>
+                
+                                                <li style="color: #4A5568; font-family: 'Gilroy'; font-style: normal; font-size: 0.75rem; font-weight: 600; line-height: 1.66667; font-feature-settings: 'salt';">
+                                                    Former Smoker
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </td>
+                
+                                    <td>
+                                        <div style="display: flex; flex-direction: column; gap: 1rem;">
+                                            <h4 style="color: #2D3748; font-family: 'Gilroy'; font-style: normal; font-size: 1.125rem; font-weight: 600; line-height: 1.36; letter-spacing: -0.005rem;">
+                                                Mental Health Diagnosis
+                                            </h4>
+                    
+                                            <ol style="padding-left: 1rem; display: flex; flex-direction: column; gap: 0.25rem;">
+                                                <li style="color: #4A5568; font-family: 'Gilroy'; font-style: normal; font-size: 0.75rem; font-weight: 600; line-height: 1.66667; -webkit-font-feature-settings: 'salt'; font-feature-settings: 'salt';">
+                                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam curabitur nulla
+                                                    ipsum eu fringilla volutpat metus.
+                                                </li>
+                
+                                                <li style="color: #4A5568; font-family: 'Gilroy'; font-style: normal; font-size: 0.75rem; font-weight: 600; line-height: 1.66667; -webkit-font-feature-settings: 'salt'; font-feature-settings: 'salt';">
+                                                    Potenti volutpat nunc at sit vitae. Risus, amet nulla enim felis sed.
+                                                </li>
+                
+                                                <li style="color: #4A5568; font-family: 'Gilroy'; font-style: normal; font-size: 0.75rem; font-weight: 600; line-height: 1.66667; -webkit-font-feature-settings: 'salt'; font-feature-settings: 'salt';">
+                                                    Potenti volutpat nunc at sit vitae. Risus, amet nulla enim felis sed. Urna
+                                                    mattis massa adipiscing id fringilla platea sit.
+                                                </li>
+                                            </ol>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                
+                        <div class="print-body">
+                            <button class="btn-download" type="button" id="prescription-generator">Download</button>
                         </div>
                     </div>
                 </div>
@@ -1912,5 +2025,9 @@
     <script src="../assets/js/pageloader.js"></script>
     <!-- TOOLTIP JS -->
     <script src="../assets/js/mindlytooltip.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.2/html2pdf.bundle.js"></script>
+    <!-- PRESCRIPTION JS -->
+    <script src="../assets/js/prescription.js"></script>
 </body>
 </html>
