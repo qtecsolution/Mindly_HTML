@@ -14349,6 +14349,18 @@ h6 {
   transform: translate(-50%, -50%);
 }
 
+.achievepotential .unlockicon {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
 .achievepotential .mobile-potential {
   display: none;
   padding: 0rem 0.25rem;

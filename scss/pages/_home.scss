@@ -950,6 +950,9 @@
             }
         }
     }
+    .unlockicon {
+        @include flex-center;
+    }
 
     .mobile-potential {
         display: none;
