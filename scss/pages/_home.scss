@@ -961,24 +961,6 @@
                     top: 50%;
                     @include transform(translate(-50%, -50%));
                 }
-
-                ~.achieveunlock {
-                    .unlockicon {
-                        @include flex-center;
-                    }
-
-                    .locktext {
-                        display: block;
-                    }
-
-                    .lockicon {
-                        display: none;
-                    }
-
-                    .unlocktext {
-                        display: none;
-                    }
-                }
             }
         }
     }
