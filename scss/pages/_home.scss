@@ -870,14 +870,12 @@
                 font-weight: bold;
                 color: $textDark;
                 text-align: center;
-                display: none;
             }
 
             .unlockicon {
                 @include square(length(64));
                 overflow: hidden;
                 padding: length(8);
-                display: none;
 
                 svg {
                     @include square(length(64));
@@ -895,18 +893,6 @@
         .activeachieveunlock {
             .unlockicon {
                 @include flex-center;
-            }
-
-            .locktext {
-                display: block;
-            }
-
-            .lockicon {
-                display: none;
-            }
-
-            .unlocktext {
-                display: none;
             }
         }
 
