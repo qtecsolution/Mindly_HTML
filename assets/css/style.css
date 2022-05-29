@@ -25342,7 +25342,7 @@ h6 {
       -ms-flex-pack: center;
           justify-content: center;
   text-align: center;
-  border: solid 0.09375rem transparent;
+  border: solid 0.1875rem transparent;
   cursor: pointer;
 }
 
@@ -25464,7 +25464,7 @@ h6 {
   font-family: "Gilroy";
   font-style: normal;
   font-size: 0.625rem;
-  font-weight: normal;
+  font-weight: 600;
   line-height: 1;
   color: #718096;
 }
@@ -25482,7 +25482,7 @@ h6 {
       -ms-flex-pack: center;
           justify-content: center;
   text-align: center;
-  border: solid 0.0625rem transparent;
+  border: solid 0.1875rem transparent;
   cursor: pointer;
 }
 

@@ -204,7 +204,7 @@
                                 @include square(length(48));
                                 @include flex-center;
                                 text-align: center;
-                                @include border(solid, 1.5, transparent);
+                                @include border(solid, 3, transparent);
                                 cursor: pointer;
                                 @include breakpoint(tab991) {
                                     @include square(length(64));
@@ -281,7 +281,7 @@
 
                         .titlebox {
                             .title {
-                                @include font-10-10-normal;
+                                @include font-10-10-semibold;
                                 color: $gray-600;
                             }
                         }
@@ -290,7 +290,7 @@
                             @include square(length(40));
                             @include flex-center;
                             text-align: center;
-                            @include border(solid, 1, transparent);
+                            @include border(solid, 3, transparent);
                             cursor: pointer;
 
                             @include breakpoint(mobile768) {
