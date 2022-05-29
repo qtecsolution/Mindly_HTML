@@ -2045,12 +2045,19 @@
         @include border(solid, 0.5, $gray-400);
         cursor: pointer;
         display: inline-block;
-        padding: length(10) length(24);
+        padding: length(8) length(16);
         @include font-24-14-medium;
         text-align: center;
+        @include transitions;
 
         @include breakpoint(tab991) {
             @include font-26-16-medium;
+            padding: length(10) length(24);
+        }
+
+        &:hover:not(.active) {
+            border-color: $tertiary;
+            background: $conversationBg;
         }
 
         &.active {

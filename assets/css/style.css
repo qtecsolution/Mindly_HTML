@@ -24893,13 +24893,15 @@ h6 {
   border: solid 0.03125rem #CBD5E0;
   cursor: pointer;
   display: inline-block;
-  padding: 0.625rem 1.5rem;
+  padding: 0.5rem 1rem;
   font-family: "Gilroy";
   font-style: normal;
   font-size: 0.875rem;
   font-weight: 500;
   line-height: 1.71429;
   text-align: center;
+  -webkit-transition: all 250ms ease-in-out;
+  transition: all 250ms ease-in-out;
 }
 
 @media screen and (min-width: 61.9375rem) {
@@ -24909,7 +24911,13 @@ h6 {
     font-size: 1rem;
     font-weight: 500;
     line-height: 1.625;
+    padding: 0.625rem 1.5rem;
   }
+}
+
+.weekinputs .checkinput:hover:not(.active) {
+  border-color: #F94E26;
+  background: rgba(249, 78, 38, 0.1);
 }
 
 .weekinputs .checkinput.active {
