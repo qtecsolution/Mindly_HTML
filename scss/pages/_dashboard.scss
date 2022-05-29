@@ -845,7 +845,7 @@
                     -ms-appearance: none;
                     appearance: none;
                     background: $white url("data:image/svg+xml,%3Csvg width='11' height='11' viewBox='0 0 11 11' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cmask id='mask0_6207_55743' style='mask-type:alpha' maskUnits='userSpaceOnUse' x='0' y='0' width='11' height='11'%3E%3Cpath d='M4.98448 7.65869L1.68707 3.89022C1.29811 3.4457 1.61379 2.75 2.20446 2.75H8.79928C9.38995 2.75 9.70564 3.4457 9.31668 3.89022L6.01927 7.65869C5.74536 7.97173 5.25838 7.97173 4.98448 7.65869Z' fill='black'/%3E%3C/mask%3E%3Cg mask='url(%23mask0_6207_55743)'%3E%3Crect width='11' height='11' fill='%23B5B5BD'/%3E%3C/g%3E%3C/svg%3E%0A") no-repeat center right 4%;
-                    color: $textPlaceholder;
+                    color: $gray-700;
                     @include font-15-15-medium;
                 }
 
@@ -1736,6 +1736,10 @@
                     filter: $tabLinkShadow;
                 }
 
+                &.schedulelink.active {
+                    color: $tertiary;
+                }
+
                 &:hover:not(.active) {
                     background: $white;
                     box-shadow: $tabShadow;
@@ -2026,6 +2030,32 @@
                     padding: length(12) length(20);
                 }
             }
+        }
+    }
+}
+
+.weekinputs {
+    @include w100;
+    @include flex-center-vert;
+    gap: length(12);
+    flex-wrap: wrap;
+
+    .checkinput {
+        @include setBgColor($white, $gray-700);
+        @include border(solid, 0.5, $gray-400);
+        cursor: pointer;
+        display: inline-block;
+        padding: length(10) length(24);
+        @include font-24-14-medium;
+        text-align: center;
+
+        @include breakpoint(tab991) {
+            @include font-26-16-medium;
+        }
+
+        &.active {
+            border-color: $tertiary;
+            background: $conversationBg;
         }
     }
 }

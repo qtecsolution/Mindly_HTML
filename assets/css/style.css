@@ -22973,7 +22973,7 @@ h6 {
   -ms-appearance: none;
   appearance: none;
   background: #ffffff url("data:image/svg+xml,%3Csvg width='11' height='11' viewBox='0 0 11 11' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cmask id='mask0_6207_55743' style='mask-type:alpha' maskUnits='userSpaceOnUse' x='0' y='0' width='11' height='11'%3E%3Cpath d='M4.98448 7.65869L1.68707 3.89022C1.29811 3.4457 1.61379 2.75 2.20446 2.75H8.79928C9.38995 2.75 9.70564 3.4457 9.31668 3.89022L6.01927 7.65869C5.74536 7.97173 5.25838 7.97173 4.98448 7.65869Z' fill='black'/%3E%3C/mask%3E%3Cg mask='url(%23mask0_6207_55743)'%3E%3Crect width='11' height='11' fill='%23B5B5BD'/%3E%3C/g%3E%3C/svg%3E%0A") no-repeat center right 4%;
-  color: #B5B5BD;
+  color: #4A5568;
   font-family: "Gilroy";
   font-style: normal;
   font-size: 0.9375rem;
@@ -24360,6 +24360,10 @@ h6 {
           filter: drop-shadow(0 0 0.0625rem rgba(12, 26, 75, 0.1));
 }
 
+.providerprofile-body .nav-tabs .nav-link.schedulelink.active {
+  color: #F94E26;
+}
+
 .providerprofile-body .nav-tabs .nav-link:hover:not(.active) {
   background: #ffffff;
   -webkit-box-shadow: 0 0.25rem 1.25rem -0.125rem rgba(50, 50, 71, 0.08);
@@ -24868,6 +24872,49 @@ h6 {
   font-weight: 600;
   line-height: 1;
   padding: 0.75rem 1.25rem;
+}
+
+.weekinputs {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 0.75rem;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.weekinputs .checkinput {
+  background: #ffffff;
+  color: #4A5568;
+  border: solid 0.03125rem #CBD5E0;
+  cursor: pointer;
+  display: inline-block;
+  padding: 0.625rem 1.5rem;
+  font-family: "Gilroy";
+  font-style: normal;
+  font-size: 0.875rem;
+  font-weight: 500;
+  line-height: 1.71429;
+  text-align: center;
+}
+
+@media screen and (min-width: 61.9375rem) {
+  .weekinputs .checkinput {
+    font-family: "Gilroy";
+    font-style: normal;
+    font-size: 1rem;
+    font-weight: 500;
+    line-height: 1.625;
+  }
+}
+
+.weekinputs .checkinput.active {
+  border-color: #F94E26;
+  background: rgba(249, 78, 38, 0.1);
 }
 
 .testsection {
@@ -25767,4 +25814,3 @@ h6 {
     line-height: 1.71429;
   }
 }
-/*# sourceMappingURL=style.css.map */
