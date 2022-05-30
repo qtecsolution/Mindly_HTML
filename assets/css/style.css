@@ -24925,6 +24925,26 @@ h6 {
   background: rgba(249, 78, 38, 0.1);
 }
 
+.create-schedule .personalinformation .btn-save {
+  padding: 1rem 5rem;
+  text-align: center;
+  border-radius: 0.5rem;
+  border-radius: 0.5rem;
+  background: #FCAF15;
+  color: #ffffff;
+  font-family: "Gilroy";
+  font-style: normal;
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1;
+  -webkit-transition: all 250ms ease-in-out;
+  transition: all 250ms ease-in-out;
+}
+
+.create-schedule .personalinformation .btn-save:not([disabled]):hover {
+  background: #db9303;
+}
+
 .current-schedule .schedule {
   background: #ffffff;
   display: -webkit-box;

@@ -2067,8 +2067,24 @@
     }
 }
 
-.current-schedule {
+.create-schedule {
+    .personalinformation {
+        .btn-save {
+            padding: length(16) length(80);
+            text-align: center;
+            @include radius(8);
+            @include setBgColor($secondary, $white);
+            @include font-16-16-semibold;
+            @include transitions;
+    
+            @include hover {
+                background: darken($secondary, 10%);
+            }
+        }
+    }
+}
 
+.current-schedule {
     .schedule {
         background: $white;
         @include flex-column;
