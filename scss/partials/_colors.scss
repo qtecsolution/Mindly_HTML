@@ -41,6 +41,10 @@ $textDanger: #FF3000;
 $checkBorder: rgba(5, 16, 51, 0.0001);
 $capBg: #FCF4F4;
 
+$weekly: #FBF4F3;
+$daily: #E6F2F1;
+$custom: #FFF7E8;
+
 // BACKGROUND COLORS
 $bodyBg: #f7f8f6;
 $footerBg: #FFFBF2;
@@ -105,3 +109,5 @@ $modalBtnShadow: 0 0 .0625rem $shadow-1,
 
 $tabShadow: 0 .25rem 1.25rem -0.125rem $shadow-3;
 $tabLinkShadow: drop-shadow(0 0 .0625rem $shadow-1);
+
+$slotShadow: 0.125rem 0.125rem 5rem rgba($black, 0.25%);

@@ -2066,3 +2066,251 @@
         }
     }
 }
+
+.current-schedule {
+
+    .schedule {
+        background: $white;
+        @include flex-column;
+        gap: length(32);
+        padding: length(24);
+
+        &-header {
+            .schedule-title {
+                color: $tabLinkText;
+                @include font-24-16-semibold;
+            }
+        }
+
+        &-body {
+            @include flex-column;
+            gap: length(24);
+
+            .cardschedule {
+                background: $white url(../images/modal/cardbg.svg) no-repeat center center/cover;
+                @include border(solid, 1, transparent);
+                padding: length(24);
+                @include flex-column;
+                gap: length(24);
+                position: relative;
+
+                .schedule-badge {
+                    padding: length(8) length(12);
+                    @include radius(100);
+                    @include font-12-12-semibold;
+                    display: inline-block;
+                    max-width: length(80);
+                    text-align: center;
+                }
+
+                .weelky {
+                    @include setBgColor($weekly, $tertiary);
+                }
+
+                .daily {
+                    @include setBgColor($daily, $primary);
+                }
+
+                .custom {
+                    @include setBgColor($custom, $secondary);
+                }
+
+                .schedule-list {
+                    @include list-vertical;
+                    gap: length(8);
+
+                    &-item {
+                        @include flex-center-vert;
+                        gap: length(8);
+
+                        .icon {
+                            @include square(length(20));
+                            @include flex-center;
+                            overflow: hidden;
+
+                            svg {
+                                @include wh100;
+                            }
+                        }
+
+                        .text {
+                            color: $gray-700;
+                            @include font-24-16-semibold;
+                        }
+                    }
+                }
+
+                .btn-remove {
+                    display: inline-block;
+                    position: absolute;
+                    bottom: length(24);
+                    right: length(24);
+                    color: $gray-700;
+                    @include font-20-14-semibold;
+                    @include transparent-button;
+                    @include transitions;
+                    
+                    @include hover {
+                        color: $tertiary;
+                    }
+                }
+            }
+
+            .weeklyschedule {
+                border-color: $tertiary;
+            }
+
+            .dailyschedule {
+                border-color: $primary;
+            }
+
+            .customschedule {
+                border-color: $secondary;
+            }
+        }
+    }
+
+    .upcoming-schedule {
+        background: $white;
+        @include flex-column;
+        gap: length(32);
+        padding: length(24);
+
+        &-header {
+            .upcoming-schedule-title {
+                color: $tabLinkText;
+                @include font-24-16-semibold;
+            }
+        }
+
+        &-body {
+            @include flex-center-vert;
+            gap: length(16);
+            flex-wrap: wrap;
+
+            .scheduleupcoming {
+                @include flex-center-column;
+                gap: length(4);
+                @include border(solid, 1, $gray-600);
+                padding: length(16);
+                text-align: center;
+                position: relative;
+                width: calc((100% / 2) - 1rem);
+                
+                @include breakpoint(mobile768) {
+                    width: calc((100% / 3) - 1rem);
+                }
+                
+                @include breakpoint(laptop1200) {
+                    width: calc((100% / 4) - 1rem);
+                }
+
+                .day,
+                .time {
+                    color: $gray-600;
+                    @include font-20-14-normal;
+                }
+
+                .date {
+                    color: $gray-700;
+                    @include font-20-14-bold;
+                }
+
+                @include hover {
+                    .scheduleslot {
+                        @include flex-column;
+                        gap: length(14);
+                    }
+                }
+
+                .scheduleslot {
+                    position: absolute;
+                    top: 50%;
+                    left: 5%;
+                    @include transform(translateY(-50%));
+                    background: $white;
+                    box-shadow: $slotShadow;
+                    padding: length(32) length(16);
+                    display: none;
+                    z-index: 100;
+
+                    @extend %animation;
+                    @extend %slideUpIn;
+
+
+                    &-header {
+                        @include flex-center-column;
+                        gap: length(4);
+                        text-align: center;
+
+                        .day {
+                            color: $gray-600;
+                            @include font-20-14-normal;
+                        }
+
+                        .date {
+                            color: $gray-700;
+                            @include font-20-14-bold;
+                        }
+                    }
+
+                    &-body {
+                        @include flex-center-column;
+                        gap: length(8);
+
+                        .singleslot {
+                            @include border(solid, 1, $gray-700);
+                            padding: length(8);
+                            @include radius(30);
+                            @include flex-center-between;
+                            min-width: length(160);
+                            background: $white;
+
+                            .slot-time {
+                                color: $gray-700;
+                                @include font-20-14-medium;
+                            }
+
+                            .btn-slot {
+                                @include square(length(16));
+                                @include flex-center;
+                                @include circle;
+                                @include transparent-button;
+                                overflow: hidden;
+
+                                svg {
+                                    @include wh100;
+                                }
+
+                                @include hover {
+                                    svg {
+                                        path {
+                                            stroke: $tertiary;
+                                        }
+                                    }
+                                }
+                            }
+
+                            &.active {
+                                background: $daily;
+                                border-color: $daily;
+
+                                .slot-time {
+                                    color: $primary;
+                                }
+
+                                .btn-slot {
+                                    svg {
+                                        path {
+                                            stroke: $primary;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

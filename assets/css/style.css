@@ -158,7 +158,7 @@
   font-display: swap;
 }
 
-.header-content .headermenu .mindlydropdown .mindlysubmenu, .header-content .authentication-menu .userprofile .desktop-profile .desktopdropdown, .registerheader-content .authentication-menu .userprofile .desktop-profile .desktopdropdown, .cardapproach .hoverinfo, .cardphoneapproach .hoverinfo {
+.header-content .headermenu .mindlydropdown .mindlysubmenu, .header-content .authentication-menu .userprofile .desktop-profile .desktopdropdown, .registerheader-content .authentication-menu .userprofile .desktop-profile .desktopdropdown, .cardapproach .hoverinfo, .cardphoneapproach .hoverinfo, .current-schedule .upcoming-schedule-body .scheduleupcoming .scheduleslot {
   -webkit-animation-duration: 0.3s;
   animation-duration: 0.3s;
   -webkit-animation-fill-mode: both;
@@ -260,7 +260,7 @@
   }
 }
 
-.header-content .headermenu .mindlydropdown .mindlysubmenu, .header-content .authentication-menu .userprofile .desktop-profile .desktopdropdown, .registerheader-content .authentication-menu .userprofile .desktop-profile .desktopdropdown {
+.header-content .headermenu .mindlydropdown .mindlysubmenu, .header-content .authentication-menu .userprofile .desktop-profile .desktopdropdown, .registerheader-content .authentication-menu .userprofile .desktop-profile .desktopdropdown, .current-schedule .upcoming-schedule-body .scheduleupcoming .scheduleslot {
   -webkit-animation-name: slideUpIn;
   animation-name: slideUpIn;
 }
@@ -24923,6 +24923,402 @@ h6 {
 .weekinputs .checkinput.active {
   border-color: #F94E26;
   background: rgba(249, 78, 38, 0.1);
+}
+
+.current-schedule .schedule {
+  background: #ffffff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 2rem;
+  padding: 1.5rem;
+}
+
+.current-schedule .schedule-header .schedule-title {
+  color: #27272E;
+  font-family: "Gilroy";
+  font-style: normal;
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.5;
+}
+
+.current-schedule .schedule-body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 1.5rem;
+}
+
+.current-schedule .schedule-body .cardschedule {
+  background: #ffffff url(../images/modal/cardbg.svg) no-repeat center center/cover;
+  border: solid 0.0625rem transparent;
+  padding: 1.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 1.5rem;
+  position: relative;
+}
+
+.current-schedule .schedule-body .cardschedule .schedule-badge {
+  padding: 0.5rem 0.75rem;
+  border-radius: 6.25rem;
+  border-radius: 6.25rem;
+  font-family: "Gilroy";
+  font-style: normal;
+  font-size: 0.75rem;
+  font-weight: 600;
+  line-height: 1;
+  display: inline-block;
+  max-width: 5rem;
+  text-align: center;
+}
+
+.current-schedule .schedule-body .cardschedule .weelky {
+  background: #FBF4F3;
+  color: #F94E26;
+}
+
+.current-schedule .schedule-body .cardschedule .daily {
+  background: #E6F2F1;
+  color: #01796F;
+}
+
+.current-schedule .schedule-body .cardschedule .custom {
+  background: #FFF7E8;
+  color: #FCAF15;
+}
+
+.current-schedule .schedule-body .cardschedule .schedule-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 0.5rem;
+}
+
+.current-schedule .schedule-body .cardschedule .schedule-list-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 0.5rem;
+}
+
+.current-schedule .schedule-body .cardschedule .schedule-list-item .icon {
+  height: 1.25rem;
+  width: 1.25rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  overflow: hidden;
+}
+
+.current-schedule .schedule-body .cardschedule .schedule-list-item .icon svg {
+  width: 100%;
+  height: 100%;
+}
+
+.current-schedule .schedule-body .cardschedule .schedule-list-item .text {
+  color: #4A5568;
+  font-family: "Gilroy";
+  font-style: normal;
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.5;
+}
+
+.current-schedule .schedule-body .cardschedule .btn-remove {
+  display: inline-block;
+  position: absolute;
+  bottom: 1.5rem;
+  right: 1.5rem;
+  color: #4A5568;
+  font-family: "Gilroy";
+  font-style: normal;
+  font-size: 0.875rem;
+  font-weight: 600;
+  line-height: 1.42857;
+  background: transparent;
+  border: none;
+  -webkit-transition: all 250ms ease-in-out;
+  transition: all 250ms ease-in-out;
+}
+
+.current-schedule .schedule-body .cardschedule .btn-remove:not([disabled]):hover {
+  color: #F94E26;
+}
+
+.current-schedule .schedule-body .weeklyschedule {
+  border-color: #F94E26;
+}
+
+.current-schedule .schedule-body .dailyschedule {
+  border-color: #01796F;
+}
+
+.current-schedule .schedule-body .customschedule {
+  border-color: #FCAF15;
+}
+
+.current-schedule .upcoming-schedule {
+  background: #ffffff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 2rem;
+  padding: 1.5rem;
+}
+
+.current-schedule .upcoming-schedule-header .upcoming-schedule-title {
+  color: #27272E;
+  font-family: "Gilroy";
+  font-style: normal;
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.5;
+}
+
+.current-schedule .upcoming-schedule-body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 1rem;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.current-schedule .upcoming-schedule-body .scheduleupcoming {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 0.25rem;
+  border: solid 0.0625rem #718096;
+  padding: 1rem;
+  text-align: center;
+  position: relative;
+  width: calc((100% / 2) - 1rem);
+}
+
+@media screen and (min-width: 48rem) {
+  .current-schedule .upcoming-schedule-body .scheduleupcoming {
+    width: calc((100% / 3) - 1rem);
+  }
+}
+
+@media screen and (min-width: 75rem) {
+  .current-schedule .upcoming-schedule-body .scheduleupcoming {
+    width: calc((100% / 4) - 1rem);
+  }
+}
+
+.current-schedule .upcoming-schedule-body .scheduleupcoming .day,
+.current-schedule .upcoming-schedule-body .scheduleupcoming .time {
+  color: #718096;
+  font-family: "Gilroy";
+  font-style: normal;
+  font-size: 0.875rem;
+  font-weight: normal;
+  line-height: 1.42857;
+}
+
+.current-schedule .upcoming-schedule-body .scheduleupcoming .date {
+  color: #4A5568;
+  font-family: "Gilroy";
+  font-style: normal;
+  font-size: 0.875rem;
+  font-weight: 700;
+  line-height: 1.42857;
+}
+
+.current-schedule .upcoming-schedule-body .scheduleupcoming:not([disabled]):hover .scheduleslot {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 0.875rem;
+}
+
+.current-schedule .upcoming-schedule-body .scheduleupcoming .scheduleslot {
+  position: absolute;
+  top: 50%;
+  left: 5%;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+  background: #ffffff;
+  -webkit-box-shadow: 0.125rem 0.125rem 5rem rgba(0, 0, 0, 0.25);
+          box-shadow: 0.125rem 0.125rem 5rem rgba(0, 0, 0, 0.25);
+  padding: 2rem 1rem;
+  display: none;
+  z-index: 100;
+}
+
+.current-schedule .upcoming-schedule-body .scheduleupcoming .scheduleslot-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 0.25rem;
+  text-align: center;
+}
+
+.current-schedule .upcoming-schedule-body .scheduleupcoming .scheduleslot-header .day {
+  color: #718096;
+  font-family: "Gilroy";
+  font-style: normal;
+  font-size: 0.875rem;
+  font-weight: normal;
+  line-height: 1.42857;
+}
+
+.current-schedule .upcoming-schedule-body .scheduleupcoming .scheduleslot-header .date {
+  color: #4A5568;
+  font-family: "Gilroy";
+  font-style: normal;
+  font-size: 0.875rem;
+  font-weight: 700;
+  line-height: 1.42857;
+}
+
+.current-schedule .upcoming-schedule-body .scheduleupcoming .scheduleslot-body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 0.5rem;
+}
+
+.current-schedule .upcoming-schedule-body .scheduleupcoming .scheduleslot-body .singleslot {
+  border: solid 0.0625rem #4A5568;
+  padding: 0.5rem;
+  border-radius: 1.875rem;
+  border-radius: 1.875rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  align-items: center;
+  min-width: 10rem;
+  background: #ffffff;
+}
+
+.current-schedule .upcoming-schedule-body .scheduleupcoming .scheduleslot-body .singleslot .slot-time {
+  color: #4A5568;
+  font-family: "Gilroy";
+  font-style: normal;
+  font-size: 0.875rem;
+  font-weight: 500;
+  line-height: 1.42857;
+}
+
+.current-schedule .upcoming-schedule-body .scheduleupcoming .scheduleslot-body .singleslot .btn-slot {
+  height: 1rem;
+  width: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border-radius: 100%;
+  background: transparent;
+  border: none;
+  overflow: hidden;
+}
+
+.current-schedule .upcoming-schedule-body .scheduleupcoming .scheduleslot-body .singleslot .btn-slot svg {
+  width: 100%;
+  height: 100%;
+}
+
+.current-schedule .upcoming-schedule-body .scheduleupcoming .scheduleslot-body .singleslot .btn-slot:not([disabled]):hover svg path {
+  stroke: #F94E26;
+}
+
+.current-schedule .upcoming-schedule-body .scheduleupcoming .scheduleslot-body .singleslot.active {
+  background: #E6F2F1;
+  border-color: #E6F2F1;
+}
+
+.current-schedule .upcoming-schedule-body .scheduleupcoming .scheduleslot-body .singleslot.active .slot-time {
+  color: #01796F;
+}
+
+.current-schedule .upcoming-schedule-body .scheduleupcoming .scheduleslot-body .singleslot.active .btn-slot svg path {
+  stroke: #01796F;
 }
 
 .testsection {
