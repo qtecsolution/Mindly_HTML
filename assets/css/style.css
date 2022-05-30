@@ -24916,7 +24916,6 @@ h6 {
 }
 
 .weekinputs .checkinput:hover:not(.active) {
-  border-color: #F94E26;
   background: rgba(249, 78, 38, 0.1);
 }
 
